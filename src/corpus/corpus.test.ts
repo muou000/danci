@@ -947,7 +947,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it.skip('CET-4 核心篇 NO. 09 重写后满足主题自然度、词量及行间标注校验规范', () => {
+  it('CET-4 核心篇 NO. 09 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 09');
     expect(passage).toBeDefined();
     expect(passage!.tier).toBe('cet4-core');
@@ -1019,6 +1019,118 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(p1s1Provincial).toBeDefined();
     if (p1s1Provincial && p1s1Provincial.type === 'annotation') {
       expect(p1s1Provincial.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Daily = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'daily'
+    );
+    expect(p1s2Daily).toBeDefined();
+    if (p1s2Daily && p1s2Daily.type === 'annotation') {
+      expect(p1s2Daily.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Production = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'produce'
+    );
+    expect(p2s1Production).toBeDefined();
+    if (p2s1Production && p2s1Production.type === 'annotation') {
+      expect(p2s1Production.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Cotton = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'cotton'
+    );
+    expect(p2s2Cotton).toBeDefined();
+    if (p2s2Cotton && p2s2Cotton.type === 'annotation') {
+      expect(p2s2Cotton.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
+  it.skip('CET-4 核心篇 NO. 10 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 10');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('青年商业创业与财务预算管理');
+    expect(passage!.titleEn).toBe(
+      'Youth Entrepreneurship and Financial Budget Management'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('bride');
+    expect(compiled.coveredHeadwordIds).not.toContain('bridegroom');
+    expect(compiled.coveredHeadwordIds).not.toContain('broom');
+    expect(compiled.coveredHeadwordIds).not.toContain('bucket');
+    expect(compiled.coveredHeadwordIds).not.toContain('bull');
+    expect(compiled.coveredHeadwordIds).not.toContain('buffet');
+    expect(compiled.coveredHeadwordIds).not.toContain('brunch');
+    expect(compiled.coveredHeadwordIds).not.toContain('bribe');
+    expect(compiled.coveredHeadwordIds).not.toContain('brutal');
+    expect(compiled.coveredHeadwordIds).not.toContain('bulb');
+
+    // 验证创业与财务预算管理主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'disciplined financial budget management'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'severe cash deficit'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'speculative market bubbles'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'bulk discounts on computer hardware'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'transparent accounting methods'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('budget');
+    expect(compiled.coveredHeadwordIds).toContain('venture');
+    expect(compiled.coveredHeadwordIds).toContain('capital');
+    expect(compiled.coveredHeadwordIds).toContain('deficit');
+    expect(compiled.coveredHeadwordIds).toContain('bulk');
+    expect(compiled.coveredHeadwordIds).toContain('bubble');
+    expect(compiled.coveredHeadwordIds).toContain('hardware');
+    expect(compiled.coveredHeadwordIds).toContain('transparent');
+    expect(compiled.coveredHeadwordIds).toContain('sustain');
+    expect(compiled.coveredHeadwordIds).toContain('reputation');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Commercial = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'commerce'
+    );
+    expect(p1s1Commercial).toBeDefined();
+    if (p1s1Commercial && p1s1Commercial.type === 'annotation') {
+      expect(p1s1Commercial.surface).toBe('commercial');
+      expect(p1s1Commercial.gloss.startsWith('a.')).toBe(true);
     }
   });
 
