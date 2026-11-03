@@ -90,6 +90,12 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         name: /NO\. 01.*待背词条 77 \/ 78.*已读/,
       })
     ).toBeInTheDocument();
+    await user.click(
+      screen.getByRole('button', { name: /标记已读.*NO\. 02/ })
+    );
+    expect(
+      screen.getByRole('button', { name: /NO\. 02.*已读 · 1 次/ })
+    ).toBeInTheDocument();
 
     const topicFilter = screen.getByRole('combobox', { name: '按题材筛选' });
     await user.selectOptions(topicFilter, 'category:科技人工智能');
@@ -116,7 +122,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: '短文目录' }));
     expect(
-      screen.getByRole('button', { name: /NO\. 02.*已读 · 1 次/ })
+      screen.getByRole('button', { name: /NO\. 02.*已读 · 2 次/ })
     ).toBeInTheDocument();
   });
 

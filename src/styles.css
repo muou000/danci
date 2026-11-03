@@ -1253,14 +1253,27 @@ body {
   list-style: none;
 }
 
+.passage-directory__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: stretch;
+  border: 1px solid #d2ded8;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.passage-directory__item:hover {
+  border-color: #83a99b;
+}
+
 .passage-directory__entry {
   display: grid;
   width: 100%;
   gap: 6px;
   padding: 13px 15px;
-  border: 1px solid #d2ded8;
-  border-radius: 4px;
-  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: var(--text-primary);
   font: inherit;
   text-align: left;
@@ -1268,8 +1281,25 @@ body {
 }
 
 .passage-directory__entry:hover {
-  border-color: #83a99b;
   background: #f7fbf9;
+}
+
+.passage-directory__mark-read {
+  min-width: 88px;
+  padding: 8px 10px;
+  border: 0;
+  border-left: 1px solid #dce7e3;
+  background: #f7fbf9;
+  color: #315d4f;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.passage-directory__mark-read:hover {
+  background: #eaf5f0;
 }
 
 .passage-directory__entry-meta,

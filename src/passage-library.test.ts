@@ -131,6 +131,18 @@ describe('passage library discovery', () => {
           gloss: 'n.盒子；箱子',
           headwordId: 'box',
         },
+        {
+          ...annotation('word:start'),
+          surface: 'start',
+          gloss: 'v.开始；启动',
+          headwordId: 'start',
+        },
+        {
+          ...annotation('word:part'),
+          surface: 'part',
+          gloss: 'n.部分；零件',
+          headwordId: 'part',
+        },
       ]
     );
     searchablePassage.expansionEntries = [
@@ -154,6 +166,7 @@ describe('passage library discovery', () => {
     expect(searchPassages(index, 'boxes').map((result) => result.expression)).toContain(
       'box'
     );
+    expect(searchPassages(index, 'art')).toEqual([]);
     expect(searchPassages(index, '研究').map((result) => result.expression)).toContain(
       'study'
     );

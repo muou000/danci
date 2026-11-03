@@ -172,6 +172,16 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
     commitLearningState(recordPassageRead(learningState, passageId));
   };
 
+  const markPassageRead = (passageId: string) => {
+    if (learningState.readingRecords[passageId]) return;
+    commitLearningState(recordPassageRead(learningState, passageId));
+  };
+
+  const navigateByOffset = (offset: number) => {
+    const target = passages[activePassageIndex + offset];
+    if (target) openPassage(target.id);
+  };
+
   const restoreMasteredItems = (itemKeys: string[]) => {
     const restored = new Set(itemKeys);
     commitLearningState({
@@ -251,6 +261,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
           state={learningState}
           masteredItemKeys={masteredItemKeys}
           onOpenPassage={openPassage}
+          onMarkPassageRead={markPassageRead}
         />
       ) : (
         <main className="app-main">
@@ -260,10 +271,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
                 type="button"
                 aria-label="上一篇短文"
                 disabled={activePassageIndex <= 0}
-                onClick={() => {
-                  const previous = passages[activePassageIndex - 1];
-                  if (previous) openPassage(previous.id);
-                }}
+                onClick={() => navigateByOffset(-1)}
               >
                 上一篇
               </button>
@@ -278,10 +286,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
                   activePassageIndex < 0 ||
                   activePassageIndex >= passages.length - 1
                 }
-                onClick={() => {
-                  const next = passages[activePassageIndex + 1];
-                  if (next) openPassage(next.id);
-                }}
+                onClick={() => navigateByOffset(1)}
               >
                 下一篇
               </button>

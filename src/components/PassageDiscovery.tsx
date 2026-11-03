@@ -113,6 +113,7 @@ interface PassageDirectoryProps {
   state: LearningState;
   masteredItemKeys: ReadonlySet<string>;
   onOpenPassage: (passageId: string) => void;
+  onMarkPassageRead: (passageId: string) => void;
 }
 
 const tierFilters: Array<{ value: PassageTierFilter; label: string }> = [
@@ -146,6 +147,7 @@ export function PassageDirectory({
   state,
   masteredItemKeys,
   onOpenPassage,
+  onMarkPassageRead,
 }: PassageDirectoryProps) {
   const [tierFilter, setTierFilter] = useState<PassageTierFilter>('all');
   const [topicFilter, setTopicFilter] = useState<PassageTopicFilter>({
@@ -260,7 +262,7 @@ export function PassageDirectory({
           ].join(' ');
 
           return (
-            <li key={passage.id}>
+            <li className="passage-directory__item" key={passage.id}>
               <button
                 type="button"
                 className="passage-directory__entry"
@@ -293,6 +295,16 @@ export function PassageDirectory({
                   <span>{readStatus}</span>
                 </span>
               </button>
+              {!readingRecord && (
+                <button
+                  type="button"
+                  className="passage-directory__mark-read"
+                  aria-label={`标记已读 ${passage.indexLabel} ${passage.titleZh}`}
+                  onClick={() => onMarkPassageRead(passage.id)}
+                >
+                  标记已读
+                </button>
+              )}
             </li>
           );
         })}

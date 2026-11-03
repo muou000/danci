@@ -217,10 +217,13 @@ function addDegreeBase(base: string, forms: Set<string>): void {
 function makeSearchDocument(
   result: PassageSearchResult,
   searchFields: string[],
-  allowsDegreeInflections = false
+  allowsDegreeInflections = false,
+  englishFields = searchFields
 ): PassageSearchDocument {
   const searchText = normalizeSearchText(searchFields.join(' '));
-  const englishWords = searchText.match(/[a-z]+(?:['-][a-z]+)*/g) ?? [];
+  const englishWords =
+    normalizeSearchText(englishFields.join(' ')).match(/[a-z]+(?:['-][a-z]+)*/g) ??
+    [];
   return { result, searchText, englishWords, allowsDegreeInflections };
 }
 
@@ -258,7 +261,8 @@ export function buildPassageSearchIndex(
         makeSearchDocument(
           result,
           annotationSearchFields(token),
-          /^(?:a|adj|ad|adv)\./i.test(token.gloss.trim())
+          /^(?:a|adj|ad|adv)\./i.test(token.gloss.trim()),
+          annotationEnglishSearchFields(token)
         )
       );
     }
@@ -272,7 +276,12 @@ export function buildPassageSearchIndex(
         summary: entry.explanation,
       };
       index.push(
-        makeSearchDocument(result, [entry.expression, entry.explanation])
+        makeSearchDocument(
+          result,
+          [entry.expression, entry.explanation],
+          false,
+          [entry.expression]
+        )
       );
     }
   }
@@ -283,20 +292,24 @@ function annotationSearchFields(token: InlineAnnotationToken): string[] {
   return [token.surface, token.headwordId ?? '', token.phrase ?? '', token.gloss];
 }
 
+function annotationEnglishSearchFields(token: InlineAnnotationToken): string[] {
+  return [token.surface, token.headwordId ?? '', token.phrase ?? ''];
+}
+
 function matchesEnglishWords(
   query: string,
   document: PassageSearchDocument
 ): boolean {
   const queryWords = query.match(/[a-z]+(?:['-][a-z]+)*/g) ?? [];
-  const meaningfulQueryWords = queryWords.filter((word) => word.length >= 3);
-  if (meaningfulQueryWords.length === 0) return false;
+  if (queryWords.length === 0) return false;
 
-  return meaningfulQueryWords.every((queryWord) => {
-    const queryForms = englishWordForms(
-      queryWord,
-      document.allowsDegreeInflections
-    );
-    return document.englishWords.some((documentWord) => {
+  return document.englishWords.some((_, startIndex) => {
+    if (startIndex + queryWords.length > document.englishWords.length) {
+      return false;
+    }
+    return queryWords.every((queryWord, queryIndex) => {
+      const documentWord = document.englishWords[startIndex + queryIndex];
+      const queryForms = englishWordForms(queryWord, document.allowsDegreeInflections);
       const documentForms = englishWordForms(
         documentWord,
         document.allowsDegreeInflections
@@ -304,6 +317,20 @@ function matchesEnglishWords(
       return Array.from(queryForms).some((form) => documentForms.has(form));
     });
   });
+}
+
+function matchesSearchQuery(
+  query: string,
+  document: PassageSearchDocument
+): boolean {
+  const chineseTerms = query.match(/[\u3400-\u9fff]+/g) ?? [];
+  const englishTerms = query.match(/[a-z]+(?:['-][a-z]+)*/g) ?? [];
+  if (chineseTerms.length === 0 && englishTerms.length === 0) return false;
+
+  return (
+    chineseTerms.every((term) => document.searchText.includes(term)) &&
+    (englishTerms.length === 0 || matchesEnglishWords(query, document))
+  );
 }
 
 export function searchPassages(
@@ -314,10 +341,6 @@ export function searchPassages(
   if (!normalizedQuery) return [];
 
   return index
-    .filter(
-      (document) =>
-        document.searchText.includes(normalizedQuery) ||
-        matchesEnglishWords(normalizedQuery, document)
-    )
+    .filter((document) => matchesSearchQuery(normalizedQuery, document))
     .map((document) => document.result);
 }
