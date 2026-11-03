@@ -28,6 +28,12 @@ export interface AppProps {
 }
 
 const PASSAGE_EXPORT_WIDTH = 1080;
+const MASTERY_UNDO_DURATION_MS = 10_000;
+
+interface MasteryFeedback {
+  message: string;
+  itemKeys?: string[];
+}
 
 function passageImageFilename(passage: CompiledPassage): string {
   const safeParts = `${passage.indexLabel}-${passage.titleZh}`
@@ -84,6 +90,9 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
   const exportCardRef = useRef<HTMLElement>(null);
   const [isExporting, setIsExporting] = useState(false);
   const [exportMessage, setExportMessage] = useState('');
+  const [masteryFeedback, setMasteryFeedback] =
+    useState<MasteryFeedback | null>(null);
+  const masteryFeedbackTimer = useRef<number | null>(null);
   const [learningState, setLearningState] = useState<LearningState>(() => {
     const saved = readLearningState();
     return passages[0] ? recordPassageRead(saved, passages[0].id) : saved;
@@ -93,7 +102,46 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
     writeLearningState(learningState);
   }, []);
 
+  useEffect(
+    () => () => {
+      if (masteryFeedbackTimer.current !== null) {
+        window.clearTimeout(masteryFeedbackTimer.current);
+      }
+    },
+    []
+  );
+
+  const clearMasteryFeedback = () => {
+    if (masteryFeedbackTimer.current !== null) {
+      window.clearTimeout(masteryFeedbackTimer.current);
+      masteryFeedbackTimer.current = null;
+    }
+    setMasteryFeedback(null);
+  };
+
+  const showMasteryFeedback = (
+    feedback: MasteryFeedback,
+    durationMs: number
+  ) => {
+    if (masteryFeedbackTimer.current !== null) {
+      window.clearTimeout(masteryFeedbackTimer.current);
+    }
+    setMasteryFeedback(feedback);
+    const timerId = window.setTimeout(() => {
+      setMasteryFeedback((current) =>
+        current === feedback ? null : current
+      );
+      if (masteryFeedbackTimer.current === timerId) {
+        masteryFeedbackTimer.current = null;
+      }
+    }, durationMs);
+    masteryFeedbackTimer.current = timerId;
+  };
+
   const commitLearningState = (nextState: LearningState) => {
+    if (nextState.masteredItemKeys !== learningState.masteredItemKeys) {
+      clearMasteryFeedback();
+    }
     setLearningState(nextState);
     writeLearningState(nextState);
   };
@@ -109,6 +157,40 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
       ...learningState,
       masteredItemKeys: Array.from(mastered),
     });
+  };
+
+  const markMasteredItems = (itemKeys: string[]) => {
+    const mastered = new Set(learningState.masteredItemKeys);
+    const newItemKeys = Array.from(new Set(itemKeys)).filter(
+      (itemKey) => !mastered.has(itemKey)
+    );
+    if (newItemKeys.length === 0) return;
+
+    commitLearningState({
+      ...learningState,
+      masteredItemKeys: [...learningState.masteredItemKeys, ...newItemKeys],
+    });
+    showMasteryFeedback(
+      {
+        message: `已标熟 ${newItemKeys.length} 个词条。`,
+        itemKeys: newItemKeys,
+      },
+      MASTERY_UNDO_DURATION_MS
+    );
+  };
+
+  const undoMasteredItems = () => {
+    const itemKeysToUndo = masteryFeedback?.itemKeys;
+    if (!itemKeysToUndo) return;
+
+    const itemKeys = new Set(itemKeysToUndo);
+    commitLearningState({
+      ...learningState,
+      masteredItemKeys: learningState.masteredItemKeys.filter(
+        (itemKey) => !itemKeys.has(itemKey)
+      ),
+    });
+    showMasteryFeedback({ message: '已撤销本次批量标熟。' }, 2000);
   };
 
   const setExpansionHidden = (
@@ -147,6 +229,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
         passage: activePassage,
         masteredItemKeys,
         onToggleMastered: toggleMasteredItem,
+        onMarkMastered: markMasteredItems,
         hiddenExpansionIds:
           learningState.hiddenExpansionIds[activePassage.id] ?? [],
         onHideExpansion: (entryId) =>
@@ -334,6 +417,24 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
             </>
           )}
         </main>
+      )}
+      {masteryFeedback && (
+        <div
+          className="mastery-feedback"
+          role="status"
+          aria-live="polite"
+        >
+          <span>{masteryFeedback.message}</span>
+          {masteryFeedback.itemKeys && (
+            <button
+              type="button"
+              aria-label="撤销本次批量标熟"
+              onClick={undoMasteredItems}
+            >
+              撤销
+            </button>
+          )}
+        </div>
       )}
       {isLibraryOpen && (
         <LearningLibrary

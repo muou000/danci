@@ -1,8 +1,9 @@
-import { type Ref, useState } from 'react';
+import { type ReactNode, type Ref, useState } from 'react';
 import {
   PASSAGE_TIER_LABELS,
   toCircledNumber,
   type CompiledPassage,
+  type CompiledSentence,
   type InlineAnnotationToken,
 } from '../corpus';
 
@@ -10,6 +11,7 @@ export interface PassageCardProps {
   passage: CompiledPassage;
   masteredItemKeys: Set<string>;
   onToggleMastered: (itemKey: string) => void;
+  onMarkMastered: (itemKeys: string[]) => void;
   hiddenExpansionIds: string[];
   onHideExpansion: (entryId: string) => void;
   onRestoreExpansion: (entryId: string) => void;
@@ -75,10 +77,62 @@ function InlineAnnotation({
   );
 }
 
+function getUnmasteredItemKeys(
+  sentences: CompiledSentence[],
+  masteredItemKeys: Set<string>
+): string[] {
+  const itemKeys = new Set<string>();
+  for (const sentence of sentences) {
+    for (const token of sentence.tokens) {
+      if (token.type === 'annotation' && !masteredItemKeys.has(token.itemKey)) {
+        itemKeys.add(token.itemKey);
+      }
+    }
+  }
+  return Array.from(itemKeys);
+}
+
+interface MasteryScopeActionProps {
+  itemKeys: string[];
+  label: string;
+  title: string;
+  disabledTitle: string;
+  className?: string;
+  onMarkMastered: (itemKeys: string[]) => void;
+  children: ReactNode;
+}
+
+function MasteryScopeAction({
+  itemKeys,
+  label,
+  title,
+  disabledTitle,
+  className,
+  onMarkMastered,
+  children,
+}: MasteryScopeActionProps) {
+  const isUnavailable = itemKeys.length === 0;
+  return (
+    <button
+      type="button"
+      className={`mastery-scope-action${className ? ` ${className}` : ''}`}
+      aria-label={label}
+      aria-disabled={isUnavailable}
+      title={isUnavailable ? disabledTitle : title}
+      onClick={() => {
+        if (!isUnavailable) onMarkMastered(itemKeys);
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function PassageCard({
   passage,
   masteredItemKeys,
   onToggleMastered,
+  onMarkMastered,
   hiddenExpansionIds,
   onHideExpansion,
   onRestoreExpansion,
@@ -92,6 +146,10 @@ export function PassageCard({
   );
   const hiddenExpansions = passage.expansionEntries.filter((entry) =>
     hiddenSet.has(entry.id)
+  );
+  const passageItemKeys = getUnmasteredItemKeys(
+    passage.paragraphs.flatMap((paragraph) => paragraph.sentences),
+    masteredItemKeys
   );
   const hasVisibleOutOfSyllabusWords = passage.paragraphs.some((paragraph) =>
     paragraph.sentences.some((sentence) =>
@@ -191,6 +249,20 @@ export function PassageCard({
         </section>
       </header>
 
+      {!exportMode && (
+        <div className="passage-bulk-toolbar">
+          <MasteryScopeAction
+            itemKeys={passageItemKeys}
+            label="标熟整篇短文"
+            title="标熟整篇短文"
+            disabledTitle="整篇短文已全部标熟"
+            onMarkMastered={onMarkMastered}
+          >
+            标熟整篇
+          </MasteryScopeAction>
+        </div>
+      )}
+
       <div
         className={`passage-card__body${
           visibleExpansions.length === 0
@@ -199,54 +271,90 @@ export function PassageCard({
         }`}
       >
         <div className="passage-main">
-          {passage.paragraphs.map((para) => (
-            <section
-              key={para.paragraphNumber}
-              className="passage-paragraph"
-              aria-label={`第${para.paragraphNumber}段`}
-            >
-              <div className="passage-paragraph__en" lang="en">
-                <span className="paragraph-label">
-                  （第{para.paragraphNumber}段）
-                </span>
-                {para.sentences.map((sent, sIdx) => (
-                  <span key={sent.sentenceNumber} className="passage-sentence">
-                    <span className="sentence-number">
-                      {sent.circledNumber}
+          {passage.paragraphs.map((para) => {
+            const paragraphItemKeys = getUnmasteredItemKeys(
+              para.sentences,
+              masteredItemKeys
+            );
+
+            return (
+              <section
+                key={para.paragraphNumber}
+                className="passage-paragraph"
+                aria-label={`第${para.paragraphNumber}段`}
+              >
+                <div className="passage-paragraph__en" lang="en">
+                  {exportMode ? (
+                    <span className="paragraph-label">
+                      （第{para.paragraphNumber}段）
                     </span>
-                    {sent.tokens.map((token, tIdx) => {
-                      if (token.type === 'text') {
-                        return <span key={tIdx}>{token.text}</span>;
-                      }
+                  ) : (
+                    <MasteryScopeAction
+                      itemKeys={paragraphItemKeys}
+                      label={`标熟第${para.paragraphNumber}段`}
+                      title={`标熟第${para.paragraphNumber}段`}
+                      disabledTitle={`第${para.paragraphNumber}段已全部标熟`}
+                      className="paragraph-label paragraph-label--action"
+                      onMarkMastered={onMarkMastered}
+                    >
+                      （第{para.paragraphNumber}段）
+                    </MasteryScopeAction>
+                  )}
+                  {para.sentences.map((sent, sIdx) => (
+                    <span key={sent.sentenceNumber} className="passage-sentence">
+                      {exportMode ? (
+                        <span className="sentence-number">
+                          {sent.circledNumber}
+                        </span>
+                      ) : (
+                        <MasteryScopeAction
+                          itemKeys={getUnmasteredItemKeys(
+                            [sent],
+                            masteredItemKeys
+                          )}
+                          label={`标熟第${para.paragraphNumber}段第${sent.sentenceNumber}句`}
+                          title={`标熟第${para.paragraphNumber}段第${sent.sentenceNumber}句`}
+                          disabledTitle={`第${para.paragraphNumber}段第${sent.sentenceNumber}句已全部标熟`}
+                          className="sentence-number sentence-number--action"
+                          onMarkMastered={onMarkMastered}
+                        >
+                          {sent.circledNumber}
+                        </MasteryScopeAction>
+                      )}
+                      {sent.tokens.map((token, tIdx) => {
+                        if (token.type === 'text') {
+                          return <span key={tIdx}>{token.text}</span>;
+                        }
 
-                      return (
-                        <InlineAnnotation
-                          key={`${token.itemKey}-${tIdx}`}
-                          token={token}
-                          isMastered={masteredItemKeys.has(token.itemKey)}
-                          onToggleMastered={onToggleMastered}
-                          exportMode={exportMode}
-                        />
-                      );
-                    })}
-                    {sIdx < para.sentences.length - 1 ? ' ' : ''}
-                  </span>
-                ))}
-              </div>
+                        return (
+                          <InlineAnnotation
+                            key={`${token.itemKey}-${tIdx}`}
+                            token={token}
+                            isMastered={masteredItemKeys.has(token.itemKey)}
+                            onToggleMastered={onToggleMastered}
+                            exportMode={exportMode}
+                          />
+                        );
+                      })}
+                      {sIdx < para.sentences.length - 1 ? ' ' : ''}
+                    </span>
+                  ))}
+                </div>
 
-              <p className="passage-paragraph__zh">
-                <span className="paragraph-label">
-                  （第{para.paragraphNumber}段）
-                </span>
-                {para.sentences.map((sent) => (
-                  <span key={sent.sentenceNumber}>
-                    {sent.circledNumber}
-                    {sent.chinese}
+                <p className="passage-paragraph__zh">
+                  <span className="paragraph-label">
+                    （第{para.paragraphNumber}段）
                   </span>
-                ))}
-              </p>
-            </section>
-          ))}
+                  {para.sentences.map((sent) => (
+                    <span key={sent.sentenceNumber}>
+                      {sent.circledNumber}
+                      {sent.chinese}
+                    </span>
+                  ))}
+                </p>
+              </section>
+            );
+          })}
           {visibleExpansions.length === 0 && expansionRecovery}
         </div>
 

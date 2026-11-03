@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { act, fireEvent, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { toBlob } from 'html-to-image';
@@ -6,11 +6,40 @@ import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
 import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
 import { COMPILED_CET4_BATCH_1_PASSAGES } from '../corpus/compiled-batch-1';
+import type { CompiledPassage } from '../corpus';
 import type { PassageSearchResult } from '../passage-library';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
 }));
+
+function getAnnotationKeys(
+  sentences: CompiledPassage['paragraphs'][number]['sentences']
+): Set<string> {
+  return new Set(
+    sentences.flatMap((sentence) =>
+      sentence.tokens.flatMap((token) =>
+        token.type === 'annotation' ? [token.itemKey] : []
+      )
+    )
+  );
+}
+
+function getMasteredKeys(container: HTMLElement): Set<string> {
+  const itemKeys = new Set<string>();
+  for (const annotation of container.querySelectorAll<HTMLElement>(
+    '.inline-annotation'
+  )) {
+    const button = annotation.querySelector<HTMLButtonElement>(
+      '.inline-annotation__surface'
+    );
+    const itemKey = annotation.dataset.itemKey;
+    if (itemKey && button?.getAttribute('aria-pressed') === 'true') {
+      itemKeys.add(itemKey);
+    }
+  }
+  return itemKeys;
+}
 
 describe('双栏短文精读界面 (Seam 3: ui)', () => {
   beforeEach(() => {
@@ -21,6 +50,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
   afterEach(() => {
     vi.restoreAllMocks();
     vi.unstubAllGlobals();
+    vi.useRealTimers();
   });
 
   it('全局查词可按中文行间释义检索并打开结果短文', async () => {
@@ -254,6 +284,151 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       'true'
     );
     expect(screen.queryByText('v.改变；使改观；转化')).not.toBeInTheDocument();
+  });
+
+  it('按句批量标熟时按唯一词条计数，撤销只恢复本次新增项', async () => {
+    const basePassage = COMPILED_DEMO_PASSAGES[0];
+    const sourceSentence = basePassage.paragraphs[0].sentences[0];
+    const repeatedToken = sourceSentence.tokens.find(
+      (token) => token.type === 'annotation'
+    );
+    if (!repeatedToken) throw new Error('Expected an annotation in the fixture.');
+
+    const repeatedSentence = {
+      ...sourceSentence,
+      tokens: [...sourceSentence.tokens, repeatedToken],
+    };
+    const passage: CompiledPassage = {
+      ...basePassage,
+      id: 'bulk-sentence-test',
+      paragraphs: [
+        {
+          ...basePassage.paragraphs[0],
+          sentences: [repeatedSentence],
+        },
+      ],
+      expansionEntries: [],
+    };
+    const sentenceKeys = getAnnotationKeys([repeatedSentence]);
+    const annotationCount = repeatedSentence.tokens.filter(
+      (token) => token.type === 'annotation'
+    ).length;
+    expect(annotationCount).toBeGreaterThan(sentenceKeys.size);
+
+    const user = userEvent.setup();
+    const view = render(<App passages={[passage]} />);
+    const previouslyMasteredKey = repeatedToken.itemKey;
+    const previouslyMasteredButton = Array.from(
+      view.container.querySelectorAll<HTMLButtonElement>(
+        '.inline-annotation__surface'
+      )
+    ).find(
+      (button) =>
+        button.parentElement?.getAttribute('data-item-key') ===
+        previouslyMasteredKey
+    );
+    if (!previouslyMasteredButton) {
+      throw new Error('Expected the existing annotation button.');
+    }
+    await user.click(previouslyMasteredButton);
+
+    await user.click(
+      screen.getByRole('button', { name: '标熟第1段第1句' })
+    );
+
+    const newlyMasteredCount = sentenceKeys.size - 1;
+    expect(getMasteredKeys(view.container)).toEqual(sentenceKeys);
+    expect(screen.getByRole('status')).toHaveTextContent(
+      `已标熟 ${newlyMasteredCount} 个词条。`
+    );
+    expect(
+      screen.getByRole('button', { name: '撤销本次批量标熟' })
+    ).toBeInTheDocument();
+
+    await user.click(
+      screen.getByRole('button', { name: '撤销本次批量标熟' })
+    );
+
+    expect(getMasteredKeys(view.container)).toEqual(
+      new Set([previouslyMasteredKey])
+    );
+    expect(screen.getByRole('status')).toHaveTextContent(
+      '已撤销本次批量标熟。'
+    );
+  });
+
+  it('按段批量标熟只覆盖该段中的唯一词条', async () => {
+    const passage = COMPILED_DEMO_PASSAGES[0];
+    const paragraphKeys = getAnnotationKeys(passage.paragraphs[0].sentences);
+    const user = userEvent.setup();
+    const view = render(<App passages={[passage]} />);
+
+    await user.click(screen.getByRole('button', { name: '标熟第1段' }));
+
+    expect(getMasteredKeys(view.container)).toEqual(paragraphKeys);
+    expect(screen.getByRole('status')).toHaveTextContent(
+      `已标熟 ${paragraphKeys.size} 个词条。`
+    );
+  });
+
+  it('整篇批量标熟覆盖单词、短语和超纲词，并按新增词条数反馈', async () => {
+    const passage = COMPILED_DEMO_PASSAGES[1];
+    const sentences = passage.paragraphs.flatMap(
+      (paragraph) => paragraph.sentences
+    );
+    const itemKeys = getAnnotationKeys(sentences);
+    const categories = new Set(
+      sentences.flatMap((sentence) =>
+        sentence.tokens.flatMap((token) =>
+          token.type === 'annotation' ? [token.category] : []
+        )
+      )
+    );
+    expect(categories).toContain('phrase');
+    expect(categories).toContain('out-of-syllabus');
+
+    const user = userEvent.setup();
+    const view = render(<App passages={[passage]} />);
+    await user.click(screen.getByRole('button', { name: '标熟整篇短文' }));
+
+    expect(getMasteredKeys(view.container)).toEqual(itemKeys);
+    expect(screen.getByRole('status')).toHaveTextContent(
+      `已标熟 ${itemKeys.size} 个词条。`
+    );
+  });
+
+  it('逐词掌握状态改变后立即关闭批量撤销入口', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: '标熟整篇短文' }));
+    expect(
+      screen.getByRole('button', { name: '撤销本次批量标熟' })
+    ).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'transformed' }));
+
+    expect(
+      screen.queryByRole('button', { name: '撤销本次批量标熟' })
+    ).not.toBeInTheDocument();
+  });
+
+  it('批量撤销入口在十秒后过期', () => {
+    vi.useFakeTimers();
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: '标熟整篇短文' }));
+    expect(
+      screen.getByRole('button', { name: '撤销本次批量标熟' })
+    ).toBeInTheDocument();
+
+    act(() => {
+      vi.advanceTimersByTime(10_000);
+    });
+
+    expect(
+      screen.queryByRole('button', { name: '撤销本次批量标熟' })
+    ).not.toBeInTheDocument();
   });
 
   it('隐藏拓展条目后连续重排编号并在重新进入短文后保持隐藏', async () => {
