@@ -157,6 +157,34 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
   });
 
+  it('首次打开目录时按需加载完整语料，并复用加载结果进行翻页', async () => {
+    const user = userEvent.setup();
+    const fullCorpus = COMPILED_CET4_BATCH_1_PASSAGES;
+    const loadAllPassages = vi.fn(async () => fullCorpus);
+    render(
+      <App
+        passages={[fullCorpus[0]]}
+        loadAllPassages={loadAllPassages}
+      />
+    );
+
+    expect(
+      screen.getByRole('heading', { name: fullCorpus[0].titleZh })
+    ).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: '短文目录' }));
+    expect(
+      await screen.findByRole('button', { name: /^NO\. 20/ })
+    ).toBeInTheDocument();
+    expect(loadAllPassages).toHaveBeenCalledTimes(1);
+
+    await user.click(screen.getByRole('button', { name: '返回精读' }));
+    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
+    expect(
+      await screen.findByRole('heading', { name: fullCorpus[1].titleZh })
+    ).toBeInTheDocument();
+    expect(loadAllPassages).toHaveBeenCalledTimes(1);
+  });
+
   it('默认展示首篇四级核心篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
     render(<App />);
 

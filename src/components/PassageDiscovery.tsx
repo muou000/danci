@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import {
-  PASSAGE_TIER_LABELS,
-  type CompiledPassage,
-} from '../corpus';
+import type { CompiledPassage } from '../corpus';
+import { PASSAGE_TIER_LABELS } from '../corpus/labels';
 import type { LearningState } from '../learning-state';
 import {
   filterPassages,
@@ -17,6 +15,7 @@ import {
 interface GlobalPassageSearchProps {
   query: string;
   results: PassageSearchResult[];
+  isLoading?: boolean;
   onQueryChange: (query: string) => void;
   onSelectResult: (passageId: string) => void;
 }
@@ -24,6 +23,7 @@ interface GlobalPassageSearchProps {
 export function GlobalPassageSearch({
   query,
   results,
+  isLoading = false,
   onQueryChange,
   onSelectResult,
 }: GlobalPassageSearchProps) {
@@ -52,11 +52,15 @@ export function GlobalPassageSearch({
           aria-label="全局查词结果"
         >
           <p className="corpus-search__count" aria-live="polite">
-            {results.length > 0
-              ? `匹配 ${results.length} 条${
-                  results.length > visibleResults.length ? '，显示前 12 条' : ''
-                }`
-              : '没有匹配条目'}
+            {isLoading
+              ? '正在加载完整语料...'
+              : results.length > 0
+                ? `匹配 ${results.length} 条${
+                    results.length > visibleResults.length
+                      ? '，显示前 12 条'
+                      : ''
+                  }`
+                : '没有匹配条目'}
           </p>
           {visibleResults.length > 0 && (
             <ul>

@@ -706,6 +706,243 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 06 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 06');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('家庭预算管理与理性消费决策');
+    expect(passage!.titleEn).toBe(
+      'Household Budgeting, Smart Spending, and Financial Resilience'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次拼凑词与荒诞搭配
+    expect(compiled.coveredHeadwordIds).not.toContain('baby boom');
+    expect(compiled.coveredHeadwordIds).not.toContain('bacon');
+    expect(compiled.coveredHeadwordIds).not.toContain('bake');
+    expect(compiled.coveredHeadwordIds).not.toContain('bacteria');
+    expect(compiled.coveredHeadwordIds).not.toContain('badminton');
+    expect(compiled.coveredHeadwordIds).not.toContain('balloon');
+    expect(compiled.coveredHeadwordIds).not.toContain('bamboo');
+    expect(compiled.coveredHeadwordIds).not.toContain('fence');
+    expect(compiled.coveredHeadwordIds).not.toContain('bang');
+    expect(compiled.coveredHeadwordIds).not.toContain('baggage');
+    expect(compiled.coveredHeadwordIds).not.toContain('badge');
+    expect(compiled.coveredHeadwordIds).not.toContain('ballet');
+    expect(compiled.coveredHeadwordIds).not.toContain('balcony');
+    expect(compiled.coveredHeadwordIds).not.toContain('axe');
+    expect(compiled.coveredHeadwordIds).not.toContain('timber');
+    expect(compiled.coveredHeadwordIds).not.toContain('bandage');
+
+    // 验证核心目标词自然覆盖与语境词性匹配
+    expect(compiled.coveredHeadwordIds).toContain('bachelor');
+    expect(compiled.coveredHeadwordIds).toContain('budget');
+    expect(compiled.coveredHeadwordIds).toContain('bait');
+    expect(compiled.coveredHeadwordIds).toContain('bankrupt');
+    expect(compiled.coveredHeadwordIds).toContain('banknote');
+    expect(compiled.coveredHeadwordIds).toContain('cushion');
+    expect(compiled.coveredHeadwordIds).toContain('withstand');
+    expect(compiled.coveredHeadwordIds).toContain('backup');
+    expect(compiled.coveredHeadwordIds).toContain('setback');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s2Household = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'household'
+    );
+    expect(p1s2Household).toBeDefined();
+    if (p1s2Household && p1s2Household.type === 'annotation') {
+      expect(p1s2Household.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
+  it('CET-4 核心篇 NO. 08 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 08');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('现代生物医学研究与生命伦理治理');
+    expect(passage!.titleEn).toBe(
+      'Biomedical Innovation, Gene Research, and Ethical Governance'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次拼凑词及不自然词汇
+    expect(compiled.coveredHeadwordIds).not.toContain('bitch');
+    expect(compiled.coveredHeadwordIds).not.toContain('blade');
+    expect(compiled.coveredHeadwordIds).not.toContain('bleed');
+    expect(compiled.coveredHeadwordIds).not.toContain('blanket');
+    expect(compiled.coveredHeadwordIds).not.toContain('bench');
+    expect(compiled.coveredHeadwordIds).not.toContain('beverage');
+    expect(compiled.coveredHeadwordIds).not.toContain('biscuit');
+    expect(compiled.coveredHeadwordIds).not.toContain('blackboard');
+    expect(compiled.coveredHeadwordIds).not.toContain('blast');
+    expect(compiled.coveredHeadwordIds).not.toContain('bin');
+    expect(compiled.coveredHeadwordIds).not.toContain('berry');
+    expect(compiled.coveredHeadwordIds).not.toContain('Bible');
+
+    // 验证核心目标词自然覆盖与语境词性匹配
+    expect(compiled.coveredHeadwordIds).toContain('biology');
+    expect(compiled.coveredHeadwordIds).toContain('biochemistry');
+    expect(compiled.coveredHeadwordIds).toContain('biotechnology');
+    expect(compiled.coveredHeadwordIds).toContain('gene');
+    expect(compiled.coveredHeadwordIds).toContain('bind');
+    expect(compiled.coveredHeadwordIds).toContain('dignity');
+    expect(compiled.coveredHeadwordIds).toContain('bias');
+    expect(compiled.coveredHeadwordIds).toContain('dilemma');
+    expect(compiled.coveredHeadwordIds).toContain('consent');
+    expect(compiled.coveredHeadwordIds).toContain('hazard');
+    expect(compiled.coveredHeadwordIds).toContain('supervise');
+    expect(compiled.coveredHeadwordIds).toContain('blend');
+    expect(compiled.coveredHeadwordIds).toContain('insight');
+
+    // 验证语境词性与句法功能匹配
+    const p2s2Clinical = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'clinic'
+    );
+    expect(p2s2Clinical).toBeDefined();
+    if (p2s2Clinical && p2s2Clinical.type === 'annotation') {
+      expect(p2s2Clinical.surface).toBe('clinical');
+      expect(p2s2Clinical.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s1Regulatory = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'regulate'
+    );
+    expect(p3s1Regulatory).toBeDefined();
+    if (p3s1Regulatory && p3s1Regulatory.type === 'annotation') {
+      expect(p3s1Regulatory.surface).toBe('regulatory');
+      expect(p3s1Regulatory.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
+  it.skip('CET-4 核心篇 NO. 09 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 09');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('乡村传统工艺复兴与文创品牌塑造');
+    expect(passage!.titleEn).toBe(
+      'Revitalizing Traditional Rural Crafts Through Brand Innovation'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧版拼凑词与荒诞搭配
+    expect(compiled.coveredHeadwordIds).not.toContain('bomb');
+    expect(compiled.coveredHeadwordIds).not.toContain('bowel');
+    expect(compiled.coveredHeadwordIds).not.toContain('boxing');
+    expect(compiled.coveredHeadwordIds).not.toContain('brandy');
+    expect(compiled.coveredHeadwordIds).not.toContain('blouse');
+    expect(compiled.coveredHeadwordIds).not.toContain('blond');
+    expect(compiled.coveredHeadwordIds).not.toContain('boast');
+    expect(compiled.coveredHeadwordIds).not.toContain('brag');
+    expect(compiled.coveredHeadwordIds).not.toContain('bounce');
+    expect(compiled.coveredHeadwordIds).not.toContain('bonus');
+    expect(compiled.coveredHeadwordIds).not.toContain('brake');
+
+    // 验证核心目标词自然覆盖与语境词性匹配
+    expect(compiled.coveredHeadwordIds).toContain('valley');
+    expect(compiled.coveredHeadwordIds).toContain('timber');
+    expect(compiled.coveredHeadwordIds).toContain('weave');
+    expect(compiled.coveredHeadwordIds).toContain('craft');
+    expect(compiled.coveredHeadwordIds).toContain('master');
+    expect(compiled.coveredHeadwordIds).toContain('dye');
+    expect(compiled.coveredHeadwordIds).toContain('brass');
+    expect(compiled.coveredHeadwordIds).toContain('bolt');
+    expect(compiled.coveredHeadwordIds).toContain('durable');
+    expect(compiled.coveredHeadwordIds).toContain('brand');
+    expect(compiled.coveredHeadwordIds).toContain('booth');
+    expect(compiled.coveredHeadwordIds).toContain('revenue');
+    expect(compiled.coveredHeadwordIds).toContain('flourish');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Provincial = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'province'
+    );
+    expect(p1s1Provincial).toBeDefined();
+    if (p1s1Provincial && p1s1Provincial.type === 'annotation') {
+      expect(p1s1Provincial.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 

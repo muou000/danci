@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
-import { toBlob } from 'html-to-image';
-import { PASSAGE_TIER_LABELS, type CompiledPassage } from './corpus';
+import type { CompiledPassage } from './corpus';
+import { PASSAGE_TIER_LABELS } from './corpus/labels';
 import { COMPILED_DEMO_PASSAGES } from './corpus/compiled-demos';
 import {
   GlobalPassageSearch,
@@ -25,6 +25,7 @@ import {
 
 export interface AppProps {
   passages?: CompiledPassage[];
+  loadAllPassages?: () => Promise<CompiledPassage[]>;
 }
 
 const PASSAGE_EXPORT_WIDTH = 1080;
@@ -81,8 +82,16 @@ function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[
   return Array.from(items.values());
 }
 
-export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
-  const [activeId, setActiveId] = useState<string>(passages[0]?.id ?? '');
+export function App({
+  passages: initialPassages = COMPILED_DEMO_PASSAGES,
+  loadAllPassages,
+}: AppProps) {
+  const [passages, setPassages] = useState(initialPassages);
+  const passagesRef = useRef(initialPassages);
+  const passageLoadPromise = useRef<Promise<CompiledPassage[]> | null>(null);
+  const [isLoadingCorpus, setIsLoadingCorpus] = useState(false);
+  const [corpusLoadFailed, setCorpusLoadFailed] = useState(false);
+  const [activeId, setActiveId] = useState<string>(initialPassages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const [isDirectoryOpen, setIsDirectoryOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -95,8 +104,33 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
   const masteryFeedbackTimer = useRef<number | null>(null);
   const [learningState, setLearningState] = useState<LearningState>(() => {
     const saved = readLearningState();
-    return passages[0] ? recordPassageRead(saved, passages[0].id) : saved;
+    return initialPassages[0]
+      ? recordPassageRead(saved, initialPassages[0].id)
+      : saved;
   });
+
+  const ensureCorpusLoaded = () => {
+    if (!loadAllPassages) return Promise.resolve(passagesRef.current);
+    if (passageLoadPromise.current) return passageLoadPromise.current;
+
+    setIsLoadingCorpus(true);
+    setCorpusLoadFailed(false);
+    const pendingLoad = Promise.resolve()
+      .then(loadAllPassages)
+      .then((loadedPassages) => {
+        passagesRef.current = loadedPassages;
+        setPassages(loadedPassages);
+        return loadedPassages;
+      })
+      .catch((error: unknown) => {
+        passageLoadPromise.current = null;
+        setCorpusLoadFailed(true);
+        throw error;
+      })
+      .finally(() => setIsLoadingCorpus(false));
+    passageLoadPromise.current = pendingLoad;
+    return pendingLoad;
+  };
 
   useEffect(() => {
     writeLearningState(learningState);
@@ -248,6 +282,24 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
     [passageSearchIndex, searchQuery]
   );
 
+  const updateSearchQuery = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() && loadAllPassages) {
+      void ensureCorpusLoaded().catch(() => undefined);
+    }
+  };
+
+  const toggleDirectory = () => {
+    const shouldOpen = !isDirectoryOpen;
+    setIsDirectoryOpen(shouldOpen);
+    if (shouldOpen) void ensureCorpusLoaded().catch(() => undefined);
+  };
+
+  const openLearningLibrary = () => {
+    setIsLibraryOpen(true);
+    if (loadAllPassages) void ensureCorpusLoaded().catch(() => undefined);
+  };
+
   const openPassage = (passageId: string) => {
     setActiveId(passageId);
     setIsDirectoryOpen(false);
@@ -260,9 +312,22 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
     commitLearningState(recordPassageRead(learningState, passageId));
   };
 
-  const navigateByOffset = (offset: number) => {
-    const target = passages[activePassageIndex + offset];
+  const navigateWithin = (loadedPassages: CompiledPassage[], offset: number) => {
+    const currentIndex = loadedPassages.findIndex(
+      (passage) => passage.id === activeId
+    );
+    const target = loadedPassages[currentIndex + offset];
     if (target) openPassage(target.id);
+  };
+
+  const navigateByOffset = (offset: number) => {
+    if (!loadAllPassages) {
+      navigateWithin(passages, offset);
+      return;
+    }
+    void ensureCorpusLoaded()
+      .then((loadedPassages) => navigateWithin(loadedPassages, offset))
+      .catch(() => undefined);
   };
 
   const restoreMasteredItems = (itemKeys: string[]) => {
@@ -283,6 +348,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
       setExportMessage('正在生成高清图片...');
     });
     try {
+      const { toBlob } = await import('html-to-image');
       const exportCard = exportCardRef.current;
       if (!exportCard) throw new Error('Passage image is not ready.');
       const png = await toBlob(exportCard, {
@@ -313,7 +379,8 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
         <GlobalPassageSearch
           query={searchQuery}
           results={searchResults}
-          onQueryChange={setSearchQuery}
+          isLoading={isLoadingCorpus}
+          onQueryChange={updateSearchQuery}
           onSelectResult={openPassage}
         />
         <div className="app-header__actions">
@@ -321,7 +388,7 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
             type="button"
             className="passage-directory-trigger"
             aria-pressed={isDirectoryOpen}
-            onClick={() => setIsDirectoryOpen((open) => !open)}
+            onClick={toggleDirectory}
           >
             {isDirectoryOpen ? '返回精读' : '短文目录'}
           </button>
@@ -331,21 +398,31 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
             className="learning-library-trigger"
             aria-haspopup="dialog"
             aria-expanded={isLibraryOpen}
-            onClick={() => setIsLibraryOpen(true)}
+            onClick={openLearningLibrary}
           >
             已掌握词库
           </button>
         </div>
       </header>
+      {corpusLoadFailed && (
+        <p role="alert">完整语料加载失败，请重试。</p>
+      )}
+      {isLoadingCorpus && !isDirectoryOpen && !searchQuery.trim() && (
+        <p role="status">正在加载完整语料...</p>
+      )}
 
       {isDirectoryOpen ? (
-        <PassageDirectory
-          passages={passages}
-          state={learningState}
-          masteredItemKeys={masteredItemKeys}
-          onOpenPassage={openPassage}
-          onMarkPassageRead={markPassageRead}
-        />
+        isLoadingCorpus ? (
+          <p role="status">正在加载完整短文目录...</p>
+        ) : (
+          <PassageDirectory
+            passages={passages}
+            state={learningState}
+            masteredItemKeys={masteredItemKeys}
+            onOpenPassage={openPassage}
+            onMarkPassageRead={markPassageRead}
+          />
+        )
       ) : (
         <main className="app-main">
           {activePassage && (

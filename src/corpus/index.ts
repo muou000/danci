@@ -10,6 +10,7 @@ export { DEMO_PASSAGES };
 export { COMPILED_DEMO_PASSAGES } from './compiled-demos';
 export { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
 export { COMPILED_CET4_BATCH_1_PASSAGES } from './compiled-batch-1';
+export { PASSAGE_TIER_LABELS } from './labels';
 export { toCircledNumber } from './formatting';
 
 export type PassageTier = 'cet4-core' | 'cet6-advanced';
@@ -18,11 +19,6 @@ export type AnnotationCategory =
   | 'high-frequency'
   | 'phrase'
   | 'out-of-syllabus';
-
-export const PASSAGE_TIER_LABELS: Record<PassageTier, string> = {
-  'cet4-core': '四级核心篇',
-  'cet6-advanced': '六级进阶篇',
-};
 
 export interface PassageSentence {
   sentenceNumber: number;

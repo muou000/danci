@@ -1,769 +1,647 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_008: Passage = {
-  "id": "cet4-b1-008",
-  "indexLabel": "NO. 08",
-  "tier": "cet4-core",
-  "topic": "现代生物科技伦理与数字阅读传播",
-  "titleZh": "现代生物科技伦理与数字化阅读",
-  "titleEn": "Modern Biotechnology Ethics and Digital Reading",
-  "paragraphs": [
+  id: "cet4-b1-008",
+  indexLabel: "NO. 08",
+  tier: "cet4-core",
+  topic: "现代生物医学研究与生命伦理治理",
+  titleZh: "现代生物医学创新与生命伦理治理",
+  titleEn: "Biomedical Innovation, Gene Research, and Ethical Governance",
+  paragraphs: [
     {
-      "paragraphNumber": 1,
-      "sentences": [
+      paragraphNumber: 1,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Students who study cell biology and modern biochemistry discover how genes bind living organisms together from birth.",
-          "chinese": "学习细胞生物学和现代生物化学的学生发现基因如何从出生起就将生物有机体联结在一起。"
+          sentenceNumber: 1,
+          english: "In modern science, cell biology and biochemistry help researchers understand how genes bind living organisms together from birth.",
+          chinese: "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何从诞生之日起将生物有机体联结在一起。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "Research in green biotechnology offers a big benefit to health, creating crops that yield sweet berry harvests and resist bitter cold.",
-          "chinese": "绿色生物技术研究为健康带来了巨大益处，培育出能够收获甘甜浆果并抵御严寒的作物。"
+          sentenceNumber: 2,
+          english: "Advanced biotechnology offers major benefits to society, creating crops that yield abundant harvests and resist bitter cold or drought.",
+          chinese: "先进的生物技术为社会带来了巨大益处，培育出产量丰盛并能抵御严寒或干旱的农作物。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "A famous scholar writes an inspiring biography that becomes an international best-seller on university campuses.",
-          "chinese": "一位著名学者撰写了一部鼓舞人心的传记，成为大学校园里的国际畅销书。"
-        },
-        {
-          "sentenceNumber": 4,
-          "english": "Beneath the surface of scientific debates, scholars read passages from an ancient Bible to reflect on ethics and eliminate cultural bias.",
-          "chinese": "在科学辩论的表象之下，思想家们阅读古老《圣经》的段落以反思伦理并消除文化偏见。"
+          sentenceNumber: 3,
+          english: "In university laboratories, research scholars conduct bold experiments to modify genetic structures and discover breakthrough therapies that relieve patient suffering.",
+          chinese: "在大学实验室里，科研学者进行大胆的实验以改造遗传结构，并发现能缓解患者痛苦的突破性疗法。"
         }
       ]
     },
     {
-      "paragraphNumber": 2,
-      "sentences": [
+      paragraphNumber: 2,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "In a college laboratory, professors draw line structures on a blackboard and warn learners never to betray academic trust.",
-          "chinese": "在大学实验室里，教授们在黑板上画出线条结构，并警告学习者绝不能背叛学术信任。"
+          sentenceNumber: 1,
+          english: "Beneath these promising breakthroughs, however, scholars confront profound moral dilemmas and critical policy questions.",
+          chinese: "然而，在这些充满希望的突破之下，学者们面临着深刻的道德困境与关键的政策问题。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "When handling a sharp steel blade, researchers must take care not to cut their fingers or bleed onto a clean blanket.",
-          "chinese": "在操作锋利的手术刀片时，研究人员必须小心不要割破手指或流血到无菌毛毯上。"
+          sentenceNumber: 2,
+          english: "In clinical trials, researchers must never bend moral principles or betray public trust in a blind bid for academic fame.",
+          chinese: "在临床试验中，研究人员绝不能为了盲目争夺学术声誉而违背道德原则或背叛公众信任。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "Besides laboratory hours, students sit on a park bench beside a green tree belt, enjoying a cool beverage and a sweet biscuit.",
-          "chinese": "除实验时间之外，学生们坐在绿化林带旁的公园长椅上，享用清凉饮料和香脆饼干。"
+          sentenceNumber: 3,
+          english: "They are bound to respect individual dignity, secure voluntary consent from every patient, and eliminate racial or economic bias in medical access.",
+          chinese: "他们必须尊重个体尊严，获取每位患者的自愿知情同意，并在医疗资源获取方面消除种族或经济偏见。"
         },
         {
-          "sentenceNumber": 4,
-          "english": "They share thoughts on an active research blog, avoiding blank indifference and offering the best helpful advice to each other.",
-          "chinese": "他们在活跃的研究博客上分享想法，避免空白冷漠，并相互提供最好的建设性反馈。"
+          sentenceNumber: 4,
+          english: "Furthermore, scientific investigators must manage clinical hazards carefully, ensuring that novel genetic treatments prevent severe harm to vulnerable individuals.",
+          chinese: "此外，科研调查人员必须谨慎管理临床隐患，确保新颖的基因疗法能防止对脆弱个体造成严重伤害。"
         }
       ]
     },
     {
-      "paragraphNumber": 3,
-      "sentences": [
+      paragraphNumber: 3,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Science should bless society with better health care rather than blast peaceful communities with destructive weapons.",
-          "chinese": "科学应当用更好的医疗保健造福社会，而不是用毁灭性武器摧毁和平社区。"
+          sentenceNumber: 1,
+          english: "To prevent scientific ambition from turning blind to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
+          chinese: "为了防止科学野心对人类尊严视而不见，监管机构和伦理委员会必须确立明确的政策准则。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "Scholars bet that medical cooperation can heal an animal bite, blend scientific insights, and overcome every intellectual block.",
-          "chinese": "学者们确信医学合作能够治愈动物咬伤，融合科学见解，并克服每一个知识障碍。"
+          sentenceNumber: 2,
+          english: "They maintain strict supervision over genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
+          chinese: "他们对遗传界限实施严格监督，辩论存在争议的实验，并检查实验室以消除潜在隐患。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "They condemn angry insults and refusing to call anyone a cruel bitch, keeping moral vision clear rather than blind to human dignity.",
-          "chinese": "他们谴责愤怒的侮辱，拒绝用恶毒字眼辱骂任何人，保持清晰的伦理视野而不对人类尊严视而不见。"
+          sentenceNumber: 3,
+          english: "When scientists cultivate open dialogue with the public, society will not blame technological advances for moral uncertainty.",
+          chinese: "当科学家与公众开展开诚布公的对话时，社会就不会因道德不确定性而归咎于技术进步。"
         },
         {
-          "sentenceNumber": 4,
-          "english": "They submit a formal research bid, throw trash into a recycling bin, bend metal rods safely, and never blame fate when celebrating a beloved friend birthday.",
-          "chinese": "他们提交正式研究竞标，将垃圾扔进回收箱，安全弯曲金属棒，并在为心爱的朋友庆祝生日时从不怨天尤人，证明人性的温暖与科学的严谨真正融为一体。"
-        },
-        {
-          "sentenceNumber": 5,
-          "english": "They know that true wisdom and human warmth belong together forever.",
-          "chinese": "他们深知，真正的智慧与人性的温暖永远相伴相生。"
+          sentenceNumber: 4,
+          english: "Ultimately, genuine progress belongs to research that blends scientific insight with profound respect for every human life.",
+          chinese: "最终，真正的进步属于将科学洞察力与对每一个生命的深切尊重融为一体的研究。"
         }
       ]
     }
   ],
-  "wordAnnotations": [
+  wordAnnotations: [
     {
-      "headwordId": "biology",
-      "gloss": "n.生物学；生态学"
+      headwordId: "modern",
+      gloss: "a.现代的；当代的"
     },
     {
-      "headwordId": "biochemistry",
-      "gloss": "n.生物化学；生化"
+      headwordId: "science",
+      gloss: "n.科学；自然科学"
     },
     {
-      "headwordId": "bind",
-      "gloss": "v.捆绑；使结合"
+      headwordId: "cell",
+      gloss: "n.细胞；单间"
     },
     {
-      "headwordId": "birth",
-      "gloss": "n.出生；诞生"
+      headwordId: "biology",
+      gloss: "n.生物学；生态学"
     },
     {
-      "headwordId": "biotechnology",
-      "gloss": "n.生物技术；生物工程"
+      headwordId: "biochemistry",
+      gloss: "n.生物化学；生化"
     },
     {
-      "headwordId": "big",
-      "gloss": "a.巨大的；重大的"
+      headwordId: "help",
+      gloss: "v.帮助；协助"
     },
     {
-      "headwordId": "benefit",
-      "gloss": "n.利益；好处"
+      headwordId: "research",
+      surface: "researchers",
+      gloss: "n.研究人员；调查员"
     },
     {
-      "headwordId": "berry",
-      "gloss": "n.浆果；莓"
+      headwordId: "understand",
+      gloss: "v.理解；领会"
     },
     {
-      "headwordId": "bitter",
-      "gloss": "a.严寒的；苦涩的"
+      headwordId: "gene",
+      surface: "genes",
+      gloss: "n.基因；遗传因子"
     },
     {
-      "headwordId": "biography",
-      "gloss": "n.传记；传记文学"
+      headwordId: "bind",
+      gloss: "v.结合；联结；绑"
     },
     {
-      "headwordId": "best-seller",
-      "gloss": "n.畅销书；畅销品"
+      headwordId: "live¹",
+      surface: "living",
+      gloss: "a.活着的；有生命的"
     },
     {
-      "headwordId": "beneath",
-      "gloss": "prep.在...下方；在...表面下"
+      headwordId: "organism",
+      surface: "organisms",
+      gloss: "n.有机体；生物"
     },
     {
-      "headwordId": "Bible",
-      "gloss": "n.圣经；权威典籍"
+      headwordId: "birth",
+      gloss: "n.诞生；出生"
     },
     {
-      "headwordId": "bias",
-      "gloss": "n.偏见；偏袒"
+      headwordId: "advance",
+      surface: "Advanced",
+      gloss: "a.先进的；高级的"
     },
     {
-      "headwordId": "blackboard",
-      "gloss": "n.黑板；告示牌"
+      headwordId: "biotechnology",
+      gloss: "n.生物技术；生物工程"
     },
     {
-      "headwordId": "betray",
-      "gloss": "v.背叛；出卖"
+      headwordId: "offer",
+      surface: "offers",
+      gloss: "v.提供；呈现"
     },
     {
-      "headwordId": "blade",
-      "gloss": "n.刀片；刀刃"
+      headwordId: "major",
+      gloss: "a.重大的；主要的"
     },
     {
-      "headwordId": "bleed",
-      "gloss": "v.流血；出血"
+      headwordId: "benefit",
+      surface: "benefits",
+      gloss: "n.益处；好处"
     },
     {
-      "headwordId": "blanket",
-      "gloss": "n.毛毯；毯子"
+      headwordId: "society",
+      gloss: "n.社会；社团"
     },
     {
-      "headwordId": "besides",
-      "gloss": "prep.除...之外；除...还有"
+      headwordId: "create",
+      surface: "creating",
+      gloss: "v.培育；创造"
     },
     {
-      "headwordId": "belt",
-      "gloss": "n.地带；皮带"
+      headwordId: "crop",
+      surface: "crops",
+      gloss: "n.庄稼；农作物"
     },
     {
-      "headwordId": "beverage",
-      "gloss": "n.饮料；饮品"
+      headwordId: "yield",
+      gloss: "v.产出；提供"
     },
     {
-      "headwordId": "biscuit",
-      "gloss": "n.饼干；小点心"
+      headwordId: "abundant",
+      gloss: "a.丰盛的；充裕的"
     },
     {
-      "headwordId": "blog",
-      "gloss": "n.博客；网络日志"
+      headwordId: "harvest",
+      surface: "harvests",
+      gloss: "n.收成；收获"
     },
     {
-      "headwordId": "blank",
-      "gloss": "a.空白的；茫然的"
+      headwordId: "resist",
+      gloss: "v.抵御；抵抗"
     },
     {
-      "headwordId": "best",
-      "gloss": "a.最好的；最优的"
+      headwordId: "bitter",
+      gloss: "a.严寒的；苦涩的"
     },
     {
-      "headwordId": "bless",
-      "gloss": "v.祝福；保佑"
+      headwordId: "drought",
+      gloss: "n.干旱；旱灾"
     },
     {
-      "headwordId": "better",
-      "gloss": "a.更好的；更佳的"
+      headwordId: "laboratory",
+      surface: "laboratories",
+      gloss: "n.实验室；研究室"
     },
     {
-      "headwordId": "blast",
-      "gloss": "v.炸毁；摧毁"
+      headwordId: "scholar",
+      surface: "scholars",
+      gloss: "n.学者；研究者"
     },
     {
-      "headwordId": "bet",
-      "gloss": "v.打赌；确信"
+      headwordId: "conduct",
+      gloss: "v.实施；组织；进行"
     },
     {
-      "headwordId": "bite",
-      "gloss": "n.咬伤；咬"
+      headwordId: "bold",
+      gloss: "a.大胆的；勇于创新的"
     },
     {
-      "headwordId": "blend",
-      "gloss": "v.融合；混合"
+      headwordId: "experiment",
+      surface: "experiments",
+      gloss: "n.实验；试验"
     },
     {
-      "headwordId": "block",
-      "gloss": "n.障碍；大楼"
+      headwordId: "modify",
+      gloss: "v.修改；改造"
     },
     {
-      "headwordId": "bitch",
-      "gloss": "n.泼妇；恶犬"
+      headwordId: "structure",
+      surface: "structures",
+      gloss: "n.结构；构造"
     },
     {
-      "headwordId": "blind",
-      "gloss": "a.盲目的；失明的"
+      headwordId: "discover",
+      gloss: "v.发现；发掘"
     },
     {
-      "headwordId": "bid",
-      "gloss": "n.投标；竞价"
+      headwordId: "breakthrough",
+      gloss: "a.突破性的；开拓性的"
     },
     {
-      "headwordId": "bin",
-      "gloss": "n.垃圾箱；容器"
+      headwordId: "therapy",
+      surface: "therapies",
+      gloss: "n.疗法；治疗"
     },
     {
-      "headwordId": "bend",
-      "gloss": "v.弯曲；弯腰"
+      headwordId: "relieve",
+      gloss: "v.缓解；减轻"
     },
     {
-      "headwordId": "blame",
-      "gloss": "v.责备；归咎于"
+      headwordId: "patient¹",
+      gloss: "n.患者；病人"
     },
     {
-      "headwordId": "beloved",
-      "gloss": "a.受钟爱的；心爱的"
+      headwordId: "suffer",
+      surface: "suffering",
+      gloss: "n.痛苦；苦难"
     },
     {
-      "headwordId": "birthday",
-      "gloss": "n.生日；诞辰"
+      headwordId: "beneath",
+      surface: "Beneath",
+      gloss: "prep.在...之下；在表面下"
     },
     {
-      "headwordId": "belong",
-      "gloss": "v.属于；归属"
+      headwordId: "promise",
+      surface: "promising",
+      gloss: "a.有希望的；有前景的"
     },
     {
-      "headwordId": "bench",
-      "gloss": "n.工作台；长凳"
+      headwordId: "confront",
+      gloss: "v.面临；正视"
     },
     {
-      "headwordId": "study",
-      "surface": "study",
-      "gloss": "n.学习；研究"
+      headwordId: "profound",
+      gloss: "a.深刻的；深远的"
     },
     {
-      "headwordId": "cell",
-      "surface": "cell",
-      "gloss": "n.细胞；小房间"
+      headwordId: "moral",
+      gloss: "a.道德的；道义上的"
     },
     {
-      "headwordId": "modern",
-      "surface": "modern",
-      "gloss": "a.现代的；新式的"
+      headwordId: "dilemma",
+      surface: "dilemmas",
+      gloss: "n.困境；进退两难"
     },
     {
-      "headwordId": "discover",
-      "surface": "discover",
-      "gloss": "v.发现；暴露"
+      headwordId: "criticize",
+      surface: "critical",
+      gloss: "a.关键的；重大的"
     },
     {
-      "headwordId": "gene",
-      "surface": "genes",
-      "gloss": "n.基因；遗传因子"
+      headwordId: "policy",
+      gloss: "a.政策的；方针的"
     },
     {
-      "headwordId": "live¹",
-      "surface": "living",
-      "gloss": "a.活的；生动的"
+      headwordId: "clinic",
+      surface: "clinical",
+      gloss: "a.临床的；门诊的"
     },
     {
-      "headwordId": "organism",
-      "surface": "organisms",
-      "gloss": "n.生物；有机体"
+      headwordId: "trial",
+      surface: "trials",
+      gloss: "n.试验；审理"
     },
     {
-      "headwordId": "research",
-      "surface": "Research",
-      "gloss": "v.调查；探究"
+      headwordId: "bend",
+      gloss: "v.违背；弯曲"
     },
     {
-      "headwordId": "offer",
-      "surface": "offers",
-      "gloss": "v.提供；给予；提出"
+      headwordId: "principle",
+      surface: "principles",
+      gloss: "n.原则；准则"
     },
     {
-      "headwordId": "create",
-      "surface": "creating",
-      "gloss": "v.创造；引起"
+      headwordId: "betray",
+      gloss: "v.违背；背叛"
     },
     {
-      "headwordId": "crop",
-      "surface": "crops",
-      "gloss": "n.农作物；庄稼"
+      headwordId: "public",
+      gloss: "a.公众的；公共的"
     },
     {
-      "headwordId": "yield",
-      "surface": "yield",
-      "gloss": "v.出产；产生"
+      headwordId: "trust",
+      gloss: "n.信任；信赖"
     },
     {
-      "headwordId": "sweet",
-      "surface": "sweet",
-      "gloss": "a.甜的；愉快的"
+      headwordId: "blind",
+      gloss: "a.盲目的；视而不见的"
     },
     {
-      "headwordId": "harvest",
-      "surface": "harvests",
-      "gloss": "n.收获；收成"
+      headwordId: "bid",
+      gloss: "n.企图；争取；努力"
     },
     {
-      "headwordId": "resist",
-      "surface": "resist",
-      "gloss": "v.抵御；反抗"
+      headwordId: "academy",
+      surface: "academic",
+      gloss: "a.学术的；学业的"
     },
     {
-      "headwordId": "fame",
-      "surface": "famous",
-      "gloss": "a.著名的；出名的"
+      headwordId: "fame",
+      gloss: "n.声誉；名气"
     },
     {
-      "headwordId": "scholar",
-      "surface": "scholar",
-      "gloss": "n.学者；学士"
+      headwordId: "bound¹",
+      surface: "bound",
+      gloss: "a.受约束的；有义务的"
     },
     {
-      "headwordId": "write",
-      "surface": "writes",
-      "gloss": "v.书写；写作"
+      headwordId: "respect",
+      gloss: "v.尊重；敬重"
     },
     {
-      "headwordId": "inspire",
-      "surface": "inspiring",
-      "gloss": "a.鼓舞人心的；启发的"
+      headwordId: "individual",
+      gloss: "a.个体的；个人的"
     },
     {
-      "headwordId": "international",
-      "surface": "international",
-      "gloss": "a.国际的；世界的"
+      headwordId: "dignity",
+      gloss: "n.尊严；尊贵"
     },
     {
-      "headwordId": "campus",
-      "surface": "campuses",
-      "gloss": "n.校园；学校场地"
+      headwordId: "secure",
+      gloss: "v.获得；确保"
     },
     {
-      "headwordId": "surface",
-      "surface": "surface",
-      "gloss": "n.地面；表面"
+      headwordId: "volunteer",
+      surface: "voluntary",
+      gloss: "a.自愿的；自发的"
     },
     {
-      "headwordId": "science",
-      "surface": "scientific",
-      "gloss": "n.科学；学科；学问"
+      headwordId: "consent",
+      gloss: "n.准许；同意"
     },
     {
-      "headwordId": "debate",
-      "surface": "debates",
-      "gloss": "v.争论；辩论"
+      headwordId: "eliminate",
+      gloss: "v.消除；淘汰"
     },
     {
-      "headwordId": "read",
-      "surface": "read",
-      "gloss": "v.阅读；看懂"
+      headwordId: "race¹",
+      surface: "racial",
+      gloss: "a.种族的；人种的"
     },
     {
-      "headwordId": "passage",
-      "surface": "passages",
-      "gloss": "n.段落；走廊"
+      headwordId: "economy",
+      surface: "economic",
+      gloss: "a.经济的；经济学的"
     },
     {
-      "headwordId": "ancient",
-      "surface": "ancient",
-      "gloss": "a.古代的；古老的"
+      headwordId: "bias",
+      gloss: "n.偏见；偏袒"
     },
     {
-      "headwordId": "reflect",
-      "surface": "reflect",
-      "gloss": "v.反射；反映"
+      headwordId: "medical",
+      gloss: "a.医疗的；医学的"
     },
     {
-      "headwordId": "ethic",
-      "surface": "ethics",
-      "gloss": "n.伦理；道德"
+      headwordId: "access",
+      gloss: "n.获取途径；进入权"
     },
     {
-      "headwordId": "eliminate",
-      "surface": "eliminate",
-      "gloss": "v.消灭；消除"
+      headwordId: "furthermore",
+      surface: "Furthermore",
+      gloss: "ad.此外地；而且地"
     },
     {
-      "headwordId": "culture",
-      "surface": "cultural",
-      "gloss": "a.文化的；人文的"
+      headwordId: "investigate",
+      surface: "investigators",
+      gloss: "n.调查人员；研究者"
     },
     {
-      "headwordId": "laboratory",
-      "surface": "laboratory",
-      "gloss": "n.实验室；研究室"
+      headwordId: "manage",
+      gloss: "v.管理；应对"
     },
     {
-      "headwordId": "draw",
-      "surface": "draw",
-      "gloss": "n.平局；抽签"
+      headwordId: "hazard",
+      surface: "hazards",
+      gloss: "n.隐患；危险"
     },
     {
-      "headwordId": "structure",
-      "surface": "structures",
-      "gloss": "n.结构；构造"
+      headwordId: "care",
+      surface: "carefully",
+      gloss: "ad.谨慎地；小心地"
     },
     {
-      "headwordId": "warn",
-      "surface": "warn",
-      "gloss": "v.警告；告诫"
+      headwordId: "ensure",
+      surface: "ensuring",
+      gloss: "v.确保；保证"
     },
     {
-      "headwordId": "learn",
-      "surface": "learners",
-      "gloss": "n.学习者；学生"
+      headwordId: "novel²",
+      surface: "novel",
+      gloss: "a.新颖的；新奇的"
     },
     {
-      "headwordId": "academy",
-      "surface": "academic",
-      "gloss": "a.学院的；理论的"
+      headwordId: "treat",
+      surface: "treatments",
+      gloss: "n.疗法；治疗"
     },
     {
-      "headwordId": "trust",
-      "surface": "trust",
-      "gloss": "n.信任；信托"
+      headwordId: "prevent",
+      gloss: "v.预防；防止"
     },
     {
-      "headwordId": "handle",
-      "surface": "handling",
-      "gloss": "n.处理；把手"
+      headwordId: "severe",
+      gloss: "a.严重的；严厉的"
     },
     {
-      "headwordId": "sharp",
-      "surface": "sharp",
-      "gloss": "a.锋利的；敏锐的"
+      headwordId: "harm",
+      gloss: "n.伤害；损害"
     },
     {
-      "headwordId": "steel",
-      "surface": "steel",
-      "gloss": "n.钢铁；钢材"
+      headwordId: "vulnerable",
+      gloss: "a.脆弱的；易受伤害的"
     },
     {
-      "headwordId": "care",
-      "surface": "care",
-      "gloss": "a.仔细的；小心的"
+      headwordId: "ambition",
+      gloss: "n.抱负；野心"
     },
     {
-      "headwordId": "cut",
-      "surface": "cut",
-      "gloss": "v.减少；停止"
+      headwordId: "regulate",
+      surface: "regulatory",
+      gloss: "a.监管的；管制的"
     },
     {
-      "headwordId": "clean",
-      "surface": "clean",
-      "gloss": "v.清洁；打扫"
+      headwordId: "authority",
+      surface: "authorities",
+      gloss: "n.官方机构；权威"
     },
     {
-      "headwordId": "enjoy",
-      "surface": "enjoying",
-      "gloss": "v.享受；欣赏"
+      headwordId: "ethic",
+      surface: "ethics",
+      gloss: "n.伦理学；道德准则"
     },
     {
-      "headwordId": "share",
-      "surface": "share",
-      "gloss": "n.份额；股份"
+      headwordId: "committee",
+      surface: "committees",
+      gloss: "n.委员会；全体委员"
     },
     {
-      "headwordId": "thought",
-      "surface": "thoughts",
-      "gloss": "a.体贴的；深思熟虑的"
+      headwordId: "establish",
+      gloss: "v.确立；建立"
     },
     {
-      "headwordId": "active",
-      "surface": "active",
-      "gloss": "a.活跃的；积极的"
+      headwordId: "guideline",
+      surface: "guidelines",
+      gloss: "n.指导方针；准则"
     },
     {
-      "headwordId": "avoid",
-      "surface": "avoiding",
-      "gloss": "v.避免；躲开"
+      headwordId: "maintain",
+      gloss: "v.保持；维持"
     },
     {
-      "headwordId": "indifferent",
-      "surface": "indifference",
-      "gloss": "a.冷漠的；不积极的"
+      headwordId: "strict",
+      gloss: "a.严格的；严谨的"
     },
     {
-      "headwordId": "help",
-      "surface": "helpful",
-      "gloss": "a.给予帮助的；有用的"
+      headwordId: "supervise",
+      surface: "supervision",
+      gloss: "n.监督；管理"
     },
     {
-      "headwordId": "advice",
-      "surface": "advice",
-      "gloss": "n.劝告；忠告"
+      headwordId: "boundary",
+      surface: "boundaries",
+      gloss: "n.界限；边界"
     },
     {
-      "headwordId": "society",
-      "surface": "society",
-      "gloss": "n.社会；团体"
+      headwordId: "debate",
+      gloss: "v.辩论；争辩"
     },
     {
-      "headwordId": "peace",
-      "surface": "peaceful",
-      "gloss": "a.和平的；宁静的"
+      headwordId: "contend",
+      surface: "contentious",
+      gloss: "a.有争议的；引起争论的"
     },
     {
-      "headwordId": "community",
-      "surface": "communities",
-      "gloss": "n.社区；社会"
+      headwordId: "inspect",
+      gloss: "v.检查；视察"
     },
     {
-      "headwordId": "destroy",
-      "surface": "destructive",
-      "gloss": "v.破坏；消灭"
+      headwordId: "hide",
+      surface: "hidden",
+      gloss: "a.潜在的；隐藏的"
     },
     {
-      "headwordId": "weapon",
-      "surface": "weapons",
-      "gloss": "n.武器；兵器"
+      headwordId: "cultivate",
+      gloss: "v.开展；培养"
     },
     {
-      "headwordId": "medical",
-      "surface": "medical",
-      "gloss": "a.医学的；内科的"
+      headwordId: "dialog",
+      surface: "dialogue",
+      gloss: "n.对话；交流"
     },
     {
-      "headwordId": "cooperate",
-      "surface": "cooperation",
-      "gloss": "v.合作；协作"
+      headwordId: "blame",
+      gloss: "v.归咎于；责备"
     },
     {
-      "headwordId": "heal",
-      "surface": "heal",
-      "gloss": "v.治愈；使和解"
+      headwordId: "technology",
+      surface: "technological",
+      gloss: "a.技术的；科技的"
     },
     {
-      "headwordId": "insight",
-      "surface": "insights",
-      "gloss": "n.见解；洞察力"
+      headwordId: "uncertain",
+      surface: "uncertainty",
+      gloss: "n.不确定性；疑虑"
     },
     {
-      "headwordId": "overcome",
-      "surface": "overcome",
-      "gloss": "v.克服；战胜"
+      headwordId: "ultimate",
+      surface: "Ultimately",
+      gloss: "ad.最终地；根本地"
     },
     {
-      "headwordId": "intellectual",
-      "surface": "intellectual",
-      "gloss": "n.知识分子；凭理智做事者"
+      headwordId: "genuine",
+      gloss: "a.真正的；真诚的"
     },
     {
-      "headwordId": "condemn",
-      "surface": "condemn",
-      "gloss": "v.谴责；指责"
+      headwordId: "progress",
+      gloss: "n.进步；进展"
     },
     {
-      "headwordId": "angry",
-      "surface": "angry",
-      "gloss": "a.愤怒的；生气的"
+      headwordId: "belong",
+      surface: "belongs",
+      gloss: "v.属于；归属"
     },
     {
-      "headwordId": "insult",
-      "surface": "insults",
-      "gloss": "n.侮辱；凌辱"
+      headwordId: "blend",
+      surface: "blends",
+      gloss: "v.融合；调和"
     },
     {
-      "headwordId": "refuse",
-      "surface": "refusing",
-      "gloss": "v.拒绝；不肯"
-    },
-    {
-      "headwordId": "call",
-      "surface": "call",
-      "gloss": "n.呼叫；访问"
-    },
-    {
-      "headwordId": "cruel",
-      "surface": "cruel",
-      "gloss": "a.残忍的；残酷的"
-    },
-    {
-      "headwordId": "moral",
-      "surface": "moral",
-      "gloss": "a.道德的；精神的"
-    },
-    {
-      "headwordId": "vision",
-      "surface": "vision",
-      "gloss": "n.视力；视觉"
-    },
-    {
-      "headwordId": "dignity",
-      "surface": "dignity",
-      "gloss": "n.尊严；高贵"
-    },
-    {
-      "headwordId": "submit",
-      "surface": "submit",
-      "gloss": "v.使服从；屈服"
-    },
-    {
-      "headwordId": "formal",
-      "surface": "formal",
-      "gloss": "a.正式的；礼仪上的"
-    },
-    {
-      "headwordId": "throw",
-      "surface": "throw",
-      "gloss": "n.投掷；投射"
-    },
-    {
-      "headwordId": "trash",
-      "surface": "trash",
-      "gloss": "n.垃圾；废物"
-    },
-    {
-      "headwordId": "recycle",
-      "surface": "recycling",
-      "gloss": "a.回收利用的；循环的"
-    },
-    {
-      "headwordId": "metal",
-      "surface": "metal",
-      "gloss": "n.金属；质料"
-    },
-    {
-      "headwordId": "rod",
-      "surface": "rods",
-      "gloss": "n.戒鞭；测量杆"
-    },
-    {
-      "headwordId": "safe",
-      "surface": "safely",
-      "gloss": "ad.安全地；平安地"
-    },
-    {
-      "headwordId": "fate",
-      "surface": "fate",
-      "gloss": "n.命运；天数"
-    },
-    {
-      "headwordId": "celebrate",
-      "surface": "celebrating",
-      "gloss": "v.庆祝；歌颂"
-    },
-    {
-      "headwordId": "know",
-      "surface": "know",
-      "gloss": "n.知识；学识；学问"
-    },
-    {
-      "headwordId": "true",
-      "surface": "true",
-      "gloss": "a.真的；真实的"
-    },
-    {
-      "headwordId": "wise",
-      "surface": "wisdom",
-      "gloss": "ad.明智地；聪明地"
-    },
-    {
-      "headwordId": "forever",
-      "surface": "forever",
-      "gloss": "ad.永远地；总是地"
+      headwordId: "insight",
+      gloss: "n.洞察力；深刻见解"
     }
   ],
-  "phraseAnnotations": [],
-  "expansionEntries": [
+  phraseAnnotations: [],
+  expansionEntries: [
     {
-      "id": "e1",
-      "expression": "bind together/unite",
-      "explanation": "紧密联结在一起；bind past tense 为 bound"
+      id: "exp-1",
+      expression: "biotechnology / biochemistry / biology",
+      explanation: "生物技术 / 生物化学 / 生物学（bio- 表示“生命，生物”，-logy 表示“学科”，-chemistry 表示“化学”）"
     },
     {
-      "id": "e2",
-      "expression": "benefit from/gain advantage",
-      "explanation": "得益于；benefit 可作名词表示“利益”，作动词表示“获益”"
+      id: "exp-2",
+      expression: "genetic / gene / generation",
+      explanation: "基因的；遗传的 / 基因 / 代；产生（词根 gen- 表示“出生，产生”，派生系列核心词汇）"
     },
     {
-      "id": "e3",
-      "expression": "bitter cold/severe",
-      "explanation": "刺骨的严寒；bitter 熟词僻义常修饰天气或怨恨"
+      id: "exp-3",
+      expression: "clinical trial / clinical practice",
+      explanation: "临床试验 / 临床实践（clinic 衍生形容词 clinical，常考医学科研固定搭配）"
     },
     {
-      "id": "e4",
-      "expression": "cultural bias/prejudice",
-      "explanation": "文化偏见；bias against 对...的偏见"
+      id: "exp-4",
+      expression: "moral dilemma / ethical dilemma",
+      explanation: "道德困境 / 伦理困境（dilemma 指“两难窘境，进退维谷”，常搭配 moral/ethical）"
     },
     {
-      "id": "e5",
-      "expression": "betray trust/break faith",
-      "explanation": "背叛信任；betray a secret 泄露秘密"
+      id: "exp-5",
+      expression: "bend the rules / bend principles",
+      explanation: "变通规则；违背原则（bend 作动词熟词僻义，引申为“篡改，曲解，违背准则”）"
     },
     {
-      "id": "e6",
-      "expression": "beside vs besides",
-      "explanation": "beside 意为“在...旁边”，besides 意为“除...之外还有”"
+      id: "exp-6",
+      expression: "in a bid to / in a bid for",
+      explanation: "为了争取…；企图…（bid 作名词表示“努力，企图；竞标”，为四级高频书面表达）"
     },
     {
-      "id": "e7",
-      "expression": "blank expression/vacant",
-      "explanation": "茫然空洞的表情；blank 亦指填空处的空白"
+      id: "exp-7",
+      expression: "voluntary consent / informed consent",
+      explanation: "自愿同意 / 知情同意（医学伦理与受试者保护核心术语）"
     },
     {
-      "id": "e8",
-      "expression": "blast off/explode",
-      "explanation": "火箭发射升空，炸裂；blast 可作名词或动词"
+      id: "exp-8",
+      expression: "eliminate bias / racial bias",
+      explanation: "消除偏见 / 种族偏见（eliminate 表示“消除，淘汰”，bias 指“偏见，偏心”）"
     },
     {
-      "id": "e9",
-      "expression": "make a bet on/wager",
-      "explanation": "下注，确信；I bet 我敢肯定"
+      id: "exp-9",
+      expression: "vulnerable / fragile / defenseless",
+      explanation: "易受伤害的；脆弱的 / 易碎的 / 无防备的（描述弱势群体或脆弱个体的同义替换词族）"
     },
     {
-      "id": "e10",
-      "expression": "blend with/merge",
-      "explanation": "与...相交融，调和；blend into 融入背景"
+      id: "exp-10",
+      expression: "supervise / supervision / supervisor",
+      explanation: "监督；指导 / 监督；管理 / 导师；主管（super-“在上方”+ vise-“看”，即居高临下监察）"
     },
     {
-      "id": "e11",
-      "expression": "stumbling block/obstacle",
-      "explanation": "绊脚石，阻碍；block 熟词僻义常比喻“障碍”"
+      id: "exp-11",
+      expression: "hazard / hazardous / danger",
+      explanation: "危险；隐患 / 危险的 / 危险（hazard 侧重隐蔽的危险或安全隐患，常考 occupational/health hazard）"
     },
     {
-      "id": "e12",
-      "expression": "blind to/oblivious of",
-      "explanation": "对...视而不见；blind spot 指盲点"
+      id: "exp-12",
+      expression: "cultivate dialogue / cultivate crops",
+      explanation: "培育对话（开展交流）/ 耕作庄稼（cultivate 作动词引申义“培养，促进”，本义为“耕作”）"
     },
     {
-      "id": "e13",
-      "expression": "place a bid on/offer an auction price",
-      "explanation": "参与竞标，出价；bid for 谋求"
+      id: "exp-13",
+      expression: "blame ... for / attribute ... to",
+      explanation: "因…责备/归咎于… / 把…归因于…（常考因果关系动词短语反向转换）"
     },
     {
-      "id": "e14",
-      "expression": "belong to/be member of",
-      "explanation": "属于...，是...的成员；belongings 为名词“财产”"
+      id: "exp-14",
+      expression: "profound / deep / thorough",
+      explanation: "深刻的；渊博的 / 深的 / 彻底的（profound 常用于修饰 insights, respect, impact 等抽象概念）"
     }
   ]
 };

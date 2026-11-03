@@ -1,11 +1,11 @@
 import { type ReactNode, type Ref, useState } from 'react';
-import {
-  PASSAGE_TIER_LABELS,
-  toCircledNumber,
-  type CompiledPassage,
-  type CompiledSentence,
-  type InlineAnnotationToken,
+import type {
+  CompiledPassage,
+  CompiledSentence,
+  InlineAnnotationToken,
 } from '../corpus';
+import { toCircledNumber } from '../corpus/formatting';
+import { PASSAGE_TIER_LABELS } from '../corpus/labels';
 
 export interface PassageCardProps {
   passage: CompiledPassage;

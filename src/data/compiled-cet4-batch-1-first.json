@@ -1,0 +1,1658 @@
+{
+  "id": "cet4-b1-001",
+  "indexLabel": "NO. 01",
+  "tier": "cet4-core",
+  "topic": "国际学术交流与跨文化适应",
+  "titleZh": "跨越重洋的学术探索与文化适应",
+  "titleEn": "Academic Exploration and Cultural Adaptation Abroad",
+  "paragraphs": [
+    {
+      "paragraphNumber": 1,
+      "sentences": [
+        {
+          "sentenceNumber": 1,
+          "circledNumber": "①",
+          "english": "When young scholars travel abroad to visit an international university, they step onto campus with curiosity and high expectations.",
+          "chinese": "当青年学者远赴海外访问一所国际大学时，他们带着好奇心与高昂的期盼踏上校园。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "When young "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:scholar",
+              "surface": "scholars",
+              "gloss": "n.学者；学士",
+              "headwordId": "scholar"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:travel",
+              "surface": "travel",
+              "gloss": "v.旅行；行进",
+              "headwordId": "travel",
+              "shiftX": -9.6
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:abroad",
+              "surface": "abroad",
+              "gloss": "ad.在国外地；到海外地",
+              "headwordId": "abroad",
+              "shiftX": 5.9
+            },
+            {
+              "type": "text",
+              "text": " to "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:visit",
+              "surface": "visit",
+              "gloss": "v.访问；拜访",
+              "headwordId": "visit",
+              "shiftX": 3.7
+            },
+            {
+              "type": "text",
+              "text": " an "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:international",
+              "surface": "international",
+              "gloss": "a.国际的；世界性的",
+              "headwordId": "international"
+            },
+            {
+              "type": "text",
+              "text": " university, they "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:step",
+              "surface": "step",
+              "gloss": "v.跨步；迈步",
+              "headwordId": "step"
+            },
+            {
+              "type": "text",
+              "text": " onto "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:campus",
+              "surface": "campus",
+              "gloss": "n.校园；校区",
+              "headwordId": "campus"
+            },
+            {
+              "type": "text",
+              "text": " with "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:curious",
+              "surface": "curiosity",
+              "gloss": "n.好奇心；求知欲",
+              "headwordId": "curious"
+            },
+            {
+              "type": "text",
+              "text": " and high "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:expect",
+              "surface": "expectations",
+              "gloss": "n.期望；预期",
+              "headwordId": "expect"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 2,
+          "circledNumber": "②",
+          "english": "They must not abandon their roots, yet they need to adapt to a new environment and absorb knowledge.",
+          "chinese": "他们绝不能抛弃自己的根基，然而他们需要适应新环境并汲取知识。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "They must not "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:abandon",
+              "surface": "abandon",
+              "gloss": "v.放弃；舍弃",
+              "headwordId": "abandon"
+            },
+            {
+              "type": "text",
+              "text": " their "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:root",
+              "surface": "roots",
+              "gloss": "n.根基；根源",
+              "headwordId": "root"
+            },
+            {
+              "type": "text",
+              "text": ", yet they need to "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:adapt",
+              "surface": "adapt",
+              "gloss": "v.适应；调整",
+              "headwordId": "adapt"
+            },
+            {
+              "type": "text",
+              "text": " to a "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:new",
+              "surface": "new",
+              "gloss": "a.全新的；新近的",
+              "headwordId": "new"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:environment",
+              "surface": "environment",
+              "gloss": "n.环境；生态",
+              "headwordId": "environment"
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:absorb",
+              "surface": "absorb",
+              "gloss": "v.吸收；理解",
+              "headwordId": "absorb"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:know",
+              "surface": "knowledge",
+              "gloss": "n.知识；学问",
+              "headwordId": "know"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 3,
+          "circledNumber": "③",
+          "english": "According to campus advisers, scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
+          "chinese": "根据校园导师的说法，勇于迎接新挑战的学者会加速其个人与学术心智的成长。",
+          "tokens": [
+            {
+              "type": "annotation",
+              "category": "phrase",
+              "itemKey": "phrase:according to",
+              "surface": "According to",
+              "gloss": "根据；按照",
+              "phrase": "according to"
+            },
+            {
+              "type": "text",
+              "text": " campus "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:advise",
+              "surface": "advisers",
+              "gloss": "n.顾问；导师",
+              "headwordId": "advise"
+            },
+            {
+              "type": "text",
+              "text": ", scholars who "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:embrace",
+              "surface": "embrace",
+              "gloss": "v.拥抱；欣然接受",
+              "headwordId": "embrace",
+              "shiftX": -4.3
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:fresh",
+              "surface": "fresh",
+              "gloss": "a.新鲜的；新颖的",
+              "headwordId": "fresh",
+              "shiftX": 4.3
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:challenge",
+              "surface": "challenges",
+              "gloss": "n.挑战；难关",
+              "headwordId": "challenge"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:accelerate",
+              "surface": "accelerate",
+              "gloss": "v.加速；促进",
+              "headwordId": "accelerate"
+            },
+            {
+              "type": "text",
+              "text": " their personal and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:intellectual",
+              "surface": "intellectual",
+              "gloss": "a.智力的；学术的",
+              "headwordId": "intellectual"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:grow",
+              "surface": "growth",
+              "gloss": "n.成长；发展",
+              "headwordId": "grow"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 4,
+          "circledNumber": "④",
+          "english": "Although accents may cause occasional confusion in daily communication, sincere dialogue helps them overcome language barriers.",
+          "chinese": "尽管口音可能在日常交流中引起偶尔的困惑，但真诚的对话有助于他们克服语言障碍。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "Although "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:accent",
+              "surface": "accents",
+              "gloss": "n.口音；腔调",
+              "headwordId": "accent"
+            },
+            {
+              "type": "text",
+              "text": " may "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:cause",
+              "surface": "cause",
+              "gloss": "v.引起；导致",
+              "headwordId": "cause"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:occasion",
+              "surface": "occasional",
+              "gloss": "a.偶尔的；临时的",
+              "headwordId": "occasion"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:confuse",
+              "surface": "confusion",
+              "gloss": "n.困惑；混淆",
+              "headwordId": "confuse"
+            },
+            {
+              "type": "text",
+              "text": " in "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:daily",
+              "surface": "daily",
+              "gloss": "a.日常的；每日的",
+              "headwordId": "daily"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:communicate",
+              "surface": "communication",
+              "gloss": "n.交流；沟通",
+              "headwordId": "communicate"
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:sincere",
+              "surface": "sincere",
+              "gloss": "a.真诚的；坦率的",
+              "headwordId": "sincere"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:dialog",
+              "surface": "dialogue",
+              "gloss": "n.对话；对白",
+              "headwordId": "dialog"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:help",
+              "surface": "helps",
+              "gloss": "v.帮助；协助",
+              "headwordId": "help"
+            },
+            {
+              "type": "text",
+              "text": " them "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:overcome",
+              "surface": "overcome",
+              "gloss": "v.克服；战胜",
+              "headwordId": "overcome"
+            },
+            {
+              "type": "text",
+              "text": " language "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:barrier",
+              "surface": "barriers",
+              "gloss": "n.壁垒；障碍",
+              "headwordId": "barrier"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "paragraphNumber": 2,
+      "sentences": [
+        {
+          "sentenceNumber": 1,
+          "circledNumber": "①",
+          "english": "In research laboratories, young scholars soon acquaint themselves with safety procedures, gain digital access to primary materials, and acquire accurate experimental data.",
+          "chinese": "在科研实验室中，年轻学者很快熟悉了安全规程，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "In "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:research",
+              "surface": "research",
+              "gloss": "a.科研的；研究的",
+              "headwordId": "research"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:laboratory",
+              "surface": "laboratories",
+              "gloss": "n.实验室；研究室",
+              "headwordId": "laboratory"
+            },
+            {
+              "type": "text",
+              "text": ", young scholars soon "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:acquaint",
+              "surface": "acquaint",
+              "gloss": "v.使熟悉；使了解",
+              "headwordId": "acquaint"
+            },
+            {
+              "type": "text",
+              "text": " themselves with "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:safe",
+              "surface": "safety",
+              "gloss": "a.安全用的；防范的",
+              "headwordId": "safe",
+              "shiftX": -2.6
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:procedure",
+              "surface": "procedures",
+              "gloss": "n.规程；程序；步骤",
+              "headwordId": "procedure",
+              "shiftX": -4.4
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:gain",
+              "surface": "gain",
+              "gloss": "v.获得；取得",
+              "headwordId": "gain",
+              "shiftX": -13.5
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:digit",
+              "surface": "digital",
+              "gloss": "a.数字的；数码的",
+              "headwordId": "digit",
+              "shiftX": 0.7
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:access",
+              "surface": "access",
+              "gloss": "n.进入权；访问权限",
+              "headwordId": "access",
+              "shiftX": 17
+            },
+            {
+              "type": "text",
+              "text": " to "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:primary",
+              "surface": "primary",
+              "gloss": "a.原始的；首要的",
+              "headwordId": "primary",
+              "shiftX": 2.7
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:material",
+              "surface": "materials",
+              "gloss": "n.资料；材料",
+              "headwordId": "material"
+            },
+            {
+              "type": "text",
+              "text": ", and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:acquire",
+              "surface": "acquire",
+              "gloss": "v.获取；习得",
+              "headwordId": "acquire"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:accurate",
+              "surface": "accurate",
+              "gloss": "a.准确的；精确的",
+              "headwordId": "accurate"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:experiment",
+              "surface": "experimental",
+              "gloss": "a.实验的；试验性的",
+              "headwordId": "experiment"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:data",
+              "surface": "data",
+              "gloss": "n.数据；资料",
+              "headwordId": "data"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 2,
+          "circledNumber": "②",
+          "english": "They participate in regular seminars, present distinct arguments, and remain accountable for their actual findings.",
+          "chinese": "他们参加定期的研讨会，提出鲜明的论点，并对其实际研究发现负责。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "They "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:participate",
+              "surface": "participate",
+              "gloss": "v.参与；参加",
+              "headwordId": "participate"
+            },
+            {
+              "type": "text",
+              "text": " in "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:regular",
+              "surface": "regular",
+              "gloss": "a.定期的；例行的",
+              "headwordId": "regular"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:seminar",
+              "surface": "seminars",
+              "gloss": "n.研讨会；讲习班",
+              "headwordId": "seminar"
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:present¹",
+              "surface": "present",
+              "gloss": "v.陈述；提出",
+              "headwordId": "present¹"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:distinct",
+              "surface": "distinct",
+              "gloss": "a.鲜明的；独特的",
+              "headwordId": "distinct"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:argue",
+              "surface": "arguments",
+              "gloss": "n.论点；论据",
+              "headwordId": "argue"
+            },
+            {
+              "type": "text",
+              "text": ", and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:remain",
+              "surface": "remain",
+              "gloss": "v.保持；仍然是",
+              "headwordId": "remain",
+              "shiftX": -1
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:accountable",
+              "surface": "accountable",
+              "gloss": "a.负责任的；有解释义务的",
+              "headwordId": "accountable",
+              "shiftX": 1
+            },
+            {
+              "type": "text",
+              "text": " for their "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:actual",
+              "surface": "actual",
+              "gloss": "a.实际的；真实的",
+              "headwordId": "actual",
+              "shiftX": -3.9
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:find",
+              "surface": "findings",
+              "gloss": "n.调查结果；发现",
+              "headwordId": "find",
+              "shiftX": 3.9
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 3,
+          "circledNumber": "③",
+          "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with international standards.",
+          "chinese": "每位研究人员都必须维护学术诚信，并按照国际规范开展科学调查。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "Every researcher must "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:maintain",
+              "surface": "maintain",
+              "gloss": "v.维持；保持",
+              "headwordId": "maintain"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:academy",
+              "surface": "academic",
+              "gloss": "a.学术的；学业的",
+              "headwordId": "academy"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:integrity",
+              "surface": "integrity",
+              "gloss": "n.正直；诚实",
+              "headwordId": "integrity"
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:conduct",
+              "surface": "conduct",
+              "gloss": "v.实施；组织",
+              "headwordId": "conduct"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:science",
+              "surface": "scientific",
+              "gloss": "a.科学的；严谨的",
+              "headwordId": "science"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:investigate",
+              "surface": "investigations",
+              "gloss": "n.调查；研究",
+              "headwordId": "investigate"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "phrase",
+              "itemKey": "phrase:in accordance with",
+              "surface": "in accordance with",
+              "gloss": "依照；与…一致",
+              "phrase": "in accordance with"
+            },
+            {
+              "type": "text",
+              "text": " international "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:standard",
+              "surface": "standards",
+              "gloss": "n.标准；规范",
+              "headwordId": "standard"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 4,
+          "circledNumber": "④",
+          "english": "When professors acknowledge student contributions, they guide young researchers through difficult challenges and achieve meaningful breakthroughs.",
+          "chinese": "当教授认可学生的贡献并指导年轻学者应对艰难挑战时，他们能够取得有意义的重大突破。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "When professors "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:acknowledge",
+              "surface": "acknowledge",
+              "gloss": "v.认可；承认",
+              "headwordId": "acknowledge"
+            },
+            {
+              "type": "text",
+              "text": " student "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:contribute",
+              "surface": "contributions",
+              "gloss": "n.贡献；捐赠",
+              "headwordId": "contribute"
+            },
+            {
+              "type": "text",
+              "text": ", they "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:guide",
+              "surface": "guide",
+              "gloss": "v.指引；指导；引导",
+              "headwordId": "guide"
+            },
+            {
+              "type": "text",
+              "text": " young researchers through "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:difficult",
+              "surface": "difficult",
+              "gloss": "a.困难的；艰难的",
+              "headwordId": "difficult"
+            },
+            {
+              "type": "text",
+              "text": " challenges and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:achieve",
+              "surface": "achieve",
+              "gloss": "v.取得；实现",
+              "headwordId": "achieve"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:mean¹",
+              "surface": "meaningful",
+              "gloss": "a.有意义的；意味深长的",
+              "headwordId": "mean¹"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:breakthrough",
+              "surface": "breakthroughs",
+              "gloss": "n.突破；重大进展",
+              "headwordId": "breakthrough"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "paragraphNumber": 3,
+      "sentences": [
+        {
+          "sentenceNumber": 1,
+          "circledNumber": "①",
+          "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars as they accustom themselves to community life.",
+          "chinese": "在教学建筑之外，现代住宅楼为多元学者提供了住所，他们在此逐渐适应社区生活。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "Beyond academic "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:build",
+              "surface": "buildings",
+              "gloss": "n.建筑物；大楼",
+              "headwordId": "build"
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:modern",
+              "surface": "modern",
+              "gloss": "a.现代的；新式的",
+              "headwordId": "modern"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:reside",
+              "surface": "residential",
+              "gloss": "a.住宅的；居住的",
+              "headwordId": "reside"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:hall",
+              "surface": "halls",
+              "gloss": "n.大楼；礼堂",
+              "headwordId": "hall"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:accommodate",
+              "surface": "accommodate",
+              "gloss": "v.容纳；提供住宿",
+              "headwordId": "accommodate"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:diverse",
+              "surface": "diverse",
+              "gloss": "a.多样的；多元的",
+              "headwordId": "diverse"
+            },
+            {
+              "type": "text",
+              "text": " scholars as they "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:accustom",
+              "surface": "accustom",
+              "gloss": "v.使习惯；使适应",
+              "headwordId": "accustom"
+            },
+            {
+              "type": "text",
+              "text": " themselves to "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:community",
+              "surface": "community",
+              "gloss": "n.社区；团体",
+              "headwordId": "community"
+            },
+            {
+              "type": "text",
+              "text": " life."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 2,
+          "circledNumber": "②",
+          "english": "Through shared dining and cultural events, researchers exchange distinct perspectives and accomplish collaborative projects through cooperation.",
+          "chinese": "通过共同进餐与文化活动，研究人员交流不同视角，并通过协作圆满完成合作项目。",
+          "tokens": [
+            {
+              "type": "text",
+              "text": "Through "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:share",
+              "surface": "shared",
+              "gloss": "a.共享的；共同的",
+              "headwordId": "share",
+              "shiftX": -3.2
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:dine",
+              "surface": "dining",
+              "gloss": "n.进餐；用餐",
+              "headwordId": "dine",
+              "shiftX": 3.3
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:culture",
+              "surface": "cultural",
+              "gloss": "a.文化的；人文的",
+              "headwordId": "culture"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:event",
+              "surface": "events",
+              "gloss": "n.活动；事件",
+              "headwordId": "event"
+            },
+            {
+              "type": "text",
+              "text": ", researchers "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:exchange",
+              "surface": "exchange",
+              "gloss": "v.交流；交换",
+              "headwordId": "exchange"
+            },
+            {
+              "type": "text",
+              "text": " distinct "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:perspective",
+              "surface": "perspectives",
+              "gloss": "n.视角；观点",
+              "headwordId": "perspective"
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:accomplish",
+              "surface": "accomplish",
+              "gloss": "v.完成；实现",
+              "headwordId": "accomplish"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:collaborate",
+              "surface": "collaborative",
+              "gloss": "a.合作的；协作的",
+              "headwordId": "collaborate"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:project¹",
+              "surface": "projects",
+              "gloss": "n.项目；工程",
+              "headwordId": "project¹"
+            },
+            {
+              "type": "text",
+              "text": " through "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:cooperate",
+              "surface": "cooperation",
+              "gloss": "n.合作；协同",
+              "headwordId": "cooperate"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 3,
+          "circledNumber": "③",
+          "english": "Engaging with international peers helps scholars broaden their horizons, enrich their understanding, and shape an open vision.",
+          "chinese": "与国际同伴的互动帮助学者开阔眼界，丰富理解，并塑造开阔的视野。",
+          "tokens": [
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:engage",
+              "surface": "Engaging",
+              "gloss": "v.参与；吸引",
+              "headwordId": "engage"
+            },
+            {
+              "type": "text",
+              "text": " with international "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:peer",
+              "surface": "peers",
+              "gloss": "n.同伴；同龄人",
+              "headwordId": "peer"
+            },
+            {
+              "type": "text",
+              "text": " helps scholars "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:broad",
+              "surface": "broaden",
+              "gloss": "v.开阔；变宽",
+              "headwordId": "broad"
+            },
+            {
+              "type": "text",
+              "text": " their "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:horizon",
+              "surface": "horizons",
+              "gloss": "n.眼界；地平线",
+              "headwordId": "horizon"
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:enrich",
+              "surface": "enrich",
+              "gloss": "v.充实；丰富",
+              "headwordId": "enrich"
+            },
+            {
+              "type": "text",
+              "text": " their "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:understand",
+              "surface": "understanding",
+              "gloss": "n.理解；领会",
+              "headwordId": "understand"
+            },
+            {
+              "type": "text",
+              "text": ", and shape an open "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:vision",
+              "surface": "vision",
+              "gloss": "n.愿景；视力",
+              "headwordId": "vision"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "sentenceNumber": 4,
+          "circledNumber": "④",
+          "english": "Ultimately, these exchange programs strengthen ties between universities, promote mutual trust, and inspire academic innovation.",
+          "chinese": "最终，这些交流项目加强了大学之间的纽带，促进了相互信任，并激励学术创新。",
+          "tokens": [
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:ultimate",
+              "surface": "Ultimately",
+              "gloss": "ad.最终地；根本地",
+              "headwordId": "ultimate"
+            },
+            {
+              "type": "text",
+              "text": ", these exchange "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:program",
+              "surface": "programs",
+              "gloss": "n.项目；方案",
+              "headwordId": "program"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:strong",
+              "surface": "strengthen",
+              "gloss": "v.加强；巩固",
+              "headwordId": "strong"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:tie",
+              "surface": "ties",
+              "gloss": "n.纽带；联系",
+              "headwordId": "tie"
+            },
+            {
+              "type": "text",
+              "text": " between universities, "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:promote",
+              "surface": "promote",
+              "gloss": "v.促进；提升",
+              "headwordId": "promote"
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:mutual",
+              "surface": "mutual",
+              "gloss": "a.相互的；彼此的",
+              "headwordId": "mutual",
+              "shiftX": -3.2
+            },
+            {
+              "type": "text",
+              "text": " "
+            },
+            {
+              "type": "annotation",
+              "category": "regular",
+              "itemKey": "word:trust",
+              "surface": "trust",
+              "gloss": "n.信任；信赖",
+              "headwordId": "trust",
+              "shiftX": 3.3
+            },
+            {
+              "type": "text",
+              "text": ", and "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:inspire",
+              "surface": "inspire",
+              "gloss": "v.激励；鼓舞",
+              "headwordId": "inspire"
+            },
+            {
+              "type": "text",
+              "text": " academic "
+            },
+            {
+              "type": "annotation",
+              "category": "high-frequency",
+              "itemKey": "word:innovate",
+              "surface": "innovation",
+              "gloss": "n.创新；革新",
+              "headwordId": "innovate"
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "expansionEntries": [
+    {
+      "id": "e1",
+      "expression": "abandon/discard/relinquish",
+      "explanation": "放弃，舍弃；relinquish 正式放弃"
+    },
+    {
+      "id": "e2",
+      "expression": "adapt to/adjust to",
+      "explanation": "适应新环境；adapt 侧重根据环境改变自身"
+    },
+    {
+      "id": "e3",
+      "expression": "accelerate growth/speed up",
+      "explanation": "加速成长；accelerate 为高频写作搭配"
+    },
+    {
+      "id": "e4",
+      "expression": "in accordance with/in line with",
+      "explanation": "依照，与…一致；学术论文经典介词搭配"
+    },
+    {
+      "id": "e5",
+      "expression": "be accountable for/be responsible for",
+      "explanation": "对…负责；accountable 强调需向公众或机构解释"
+    },
+    {
+      "id": "e6",
+      "expression": "acquire knowledge/obtain",
+      "explanation": "获取知识；acquire 强调通过努力逐步习得"
+    },
+    {
+      "id": "e7",
+      "expression": "accurate data/precise",
+      "explanation": "准确的数据；accurate 强调与事实无误"
+    },
+    {
+      "id": "e8",
+      "expression": "academic breakthrough/milestone",
+      "explanation": "学术突破；breakthrough 常考阅读关键点"
+    },
+    {
+      "id": "e9",
+      "expression": "accommodate needs/hold",
+      "explanation": "容纳；适应需求；熟词僻义常考“迎合、迁就”"
+    },
+    {
+      "id": "e10",
+      "expression": "accustom oneself to/get used to",
+      "explanation": "使自己习惯于；be accustomed to 后接名词或动名词"
+    },
+    {
+      "id": "e11",
+      "expression": "accomplish tasks/achieve",
+      "explanation": "圆满完成任务；accomplish 侧重克服困难达成目标"
+    },
+    {
+      "id": "e12",
+      "expression": "broaden horizons/widen",
+      "explanation": "开阔眼界；四级高频固定表达"
+    },
+    {
+      "id": "e13",
+      "expression": "overcome barriers/obstacles",
+      "explanation": "克服障碍；overcome 侧重战胜困难"
+    },
+    {
+      "id": "e14",
+      "expression": "mutual trust/confidence",
+      "explanation": "相互信任；学术合作与人际交往核心搭配"
+    },
+    {
+      "id": "e15",
+      "expression": "strengthen ties/bonds",
+      "explanation": "巩固纽带；形容深化国际交流合作"
+    }
+  ],
+  "coveredHeadwordIds": [
+    "scholar",
+    "travel",
+    "abroad",
+    "visit",
+    "international",
+    "step",
+    "campus",
+    "curious",
+    "expect",
+    "abandon",
+    "root",
+    "adapt",
+    "new",
+    "environment",
+    "absorb",
+    "know",
+    "advise",
+    "embrace",
+    "fresh",
+    "challenge",
+    "accelerate",
+    "intellectual",
+    "grow",
+    "accent",
+    "cause",
+    "occasion",
+    "confuse",
+    "daily",
+    "communicate",
+    "sincere",
+    "dialog",
+    "help",
+    "overcome",
+    "barrier",
+    "research",
+    "laboratory",
+    "acquaint",
+    "safe",
+    "procedure",
+    "gain",
+    "digit",
+    "access",
+    "primary",
+    "material",
+    "acquire",
+    "accurate",
+    "experiment",
+    "data",
+    "participate",
+    "regular",
+    "seminar",
+    "present¹",
+    "distinct",
+    "argue",
+    "remain",
+    "accountable",
+    "actual",
+    "find",
+    "maintain",
+    "academy",
+    "integrity",
+    "conduct",
+    "science",
+    "investigate",
+    "standard",
+    "acknowledge",
+    "contribute",
+    "guide",
+    "difficult",
+    "achieve",
+    "mean¹",
+    "breakthrough",
+    "build",
+    "modern",
+    "reside",
+    "hall",
+    "accommodate",
+    "diverse",
+    "accustom",
+    "community",
+    "share",
+    "dine",
+    "culture",
+    "event",
+    "exchange",
+    "perspective",
+    "accomplish",
+    "collaborate",
+    "project¹",
+    "cooperate",
+    "engage",
+    "peer",
+    "broad",
+    "horizon",
+    "enrich",
+    "understand",
+    "vision",
+    "ultimate",
+    "program",
+    "strong",
+    "tie",
+    "promote",
+    "mutual",
+    "trust",
+    "inspire",
+    "innovate"
+  ],
+  "hasOutOfSyllabusWords": false
+}

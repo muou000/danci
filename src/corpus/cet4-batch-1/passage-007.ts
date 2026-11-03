@@ -1,714 +1,688 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_007: Passage = {
-  "id": "cet4-b1-007",
-  "indexLabel": "NO. 07",
-  "tier": "cet4-core",
-  "topic": "滨海小镇社区庆典与生态恢复",
-  "titleZh": "滨海小镇的社区庆典与生态守护",
-  "titleEn": "Coastal Community Festivals and Ecological Care",
-  "paragraphs": [
+  id: "cet4-b1-007",
+  indexLabel: "NO. 07",
+  tier: "cet4-core",
+  topic: "滨海湿地生态保护与科研监测",
+  titleZh: "滨海湿地的生态恢复与候鸟栖息地守护",
+  titleEn: "Coastal Wetland Restoration and Migratory Habitat Conservation",
+  paragraphs: [
     {
-      "paragraphNumber": 1,
-      "sentences": [
+      paragraphNumber: 1,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Along a scenic coastal bay, residents gather on the sunny beach to celebrate the natural beauty of their village.",
-          "chinese": "在风景如画的海岸海湾沿线，居民们聚集在阳光明媚的海滩上，庆祝村庄的自然美景。"
+          sentenceNumber: 1,
+          english: "Along a scenic coastal bay, vast areas of shallow marshes and tidal flats provide vital shelter for diverse wildlife.",
+          chinese: "沿着风景秀丽的海岸海湾，大片浅滩沼泽与潮间带泥滩为多样的野生动植物提供了至关重要的庇护所。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "Volunteers hang a colorful banner across the square, preparing a grand banquet with fresh bean dishes and hot corn.",
-          "chinese": "志愿者们在广场上挂起彩色横幅，准备盛大的宴会，提供新鲜豆类菜肴和热玉米。"
+          sentenceNumber: 2,
+          english: "Every autumn, thousands of migrating birds complete a long journey across the ocean and gather on the muddy shore to rest and feed.",
+          chinese: "每年秋天，数以千计的候鸟完成跨越大洋的长途旅程，聚集在泥泞的海岸上休憩与觅食。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "Neighbors host a lively barbecue and outdoor BBQ on open grass, while a cheerful barber works on an elder man white beard.",
-          "chinese": "邻居们在开阔草地上举办热闹的烧烤野餐，而快活的理发师正在为一位老者的白色胡须做打理。"
+          sentenceNumber: 3,
+          english: "However, severe seasonal storms and fierce ocean waves frequently damage natural barriers along the beach.",
+          chinese: "然而，严重的季节性风暴与汹涌的海浪经常破坏海滩沿线的天然屏障。"
         },
         {
-          "sentenceNumber": 4,
-          "english": "Children run bare foot along the warm shore, playing with a wooden bat and baseball near the gentle ocean tide.",
-          "chinese": "孩子们赤脚在温暖的海滩上奔跑，在温和的海潮旁拿着木球棒打棒球。"
+          sentenceNumber: 4,
+          english: "Without sufficient protection, rising floods and harsh winds threaten the survival of rare marine creatures and their delicate nesting habitats.",
+          chinese: "如果缺乏足够的保护，不断上涨的洪水与凛冽的风暴会威胁到稀有海洋生物及其脆弱筑巢栖息地的生存。"
         }
       ]
     },
     {
-      "paragraphNumber": 2,
-      "sentences": [
+      paragraphNumber: 2,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "On the basis of basic environmental research, citizens establish a solid base in a coastal basement to protect river basin ecology.",
-          "chinese": "在基础环境研究的基础上，公民在沿海地下室建立坚实基地，以保护流域生态。"
+          sentenceNumber: 1,
+          english: "To address these environmental challenges, a scientific team of marine biologists launched an extensive research project.",
+          chinese: "为了应对这些环境挑战，一支由海洋生物学者组成的科学团队启动了一项广泛的科研项目。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "They clean up plastic waste on behalf of future generations, acting with the sincere belief that people must behave responsibly.",
-          "chinese": "他们代表子孙后代清理塑料垃圾，怀着真诚的信念行事，坚信人们必须对行为负责。"
+          sentenceNumber: 2,
+          english: "Equipped with portable instruments, researchers survey the marshes at low tide, collect soil samples, and accurately measure water depth.",
+          chinese: "配备便携式仪器，研究人员在低潮时勘测沼泽，采集土壤样本，并精确测量水深。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "When a fierce storm strikes, local heroes fight a tough battle against rising waters and break every single barrier to strike a bargain for materials.",
-          "chinese": "当猛烈风暴来袭时，当地英雄与上涨的洪水展开艰苦战斗，打破每一个壁垒，达成物资协议。"
+          sentenceNumber: 3,
+          english: "They also install digital cameras near the shore to observe rare species, track their flight paths, and record breeding habits.",
+          chinese: "他们还在海岸附近安装数码相机，以观察珍稀物种、追踪其飞行轨迹并记录繁殖习性。"
         },
         {
-          "sentenceNumber": 4,
-          "english": "A brave battalion of emergency workers uses a heavy beam, an electric battery, and a wooden barrel to secure flood defenses beforehand.",
-          "chinese": "一支由应急人员组成的英勇分队事先利用沉重的大梁、蓄电池和木桶加固防洪设施。"
+          sentenceNumber: 4,
+          english: "Such continuous monitoring yields valuable scientific data, proving that preserving these shallow waters is vital for ecological balance.",
+          chinese: "这种持续的监测产出了宝贵的科学数据，证明保护这些浅水水域对生态平衡至关重要。"
         }
       ]
     },
     {
-      "paragraphNumber": 3,
-      "sentences": [
+      paragraphNumber: 3,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "At a coastal music bar, loud drums produce a lively beat that prompts people to carry a fruit basket and a fresh batch of bread.",
-          "chinese": "在一家滨海音乐酒吧里，响亮的鼓声发出欢快的节拍，促使人们携带一个水果篮和一炉新鲜面包。"
+          sentenceNumber: 1,
+          english: "Encouraged by these scientific findings, local residents and active volunteers unite to protect their coastal home.",
+          chinese: "受到这些科学调查结果的鼓舞，当地居民与积极的志愿者团结起来保护他们的沿海家园。"
         },
         {
-          "sentenceNumber": 2,
-          "english": "Outside, dogs bark near a cool water bath where swimmers bathe after an energetic afternoon.",
-          "chinese": "在外面，狗在清凉的水浴旁吠叫，游泳者在精力充沛的下午过后在那里沐浴。"
+          sentenceNumber: 2,
+          english: "Every weekend, community members clean the beach, removing discarded plastic bottles, metal cans, and harmful waste.",
+          chinese: "每个周末，社区成员都会清理海滩，清除被丢弃的塑料瓶、金属罐和有害废弃物。"
         },
         {
-          "sentenceNumber": 3,
-          "english": "A bee sees blooming wild flowers, and sailors bear the weight of heavy nets with proud bearing.",
-          "chinese": "一只蜜蜂看到盛开的野花，水手们以自豪的举止承受沉重渔网的重量。"
+          sentenceNumber: 3,
+          english: "Meanwhile, students plant native grass along the coast, creating dense root networks that stabilize soft soil and absorb ocean waves.",
+          chinese: "与此同时，学生们在沿岸栽种本土植物草，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。"
         },
         {
-          "sentenceNumber": 4,
-          "english": "Nobody needs to beg for help, for villagers believe that mutual aid overcomes hardship and wild beast attacks, filling every hungry belly with warmth.",
-          "chinese": "没有人需要乞求帮助，因为村民们坚信互助能够克服困难和野兽侵袭，让每一个饥饿的肚子充满温暖。"
+          sentenceNumber: 4,
+          english: "Thanks to these persistent restoration efforts, the coastal habitat gradually recovers its natural vitality, allowing diverse creatures to thrive in harmony.",
+          chinese: "得益于这些坚持不懈的恢复努力，滨海栖息地逐步恢复了其自然的生机，让多样的生物在和谐中繁衍生息。"
         }
       ]
     }
   ],
-  "wordAnnotations": [
+  wordAnnotations: [
     {
-      "headwordId": "bay",
-      "gloss": "n.海湾；海港"
+      headwordId: "scene",
+      surface: "scenic",
+      gloss: "a.风景优美的；景色秀丽的"
     },
     {
-      "headwordId": "beach",
-      "gloss": "n.海滩；沙滩"
+      headwordId: "coast",
+      surface: "coastal",
+      gloss: "a.沿海的；沿岸的"
     },
     {
-      "headwordId": "beauty",
-      "gloss": "n.美丽；美人"
+      headwordId: "bay",
+      gloss: "n.海湾；海港"
     },
     {
-      "headwordId": "banner",
-      "gloss": "n.横幅；旗帜"
+      headwordId: "vast",
+      gloss: "a.辽阔的；巨大的"
     },
     {
-      "headwordId": "banquet",
-      "gloss": "n.盛宴；宴席"
+      headwordId: "shallow",
+      gloss: "a.浅的；浅层的"
     },
     {
-      "headwordId": "bean",
-      "gloss": "n.豆类；蚕豆"
+      headwordId: "marsh",
+      surface: "marshes",
+      gloss: "n.沼泽；湿地"
     },
     {
-      "headwordId": "barbecue",
-      "gloss": "n.烧烤；烤肉野餐"
+      headwordId: "tide",
+      surface: "tidal",
+      gloss: "a.潮汐的；受潮水影响的"
     },
     {
-      "headwordId": "BBQ",
-      "gloss": "n.烧烤；户外烤肉"
+      headwordId: "flat¹",
+      surface: "flats",
+      gloss: "n.浅滩；平原"
     },
     {
-      "headwordId": "barber",
-      "gloss": "n.理发师；发型师"
+      headwordId: "provide",
+      gloss: "v.提供；供应；供给"
     },
     {
-      "headwordId": "beard",
-      "gloss": "n.胡须；络腮胡"
+      headwordId: "vital",
+      gloss: "a.至关重要的；必不可少的"
     },
     {
-      "headwordId": "bare",
-      "gloss": "a.裸露的；赤脚的"
+      headwordId: "shelter",
+      gloss: "n.庇护所；避难处"
     },
     {
-      "headwordId": "bat",
-      "gloss": "n.球棒；蝙蝠"
+      headwordId: "diverse",
+      gloss: "a.多种多样的；形形色色的"
     },
     {
-      "headwordId": "baseball",
-      "gloss": "n.棒球；棒球运动"
+      headwordId: "wildlife",
+      gloss: "n.野生动植物；野生生物"
     },
     {
-      "headwordId": "basis",
-      "gloss": "n.基础；依据"
+      headwordId: "migrate",
+      surface: "migrating",
+      gloss: "a.迁徙的；移居的"
     },
     {
-      "headwordId": "basic",
-      "gloss": "a.基本的；基础的"
+      headwordId: "complete",
+      gloss: "v.完成；结束；使圆满"
     },
     {
-      "headwordId": "base",
-      "gloss": "n.基地；底座"
+      headwordId: "journey",
+      gloss: "n.旅程；旅行"
     },
     {
-      "headwordId": "basement",
-      "gloss": "n.地下室；地窖"
+      headwordId: "gather",
+      gloss: "v.聚集；集合；搜集"
     },
     {
-      "headwordId": "basin",
-      "gloss": "n.盆地；流域"
+      headwordId: "mud",
+      surface: "muddy",
+      gloss: "a.泥泞的；多泥的"
     },
     {
-      "headwordId": "behalf",
-      "gloss": "n.利益；代表"
+      headwordId: "shore",
+      gloss: "n.岸；滨；海岸"
     },
     {
-      "headwordId": "belief",
-      "gloss": "n.信念；信仰"
+      headwordId: "rest¹",
+      surface: "rest",
+      gloss: "v.休息；歇息"
     },
     {
-      "headwordId": "behave",
-      "gloss": "v.表现；行事"
+      headwordId: "feed",
+      gloss: "v.进食；觅食；喂养"
     },
     {
-      "headwordId": "battle",
-      "gloss": "n.战役；斗争"
+      headwordId: "severe",
+      gloss: "a.严重的；严峻的"
     },
     {
-      "headwordId": "barrier",
-      "gloss": "n.壁垒；屏障"
+      headwordId: "storm",
+      surface: "storms",
+      gloss: "n.风暴；暴风雨"
     },
     {
-      "headwordId": "bargain",
-      "gloss": "n.特价商品；协议"
+      headwordId: "fierce",
+      gloss: "a.凶猛的；狂暴的"
     },
     {
-      "headwordId": "battalion",
-      "gloss": "n.营；军营编队"
+      headwordId: "wave",
+      surface: "waves",
+      gloss: "n.波浪；海浪"
     },
     {
-      "headwordId": "beam",
-      "gloss": "n.横梁；光束"
+      headwordId: "frequent",
+      surface: "frequently",
+      gloss: "ad.频繁地；经常地"
     },
     {
-      "headwordId": "battery",
-      "gloss": "n.电池；蓄电池"
+      headwordId: "damage",
+      gloss: "v.破坏；损坏；毁损"
     },
     {
-      "headwordId": "barrel",
-      "gloss": "n.桶；大木桶"
+      headwordId: "nature",
+      surface: "natural",
+      gloss: "a.天然的；自然的"
     },
     {
-      "headwordId": "beforehand",
-      "gloss": "ad.预先地；事先地"
+      headwordId: "barrier",
+      surface: "barriers",
+      gloss: "n.屏障；障碍物"
     },
     {
-      "headwordId": "bar",
-      "gloss": "n.酒吧；小馆"
+      headwordId: "beach",
+      gloss: "n.海滩；沙滩"
     },
     {
-      "headwordId": "beat",
-      "gloss": "v.敲打；跳动"
+      headwordId: "sufficient",
+      gloss: "a.足够的；充分的"
     },
     {
-      "headwordId": "basket",
-      "gloss": "n.篮子；篓"
+      headwordId: "protect",
+      surface: "protection",
+      gloss: "n.保护；防卫"
     },
     {
-      "headwordId": "batch",
-      "gloss": "n.一批；一炉"
+      headwordId: "rise",
+      surface: "rising",
+      gloss: "a.上涨的；上升的"
     },
     {
-      "headwordId": "bark",
-      "gloss": "v.吠叫；厉声喊出"
+      headwordId: "flood",
+      surface: "floods",
+      gloss: "n.洪水；涨水"
     },
     {
-      "headwordId": "bath",
-      "gloss": "n.沐浴；洗澡"
+      headwordId: "harsh",
+      gloss: "a.严酷的；恶劣的"
     },
     {
-      "headwordId": "bathe",
-      "gloss": "v.沐浴；洗澡"
+      headwordId: "threat",
+      surface: "threaten",
+      gloss: "v.威胁；危及"
     },
     {
-      "headwordId": "bee",
-      "gloss": "n.蜜蜂；勤奋者"
+      headwordId: "survive",
+      surface: "survival",
+      gloss: "n.生存；幸存"
     },
     {
-      "headwordId": "bear",
-      "gloss": "v.承受；忍受"
+      headwordId: "rare",
+      gloss: "a.稀有的；罕见的"
     },
     {
-      "headwordId": "bearing",
-      "gloss": "n.举止；风度"
+      headwordId: "marine",
+      gloss: "a.海洋的；海生的"
     },
     {
-      "headwordId": "beg",
-      "gloss": "v.乞求；祈求"
+      headwordId: "creature",
+      surface: "creatures",
+      gloss: "n.生物；动物"
     },
     {
-      "headwordId": "believe",
-      "gloss": "v.相信；坚信"
+      headwordId: "delicate",
+      gloss: "a.脆弱的；娇嫩的"
     },
     {
-      "headwordId": "beast",
-      "gloss": "n.野兽；凶残之人"
+      headwordId: "nest",
+      surface: "nesting",
+      gloss: "a.筑巢的；做窝的"
     },
     {
-      "headwordId": "belly",
-      "gloss": "n.腹部；肚子"
+      headwordId: "habitat",
+      surface: "habitats",
+      gloss: "n.栖息地；生境"
     },
     {
-      "headwordId": "scene",
-      "surface": "scenic",
-      "gloss": "a.风景优美的；优美的"
+      headwordId: "address",
+      gloss: "v.处理；应对；解决"
     },
     {
-      "headwordId": "coast",
-      "surface": "coastal",
-      "gloss": "a.沿海的；滨海的"
+      headwordId: "environment",
+      surface: "environmental",
+      gloss: "a.环境的；自然环境的"
     },
     {
-      "headwordId": "reside",
-      "surface": "residents",
-      "gloss": "n.居民；定居者"
+      headwordId: "challenge",
+      surface: "challenges",
+      gloss: "n.挑战；艰巨任务"
     },
     {
-      "headwordId": "gather",
-      "surface": "gather",
-      "gloss": "v.聚集；集合"
+      headwordId: "science",
+      surface: "scientific",
+      gloss: "a.科学的；严谨的"
     },
     {
-      "headwordId": "celebrate",
-      "surface": "celebrate",
-      "gloss": "v.庆祝；歌颂"
+      headwordId: "biology",
+      surface: "biologists",
+      gloss: "n.生物学家；生物学者"
     },
     {
-      "headwordId": "nature",
-      "surface": "natural",
-      "gloss": "a.自然的；天性的"
+      headwordId: "launch",
+      surface: "launched",
+      gloss: "v.发起；启动；开展"
     },
     {
-      "headwordId": "volunteer",
-      "surface": "Volunteers",
-      "gloss": "n.志愿者；志愿兵"
+      headwordId: "extend",
+      surface: "extensive",
+      gloss: "a.广泛的；全面的"
     },
     {
-      "headwordId": "hang",
-      "surface": "hang",
-      "gloss": "v.悬挂；吊起"
+      headwordId: "research",
+      gloss: "n.研究；调查"
     },
     {
-      "headwordId": "square",
-      "surface": "square",
-      "gloss": "n.广场；正方形"
+      headwordId: "project¹",
+      surface: "project",
+      gloss: "n.项目；工程"
     },
     {
-      "headwordId": "prepare",
-      "surface": "preparing",
-      "gloss": "v.准备；筹备"
+      headwordId: "equip",
+      surface: "Equipped",
+      gloss: "a.装备有…的；配备好的"
     },
     {
-      "headwordId": "grand",
-      "surface": "grand",
-      "gloss": "a.宏伟的；重大的"
+      headwordId: "port",
+      surface: "portable",
+      gloss: "a.便携的；手提式的"
     },
     {
-      "headwordId": "fresh",
-      "surface": "fresh",
-      "gloss": "a.新鲜的；清新的"
+      headwordId: "instrument",
+      surface: "instruments",
+      gloss: "n.仪器；器械"
     },
     {
-      "headwordId": "dish",
-      "surface": "dishes",
-      "gloss": "n.菜肴；盘子"
+      headwordId: "survey",
+      gloss: "v.勘测；调查；审视"
     },
     {
-      "headwordId": "corn",
-      "surface": "corn",
-      "gloss": "n.玉米；谷物"
+      headwordId: "collect",
+      gloss: "v.采集；收集"
     },
     {
-      "headwordId": "host¹",
-      "surface": "host",
-      "gloss": "n.主人；东道主"
+      headwordId: "soil",
+      gloss: "n.土壤；泥土"
     },
     {
-      "headwordId": "lively",
-      "surface": "lively",
-      "gloss": "a.活泼的；生动的"
+      headwordId: "sample",
+      surface: "samples",
+      gloss: "n.样本；样品"
     },
     {
-      "headwordId": "outdoor",
-      "surface": "outdoor",
-      "gloss": "a.户外的；野外的"
+      headwordId: "accurate",
+      surface: "accurately",
+      gloss: "ad.精确地；准确地"
     },
     {
-      "headwordId": "cheer",
-      "surface": "cheerful",
-      "gloss": "n.欢呼；喝彩"
+      headwordId: "measure",
+      gloss: "v.测量；衡量"
     },
     {
-      "headwordId": "old",
-      "surface": "elder",
-      "gloss": "a.年长的；资深的"
+      headwordId: "deep",
+      surface: "depth",
+      gloss: "n.深度；深处"
     },
     {
-      "headwordId": "shore",
-      "surface": "shore",
-      "gloss": "n.海滨；海岸"
+      headwordId: "install",
+      gloss: "v.安装；安置"
     },
     {
-      "headwordId": "play",
-      "surface": "playing",
-      "gloss": "v.玩耍；从事游戏"
+      headwordId: "digit",
+      surface: "digital",
+      gloss: "a.数字的；数码的"
     },
     {
-      "headwordId": "gentle",
-      "surface": "gentle",
-      "gloss": "a.温和的；轻柔的"
+      headwordId: "observe",
+      gloss: "v.观察；观测"
     },
     {
-      "headwordId": "tide",
-      "surface": "tide",
-      "gloss": "n.海潮；潮汐"
+      headwordId: "species",
+      gloss: "n.物种；种类"
     },
     {
-      "headwordId": "environment",
-      "surface": "environmental",
-      "gloss": "a.环境的；生态的"
+      headwordId: "track",
+      gloss: "v.追踪；跟踪"
     },
     {
-      "headwordId": "research",
-      "surface": "research",
-      "gloss": "v.调查；探究"
+      headwordId: "path",
+      surface: "paths",
+      gloss: "n.路径；轨迹"
     },
     {
-      "headwordId": "citizen",
-      "surface": "citizens",
-      "gloss": "n.公民；市民"
+      headwordId: "record",
+      gloss: "v.记录；记载"
     },
     {
-      "headwordId": "establish",
-      "surface": "establish",
-      "gloss": "v.建立；设立"
+      headwordId: "breed",
+      surface: "breeding",
+      gloss: "a.繁殖的；繁育的"
     },
     {
-      "headwordId": "solid",
-      "surface": "solid",
-      "gloss": "a.固体的；结实的"
+      headwordId: "habit",
+      surface: "habits",
+      gloss: "n.习性；习惯"
     },
     {
-      "headwordId": "protect",
-      "surface": "protect",
-      "gloss": "v.保护；防卫"
+      headwordId: "continue",
+      surface: "continuous",
+      gloss: "a.持续的；不间断的"
     },
     {
-      "headwordId": "ecology",
-      "surface": "ecology",
-      "gloss": "n.生态；生态学"
+      headwordId: "monitor",
+      surface: "monitoring",
+      gloss: "n.监测；监控"
     },
     {
-      "headwordId": "clean",
-      "surface": "clean",
-      "gloss": "v.清洁；打扫"
+      headwordId: "yield",
+      surface: "yields",
+      gloss: "v.产出；提供"
     },
     {
-      "headwordId": "plastic",
-      "surface": "plastic",
-      "gloss": "a.可塑料的；可塑的"
+      headwordId: "value",
+      surface: "valuable",
+      gloss: "a.宝贵的；有价值的"
     },
     {
-      "headwordId": "waste",
-      "surface": "waste",
-      "gloss": "n.废弃物；垃圾"
+      headwordId: "data",
+      gloss: "n.数据；资料"
     },
     {
-      "headwordId": "generation",
-      "surface": "generations",
-      "gloss": "n.世代；代代"
+      headwordId: "prove",
+      surface: "proving",
+      gloss: "v.证明；证实"
     },
     {
-      "headwordId": "act",
-      "surface": "acting",
-      "gloss": "v.行动；行事"
+      headwordId: "preserve",
+      surface: "preserving",
+      gloss: "v.保护；维护"
     },
     {
-      "headwordId": "sincere",
-      "surface": "sincere",
-      "gloss": "a.真诚的；诚挚的"
+      headwordId: "ecology",
+      surface: "ecological",
+      gloss: "a.生态的；生态学的"
     },
     {
-      "headwordId": "responsible",
-      "surface": "responsibly",
-      "gloss": "ad.负责任地；可靠地"
+      headwordId: "balance",
+      gloss: "n.平衡；均衡"
     },
     {
-      "headwordId": "fierce",
-      "surface": "fierce",
-      "gloss": "a.凶猛的；狂暴的"
+      headwordId: "encourage",
+      surface: "Encouraged",
+      gloss: "a.受到鼓舞的；受激励的"
     },
     {
-      "headwordId": "storm",
-      "surface": "storm",
-      "gloss": "n.风暴；暴风雨"
+      headwordId: "find",
+      surface: "findings",
+      gloss: "n.调查结果；发现"
     },
     {
-      "headwordId": "strike",
-      "surface": "strikes",
-      "gloss": "v.袭击；打击"
+      headwordId: "local",
+      gloss: "a.当地的；本土的"
     },
     {
-      "headwordId": "local",
-      "surface": "local",
-      "gloss": "a.当地的；地方的"
+      headwordId: "reside",
+      surface: "residents",
+      gloss: "n.居民；定居者"
     },
     {
-      "headwordId": "hero",
-      "surface": "heroes",
-      "gloss": "n.英雄；勇士"
+      headwordId: "active",
+      gloss: "a.积极的；活跃的"
     },
     {
-      "headwordId": "fight",
-      "surface": "fight",
-      "gloss": "v.战斗；斗争"
+      headwordId: "volunteer",
+      surface: "volunteers",
+      gloss: "n.志愿者；义工"
     },
     {
-      "headwordId": "tough",
-      "surface": "tough",
-      "gloss": "a.坚强的；艰苦的"
+      headwordId: "unite",
+      gloss: "v.团结；联合"
     },
     {
-      "headwordId": "rise",
-      "surface": "rising",
-      "gloss": "a.上升的；高涨的"
+      headwordId: "community",
+      gloss: "n.社区；社会"
     },
     {
-      "headwordId": "break",
-      "surface": "break",
-      "gloss": "n.休息；中断"
+      headwordId: "clean",
+      gloss: "v.清理；打扫"
     },
     {
-      "headwordId": "material",
-      "surface": "materials",
-      "gloss": "n.材料；原料"
+      headwordId: "remove",
+      surface: "removing",
+      gloss: "v.清除；移走"
     },
     {
-      "headwordId": "brave",
-      "surface": "brave",
-      "gloss": "a.勇敢的；华丽的"
+      headwordId: "discard",
+      surface: "discarded",
+      gloss: "a.废弃的；被丢弃的"
     },
     {
-      "headwordId": "emergency",
-      "surface": "emergency",
-      "gloss": "n.紧急情况；险情"
+      headwordId: "plastic",
+      gloss: "a.塑料的；塑胶的"
     },
     {
-      "headwordId": "use",
-      "surface": "uses",
-      "gloss": "v.使用；运用；利用"
+      headwordId: "metal",
+      gloss: "a.金属的；金属制成的"
     },
     {
-      "headwordId": "heavy",
-      "surface": "heavy",
-      "gloss": "a.沉重的；繁重的"
+      headwordId: "harm",
+      surface: "harmful",
+      gloss: "a.有害的；有危害的"
     },
     {
-      "headwordId": "electricity",
-      "surface": "electric",
-      "gloss": "a.电动的；导电的"
+      headwordId: "waste",
+      gloss: "n.废弃物；垃圾"
     },
     {
-      "headwordId": "secure",
-      "surface": "secure",
-      "gloss": "a.安心的；安全的"
+      headwordId: "meanwhile",
+      surface: "Meanwhile",
+      gloss: "ad.与此同时；在此期间地"
     },
     {
-      "headwordId": "flood",
-      "surface": "flood",
-      "gloss": "n.洪水；水灾"
+      headwordId: "native",
+      gloss: "a.本土的；当地的"
     },
     {
-      "headwordId": "defend",
-      "surface": "defenses",
-      "gloss": "n.防御设施；防卫"
+      headwordId: "create",
+      surface: "creating",
+      gloss: "v.创造；形成"
     },
     {
-      "headwordId": "loud",
-      "surface": "loud",
-      "gloss": "a.响亮的；大声的"
+      headwordId: "dense",
+      gloss: "a.密集的；稠密的"
     },
     {
-      "headwordId": "drum",
-      "surface": "drums",
-      "gloss": "n.鼓；鼓声"
+      headwordId: "root",
+      gloss: "a.根系的；根部的"
     },
     {
-      "headwordId": "produce",
-      "surface": "produce",
-      "gloss": "v.生产；产生"
+      headwordId: "network",
+      surface: "networks",
+      gloss: "n.网络；网状系统"
     },
     {
-      "headwordId": "prompt",
-      "surface": "prompts",
-      "gloss": "v.促使；激励"
+      headwordId: "stable",
+      surface: "stabilize",
+      gloss: "v.使稳固；使稳定"
     },
     {
-      "headwordId": "carry",
-      "surface": "carry",
-      "gloss": "n.搬运；射程"
+      headwordId: "soft",
+      gloss: "a.松软的；柔软的"
     },
     {
-      "headwordId": "energy",
-      "surface": "energetic",
-      "gloss": "n.能源；能量；精力"
+      headwordId: "absorb",
+      gloss: "v.吸收；缓冲"
     },
     {
-      "headwordId": "see",
-      "surface": "sees",
-      "gloss": "v.看见；查看"
+      headwordId: "persist",
+      surface: "persistent",
+      gloss: "a.坚持不懈的；持续的"
     },
     {
-      "headwordId": "bloom",
-      "surface": "blooming",
-      "gloss": "a.盛开的；繁茂的"
+      headwordId: "restore",
+      surface: "restoration",
+      gloss: "n.恢复；修复"
     },
     {
-      "headwordId": "wild",
-      "surface": "wild",
-      "gloss": "a.野生的；狂放的"
+      headwordId: "effort",
+      surface: "efforts",
+      gloss: "n.努力；艰难尝试"
     },
     {
-      "headwordId": "sail",
-      "surface": "sailors",
-      "gloss": "n.水手；海员"
+      headwordId: "gradual",
+      surface: "gradually",
+      gloss: "ad.逐步地；渐渐地"
     },
     {
-      "headwordId": "weigh",
-      "surface": "weight",
-      "gloss": "n.重量；重担"
+      headwordId: "recover",
+      surface: "recovers",
+      gloss: "v.恢复；重新获得"
     },
     {
-      "headwordId": "net",
-      "surface": "nets",
-      "gloss": "n.网；罗网"
+      headwordId: "vital",
+      surface: "vitality",
+      gloss: "n.活力；生机"
     },
     {
-      "headwordId": "pride",
-      "surface": "proud",
-      "gloss": "a.骄傲的；自豪的"
+      headwordId: "allow",
+      surface: "allowing",
+      gloss: "v.使能够；允许"
     },
     {
-      "headwordId": "help",
-      "surface": "help",
-      "gloss": "v.帮助；援助"
+      headwordId: "thrive",
+      gloss: "v.繁荣；茁壮成长"
     },
     {
-      "headwordId": "mutual",
-      "surface": "mutual",
-      "gloss": "a.相互的；共同的"
-    },
-    {
-      "headwordId": "aid",
-      "surface": "aid",
-      "gloss": "n.帮助；救护"
-    },
-    {
-      "headwordId": "overcome",
-      "surface": "overcomes",
-      "gloss": "v.克服；战胜"
-    },
-    {
-      "headwordId": "hardship",
-      "surface": "hardship",
-      "gloss": "n.艰难；困苦"
-    },
-    {
-      "headwordId": "attack",
-      "surface": "attacks",
-      "gloss": "n.袭击；攻击"
-    },
-    {
-      "headwordId": "fill",
-      "surface": "filling",
-      "gloss": "v.装满；充满"
-    },
-    {
-      "headwordId": "hunger",
-      "surface": "hungry",
-      "gloss": "a.饥饿的；渴望的"
+      headwordId: "harmony",
+      gloss: "n.和谐；融洽"
     }
   ],
-  "phraseAnnotations": [],
-  "expansionEntries": [
+  phraseAnnotations: [
     {
-      "id": "e1",
-      "expression": "hang banners/display",
-      "explanation": "悬挂横幅；banner headline 指通栏大标题"
+      phrase: "thanks to",
+      surface: "Thanks to",
+      gloss: "多亏；得益于"
+    }
+  ],
+  expansionEntries: [
+    {
+      id: "exp-01",
+      expression: "shallow/superficial/profound",
+      explanation: "重点词义辨析：shallow 作形容词表示“浅的，浅层的”，转义可指“肤浅的，浅薄的”，如 shallow thinking（浅薄的想法）。近义词 superficial 侧重“表面的，不深刻的”，反义词为 profound（深邃的，渊博的）。"
     },
     {
-      "id": "e2",
-      "expression": "state banquet/formal dinner",
-      "explanation": "国宴，正式宴席；banquet 指大型正式宴请"
+      id: "exp-02",
+      expression: "tide/turn the tide/ebb and flow",
+      explanation: "熟词僻义与成语搭配：tide 作名词指“潮汐，潮水”，引申为“潮流，趋势”。常考习语：turn the tide 意为“扭转局势/反败为胜”；ebb and flow 指“盛衰起伏，潮起潮落”。"
     },
     {
-      "id": "e3",
-      "expression": "strike a bargain/reach a deal",
-      "explanation": "达成交易，成交；bargain 作名词亦指特价品"
+      id: "exp-03",
+      expression: "shelter/harbor/shield",
+      explanation: "核心词汇拓展：shelter 意为“庇护所，避难处；掩护”，作动词表示“保护，庇护”。近义词 harbor 原指“港口”，引申为“庇护，窝藏（负面）”；shield 原指“盾牌”，作动词表示“保卫，屏护”。"
     },
     {
-      "id": "e4",
-      "expression": "trade barrier/obstacle",
-      "explanation": "贸易壁垒，障碍；barrier 常用于学术写作"
+      id: "exp-04",
+      expression: "barrier/obstacle/hurdle",
+      explanation: "常考同义替换词群：barrier 强调有形的天然屏障或无形的制度障碍（如 trade/language barrier）。近义词 obstacle 侧重阻碍前进的事物，hurdle 原指田径中的“栏架”，转义为“难关，障碍”。"
     },
     {
-      "id": "e5",
-      "expression": "on the basis of/based on",
-      "explanation": "在...的基础上；basis 侧重抽象根据与依据"
+      id: "exp-05",
+      expression: "severe/harsh/stringent",
+      explanation: "多义词近义辨析：severe 表示“严酷的，极其严重的”，常修饰恶劣天气、经济危机或伤病（severe weather/injury）。近义词 harsh 强调令人痛苦或不宽容的，stringent 则专指“严苛的法令、规章”。"
     },
     {
-      "id": "e6",
-      "expression": "river basin/drainage area",
-      "explanation": "河流流域；basin 熟词僻义常考地理学盆地或流域"
+      id: "exp-06",
+      expression: "frequent/frequency/haunt",
+      explanation: "熟词僻义拓展：frequent 常见为形容词“频繁的”，但在正式语体中常考动词用法，表示“常去，常光顾（某地）”，如 frequent a local library。派生名词 frequency 为“频率，发生次数”。"
     },
     {
-      "id": "e7",
-      "expression": "on behalf of/representing",
-      "explanation": "代表...的利益；in behalf of 强调为了某人的利益"
+      id: "exp-07",
+      expression: "delicate/fragile/elaborate",
+      explanation: "多义形容词辨析：delicate 核心义为“易碎的，脆弱的”（delicate glass/creatures），亦可表示“微妙的，棘手的”（a delicate situation）或“精致精巧的”。对比 fragile（脆的，易损坏的）、elaborate（精心制作的）。"
     },
     {
-      "id": "e8",
-      "expression": "behave oneself/act properly",
-      "explanation": "举止得体，规矩行事；behavior 为其名词形式"
+      id: "exp-08",
+      expression: "survey/poll/inspect",
+      explanation: "学术高频词汇：survey 作及物动词或名词，表示“勘测，地形测量；学术调查；俯瞰”。近义词 poll 专指“民意调查，投票”，inspect 侧重“视察，安全检查”。"
     },
     {
-      "id": "e9",
-      "expression": "in beforehand/in advance",
-      "explanation": "事先，预先；beforehand 常置于句末或分句末"
+      id: "exp-09",
+      expression: "measure/take measures/gauge",
+      explanation: "熟词僻义与固定搭配：measure 作动词表示“测量，评估”，作名词常用复数表示“对策，举措”（take effective measures 采取有效措施）。近义词 gauge 表示“精确测定，衡量”。"
     },
     {
-      "id": "e10",
-      "expression": "bear in mind/remember",
-      "explanation": "牢记在心；bear 作动词常考“承受、怀有”"
+      id: "exp-10",
+      expression: "breed/foster/cultivate",
+      explanation: "核心动词拓展：breed 作动词指动植物“繁殖，培育”，亦可引申为“滋生，招致（不良后果）”，如 Familiarity breeds contempt（亲不敬，熟生蔑）。近义词 foster 强调“促进，收养”，cultivate 指“耕作，培养习惯/关系”。"
     },
     {
-      "id": "e11",
-      "expression": "dignified bearing/posture",
-      "explanation": "尊贵的举止风度；bearing 熟词僻义指举止体态"
+      id: "exp-11",
+      expression: "yield/succumb/output",
+      explanation: "高频熟词僻义：yield 作动词常考两类截然相反的含义：一为“产出，出产”（yield scientific data/high profits），二为不及物动词后接 to，表示“屈服，投降”（yield to pressure）。作名词指“产量，收益”。"
     },
     {
-      "id": "e12",
-      "expression": "beg the question/raise doubt",
-      "explanation": "引出问题；beg for help 指乞求救助"
+      id: "exp-12",
+      expression: "discard/abandon/dispose of",
+      explanation: "环保与社会生活词汇：discard 指“抛弃，丢弃不再需要之物”。近义词 abandon 强调彻底抛弃或放弃职责，固定短语 dispose of 意为“妥善处置，处理掉废弃物”。"
     },
     {
-      "id": "e13",
-      "expression": "firm belief/conviction",
-      "explanation": "坚定的信念；belief in 表示对...的信仰"
+      id: "exp-13",
+      expression: "dense/compact/sparse",
+      explanation: "空间与密度表达：dense 意为“稠密的，密集的；浓密的”（dense forest/networks），口语中还可戏指“笨拙的，不开窍的”。近义词 compact 强调“小巧紧凑的”，反义词 sparse 表示“稀疏的，零落的”。"
     },
     {
-      "id": "e14",
-      "expression": "wild beast/wild animal",
-      "explanation": "野兽；beast 熟词僻义在比喻中常指残暴之人"
+      id: "exp-14",
+      expression: "absorb/take in/engross",
+      explanation: "常考多义动词：absorb 物理意义为“吸收，缓冲”（absorb shock/waves），转义可表示“吸纳，同化（文化或人口）”或“吸引全部注意力”（be absorbed in 全神贯注于）。近义短语 take in（吸收/欺骗），engross 强调使全神贯注。"
+    },
+    {
+      id: "exp-15",
+      expression: "thrive/flourish/prosper",
+      explanation: "同义替换词族：thrive 强调在良好适宜的条件下“茁壮成长，兴旺发达”（plants/children thrive）。近义词 flourish 侧重文化、艺术或事业的繁荣昌盛，prosper 侧重经济富裕与商业成功。"
     }
   ]
 };
