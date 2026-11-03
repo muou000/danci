@@ -118,6 +118,22 @@ function makeSearchDocument(
   return { result, searchText, englishWords };
 }
 
+function passageSearchContext(
+  passage: CompiledPassage
+): Pick<
+  PassageSearchResult,
+  'passageId' | 'indexLabel' | 'tier' | 'topic' | 'titleZh' | 'titleEn'
+> {
+  return {
+    passageId: passage.id,
+    indexLabel: passage.indexLabel,
+    tier: passage.tier,
+    topic: passage.topic,
+    titleZh: passage.titleZh,
+    titleEn: passage.titleEn,
+  };
+}
+
 export function buildPassageSearchIndex(
   passages: CompiledPassage[]
 ): PassageSearchIndex {
@@ -136,12 +152,7 @@ export function buildPassageSearchIndex(
           seenAnnotationKeys.add(token.itemKey);
           const result: PassageSearchResult = {
             key: `${passage.id}:annotation:${token.itemKey}`,
-            passageId: passage.id,
-            indexLabel: passage.indexLabel,
-            tier: passage.tier,
-            topic: passage.topic,
-            titleZh: passage.titleZh,
-            titleEn: passage.titleEn,
+            ...passageSearchContext(passage),
             kind: 'annotation',
             expression: token.phrase ?? token.headwordId ?? token.surface,
             surface: token.surface,
@@ -157,12 +168,7 @@ export function buildPassageSearchIndex(
     for (const entry of passage.expansionEntries) {
       const result: PassageSearchResult = {
         key: `${passage.id}:expansion:${entry.id}`,
-        passageId: passage.id,
-        indexLabel: passage.indexLabel,
-        tier: passage.tier,
-        topic: passage.topic,
-        titleZh: passage.titleZh,
-        titleEn: passage.titleEn,
+        ...passageSearchContext(passage),
         kind: 'expansion',
         expression: entry.expression,
         summary: entry.explanation,
