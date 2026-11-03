@@ -381,15 +381,48 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(coveredCet6Stars.length).toBeGreaterThanOrEqual(12);
   });
 
-  it('CET-4 第 1 批短文库（共 20 篇）100% 独立覆盖清单所分配的 857 个四级核心词目，且全量通过语料体例校验', () => {
-    const b1Manifest = catalog.batches.find((b) => b.batchId === 'cet4-batch-1');
-    expect(b1Manifest).toBeDefined();
-    const expectedB1Ids = new Set(b1Manifest!.headwordIds);
-    expect(expectedB1Ids.size).toBe(857);
+  it('CET-4 核心篇 NO. 04 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 04');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('城市更新与宜居社区空间');
+    expect(passage!.titleEn).toBe('Urban Renewal and Livable Community Spaces');
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
 
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('arithmetic');
+    expect(compiled.coveredHeadwordIds).not.toContain('apparatus');
+  });
+
+  it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
-
-    const b1CoveredIds = new Set<string>();
 
     for (const [idx, passage] of CET4_BATCH_1_PASSAGES.entries()) {
       expect(passage.tier).toBe('cet4-core');
@@ -421,16 +454,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       for (const id of compiled.coveredHeadwordIds) {
         const entry = catalog.byId.get(id);
         expect(entry?.level).not.toBe('cet6');
-        if (expectedB1Ids.has(id)) {
-          b1CoveredIds.add(id);
-        }
       }
     }
-
-    const missingIds = Array.from(expectedB1Ids).filter(
-      (id) => !b1CoveredIds.has(id)
-    );
-    expect(missingIds).toEqual([]);
-    expect(b1CoveredIds.size).toBe(857);
   });
 });

@@ -355,7 +355,7 @@ export const PASSAGES_01_05: Passage[] = [
         "surface": "contributions",
         "gloss": "n.贡献；捐献"
       },
-            {
+      {
         "headwordId": "accompany",
         "gloss": "v.陪伴；伴随"
       },
@@ -873,7 +873,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "strict",
         "gloss": "a.严格的；精确的"
       },
-            {
+      {
         "headwordId": "affect",
         "gloss": "v.影响；波及"
       },
@@ -1039,7 +1039,7 @@ export const PASSAGES_01_05: Passage[] = [
         "surface": "production",
         "gloss": "n.生产；产出"
       },
-            {
+      {
         "headwordId": "excite",
         "surface": "exciting",
         "gloss": "a.令人兴奋的；激动的"
@@ -1310,7 +1310,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "annual",
         "gloss": "a.年度的；每年的"
       },
-            {
+      {
         "headwordId": "explore",
         "gloss": "v.探索；探测"
       },
@@ -1453,7 +1453,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "amidst",
         "gloss": "prep.在...之中；在...中间"
       },
-            {
+      {
         "headwordId": "ruin",
         "surface": "ruins",
         "gloss": "n.废墟；遗迹"
@@ -1544,7 +1544,7 @@ export const PASSAGES_01_05: Passage[] = [
         "surface": "measurements",
         "gloss": "n.测量；尺寸"
       },
-            {
+      {
         "headwordId": "statue",
         "gloss": "n.雕像；塑像"
       },
@@ -1651,7 +1651,7 @@ export const PASSAGES_01_05: Passage[] = [
         "surface": "texts",
         "gloss": "n.文本；课文"
       },
-            {
+      {
         "headwordId": "old",
         "gloss": "a.古老的；年老的"
       },
@@ -1863,32 +1863,32 @@ export const PASSAGES_01_05: Passage[] = [
     "id": "cet4-b1-004",
     "indexLabel": "NO. 04",
     "tier": "cet4-core",
-    "topic": "城市建筑美学与居住空间创新",
-    "titleZh": "现代都市建筑空间与宜居设计创新",
-    "titleEn": "Urban Architectural Innovation and Livable Residential Spaces",
+    "topic": "城市更新与宜居社区空间",
+    "titleZh": "城市更新与宜居社区空间",
+    "titleEn": "Urban Renewal and Livable Community Spaces",
     "paragraphs": [
       {
         "paragraphNumber": 1,
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "When young residents arrive in modern cities, they often feel anxious about finding an affordable apartment or rented apt.",
-            "chinese": "当年轻居民来到现代城市时，他们常常为寻找负担得起的公寓或租住的套房而感到焦虑。"
+            "english": "In recent decades, modern cities worldwide have shifted their planning focus from rapid expansion toward thoughtful urban renewal.",
+            "chinese": "近几十年来，世界各地的现代城市已将其规划重心从快速扩张转向深思熟虑的城市更新。"
           },
           {
             "sentenceNumber": 2,
-            "english": "An innovative architect does not make an arbitrary layout, but uses structural arithmetic to anticipate future living needs.",
-            "chinese": "一位创新的建筑师不会做出任意的布局，而是运用结构算术来预判未来的居住需求。"
+            "english": "Instead of simply abandoning old downtown quarters, municipal architects now strive to restore antique brick apartments and protect local heritage.",
+            "chinese": "市政建筑师不再简单地遗弃老城区，而是努力修复古老的砖砌公寓并保护当地文化遗产。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Citizens applaud green architecture that keeps artificial noise apart from peaceful rooms anywhere in town.",
-            "chinese": "市民们赞赏绿色建筑，它将人造噪音与城镇中任何地方的宁静卧室隔开。"
+            "english": "By gradually repairing aging infrastructure, this approach avoids arbitrary destruction and balances historic charm with modern living standards.",
+            "chinese": "通过逐步修缮老化的基础设施，这种方法避免了任意拆毁，并在历史风貌与现代生活水准之间取得了平衡。"
           },
           {
             "sentenceNumber": 4,
-            "english": "It becomes apparent that thoughtful designs appeal to urban families, while practical appliances reduce daily home tasks.",
-            "chinese": "显而易见，贴心的设计吸引着都市家庭，而实用的家电减轻了日常家务。"
+            "english": "Consequently, long-time citizens can remain in familiar surroundings while enjoying safer structures and convenient services.",
+            "chinese": "因此，长期居住的市民能够留在熟悉的环境中，同时享受到更安全的建筑结构与便捷的服务。"
           }
         ]
       },
@@ -1897,23 +1897,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "When sudden maintenance problems arise, property managers arrange swift repairs without offering a hollow apology.",
-            "chinese": "当无法预见的维保问题出现时，物业管理人员会迅速安排维修，而不是提供虚假的道歉。"
+            "english": "At the community level, designers transform neglected alleys into clean pedestrian paths and open squares.",
+            "chinese": "在社区层面，设计师将废弃的小巷改造为干净的步行道和开阔的广场。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Residents use a convenient mobile app to apply for building services and check an approximate schedule for elevator inspection.",
-            "chinese": "居民使用便捷的手机应用程序申请楼宇服务，并查看电梯检查的大致时间表。"
+            "english": "These shared spaces accommodate diverse recreational activities and encourage residents to participate in public affairs.",
+            "chinese": "这些共享空间容纳了多样的休闲活动，并鼓励居民参与公共事务。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Designers appoint an army of skilled technicians to inspect fire apparatus and arrest safety hazards before serious accidents appear.",
-            "chinese": "设计师指派大批熟练技术人员检查消防器械，并在严重事故出现之前阻止安全隐患。"
+            "english": "When neighbors chat along shaded benches or tend community gardens, mutual trust and social bonds naturally strengthen.",
+            "chinese": "当邻里沿着遮阴的长椅闲聊或照料社区花园时，彼此的信任与社会纽带自然得到了增强。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Anyhow, planners argue that public spaces should arouse an appetite for cultural participation and community bonding.",
-            "chinese": "不管怎样，规划者主张公共空间应当激发人们对文化参与和社区联结的热情。"
+            "english": "Such inclusive environments prove that active interaction remains vital to a harmonious neighborhood.",
+            "chinese": "这样包容的环境证明，积极的互动对于建设和谐社区依然至关重要。"
           }
         ]
       },
@@ -1922,422 +1922,321 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Historic quarters display antique brick buildings alongside modern art to show how heritage and innovation blend.",
-            "chinese": "历史街区在现代艺术旁展示古董砖砌工艺，展现传统与创新如何交融。"
+            "english": "Furthermore, green technologies and energy efficient facilities blend smoothly into everyday life.",
+            "chinese": "此外，绿色技术和节能设施顺利融入了日常生活。"
           },
           {
             "sentenceNumber": 2,
-            "english": "A published magazine article points an arrow toward energy solutions that clear volcanic ash and industrial dust.",
-            "chinese": "一篇发表的杂志文章将箭头指向节能改造，这些改造能够清除火山灰和工业尘埃。"
+            "english": "Renovated buildings feature large windows that welcome natural sunlight and gentle breezes, which reduces the constant demand for artificial lighting and air conditioning.",
+            "chinese": "翻新后的建筑以大窗户为特色，迎来自然阳光与柔和微风，从而减少了对人造照明和空调的持续需求。"
           },
           {
             "sentenceNumber": 3,
-            "english": "City councils approve an appropriate plan, and citizens appreciate living in a clean environment anyway.",
-            "chinese": "市议会批准了一项适当的规划，无论如何市民都感激生活在干净的环境中。"
+            "english": "Intelligent household appliances track electricity consumption, helping families cut monthly expenses while saving valuable resources.",
+            "chinese": "智能家用电器能够监测电力消耗，帮助家庭削减每月开支，同时节约宝贵资源。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Young designers with genuine artistic aptitude never feel ashamed of asking questions to improve their creative approach.",
-            "chinese": "具有真正艺术天赋的年轻设计师从不为提问以改进其创新方法而感到羞愧。"
+            "english": "Ultimately, such thoughtful designs appeal to residents of all ages, creating a sustainable urban landscape where historic memory and modern comfort thrive together.",
+            "chinese": "最终，这样贴心的设计吸引了各个年龄段的居民，营造出可持续的城市景观，让历史记忆与现代舒适在此共同蓬勃发展。"
           }
         ]
       }
     ],
     "wordAnnotations": [
       {
-        "headwordId": "arrive",
-        "gloss": "v.到达；到来"
+        "headwordId": "recent",
+        "gloss": "a.近来的；新近的"
+      },
+      {
+        "headwordId": "decade",
+        "surface": "decades",
+        "gloss": "n.十年；十年期"
       },
       {
         "headwordId": "modern",
         "gloss": "a.现代的；当代的"
       },
       {
-        "headwordId": "anxious",
-        "gloss": "a.焦虑的；担心的"
+        "headwordId": "worldwide",
+        "gloss": "ad.在全世界地；全世界上地"
       },
       {
-        "headwordId": "afford",
-        "surface": "affordable",
-        "gloss": "a.负担得起的；买得起的"
+        "headwordId": "shift",
+        "surface": "shifted",
+        "gloss": "v.转移；转变；转换"
       },
       {
-        "headwordId": "apartment",
-        "gloss": "n.公寓；住房"
+        "headwordId": "focus",
+        "gloss": "n.焦点；重心；核心"
       },
       {
-        "headwordId": "rent",
-        "surface": "rented",
-        "gloss": "a.租用的；租借的"
+        "headwordId": "rapid",
+        "gloss": "a.迅速的；飞快的"
       },
       {
-        "headwordId": "apt.",
-        "gloss": "n.公寓；套房"
+        "headwordId": "expand",
+        "surface": "expansion",
+        "gloss": "n.扩大；扩张；扩展"
       },
       {
-        "headwordId": "innovate",
-        "surface": "innovative",
-        "gloss": "a.创新的；革新的"
-      },
-      {
-        "headwordId": "architect",
-        "gloss": "n.建筑师；设计师"
-      },
-      {
-        "headwordId": "arbitrary",
-        "gloss": "a.随意的；武断的"
-      },
-      {
-        "headwordId": "layout",
-        "gloss": "n.布局；设计"
-      },
-      {
-        "headwordId": "structure",
-        "surface": "structural",
-        "gloss": "a.结构的；构造的"
-      },
-      {
-        "headwordId": "arithmetic",
-        "gloss": "n.算术；计算"
-      },
-      {
-        "headwordId": "anticipate",
-        "gloss": "v.预料；期望"
-      },
-      {
-        "headwordId": "live¹",
-        "surface": "living",
-        "gloss": "n.居住；生活"
-      },
-      {
-        "headwordId": "citizen",
-        "surface": "Citizens",
-        "gloss": "n.市民；公民"
-      },
-      {
-        "headwordId": "applaud",
-        "gloss": "v.鼓掌；赞赏"
-      },
-      {
-        "headwordId": "architecture",
-        "gloss": "n.建筑；建筑学"
-      },
-      {
-        "headwordId": "artificial",
-        "gloss": "a.人工的；人造的"
-      },
-      {
-        "headwordId": "apart",
-        "gloss": "ad.分开地；相距地"
-      },
-      {
-        "headwordId": "peace",
-        "surface": "peaceful",
-        "gloss": "a.和平的；宁静的"
-      },
-      {
-        "headwordId": "anywhere",
-        "gloss": "ad.随处地；在任何地方地"
-      },
-      {
-        "headwordId": "apparent",
-        "gloss": "a.显而易见的；表面的"
-      },
-      {
-        "headwordId": "design",
-        "surface": "designs",
-        "gloss": "n.设计；图案"
-      },
-      {
-        "headwordId": "appeal",
-        "gloss": "v.吸引；呼吁"
+        "headwordId": "thought",
+        "surface": "thoughtful",
+        "gloss": "a.体贴的；沉思的；深思熟虑的"
       },
       {
         "headwordId": "urban",
         "gloss": "a.城市的；都市的"
       },
       {
-        "headwordId": "practice",
-        "surface": "practical",
-        "gloss": "a.实用的；实际的"
+        "headwordId": "renew",
+        "surface": "renewal",
+        "gloss": "n.恢复；更新；复兴"
       },
       {
-        "headwordId": "appliance",
-        "surface": "appliances",
-        "gloss": "n.器具；家用电器"
+        "headwordId": "simple",
+        "surface": "simply",
+        "gloss": "ad.简单地；仅仅地；简直地"
       },
       {
-        "headwordId": "reduce",
-        "gloss": "v.减少；削减"
+        "headwordId": "abandon",
+        "surface": "abandoning",
+        "gloss": "v.放弃；遗弃；舍弃"
       },
       {
-        "headwordId": "task",
-        "surface": "tasks",
-        "gloss": "n.任务；工作"
+        "headwordId": "old",
+        "gloss": "a.古老的；年老的；陈旧的"
       },
       {
-        "headwordId": "maintain",
-        "surface": "maintenance",
-        "gloss": "n.维护；保养"
-      },
-      {
-        "headwordId": "arise",
-        "gloss": "v.出现；发生"
-      },
-      {
-        "headwordId": "property",
-        "gloss": "n.财产；房产"
-      },
-      {
-        "headwordId": "manage",
-        "surface": "managers",
-        "gloss": "n.管理人员；经理"
-      },
-      {
-        "headwordId": "arrange",
-        "gloss": "v.安排；筹备"
-      },
-      {
-        "headwordId": "swift",
-        "gloss": "a.迅速的；敏捷的"
-      },
-      {
-        "headwordId": "repair",
-        "surface": "repairs",
-        "gloss": "n.修理；修补"
-      },
-      {
-        "headwordId": "hollow",
-        "gloss": "a.空洞的；虚伪的"
-      },
-      {
-        "headwordId": "apology",
-        "gloss": "n.道歉；谢罪"
-      },
-      {
-        "headwordId": "convenient",
-        "gloss": "a.便利的；方便的"
-      },
-      {
-        "headwordId": "mobile",
-        "gloss": "a.移动的；流动的"
-      },
-      {
-        "headwordId": "app",
-        "gloss": "n.应用程序；手机软件"
-      },
-      {
-        "headwordId": "apply",
-        "gloss": "v.申请；应用"
-      },
-      {
-        "headwordId": "approximate",
-        "gloss": "a.大约的；近似的"
-      },
-      {
-        "headwordId": "schedule",
-        "gloss": "n.时间表；日程"
-      },
-      {
-        "headwordId": "inspect",
-        "surface": "inspection",
-        "gloss": "n.检查；视察"
-      },
-      {
-        "headwordId": "appoint",
-        "gloss": "v.任命；指派"
-      },
-      {
-        "headwordId": "army",
-        "gloss": "n.军队；大群"
-      },
-      {
-        "headwordId": "skill",
-        "surface": "skilled",
-        "gloss": "a.熟练的；有技能的"
-      },
-      {
-        "headwordId": "apparatus",
-        "gloss": "n.器械；设备"
-      },
-      {
-        "headwordId": "arrest",
-        "gloss": "v.阻止；抑制"
-      },
-      {
-        "headwordId": "safe",
-        "surface": "safety",
-        "gloss": "ad.安全地；平安地"
-      },
-      {
-        "headwordId": "hazard",
-        "surface": "hazards",
-        "gloss": "n.危险；隐患"
-      },
-      {
-        "headwordId": "serious",
-        "gloss": "a.严重的；严肃的"
-      },
-      {
-        "headwordId": "accident",
-        "surface": "accidents",
-        "gloss": "n.意外；事故"
-      },
-      {
-        "headwordId": "appear",
-        "gloss": "v.出现；显得"
-      },
-      {
-        "headwordId": "anyhow",
-        "gloss": "ad.无论如何地；不管怎样地"
-      },
-      {
-        "headwordId": "argue",
-        "gloss": "v.主张；争辩"
-      },
-      {
-        "headwordId": "public",
-        "gloss": "a.公众的；公共的"
-      },
-      {
-        "headwordId": "arouse",
-        "gloss": "v.引起；激发"
-      },
-      {
-        "headwordId": "appetite",
-        "gloss": "n.欲望；胃口"
-      },
-      {
-        "headwordId": "participate",
-        "surface": "participation",
-        "gloss": "n.参与；参加"
-      },
-      {
-        "headwordId": "community",
-        "gloss": "n.社区；团体"
-      },
-      {
-        "headwordId": "history",
-        "surface": "Historic",
-        "gloss": "a.历史上著名的；有历史意义的"
+        "headwordId": "downtown",
+        "gloss": "a.市中心的；闹市区的"
       },
       {
         "headwordId": "quarter",
         "surface": "quarters",
-        "gloss": "n.街区；地区"
+        "gloss": "n.街区；地区；四分之一"
       },
       {
-        "headwordId": "display",
-        "gloss": "v.陈列；展示"
+        "headwordId": "municipal",
+        "gloss": "a.市政的；地方自治的"
+      },
+      {
+        "headwordId": "architect",
+        "surface": "architects",
+        "gloss": "n.建筑师；设计师"
+      },
+      {
+        "headwordId": "strive",
+        "gloss": "v.努力；奋斗；力求"
+      },
+      {
+        "headwordId": "restore",
+        "gloss": "v.恢复；修复；归还"
       },
       {
         "headwordId": "antique",
         "gloss": "a.古董的；古老的"
       },
       {
-        "headwordId": "alongside",
-        "gloss": "prep.在...旁边；与...并肩"
+        "headwordId": "brick",
+        "gloss": "a.砖砌的；用砖做的"
       },
       {
-        "headwordId": "art",
-        "gloss": "n.艺术；技艺"
+        "headwordId": "apartment",
+        "surface": "apartments",
+        "gloss": "n.公寓；住房"
+      },
+      {
+        "headwordId": "protect",
+        "gloss": "v.保护；防卫；保卫"
+      },
+      {
+        "headwordId": "local",
+        "gloss": "a.当地的；地方性的"
       },
       {
         "headwordId": "heritage",
-        "gloss": "n.遗产；传统"
+        "gloss": "n.遗产；传统；继承物"
       },
       {
-        "headwordId": "blend",
-        "gloss": "v.融合；混合"
+        "headwordId": "gradual",
+        "surface": "gradually",
+        "gloss": "ad.逐渐地；逐步地"
       },
       {
-        "headwordId": "publish",
-        "surface": "published",
-        "gloss": "a.出版的；发表的"
+        "headwordId": "repair",
+        "surface": "repairing",
+        "gloss": "v.修理；修补；修复"
       },
       {
-        "headwordId": "article",
-        "gloss": "n.文章；报道"
-      },
-      {
-        "headwordId": "arrow",
-        "gloss": "n.箭头；箭"
-      },
-      {
-        "headwordId": "volcano",
-        "surface": "volcanic",
-        "gloss": "a.火山的；火山引起的"
-      },
-      {
-        "headwordId": "ash",
-        "gloss": "n.灰烬；尘灰"
-      },
-      {
-        "headwordId": "industry",
-        "surface": "industrial",
-        "gloss": "a.工业的；产业的"
-      },
-      {
-        "headwordId": "dust",
-        "gloss": "n.灰尘；尘埃"
-      },
-      {
-        "headwordId": "council",
-        "surface": "councils",
-        "gloss": "n.委员会；地方议会"
-      },
-      {
-        "headwordId": "approve",
-        "gloss": "v.赞成；批准"
-      },
-      {
-        "headwordId": "appropriate¹",
-        "gloss": "a.适当的；恰当的"
-      },
-      {
-        "headwordId": "appreciate",
-        "gloss": "v.赞赏；感激"
-      },
-      {
-        "headwordId": "clean",
-        "gloss": "a.清洁的；整洁的"
-      },
-      {
-        "headwordId": "environment",
-        "gloss": "n.环境；生态"
-      },
-      {
-        "headwordId": "anyway",
-        "gloss": "ad.无论如何地；总之地"
-      },
-      {
-        "headwordId": "genuine",
-        "gloss": "a.真正的；真诚的"
-      },
-      {
-        "headwordId": "aptitude",
-        "gloss": "n.天资；才能"
-      },
-      {
-        "headwordId": "ashamed",
-        "gloss": "a.惭愧的；羞耻的"
-      },
-      {
-        "headwordId": "ask",
-        "gloss": "v.询问；提问"
-      },
-      {
-        "headwordId": "improve",
-        "gloss": "v.改善；提高"
-      },
-      {
-        "headwordId": "create",
-        "surface": "creative",
-        "gloss": "a.创造性的；有创意的"
+        "headwordId": "infrastructure",
+        "gloss": "n.基础设施；基础结构"
       },
       {
         "headwordId": "approach",
-        "gloss": "n.方法；途径"
+        "gloss": "n.方法；途径；接近"
+      },
+      {
+        "headwordId": "avoid",
+        "surface": "avoids",
+        "gloss": "v.避免；避开；躲开"
+      },
+      {
+        "headwordId": "arbitrary",
+        "gloss": "a.任意的；专断的；随意的"
+      },
+      {
+        "headwordId": "destroy",
+        "surface": "destruction",
+        "gloss": "n.破坏；毁灭；消灭"
+      },
+      {
+        "headwordId": "balance",
+        "surface": "balances",
+        "gloss": "v.平衡；权衡；抵消"
+      },
+      {
+        "headwordId": "history",
+        "surface": "historic",
+        "gloss": "a.历史性的；有历史意义的"
+      },
+      {
+        "headwordId": "charm",
+        "gloss": "n.魅力；吸引力；魔力"
+      },
+      {
+        "headwordId": "live¹",
+        "surface": "living",
+        "gloss": "a.活着的；生活的"
+      },
+      {
+        "headwordId": "standard",
+        "surface": "standards",
+        "gloss": "n.标准；水准；规范"
+      },
+      {
+        "headwordId": "consequence",
+        "surface": "Consequently",
+        "gloss": "ad.因此地；所以地"
+      },
+      {
+        "headwordId": "citizen",
+        "surface": "citizens",
+        "gloss": "n.公民；市民；居民"
+      },
+      {
+        "headwordId": "remain",
+        "gloss": "v.保持；依然；留下"
+      },
+      {
+        "headwordId": "familiar",
+        "gloss": "a.熟悉的；通晓的"
+      },
+      {
+        "headwordId": "surround",
+        "surface": "surroundings",
+        "gloss": "n.周围的事物；环境"
+      },
+      {
+        "headwordId": "enjoy",
+        "surface": "enjoying",
+        "gloss": "v.享受；欣赏；享有"
+      },
+      {
+        "headwordId": "safe",
+        "surface": "safer",
+        "gloss": "a.安全的；稳妥的"
+      },
+      {
+        "headwordId": "structure",
+        "surface": "structures",
+        "gloss": "n.结构；建筑物；构造"
+      },
+      {
+        "headwordId": "convenient",
+        "gloss": "a.便利的；方便的"
+      },
+      {
+        "headwordId": "serve",
+        "surface": "services",
+        "gloss": "n.服务；公共设施"
+      },
+      {
+        "headwordId": "community",
+        "gloss": "a.社区的；社会的"
+      },
+      {
+        "headwordId": "level",
+        "gloss": "n.水平；级别；层面"
+      },
+      {
+        "headwordId": "design",
+        "surface": "designers",
+        "gloss": "n.设计师；设计者"
+      },
+      {
+        "headwordId": "transform",
+        "gloss": "v.改变；转化；改造"
+      },
+      {
+        "headwordId": "neglect",
+        "surface": "neglected",
+        "gloss": "a.被忽视的；荒废的"
+      },
+      {
+        "headwordId": "alley",
+        "surface": "alleys",
+        "gloss": "n.小巷；胡同；走廊"
+      },
+      {
+        "headwordId": "clean",
+        "gloss": "a.清洁的；干净的"
+      },
+      {
+        "headwordId": "pedestrian",
+        "gloss": "a.步行的；徒步的"
+      },
+      {
+        "headwordId": "path",
+        "surface": "paths",
+        "gloss": "n.小路；路径；道路"
+      },
+      {
+        "headwordId": "square",
+        "surface": "squares",
+        "gloss": "n.广场；正方形"
+      },
+      {
+        "headwordId": "share",
+        "surface": "shared",
+        "gloss": "a.共享的；分担的"
+      },
+      {
+        "headwordId": "space",
+        "surface": "spaces",
+        "gloss": "n.空间；场地；空地"
+      },
+      {
+        "headwordId": "accommodate",
+        "gloss": "v.容纳；提供空间；适应"
+      },
+      {
+        "headwordId": "diverse",
+        "gloss": "a.多样的；多元的；不同的"
+      },
+      {
+        "headwordId": "recreation",
+        "surface": "recreational",
+        "gloss": "a.娱乐的；消遣的"
+      },
+      {
+        "headwordId": "active",
+        "surface": "activities",
+        "gloss": "n.活动；行动"
+      },
+      {
+        "headwordId": "encourage",
+        "gloss": "v.鼓励；激励；促进"
       },
       {
         "headwordId": "reside",
@@ -2345,172 +2244,351 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.居民；定居者"
       },
       {
-        "headwordId": "feel",
-        "surface": "feel",
-        "gloss": "v.感觉；觉得；体会"
+        "headwordId": "participate",
+        "gloss": "v.参与；参加；分享"
       },
       {
-        "headwordId": "find",
-        "surface": "finding",
-        "gloss": "v.发现；找到；查明"
+        "headwordId": "public",
+        "gloss": "a.公共的；公众的"
       },
       {
-        "headwordId": "use",
-        "surface": "uses",
-        "gloss": "v.使用；运用；利用"
+        "headwordId": "affair",
+        "surface": "affairs",
+        "gloss": "n.事务；事情；事件"
       },
       {
-        "headwordId": "thought",
-        "surface": "thoughtful",
-        "gloss": "a.体贴的；深思熟虑的"
+        "headwordId": "chat",
+        "gloss": "v.闲聊；聊天；交谈"
       },
       {
-        "headwordId": "sudden",
-        "surface": "sudden",
-        "gloss": "a.突然的；意外的"
+        "headwordId": "shade",
+        "surface": "shaded",
+        "gloss": "a.阴凉的；遮阴的"
       },
       {
-        "headwordId": "problem",
-        "surface": "problems",
-        "gloss": "n.问题；难题；难关"
+        "headwordId": "bench",
+        "surface": "benches",
+        "gloss": "n.长椅；长凳；工作台"
       },
       {
-        "headwordId": "offer",
-        "surface": "offering",
-        "gloss": "v.提供；给予；提出"
+        "headwordId": "tend",
+        "gloss": "v.照料；照看；趋向"
       },
       {
-        "headwordId": "build",
-        "surface": "building",
-        "gloss": "v.建造；构建；打造"
+        "headwordId": "mutual",
+        "gloss": "a.相互的；彼此的；共同的"
       },
       {
-        "headwordId": "serve",
-        "surface": "services",
-        "gloss": "v.服务；提供；供职"
+        "headwordId": "trust",
+        "gloss": "n.信任；信赖；托付"
       },
       {
-        "headwordId": "check¹",
-        "surface": "check",
-        "gloss": "v.检查；核实；查验"
-      },
-      {
-        "headwordId": "elevate",
-        "surface": "elevator",
-        "gloss": "n.电梯；升降机"
-      },
-      {
-        "headwordId": "technical",
-        "surface": "technicians",
-        "gloss": "n.技术员；技师"
-      },
-      {
-        "headwordId": "space",
-        "surface": "spaces",
-        "gloss": "n.空间；太空；空地"
-      },
-      {
-        "headwordId": "culture",
-        "surface": "cultural",
-        "gloss": "a.文化的；人文的"
+        "headwordId": "society",
+        "surface": "social",
+        "gloss": "a.社会的；社交的"
       },
       {
         "headwordId": "bond",
-        "surface": "bonding",
-        "gloss": "n.联结；纽带；结合"
+        "surface": "bonds",
+        "gloss": "n.纽带；联结；结合"
       },
       {
-        "headwordId": "brick",
-        "surface": "brick",
-        "gloss": "n.砖块；砖石"
+        "headwordId": "nature",
+        "surface": "naturally",
+        "gloss": "ad.自然地；天然地"
       },
       {
-        "headwordId": "show",
-        "surface": "show",
-        "gloss": "v.展示；表明；显露"
+        "headwordId": "strong",
+        "surface": "strengthen",
+        "gloss": "v.加强；巩固；变强"
+      },
+      {
+        "headwordId": "include",
+        "surface": "inclusive",
+        "gloss": "a.包容的；兼收并蓄的"
+      },
+      {
+        "headwordId": "environment",
+        "surface": "environments",
+        "gloss": "n.环境；周围状况"
+      },
+      {
+        "headwordId": "prove",
+        "gloss": "v.证明；证实；表现"
+      },
+      {
+        "headwordId": "interact",
+        "surface": "interaction",
+        "gloss": "n.互动；相互作用；交流"
+      },
+      {
+        "headwordId": "vital",
+        "gloss": "a.极其重要的；生死攸关的"
+      },
+      {
+        "headwordId": "harmony",
+        "surface": "harmonious",
+        "gloss": "a.和谐的；融洽的"
+      },
+      {
+        "headwordId": "furthermore",
+        "gloss": "ad.此外地；而且地"
+      },
+      {
+        "headwordId": "technology",
+        "surface": "technologies",
+        "gloss": "n.技术；工艺"
       },
       {
         "headwordId": "energy",
-        "surface": "energy",
-        "gloss": "n.能源；能量；精力"
+        "gloss": "a.能源的；能量的"
       },
       {
-        "headwordId": "solve",
-        "surface": "solutions",
-        "gloss": "n.方案；解决方案"
+        "headwordId": "efficient",
+        "gloss": "a.高效率的；节能的"
+      },
+      {
+        "headwordId": "facility",
+        "surface": "facilities",
+        "gloss": "n.设施；设备"
+      },
+      {
+        "headwordId": "blend",
+        "gloss": "v.融入；调和；混合"
+      },
+      {
+        "headwordId": "smooth",
+        "surface": "smoothly",
+        "gloss": "ad.平稳地；顺利地"
+      },
+      {
+        "headwordId": "everyday",
+        "gloss": "a.日常的；每日的"
+      },
+      {
+        "headwordId": "renovate",
+        "surface": "Renovated",
+        "gloss": "a.翻新的；整修一新的"
+      },
+      {
+        "headwordId": "build",
+        "surface": "buildings",
+        "gloss": "n.建筑物；大楼"
+      },
+      {
+        "headwordId": "feature",
+        "gloss": "v.以…为特色；起用"
+      },
+      {
+        "headwordId": "large",
+        "gloss": "a.巨大的；大规模的"
+      },
+      {
+        "headwordId": "welcome",
+        "gloss": "v.欢迎；欣然接受"
+      },
+      {
+        "headwordId": "sunlight",
+        "gloss": "n.日光；阳光"
+      },
+      {
+        "headwordId": "gentle",
+        "gloss": "a.柔和的；温和的"
+      },
+      {
+        "headwordId": "breeze",
+        "surface": "breezes",
+        "gloss": "n.微风；轻风"
+      },
+      {
+        "headwordId": "reduce",
+        "surface": "reduces",
+        "gloss": "v.减少；缩减；降低"
+      },
+      {
+        "headwordId": "constant",
+        "gloss": "a.持续的；恒定的"
+      },
+      {
+        "headwordId": "demand",
+        "gloss": "n.需求；要求；需要"
+      },
+      {
+        "headwordId": "artificial",
+        "gloss": "a.人造的；人工的"
+      },
+      {
+        "headwordId": "light²",
+        "surface": "lighting",
+        "gloss": "n.照明；灯光；采光"
+      },
+      {
+        "headwordId": "condition",
+        "surface": "conditioning",
+        "gloss": "n.调节；空调设备"
+      },
+      {
+        "headwordId": "intelligent",
+        "gloss": "a.智能的；聪颖的"
+      },
+      {
+        "headwordId": "household",
+        "gloss": "a.家庭的；家用的"
+      },
+      {
+        "headwordId": "appliance",
+        "surface": "appliances",
+        "gloss": "n.器具；家用电器"
+      },
+      {
+        "headwordId": "track",
+        "gloss": "v.跟踪；监测；追踪"
+      },
+      {
+        "headwordId": "electricity",
+        "gloss": "n.电；电力；电流"
+      },
+      {
+        "headwordId": "consume",
+        "surface": "consumption",
+        "gloss": "n.消耗；消费；消耗量"
+      },
+      {
+        "headwordId": "help",
+        "surface": "helping",
+        "gloss": "v.帮助；协助；促进"
+      },
+      {
+        "headwordId": "cut",
+        "gloss": "v.削减；剪切；切断"
+      },
+      {
+        "headwordId": "expense",
+        "surface": "expenses",
+        "gloss": "n.开支；花费；费用"
+      },
+      {
+        "headwordId": "save",
+        "surface": "saving",
+        "gloss": "v.节省；节约；拯救"
+      },
+      {
+        "headwordId": "value",
+        "surface": "valuable",
+        "gloss": "a.有价值的；宝贵的"
+      },
+      {
+        "headwordId": "resource",
+        "surface": "resources",
+        "gloss": "n.资源；财力；物力"
+      },
+      {
+        "headwordId": "ultimate",
+        "surface": "Ultimately",
+        "gloss": "ad.最终地；根本上地"
+      },
+      {
+        "headwordId": "appeal",
+        "gloss": "v.呼吁；吸引；申诉"
+      },
+      {
+        "headwordId": "create",
+        "surface": "creating",
+        "gloss": "v.创造；营造；引起"
+      },
+      {
+        "headwordId": "sustain",
+        "surface": "sustainable",
+        "gloss": "a.可持续的；能承受的"
+      },
+      {
+        "headwordId": "landscape",
+        "gloss": "n.景观；风景；景色"
+      },
+      {
+        "headwordId": "memory",
+        "gloss": "n.记忆；回忆；记忆力"
+      },
+      {
+        "headwordId": "comfort",
+        "gloss": "n.舒适；安慰；安逸"
+      },
+      {
+        "headwordId": "thrive",
+        "gloss": "v.繁荣；茁壮成长；兴旺"
       }
     ],
     "phraseAnnotations": [],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "anticipate changes/foresee",
-        "explanation": "预先考虑变化，预见；anticipate 后常接动名词或名词"
+        "id": "exp-01",
+        "expression": "quarter/district/neighborhood",
+        "explanation": "重点词义拓展：quarter 作名词常考“街区，区域”，如 residential quarter（居住区）；亦可表示“四分之一；一刻钟；季度；营房”。同义替换词为 district（行政区/街区）、neighborhood（社区/居民区）。"
       },
       {
-        "id": "e2",
-        "expression": "antique furniture/vintage",
-        "explanation": "古董家具；antique 作名词指古董，作形容词指古老的"
+        "id": "exp-02",
+        "expression": "restore/renovate/refurbish",
+        "explanation": "重点词义拓展：restore 意为“修复，使复原；归还”，常用于古建筑或艺术品修复。近义词 renovate 指“翻新，修葺”，refurbish 指“重新装修，刷新”。"
       },
       {
-        "id": "e3",
-        "expression": "anxious about/concerned about",
-        "explanation": "对...感到焦虑；be anxious for 表示渴望"
+        "id": "exp-03",
+        "expression": "antique/vintage/heritage",
+        "explanation": "熟词僻义：antique 可作形容词“古董的，古老的”，亦可作名词“古董，古玩”。常考搭配：antique furniture（古董家具）。衍生对比：vintage（经典的/复古的）、heritage（文化遗产）。"
       },
       {
-        "id": "e4",
-        "expression": "apart from/aside from",
-        "explanation": "除...之外，分开；keep...apart 使...隔开"
+        "id": "exp-04",
+        "expression": "brick/masonry/concrete",
+        "explanation": "重点搭配拓展：brick 除了指“砖，砖块”，在口语中还可比喻“可靠忠诚的朋友（a regular brick）”。建筑材料词族：masonry（石砌工程）、concrete（混凝土）。"
       },
       {
-        "id": "e5",
-        "expression": "make an apology to/apologize",
-        "explanation": "向某人道歉；apology 名词形式常搭配 offer 或 make"
+        "id": "exp-05",
+        "expression": "infrastructure/facilities/amenities",
+        "explanation": "核心词汇拓展：infrastructure 指城市或国家的“基础设施”（交通、供水、电网等）。近义词 facilities 侧重“具体服务设施”，amenities 强调“便利与休闲设施”。"
       },
       {
-        "id": "e6",
-        "expression": "mobile app/software program",
-        "explanation": "手机应用；app 是 application 的缩写，已纳入大纲核心词"
+        "id": "exp-06",
+        "expression": "approach/method/strategy",
+        "explanation": "常考多义词：approach 作名词表示“方法，途径；靠近”，作动词表示“接近，着手处理”。常用搭配：approach to doing sth.（做某事的方法）。近义辨析：method（具体流程）、strategy（宏观策略）。"
       },
       {
-        "id": "e7",
-        "expression": "firefighting apparatus/equipment",
-        "explanation": "消防器械；apparatus 常作为不可数名词指成套仪器或机构"
+        "id": "exp-07",
+        "expression": "accommodate/adapt/house",
+        "explanation": "熟词僻义：accommodate 核心义为“容纳；提供食宿”，转义为“顺应，适应；迎合需求”，如 accommodate changing needs（适应变化的需求）。近义替换：house（安置/容纳）、adapt（适应）。"
       },
       {
-        "id": "e8",
-        "expression": "appeal to/attract",
-        "explanation": "吸引，呼吁；appeal to sb 对某人有吸引力"
+        "id": "exp-08",
+        "expression": "alley/lane/passageway",
+        "explanation": "城市空间词汇：alley 指建筑物之间的“小巷，胡同；窄街”，亦可指“保龄球球道（bowling alley）”。相关近义词：lane（车道/里弄）、passageway（过道/通道）。"
       },
       {
-        "id": "e9",
-        "expression": "household appliance/device",
-        "explanation": "家用电器；appliance 指家用或专业用途的小型设备"
+        "id": "exp-09",
+        "expression": "square/plaza/courtyard",
+        "explanation": "多义拓展：square 作名词除了“广场”，还指“正方形；平方”；作形容词指“正方形的；平正的，扯平的（square deal 公平交易）”。近义词：plaza（商业休闲广场）、courtyard（庭院）。"
       },
       {
-        "id": "e10",
-        "expression": "apply for/request officially",
-        "explanation": "正式申请；apply to 适用于"
+        "id": "exp-10",
+        "expression": "blend/integrate/harmonize",
+        "explanation": "重点动词搭配：blend into / blend with 表示“与…交融；和谐地融入”。近义词 integrate 强调“整合为一体”，harmonize 侧重“协调和谐”。"
       },
       {
-        "id": "e11",
-        "expression": "appropriate measures/fitting",
-        "explanation": "恰当的措施；appropriate 熟词僻义在六级中作动词表示“挪用、侵吞”"
+        "id": "exp-11",
+        "expression": "appliance/device/gadget",
+        "explanation": "核心生活词汇：appliance 专指“家用电器，器械”，如 household/kitchen appliance。对比 device（较精密的电子设备/装置）、gadget（新奇小巧的小器具）。"
       },
       {
-        "id": "e12",
-        "expression": "natural aptitude/talent",
-        "explanation": "天生才能，天赋；aptitude test 常见于能力倾向测试"
+        "id": "exp-12",
+        "expression": "track/monitor/trace",
+        "explanation": "重点多义词：track 作名词表示“轨道；足迹；跑道”，作动词表示“追踪；监测；记录”。常用短语：keep track of（追踪/了解…的动态），lose track of（失去联系/忘记）。"
       },
       {
-        "id": "e13",
-        "expression": "arrest the spread/halt",
-        "explanation": "遏制蔓延；arrest 熟词僻义常考及物动词“阻止、制止”"
+        "id": "exp-13",
+        "expression": "appeal/attract/fascinate",
+        "explanation": "高频多义词：appeal to sb. 意为“吸引某人，引起兴趣”；亦可表示“呼吁，恳求；上诉”。常用形容词 appealing（动人的/有吸引力的）。近义词：attract（吸引）、fascinate（使着迷）。"
       },
       {
-        "id": "e14",
-        "expression": "take an approach to/method",
-        "explanation": "采取...方法；approach 后接介词 to 加动名词或名词"
+        "id": "exp-14",
+        "expression": "thrive/flourish/prosper",
+        "explanation": "近义词群汇总：thrive 强调在有利环境中“茁壮成长；蓬勃发展”，常与 prosper（经济繁荣/成功）、flourish（文化艺术等繁荣昌盛）构成同义替换词组。"
       }
     ]
   },
@@ -2671,7 +2749,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "automate",
         "gloss": "v.使自动化；自动操作"
       },
-            {
+      {
         "headwordId": "authentic",
         "gloss": "a.真正的；真实的"
       },
@@ -2742,7 +2820,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "assess",
         "gloss": "v.评估；评定"
       },
-            {
+      {
         "headwordId": "atom",
         "gloss": "n.原子；微粒"
       },
@@ -2776,7 +2854,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "athlete",
         "gloss": "n.运动员；选手"
       },
-            {
+      {
         "headwordId": "gravity",
         "gloss": "n.重力；引力"
       },
@@ -2915,7 +2993,7 @@ export const PASSAGES_01_05: Passage[] = [
         "surface": "recovery",
         "gloss": "n.恢复；回收"
       },
-            {
+      {
         "headwordId": "ashore",
         "gloss": "ad.上岸地；在岸上地"
       },
@@ -2935,7 +3013,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "voyage",
         "gloss": "n.航程；航海"
       },
-            {
+      {
         "headwordId": "fool",
         "surface": "foolish",
         "gloss": "a.愚蠢的；傻的"
@@ -2978,7 +3056,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "petty",
         "gloss": "a.微不足道的；琐碎的"
       },
-            {
+      {
         "headwordId": "aside",
         "gloss": "ad.在旁边地；到一边地"
       },
@@ -3004,7 +3082,7 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "avenue",
         "gloss": "n.林荫道；大道"
       },
-            {
+      {
         "headwordId": "attic",
         "gloss": "n.阁楼；顶楼"
       },
