@@ -274,11 +274,11 @@ body {
 
 .passage-paragraph__en {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.18rem;
-  line-height: 2.35;
+  font-size: 1.16rem;
+  line-height: 2.75;
   color: #192320;
-  margin-bottom: 6px;
-  word-spacing: 0.03em;
+  margin-bottom: 8px;
+  position: relative;
 }
 
 .paragraph-label {
@@ -291,6 +291,7 @@ body {
   font-weight: 600;
   color: #1f2d29;
   margin-right: 2px;
+  vertical-align: baseline;
 }
 
 .sentence-number {
@@ -302,24 +303,27 @@ body {
   font-size: 1.02rem;
   margin-right: 2px;
   color: #20312c;
+  vertical-align: baseline;
 }
 
 .inline-annotation {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: top;
-  line-height: 1.15;
-  margin: 0 2px 4px;
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .inline-annotation__surface {
   display: inline-block;
-  padding: 1px 4px 2px;
+  vertical-align: baseline;
+  padding: 0 1px 1px;
   border-radius: 2px 2px 0 0;
   font-weight: 500;
   color: #141e1b;
   border-bottom: 1.5px solid currentColor;
+  box-sizing: border-box;
 }
 
 .inline-annotation--regular .inline-annotation__surface {
@@ -343,19 +347,25 @@ body {
 }
 
 .inline-annotation__gloss {
-  display: block;
-  margin-top: 3px;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
   font-family:
     'PingFang SC',
     'Noto Sans SC',
     'Microsoft YaHei',
     sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  line-height: 1.22;
+  line-height: 1.1;
   color: var(--text-gloss);
   text-align: center;
   white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 1;
 }
 
 .passage-paragraph__zh {
@@ -475,13 +485,13 @@ body {
 
   .passage-paragraph__en {
     font-size: 1.08rem;
-    line-height: 2.4;
+    line-height: 2.75;
   }
 
   .inline-annotation__gloss {
-    font-size: 0.74rem;
-    white-space: normal;
-    max-width: 11em;
+    font-size: 0.64rem;
+    white-space: nowrap;
+    max-width: none;
   }
 
   .passage-paragraph__zh {
