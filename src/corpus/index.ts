@@ -395,7 +395,7 @@ export interface PassageValidationResult {
 }
 
 const WORD_GLOSS_REGEX =
-  /^(?:n|v|vt|vi|a|adj|ad|adv|prep|conj|pron|num)\.\s*[^；\s][^；]*(?:；\s*[^；\s][^；]*){1,2}$/;
+  /^(?:n|v|vt|vi|a|adj|ad|adv|prep|conj|pron|num)\.\s*[^；\s][^；]*(?:；\s*[^；\s][^；]*){0,2}$/;
 const CJK_REGEX = /[\u4e00-\u9fff]/;
 
 export function validatePassage(
