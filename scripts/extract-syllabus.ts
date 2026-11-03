@@ -1,6 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEMO_PASSAGES, compilePassage } from '../src/corpus/index';
+import {
+  DEMO_PASSAGES,
+  CET4_BATCH_1_PASSAGES,
+  compilePassage,
+} from '../src/corpus/index';
 import { buildSyllabusCatalog } from '../src/syllabus/index';
 import { loadSyllabusFromPdf } from '../src/syllabus/node-extractor';
 
@@ -16,6 +20,7 @@ async function main() {
   const catalogOutPath = path.join(dataDir, 'syllabus-catalog.json');
   const batchesOutPath = path.join(dataDir, 'batch-manifests.json');
   const compiledDemosOutPath = path.join(dataDir, 'compiled-demos.json');
+  const compiledB1OutPath = path.join(dataDir, 'compiled-cet4-batch-1.json');
 
   fs.writeFileSync(
     catalogOutPath,
@@ -32,6 +37,13 @@ async function main() {
   fs.writeFileSync(
     compiledDemosOutPath,
     JSON.stringify(compiledDemos, null, 2) + '\n',
+    'utf8'
+  );
+
+  const compiledB1 = CET4_BATCH_1_PASSAGES.map((p) => compilePassage(p, catalog));
+  fs.writeFileSync(
+    compiledB1OutPath,
+    JSON.stringify(compiledB1, null, 2) + '\n',
     'utf8'
   );
 

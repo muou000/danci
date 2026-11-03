@@ -3,3 +3,8 @@ dist/
 coverage/
 *.local
 .DS_Store
+
+# Reference materials
+*.xlsx
+大学英语*.pdf
+

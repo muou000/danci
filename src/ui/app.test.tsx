@@ -5,6 +5,7 @@ import { toBlob } from 'html-to-image';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
 import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
+import { COMPILED_CET4_BATCH_1_PASSAGES } from '../corpus/compiled-batch-1';
 import type { PassageSearchResult } from '../passage-library';
 
 vi.mock('html-to-image', () => ({
@@ -624,6 +625,47 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(exportNode.querySelector('.passage-expansion')).toBeNull();
     expect(exportNode.querySelector('.passage-expansion__recovery')).toBeNull();
     expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
+  });
+
+  it('四级核心篇第 1 批短文库（共 20 篇）可通过界面目录完整浏览与切换精读', async () => {
+    const user = userEvent.setup();
+    render(<App passages={COMPILED_CET4_BATCH_1_PASSAGES} />);
+
+    // Initial passage should be NO. 01 of batch 1
+    expect(
+      screen.getByRole('heading', { name: /跨越重洋的学术探索与文化适应/ })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Academic Exploration and Cultural Adaptation Abroad')
+    ).toBeInTheDocument();
+
+    // Open directory
+    await user.click(screen.getByRole('button', { name: '短文目录' }));
+    expect(
+      screen.getByRole('heading', { name: '短文目录' })
+    ).toBeInTheDocument();
+
+    // Verify multiple batch 1 passages exist in directory
+    expect(
+      screen.getByRole('button', {
+        name: /^NO\. 01.*跨越重洋的学术探索与文化适应/,
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {
+        name: /^NO\. 20.*数字生活赋能与现代日常文化/,
+      })
+    ).toBeInTheDocument();
+
+    // Navigate to NO. 20
+    await user.click(
+      screen.getByRole('button', {
+        name: /^NO\. 20.*数字生活赋能与现代日常文化/,
+      })
+    );
+    expect(
+      screen.getByRole('heading', { name: /数字生活赋能与现代日常文化/ })
+    ).toBeInTheDocument();
   });
 });
 

@@ -8,6 +8,8 @@ import { toCircledNumber } from './formatting';
 
 export { DEMO_PASSAGES };
 export { COMPILED_DEMO_PASSAGES } from './compiled-demos';
+export { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
+export { COMPILED_CET4_BATCH_1_PASSAGES } from './compiled-batch-1';
 export { toCircledNumber } from './formatting';
 
 export type PassageTier = 'cet4-core' | 'cet6-advanced';
@@ -114,23 +116,29 @@ function escapeRegex(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-interface PhraseMatch {
-  start: number;
-  end: number;
-  spec: PhraseAnnotationSpec;
-}
+type SpanMatch =
+  | {
+      start: number;
+      end: number;
+      kind: 'phrase';
+      phraseSpec: PhraseAnnotationSpec;
+    }
+  | {
+      start: number;
+      end: number;
+      kind: 'multiword-word';
+      wordSpec: WordAnnotationSpec;
+    };
 
-function findPhraseMatches(
+function findSpanMatches(
   text: string,
-  specs: PhraseAnnotationSpec[]
-): PhraseMatch[] {
-  // Prefer longer surface matches first
-  const sortedSpecs = [...specs].sort(
-    (a, b) => b.surface.length - a.surface.length
-  );
-  const candidates: PhraseMatch[] = [];
+  phraseSpecs: PhraseAnnotationSpec[],
+  wordSpecs: WordAnnotationSpec[],
+  catalog: SyllabusCatalog
+): SpanMatch[] {
+  const candidates: SpanMatch[] = [];
 
-  for (const spec of sortedSpecs) {
+  for (const spec of phraseSpecs) {
     if (!spec.surface.trim()) continue;
     const pattern = new RegExp(
       `(?<![A-Za-z0-9-])${escapeRegex(spec.surface)}(?![A-Za-z0-9-])`,
@@ -141,14 +149,39 @@ function findPhraseMatches(
       candidates.push({
         start: m.index,
         end: m.index + m[0].length,
-        spec,
+        kind: 'phrase',
+        phraseSpec: spec,
       });
     }
   }
 
-  candidates.sort((a, b) => a.start - b.start || b.end - a.end);
+  for (const spec of wordSpecs) {
+    const headword = spec.headwordId
+      ? catalog.byId.get(spec.headwordId)?.headword
+      : undefined;
+    const surface = spec.surface?.trim() || headword?.trim() || '';
+    if (!surface.includes(' ')) continue;
 
-  const accepted: PhraseMatch[] = [];
+    const pattern = new RegExp(
+      `(?<![A-Za-z0-9-])${escapeRegex(surface)}(?![A-Za-z0-9-])`,
+      'gi'
+    );
+    let m: RegExpExecArray | null;
+    while ((m = pattern.exec(text)) !== null) {
+      candidates.push({
+        start: m.index,
+        end: m.index + m[0].length,
+        kind: 'multiword-word',
+        wordSpec: spec,
+      });
+    }
+  }
+
+  candidates.sort(
+    (a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start)
+  );
+
+  const accepted: SpanMatch[] = [];
   let cursor = 0;
   for (const c of candidates) {
     if (c.start >= cursor) {
@@ -158,6 +191,7 @@ function findPhraseMatches(
   }
   return accepted;
 }
+
 
 function estimateEnWidth(text: string): number {
   let w = 0;
@@ -286,17 +320,45 @@ export function compilePassage(
       const lower = word.toLowerCase();
 
       let matchedSpec: WordAnnotationSpec | undefined;
-      const resolved = resolveWordToHeadwords(word, catalog);
-      for (const entry of resolved) {
-        const candidateSpec = wordByHeadwordId.get(entry.id);
-        if (candidateSpec) {
-          matchedSpec = candidateSpec;
-          break;
+      const surfaceSpec = wordBySurfaceLower.get(lower);
+      if (surfaceSpec && !seenKeys.has(surfaceSpec.headwordId ? `word:${surfaceSpec.headwordId}` : `oos:${lower}`)) {
+        matchedSpec = surfaceSpec;
+      } else {
+        const resolved = resolveWordToHeadwords(word, catalog);
+        // 1. Prefer unseen exact headword match
+        for (const entry of resolved) {
+          if (entry.headword.toLowerCase() === lower) {
+            const candidateSpec = wordByHeadwordId.get(entry.id);
+            if (candidateSpec && !seenKeys.has(`word:${entry.id}`)) {
+              matchedSpec = candidateSpec;
+              break;
+            }
+          }
         }
-      }
-
-      if (!matchedSpec) {
-        matchedSpec = wordBySurfaceLower.get(lower);
+        // 2. Prefer any unseen candidate
+        if (!matchedSpec) {
+          for (const entry of resolved) {
+            const candidateSpec = wordByHeadwordId.get(entry.id);
+            if (candidateSpec && !seenKeys.has(`word:${entry.id}`)) {
+              matchedSpec = candidateSpec;
+              break;
+            }
+          }
+        }
+        // 3. Fallback to surfaceSpec or first declared candidate
+        if (!matchedSpec) {
+          if (surfaceSpec) {
+            matchedSpec = surfaceSpec;
+          } else {
+            for (const entry of resolved) {
+              const candidateSpec = wordByHeadwordId.get(entry.id);
+              if (candidateSpec) {
+                matchedSpec = candidateSpec;
+                break;
+              }
+            }
+          }
+        }
       }
 
       if (matchedSpec) {
@@ -355,38 +417,88 @@ export function compilePassage(
     (para) => ({
       paragraphNumber: para.paragraphNumber,
       sentences: para.sentences.map((sent) => {
-        const phraseMatches = findPhraseMatches(
+        const spanMatches = findSpanMatches(
           sent.english,
-          passage.phraseAnnotations
+          passage.phraseAnnotations,
+          passage.wordAnnotations,
+          catalog
         );
         const tokens: CompiledToken[] = [];
         let pos = 0;
 
-        for (const pm of phraseMatches) {
-          if (pm.start > pos) {
-            tokens.push(...compilePlainSegment(sent.english.slice(pos, pm.start)));
+        for (const sm of spanMatches) {
+          if (sm.start > pos) {
+            tokens.push(
+              ...compilePlainSegment(sent.english.slice(pos, sm.start))
+            );
           }
-          const surface = sent.english.slice(pm.start, pm.end);
-          const itemKey = `phrase:${pm.spec.phrase.toLowerCase().trim()}`;
-          if (!seenKeys.has(itemKey)) {
-            seenKeys.add(itemKey);
-            tokens.push({
-              type: 'annotation',
-              category: 'phrase',
-              itemKey,
-              surface,
-              gloss: pm.spec.gloss,
-              phrase: pm.spec.phrase,
-            });
-          } else {
-            const prev = tokens[tokens.length - 1];
-            if (prev && prev.type === 'text') {
-              prev.text += surface;
+          const surface = sent.english.slice(sm.start, sm.end);
+          if (sm.kind === 'phrase' && sm.phraseSpec) {
+            const itemKey = `phrase:${sm.phraseSpec.phrase.toLowerCase().trim()}`;
+            if (!seenKeys.has(itemKey)) {
+              seenKeys.add(itemKey);
+              tokens.push({
+                type: 'annotation',
+                category: 'phrase',
+                itemKey,
+                surface,
+                gloss: sm.phraseSpec.gloss,
+                phrase: sm.phraseSpec.phrase,
+              });
             } else {
-              tokens.push({ type: 'text', text: surface });
+              const prev = tokens[tokens.length - 1];
+              if (prev && prev.type === 'text') {
+                prev.text += surface;
+              } else {
+                tokens.push({ type: 'text', text: surface });
+              }
+            }
+          } else if (sm.kind === 'multiword-word' && sm.wordSpec) {
+            const kind =
+              sm.wordSpec.kind ??
+              (sm.wordSpec.headwordId ? 'syllabus' : 'out-of-syllabus');
+            const itemKey =
+              kind === 'syllabus' && sm.wordSpec.headwordId
+                ? `word:${sm.wordSpec.headwordId}`
+                : `oos:${(sm.wordSpec.lemma ?? sm.wordSpec.surface ?? surface).toLowerCase()}`;
+
+            if (!seenKeys.has(itemKey)) {
+              seenKeys.add(itemKey);
+              if (kind === 'syllabus' && sm.wordSpec.headwordId) {
+                const catEntry = catalog.byId.get(sm.wordSpec.headwordId);
+                const category: AnnotationCategory =
+                  catEntry?.tier === 'high-frequency'
+                    ? 'high-frequency'
+                    : 'regular';
+                coveredHeadwordSet.add(sm.wordSpec.headwordId);
+                tokens.push({
+                  type: 'annotation',
+                  category,
+                  itemKey,
+                  surface,
+                  gloss: sm.wordSpec.gloss,
+                  headwordId: sm.wordSpec.headwordId,
+                });
+              } else {
+                hasOutOfSyllabusWords = true;
+                tokens.push({
+                  type: 'annotation',
+                  category: 'out-of-syllabus',
+                  itemKey,
+                  surface,
+                  gloss: sm.wordSpec.gloss,
+                });
+              }
+            } else {
+              const prev = tokens[tokens.length - 1];
+              if (prev && prev.type === 'text') {
+                prev.text += surface;
+              } else {
+                tokens.push({ type: 'text', text: surface });
+              }
             }
           }
-          pos = pm.end;
+          pos = sm.end;
         }
         if (pos < sent.english.length) {
           tokens.push(...compilePlainSegment(sent.english.slice(pos)));
@@ -659,17 +771,19 @@ export function validatePassage(
   const wordRegex = /[A-Za-z]+(?:[-'’][A-Za-z]+)*/g;
   for (const para of passage.paragraphs) {
     for (const sent of para.sentences) {
-      const phraseMatches = findPhraseMatches(
+      const spanMatches = findSpanMatches(
         sent.english,
-        passage.phraseAnnotations
+        passage.phraseAnnotations,
+        passage.wordAnnotations,
+        catalog
       );
       const plainSegments: string[] = [];
       let cursor = 0;
-      for (const pm of phraseMatches) {
-        if (pm.start > cursor) {
-          plainSegments.push(sent.english.slice(cursor, pm.start));
+      for (const sm of spanMatches) {
+        if (sm.start > cursor) {
+          plainSegments.push(sent.english.slice(cursor, sm.start));
         }
-        cursor = pm.end;
+        cursor = sm.end;
       }
       if (cursor < sent.english.length) {
         plainSegments.push(sent.english.slice(cursor));

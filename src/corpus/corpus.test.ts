@@ -8,6 +8,7 @@ import {
   type ExpansionEntry,
   type Passage,
 } from './index';
+import { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
 
 const catalog = getDefaultSyllabusCatalog();
 
@@ -182,6 +183,62 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(coverage.coveredCoreIds.has('lead¹')).toBe(true);
   });
 
+  it('大纲词表中含空格的词目（如 according to、baby boom）可作为独立单词行间标注匹配，计入大纲词目覆盖率并通过语料校验', () => {
+    const passage: Passage = {
+      id: 'test-multiword-headword',
+      indexLabel: 'NO. 01',
+      tier: 'cet4-core',
+      topic: '测试多词大纲词目',
+      titleZh: '测试大纲词目匹配',
+      titleEn: 'Test Multiword Syllabus Headwords',
+      paragraphs: [
+        {
+          paragraphNumber: 1,
+          sentences: [
+            {
+              sentenceNumber: 1,
+              english:
+                'According to recent data, the baby boom altered consumer habits.',
+              chinese: '根据近期数据，婴儿潮改变了消费习惯。',
+            },
+          ],
+        },
+      ],
+      wordAnnotations: [
+        { headwordId: 'according to', gloss: 'prep.根据；按照' },
+        { headwordId: 'recent', gloss: 'a.近期的；最新的' },
+        { headwordId: 'data', gloss: 'n.数据；资料' },
+        { headwordId: 'baby boom', gloss: 'n.婴儿潮；生育高峰' },
+        { headwordId: 'alter', gloss: 'v.改变；更改' },
+        { headwordId: 'consume', surface: 'consumer', gloss: 'a.消费者的；消费的' },
+        { headwordId: 'habit', surface: 'habits', gloss: 'n.习惯；习性' },
+      ],
+      phraseAnnotations: [],
+      expansionEntries: Array.from({ length: 12 }, (_, idx) => ({
+        id: `exp-${idx + 1}`,
+        expression: `term${idx + 1}`,
+        explanation: `释义 ${idx + 1}`,
+      })),
+    };
+
+    const result = validatePassage(passage, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage, catalog);
+    expect(compiled.coveredHeadwordIds).toContain('according to');
+    expect(compiled.coveredHeadwordIds).toContain('baby boom');
+
+    const tokens = compiled.paragraphs[0].sentences[0].tokens;
+    const accordingToken = tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'according to'
+    );
+    expect(accordingToken).toBeDefined();
+    if (accordingToken && accordingToken.type === 'annotation') {
+      expect(accordingToken.category).toBe('regular');
+      expect(accordingToken.surface).toBe('According to');
+    }
+  });
+
   it('强制校验：非大纲非免注词必须显式标为超纲词，且严格检查分段句号、逐段译文、12–18 条拓展条目及词/短语释义体例', () => {
     const validExpansions: ExpansionEntry[] = Array.from(
       { length: 12 },
@@ -322,5 +379,58 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       (id) => catalog.byId.get(id)?.level === 'cet6'
     );
     expect(coveredCet6Stars.length).toBeGreaterThanOrEqual(12);
+  });
+
+  it('CET-4 第 1 批短文库（共 20 篇）100% 独立覆盖清单所分配的 857 个四级核心词目，且全量通过语料体例校验', () => {
+    const b1Manifest = catalog.batches.find((b) => b.batchId === 'cet4-batch-1');
+    expect(b1Manifest).toBeDefined();
+    const expectedB1Ids = new Set(b1Manifest!.headwordIds);
+    expect(expectedB1Ids.size).toBe(857);
+
+    expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
+
+    const b1CoveredIds = new Set<string>();
+
+    for (const [idx, passage] of CET4_BATCH_1_PASSAGES.entries()) {
+      expect(passage.tier).toBe('cet4-core');
+      expect(passage.id).toBe(`cet4-b1-${String(idx + 1).padStart(3, '0')}`);
+      expect(passage.paragraphs.length).toBeGreaterThanOrEqual(3);
+      expect(passage.paragraphs.length).toBeLessThanOrEqual(4);
+      expect(passage.expansionEntries.length).toBeGreaterThanOrEqual(12);
+      expect(passage.expansionEntries.length).toBeLessThanOrEqual(18);
+
+      const wordCount = passage.paragraphs.reduce(
+        (sum, p) =>
+          sum +
+          p.sentences.reduce(
+            (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+            0
+          ),
+        0
+      );
+      expect(wordCount).toBeGreaterThanOrEqual(190);
+      expect(wordCount).toBeLessThanOrEqual(280);
+
+      const result = validatePassage(passage, catalog);
+      if (result.errors.length > 0) {
+        console.error(`Passage ${passage.id} validation errors:`, result.errors);
+      }
+      expect(result.errors).toEqual([]);
+
+      const compiled = compilePassage(passage, catalog);
+      for (const id of compiled.coveredHeadwordIds) {
+        const entry = catalog.byId.get(id);
+        expect(entry?.level).not.toBe('cet6');
+        if (expectedB1Ids.has(id)) {
+          b1CoveredIds.add(id);
+        }
+      }
+    }
+
+    const missingIds = Array.from(expectedB1Ids).filter(
+      (id) => !b1CoveredIds.has(id)
+    );
+    expect(missingIds).toEqual([]);
+    expect(b1CoveredIds.size).toBe(857);
   });
 });
