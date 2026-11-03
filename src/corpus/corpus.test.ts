@@ -1046,7 +1046,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it.skip('CET-4 核心篇 NO. 10 重写后满足主题自然度、词量及行间标注校验规范', () => {
+  it('CET-4 核心篇 NO. 10 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 10');
     expect(passage).toBeDefined();
     expect(passage!.tier).toBe('cet4-core');
@@ -1131,6 +1131,14 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     if (p1s1Commercial && p1s1Commercial.type === 'annotation') {
       expect(p1s1Commercial.surface).toBe('commercial');
       expect(p1s1Commercial.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s1Budget = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'budget'
+    );
+    expect(p1s1Budget).toBeDefined();
+    if (p1s1Budget && p1s1Budget.type === 'annotation') {
+      expect(p1s1Budget.gloss.startsWith('a.')).toBe(true);
     }
   });
 

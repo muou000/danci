@@ -1,739 +1,528 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_010: Passage = {
-  "id": "cet4-b1-010",
-  "indexLabel": "NO. 10",
-  "tier": "cet4-core",
-  "topic": "青年商业创业与金融预算管理",
-  "titleZh": "青年商业破局与财务预算管理",
-  "titleEn": "Youth Entrepreneurship and Financial Planning",
-  "paragraphs": [
+  id: 'cet4-b1-010',
+  indexLabel: 'NO. 10',
+  tier: 'cet4-core',
+  topic: '青年商业创业与财务预算管理',
+  titleZh: '青年商业破局与财务预算管理',
+  titleEn: 'Youth Entrepreneurship and Financial Budget Management',
+  paragraphs: [
     {
-      "paragraphNumber": 1,
-      "sentences": [
+      paragraphNumber: 1,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Brave young entrepreneurs refuse to let fear break their spirit when striving for an innovative commercial breakthrough.",
-          "chinese": "勇敢的年轻创业者在争取创新商业突破时，拒绝让恐惧打破他们的斗志。"
+          sentenceNumber: 1,
+          english:
+            'When ambitious young entrepreneurs launch an innovative commercial venture, they soon discover that disciplined financial budget management is vital to corporate survival.',
+          chinese:
+            '当雄心勃勃的青年创业者启动一项创新的商业项目时，他们很快发现，严谨的财务预算管理对企业的生存至关重要。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "A brilliant financial broker carries a leather briefcase, holding a brief brochure that outlines a broad market strategy.",
-          "chinese": "一位出色的金融经纪人提着一个皮质公文包，拿出一份简短的手册，勾勒出广阔的市场策略。"
+          sentenceNumber: 2,
+          english:
+            'Rather than pursuing blind expansion, the founders carefully estimate initial capital expenses and assign available funds to essential equipment.',
+          chinese:
+            '创始人并未盲目扩张，而是审慎评估初期资本开支，并将可用资金分配给核心设备。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "In a modern office, bright sunlight warms the room as team members take a deep breath and breathe fresh air carried by a morning breeze.",
-          "chinese": "在现代化办公室里，明亮的阳光温暖着房间，团队成员深吸一口气，呼吸着晨风带来的清新空气。"
+          sentenceNumber: 3,
+          english:
+            'They establish a realistic operational schedule, evaluate potential commercial risks, and outline practical targets for product development.',
+          chinese:
+            '他们制定切合实际的运营进度表，评估潜在的商业风险，并勾勒出产品开发的可行目标。',
         },
         {
-          "sentenceNumber": 4,
-          "english": "Working under a strict financial budget, the team will not spend an extra buck on luxury before their business moves on.",
-          "chinese": "在严格的财务预算下工作，在业务继续前进之前，团队不会在奢侈品上多花一美元。"
-        }
-      ]
+          sentenceNumber: 4,
+          english:
+            'In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed revenue forecasts.',
+          chinese:
+            '在每周例会中，细心的会计会审查每一笔交易凭据，确保总体支出绝不超过收入预测。',
+        },
+      ],
     },
     {
-      "paragraphNumber": 2,
-      "sentences": [
+      paragraphNumber: 2,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Honest founders never offer a corrupt bribe or tolerate brutal office abuse, maintaining high integrity from the start.",
-          "chinese": "诚实的创始人绝不提供腐败贿赂，也绝不容忍残暴的职场虐待，从一开始就保持高度廉洁。"
+          sentenceNumber: 1,
+          english:
+            'To avoid a severe cash deficit, the management team monitors daily bank balances and rejects speculative market bubbles that often drive careless rivals broke.',
+          chinese:
+            '为避免严重的资金赤字，管理团队每日监控银行结余，拒绝追逐那些常使粗心对手破产的投机市场泡沫。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "When a sudden software bug threatens a system breakdown, a reliable buddy quickly fixes the code with a clean brush of expertise.",
-          "chinese": "当突然的软件漏洞威胁到系统崩溃时，可靠的搭档迅速以娴熟的专业技能修复代码。"
+          sentenceNumber: 2,
+          english:
+            'They refuse to waste money on luxury furniture or expensive decorations, focusing their energy instead on software quality and technical breakthroughs.',
+          chinese:
+            '他们拒绝在奢华家具或昂贵装饰上浪费资金，而是将精力集中于软件质量与技术突破。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "They avoid the speculative market bubble that once made careless rivals go broke, focusing instead on bulk sales of electric bulbs.",
-          "chinese": "他们避开曾经让粗心竞争对手破产的投机市场泡沫，转而专注于电灯泡的大宗销售。"
+          sentenceNumber: 3,
+          english:
+            'When a sudden system bug threatens a critical service breakdown, talented engineers collaborate to repair the fault and restore normal operations.',
+          chinese:
+            '当突发的系统缺陷威胁到关键业务瘫痪时，富有才华的工程师通力协作以修复故障并恢复正常运转。',
         },
         {
-          "sentenceNumber": 4,
-          "english": "In a renovated brick building, a shiny brass sign hangs on the wall, while workers sweep dust with a simple broom and wipe sweat from each tired brow.",
-          "chinese": "在一座翻新的红砖建筑里，一块闪亮的黄铜招牌挂在墙上，而工人们用普通的扫帚清扫灰尘，并擦去疲惫额头上的汗水。"
-        }
-      ]
+          sentenceNumber: 4,
+          english:
+            'By negotiating bulk discounts on computer hardware, the young enterprise keeps operating costs low while steadily expanding its processing capacity.',
+          chinese:
+            '通过就计算机硬件协商大宗折扣，这家年轻企业在保持低运营成本的同时稳步扩大其处理能力。',
+        },
+      ],
     },
     {
-      "paragraphNumber": 3,
-      "sentences": [
+      paragraphNumber: 3,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Colleagues gather for a weekend brunch and enjoy a fruit buffet, discussing how to breed genuine customer trust.",
-          "chinese": "同事们聚集在一起吃周末早午餐，享用水果自助餐，讨论如何培养真正的客户信任。"
+          sentenceNumber: 1,
+          english:
+            'Through sincere client communication and prompt technical support, the young venture steadily earns genuine customer trust and builds an admirable commercial reputation.',
+          chinese:
+            '通过真诚的客户沟通与及时的技术支持，这家初创企业稳步赢得真实客户的信任，并树立了令人钦佩的商业声誉。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "They browse market trends, buckle down to work, and broadcast their creative product launch to a broad public.",
-          "chinese": "他们浏览市场趋势，静下心来投入工作，并向广大公众广播其创意的产品发布会。"
+          sentenceNumber: 2,
+          english:
+            'Experienced financial advisers inspect their balance sheets, praise their transparent accounting methods, and introduce potential investors who seek solid strategic partnerships.',
+          chinese:
+            '经验丰富的财务顾问仔细检查他们的资产负债表，赞扬其透明的会计方法，并引荐寻求稳固战略合作的潜在投资者。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "Later, the team celebrates the wedding of a colleague, congratulating the smiling bride and proud bridegroom with heartfelt cheers.",
-          "chinese": "随后，团队庆祝了一位同事的婚礼，以由衷的欢呼祝贺微笑的新娘和自豪的新郎。"
+          sentenceNumber: 3,
+          english:
+            'Rather than relying on risky loans or deceptive promotion, the founders sign formal contracts that guarantee strict professional standards and mutual benefits.',
+          chinese:
+            '创始人没有依赖高风险贷款或欺骗性宣传，而是签署正式合同以确保严格的专业标准与互惠互利。',
         },
         {
-          "sentenceNumber": 4,
-          "english": "Seeing flower buds open in the courtyard, with courage in every breast, they hold a bucket of water and work strong as a persistent bull, eager to bring life to the land.",
-          "chinese": "看着庭院里的花蕾绽放，每个人胸中都怀揣勇气，他们提着一桶水，像执着的公牛一样强健工作，渴望给这片土地带来生机。"
-        }
-      ]
-    }
+          sentenceNumber: 4,
+          english:
+            'Ultimately, disciplined budget control and continuous innovation sustain the enterprise through intense market competition toward sustainable growth.',
+          chinese:
+            '最终，严明的预算控制与持续的技术创新将支撑企业渡过激烈的市场竞争，迈向可持续的增长。',
+        },
+      ],
+    },
   ],
-  "wordAnnotations": [
+  wordAnnotations: [
     {
-      "headwordId": "brave",
-      "gloss": "a.勇敢的；英勇的"
+      headwordId: 'ambition',
+      surface: 'ambitious',
+      gloss: 'a.有雄心的；野心勃勃的',
     },
     {
-      "headwordId": "break",
-      "gloss": "v.打破；折断"
+      headwordId: 'entrepreneur',
+      surface: 'entrepreneurs',
+      gloss: 'n.创业者；企业家',
     },
+    { headwordId: 'launch', gloss: 'v.发起；推出；启动' },
     {
-      "headwordId": "breakthrough",
-      "gloss": "n.突破；重大进展"
+      headwordId: 'innovate',
+      surface: 'innovative',
+      gloss: 'a.创新的；革新的',
     },
     {
-      "headwordId": "brilliant",
-      "gloss": "a.卓越的；杰出的"
+      headwordId: 'commerce',
+      surface: 'commercial',
+      gloss: 'a.商业的；商务的；营利的',
     },
+    { headwordId: 'venture', gloss: 'n.风险项目；商业企业；冒险' },
+    { headwordId: 'discover', gloss: 'v.发现；发觉；认识到' },
     {
-      "headwordId": "broker",
-      "gloss": "n.经纪人；中间人"
+      headwordId: 'discipline',
+      surface: 'disciplined',
+      gloss: 'a.严明的；守纪律的；训练有素的',
     },
     {
-      "headwordId": "briefcase",
-      "gloss": "n.公文包；公事包"
+      headwordId: 'finance',
+      surface: 'financial',
+      gloss: 'a.财政的；金融的；财务的',
     },
+    { headwordId: 'budget', gloss: 'a.预算的；开支的；廉价的' },
     {
-      "headwordId": "brief",
-      "gloss": "a.简短的；短暂的"
+      headwordId: 'manage',
+      surface: 'management',
+      gloss: 'n.管理；经营；管理层',
     },
+    { headwordId: 'vital', gloss: 'a.至关重要的；生死攸关的' },
     {
-      "headwordId": "brochure",
-      "gloss": "n.小册子；说明书"
+      headwordId: 'corporation',
+      surface: 'corporate',
+      gloss: 'a.企业的；公司的；团体的',
     },
     {
-      "headwordId": "broad",
-      "gloss": "a.宽广的；广泛的"
+      headwordId: 'survive',
+      surface: 'survival',
+      gloss: 'n.生存；幸存；残存物',
     },
     {
-      "headwordId": "bright",
-      "gloss": "a.明亮的；聪慧的"
+      headwordId: 'pursue',
+      surface: 'pursuing',
+      gloss: 'v.追求；谋求；追赶',
     },
+    { headwordId: 'blind', gloss: 'a.盲目的；不理智的' },
     {
-      "headwordId": "breath",
-      "gloss": "n.呼吸；气息"
+      headwordId: 'expand',
+      surface: 'expansion',
+      gloss: 'n.扩张；膨胀；扩大',
     },
+    { headwordId: 'found', surface: 'founders', gloss: 'n.创始人；奠基人' },
     {
-      "headwordId": "breathe",
-      "gloss": "v.呼吸；透气"
+      headwordId: 'care',
+      surface: 'carefully',
+      gloss: 'ad.谨慎地；小心地；仔细地',
     },
+    { headwordId: 'estimate', gloss: 'v.估计；估量；估算' },
+    { headwordId: 'initial', gloss: 'a.最初的；初始的；开头的' },
+    { headwordId: 'capital', gloss: 'a.资本的；资金的；主要的' },
     {
-      "headwordId": "breeze",
-      "gloss": "n.微风；轻风"
+      headwordId: 'expense',
+      surface: 'expenses',
+      gloss: 'n.费用；开销；开支',
     },
+    { headwordId: 'assign', gloss: 'v.分配；指派；分派' },
+    { headwordId: 'available', gloss: 'a.可用的；可获得的；有空的' },
+    { headwordId: 'fund', surface: 'funds', gloss: 'n.资金；基金；专款' },
     {
-      "headwordId": "budget",
-      "gloss": "n.预算；开支计划"
+      headwordId: 'essence',
+      surface: 'essential',
+      gloss: 'a.必不可少的；关键的；本质的',
     },
     {
-      "headwordId": "buck",
-      "gloss": "n.美元；雄鹿"
+      headwordId: 'equip',
+      surface: 'equipment',
+      gloss: 'n.设备；装备；器材',
     },
+    { headwordId: 'establish', gloss: 'v.建立；设立；确立' },
+    { headwordId: 'realistic', gloss: 'a.现实的；切合实际的；逼真的' },
     {
-      "headwordId": "build",
-      "gloss": "v.构建；打造"
+      headwordId: 'operate',
+      surface: 'operational',
+      gloss: 'a.操作的；运营的；运转的',
     },
-    {
-      "headwordId": "bribe",
-      "gloss": "n.贿赂；行贿物"
-    },
-    {
-      "headwordId": "brutal",
-      "gloss": "a.残暴的；冷酷的"
-    },
-    {
-      "headwordId": "bug",
-      "gloss": "n.缺陷；故障"
-    },
-    {
-      "headwordId": "breakdown",
-      "gloss": "n.故障；崩溃"
-    },
-    {
-      "headwordId": "buddy",
-      "gloss": "n.同伴；密友"
-    },
-    {
-      "headwordId": "brush",
-      "gloss": "n.刷子；轻抚"
-    },
-    {
-      "headwordId": "bubble",
-      "gloss": "n.泡沫；气泡"
-    },
-    {
-      "headwordId": "broke",
-      "gloss": "a.破产的；身无分文的"
-    },
-    {
-      "headwordId": "bulk",
-      "gloss": "n.大宗；主体"
-    },
-    {
-      "headwordId": "bulb",
-      "gloss": "n.电灯泡；球茎"
-    },
-    {
-      "headwordId": "brick",
-      "gloss": "n.砖块；砖石"
-    },
-    {
-      "headwordId": "brass",
-      "gloss": "n.黄铜；黄铜器"
-    },
-    {
-      "headwordId": "broom",
-      "gloss": "n.扫帚；长柄刷"
-    },
-    {
-      "headwordId": "brow",
-      "gloss": "n.额头；眉毛"
-    },
-    {
-      "headwordId": "brunch",
-      "gloss": "n.早午餐；早午饭"
-    },
-    {
-      "headwordId": "buffet",
-      "gloss": "n.自助餐；饮食柜台"
-    },
-    {
-      "headwordId": "breed",
-      "gloss": "v.培养；繁育"
-    },
-    {
-      "headwordId": "browse",
-      "gloss": "v.浏览；翻阅"
-    },
-    {
-      "headwordId": "buckle",
-      "gloss": "v.扣紧；全力以赴"
-    },
-    {
-      "headwordId": "broadcast",
-      "gloss": "v.广播；播送"
-    },
-    {
-      "headwordId": "bride",
-      "gloss": "n.新娘；新婚女子"
-    },
-    {
-      "headwordId": "bridegroom",
-      "gloss": "n.新郎；新婚男子"
-    },
-    {
-      "headwordId": "bud",
-      "gloss": "n.花蕾；芽"
-    },
-    {
-      "headwordId": "breast",
-      "gloss": "n.胸部；胸膛"
-    },
-    {
-      "headwordId": "bucket",
-      "gloss": "n.水桶；提桶"
-    },
-    {
-      "headwordId": "bull",
-      "gloss": "n.公牛；看好股市者"
-    },
-    {
-      "headwordId": "bring",
-      "gloss": "v.带来；促使"
-    },
-    {
-      "headwordId": "entrepreneur",
-      "surface": "entrepreneurs",
-      "gloss": "n.企业家；创业者"
-    },
-    {
-      "headwordId": "refuse",
-      "surface": "refuse",
-      "gloss": "v.拒绝；不肯"
-    },
-    {
-      "headwordId": "fear",
-      "surface": "fear",
-      "gloss": "n.害怕；担心"
-    },
-    {
-      "headwordId": "spirit",
-      "surface": "spirit",
-      "gloss": "n.精神；气魄"
-    },
-    {
-      "headwordId": "strive",
-      "surface": "striving",
-      "gloss": "v.奋斗；努力"
-    },
-    {
-      "headwordId": "innovate",
-      "surface": "innovative",
-      "gloss": "a.创新的；革新的"
-    },
-    {
-      "headwordId": "commerce",
-      "surface": "commercial",
-      "gloss": "a.商业的；商品化的"
-    },
-    {
-      "headwordId": "finance",
-      "surface": "financial",
-      "gloss": "n.财政；金融"
-    },
-    {
-      "headwordId": "carry",
-      "surface": "carries",
-      "gloss": "n.搬运；射程"
-    },
-    {
-      "headwordId": "leather",
-      "surface": "leather",
-      "gloss": "n.皮革；皮革制品"
-    },
-    {
-      "headwordId": "hold",
-      "surface": "holding",
-      "gloss": "v.拿住；掌握"
-    },
-    {
-      "headwordId": "outline",
-      "surface": "outlines",
-      "gloss": "n.轮廓；略图"
-    },
-    {
-      "headwordId": "strategy",
-      "surface": "strategy",
-      "gloss": "n.战略；策略"
-    },
-    {
-      "headwordId": "modern",
-      "surface": "modern",
-      "gloss": "a.现代的；新式的"
-    },
-    {
-      "headwordId": "sunlight",
-      "surface": "sunlight",
-      "gloss": "n.日光；阳光"
-    },
-    {
-      "headwordId": "deep",
-      "surface": "deep",
-      "gloss": "a.深度的；深刻的；深邃的"
-    },
-    {
-      "headwordId": "fresh",
-      "surface": "fresh",
-      "gloss": "a.新鲜的；清新的"
-    },
-    {
-      "headwordId": "strict",
-      "surface": "strict",
-      "gloss": "a.严格的；严谨的"
-    },
-    {
-      "headwordId": "spend",
-      "surface": "spend",
-      "gloss": "v.用钱；花费"
-    },
-    {
-      "headwordId": "extra",
-      "surface": "extra",
-      "gloss": "a.额外的；附加的"
-    },
-    {
-      "headwordId": "luxury",
-      "surface": "luxury",
-      "gloss": "n.奢侈；奢华"
-    },
-    {
-      "headwordId": "business",
-      "surface": "business",
-      "gloss": "n.商业；生意"
-    },
-    {
-      "headwordId": "honest",
-      "surface": "Honest",
-      "gloss": "a.诚实的；正直的"
-    },
-    {
-      "headwordId": "found",
-      "surface": "founders",
-      "gloss": "n.创始人；缔造者"
-    },
-    {
-      "headwordId": "corrupt",
-      "surface": "corrupt",
-      "gloss": "a.腐败的；不道德的"
-    },
-    {
-      "headwordId": "tolerate",
-      "surface": "tolerate",
-      "gloss": "v.忍受；容忍"
-    },
-    {
-      "headwordId": "abuse",
-      "surface": "abuse",
-      "gloss": "v.滥用；辱骂"
-    },
-    {
-      "headwordId": "maintain",
-      "surface": "maintaining",
-      "gloss": "v.维持；赡养"
-    },
-    {
-      "headwordId": "integrity",
-      "surface": "integrity",
-      "gloss": "n.正直；诚实"
-    },
-    {
-      "headwordId": "sudden",
-      "surface": "sudden",
-      "gloss": "a.突然的；意外的"
-    },
-    {
-      "headwordId": "software",
-      "surface": "software",
-      "gloss": "n.软件；程序"
-    },
-    {
-      "headwordId": "threat",
-      "surface": "threatens",
-      "gloss": "n.威胁；恐吓"
-    },
-    {
-      "headwordId": "system",
-      "surface": "system",
-      "gloss": "n.系统；体制；机制"
-    },
-    {
-      "headwordId": "rely",
-      "surface": "reliable",
-      "gloss": "a.可靠的；可信赖的"
-    },
-    {
-      "headwordId": "quick",
-      "surface": "quickly",
-      "gloss": "ad.迅速地；敏捷地"
-    },
-    {
-      "headwordId": "fix",
-      "surface": "fixes",
-      "gloss": "v.使固定；决定"
-    },
-    {
-      "headwordId": "code",
-      "surface": "code",
-      "gloss": "n.密码；法规"
-    },
-    {
-      "headwordId": "clean",
-      "surface": "clean",
-      "gloss": "v.清洁；打扫"
-    },
-    {
-      "headwordId": "expertise",
-      "surface": "expertise",
-      "gloss": "n.专长；专门知识"
-    },
-    {
-      "headwordId": "avoid",
-      "surface": "avoid",
-      "gloss": "v.避免；躲开"
-    },
-    {
-      "headwordId": "speculate",
-      "surface": "speculative",
-      "gloss": "a.投机的；推测的"
-    },
-    {
-      "headwordId": "care",
-      "surface": "careless",
-      "gloss": "a.仔细的；小心的"
-    },
-    {
-      "headwordId": "rival",
-      "surface": "rivals",
-      "gloss": "n.竞争对手；敌手"
-    },
-    {
-      "headwordId": "focus",
-      "surface": "focusing",
-      "gloss": "v.聚焦；注视"
-    },
-    {
-      "headwordId": "sale",
-      "surface": "sales",
-      "gloss": "n.削价出售；拍卖"
-    },
-    {
-      "headwordId": "electricity",
-      "surface": "electric",
-      "gloss": "a.电动的；导电的"
-    },
-    {
-      "headwordId": "renovate",
-      "surface": "renovated",
-      "gloss": "a.翻新的；整修的"
-    },
-    {
-      "headwordId": "shine",
-      "surface": "shiny",
-      "gloss": "v.照耀；发光"
-    },
-    {
-      "headwordId": "sign",
-      "surface": "sign",
-      "gloss": "n.符号；招牌"
-    },
-    {
-      "headwordId": "hang",
-      "surface": "hangs",
-      "gloss": "v.悬挂；吊起"
-    },
-    {
-      "headwordId": "sweep",
-      "surface": "sweep",
-      "gloss": "v.扫过；扫除"
+    { headwordId: 'schedule', gloss: 'n.进度表；日程；时间表' },
+    { headwordId: 'evaluate', gloss: 'v.评估；评价；估价' },
+    { headwordId: 'potential', gloss: 'a.潜在的；可能的' },
+    { headwordId: 'risk', surface: 'risks', gloss: 'n.风险；危险；隐患' },
+    { headwordId: 'outline', gloss: 'v.概述；勾勒；概括' },
+    { headwordId: 'practical', gloss: 'a.实际的；实用的；可行的' },
+    { headwordId: 'target', surface: 'targets', gloss: 'n.目标；指标；靶子' },
+    { headwordId: 'product', gloss: 'a.产品的；产物的' },
+    {
+      headwordId: 'develop',
+      surface: 'development',
+      gloss: 'n.发展；开发；研制',
+    },
+    { headwordId: 'meeting', surface: 'meetings', gloss: 'n.会议；集会；会面' },
+    {
+      headwordId: 'attention',
+      surface: 'attentive',
+      gloss: 'a.细心的；注意的；关心的',
     },
+    { headwordId: 'account', surface: 'accountant', gloss: 'n.会计；会计师' },
+    { headwordId: 'review', surface: 'reviews', gloss: 'v.审查；复查；检阅' },
+    { headwordId: 'transaction', gloss: 'a.交易的；业务的' },
     {
-      "headwordId": "dust",
-      "surface": "dust",
-      "gloss": "n.尘土；灰尘"
+      headwordId: 'receive',
+      surface: 'receipt',
+      gloss: 'n.收据；凭据；接收',
     },
+    { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证；担保' },
+    { headwordId: 'overall', gloss: 'a.全面的；总体的；总共的' },
     {
-      "headwordId": "simple",
-      "surface": "simple",
-      "gloss": "a.简单的；朴素的"
+      headwordId: 'expend',
+      surface: 'expenditures',
+      gloss: 'n.支出；开支；花费',
     },
+    { headwordId: 'exceed', gloss: 'v.超过；胜过；超出' },
+    { headwordId: 'revenue', gloss: 'a.收益的；营业收入的' },
     {
-      "headwordId": "wipe",
-      "surface": "wipe",
-      "gloss": "v.消除；拭去"
+      headwordId: 'forecast',
+      surface: 'forecasts',
+      gloss: 'n.预测；预报；前瞻',
     },
+    { headwordId: 'avoid', gloss: 'v.避免；避开；躲开' },
+    { headwordId: 'severe', gloss: 'a.严重的；剧烈的；严厉的' },
+    { headwordId: 'deficit', gloss: 'n.赤字；亏损；逆差' },
+    { headwordId: 'monitor', surface: 'monitors', gloss: 'v.监控；监测；监督' },
+    { headwordId: 'daily', gloss: 'a.每日的；日常的；按日的' },
+    { headwordId: 'bank²', surface: 'bank', gloss: 'a.银行的；库的' },
     {
-      "headwordId": "sweat",
-      "surface": "sweat",
-      "gloss": "n.汗水；凝结在物体表面的"
+      headwordId: 'balance',
+      surface: 'balances',
+      gloss: 'n.结余；余额；差额',
     },
-    {
-      "headwordId": "tire¹",
-      "surface": "tired",
-      "gloss": "a.疲劳的；疲倦的"
-    },
-    {
-      "headwordId": "colleague",
-      "surface": "Colleagues",
-      "gloss": "n.同事；同僚"
+    { headwordId: 'reject', surface: 'rejects', gloss: 'v.拒绝；驳回；排斥' },
+    {
+      headwordId: 'speculate',
+      surface: 'speculative',
+      gloss: 'a.投机的；推测的；思辨的',
     },
+    { headwordId: 'bubble', surface: 'bubbles', gloss: 'n.泡沫；气泡；虚幻繁荣' },
+    { headwordId: 'rival', surface: 'rivals', gloss: 'n.竞争对手；敌手' },
     {
-      "headwordId": "gather",
-      "surface": "gather",
-      "gloss": "v.聚集；集合"
+      headwordId: 'break',
+      surface: 'broke',
+      gloss: 'a.身无分文的；破产的',
     },
+    { headwordId: 'refuse', gloss: 'v.拒绝；谢绝；不愿' },
+    { headwordId: 'waste', gloss: 'v.浪费；消耗；滥用' },
+    { headwordId: 'luxury', gloss: 'a.奢华的；豪华的；奢侈的' },
+    { headwordId: 'furniture', gloss: 'n.家具；器具；装置' },
     {
-      "headwordId": "enjoy",
-      "surface": "enjoy",
-      "gloss": "v.享受；欣赏"
+      headwordId: 'decorate',
+      surface: 'decorations',
+      gloss: 'n.装饰；装潢；装饰品',
     },
+    { headwordId: 'focus', surface: 'focusing', gloss: 'v.聚焦；集中；调焦' },
+    { headwordId: 'energy', gloss: 'n.精力；能量；活力' },
+    { headwordId: 'software', gloss: 'a.软件的；软件编制的' },
+    { headwordId: 'quality', gloss: 'n.质量；品质；特质' },
+    { headwordId: 'technical', gloss: 'a.技术的；专业的；专门的' },
     {
-      "headwordId": "discuss",
-      "surface": "discussing",
-      "gloss": "v.讨论；谈论"
+      headwordId: 'breakthrough',
+      surface: 'breakthroughs',
+      gloss: 'n.突破；重大进展',
     },
+    { headwordId: 'sudden', gloss: 'a.突然的；意外的；急剧的' },
+    { headwordId: 'system', gloss: 'a.系统的；体系的' },
+    { headwordId: 'bug', gloss: 'n.缺陷；漏洞；故障' },
+    { headwordId: 'threat', surface: 'threatens', gloss: 'v.威胁；危及；恐吓' },
     {
-      "headwordId": "genuine",
-      "surface": "genuine",
-      "gloss": "a.真诚的；真实的"
+      headwordId: 'criticize',
+      surface: 'critical',
+      gloss: 'a.危急的；关键的；决定性的',
     },
+    { headwordId: 'serve', surface: 'service', gloss: 'a.服务的；业务的' },
+    { headwordId: 'breakdown', gloss: 'n.崩溃；故障；衰竭' },
     {
-      "headwordId": "customer",
-      "surface": "customer",
-      "gloss": "n.顾客；主顾"
+      headwordId: 'talent',
+      surface: 'talented',
+      gloss: 'a.富有才华的；天才的；能干的',
     },
+    { headwordId: 'engineer', surface: 'engineers', gloss: 'n.工程师；技师' },
+    { headwordId: 'collaborate', gloss: 'v.合作；协作；通力合作' },
+    { headwordId: 'repair', gloss: 'v.修理；修补；补救' },
+    { headwordId: 'fault', gloss: 'n.故障；缺陷；过失' },
+    { headwordId: 'restore', gloss: 'v.恢复；修复；归还' },
+    { headwordId: 'normal', gloss: 'a.正常的；标准的；正规的' },
     {
-      "headwordId": "trust",
-      "surface": "trust",
-      "gloss": "n.信任；信托"
+      headwordId: 'negotiate',
+      surface: 'negotiating',
+      gloss: 'v.谈判；协商；商定',
     },
+    { headwordId: 'bulk', gloss: 'a.大批的；大量的；大宗的' },
     {
-      "headwordId": "trend",
-      "surface": "trends",
-      "gloss": "n.趋势；动向"
+      headwordId: 'discount',
+      surface: 'discounts',
+      gloss: 'n.折扣；贴现；扣减',
     },
     {
-      "headwordId": "create",
-      "surface": "creative",
-      "gloss": "a.创造性的；创作的"
+      headwordId: 'compute',
+      surface: 'computer',
+      gloss: 'a.计算机的；电脑的',
     },
+    { headwordId: 'hardware', gloss: 'n.硬件；五金器具' },
+    { headwordId: 'enterprise', gloss: 'n.企业；事业；进取心' },
     {
-      "headwordId": "product",
-      "surface": "product",
-      "gloss": "n.产品；产物"
+      headwordId: 'steady',
+      surface: 'steadily',
+      gloss: 'ad.稳步地；稳定地；坚定地',
     },
     {
-      "headwordId": "launch",
-      "surface": "launch",
-      "gloss": "n.发布；上市"
+      headwordId: 'process',
+      surface: 'processing',
+      gloss: 'a.处理的；加工的',
     },
+    { headwordId: 'capacity', gloss: 'n.能力；容量；生产力' },
+    { headwordId: 'sincere', gloss: 'a.真诚的；由衷的；诚恳的' },
+    { headwordId: 'client', gloss: 'a.客户的；委托人的' },
     {
-      "headwordId": "public",
-      "surface": "public",
-      "gloss": "a.公众的；公开的"
+      headwordId: 'communicate',
+      surface: 'communication',
+      gloss: 'n.沟通；交流；通信',
     },
+    { headwordId: 'prompt', gloss: 'a.及时的；敏捷的；迅速的' },
+    { headwordId: 'support', gloss: 'n.支持；援助；维持' },
+    { headwordId: 'earn', surface: 'earns', gloss: 'v.赢得；赚得；博得' },
+    { headwordId: 'genuine', gloss: 'a.真正的；真实的；诚恳的' },
+    { headwordId: 'customer', gloss: 'a.顾客的；客户的' },
+    { headwordId: 'trust', gloss: 'n.信任；信赖；托付' },
+    { headwordId: 'build', surface: 'builds', gloss: 'v.建立；构建；树立' },
     {
-      "headwordId": "celebrate",
-      "surface": "celebrates",
-      "gloss": "v.庆祝；歌颂"
+      headwordId: 'admire',
+      surface: 'admirable',
+      gloss: 'a.令人钦佩的；极好的；优秀的',
     },
+    { headwordId: 'reputation', gloss: 'n.名誉；名声；声望' },
     {
-      "headwordId": "wed",
-      "surface": "wedding",
-      "gloss": "n.婚礼；结婚"
+      headwordId: 'experience',
+      surface: 'Experienced',
+      gloss: 'a.经验丰富的；熟练的；老练的',
     },
+    { headwordId: 'advise', surface: 'advisers', gloss: 'n.顾问；劝告者；导师' },
+    { headwordId: 'inspect', gloss: 'v.检查；视察；审阅' },
+    { headwordId: 'sheet', surface: 'sheets', gloss: 'n.表格；单子；薄板' },
+    { headwordId: 'praise', gloss: 'v.称赞；赞美；表扬' },
     {
-      "headwordId": "congratulate",
-      "surface": "congratulating",
-      "gloss": "v.祝贺；恭喜"
+      headwordId: 'transparent',
+      gloss: 'a.透明的；公开坦诚的；明晰的',
     },
+    { headwordId: 'method', surface: 'methods', gloss: 'n.方法；办法；条理' },
+    { headwordId: 'introduce', gloss: 'v.引见；介绍；引进' },
     {
-      "headwordId": "smile",
-      "surface": "smiling",
-      "gloss": "v.微笑；赞许"
+      headwordId: 'invest',
+      surface: 'investors',
+      gloss: 'n.投资者；出资人',
     },
+    { headwordId: 'seek', gloss: 'v.寻求；谋求；寻找' },
+    { headwordId: 'solid', gloss: 'a.稳固的；坚实的；牢固的' },
     {
-      "headwordId": "pride",
-      "surface": "proud",
-      "gloss": "a.骄傲的；自豪的"
+      headwordId: 'strategy',
+      surface: 'strategic',
+      gloss: 'a.战略的；策略的；关键的',
     },
     {
-      "headwordId": "heartfelt",
-      "surface": "heartfelt",
-      "gloss": "a.由衷的；真诚的"
+      headwordId: 'partner',
+      surface: 'partnerships',
+      gloss: 'n.合作关系；合伙；合伙企业',
     },
+    { headwordId: 'rely', surface: 'relying', gloss: 'v.依赖；依靠；信赖' },
+    { headwordId: 'loan', surface: 'loans', gloss: 'n.贷款；借款；借用' },
     {
-      "headwordId": "cheer",
-      "surface": "cheers",
-      "gloss": "n.欢呼；喝彩"
+      headwordId: 'deceive',
+      surface: 'deceptive',
+      gloss: 'a.欺骗性的；误导的；虚伪的',
     },
+    { headwordId: 'promote', surface: 'promotion', gloss: 'n.推广；宣传；晋升' },
+    { headwordId: 'sign', gloss: 'v.签署；签订；签名' },
+    { headwordId: 'formal', gloss: 'a.正式的；正规的；形式上的' },
+    { headwordId: 'contract¹', surface: 'contracts', gloss: 'n.合同；契约；协议' },
+    { headwordId: 'guarantee', gloss: 'v.保证；担保；确保' },
+    { headwordId: 'strict', gloss: 'a.严格的；严谨的；精确的' },
     {
-      "headwordId": "see",
-      "surface": "Seeing",
-      "gloss": "v.看见；查看"
+      headwordId: 'profession',
+      surface: 'professional',
+      gloss: 'a.专业的；职业的；专职的',
     },
+    { headwordId: 'standard', surface: 'standards', gloss: 'n.标准；规范；准则' },
+    { headwordId: 'mutual', gloss: 'a.相互的；彼此的；共同的' },
+    { headwordId: 'benefit', surface: 'benefits', gloss: 'n.利益；好处；福利' },
     {
-      "headwordId": "courtyard",
-      "surface": "courtyard",
-      "gloss": "n.庭院；院子"
+      headwordId: 'ultimate',
+      surface: 'Ultimately',
+      gloss: 'ad.最终地；根本地；最后地',
     },
+    { headwordId: 'control', gloss: 'n.控制；支配；克制' },
     {
-      "headwordId": "courage",
-      "surface": "courage",
-      "gloss": "n.勇气；胆量"
+      headwordId: 'continue',
+      surface: 'continuous',
+      gloss: 'a.连续的；持续的；不间断的',
     },
+    { headwordId: 'sustain', gloss: 'v.支撑；维持；使持续' },
+    { headwordId: 'intense', gloss: 'a.激烈的；紧张的；强烈的' },
     {
-      "headwordId": "strong",
-      "surface": "strong",
-      "gloss": "a.强壮的；强烈的"
+      headwordId: 'compete',
+      surface: 'competition',
+      gloss: 'n.竞争；比赛；角逐',
     },
-    {
-      "headwordId": "persist",
-      "surface": "persistent",
-      "gloss": "a.执着的；坚持的"
-    },
-    {
-      "headwordId": "eager",
-      "surface": "eager",
-      "gloss": "a.渴望的；热切的"
-    }
+    { headwordId: 'grow', surface: 'growth', gloss: 'n.增长；发展；生长' },
   ],
-  "phraseAnnotations": [],
-  "expansionEntries": [
+  phraseAnnotations: [],
+  expansionEntries: [
     {
-      "id": "e1",
-      "expression": "break down/collapse",
-      "explanation": "机器发生故障，感情崩溃；breakdown 为其名词形式"
+      id: 'exp-01',
+      expression: 'venture/enterprise/startup',
+      explanation:
+        '重点词义拓展：venture 作名词表示“风险项目，商业企业”，作动词表示“冒险去，敢于涉足”，如 joint venture（合资企业）、venture capital（风险投资）。近义词 enterprise 侧重宏观企业或进取精神，startup 专指初创公司。',
     },
     {
-      "id": "e2",
-      "expression": "technological breakthrough/advance",
-      "explanation": "技术突破；breakthrough 常考重大科学进展"
+      id: 'exp-02',
+      expression: 'budget/allocation/appropriation',
+      explanation:
+        '熟词僻义与搭配：budget 除了名词“预算”，在口语及商业中常作形容词表示“划算的，低价的”，如 budget airline（廉价航空公司）。作动词意为“编制预算；谨慎安排”。同领域词：allocation（资金分配）、appropriation（专款拨付）。',
     },
     {
-      "id": "e3",
-      "expression": "take a deep breath/inhale",
-      "explanation": "深呼吸；breath 为名词，breathe 为动词"
+      id: 'exp-03',
+      expression: 'capital/fund/asset',
+      explanation:
+        '熟词僻义：capital 作名词常见义为“首都；大写字母”，在财经语境中核心义为“资本，资金”，如 venture capital（风险资本）、capital expenditure（资本支出）。衍生形容词意为“大写的；死刑的（capital punishment）”。近义词：fund（专款/基金）、asset（资产）。',
     },
     {
-      "id": "e4",
-      "expression": "on a tight budget/economical",
-      "explanation": "预算紧张；budget deficit 指财政赤字"
+      id: 'exp-04',
+      expression: 'deficit/surplus/shortfall',
+      explanation:
+        '核心财经对比：deficit 意为“赤字，亏损，逆差”，反义词为 surplus（盈余，顺差）。常用搭配：trade deficit（贸易逆差）、budget deficit（预算赤字）。近义替换：shortfall（资金缺口/不足）。',
     },
     {
-      "id": "e5",
-      "expression": "quick buck/fast cash",
-      "explanation": "快钱，轻松赚取的钱；buck 在口语中常指一美元"
+      id: 'exp-05',
+      expression: 'speculate/gamble/contemplate',
+      explanation:
+        '常考词义拓展：speculative 意为“投机的；推测的”。动词 speculate 常考两种用法：speculate on/about sth.（推测/揣摩某事）；speculate in real estate/stocks（在房地产/股市进行投机）。近义词：gamble（押注/冒险）、contemplate（深思熟虑）。',
     },
     {
-      "id": "e6",
-      "expression": "go broke/become bankrupt",
-      "explanation": "破产，身无分文；broke 作表语形容词"
+      id: 'exp-06',
+      expression: 'bubble/boom/bust',
+      explanation:
+        '经济隐喻与词族：bubble 指市场出现过度投机与非理性繁荣的“泡沫经济”，如 asset bubble（资产泡沫）。经济周期三部曲：boom（繁荣暴涨）、bubble（泡沫积累）、bust（泡沫破裂/崩盘）。',
     },
     {
-      "id": "e7",
-      "expression": "economic bubble/speculation",
-      "explanation": "经济泡沫；bubble burst 泡沫破灭"
+      id: 'exp-07',
+      expression: 'broke/bankrupt/insolvent',
+      explanation:
+        '熟词僻义与口语表达：broke 作形容词常考非正式口语表达“身无分文的，破产的”，常见搭配：go broke（破产/倒闭）、flat broke（身无分文）。对比正式商业法律术语：bankrupt（破产的）、insolvent（无力偿还债务的）。',
     },
     {
-      "id": "e8",
-      "expression": "in bulk/in large quantities",
-      "explanation": "大批量，散装；bulk purchase 大宗采购"
+      id: 'exp-08',
+      expression: 'breakthrough/advance/milestone',
+      explanation:
+        '核心词汇拓展：breakthrough 指技术、科研或谈判中的“重大突破，关键进展”。近义词 advance 强调“稳步推进/前进”，milestone 强调发展阶段中的“里程碑/重大转折点”。',
     },
     {
-      "id": "e9",
-      "expression": "buckle down to/concentrate on",
-      "explanation": "全力以赴投入；buckle up 系紧安全带"
+      id: 'exp-09',
+      expression: 'breakdown/malfunction/glitch',
+      explanation:
+        '多义词拓展：breakdown 作名词可表示机械或系统的“故障，瘫痪”（如 system breakdown），亦可表示精神/身体的“崩溃”（nervous breakdown），在财务中还可指开支的“细目分类，明细”（cost breakdown）。近义词：malfunction（机械失灵）、glitch（系统小故障）。',
     },
     {
-      "id": "e10",
-      "expression": "live broadcast/air",
-      "explanation": "现场直播；broadcast 过去式与过去分词通常仍为 broadcast"
+      id: 'exp-10',
+      expression: 'bulk/wholesale/retail',
+      explanation:
+        '商业采购词群：bulk 作名词表示“大部分，主体；庞大体积”，作形容词指“大批的，大宗的”。高频搭配：in bulk（散装，大批量购买）、bulk discount（批发/大宗折扣）。对比概念：wholesale（批发）、retail（零售）。',
     },
     {
-      "id": "e11",
-      "expression": "nipped in the bud/halt early",
-      "explanation": "防患于未然，消灭在萌芽中；bud 指花芽或萌芽状态"
+      id: 'exp-11',
+      expression: 'hardware/software/firmware',
+      explanation:
+        '计算机词族：hardware 兼指“计算机硬件”与“五金器具/重型机械”；software 指“软件”；firmware 指固化在芯片中的“固件”。硬件采购与折旧是初创企业关键资本开支之一。',
     },
     {
-      "id": "e12",
-      "expression": "bull market/rising market",
-      "explanation": "牛市；与 bear market 熊市相对"
+      id: 'exp-12',
+      expression: 'transparent/opaque/accountable',
+      explanation:
+        '转义拓展：transparent 原指物理上的“透明的”，引申指信息、政策或财务流程“公开透明的，坦诚易懂的”，如 transparent accounting（透明记账）。反义词：opaque（不透明的/晦涩的）。关联品质词：accountable（负有解释责任的）。',
     },
     {
-      "id": "e13",
-      "expression": "browse online/surf",
-      "explanation": "网上浏览；browser 为网络浏览器"
+      id: 'exp-13',
+      expression: 'balance sheet/income statement/cash flow',
+      explanation:
+        '企业三大财务报表：balance sheet（资产负债表，反映企业特定时点的财务状况）；income statement（损益表/利润表，反映营收与净利润）；cash flow statement（现金流量表，反映现金流入与流出动态）。',
     },
     {
-      "id": "e14",
-      "expression": "breed confidence/foster",
-      "explanation": "树立信心，培育；breed 熟词僻义常比喻“滋生、孕育”"
-    }
-  ]
+      id: 'exp-14',
+      expression: 'contract/agreement/treaty',
+      explanation:
+        '法律契约词族：contract 为具有法律约束力的正式商业“合同，契约”。多音多义提醒：读 [kənˈtrækt] 时作动词，意为“收缩，缩小”或“感染疾病”。对比词：agreement（较宽泛的协议）、treaty（国家间条约）。',
+    },
+    {
+      id: 'exp-15',
+      expression: 'sustain/maintain/nourish',
+      explanation:
+        '核心动词辨析：sustain 强调提供持续的资源或力量使事物“支撑，维持下去”，如 sustain economic growth（保持经济增长）；衍生词 sustainable（可持续的）。近义词 maintain 侧重“保持原有状态”，nourish 强调“滋养，培育”。',
+    },
+  ],
 };
