@@ -1,9 +1,19 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { App } from '../App';
+import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
 
 describe('双栏短文精读界面 (Seam 3: ui)', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    vi.unstubAllGlobals();
+  });
+
   it('默认展示首篇四级核心篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
     render(<App />);
 
@@ -106,6 +116,282 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(
       screen.queryByRole('button', { name: /朗读|发音|播放/ })
     ).not.toBeInTheDocument();
+  });
+
+  it('点击行间标注后移除释义并保留虚线框状态', async () => {
+    const user = userEvent.setup();
+    const view = render(<App />);
+    const transformedButton = screen.getByRole('button', { name: 'transformed' });
+
+    expect(transformedButton).toHaveAttribute('aria-pressed', 'false');
+    expect(screen.getByText('v.改变；使改观；转化')).toBeInTheDocument();
+
+    await user.click(transformedButton);
+
+    expect(screen.getByRole('button', { name: 'transformed' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.queryByText('v.改变；使改观；转化')).not.toBeInTheDocument();
+
+    view.unmount();
+    render(<App />);
+
+    expect(screen.getByRole('button', { name: 'transformed' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.queryByText('v.改变；使改观；转化')).not.toBeInTheDocument();
+  });
+
+  it('隐藏拓展条目后连续重排编号并在重新进入短文后保持隐藏', async () => {
+    const user = userEvent.setup();
+    const view = render(<App />);
+    const aside = screen.getByRole('complementary', {
+      name: '熟词僻义及拓展汇总',
+    });
+
+    await user.click(
+      within(aside).getByRole('button', { name: /consume\/exhaust\/deplete/ })
+    );
+
+    expect(
+      within(aside).queryByText('consume/exhaust/deplete')
+    ).not.toBeInTheDocument();
+    const nextEntry = within(aside).getByRole('button', {
+      name: /in the long run\/ultimately/,
+    });
+    expect(
+      within(nextEntry).getByText('⑬', { selector: '.passage-expansion__num' })
+    ).toBeInTheDocument();
+
+    view.unmount();
+    render(<App />);
+
+    expect(screen.queryByText('consume/exhaust/deplete')).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('complementary', { name: '熟词僻义及拓展汇总' })
+    ).toBeInTheDocument();
+  });
+
+  it('已掌握词库支持关键词检索和批量恢复标注', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: 'transformed' }));
+    await user.click(screen.getByRole('button', { name: 'rapid' }));
+    await user.click(screen.getByRole('button', { name: '已掌握词库' }));
+
+    const search = screen.getByRole('searchbox', { name: '搜索已掌握词条' });
+    await user.type(search, 'transform');
+    expect(screen.getByRole('checkbox', { name: '选择 transform' })).toBeInTheDocument();
+    expect(screen.queryByRole('checkbox', { name: '选择 rapid' })).not.toBeInTheDocument();
+
+    await user.clear(search);
+    await user.click(screen.getByRole('checkbox', { name: '选择全部筛选结果' }));
+    await user.click(screen.getByRole('button', { name: '恢复所选（2）' }));
+
+    expect(screen.getByRole('button', { name: 'transformed' })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
+    expect(screen.getByRole('button', { name: 'rapid' })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
+    expect(screen.getByText('v.改变；使改观；转化')).toBeInTheDocument();
+    expect(screen.getByText('a.迅速的；快捷的')).toBeInTheDocument();
+
+    await user.keyboard('{Escape}');
+    expect(screen.queryByRole('dialog', { name: '已掌握词库' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '已掌握词库' })).toHaveFocus();
+  });
+
+  it('同一大纲词目的不同短文词形同步掌握和恢复', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: 'individual' }));
+    await user.click(
+      screen.getByRole('button', { name: /NO\. 02.*六级进阶篇/ })
+    );
+
+    const secondPassageForm = screen.getByRole('button', { name: 'individuals' });
+    expect(secondPassageForm).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.queryByText('n.个人；个体')).not.toBeInTheDocument();
+
+    await user.click(secondPassageForm);
+    expect(screen.getByText('n.个人；个体')).toBeInTheDocument();
+  });
+
+  it('同形异义大纲词目保持独立掌握状态', async () => {
+    const basePassage = COMPILED_DEMO_PASSAGES[0];
+    const sentence = {
+      ...basePassage.paragraphs[0].sentences[0],
+      tokens: [
+        {
+          type: 'annotation' as const,
+          category: 'regular' as const,
+          itemKey: 'word:leadⅠ',
+          surface: 'lead',
+          gloss: 'n.铅；铅块',
+          headwordId: 'leadⅠ',
+        },
+        { type: 'text' as const, text: ' / ' },
+        {
+          type: 'annotation' as const,
+          category: 'regular' as const,
+          itemKey: 'word:leadⅡ',
+          surface: 'lead',
+          gloss: 'v.带领；引导',
+          headwordId: 'leadⅡ',
+        },
+      ],
+    };
+    const passage = {
+      ...basePassage,
+      id: 'homograph-check',
+      paragraphs: [
+        {
+          ...basePassage.paragraphs[0],
+          sentences: [sentence],
+        },
+      ],
+      expansionEntries: [],
+    };
+    const user = userEvent.setup();
+    render(<App passages={[passage]} />);
+
+    const [leadOne] = screen.getAllByRole('button', { name: 'lead' });
+    await user.click(leadOne);
+
+    expect(screen.getAllByRole('button', { name: 'lead' })[0]).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.getAllByRole('button', { name: 'lead' })[1]).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
+  });
+
+  it('全部超纲词掌握后隐藏图例，恢复一个后重新显示', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(
+      screen.getByRole('button', { name: /NO\. 02.*六级进阶篇/ })
+    );
+
+    const legend = screen.getByRole('region', { name: '标注图例' });
+    expect(within(legend).getByText('超纲词')).toBeInTheDocument();
+    for (const surface of [
+      'algorithmic',
+      'exacerbate',
+      'neuroplasticity',
+      'nuances',
+    ]) {
+      await user.click(screen.getByRole('button', { name: surface }));
+    }
+    expect(within(legend).queryByText('超纲词')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'algorithmic' }));
+    expect(within(legend).getByText('超纲词')).toBeInTheDocument();
+  });
+
+  it('导入并导出本地学习状态，全部隐藏的拓展条目仍可恢复', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: '已掌握词库' }));
+
+    const backup = {
+      version: 1,
+      masteredItemKeys: ['word:transform'],
+      hiddenExpansionIds: {
+        'demo-cet4-001': Array.from({ length: 14 }, (_, index) =>
+          `cet4-exp-${index + 1}`
+        ),
+      },
+      readingRecords: {
+        'demo-cet4-001': {
+          lastReadAt: '2026-11-03T00:00:00.000Z',
+          visits: 7,
+        },
+      },
+    };
+    const backupFile = new File([JSON.stringify(backup)], 'backup.json', {
+      type: 'application/json',
+    });
+    await user.upload(
+      screen.getByLabelText('导入学习记录 JSON'),
+      backupFile
+    );
+
+    expect(await screen.findByText('学习记录已导入。')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'transformed' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(
+      screen.queryByRole('complementary', { name: '熟词僻义及拓展汇总' })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: '已隐藏拓展条目（14）' })
+    ).toBeInTheDocument();
+    expect(screen.getByText(/7 次/)).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: '已隐藏拓展条目（14）' }));
+    await user.click(
+      screen.getByRole('button', {
+        name: '恢复拓展条目 consume/exhaust/deplete',
+      })
+    );
+    expect(
+      screen.getByRole('complementary', { name: '熟词僻义及拓展汇总' })
+    ).toBeInTheDocument();
+
+    let exportedBlob: Blob | undefined;
+    const urlApi = {
+      createObjectURL: vi.fn((blob: Blob) => {
+        exportedBlob = blob;
+        return 'blob:learning-state';
+      }),
+      revokeObjectURL: vi.fn(),
+    };
+    const downloadClick = vi
+      .spyOn(HTMLAnchorElement.prototype, 'click')
+      .mockImplementation(() => undefined);
+    vi.stubGlobal('URL', urlApi);
+    await user.click(screen.getByRole('button', { name: '导出 JSON' }));
+
+    expect(screen.getByRole('status')).toHaveTextContent('JSON 备份已导出。');
+    expect(urlApi.createObjectURL).toHaveBeenCalledTimes(1);
+    expect(exportedBlob?.type).toBe('application/json');
+    expect(downloadClick).toHaveBeenCalledTimes(1);
+    const exportedJson = await new Promise<string>((resolve, reject) => {
+      if (!exportedBlob) {
+        reject(new Error('Export did not create a backup file.'));
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result ?? ''));
+      reader.onerror = () => reject(reader.error);
+      reader.readAsText(exportedBlob);
+    });
+    expect(JSON.parse(exportedJson)).toMatchObject({
+      masteredItemKeys: ['word:transform'],
+      hiddenExpansionIds: {
+        'demo-cet4-001': Array.from(
+          { length: 13 },
+          (_, index) => `cet4-exp-${index + 2}`
+        ),
+      },
+      readingRecords: {
+        'demo-cet4-001': {
+          lastReadAt: '2026-11-03T00:00:00.000Z',
+          visits: 7,
+        },
+      },
+    });
   });
 });
 
