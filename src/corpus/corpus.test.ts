@@ -425,6 +425,43 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('acre');
     expect(compiled.coveredHeadwordIds).not.toContain('abolish');
     expect(compiled.coveredHeadwordIds).not.toContain('accuse');
+
+    // 验证场景逻辑、地道选词及语法搭配改进
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'acquaint themselves with safety procedures'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).not.toContain(
+      'library rules'
+    );
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'visit an international university'
+    );
+    expect(passage!.paragraphs[0].sentences[0].english).not.toContain(
+      'visit an international academy'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'guide young researchers through difficult challenges'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).not.toContain(
+      'accompany learners'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'accustom themselves to community life'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).not.toContain(
+      'accustom them to'
+    );
+
+    // 验证解除过度修饰机械堆砌
+    expect(passage!.paragraphs[0].sentences[0].english).not.toContain(
+      'acute curiosity'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).not.toContain(
+      'abundant knowledge'
+    );
+    expect(passage!.paragraphs[0].sentences[3].english).not.toContain(
+      'strange accent'
+    );
   });
 
   it('CET-4 核心篇 NO. 02 重写后满足主题自然度、词量及行间标注校验规范', () => {
@@ -528,6 +565,29 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('angel');
     expect(compiled.coveredHeadwordIds).not.toContain('ant');
     expect(compiled.coveredHeadwordIds).not.toContain('ambassador');
+
+    // 验证常识因果逻辑修正与熟词僻义/同义替换拓展质量
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'thin air sharply reduced available oxygen'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'drained their strength'
+    );
+    expect(compiled.coveredHeadwordIds).toContain('thin');
+    expect(compiled.coveredHeadwordIds).toContain('drain');
+    expect(compiled.coveredHeadwordIds).toContain('strong');
+    expect(passage!.expansionEntries.map((e) => e.expression)).not.toContain(
+      'soil layer'
+    );
+    expect(passage!.expansionEntries.map((e) => e.expression)).toContain(
+      'deep layer/stratum/tier'
+    );
+    expect(passage!.expansionEntries.map((e) => e.expression)).toContain(
+      'remote/distant/isolated'
+    );
+    expect(passage!.expansionEntries.map((e) => e.expression)).toContain(
+      'physical evidence vs mental'
+    );
   });
 
   it('CET-4 核心篇 NO. 04 重写后满足主题自然度、词量及行间标注校验规范', () => {
@@ -565,9 +625,21 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       expect(entry?.level).not.toBe('cet6');
     }
 
-    // 验证不再强行包含旧批次拼凑词
+    // 验证不再强行包含旧批次拼凑词及修饰不当词
     expect(compiled.coveredHeadwordIds).not.toContain('arithmetic');
     expect(compiled.coveredHeadwordIds).not.toContain('apparatus');
+    expect(compiled.coveredHeadwordIds).not.toContain('antique');
+
+    // 验证地道修饰与核心词覆盖
+    expect(compiled.coveredHeadwordIds).toContain('classic');
+    const p1s2Historic = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'history'
+    );
+    expect(p1s2Historic).toBeDefined();
+    if (p1s2Historic && p1s2Historic.type === 'annotation') {
+      expect(p1s2Historic.surface).toBe('historic');
+      expect(p1s2Historic.gloss).toBe('a.历史性的；有历史意义的');
+    }
   });
 
   it('CET-4 核心篇 NO. 05 重写后满足主题自然度、词量及行间标注校验规范', () => {

@@ -14,23 +14,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "When young scholars travel abroad to visit an international academy, they step onto the foreign campus with acute curiosity and high expectations.",
-            "chinese": "当青年学者远赴海外访问一所国际学院时，他们带着敏锐的好奇心与高昂的期盼踏上外国校园。"
+            "english": "When young scholars travel abroad to visit an international university, they step onto campus with curiosity and high expectations.",
+            "chinese": "当青年学者远赴海外访问一所国际大学时，他们带着好奇心与高昂的期盼踏上校园。"
           },
           {
             "sentenceNumber": 2,
-            "english": "They must not abandon their native roots, yet they need to adapt to new environments and absorb abundant knowledge.",
-            "chinese": "他们绝不能抛弃自己的本土根基，然而他们需要适应全新环境并吸收丰富的知识。"
+            "english": "They must not abandon their roots, yet they need to adapt to a new environment and absorb knowledge.",
+            "chinese": "他们绝不能抛弃自己的根基，然而他们需要适应新环境并汲取知识。"
           },
           {
             "sentenceNumber": 3,
-            "english": "According to experienced campus advisers, active scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
-            "chinese": "根据资深校园导师的说法，勇于迎接崭新挑战的积极学者会加速个人与学识的成长。"
+            "english": "According to campus advisers, scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
+            "chinese": "根据校园导师的说法，勇于迎接新挑战的学者会加速其个人与学术心智的成长。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Although a strange accent may cause occasional confusion in daily communication, sincere dialogue helps them overcome potential language barriers.",
-            "chinese": "尽管陌生的口音可能在日常交流中引起偶尔的困惑，但坦诚的对话有助于他们克服潜在的语言障碍。"
+            "english": "Although accents may cause occasional confusion in daily communication, sincere dialogue helps them overcome language barriers.",
+            "chinese": "尽管口音可能在日常交流中引起偶尔的困惑，但真诚的对话有助于他们克服语言障碍。"
           }
         ]
       },
@@ -39,23 +39,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "In research laboratories, young scholars soon acquaint themselves with library rules, gain digital access to primary materials, and acquire accurate experimental data.",
-            "chinese": "在科研实验室中，年轻学者很快熟悉了图书馆规则，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。"
+            "english": "In research laboratories, young scholars soon acquaint themselves with safety procedures, gain digital access to primary materials, and acquire accurate experimental data.",
+            "chinese": "在科研实验室中，年轻学者很快熟悉了安全规程，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。"
           },
           {
             "sentenceNumber": 2,
-            "english": "They participate in regular seminars, present distinct academic arguments, and remain accountable for their actual findings.",
-            "chinese": "他们参加定期的研讨会，陈述鲜明的学术论点，并对其实际研究发现负责。"
+            "english": "They participate in regular seminars, present distinct arguments, and remain accountable for their actual findings.",
+            "chinese": "他们参加定期的研讨会，提出鲜明的论点，并对其实际研究发现负责。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with strict international standards.",
-            "chinese": "每位研究人员都必须维护学术诚信，并按照严格的国际规范开展科学调查。"
+            "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with international standards.",
+            "chinese": "每位研究人员都必须维护学术诚信，并按照国际规范开展科学调查。"
           },
           {
             "sentenceNumber": 4,
-            "english": "When professors acknowledge student contributions, they accompany learners through difficult challenges and achieve meaningful breakthroughs.",
-            "chinese": "当教授认可学生的贡献时，他们会陪伴学习者度过艰难挑战，并取得有意义的重大突破。"
+            "english": "When professors acknowledge student contributions, they guide young researchers through difficult challenges and achieve meaningful breakthroughs.",
+            "chinese": "当教授认可学生的贡献并指导年轻学者应对艰难挑战时，他们能够取得有意义的重大突破。"
           }
         ]
       },
@@ -64,13 +64,13 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars and accustom them to global community life.",
-            "chinese": "在教学建筑之外，现代化的住宅楼容纳了多元的学者，并使他们习惯于全球化的社区生活。"
+            "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars as they accustom themselves to community life.",
+            "chinese": "在教学建筑之外，现代住宅楼为多元学者提供了住所，他们在此逐渐适应社区生活。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Through shared dining and cultural events, visiting researchers exchange distinct perspectives and accomplish difficult collaborative projects through patient cooperation.",
-            "chinese": "通过共同就餐与文化活动，访问研究人员交流不同视角，并通过耐心的合作完成艰巨的协作项目。"
+            "english": "Through shared dining and cultural events, researchers exchange distinct perspectives and accomplish collaborative projects through cooperation.",
+            "chinese": "通过共同进餐与文化活动，研究人员交流不同视角，并通过协作圆满完成合作项目。"
           },
           {
             "sentenceNumber": 3,
@@ -79,8 +79,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 4,
-            "english": "Ultimately, these exchange programs strengthen friendly ties between universities, promote mutual trust, and inspire future academic innovation.",
-            "chinese": "最终，这些交流项目加强了各大学之间的友好纽带，促进了相互信任，并激励着未来的学术创新。"
+            "english": "Ultimately, these exchange programs strengthen ties between universities, promote mutual trust, and inspire academic innovation.",
+            "chinese": "最终，这些交流项目加强了大学之间的纽带，促进了相互信任，并激励学术创新。"
           }
         ]
       }
@@ -95,28 +95,20 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "ad.在国外地；到海外地"
       },
       {
-        "headwordId": "international",
-        "gloss": "a.国际的；世界性的"
+        "headwordId": "visit",
+        "gloss": "v.访问；拜访"
       },
       {
-        "headwordId": "academy",
-        "gloss": "n.学院；研究院"
+        "headwordId": "international",
+        "gloss": "a.国际的；世界性的"
       },
       {
         "headwordId": "step",
         "gloss": "v.跨步；迈步"
       },
       {
-        "headwordId": "foreign",
-        "gloss": "a.外国的；对外的"
-      },
-      {
         "headwordId": "campus",
         "gloss": "n.校园；校区"
-      },
-      {
-        "headwordId": "acute",
-        "gloss": "a.敏锐的；强烈的"
       },
       {
         "headwordId": "curious",
@@ -133,10 +125,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.放弃；舍弃"
       },
       {
-        "headwordId": "native",
-        "gloss": "a.本土的；出生地的"
-      },
-      {
         "headwordId": "root",
         "surface": "roots",
         "gloss": "n.根基；根源"
@@ -151,7 +139,6 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "environment",
-        "surface": "environments",
         "gloss": "n.环境；生态"
       },
       {
@@ -159,27 +146,14 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.吸收；理解"
       },
       {
-        "headwordId": "abundant",
-        "gloss": "a.丰富的；充裕的"
-      },
-      {
         "headwordId": "know",
         "surface": "knowledge",
         "gloss": "n.知识；学问"
       },
       {
-        "headwordId": "experience",
-        "surface": "experienced",
-        "gloss": "a.经验丰富的；老练的"
-      },
-      {
         "headwordId": "advise",
         "surface": "advisers",
         "gloss": "n.顾问；导师"
-      },
-      {
-        "headwordId": "active",
-        "gloss": "a.积极的；活跃的"
       },
       {
         "headwordId": "scholar",
@@ -213,11 +187,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.成长；发展"
       },
       {
-        "headwordId": "strange",
-        "gloss": "a.陌生的；奇怪的"
-      },
-      {
         "headwordId": "accent",
+        "surface": "accents",
         "gloss": "n.口音；腔调"
       },
       {
@@ -262,10 +233,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.克服；战胜"
       },
       {
-        "headwordId": "potential",
-        "gloss": "a.潜在的；可能的"
-      },
-      {
         "headwordId": "barrier",
         "surface": "barriers",
         "gloss": "n.壁垒；障碍"
@@ -282,6 +249,16 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "acquaint",
         "gloss": "v.使熟悉；使了解"
+      },
+      {
+        "headwordId": "safe",
+        "surface": "safety",
+        "gloss": "a.安全用的；防范的"
+      },
+      {
+        "headwordId": "procedure",
+        "surface": "procedures",
+        "gloss": "n.规程；程序；步骤"
       },
       {
         "headwordId": "gain",
@@ -370,6 +347,11 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.维持；保持"
       },
       {
+        "headwordId": "academy",
+        "surface": "academic",
+        "gloss": "a.学术的；学业的"
+      },
+      {
         "headwordId": "integrity",
         "gloss": "n.正直；诚实"
       },
@@ -388,10 +370,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.调查；研究"
       },
       {
-        "headwordId": "strict",
-        "gloss": "a.严格的；严谨的"
-      },
-      {
         "headwordId": "standard",
         "surface": "standards",
         "gloss": "n.标准；规范"
@@ -406,13 +384,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.贡献；捐赠"
       },
       {
-        "headwordId": "accompany",
-        "gloss": "v.陪伴；随行"
-      },
-      {
-        "headwordId": "learn",
-        "surface": "learners",
-        "gloss": "n.学习者；初学者"
+        "headwordId": "guide",
+        "gloss": "v.指引；指导；引导"
       },
       {
         "headwordId": "difficult",
@@ -464,11 +437,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.使习惯；使适应"
       },
       {
-        "headwordId": "globe",
-        "surface": "global",
-        "gloss": "a.全球的；全世界的"
-      },
-      {
         "headwordId": "community",
         "gloss": "n.社区；团体"
       },
@@ -493,10 +461,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.活动；事件"
       },
       {
-        "headwordId": "visit",
-        "gloss": "v.访问；拜访"
-      },
-      {
         "headwordId": "exchange",
         "gloss": "v.交流；交换"
       },
@@ -518,10 +482,6 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "project¹",
         "surface": "projects",
         "gloss": "n.项目；工程"
-      },
-      {
-        "headwordId": "patient¹",
-        "gloss": "a.耐心的；容忍的"
       },
       {
         "headwordId": "cooperate",
@@ -608,11 +568,6 @@ export const PASSAGES_01_05: Passage[] = [
         "phrase": "according to",
         "surface": "According to",
         "gloss": "根据；按照"
-      },
-      {
-        "phrase": "library rules",
-        "surface": "library rules",
-        "gloss": "图书馆规则"
       },
       {
         "phrase": "in accordance with",
@@ -2263,8 +2218,9 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.恢复；修复；归还"
       },
       {
-        "headwordId": "antique",
-        "gloss": "a.古董的；古老的"
+        "headwordId": "history",
+        "surface": "historic",
+        "gloss": "a.历史性的；有历史意义的"
       },
       {
         "headwordId": "brick",
@@ -2325,9 +2281,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.平衡；权衡；抵消"
       },
       {
-        "headwordId": "history",
-        "surface": "historic",
-        "gloss": "a.历史性的；有历史意义的"
+        "headwordId": "classic",
+        "gloss": "a.经典的；典范的"
       },
       {
         "headwordId": "charm",
@@ -2759,8 +2714,8 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "id": "exp-03",
-        "expression": "antique/vintage/heritage",
-        "explanation": "熟词僻义：antique 可作形容词“古董的，古老的”，亦可作名词“古董，古玩”。常考搭配：antique furniture（古董家具）。衍生对比：vintage（经典的/复古的）、heritage（文化遗产）。"
+        "expression": "historic/historical/vintage",
+        "explanation": "核心词汇辨析：historic 意为“具有历史意义的，历史悠久的”，常修饰建筑物或重大事件（如 historic buildings/quarters）。对比 heritage（文化遗产）、vintage（经典的/复古的）。注意辨析 historical（历史上的，有关历史的，如 historical events/novels）。"
       },
       {
         "id": "exp-04",

@@ -13,8 +13,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "When young scholars travel abroad to visit an international academy, they step onto the foreign campus with acute curiosity and high expectations.",
-            "chinese": "当青年学者远赴海外访问一所国际学院时，他们带着敏锐的好奇心与高昂的期盼踏上外国校园。",
+            "english": "When young scholars travel abroad to visit an international university, they step onto campus with curiosity and high expectations.",
+            "chinese": "当青年学者远赴海外访问一所国际大学时，他们带着好奇心与高昂的期盼踏上校园。",
             "tokens": [
               {
                 "type": "text",
@@ -81,19 +81,7 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:academy",
-                "surface": "academy",
-                "gloss": "n.学院；研究院",
-                "headwordId": "academy"
-              },
-              {
-                "type": "text",
-                "text": ", they "
+                "text": " university, they "
               },
               {
                 "type": "annotation",
@@ -105,19 +93,7 @@
               },
               {
                 "type": "text",
-                "text": " onto the "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:foreign",
-                "surface": "foreign",
-                "gloss": "a.外国的；对外的",
-                "headwordId": "foreign"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " onto "
               },
               {
                 "type": "annotation",
@@ -134,24 +110,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:acute",
-                "surface": "acute",
-                "gloss": "a.敏锐的；强烈的",
-                "headwordId": "acute",
-                "shiftX": -2.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
                 "itemKey": "word:curious",
                 "surface": "curiosity",
                 "gloss": "n.好奇心；求知欲",
-                "headwordId": "curious",
-                "shiftX": 2.9
+                "headwordId": "curious"
               },
               {
                 "type": "text",
@@ -174,8 +136,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They must not abandon their native roots, yet they need to adapt to new environments and absorb abundant knowledge.",
-            "chinese": "他们绝不能抛弃自己的本土根基，然而他们需要适应全新环境并吸收丰富的知识。",
+            "english": "They must not abandon their roots, yet they need to adapt to a new environment and absorb knowledge.",
+            "chinese": "他们绝不能抛弃自己的根基，然而他们需要适应新环境并汲取知识。",
             "tokens": [
               {
                 "type": "text",
@@ -196,24 +158,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:native",
-                "surface": "native",
-                "gloss": "a.本土的；出生地的",
-                "headwordId": "native",
-                "shiftX": -6.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
                 "itemKey": "word:root",
                 "surface": "roots",
                 "gloss": "n.根基；根源",
-                "headwordId": "root",
-                "shiftX": 6.8
+                "headwordId": "root"
               },
               {
                 "type": "text",
@@ -229,7 +177,7 @@
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": " to a "
               },
               {
                 "type": "annotation",
@@ -247,7 +195,7 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:environment",
-                "surface": "environments",
+                "surface": "environment",
                 "gloss": "n.环境；生态",
                 "headwordId": "environment"
               },
@@ -262,18 +210,6 @@
                 "surface": "absorb",
                 "gloss": "v.吸收；理解",
                 "headwordId": "absorb"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:abundant",
-                "surface": "abundant",
-                "gloss": "a.丰富的；充裕的",
-                "headwordId": "abundant"
               },
               {
                 "type": "text",
@@ -296,8 +232,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "According to experienced campus advisers, active scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
-            "chinese": "根据资深校园导师的说法，勇于迎接崭新挑战的积极学者会加速个人与学识的成长。",
+            "english": "According to campus advisers, scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
+            "chinese": "根据校园导师的说法，勇于迎接新挑战的学者会加速其个人与学术心智的成长。",
             "tokens": [
               {
                 "type": "annotation",
@@ -306,18 +242,6 @@
                 "surface": "According to",
                 "gloss": "根据；按照",
                 "phrase": "according to"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:experience",
-                "surface": "experienced",
-                "gloss": "a.经验丰富的；老练的",
-                "headwordId": "experience"
               },
               {
                 "type": "text",
@@ -333,19 +257,7 @@
               },
               {
                 "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:active",
-                "surface": "active",
-                "gloss": "a.积极的；活跃的",
-                "headwordId": "active"
-              },
-              {
-                "type": "text",
-                "text": " scholars who "
+                "text": ", scholars who "
               },
               {
                 "type": "annotation",
@@ -426,30 +338,18 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Although a strange accent may cause occasional confusion in daily communication, sincere dialogue helps them overcome potential language barriers.",
-            "chinese": "尽管陌生的口音可能在日常交流中引起偶尔的困惑，但坦诚的对话有助于他们克服潜在的语言障碍。",
+            "english": "Although accents may cause occasional confusion in daily communication, sincere dialogue helps them overcome language barriers.",
+            "chinese": "尽管口音可能在日常交流中引起偶尔的困惑，但真诚的对话有助于他们克服语言障碍。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Although a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:strange",
-                "surface": "strange",
-                "gloss": "a.陌生的；奇怪的",
-                "headwordId": "strange"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": "Although "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:accent",
-                "surface": "accent",
+                "surface": "accents",
                 "gloss": "n.口音；腔调",
                 "headwordId": "accent"
               },
@@ -563,18 +463,6 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:potential",
-                "surface": "potential",
-                "gloss": "a.潜在的；可能的",
-                "headwordId": "potential"
-              },
-              {
-                "type": "text",
                 "text": " language "
               },
               {
@@ -599,8 +487,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In research laboratories, young scholars soon acquaint themselves with library rules, gain digital access to primary materials, and acquire accurate experimental data.",
-            "chinese": "在科研实验室中，年轻学者很快熟悉了图书馆规则，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。",
+            "english": "In research laboratories, young scholars soon acquaint themselves with safety procedures, gain digital access to primary materials, and acquire accurate experimental data.",
+            "chinese": "在科研实验室中，年轻学者很快熟悉了安全规程，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。",
             "tokens": [
               {
                 "type": "text",
@@ -644,11 +532,25 @@
               },
               {
                 "type": "annotation",
-                "category": "phrase",
-                "itemKey": "phrase:library rules",
-                "surface": "library rules",
-                "gloss": "图书馆规则",
-                "phrase": "library rules"
+                "category": "regular",
+                "itemKey": "word:safe",
+                "surface": "safety",
+                "gloss": "a.安全用的；防范的",
+                "headwordId": "safe",
+                "shiftX": -2.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:procedure",
+                "surface": "procedures",
+                "gloss": "n.规程；程序；步骤",
+                "headwordId": "procedure",
+                "shiftX": -4.4
               },
               {
                 "type": "text",
@@ -661,7 +563,7 @@
                 "surface": "gain",
                 "gloss": "v.获得；取得",
                 "headwordId": "gain",
-                "shiftX": -16.1
+                "shiftX": -13.5
               },
               {
                 "type": "text",
@@ -674,7 +576,7 @@
                 "surface": "digital",
                 "gloss": "a.数字的；数码的",
                 "headwordId": "digit",
-                "shiftX": -1.1
+                "shiftX": 0.7
               },
               {
                 "type": "text",
@@ -687,7 +589,7 @@
                 "surface": "access",
                 "gloss": "n.进入权；访问权限",
                 "headwordId": "access",
-                "shiftX": 15.7
+                "shiftX": 17
               },
               {
                 "type": "text",
@@ -700,7 +602,7 @@
                 "surface": "primary",
                 "gloss": "a.原始的；首要的",
                 "headwordId": "primary",
-                "shiftX": 1.4
+                "shiftX": 2.7
               },
               {
                 "type": "text",
@@ -771,8 +673,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They participate in regular seminars, present distinct academic arguments, and remain accountable for their actual findings.",
-            "chinese": "他们参加定期的研讨会，陈述鲜明的学术论点，并对其实际研究发现负责。",
+            "english": "They participate in regular seminars, present distinct arguments, and remain accountable for their actual findings.",
+            "chinese": "他们参加定期的研讨会，提出鲜明的论点，并对其实际研究发现负责。",
             "tokens": [
               {
                 "type": "text",
@@ -836,7 +738,7 @@
               },
               {
                 "type": "text",
-                "text": " academic "
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -907,8 +809,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with strict international standards.",
-            "chinese": "每位研究人员都必须维护学术诚信，并按照严格的国际规范开展科学调查。",
+            "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with international standards.",
+            "chinese": "每位研究人员都必须维护学术诚信，并按照国际规范开展科学调查。",
             "tokens": [
               {
                 "type": "text",
@@ -924,7 +826,19 @@
               },
               {
                 "type": "text",
-                "text": " academic "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:academy",
+                "surface": "academic",
+                "gloss": "a.学术的；学业的",
+                "headwordId": "academy"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -984,18 +898,6 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:strict",
-                "surface": "strict",
-                "gloss": "a.严格的；严谨的",
-                "headwordId": "strict"
-              },
-              {
-                "type": "text",
                 "text": " international "
               },
               {
@@ -1015,8 +917,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "When professors acknowledge student contributions, they accompany learners through difficult challenges and achieve meaningful breakthroughs.",
-            "chinese": "当教授认可学生的贡献时，他们会陪伴学习者度过艰难挑战，并取得有意义的重大突破。",
+            "english": "When professors acknowledge student contributions, they guide young researchers through difficult challenges and achieve meaningful breakthroughs.",
+            "chinese": "当教授认可学生的贡献并指导年轻学者应对艰难挑战时，他们能够取得有意义的重大突破。",
             "tokens": [
               {
                 "type": "text",
@@ -1048,27 +950,15 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:accompany",
-                "surface": "accompany",
-                "gloss": "v.陪伴；随行",
-                "headwordId": "accompany"
+                "category": "regular",
+                "itemKey": "word:guide",
+                "surface": "guide",
+                "gloss": "v.指引；指导；引导",
+                "headwordId": "guide"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:learn",
-                "surface": "learners",
-                "gloss": "n.学习者；初学者",
-                "headwordId": "learn"
-              },
-              {
-                "type": "text",
-                "text": " through "
+                "text": " young researchers through "
               },
               {
                 "type": "annotation",
@@ -1128,8 +1018,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars and accustom them to global community life.",
-            "chinese": "在教学建筑之外，现代化的住宅楼容纳了多元的学者，并使他们习惯于全球化的社区生活。",
+            "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars as they accustom themselves to community life.",
+            "chinese": "在教学建筑之外，现代住宅楼为多元学者提供了住所，他们在此逐渐适应社区生活。",
             "tokens": [
               {
                 "type": "text",
@@ -1205,7 +1095,7 @@
               },
               {
                 "type": "text",
-                "text": " scholars and "
+                "text": " scholars as they "
               },
               {
                 "type": "annotation",
@@ -1217,19 +1107,7 @@
               },
               {
                 "type": "text",
-                "text": " them to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:globe",
-                "surface": "global",
-                "gloss": "a.全球的；全世界的",
-                "headwordId": "globe"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " themselves to "
               },
               {
                 "type": "annotation",
@@ -1248,8 +1126,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Through shared dining and cultural events, visiting researchers exchange distinct perspectives and accomplish difficult collaborative projects through patient cooperation.",
-            "chinese": "通过共同就餐与文化活动，访问研究人员交流不同视角，并通过耐心的合作完成艰巨的协作项目。",
+            "english": "Through shared dining and cultural events, researchers exchange distinct perspectives and accomplish collaborative projects through cooperation.",
+            "chinese": "通过共同进餐与文化活动，研究人员交流不同视角，并通过协作圆满完成合作项目。",
             "tokens": [
               {
                 "type": "text",
@@ -1303,7 +1181,7 @@
               },
               {
                 "type": "text",
-                "text": ", visiting researchers "
+                "text": ", researchers "
               },
               {
                 "type": "annotation",
@@ -1339,7 +1217,7 @@
               },
               {
                 "type": "text",
-                "text": " difficult "
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -1364,18 +1242,6 @@
               {
                 "type": "text",
                 "text": " through "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:patient¹",
-                "surface": "patient",
-                "gloss": "a.耐心的；容忍的",
-                "headwordId": "patient¹"
-              },
-              {
-                "type": "text",
-                "text": " "
               },
               {
                 "type": "annotation",
@@ -1486,8 +1352,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Ultimately, these exchange programs strengthen friendly ties between universities, promote mutual trust, and inspire future academic innovation.",
-            "chinese": "最终，这些交流项目加强了各大学之间的友好纽带，促进了相互信任，并激励着未来的学术创新。",
+            "english": "Ultimately, these exchange programs strengthen ties between universities, promote mutual trust, and inspire academic innovation.",
+            "chinese": "最终，这些交流项目加强了大学之间的纽带，促进了相互信任，并激励学术创新。",
             "tokens": [
               {
                 "type": "annotation",
@@ -1523,7 +1389,7 @@
               },
               {
                 "type": "text",
-                "text": " friendly "
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -1585,7 +1451,7 @@
               },
               {
                 "type": "text",
-                "text": " future academic "
+                "text": " academic "
               },
               {
                 "type": "annotation",
@@ -1687,32 +1553,24 @@
       "abroad",
       "visit",
       "international",
-      "academy",
       "step",
-      "foreign",
       "campus",
-      "acute",
       "curious",
       "expect",
       "abandon",
-      "native",
       "root",
       "adapt",
       "new",
       "environment",
       "absorb",
-      "abundant",
       "know",
-      "experience",
       "advise",
-      "active",
       "embrace",
       "fresh",
       "challenge",
       "accelerate",
       "intellectual",
       "grow",
-      "strange",
       "accent",
       "cause",
       "occasion",
@@ -1723,11 +1581,12 @@
       "dialog",
       "help",
       "overcome",
-      "potential",
       "barrier",
       "research",
       "laboratory",
       "acquaint",
+      "safe",
+      "procedure",
       "gain",
       "digit",
       "access",
@@ -1748,16 +1607,15 @@
       "actual",
       "find",
       "maintain",
+      "academy",
       "integrity",
       "conduct",
       "science",
       "investigate",
-      "strict",
       "standard",
       "acknowledge",
       "contribute",
-      "accompany",
-      "learn",
+      "guide",
       "difficult",
       "achieve",
       "mean¹",
@@ -1769,7 +1627,6 @@
       "accommodate",
       "diverse",
       "accustom",
-      "globe",
       "community",
       "share",
       "dine",
@@ -1780,7 +1637,6 @@
       "accomplish",
       "collaborate",
       "project¹",
-      "patient¹",
       "cooperate",
       "engage",
       "peer",
@@ -5663,8 +5519,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Instead of simply abandoning old downtown quarters, municipal architects now strive to restore antique brick apartments and protect local heritage.",
-            "chinese": "市政建筑师不再简单地遗弃老城区，而是努力修复古老的砖砌公寓并保护当地文化遗产。",
+            "english": "Instead of simply abandoning old downtown quarters, municipal architects now strive to restore historic brick apartments and protect local heritage.",
+            "chinese": "市政建筑师不再简单地遗弃老城区，而是努力修复历史悠久的砖砌公寓并保护当地文化遗产。",
             "tokens": [
               {
                 "type": "text",
@@ -5768,7 +5624,7 @@
                 "surface": "strive",
                 "gloss": "v.努力；奋斗；力求",
                 "headwordId": "strive",
-                "shiftX": -1.2
+                "shiftX": -12.5
               },
               {
                 "type": "text",
@@ -5781,7 +5637,7 @@
                 "surface": "restore",
                 "gloss": "v.恢复；修复；归还",
                 "headwordId": "restore",
-                "shiftX": -11.9
+                "shiftX": -25.7
               },
               {
                 "type": "text",
@@ -5789,12 +5645,12 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:antique",
-                "surface": "antique",
-                "gloss": "a.古董的；古老的",
-                "headwordId": "antique",
-                "shiftX": -5.8
+                "category": "high-frequency",
+                "itemKey": "word:history",
+                "surface": "historic",
+                "gloss": "a.历史性的；有历史意义的",
+                "headwordId": "history",
+                "shiftX": -6.7
               },
               {
                 "type": "text",
@@ -5807,7 +5663,7 @@
                 "surface": "brick",
                 "gloss": "a.砖砌的；用砖做的",
                 "headwordId": "brick",
-                "shiftX": 13.5
+                "shiftX": 26.5
               },
               {
                 "type": "text",
@@ -5820,7 +5676,7 @@
                 "surface": "apartments",
                 "gloss": "n.公寓；住房",
                 "headwordId": "apartment",
-                "shiftX": 5.4
+                "shiftX": 18.4
               },
               {
                 "type": "text",
@@ -5870,8 +5726,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "By gradually repairing aging infrastructure, this approach avoids arbitrary destruction and balances historic charm with modern living standards.",
-            "chinese": "通过逐步修缮老化的基础设施，这种方法避免了任意拆毁，并在历史风貌与现代生活水准之间取得了平衡。",
+            "english": "By gradually repairing aging infrastructure, this approach avoids arbitrary destruction and balances classic charm with modern living standards.",
+            "chinese": "通过逐步修缮老化的基础设施，这种方法避免了任意拆毁，并在经典风貌与现代生活水准之间取得了平衡。",
             "tokens": [
               {
                 "type": "text",
@@ -5972,7 +5828,7 @@
                 "surface": "balances",
                 "gloss": "v.平衡；权衡；抵消",
                 "headwordId": "balance",
-                "shiftX": -23.5
+                "shiftX": -10.7
               },
               {
                 "type": "text",
@@ -5981,11 +5837,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:history",
-                "surface": "historic",
-                "gloss": "a.历史性的；有历史意义的",
-                "headwordId": "history",
-                "shiftX": -4.7
+                "itemKey": "word:classic",
+                "surface": "classic",
+                "gloss": "a.经典的；典范的",
+                "headwordId": "classic",
+                "shiftX": -4.6
               },
               {
                 "type": "text",
@@ -5998,7 +5854,7 @@
                 "surface": "charm",
                 "gloss": "n.魅力；吸引力；魔力",
                 "headwordId": "charm",
-                "shiftX": 28.1
+                "shiftX": 15.3
               },
               {
                 "type": "text",
@@ -7256,8 +7112,8 @@
       },
       {
         "id": "exp-03",
-        "expression": "antique/vintage/heritage",
-        "explanation": "熟词僻义：antique 可作形容词“古董的，古老的”，亦可作名词“古董，古玩”。常考搭配：antique furniture（古董家具）。衍生对比：vintage（经典的/复古的）、heritage（文化遗产）。"
+        "expression": "historic/historical/vintage",
+        "explanation": "核心词汇辨析：historic 意为“具有历史意义的，历史悠久的”，常修饰建筑物或重大事件（如 historic buildings/quarters）。对比 heritage（文化遗产）、vintage（经典的/复古的）。注意辨析 historical（历史上的，有关历史的，如 historical events/novels）。"
       },
       {
         "id": "exp-04",
@@ -7336,7 +7192,7 @@
       "architect",
       "strive",
       "restore",
-      "antique",
+      "history",
       "brick",
       "apartment",
       "protect",
@@ -7350,7 +7206,7 @@
       "arbitrary",
       "destroy",
       "balance",
-      "history",
+      "classic",
       "charm",
       "live¹",
       "standard",
