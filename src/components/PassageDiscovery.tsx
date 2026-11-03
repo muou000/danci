@@ -9,6 +9,7 @@ import {
   getPassageProgress,
   getPassageTopicCategories,
   PASSAGE_TOPIC_CATEGORIES,
+  type PassageTopicFilter,
   type PassageSearchResult,
   type PassageTierFilter,
 } from '../passage-library';
@@ -120,6 +121,26 @@ const tierFilters: Array<{ value: PassageTierFilter; label: string }> = [
   { value: 'cet6-advanced', label: PASSAGE_TIER_LABELS['cet6-advanced'] },
 ];
 
+function serializeTopicFilter(filter: PassageTopicFilter): string {
+  if (filter.kind === 'all') return 'all';
+  return `${filter.kind}:${filter.value}`;
+}
+
+function parseTopicFilter(value: string): PassageTopicFilter {
+  if (value === 'all') return { kind: 'all' };
+  if (value.startsWith('category:')) {
+    const valueCategory = value.slice('category:'.length);
+    const category = PASSAGE_TOPIC_CATEGORIES.find(
+      (item) => item === valueCategory
+    );
+    return category ? { kind: 'category', value: category } : { kind: 'all' };
+  }
+  if (value.startsWith('topic:')) {
+    return { kind: 'topic', value: value.slice('topic:'.length) };
+  }
+  return { kind: 'all' };
+}
+
 export function PassageDirectory({
   passages,
   state,
@@ -127,7 +148,9 @@ export function PassageDirectory({
   onOpenPassage,
 }: PassageDirectoryProps) {
   const [tierFilter, setTierFilter] = useState<PassageTierFilter>('all');
-  const [topicFilter, setTopicFilter] = useState('all');
+  const [topicFilter, setTopicFilter] = useState<PassageTopicFilter>({
+    kind: 'all',
+  });
   const topics = useMemo(
     () =>
       Array.from(new Set(passages.map((passage) => passage.topic))).sort(
@@ -182,14 +205,22 @@ export function PassageDirectory({
           <span>题材</span>
           <select
             aria-label="按题材筛选"
-            value={topicFilter}
-            onChange={(event) => setTopicFilter(event.currentTarget.value)}
+            value={serializeTopicFilter(topicFilter)}
+            onChange={(event) =>
+              setTopicFilter(parseTopicFilter(event.currentTarget.value))
+            }
           >
             <option value="all">全部题材</option>
             {topicCategories.length > 0 && (
               <optgroup label="常考题材">
                 {topicCategories.map((category) => (
-                  <option key={category} value={`category:${category}`}>
+                  <option
+                    key={category}
+                    value={serializeTopicFilter({
+                      kind: 'category',
+                      value: category,
+                    })}
+                  >
                     {category}
                   </option>
                 ))}
@@ -197,7 +228,13 @@ export function PassageDirectory({
             )}
             <optgroup label="具体题材">
               {topics.map((topic) => (
-                <option key={topic} value={`topic:${topic}`}>
+                <option
+                  key={topic}
+                  value={serializeTopicFilter({
+                    kind: 'topic',
+                    value: topic,
+                  })}
+                >
                   {topic}
                 </option>
               ))}

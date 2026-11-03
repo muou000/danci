@@ -16,6 +16,11 @@ export const PASSAGE_TOPIC_CATEGORIES = [
 
 export type PassageTopicCategory = (typeof PASSAGE_TOPIC_CATEGORIES)[number];
 
+export type PassageTopicFilter =
+  | { kind: 'all' }
+  | { kind: 'category'; value: PassageTopicCategory }
+  | { kind: 'topic'; value: string };
+
 const topicCategoryKeywords: Record<PassageTopicCategory, string[]> = {
   社会心理: ['社会', '心理', '认知', '行为', '习惯', '个体', '人际', '自主'],
   科技人工智能: ['科技', '人工智能', '算法', '数字', '数据', '网络', '技术', '智能'],
@@ -67,10 +72,21 @@ function* annotationTokensIn(
   }
 }
 
+function* uniqueAnnotationTokensIn(
+  passage: CompiledPassage
+): Iterable<InlineAnnotationToken> {
+  const seenItemKeys = new Set<string>();
+  for (const token of annotationTokensIn(passage)) {
+    if (seenItemKeys.has(token.itemKey)) continue;
+    seenItemKeys.add(token.itemKey);
+    yield token;
+  }
+}
+
 export function filterPassages(
   passages: CompiledPassage[],
   tier: PassageTierFilter,
-  topic: string
+  topic: PassageTopicFilter
 ): CompiledPassage[] {
   return passages.filter(
     (passage) =>
@@ -82,28 +98,30 @@ export function filterPassages(
 export function getPassageTopicCategories(
   topic: string
 ): PassageTopicCategory[] {
+  const hasTechnologyTerm = topicCategoryKeywords['科技人工智能'].some(
+    (keyword) => topic.includes(keyword)
+  );
   return PASSAGE_TOPIC_CATEGORIES.filter((category) =>
-    topicCategoryKeywords[category].some((keyword) => topic.includes(keyword))
+    topicCategoryKeywords[category].some(
+      (keyword) =>
+        topic.includes(keyword) &&
+        !(category === '生态环境' && keyword === '生态' && hasTechnologyTerm)
+    )
   );
 }
 
-function matchesTopicFilter(passage: CompiledPassage, topic: string): boolean {
-  if (topic === 'all') return true;
-  if (topic.startsWith('topic:')) {
-    return passage.topic === topic.slice('topic:'.length);
+function matchesTopicFilter(
+  passage: CompiledPassage,
+  topic: PassageTopicFilter
+): boolean {
+  switch (topic.kind) {
+    case 'all':
+      return true;
+    case 'category':
+      return getPassageTopicCategories(passage.topic).includes(topic.value);
+    case 'topic':
+      return passage.topic === topic.value;
   }
-
-  const category = topic.startsWith('category:')
-    ? topic.slice('category:'.length)
-    : topic;
-  if (
-    PASSAGE_TOPIC_CATEGORIES.includes(category as PassageTopicCategory)
-  ) {
-    return getPassageTopicCategories(passage.topic).includes(
-      category as PassageTopicCategory
-    );
-  }
-  return passage.topic === topic;
 }
 
 export function getPassageProgress(
@@ -111,7 +129,9 @@ export function getPassageProgress(
   masteredItemKeys: ReadonlySet<string>
 ): PassageProgress {
   const itemKeys = new Set<string>();
-  for (const token of annotationTokensIn(passage)) itemKeys.add(token.itemKey);
+  for (const token of uniqueAnnotationTokensIn(passage)) {
+    itemKeys.add(token.itemKey);
+  }
 
   let masteredCount = 0;
   for (const itemKey of itemKeys) {
@@ -225,10 +245,7 @@ export function buildPassageSearchIndex(
 ): PassageSearchIndex {
   const index: PassageSearchIndex = [];
   for (const passage of passages) {
-    const seenAnnotationKeys = new Set<string>();
-    for (const token of annotationTokensIn(passage)) {
-      if (seenAnnotationKeys.has(token.itemKey)) continue;
-      seenAnnotationKeys.add(token.itemKey);
+    for (const token of uniqueAnnotationTokensIn(passage)) {
       const result: PassageSearchResult = {
         key: `${passage.id}:annotation:${token.itemKey}`,
         ...passageSearchContext(passage),

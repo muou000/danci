@@ -7,6 +7,7 @@ import {
   buildPassageSearchIndex,
   filterPassages,
   getPassageProgress,
+  getPassageTopicCategories,
   searchPassages,
 } from './passage-library';
 
@@ -60,14 +61,35 @@ describe('passage library discovery', () => {
   ];
 
   it('filters by shared topic family and exact passage topic together', () => {
-    expect(filterPassages(passages, 'cet6-advanced', '科技人工智能')).toEqual([
-      passages[1],
-    ]);
-    expect(filterPassages(passages, 'cet4-core', '科技人工智能')).toEqual([]);
+    expect(getPassageTopicCategories(passages[1].topic)).toContain(
+      '科技人工智能'
+    );
+    expect(getPassageTopicCategories(passages[1].topic)).not.toContain(
+      '生态环境'
+    );
+    expect(getPassageTopicCategories(passages[0].topic)).toContain('生态环境');
     expect(
-      filterPassages(passages, 'cet4-core', 'topic:绿色校园与消费转型')
+      getPassageTopicCategories('算法生态与环境治理')
+    ).toContain('生态环境');
+    expect(
+      filterPassages(passages, 'cet6-advanced', {
+        kind: 'category',
+        value: '科技人工智能',
+      })
+    ).toEqual([passages[1]]);
+    expect(
+      filterPassages(passages, 'cet4-core', {
+        kind: 'category',
+        value: '科技人工智能',
+      })
+    ).toEqual([]);
+    expect(
+      filterPassages(passages, 'cet4-core', {
+        kind: 'topic',
+        value: '绿色校园与消费转型',
+      })
     ).toEqual([passages[0]]);
-    expect(filterPassages(passages, 'all', 'all')).toEqual(passages);
+    expect(filterPassages(passages, 'all', { kind: 'all' })).toEqual(passages);
   });
 
   it('counts unique inline annotation keys against the mastered set', () => {
@@ -103,6 +125,12 @@ describe('passage library discovery', () => {
           gloss: 'a.快速的；迅速的',
           headwordId: 'fast',
         },
+        {
+          ...annotation('word:box'),
+          surface: 'box',
+          gloss: 'n.盒子；箱子',
+          headwordId: 'box',
+        },
       ]
     );
     searchablePassage.expansionEntries = [
@@ -122,6 +150,9 @@ describe('passage library discovery', () => {
     );
     expect(searchPassages(index, 'fastest').map((result) => result.expression)).toContain(
       'fast'
+    );
+    expect(searchPassages(index, 'boxes').map((result) => result.expression)).toContain(
+      'box'
     );
     expect(searchPassages(index, '研究').map((result) => result.expression)).toContain(
       'study'
