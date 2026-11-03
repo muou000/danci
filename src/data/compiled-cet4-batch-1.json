@@ -39,7 +39,7 @@
                 "surface": "travel",
                 "gloss": "v.旅行；行进",
                 "headwordId": "travel",
-                "shiftX": -12.4
+                "shiftX": -9.6
               },
               {
                 "type": "text",
@@ -52,7 +52,7 @@
                 "surface": "abroad",
                 "gloss": "ad.在国外地；到海外地",
                 "headwordId": "abroad",
-                "shiftX": 3.1
+                "shiftX": 5.9
               },
               {
                 "type": "text",
@@ -63,9 +63,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:visit",
                 "surface": "visit",
-                "gloss": "a.访问的；客座的",
+                "gloss": "v.访问；拜访",
                 "headwordId": "visit",
-                "shiftX": 9.7
+                "shiftX": 3.7
               },
               {
                 "type": "text",
@@ -611,7 +611,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:research",
                 "surface": "research",
-                "gloss": "n.科研；研究",
+                "gloss": "a.科研的；研究的",
                 "headwordId": "research"
               },
               {
@@ -5524,7 +5524,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:worldwide",
                 "surface": "worldwide",
-                "gloss": "ad.在全世界地；全世界上地",
+                "gloss": "a.全世界的；世界范围的",
                 "headwordId": "worldwide"
               },
               {
@@ -5637,7 +5637,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:simple",
                 "surface": "simply",
-                "gloss": "ad.简单地；仅仅地；简直地",
+                "gloss": "ad.简单地；单纯地；朴素地",
                 "headwordId": "simple",
                 "shiftX": -39.9
               },
@@ -5971,7 +5971,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:live¹",
                 "surface": "living",
-                "gloss": "a.活着的；生活的",
+                "gloss": "a.生活的；居住的",
                 "headwordId": "live¹",
                 "shiftX": -3
               },
@@ -5997,15 +5997,15 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Consequently, long-time citizens can remain in familiar surroundings while enjoying safer structures and convenient services.",
-            "chinese": "因此，长期居住的市民能够留在熟悉的环境中，同时享受到更安全的建筑结构与便捷的服务。",
+            "english": "Consequently, long-time residents can remain in familiar surroundings while enjoying safer structures and convenient services.",
+            "chinese": "因此，长期居住的居民能够留在熟悉的环境中，同时享受到更安全的建筑结构与便捷的服务。",
             "tokens": [
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:consequence",
                 "surface": "Consequently",
-                "gloss": "ad.因此地；所以地",
+                "gloss": "ad.相应地；必然地",
                 "headwordId": "consequence"
               },
               {
@@ -6015,10 +6015,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:citizen",
-                "surface": "citizens",
-                "gloss": "n.公民；市民；居民",
-                "headwordId": "citizen"
+                "itemKey": "word:reside",
+                "surface": "residents",
+                "gloss": "n.居民；定居者",
+                "headwordId": "reside"
               },
               {
                 "type": "text",
@@ -6271,8 +6271,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "These shared spaces accommodate diverse recreational activities and encourage residents to participate in public affairs.",
-            "chinese": "这些共享空间容纳了多样的休闲活动，并鼓励居民参与公共事务。",
+            "english": "These shared spaces accommodate diverse recreational activities and encourage citizens to participate in public affairs.",
+            "chinese": "这些共享空间容纳了多样的休闲活动，并鼓励市民参与公共事务。",
             "tokens": [
               {
                 "type": "text",
@@ -6370,10 +6370,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:reside",
-                "surface": "residents",
-                "gloss": "n.居民；定居者",
-                "headwordId": "reside"
+                "itemKey": "word:citizen",
+                "surface": "citizens",
+                "gloss": "n.公民；市民；居民",
+                "headwordId": "citizen"
               },
               {
                 "type": "text",
@@ -6422,8 +6422,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "When neighbors chat along shaded benches or tend community gardens, mutual trust and social bonds naturally strengthen.",
-            "chinese": "当邻里沿着遮阴的长椅闲聊或照料社区花园时，彼此的信任与社会纽带自然得到了增强。",
+            "english": "When neighbors chat on shaded benches or tend community gardens, mutual trust and social bonds naturally strengthen.",
+            "chinese": "当邻里在阴凉的长椅上闲聊或照料社区花园时，彼此的信任与社会纽带自然得到了增强。",
             "tokens": [
               {
                 "type": "text",
@@ -6435,11 +6435,12 @@
                 "itemKey": "word:chat",
                 "surface": "chat",
                 "gloss": "v.闲聊；聊天；交谈",
-                "headwordId": "chat"
+                "headwordId": "chat",
+                "shiftX": -6.5
               },
               {
                 "type": "text",
-                "text": " along "
+                "text": " on "
               },
               {
                 "type": "annotation",
@@ -6448,7 +6449,7 @@
                 "surface": "shaded",
                 "gloss": "a.阴凉的；遮阴的",
                 "headwordId": "shade",
-                "shiftX": -9.9
+                "shiftX": -7.6
               },
               {
                 "type": "text",
@@ -6461,7 +6462,7 @@
                 "surface": "benches",
                 "gloss": "n.长椅；长凳；工作台",
                 "headwordId": "bench",
-                "shiftX": 4
+                "shiftX": 6.1
               },
               {
                 "type": "text",
@@ -6474,7 +6475,7 @@
                 "surface": "tend",
                 "gloss": "v.照料；照看；趋向",
                 "headwordId": "tend",
-                "shiftX": 5.9
+                "shiftX": 8
               },
               {
                 "type": "text",
@@ -6652,26 +6653,38 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Furthermore, green technologies and energy efficient facilities blend smoothly into everyday life.",
-            "chinese": "此外，绿色技术和节能设施顺利融入了日常生活。",
+            "english": "Meanwhile, clean energy technology and efficient facilities blend smoothly into everyday life.",
+            "chinese": "与此同时，清洁能源技术与高效设施顺利融入了日常生活。",
             "tokens": [
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:furthermore",
-                "surface": "Furthermore",
-                "gloss": "ad.此外地；而且地",
-                "headwordId": "furthermore"
+                "category": "regular",
+                "itemKey": "word:meanwhile",
+                "surface": "Meanwhile",
+                "gloss": "ad.在此期间地；与此同时地",
+                "headwordId": "meanwhile"
               },
               {
                 "type": "text",
-                "text": ", green "
+                "text": ", clean "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:energy",
+                "surface": "energy",
+                "gloss": "a.能源的；能量的",
+                "headwordId": "energy"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:technology",
-                "surface": "technologies",
+                "surface": "technology",
                 "gloss": "n.技术；工艺",
                 "headwordId": "technology"
               },
@@ -6682,24 +6695,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:energy",
-                "surface": "energy",
-                "gloss": "a.能源的；能量的",
-                "headwordId": "energy",
-                "shiftX": -2.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
                 "itemKey": "word:efficient",
                 "surface": "efficient",
-                "gloss": "a.高效率的；节能的",
-                "headwordId": "efficient",
-                "shiftX": 2.7
+                "gloss": "a.高效的；高效率的",
+                "headwordId": "efficient"
               },
               {
                 "type": "text",
@@ -6761,7 +6760,7 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Renovated buildings feature large windows that welcome natural sunlight and gentle breezes, which reduces the constant demand for artificial lighting and air conditioning.",
+            "english": "Renovated buildings feature large windows that welcome natural sunlight and gentle breezes, which reduces the constant demand for artificial lighting and air-conditioning.",
             "chinese": "翻新后的建筑以大窗户为特色，迎来自然阳光与柔和微风，从而减少了对人造照明和空调的持续需求。",
             "tokens": [
               {
@@ -6923,15 +6922,15 @@
               },
               {
                 "type": "text",
-                "text": " and air "
+                "text": " and "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:condition",
-                "surface": "conditioning",
-                "gloss": "n.调节；空调设备",
-                "headwordId": "condition"
+                "category": "regular",
+                "itemKey": "word:air-conditioning",
+                "surface": "air-conditioning",
+                "gloss": "n.空调系统；空气调节",
+                "headwordId": "air-conditioning"
               },
               {
                 "type": "text",
@@ -7108,7 +7107,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:ultimate",
                 "surface": "Ultimately",
-                "gloss": "ad.最终地；根本上地",
+                "gloss": "ad.最终地；终极地",
                 "headwordId": "ultimate"
               },
               {
@@ -7120,7 +7119,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:appeal",
                 "surface": "appeal",
-                "gloss": "v.呼吁；吸引；申诉",
+                "gloss": "v.吸引；引起兴趣",
                 "headwordId": "appeal"
               },
               {
@@ -7318,7 +7317,7 @@
       "live¹",
       "standard",
       "consequence",
-      "citizen",
+      "reside",
       "remain",
       "familiar",
       "surround",
@@ -7344,7 +7343,7 @@
       "recreation",
       "active",
       "encourage",
-      "reside",
+      "citizen",
       "participate",
       "public",
       "affair",
@@ -7364,9 +7363,9 @@
       "interact",
       "vital",
       "harmony",
-      "furthermore",
-      "technology",
+      "meanwhile",
       "energy",
+      "technology",
       "efficient",
       "facility",
       "blend",
@@ -7385,7 +7384,7 @@
       "demand",
       "artificial",
       "light²",
-      "condition",
+      "air-conditioning",
       "intelligent",
       "household",
       "appliance",

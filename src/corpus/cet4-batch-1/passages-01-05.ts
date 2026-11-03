@@ -272,7 +272,7 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "research",
-        "gloss": "n.科研；研究"
+        "gloss": "a.科研的；研究的"
       },
       {
         "headwordId": "laboratory",
@@ -494,8 +494,7 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "visit",
-        "surface": "visiting",
-        "gloss": "a.访问的；客座的"
+        "gloss": "v.访问；拜访"
       },
       {
         "headwordId": "exchange",
