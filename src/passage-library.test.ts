@@ -177,4 +177,33 @@ describe('passage library discovery', () => {
       searchPassages(index, 'take into account').map((result) => result.expression)
     ).toContain('take into account');
   });
+
+  it('matches common irregular forms to their annotated headword', () => {
+    const item = passage('irregular-forms', 'cet4-core', '测试', [
+      {
+        ...annotation('word:good'),
+        surface: 'good',
+        gloss: 'a.好的；优良的',
+        headwordId: 'good',
+      },
+      {
+        ...annotation('word:go'),
+        surface: 'go',
+        gloss: 'v.去；前往',
+        headwordId: 'go',
+      },
+    ]);
+    const index = buildPassageSearchIndex([item]);
+
+    expect(
+      searchPassages(index, 'better').map((result) => result.expression)
+    ).toContain('good');
+    expect(
+      searchPassages(index, 'best').map((result) => result.expression)
+    ).toContain('good');
+    expect(searchPassages(index, 'gooder')).toEqual([]);
+    expect(searchPassages(index, 'went').map((result) => result.expression)).toContain(
+      'go'
+    );
+  });
 });

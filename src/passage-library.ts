@@ -149,8 +149,74 @@ function normalizeSearchText(value: string): string {
   return value.normalize('NFKC').toLowerCase().replace(/[’‘]/g, "'").trim();
 }
 
+const irregularInflectionGroups = [
+  ['be', 'am', 'is', 'are', 'was', 'were', 'been'],
+  ['become', 'became'],
+  ['begin', 'began', 'begun'],
+  ['break', 'broke', 'broken'],
+  ['bring', 'brought'],
+  ['buy', 'bought'],
+  ['catch', 'caught'],
+  ['choose', 'chose', 'chosen'],
+  ['come', 'came'],
+  ['do', 'does', 'did', 'done'],
+  ['drink', 'drank', 'drunk'],
+  ['drive', 'drove', 'driven'],
+  ['eat', 'ate', 'eaten'],
+  ['fall', 'fell', 'fallen'],
+  ['feel', 'felt'],
+  ['find', 'found'],
+  ['fly', 'flew', 'flown'],
+  ['forget', 'forgot', 'forgotten'],
+  ['get', 'got', 'gotten'],
+  ['give', 'gave', 'given'],
+  ['go', 'goes', 'went', 'gone'],
+  ['grow', 'grew', 'grown'],
+  ['have', 'has', 'had'],
+  ['hear', 'heard'],
+  ['keep', 'kept'],
+  ['know', 'knew', 'known'],
+  ['leave', 'left'],
+  ['lose', 'lost'],
+  ['make', 'made'],
+  ['meet', 'met'],
+  ['pay', 'paid'],
+  ['put'],
+  ['run', 'ran'],
+  ['say', 'said'],
+  ['see', 'saw', 'seen'],
+  ['sell', 'sold'],
+  ['send', 'sent'],
+  ['sit', 'sat'],
+  ['sleep', 'slept'],
+  ['speak', 'spoke', 'spoken'],
+  ['spend', 'spent'],
+  ['stand', 'stood'],
+  ['take', 'took', 'taken'],
+  ['teach', 'taught'],
+  ['tell', 'told'],
+  ['think', 'thought'],
+  ['understand', 'understood'],
+  ['wear', 'wore', 'worn'],
+  ['win', 'won'],
+  ['write', 'wrote', 'written'],
+  ['good', 'better', 'best'],
+  ['well', 'better', 'best'],
+  ['bad', 'worse', 'worst'],
+  ['far', 'farther', 'farthest', 'further', 'furthest'],
+  ['much', 'more', 'most'],
+  ['many', 'more', 'most'],
+  ['little', 'less', 'least'],
+];
+
+const irregularFormsByWord = new Map<string, Set<string>>();
+for (const group of irregularInflectionGroups) {
+  const forms = new Set(group);
+  for (const word of group) irregularFormsByWord.set(word, forms);
+}
+
 function englishWordForms(word: string, allowsDegreeInflections: boolean): Set<string> {
-  const forms = new Set([word]);
+  const forms = new Set([word, ...(irregularFormsByWord.get(word) ?? [])]);
   if (word.length < 4) return forms;
 
   if (word.endsWith('ies')) {
@@ -177,7 +243,9 @@ function englishWordForms(word: string, allowsDegreeInflections: boolean): Set<s
   if (word.endsWith('s') && !/(ss|us|is)$/.test(word)) {
     forms.add(word.slice(0, -1));
   }
-  if (allowsDegreeInflections) addDegreeForms(word, forms);
+  if (allowsDegreeInflections && !irregularFormsByWord.has(word)) {
+    addDegreeForms(word, forms);
+  }
 
   return forms;
 }
@@ -209,6 +277,9 @@ function addDegreeForms(word: string, forms: Set<string>): void {
 }
 
 function addDegreeBase(base: string, forms: Set<string>): void {
+  const root = /(.)\1$/.test(base) ? base.slice(0, -1) : base;
+  if (irregularFormsByWord.has(root)) return;
+
   forms.add(base);
   forms.add(`${base}e`);
   if (/(.)\1$/.test(base)) forms.add(base.slice(0, -1));
@@ -249,6 +320,7 @@ export function buildPassageSearchIndex(
   const index: PassageSearchIndex = [];
   for (const passage of passages) {
     for (const token of uniqueAnnotationTokensIn(passage)) {
+      const searchFields = annotationSearchFields(token);
       const result: PassageSearchResult = {
         key: `${passage.id}:annotation:${token.itemKey}`,
         ...passageSearchContext(passage),
@@ -260,9 +332,9 @@ export function buildPassageSearchIndex(
       index.push(
         makeSearchDocument(
           result,
-          annotationSearchFields(token),
+          searchFields.all,
           /^(?:a|adj|ad|adv)\./i.test(token.gloss.trim()),
-          annotationEnglishSearchFields(token)
+          searchFields.english
         )
       );
     }
@@ -288,12 +360,12 @@ export function buildPassageSearchIndex(
   return index;
 }
 
-function annotationSearchFields(token: InlineAnnotationToken): string[] {
-  return [token.surface, token.headwordId ?? '', token.phrase ?? '', token.gloss];
-}
-
-function annotationEnglishSearchFields(token: InlineAnnotationToken): string[] {
-  return [token.surface, token.headwordId ?? '', token.phrase ?? ''];
+function annotationSearchFields(token: InlineAnnotationToken): {
+  all: string[];
+  english: string[];
+} {
+  const english = [token.surface, token.headwordId ?? '', token.phrase ?? ''];
+  return { all: [...english, token.gloss], english };
 }
 
 function matchesEnglishWords(
