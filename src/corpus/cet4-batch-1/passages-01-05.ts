@@ -2848,8 +2848,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly across immense distances without direct manual assistance.",
-            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在没有人工直接协助的情况下跨越极其遥远的距离平稳运行。"
+            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly in orbit across immense distances without direct manual assistance.",
+            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在轨道上平稳运行，跨越极其遥远的距离而无需人工直接协助。"
           },
           {
             "sentenceNumber": 3,
@@ -3094,11 +3094,6 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.先进的；高级的"
       },
       {
-        "headwordId": "astronomy",
-        "surface": "astronomical",
-        "gloss": "a.天文学的；天文的"
-      },
-      {
         "headwordId": "telescope",
         "gloss": "n.望远镜；单筒望远镜"
       },
@@ -3234,13 +3229,12 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "ad.平稳地；顺利地"
       },
       {
-        "headwordId": "immense",
-        "gloss": "a.巨大的；广大的"
+        "headwordId": "orbit",
+        "gloss": "n.轨道；运行轨道"
       },
       {
-        "headwordId": "distance",
-        "surface": "distances",
-        "gloss": "n.距离；远方"
+        "headwordId": "immense",
+        "gloss": "a.巨大的；广大的"
       },
       {
         "headwordId": "direct",
@@ -3278,11 +3272,6 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "vacuum",
         "gloss": "n.真空；空白"
-      },
-      {
-        "headwordId": "special",
-        "surface": "specialized",
-        "gloss": "a.专门的；专用的"
       },
       {
         "headwordId": "protect",

@@ -7558,7 +7558,7 @@
                 "category": "regular",
                 "itemKey": "word:astronomy",
                 "surface": "astronomy",
-                "gloss": "a.天文学的；天文的",
+                "gloss": "n.天文学；天文现象",
                 "headwordId": "astronomy"
               },
               {
@@ -8339,8 +8339,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly across immense distances without direct manual assistance.",
-            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在没有人工直接协助的情况下跨越极其遥远的距离平稳运行。",
+            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly in orbit across immense distances without direct manual assistance.",
+            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在轨道上平稳运行，跨越极其遥远的距离而无需人工直接协助。",
             "tokens": [
               {
                 "type": "text",
@@ -8449,6 +8449,18 @@
                 "surface": "smoothly",
                 "gloss": "ad.平稳地；顺利地",
                 "headwordId": "smooth"
+              },
+              {
+                "type": "text",
+                "text": " in "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:orbit",
+                "surface": "orbit",
+                "gloss": "n.轨道；运行轨道",
+                "headwordId": "orbit"
               },
               {
                 "type": "text",
@@ -9418,6 +9430,7 @@
       "satellite",
       "operate",
       "smooth",
+      "orbit",
       "immense",
       "direct",
       "manual",

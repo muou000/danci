@@ -600,6 +600,16 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('attorney');
     expect(compiled.coveredHeadwordIds).not.toContain('asleep');
     expect(compiled.coveredHeadwordIds).not.toContain('ashore');
+
+    // 验证核心目标词自然覆盖与语境词性匹配
+    expect(compiled.coveredHeadwordIds).toContain('orbit');
+    const p1s1Astro = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'astronomy'
+    );
+    expect(p1s1Astro).toBeDefined();
+    if (p1s1Astro && p1s1Astro.type === 'annotation') {
+      expect(p1s1Astro.gloss.startsWith('n.')).toBe(true);
+    }
   });
 
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
