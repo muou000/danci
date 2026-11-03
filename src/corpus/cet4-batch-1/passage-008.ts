@@ -13,8 +13,8 @@ export const PASSAGE_008: Passage = {
       sentences: [
         {
           sentenceNumber: 1,
-          english: "In modern science, cell biology and biochemistry help researchers understand how genes bind living organisms together from birth.",
-          chinese: "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何从诞生之日起将生物有机体联结在一起。"
+          english: "In modern science, cell biology and biochemistry help researchers understand how genes work and how cells bind together within living organisms from birth.",
+          chinese: "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何发挥作用，以及细胞如何从诞生之日起在生物有机体内部联结在一起。"
         },
         {
           sentenceNumber: 2,
@@ -58,13 +58,13 @@ export const PASSAGE_008: Passage = {
       sentences: [
         {
           sentenceNumber: 1,
-          english: "To prevent scientific ambition from turning blind to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
+          english: "To prevent scientific ambition from turning a blind eye to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
           chinese: "为了防止科学野心对人类尊严视而不见，监管机构和伦理委员会必须确立明确的政策准则。"
         },
         {
           sentenceNumber: 2,
-          english: "They maintain strict supervision over genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
-          chinese: "他们对遗传界限实施严格监督，辩论存在争议的实验，并检查实验室以消除潜在隐患。"
+          english: "They maintain strict supervision over research teams, respect genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
+          chinese: "他们对科研团队实施严格监督，遵守遗传界限，辩论存在争议的实验，并检查实验室以消除潜在隐患。"
         },
         {
           sentenceNumber: 3,

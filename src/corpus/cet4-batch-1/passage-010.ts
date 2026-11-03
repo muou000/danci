@@ -35,9 +35,9 @@ export const PASSAGE_010: Passage = {
         {
           sentenceNumber: 4,
           english:
-            'In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed revenue forecasts.',
+            'In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed the budget, even when revenue falls short of forecasts.',
           chinese:
-            '在每周例会中，细心的会计会审查每一笔交易凭据，确保总体支出绝不超过收入预测。',
+            '在每周例会中，细心的会计会审查每一笔交易凭据，确保即使营收不及预期预测，总体支出也绝不超过预算。',
         },
       ],
     },
@@ -47,7 +47,7 @@ export const PASSAGE_010: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'To avoid a severe cash deficit, the management team monitors daily bank balances and rejects speculative market bubbles that often drive careless rivals broke.',
+            'To avoid a severe cash deficit, the management team monitors daily bank balances and rejects pursuing speculative market bubbles that often drive careless rivals broke.',
           chinese:
             '为避免严重的资金赤字，管理团队每日监控银行结余，拒绝追逐那些常使粗心对手破产的投机市场泡沫。',
         },

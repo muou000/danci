@@ -48,8 +48,8 @@ export const PASSAGE_009: Passage = {
         },
         {
           "sentenceNumber": 3,
-          "english": "Meanwhile, skilled carpenters assemble solid wooden furniture and tighten brass bolts into smooth joints to guarantee lasting durability.",
-          "chinese": "与此同时，娴熟的木匠细心组装坚固的木制家具，并将黄铜螺栓拧紧在平滑的接合处，以确保经久耐用。"
+          "english": "Meanwhile, skilled carpenters assemble solid wooden furniture with smooth joints and tighten brass bolts on each door to guarantee lasting durability.",
+          "chinese": "与此同时，娴熟的木匠使用平滑的榫接结构组装坚固的木制家具，并在每扇门上拧紧黄铜门闩，以确保经久耐用。"
         },
         {
           "sentenceNumber": 4,
@@ -68,8 +68,8 @@ export const PASSAGE_009: Passage = {
         },
         {
           "sentenceNumber": 2,
-          "english": "Inside an elegant trade booth, their innovative products attract urban visitors, secure commercial orders, and win widespread praise.",
-          "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，获得了商业订单，并赢得了广泛赞誉。"
+          "english": "Inside an elegant trade booth, their innovative products attract urban visitors, so the team can secure commercial orders and win widespread praise.",
+          "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，因而团队能够获得商业订单并赢得广泛赞誉。"
         },
         {
           "sentenceNumber": 3,
@@ -411,6 +411,15 @@ export const PASSAGE_009: Passage = {
       "gloss": "n.家具；器具"
     },
     {
+      "headwordId": "smooth",
+      "gloss": "a.平滑的；光滑的"
+    },
+    {
+      "headwordId": "joint",
+      "surface": "joints",
+      "gloss": "n.接合处；榫接处"
+    },
+    {
       "headwordId": "tight",
       "surface": "tighten",
       "gloss": "v.拧紧；使紧固"
@@ -423,15 +432,6 @@ export const PASSAGE_009: Passage = {
       "headwordId": "bolt",
       "surface": "bolts",
       "gloss": "n.螺栓；门闩"
-    },
-    {
-      "headwordId": "smooth",
-      "gloss": "a.平滑的；光滑的"
-    },
-    {
-      "headwordId": "joint",
-      "surface": "joints",
-      "gloss": "n.接合处；榫接处"
     },
     {
       "headwordId": "guarantee",

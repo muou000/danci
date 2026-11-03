@@ -20,6 +20,7 @@ async function main() {
   const catalogOutPath = path.join(dataDir, 'syllabus-catalog.json');
   const batchesOutPath = path.join(dataDir, 'batch-manifests.json');
   const compiledDemosOutPath = path.join(dataDir, 'compiled-demos.json');
+  const compiledB1OutPath = path.join(dataDir, 'compiled-cet4-batch-1.json');
   const compiledB1FirstOutPath = path.join(
     dataDir,
     'compiled-cet4-batch-1-first.json'
@@ -51,6 +52,11 @@ async function main() {
   if (compiledB1.length === 0) {
     throw new Error('CET-4 batch 1 must contain at least one passage.');
   }
+  fs.writeFileSync(
+    compiledB1OutPath,
+    JSON.stringify(compiledB1, null, 2) + '\n',
+    'utf8'
+  );
   fs.writeFileSync(
     compiledB1FirstOutPath,
     JSON.stringify(compiledB1[0], null, 2) + '\n',

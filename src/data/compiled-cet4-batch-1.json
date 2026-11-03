@@ -11445,7 +11445,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:flat¹",
                 "surface": "flats",
-                "gloss": "n.浅滩；平原",
+                "gloss": "n.浅滩；滩涂",
                 "headwordId": "flat¹",
                 "shiftX": -19.4
               },
@@ -12066,7 +12066,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:equip",
                 "surface": "Equipped",
-                "gloss": "a.装备有…的；配备好的",
+                "gloss": "a.装备齐全的；配备好的",
                 "headwordId": "equip"
               },
               {
@@ -12645,8 +12645,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Meanwhile, students plant native grass along the coast, creating dense root networks that stabilize soft soil and absorb ocean waves.",
-            "chinese": "与此同时，学生们在沿岸栽种本土草类，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。",
+            "english": "Meanwhile, students plant native grass along the coast to absorb ocean waves, creating dense root networks that stabilize soft soil.",
+            "chinese": "与此同时，学生们在沿岸栽种本土草类以缓冲海浪，形成紧密的根系网络以稳固松软的土壤。",
             "tokens": [
               {
                 "type": "annotation",
@@ -12670,7 +12670,19 @@
               },
               {
                 "type": "text",
-                "text": " grass along the coast, "
+                "text": " grass along the coast to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:absorb",
+                "surface": "absorb",
+                "gloss": "v.吸收；缓冲",
+                "headwordId": "absorb"
+              },
+              {
+                "type": "text",
+                "text": " ocean waves, "
               },
               {
                 "type": "annotation",
@@ -12748,19 +12760,7 @@
               },
               {
                 "type": "text",
-                "text": " soil and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:absorb",
-                "surface": "absorb",
-                "gloss": "v.吸收；缓冲",
-                "headwordId": "absorb"
-              },
-              {
-                "type": "text",
-                "text": " ocean waves."
+                "text": " soil."
               }
             ]
           },
@@ -13058,13 +13058,13 @@
       "waste",
       "meanwhile",
       "native",
+      "absorb",
       "create",
       "dense",
       "root",
       "network",
       "stable",
       "soft",
-      "absorb",
       "persist",
       "restore",
       "effort",
@@ -13090,8 +13090,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In modern science, cell biology and biochemistry help researchers understand how genes bind living organisms together from birth.",
-            "chinese": "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何从诞生之日起将生物有机体联结在一起。",
+            "english": "In modern science, cell biology and biochemistry help researchers understand how genes work and how cells bind together within living organisms from birth.",
+            "chinese": "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何发挥作用，以及细胞如何从诞生之日起在生物有机体内部联结在一起。",
             "tokens": [
               {
                 "type": "text",
@@ -13203,12 +13203,11 @@
                 "itemKey": "word:gene",
                 "surface": "genes",
                 "gloss": "n.基因；遗传因子",
-                "headwordId": "gene",
-                "shiftX": -34.6
+                "headwordId": "gene"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " work and how cells "
               },
               {
                 "type": "annotation",
@@ -13216,12 +13215,11 @@
                 "itemKey": "word:bind",
                 "surface": "bind",
                 "gloss": "v.结合；联结；绑",
-                "headwordId": "bind",
-                "shiftX": -9.9
+                "headwordId": "bind"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " together within "
               },
               {
                 "type": "annotation",
@@ -13230,7 +13228,7 @@
                 "surface": "living",
                 "gloss": "a.活着的；有生命的",
                 "headwordId": "live¹",
-                "shiftX": 21.1
+                "shiftX": -1.1
               },
               {
                 "type": "text",
@@ -13243,11 +13241,11 @@
                 "surface": "organisms",
                 "gloss": "n.有机体；生物",
                 "headwordId": "organism",
-                "shiftX": 23.4
+                "shiftX": 1.1
               },
               {
                 "type": "text",
-                "text": " together from "
+                "text": " from "
               },
               {
                 "type": "annotation",
@@ -14219,7 +14217,7 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "To prevent scientific ambition from turning blind to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
+            "english": "To prevent scientific ambition from turning a blind eye to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
             "chinese": "为了防止科学野心对人类尊严视而不见，监管机构和伦理委员会必须确立明确的政策准则。",
             "tokens": [
               {
@@ -14236,7 +14234,7 @@
               },
               {
                 "type": "text",
-                "text": " from turning blind to human dignity, "
+                "text": " from turning a blind eye to human dignity, "
               },
               {
                 "type": "annotation",
@@ -14315,8 +14313,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They maintain strict supervision over genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
-            "chinese": "他们对遗传界限实施严格监督，辩论存在争议的实验，并检查实验室以消除潜在隐患。",
+            "english": "They maintain strict supervision over research teams, respect genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
+            "chinese": "他们对科研团队实施严格监督，遵守遗传界限，辩论存在争议的实验，并检查实验室以消除潜在隐患。",
             "tokens": [
               {
                 "type": "text",
@@ -14356,7 +14354,7 @@
               },
               {
                 "type": "text",
-                "text": " over genetic "
+                "text": " over research teams, respect genetic "
               },
               {
                 "type": "annotation",
@@ -15744,8 +15742,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Meanwhile, skilled carpenters assemble solid wooden furniture and tighten brass bolts into smooth joints to guarantee lasting durability.",
-            "chinese": "与此同时，娴熟的木匠细心组装坚固的木制家具，并将黄铜螺栓拧紧在平滑的接合处，以确保经久耐用。",
+            "english": "Meanwhile, skilled carpenters assemble solid wooden furniture with smooth joints and tighten brass bolts on each door to guarantee lasting durability.",
+            "chinese": "与此同时，娴熟的木匠使用平滑的榫接结构组装坚固的木制家具，并在每扇门上拧紧黄铜门闩，以确保经久耐用。",
             "tokens": [
               {
                 "type": "annotation",
@@ -15778,6 +15776,32 @@
                 "surface": "furniture",
                 "gloss": "n.家具；器具",
                 "headwordId": "furniture"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:smooth",
+                "surface": "smooth",
+                "gloss": "a.平滑的；光滑的",
+                "headwordId": "smooth",
+                "shiftX": -6.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:joint",
+                "surface": "joints",
+                "gloss": "n.接合处；榫接处",
+                "headwordId": "joint",
+                "shiftX": 6.3
               },
               {
                 "type": "text",
@@ -15820,33 +15844,7 @@
               },
               {
                 "type": "text",
-                "text": " into "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:smooth",
-                "surface": "smooth",
-                "gloss": "a.平滑的；光滑的",
-                "headwordId": "smooth",
-                "shiftX": -6.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:joint",
-                "surface": "joints",
-                "gloss": "n.接合处；榫接处",
-                "headwordId": "joint",
-                "shiftX": 6.3
-              },
-              {
-                "type": "text",
-                "text": " to "
+                "text": " on each door to "
               },
               {
                 "type": "annotation",
@@ -16196,8 +16194,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Inside an elegant trade booth, their innovative products attract urban visitors, secure commercial orders, and win widespread praise.",
-            "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，获得了商业订单，并赢得了广泛赞誉。",
+            "english": "Inside an elegant trade booth, their innovative products attract urban visitors, so the team can secure commercial orders and win widespread praise.",
+            "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，因而团队能够获得商业订单并赢得广泛赞誉。",
             "tokens": [
               {
                 "type": "text",
@@ -16273,7 +16271,7 @@
                 "surface": "attract",
                 "gloss": "v.吸引；引起",
                 "headwordId": "attract",
-                "shiftX": -4.5
+                "shiftX": -3.7
               },
               {
                 "type": "text",
@@ -16286,7 +16284,7 @@
                 "surface": "urban",
                 "gloss": "a.都市的；城市的",
                 "headwordId": "urban",
-                "shiftX": -2.2
+                "shiftX": -1.2
               },
               {
                 "type": "text",
@@ -16299,11 +16297,11 @@
                 "surface": "visitors",
                 "gloss": "n.访客；参观者",
                 "headwordId": "visit",
-                "shiftX": 3.9
+                "shiftX": 4.9
               },
               {
                 "type": "text",
-                "text": ", "
+                "text": ", so the team can "
               },
               {
                 "type": "annotation",
@@ -16311,8 +16309,7 @@
                 "itemKey": "word:secure",
                 "surface": "secure",
                 "gloss": "v.获得；锁定；确保",
-                "headwordId": "secure",
-                "shiftX": 2.8
+                "headwordId": "secure"
               },
               {
                 "type": "text",
@@ -16340,7 +16337,7 @@
               },
               {
                 "type": "text",
-                "text": ", and "
+                "text": " and "
               },
               {
                 "type": "annotation",
@@ -16810,11 +16807,11 @@
       "meanwhile",
       "assemble",
       "furniture",
+      "smooth",
+      "joint",
       "tight",
       "brass",
       "bolt",
-      "smooth",
-      "joint",
       "guarantee",
       "durable",
       "refuse",
@@ -17443,8 +17440,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed revenue forecasts.",
-            "chinese": "在每周例会中，细心的会计会审查每一笔交易凭据，确保总体支出绝不超过收入预测。",
+            "english": "In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed the budget, even when revenue falls short of forecasts.",
+            "chinese": "在每周例会中，细心的会计会审查每一笔交易凭据，确保即使营收不及预期预测，总体支出也绝不超过预算。",
             "tokens": [
               {
                 "type": "text",
@@ -17568,12 +17565,11 @@
                 "itemKey": "word:exceed",
                 "surface": "exceed",
                 "gloss": "v.超过；胜过；超出",
-                "headwordId": "exceed",
-                "shiftX": -13.6
+                "headwordId": "exceed"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " the budget, even when "
               },
               {
                 "type": "annotation",
@@ -17581,12 +17577,11 @@
                 "itemKey": "word:revenue",
                 "surface": "revenue",
                 "gloss": "a.收益的；营业收入的",
-                "headwordId": "revenue",
-                "shiftX": 4.7
+                "headwordId": "revenue"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " falls short of "
               },
               {
                 "type": "annotation",
@@ -17594,8 +17589,7 @@
                 "itemKey": "word:forecast",
                 "surface": "forecasts",
                 "gloss": "n.预测；预报；前瞻",
-                "headwordId": "forecast",
-                "shiftX": 8.8
+                "headwordId": "forecast"
               },
               {
                 "type": "text",
@@ -17611,7 +17605,7 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "To avoid a severe cash deficit, the management team monitors daily bank balances and rejects speculative market bubbles that often drive careless rivals broke.",
+            "english": "To avoid a severe cash deficit, the management team monitors daily bank balances and rejects pursuing speculative market bubbles that often drive careless rivals broke.",
             "chinese": "为避免严重的资金赤字，管理团队每日监控银行结余，拒绝追逐那些常使粗心对手破产的投机市场泡沫。",
             "tokens": [
               {
@@ -17663,7 +17657,7 @@
                 "surface": "monitors",
                 "gloss": "v.监控；监测；监督",
                 "headwordId": "monitor",
-                "shiftX": -43.6
+                "shiftX": -43.4
               },
               {
                 "type": "text",
@@ -17676,7 +17670,7 @@
                 "surface": "daily",
                 "gloss": "a.每日的；日常的；按日的",
                 "headwordId": "daily",
-                "shiftX": -17.9
+                "shiftX": -17.2
               },
               {
                 "type": "text",
@@ -17689,7 +17683,7 @@
                 "surface": "bank",
                 "gloss": "a.银行的；库的",
                 "headwordId": "bank²",
-                "shiftX": 20.3
+                "shiftX": 22
               },
               {
                 "type": "text",
@@ -17702,7 +17696,7 @@
                 "surface": "balances",
                 "gloss": "n.结余；余额；差额",
                 "headwordId": "balance",
-                "shiftX": 29.8
+                "shiftX": 32.8
               },
               {
                 "type": "text",
@@ -17715,11 +17709,11 @@
                 "surface": "rejects",
                 "gloss": "v.拒绝；驳回；排斥",
                 "headwordId": "reject",
-                "shiftX": 1.7
+                "shiftX": 5.8
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " pursuing "
               },
               {
                 "type": "annotation",
@@ -17727,8 +17721,7 @@
                 "itemKey": "word:speculate",
                 "surface": "speculative",
                 "gloss": "a.投机的；推测的；思辨的",
-                "headwordId": "speculate",
-                "shiftX": 9.7
+                "headwordId": "speculate"
               },
               {
                 "type": "text",
@@ -19083,9 +19076,9 @@
     "id": "cet4-b1-011",
     "indexLabel": "NO. 11",
     "tier": "cet4-core",
-    "topic": "城市运河生态改造与青年志愿行动",
-    "titleZh": "城市运河生态改造与青年志愿行动",
-    "titleEn": "Urban Canal Ecological Renewal and Youth Volunteer Campaign",
+    "topic": "城市运河生态修复与青年志愿行动",
+    "titleZh": "城市运河生态修复与青年志愿行动",
+    "titleEn": "Urban Canal Ecological Restoration and Youth Volunteer Campaign",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -19093,12 +19086,25 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Near an ancient canal, a youth campaign was launched on campus to transform urban rivers and relieve the ecological burden.",
-            "chinese": "在一条古运河附近，一项青年运动在校园发起，旨在改造城市河流并减轻生态负担。",
+            "english": "For decades, ancient urban canals suffered from accumulated mud, floating trash, and blocked channels, which imposed a severe ecological burden on the municipal drainage network.",
+            "chinese": "数十年来，古老的城市运河饱受堆积淤泥、漂浮垃圾和堵塞水渠的困扰，这给市政排水管网带来了沉重的生态负担。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Near an "
+                "text": "For "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:decade",
+                "surface": "decades",
+                "gloss": "n.十年；十年期",
+                "headwordId": "decade",
+                "shiftX": -4.7
+              },
+              {
+                "type": "text",
+                "text": ", "
               },
               {
                 "type": "annotation",
@@ -19107,7 +19113,19 @@
                 "surface": "ancient",
                 "gloss": "a.古代的；古老的",
                 "headwordId": "ancient",
-                "shiftX": -3.2
+                "shiftX": -12
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:urban",
+                "surface": "urban",
+                "gloss": "a.城市的；市区的",
+                "headwordId": "urban"
               },
               {
                 "type": "text",
@@ -19117,22 +19135,10 @@
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:canal",
-                "surface": "canal",
+                "surface": "canals",
                 "gloss": "n.运河；水道",
                 "headwordId": "canal",
-                "shiftX": 3.3
-              },
-              {
-                "type": "text",
-                "text": ", a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:youth",
-                "surface": "youth",
-                "gloss": "n.青年；青春",
-                "headwordId": "youth"
+                "shiftX": 9.1
               },
               {
                 "type": "text",
@@ -19141,22 +19147,228 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:campaign",
-                "surface": "campaign",
-                "gloss": "n.运动；活动",
-                "headwordId": "campaign"
+                "itemKey": "word:suffer",
+                "surface": "suffered",
+                "gloss": "v.遭受；受苦；变差",
+                "headwordId": "suffer",
+                "shiftX": 7.1
               },
               {
                 "type": "text",
-                "text": " was "
+                "text": " from "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:launch",
-                "surface": "launched",
-                "gloss": "v.发起；发射",
-                "headwordId": "launch"
+                "itemKey": "word:accumulate",
+                "surface": "accumulated",
+                "gloss": "a.累积的；积聚的",
+                "headwordId": "accumulate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:mud",
+                "surface": "mud",
+                "gloss": "n.淤泥；泥浆",
+                "headwordId": "mud",
+                "shiftX": -2.6
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:float",
+                "surface": "floating",
+                "gloss": "a.浮动的；漂浮的",
+                "headwordId": "float"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:trash",
+                "surface": "trash",
+                "gloss": "n.垃圾；废物",
+                "headwordId": "trash",
+                "shiftX": 2.2
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:block",
+                "surface": "blocked",
+                "gloss": "a.堵塞的；受阻的",
+                "headwordId": "block",
+                "shiftX": -2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:channel",
+                "surface": "channels",
+                "gloss": "n.水渠；航道；渠道",
+                "headwordId": "channel",
+                "shiftX": 2
+              },
+              {
+                "type": "text",
+                "text": ", which "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:impose",
+                "surface": "imposed",
+                "gloss": "v.施加；强加；征税",
+                "headwordId": "impose",
+                "shiftX": -14.9
+              },
+              {
+                "type": "text",
+                "text": " a "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:severe",
+                "surface": "severe",
+                "gloss": "a.严峻的；严重的；严厉的",
+                "headwordId": "severe",
+                "shiftX": -5.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:ecology",
+                "surface": "ecological",
+                "gloss": "a.生态的；生态学的",
+                "headwordId": "ecology",
+                "shiftX": 13.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:burden",
+                "surface": "burden",
+                "gloss": "n.负担；重负",
+                "headwordId": "burden",
+                "shiftX": 7.1
+              },
+              {
+                "type": "text",
+                "text": " on the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:municipal",
+                "surface": "municipal",
+                "gloss": "a.市政的；地方自治的",
+                "headwordId": "municipal",
+                "shiftX": -0.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:drain",
+                "surface": "drainage",
+                "gloss": "a.排水的；排污的",
+                "headwordId": "drain",
+                "shiftX": 0.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:network",
+                "surface": "network",
+                "gloss": "n.网络；网状系统",
+                "headwordId": "network"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Moved by an urgent public bulletin on campus, enthusiastic student volunteers and devoted neighborhood leaders launched a collaborative ecological campaign to restore the historic river.",
+            "chinese": "受校园内一份紧急公告的触动，热情的青年学生志愿者与敬业的社区负责人发起了一项协同生态运动，以修复这条历史悠久的河流。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Moved by an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:urgent",
+                "surface": "urgent",
+                "gloss": "a.紧急的；紧迫的",
+                "headwordId": "urgent",
+                "shiftX": -11.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:public",
+                "surface": "public",
+                "gloss": "a.公共的；公众的",
+                "headwordId": "public",
+                "shiftX": 4.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bulletin",
+                "surface": "bulletin",
+                "gloss": "n.公告；简报",
+                "headwordId": "bulletin",
+                "shiftX": 7.1
               },
               {
                 "type": "text",
@@ -19172,185 +19384,27 @@
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:transform",
-                "surface": "transform",
-                "gloss": "v.改变；使改观",
-                "headwordId": "transform"
+                "itemKey": "word:enthusiasm",
+                "surface": "enthusiastic",
+                "gloss": "a.热情的；热忱的",
+                "headwordId": "enthusiasm"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " student "
               },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:urban",
-                "surface": "urban",
-                "gloss": "a.城市的；都市的",
-                "headwordId": "urban"
-              },
-              {
-                "type": "text",
-                "text": " rivers and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:relieve",
-                "surface": "relieve",
-                "gloss": "v.减轻；缓解",
-                "headwordId": "relieve"
-              },
-              {
-                "type": "text",
-                "text": " the "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:ecology",
-                "surface": "ecological",
-                "gloss": "a.生态的；环境的",
-                "headwordId": "ecology"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:burden",
-                "surface": "burden",
-                "gloss": "n.负担；重担",
-                "headwordId": "burden"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Volunteers read a public bulletin on a wall, deciding to bypass old administrative delays and contact the municipal environmental bureau.",
-            "chinese": "志愿者们阅读墙上的公告，决定绕过旧的行政延误，直接联系市政环保局。",
-            "tokens": [
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:volunteer",
-                "surface": "Volunteers",
+                "surface": "volunteers",
                 "gloss": "n.志愿者；志愿兵",
                 "headwordId": "volunteer"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:read",
-                "surface": "read",
-                "gloss": "v.阅读；看懂",
-                "headwordId": "read",
-                "shiftX": -1.7
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:public",
-                "surface": "public",
-                "gloss": "a.公共的；公众的",
-                "headwordId": "public",
-                "shiftX": -0.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bulletin",
-                "surface": "bulletin",
-                "gloss": "n.公告；简报",
-                "headwordId": "bulletin",
-                "shiftX": 2.3
-              },
-              {
-                "type": "text",
-                "text": " on a wall, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:decide",
-                "surface": "deciding",
-                "gloss": "v.决定；决意",
-                "headwordId": "decide"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bypass",
-                "surface": "bypass",
-                "gloss": "v.绕过；避开",
-                "headwordId": "bypass",
-                "shiftX": -10.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:old",
-                "surface": "old",
-                "gloss": "a.古老的；年老的",
-                "headwordId": "old",
-                "shiftX": 8.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:administer",
-                "surface": "administrative",
-                "gloss": "a.行政的；管理的",
-                "headwordId": "administer",
-                "shiftX": 1.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:delay",
-                "surface": "delays",
-                "gloss": "n.延误；耽搁",
-                "headwordId": "delay"
               },
               {
                 "type": "text",
@@ -19359,8 +19413,104 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
+                "itemKey": "word:devote",
+                "surface": "devoted",
+                "gloss": "a.忠诚的；敬业的；奉献的",
+                "headwordId": "devote"
+              },
+              {
+                "type": "text",
+                "text": " neighborhood "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:lead¹",
+                "surface": "leaders",
+                "gloss": "n.领导者；领袖",
+                "headwordId": "lead¹"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:launch",
+                "surface": "launched",
+                "gloss": "v.发起；启动；推出",
+                "headwordId": "launch"
+              },
+              {
+                "type": "text",
+                "text": " a "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:collaborate",
+                "surface": "collaborative",
+                "gloss": "a.合作的；协同的",
+                "headwordId": "collaborate"
+              },
+              {
+                "type": "text",
+                "text": " ecological "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:campaign",
+                "surface": "campaign",
+                "gloss": "n.活动；专项运动",
+                "headwordId": "campaign"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:restore",
+                "surface": "restore",
+                "gloss": "v.修复；恢复；归还",
+                "headwordId": "restore"
+              },
+              {
+                "type": "text",
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:history",
+                "surface": "historic",
+                "gloss": "a.有历史意义的；历史性的",
+                "headwordId": "history"
+              },
+              {
+                "type": "text",
+                "text": " river."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "They contacted the local environmental bureau to obtain guidance and establish a realistic operational schedule to clean channels and reinforce steep slopes.",
+            "chinese": "他们联系了当地环保局以获取指导，并为清理水渠和加固陡峭斜坡制定了切合实际的施工进度表。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "They "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
                 "itemKey": "word:contact",
-                "surface": "contact",
+                "surface": "contacted",
                 "gloss": "v.联系；联络",
                 "headwordId": "contact"
               },
@@ -19370,11 +19520,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:municipal",
-                "surface": "municipal",
-                "gloss": "a.市政的；地方的",
-                "headwordId": "municipal"
+                "category": "high-frequency",
+                "itemKey": "word:local",
+                "surface": "local",
+                "gloss": "a.当地的；地方的",
+                "headwordId": "local"
               },
               {
                 "type": "text",
@@ -19385,7 +19535,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:environment",
                 "surface": "environmental",
-                "gloss": "a.环境的；生态的",
+                "gloss": "a.环境的；有关环境的",
                 "headwordId": "environment"
               },
               {
@@ -19397,107 +19547,8 @@
                 "category": "regular",
                 "itemKey": "word:bureau",
                 "surface": "bureau",
-                "gloss": "n.局；司",
+                "gloss": "n.局；司；办事处",
                 "headwordId": "bureau"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "A busy businessman who owns a local cafe and nearby cafeteria promised to buy fresh cabbage and supply hot meals from his kitchen cabinet.",
-            "chinese": "一位拥有当地咖啡馆和附近自助餐厅的忙碌商人承诺采购新鲜卷心菜，并从厨房橱柜中提供热餐。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:busy",
-                "surface": "busy",
-                "gloss": "a.忙碌的；繁忙的",
-                "headwordId": "busy"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:businessman",
-                "surface": "businessman",
-                "gloss": "n.商人；实业家",
-                "headwordId": "businessman"
-              },
-              {
-                "type": "text",
-                "text": " who owns a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:local",
-                "surface": "local",
-                "gloss": "a.当地的；地方的",
-                "headwordId": "local",
-                "shiftX": -15.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cafe",
-                "surface": "cafe",
-                "gloss": "n.咖啡馆；小餐馆",
-                "headwordId": "cafe",
-                "shiftX": 14.2
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:nearby",
-                "surface": "nearby",
-                "gloss": "a.附近的；邻近的",
-                "headwordId": "nearby",
-                "shiftX": 1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cafeteria",
-                "surface": "cafeteria",
-                "gloss": "n.自助餐厅；食堂",
-                "headwordId": "cafeteria"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:promise",
-                "surface": "promised",
-                "gloss": "v.承诺；答应",
-                "headwordId": "promise"
               },
               {
                 "type": "text",
@@ -19506,24 +19557,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:buy",
-                "surface": "buy",
-                "gloss": "v.采购；购买",
-                "headwordId": "buy",
-                "shiftX": -18.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:fresh",
-                "surface": "fresh",
-                "gloss": "a.新鲜的；清新的",
-                "headwordId": "fresh",
-                "shiftX": 3.4
+                "itemKey": "word:obtain",
+                "surface": "obtain",
+                "gloss": "v.获得；得到",
+                "headwordId": "obtain"
               },
               {
                 "type": "text",
@@ -19532,11 +19569,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cabbage",
-                "surface": "cabbage",
-                "gloss": "n.卷心菜；洋白菜",
-                "headwordId": "cabbage",
-                "shiftX": 14.7
+                "itemKey": "word:guide",
+                "surface": "guidance",
+                "gloss": "n.指导；指引",
+                "headwordId": "guide"
               },
               {
                 "type": "text",
@@ -19545,22 +19581,100 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:supply",
-                "surface": "supply",
-                "gloss": "v.供应；提供",
-                "headwordId": "supply"
+                "itemKey": "word:establish",
+                "surface": "establish",
+                "gloss": "v.建立；制定；确立",
+                "headwordId": "establish"
               },
               {
                 "type": "text",
-                "text": " hot meals from his kitchen "
+                "text": " a "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cabinet",
-                "surface": "cabinet",
-                "gloss": "n.储藏柜；内阁",
-                "headwordId": "cabinet"
+                "itemKey": "word:realistic",
+                "surface": "realistic",
+                "gloss": "a.切合实际的；现实的",
+                "headwordId": "realistic",
+                "shiftX": -5.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:operate",
+                "surface": "operational",
+                "gloss": "a.操作的；运行的；可行的",
+                "headwordId": "operate",
+                "shiftX": 2.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:schedule",
+                "surface": "schedule",
+                "gloss": "n.日程表；进度表",
+                "headwordId": "schedule",
+                "shiftX": 2.9
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:clean",
+                "surface": "clean",
+                "gloss": "v.打扫；清理",
+                "headwordId": "clean"
+              },
+              {
+                "type": "text",
+                "text": " channels and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:reinforce",
+                "surface": "reinforce",
+                "gloss": "v.加固；强化；增援",
+                "headwordId": "reinforce",
+                "shiftX": -7.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:steep",
+                "surface": "steep",
+                "gloss": "a.陡峭的；险峻的",
+                "headwordId": "steep",
+                "shiftX": -0.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:slope",
+                "surface": "slopes",
+                "gloss": "n.斜坡；山坡",
+                "headwordId": "slope",
+                "shiftX": 8.4
               },
               {
                 "type": "text",
@@ -19571,68 +19685,204 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Taking a yellow cab, team members bump along the road to arrive at a wooden cabin and set up their weekend camp.",
-            "chinese": "乘坐黄色出租车，团队成员一路颠簸前行，到达一座木屋并搭建起周末营地。",
+            "english": "Generous merchants in the commercial district contributed funds to supply durable metal tools, rubber boots, and strong cables for the initial field tasks.",
+            "chinese": "商业区的慷慨商户捐助了资金，为初期实地任务提供耐用的金属工具、橡胶靴和坚固的缆绳。",
             "tokens": [
               {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:generous",
+                "surface": "Generous",
+                "gloss": "a.慷慨的；大方的",
+                "headwordId": "generous"
+              },
+              {
                 "type": "text",
-                "text": "Taking a yellow "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cab",
-                "surface": "cab",
-                "gloss": "n.出租汽车；出租车",
-                "headwordId": "cab"
+                "itemKey": "word:merchant",
+                "surface": "merchants",
+                "gloss": "n.商人；商户",
+                "headwordId": "merchant"
               },
               {
                 "type": "text",
-                "text": ", team members "
+                "text": " in the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:commerce",
+                "surface": "commercial",
+                "gloss": "a.商业的；商务的",
+                "headwordId": "commerce"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:bump",
-                "surface": "bump",
-                "gloss": "v.颠簸；碰撞",
-                "headwordId": "bump"
+                "itemKey": "word:district",
+                "surface": "district",
+                "gloss": "n.区域；地区；行政区",
+                "headwordId": "district"
               },
               {
                 "type": "text",
-                "text": " along the road to "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:contribute",
+                "surface": "contributed",
+                "gloss": "v.捐赠；贡献；促成",
+                "headwordId": "contribute"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:fund",
+                "surface": "funds",
+                "gloss": "n.资金；专款",
+                "headwordId": "fund"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:supply",
+                "surface": "supply",
+                "gloss": "v.供给；提供",
+                "headwordId": "supply",
+                "shiftX": -16.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:durable",
+                "surface": "durable",
+                "gloss": "a.耐用的；持久的",
+                "headwordId": "durable",
+                "shiftX": -19.9
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:arrive",
-                "surface": "arrive",
-                "gloss": "v.到达；来临",
-                "headwordId": "arrive"
+                "itemKey": "word:metal",
+                "surface": "metal",
+                "gloss": "a.金属的；金属制的",
+                "headwordId": "metal",
+                "shiftX": -8.2
               },
               {
                 "type": "text",
-                "text": " at a wooden "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cabin",
-                "surface": "cabin",
-                "gloss": "n.小木屋；客舱",
-                "headwordId": "cabin"
+                "itemKey": "word:tool",
+                "surface": "tools",
+                "gloss": "n.工具；用具",
+                "headwordId": "tool",
+                "shiftX": 5
               },
               {
                 "type": "text",
-                "text": " and set up their weekend "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:camp",
-                "surface": "camp",
-                "gloss": "n.营地；度假营",
-                "headwordId": "camp"
+                "itemKey": "word:rubber",
+                "surface": "rubber",
+                "gloss": "a.橡胶的；橡皮制的",
+                "headwordId": "rubber",
+                "shiftX": 9.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:boot",
+                "surface": "boots",
+                "gloss": "n.靴子；长筒靴",
+                "headwordId": "boot",
+                "shiftX": 23.8
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:strong",
+                "surface": "strong",
+                "gloss": "a.强壮的；坚固的",
+                "headwordId": "strong",
+                "shiftX": -5.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cable",
+                "surface": "cables",
+                "gloss": "n.缆绳；钢索；电缆",
+                "headwordId": "cable",
+                "shiftX": 11.1
+              },
+              {
+                "type": "text",
+                "text": " for the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:initial",
+                "surface": "initial",
+                "gloss": "a.最初的；开头的",
+                "headwordId": "initial"
+              },
+              {
+                "type": "text",
+                "text": " field "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:task",
+                "surface": "tasks",
+                "gloss": "n.任务；作业；工作",
+                "headwordId": "task"
               },
               {
                 "type": "text",
@@ -19648,60 +19898,16 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Workers use a strong steel cable to pull heavy stones, taking care not to bump the car bumper or harm a delicate butterfly in the green bush.",
-            "chinese": "工人们使用坚固的钢缆拉动沉重的石头，小心不撞到汽车保险杠，也不伤害绿树丛中娇嫩的蝴蝶。",
+            "english": "Deciding to bypass administrative delays, the teams assembled beside the water early every morning, refusing to let passive excuses hinder urgent action.",
+            "chinese": "团队决定绕过繁琐的行政延误，每天清晨在水边集合，拒绝让消极的借口耽搁紧急行动。",
             "tokens": [
               {
-                "type": "text",
-                "text": "Workers "
-              },
-              {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:use",
-                "surface": "use",
-                "gloss": "v.使用；运用",
-                "headwordId": "use",
-                "shiftX": -7.2
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:strong",
-                "surface": "strong",
-                "gloss": "a.强壮的；强烈的",
-                "headwordId": "strong",
-                "shiftX": -6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:steel",
-                "surface": "steel",
-                "gloss": "n.钢铁；钢材",
-                "headwordId": "steel",
-                "shiftX": 3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cable",
-                "surface": "cable",
-                "gloss": "n.缆绳；电缆",
-                "headwordId": "cable",
-                "shiftX": 10.2
+                "itemKey": "word:decide",
+                "surface": "Deciding",
+                "gloss": "v.决定；决意",
+                "headwordId": "decide"
               },
               {
                 "type": "text",
@@ -19710,11 +19916,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:pull",
-                "surface": "pull",
-                "gloss": "v.拉；拖",
-                "headwordId": "pull",
-                "shiftX": -6
+                "itemKey": "word:bypass",
+                "surface": "bypass",
+                "gloss": "v.绕过；避开",
+                "headwordId": "bypass"
               },
               {
                 "type": "text",
@@ -19723,83 +19928,94 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:heavy",
-                "surface": "heavy",
-                "gloss": "a.沉重的；繁重的",
-                "headwordId": "heavy",
-                "shiftX": 6
+                "itemKey": "word:administer",
+                "surface": "administrative",
+                "gloss": "a.行政的；管理的",
+                "headwordId": "administer"
               },
               {
                 "type": "text",
-                "text": " stones, taking "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:delay",
+                "surface": "delays",
+                "gloss": "n.耽搁；延误",
+                "headwordId": "delay"
+              },
+              {
+                "type": "text",
+                "text": ", the teams "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:assemble",
+                "surface": "assembled",
+                "gloss": "v.聚集；集合；装配",
+                "headwordId": "assemble"
+              },
+              {
+                "type": "text",
+                "text": " beside the water early every morning, "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:refuse",
+                "surface": "refusing",
+                "gloss": "v.拒绝；回绝",
+                "headwordId": "refuse"
+              },
+              {
+                "type": "text",
+                "text": " to let "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:passive",
+                "surface": "passive",
+                "gloss": "a.被动的；消极的",
+                "headwordId": "passive"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:excuse",
+                "surface": "excuses",
+                "gloss": "n.借口；理由",
+                "headwordId": "excuse"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:care",
-                "surface": "care",
-                "gloss": "n.小心；照料",
-                "headwordId": "care"
+                "itemKey": "word:hinder",
+                "surface": "hinder",
+                "gloss": "v.阻碍；妨碍",
+                "headwordId": "hinder"
               },
               {
                 "type": "text",
-                "text": " not to bump the car "
+                "text": " urgent "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bumper",
-                "surface": "bumper",
-                "gloss": "n.保险杠；减震器",
-                "headwordId": "bumper"
-              },
-              {
-                "type": "text",
-                "text": " or "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:harm",
-                "surface": "harm",
-                "gloss": "v.伤害；损害",
-                "headwordId": "harm"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:delicate",
-                "surface": "delicate",
-                "gloss": "a.娇嫩的；纤细的",
-                "headwordId": "delicate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:butterfly",
-                "surface": "butterfly",
-                "gloss": "n.蝴蝶；蝶泳",
-                "headwordId": "butterfly"
-              },
-              {
-                "type": "text",
-                "text": " in the green "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bush",
-                "surface": "bush",
-                "gloss": "n.灌木；灌木丛",
-                "headwordId": "bush"
+                "category": "high-frequency",
+                "itemKey": "word:act",
+                "surface": "action",
+                "gloss": "n.行动；行为；活动",
+                "headwordId": "act"
               },
               {
                 "type": "text",
@@ -19810,20 +20026,21 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They bury accumulated trash, burn wood safely, and clear water channels so that trapped fish burst into active motion.",
-            "chinese": "他们掩埋堆积的垃圾，安全焚烧废木，清理水渠使受困的鱼儿欢跃游动。",
+            "english": "Through intense physical labor, workers pulled decayed timber and heavy waste from deep channels, while volunteers cleared wild weeds and thick bushes along the muddy slope.",
+            "chinese": "通过艰苦的体力劳动，工人们从深水渠中拉出腐烂的原木和沉重的废弃物，而志愿者们则清除了泥泞斜坡上的杂草与茂密灌木。",
             "tokens": [
               {
                 "type": "text",
-                "text": "They "
+                "text": "Through "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bury",
-                "surface": "bury",
-                "gloss": "v.掩埋；埋葬",
-                "headwordId": "bury"
+                "category": "high-frequency",
+                "itemKey": "word:intense",
+                "surface": "intense",
+                "gloss": "a.强烈的；紧张的；剧烈的",
+                "headwordId": "intense",
+                "shiftX": -34.6
               },
               {
                 "type": "text",
@@ -19832,10 +20049,37 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:accumulate",
-                "surface": "accumulated",
-                "gloss": "v.积累；累加",
-                "headwordId": "accumulate"
+                "itemKey": "word:physical",
+                "surface": "physical",
+                "gloss": "a.身体的；物质的；物理的",
+                "headwordId": "physical",
+                "shiftX": 0.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:labor",
+                "surface": "labor",
+                "gloss": "n.劳动力；辛苦劳作",
+                "headwordId": "labor",
+                "shiftX": 33.9
+              },
+              {
+                "type": "text",
+                "text": ", workers "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:pull",
+                "surface": "pulled",
+                "gloss": "v.拖拽；拔出",
+                "headwordId": "pull",
+                "shiftX": -0.9
               },
               {
                 "type": "text",
@@ -19844,28 +20088,129 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:trash",
-                "surface": "trash",
-                "gloss": "n.垃圾；废物",
-                "headwordId": "trash",
-                "shiftX": -1.2
+                "itemKey": "word:decay",
+                "surface": "decayed",
+                "gloss": "a.腐烂的；衰退的",
+                "headwordId": "decay",
+                "shiftX": 0.9
               },
               {
                 "type": "text",
-                "text": ", "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:burn",
-                "surface": "burn",
-                "gloss": "v.焚烧；燃烧",
-                "headwordId": "burn",
-                "shiftX": 1.2
+                "itemKey": "word:timber",
+                "surface": "timber",
+                "gloss": "n.木材；原木",
+                "headwordId": "timber"
               },
               {
                 "type": "text",
-                "text": " wood "
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:heavy",
+                "surface": "heavy",
+                "gloss": "a.沉重的；繁重的",
+                "headwordId": "heavy",
+                "shiftX": -4.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:waste",
+                "surface": "waste",
+                "gloss": "n.废物；垃圾",
+                "headwordId": "waste",
+                "shiftX": 4.6
+              },
+              {
+                "type": "text",
+                "text": " from "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深的；深厚的；深刻的",
+                "headwordId": "deep"
+              },
+              {
+                "type": "text",
+                "text": " channels, while volunteers cleared "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:wild",
+                "surface": "wild",
+                "gloss": "a.野生的；荒凉的",
+                "headwordId": "wild",
+                "shiftX": -7.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:weed",
+                "surface": "weeds",
+                "gloss": "n.杂草；野草",
+                "headwordId": "weed",
+                "shiftX": 7.6
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:thick",
+                "surface": "thick",
+                "gloss": "a.茂密的；厚重的",
+                "headwordId": "thick",
+                "shiftX": -6.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bush",
+                "surface": "bushes",
+                "gloss": "n.灌木；灌木丛",
+                "headwordId": "bush",
+                "shiftX": 6.8
+              },
+              {
+                "type": "text",
+                "text": " along the muddy slope."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "They safely sorted accumulated rubbish, tied recyclable plastics into tidy bundles, and transported poisonous chemicals to authorized disposal facilities.",
+            "chinese": "他们安全地分拣堆积的垃圾，将可回收塑料扎成整齐的捆包，并将有毒化学品运往指定的处理设施。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "They "
               },
               {
                 "type": "annotation",
@@ -19877,37 +20222,582 @@
               },
               {
                 "type": "text",
-                "text": ", and clear water "
+                "text": " sorted accumulated "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:channel",
-                "surface": "channels",
-                "gloss": "n.海峡；渠道",
-                "headwordId": "channel"
+                "itemKey": "word:rubbish",
+                "surface": "rubbish",
+                "gloss": "n.垃圾；废物",
+                "headwordId": "rubbish",
+                "shiftX": -7.4
               },
               {
                 "type": "text",
-                "text": " so that "
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:tie",
+                "surface": "tied",
+                "gloss": "v.捆扎；系紧",
+                "headwordId": "tie",
+                "shiftX": -11.2
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:trap",
-                "surface": "trapped",
-                "gloss": "n.陷阱；诡计",
-                "headwordId": "trap"
+                "itemKey": "word:recycle",
+                "surface": "recyclable",
+                "gloss": "a.可回收利用的；可循环的",
+                "headwordId": "recycle",
+                "shiftX": 5.1
               },
               {
                 "type": "text",
-                "text": " fish "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:plastic",
+                "surface": "plastics",
+                "gloss": "n.塑料；塑料制品",
+                "headwordId": "plastic",
+                "shiftX": 13.5
+              },
+              {
+                "type": "text",
+                "text": " into "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:tidy",
+                "surface": "tidy",
+                "gloss": "a.整洁的；整齐的",
+                "headwordId": "tidy",
+                "shiftX": -3.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bundle",
+                "surface": "bundles",
+                "gloss": "n.捆；包裹",
+                "headwordId": "bundle",
+                "shiftX": 3.4
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transport",
+                "surface": "transported",
+                "gloss": "v.运送；运输",
+                "headwordId": "transport"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:poison",
+                "surface": "poisonous",
+                "gloss": "a.有毒的；有害的",
+                "headwordId": "poison"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:chemistry",
+                "surface": "chemicals",
+                "gloss": "n.化学品；化学试剂",
+                "headwordId": "chemistry"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:authorize",
+                "surface": "authorized",
+                "gloss": "a.授权的；批准的",
+                "headwordId": "authorize"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:dispose",
+                "surface": "disposal",
+                "gloss": "n.处理；处置",
+                "headwordId": "dispose"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:facility",
+                "surface": "facilities",
+                "gloss": "n.设施；设备",
+                "headwordId": "facility"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 4,
+            "circledNumber": "④",
+            "english": "Meanwhile, young researchers collected water samples to inspect dissolved oxygen, monitor contamination levels, and calculate the overall speed of environmental recovery.",
+            "chinese": "与此同时，年轻的研究人员采集水样以检测溶解氧，监测污染程度，并计算环境恢复的整体速度。",
+            "tokens": [
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:meanwhile",
+                "surface": "Meanwhile",
+                "gloss": "ad.同时地；在此期间地",
+                "headwordId": "meanwhile"
+              },
+              {
+                "type": "text",
+                "text": ", young "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:research",
+                "surface": "researchers",
+                "gloss": "n.研究人员；调查者",
+                "headwordId": "research"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:collect",
+                "surface": "collected",
+                "gloss": "v.采集；收集",
+                "headwordId": "collect"
+              },
+              {
+                "type": "text",
+                "text": " water "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sample",
+                "surface": "samples",
+                "gloss": "n.样本；样品",
+                "headwordId": "sample"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:inspect",
+                "surface": "inspect",
+                "gloss": "v.检查；视察",
+                "headwordId": "inspect"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:dissolve",
+                "surface": "dissolved",
+                "gloss": "a.溶解的；溶化的",
+                "headwordId": "dissolve"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:oxygen",
+                "surface": "oxygen",
+                "gloss": "n.氧；氧气",
+                "headwordId": "oxygen"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:monitor",
+                "surface": "monitor",
+                "gloss": "v.监控；监测",
+                "headwordId": "monitor"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:contaminate",
+                "surface": "contamination",
+                "gloss": "n.污染；污染物",
+                "headwordId": "contaminate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:level",
+                "surface": "levels",
+                "gloss": "n.水平；程度",
+                "headwordId": "level"
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:calculate",
+                "surface": "calculate",
+                "gloss": "v.计算；核算",
+                "headwordId": "calculate"
+              },
+              {
+                "type": "text",
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:overall",
+                "surface": "overall",
+                "gloss": "a.全面的；总体的",
+                "headwordId": "overall",
+                "shiftX": -3.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:speed",
+                "surface": "speed",
+                "gloss": "n.速度；速率",
+                "headwordId": "speed",
+                "shiftX": 3.3
+              },
+              {
+                "type": "text",
+                "text": " of environmental "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:recover",
+                "surface": "recovery",
+                "gloss": "n.恢复；痊愈",
+                "headwordId": "recover"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraphNumber": 3,
+        "sentences": [
+          {
+            "sentenceNumber": 1,
+            "circledNumber": "①",
+            "english": "As clean currents flow freely through the restored channel, native fish and delicate wild plants flourish in the renewed natural habitat.",
+            "chinese": "随着清澈的水流在修复后的水渠中自由流淌，本土鱼类与娇嫩的野生植物在焕然一新的自然栖息地中繁茂生长。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "As clean "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:current",
+                "surface": "currents",
+                "gloss": "n.水流；水动力",
+                "headwordId": "current",
+                "shiftX": -3.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:flow",
+                "surface": "flow",
+                "gloss": "v.流动；流淌",
+                "headwordId": "flow",
+                "shiftX": -6.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:free",
+                "surface": "freely",
+                "gloss": "ad.自由地；畅通地",
+                "headwordId": "free",
+                "shiftX": 9.4
+              },
+              {
+                "type": "text",
+                "text": " through the restored channel, "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:native",
+                "surface": "native",
+                "gloss": "a.本土的；土产的",
+                "headwordId": "native"
+              },
+              {
+                "type": "text",
+                "text": " fish and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:delicate",
+                "surface": "delicate",
+                "gloss": "a.娇嫩的；纤细的",
+                "headwordId": "delicate"
+              },
+              {
+                "type": "text",
+                "text": " wild plants "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:flourish",
+                "surface": "flourish",
+                "gloss": "v.繁茂；繁荣",
+                "headwordId": "flourish"
+              },
+              {
+                "type": "text",
+                "text": " in the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:renew",
+                "surface": "renewed",
+                "gloss": "a.更新的；恢复的",
+                "headwordId": "renew",
+                "shiftX": -4.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:nature",
+                "surface": "natural",
+                "gloss": "a.自然的；天性的",
+                "headwordId": "nature",
+                "shiftX": -3.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:habitat",
+                "surface": "habitat",
+                "gloss": "n.栖息地；生态环境",
+                "headwordId": "habitat",
+                "shiftX": 7.1
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Local residents and curious visitors gather along the green banks, admiring colorful butterflies around blooming bushes and graceful birds bursting into active motion.",
+            "chinese": "当地居民与好奇的访客聚集在绿意盎然的河岸旁，欣赏着盛开灌木丛周围的五彩蝴蝶，以及跃入欢快飞翔的优美鸟儿。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Local "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:reside",
+                "surface": "residents",
+                "gloss": "n.居民；定居者",
+                "headwordId": "reside"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:curious",
+                "surface": "curious",
+                "gloss": "a.好奇的；好求知的",
+                "headwordId": "curious",
+                "shiftX": -1.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:visit",
+                "surface": "visitors",
+                "gloss": "n.访客；参观者",
+                "headwordId": "visit",
+                "shiftX": 1.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:gather",
+                "surface": "gather",
+                "gloss": "v.聚集；集合",
+                "headwordId": "gather"
+              },
+              {
+                "type": "text",
+                "text": " along the green banks, "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:admire",
+                "surface": "admiring",
+                "gloss": "v.欣赏；赞赏",
+                "headwordId": "admire"
+              },
+              {
+                "type": "text",
+                "text": " colorful "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:butterfly",
+                "surface": "butterflies",
+                "gloss": "n.蝴蝶；蝶泳",
+                "headwordId": "butterfly"
+              },
+              {
+                "type": "text",
+                "text": " around "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bloom",
+                "surface": "blooming",
+                "gloss": "a.盛开的；蓬勃的",
+                "headwordId": "bloom"
+              },
+              {
+                "type": "text",
+                "text": " bushes and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:grace",
+                "surface": "graceful",
+                "gloss": "a.优美的；优雅的",
+                "headwordId": "grace"
+              },
+              {
+                "type": "text",
+                "text": " birds "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:burst",
-                "surface": "burst",
+                "surface": "bursting",
                 "gloss": "v.突然发作；冲出",
                 "headwordId": "burst"
               },
@@ -19933,7 +20823,7 @@
                 "category": "regular",
                 "itemKey": "word:motion",
                 "surface": "motion",
-                "gloss": "n.运动；摆动",
+                "gloss": "n.运动；走动",
                 "headwordId": "motion",
                 "shiftX": 1.9
               },
@@ -19946,43 +20836,17 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Neither a bully nor a passive bystander can disrupt the work, as volunteers answer a noble calling to protect natural habitats.",
-            "chinese": "欺凌者和消极的旁观者都无法扰乱这项工作，因为志愿者响应了保护自然栖息地的高尚使命。",
+            "english": "Neither harsh criticism nor physical fatigue could shake the team's calm determination to defend municipal water security.",
+            "chinese": "无论是严厉的批评还是身体的疲惫，都无法动摇团队捍卫市政水安全时的冷静决心。",
             "tokens": [
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:neither",
                 "surface": "Neither",
-                "gloss": "a.两者的；都不的",
+                "gloss": "conj.既不；也不",
                 "headwordId": "neither",
-                "shiftX": -4.9
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bully",
-                "surface": "bully",
-                "gloss": "n.霸凌者；恃强凌弱者",
-                "headwordId": "bully",
-                "shiftX": 4.9
-              },
-              {
-                "type": "text",
-                "text": " nor a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:passive",
-                "surface": "passive",
-                "gloss": "a.被动的；消极的",
-                "headwordId": "passive",
-                "shiftX": -1.3
+                "shiftX": -5.4
               },
               {
                 "type": "text",
@@ -19991,11 +20855,11 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:bystander",
-                "surface": "bystander",
-                "gloss": "n.旁观者；局外人",
-                "headwordId": "bystander",
-                "shiftX": -7.3
+                "itemKey": "word:harsh",
+                "surface": "harsh",
+                "gloss": "a.严厉的；苛刻的",
+                "headwordId": "harsh",
+                "shiftX": 4.6
               },
               {
                 "type": "text",
@@ -20004,11 +20868,47 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:can²",
-                "surface": "can",
-                "gloss": "n.金属罐；听头",
-                "headwordId": "can²",
-                "shiftX": -0.5
+                "itemKey": "word:criticize",
+                "surface": "criticism",
+                "gloss": "n.批评；指责",
+                "headwordId": "criticize",
+                "shiftX": 0.8
+              },
+              {
+                "type": "text",
+                "text": " nor physical "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:fatigue",
+                "surface": "fatigue",
+                "gloss": "n.疲劳；疲惫",
+                "headwordId": "fatigue"
+              },
+              {
+                "type": "text",
+                "text": " could "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:shake",
+                "surface": "shake",
+                "gloss": "v.摇动；动摇",
+                "headwordId": "shake"
+              },
+              {
+                "type": "text",
+                "text": " the team's "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:calm",
+                "surface": "calm",
+                "gloss": "a.冷静的；沉着的",
+                "headwordId": "calm"
               },
               {
                 "type": "text",
@@ -20017,24 +20917,97 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:disrupt",
-                "surface": "disrupt",
-                "gloss": "v.扰乱；中断",
-                "headwordId": "disrupt",
-                "shiftX": 9.1
+                "itemKey": "word:determine",
+                "surface": "determination",
+                "gloss": "n.决心；坚定",
+                "headwordId": "determine"
               },
               {
                 "type": "text",
-                "text": " the work, as volunteers answer a "
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:defend",
+                "surface": "defend",
+                "gloss": "v.保卫；防守",
+                "headwordId": "defend"
+              },
+              {
+                "type": "text",
+                "text": " municipal water "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:secure",
+                "surface": "security",
+                "gloss": "n.安全；防卫",
+                "headwordId": "secure"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 4,
+            "circledNumber": "④",
+            "english": "This collective effort proves that answering a noble calling brings renewed vitality and enduring glory to the city's living heritage.",
+            "chinese": "这项集体努力证明，响应崇高使命能够为城市的活态遗产带来焕发的生机与持久的荣耀。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "This "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:collective",
+                "surface": "collective",
+                "gloss": "a.集体的；共同的",
+                "headwordId": "collective"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:effort",
+                "surface": "effort",
+                "gloss": "n.努力；艰难尝试",
+                "headwordId": "effort",
+                "shiftX": -1.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:prove",
+                "surface": "proves",
+                "gloss": "v.证明；证实",
+                "headwordId": "prove",
+                "shiftX": 1.3
+              },
+              {
+                "type": "text",
+                "text": " that answering a "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:noble",
                 "surface": "noble",
-                "gloss": "a.高尚的；贵族的",
+                "gloss": "a.高尚的；崇高的",
                 "headwordId": "noble",
-                "shiftX": -9.6
+                "shiftX": -14.8
               },
               {
                 "type": "text",
@@ -20047,650 +21020,6 @@
                 "surface": "calling",
                 "gloss": "n.使命；职业召唤",
                 "headwordId": "calling",
-                "shiftX": 9.6
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:protect",
-                "surface": "protect",
-                "gloss": "v.保护；守护",
-                "headwordId": "protect"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:nature",
-                "surface": "natural",
-                "gloss": "a.自然的；天性的",
-                "headwordId": "nature"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:habitat",
-                "surface": "habitats",
-                "gloss": "n.栖息地；生境",
-                "headwordId": "habitat"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Even when sudden difficulties call for urgent action, leaders remain calm and calculate required resources with care.",
-            "chinese": "即使突发困难需要紧急行动，负责人们依然保持冷静，并细致计算所需资源。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Even when "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sudden",
-                "surface": "sudden",
-                "gloss": "a.突然的；意外的",
-                "headwordId": "sudden"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:difficult",
-                "surface": "difficulties",
-                "gloss": "a.困难的；难对付的",
-                "headwordId": "difficult"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:call",
-                "surface": "call",
-                "gloss": "v.呼叫；召集",
-                "headwordId": "call"
-              },
-              {
-                "type": "text",
-                "text": " for "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:urgent",
-                "surface": "urgent",
-                "gloss": "a.紧急的；迫切的",
-                "headwordId": "urgent",
-                "shiftX": -2.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:act",
-                "surface": "action",
-                "gloss": "n.起诉；行动",
-                "headwordId": "act",
-                "shiftX": 2.3
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:lead¹",
-                "surface": "leaders",
-                "gloss": "n.领导者；领袖",
-                "headwordId": "lead¹"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:remain",
-                "surface": "remain",
-                "gloss": "v.保持；依然",
-                "headwordId": "remain",
-                "shiftX": -5.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:calm",
-                "surface": "calm",
-                "gloss": "a.冷静的；沉着的",
-                "headwordId": "calm",
-                "shiftX": 5.3
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:calculate",
-                "surface": "calculate",
-                "gloss": "v.计算；核算",
-                "headwordId": "calculate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:require",
-                "surface": "required",
-                "gloss": "a.必需的；要求的",
-                "headwordId": "require"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:resource",
-                "surface": "resources",
-                "gloss": "n.资源；财力",
-                "headwordId": "resource"
-              },
-              {
-                "type": "text",
-                "text": " with care."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "paragraphNumber": 3,
-        "sentences": [
-          {
-            "sentenceNumber": 1,
-            "circledNumber": "①",
-            "english": "In a nearby field, a friendly butcher feeds a young calf and a gentle camel beside an empty wire cage.",
-            "chinese": "在附近的田野里，一位友善的屠夫在一个空铁丝笼旁喂养一只小牛和一峰温顺的骆驼。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "In a nearby field, a friendly "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:butcher",
-                "surface": "butcher",
-                "gloss": "n.屠夫；肉商",
-                "headwordId": "butcher"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:feed",
-                "surface": "feeds",
-                "gloss": "v.喂养；供给",
-                "headwordId": "feed"
-              },
-              {
-                "type": "text",
-                "text": " a young "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:calf",
-                "surface": "calf",
-                "gloss": "n.牛犊；小牛",
-                "headwordId": "calf"
-              },
-              {
-                "type": "text",
-                "text": " and a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:gentle",
-                "surface": "gentle",
-                "gloss": "a.温和的；轻柔的",
-                "headwordId": "gentle",
-                "shiftX": -4.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:camel",
-                "surface": "camel",
-                "gloss": "n.骆驼；驼色",
-                "headwordId": "camel",
-                "shiftX": 4.3
-              },
-              {
-                "type": "text",
-                "text": " beside an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:empty",
-                "surface": "empty",
-                "gloss": "a.空的；空荡的",
-                "headwordId": "empty",
-                "shiftX": -14.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:wire",
-                "surface": "wire",
-                "gloss": "n.金属线；铁丝",
-                "headwordId": "wire",
-                "shiftX": -1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cage",
-                "surface": "cage",
-                "gloss": "n.鸟笼；兽笼",
-                "headwordId": "cage",
-                "shiftX": 15.3
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Students gather a fresh bunch of wild plants, tie them into a tidy bundle, and check the calendar to schedule cleaning days.",
-            "chinese": "学生们采摘了一束新鲜的野生植物，将其扎成整齐的一捆，并查看日历以安排清理日期。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Students "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:gather",
-                "surface": "gather",
-                "gloss": "v.聚集；采集",
-                "headwordId": "gather"
-              },
-              {
-                "type": "text",
-                "text": " a fresh "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bunch",
-                "surface": "bunch",
-                "gloss": "n.一束；一串",
-                "headwordId": "bunch"
-              },
-              {
-                "type": "text",
-                "text": " of "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:wild",
-                "surface": "wild",
-                "gloss": "a.野生的；狂野的",
-                "headwordId": "wild"
-              },
-              {
-                "type": "text",
-                "text": " plants, "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:tie",
-                "surface": "tie",
-                "gloss": "v.系紧；打结",
-                "headwordId": "tie"
-              },
-              {
-                "type": "text",
-                "text": " them into a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:tidy",
-                "surface": "tidy",
-                "gloss": "a.整洁的；整齐的",
-                "headwordId": "tidy",
-                "shiftX": -5.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bundle",
-                "surface": "bundle",
-                "gloss": "n.捆；包裹",
-                "headwordId": "bundle",
-                "shiftX": 5.8
-              },
-              {
-                "type": "text",
-                "text": ", and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:check¹",
-                "surface": "check",
-                "gloss": "v.检查；核实",
-                "headwordId": "check¹"
-              },
-              {
-                "type": "text",
-                "text": " the "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:calendar",
-                "surface": "calendar",
-                "gloss": "n.日历；日程表",
-                "headwordId": "calendar"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:schedule",
-                "surface": "schedule",
-                "gloss": "n.时间表；计划表",
-                "headwordId": "schedule"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:clean",
-                "surface": "cleaning",
-                "gloss": "v.打扫；清理",
-                "headwordId": "clean"
-              },
-              {
-                "type": "text",
-                "text": " days."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Workers press a red power button on the generator, track every calorie consumed during hard labor, and open a metal can of fruit.",
-            "chinese": "工人们按下发电机上的红色电源按钮，记录辛勤劳动中消耗的每一卡路里，并打开一听水果铁罐。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Workers "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:press¹",
-                "surface": "press",
-                "gloss": "v.按压；压迫",
-                "headwordId": "press¹"
-              },
-              {
-                "type": "text",
-                "text": " a red "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:power",
-                "surface": "power",
-                "gloss": "n.电力；力量",
-                "headwordId": "power"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:button",
-                "surface": "button",
-                "gloss": "n.按钮；纽扣",
-                "headwordId": "button"
-              },
-              {
-                "type": "text",
-                "text": " on the "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:generate",
-                "surface": "generator",
-                "gloss": "n.发电机；发生器",
-                "headwordId": "generate"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:track",
-                "surface": "track",
-                "gloss": "v.记录；追踪",
-                "headwordId": "track"
-              },
-              {
-                "type": "text",
-                "text": " every "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:calorie",
-                "surface": "calorie",
-                "gloss": "n.卡路里；热量单位",
-                "headwordId": "calorie"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:consume",
-                "surface": "consumed",
-                "gloss": "v.消耗；消费",
-                "headwordId": "consume"
-              },
-              {
-                "type": "text",
-                "text": " during hard "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:labor",
-                "surface": "labor",
-                "gloss": "n.劳动力；辛劳",
-                "headwordId": "labor"
-              },
-              {
-                "type": "text",
-                "text": ", and open a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:metal",
-                "surface": "metal",
-                "gloss": "n.金属；合金",
-                "headwordId": "metal"
-              },
-              {
-                "type": "text",
-                "text": " can of fruit."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "With speed fast as a flying bullet, collective efforts bring real business vitality and environmental glory back to the waters.",
-            "chinese": "以快如飞弹的速度，集体的努力为水域重新带来了真正的商业生机与环境荣耀。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "With "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:speed",
-                "surface": "speed",
-                "gloss": "n.速度；速率",
-                "headwordId": "speed"
-              },
-              {
-                "type": "text",
-                "text": " fast as a flying "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bullet",
-                "surface": "bullet",
-                "gloss": "n.子弹；枪弹",
-                "headwordId": "bullet"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:collective",
-                "surface": "collective",
-                "gloss": "a.集体的；共同的",
-                "headwordId": "collective",
-                "shiftX": -4.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:effort",
-                "surface": "efforts",
-                "gloss": "n.努力；艰难尝试",
-                "headwordId": "effort",
-                "shiftX": -14.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:bring",
-                "surface": "bring",
-                "gloss": "v.带来；促使",
-                "headwordId": "bring",
-                "shiftX": -13.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:real",
-                "surface": "real",
-                "gloss": "a.真实的；真正的",
-                "headwordId": "real",
                 "shiftX": 4.5
               },
               {
@@ -20700,11 +21029,36 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:business",
-                "surface": "business",
-                "gloss": "n.商业；生意",
-                "headwordId": "business",
-                "shiftX": 9.7
+                "itemKey": "word:bring",
+                "surface": "brings",
+                "gloss": "v.带来；促使",
+                "headwordId": "bring",
+                "shiftX": 10.3
+              },
+              {
+                "type": "text",
+                "text": " renewed "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:vital",
+                "surface": "vitality",
+                "gloss": "n.生机；生命力",
+                "headwordId": "vital"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:endure",
+                "surface": "enduring",
+                "gloss": "a.持久的；长期的",
+                "headwordId": "endure",
+                "shiftX": -0.9
               },
               {
                 "type": "text",
@@ -20712,28 +21066,42 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:vital",
-                "surface": "vitality",
-                "gloss": "a.至关重要的；生死攸关的",
-                "headwordId": "vital",
-                "shiftX": 18.8
-              },
-              {
-                "type": "text",
-                "text": " and environmental "
-              },
-              {
-                "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:glory",
                 "surface": "glory",
                 "gloss": "n.荣耀；光荣",
-                "headwordId": "glory"
+                "headwordId": "glory",
+                "shiftX": 0.9
               },
               {
                 "type": "text",
-                "text": " back to the waters."
+                "text": " to the city's "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:live¹",
+                "surface": "living",
+                "gloss": "a.活的；活生生的",
+                "headwordId": "live¹",
+                "shiftX": -2.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:heritage",
+                "surface": "heritage",
+                "gloss": "n.遗产；继承物",
+                "headwordId": "heritage",
+                "shiftX": 2.7
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           }
@@ -20742,198 +21110,233 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "launch a campaign/undertake a drive",
-        "explanation": "发起运动，展开攻势；campaign 指有特定目标的社会活动"
+        "id": "exp-01",
+        "expression": "launch a campaign / mount an ecological drive",
+        "explanation": "发起运动，开展生态攻势；campaign 指围绕特定环保、社会或商业目标的有组织行动，常见搭配：conduct a campaign（开展运动）、mount an ecological drive（发起生态整治活动）。"
       },
       {
-        "id": "e2",
-        "expression": "ecological burden/load",
-        "explanation": "生态负担；burden 熟词僻义常比喻沉重的精神或经济压力"
+        "id": "exp-02",
+        "expression": "ecological burden / environmental load",
+        "explanation": "生态负担，环境负荷；burden 原指沉重的负担或重任，在环境科学语境下常表示污染累积对自然水体承载力构成的压力。"
       },
       {
-        "id": "e3",
-        "expression": "bulletin board/notice",
-        "explanation": "公告栏；bulletin 指官方发布的简短通告或公报"
+        "id": "exp-03",
+        "expression": "public bulletin / official notice",
+        "explanation": "公开公告，官方简报；bulletin 专指机关、团体向公众发布的简明权威公告或新闻简报，如 bulletin board（公告栏）。"
       },
       {
-        "id": "e4",
-        "expression": "bypass the system/circumvent",
-        "explanation": "绕过既有流程，规避；bypass 原指旁路或绕行道路"
+        "id": "exp-04",
+        "expression": "bypass administrative delays / circumvent red tape",
+        "explanation": "绕过行政延误，规避官僚繁文缛节；bypass 熟词僻义作动词表示“绕过、规避（规则或程序）”，作名词可指“旁路、环状公路”。"
       },
       {
-        "id": "e5",
-        "expression": "kitchen cabinet/cupboard",
-        "explanation": "厨房橱柜；Cabinet 大写时常指国家内阁政府"
+        "id": "exp-05",
+        "expression": "environmental bureau / municipal agency",
+        "explanation": "环保局，市政主管机构；bureau 指政府部门的局、司、署或专业办事处，如 weather bureau（气象局）。"
       },
       {
-        "id": "e6",
-        "expression": "bumpy road/rough journey",
-        "explanation": "颠簸不平的道路；bumpy 由 bump 派生，常比喻艰难坎坷的经历"
+        "id": "exp-06",
+        "expression": "durable equipment / heavy cables",
+        "explanation": "耐用设备与粗重缆绳；durable 表示持久耐磨的，cable 既可指牵引大型重物的粗钢索，亦指海底通信电缆与电线。"
       },
       {
-        "id": "e7",
-        "expression": "bumper harvest/plentiful",
-        "explanation": "大丰收；bumper 作定语时熟词僻义常表示“特大的、丰盛的”"
+        "id": "exp-07",
+        "expression": "tidy bundles / tie in bundles",
+        "explanation": "整齐的捆包，捆扎整理；bundle 作名词指包裹、一捆，作动词常与 up 搭配表示“打包、捆扎”，tidy 则强调整洁井然。"
       },
       {
-        "id": "e8",
-        "expression": "burst into tears/laughter",
-        "explanation": "突然大哭或大笑；burst 表示能量或情绪瞬间爆发"
+        "id": "exp-08",
+        "expression": "water samples / test dissolved oxygen",
+        "explanation": "采集水样与检测溶解氧；sample 作名词指样品或样本，dissolve 指固体或气体溶解于液体中，dissolved oxygen（溶解氧）是评价水质优劣的关键科学指标。"
       },
       {
-        "id": "e9",
-        "expression": "innocent bystander/onlooker",
-        "explanation": "无辜的旁观者；bystander 专指在现场旁观而未介入的人"
+        "id": "exp-09",
+        "expression": "natural habitat / ecological niche",
+        "explanation": "自然栖息地，生态环境；habitat 专指动植物天然生长的生存场所，四六级常考野生动物栖息地保护与恢复议题。"
       },
       {
-        "id": "e10",
-        "expression": "true calling/vocation",
-        "explanation": "真正的天职，崇高使命；calling 熟词僻义指来自内心的终身志向"
+        "id": "exp-10",
+        "expression": "delicate balance / fragile ecosystem",
+        "explanation": "微妙平衡，娇嫩脆弱的生态系统；delicate 表示娇嫩的、精细的、微妙的，常考搭配：delicate flora（娇弱的植物群）、delicate diplomatic balance（微妙的外交平衡）。"
       },
       {
-        "id": "e11",
-        "expression": "stay calm/remain composed",
-        "explanation": "保持冷静；calm 强调情绪平稳、临危不乱"
+        "id": "exp-11",
+        "expression": "burst into motion / leap into flight",
+        "explanation": "突然跃入运动，振翅疾飞；burst 熟词僻义常表示能量或动态的瞬间爆发，常用短语：burst into tears/laughter（突然大哭/大笑）、burst into flames（突然起火）。"
       },
       {
-        "id": "e12",
-        "expression": "a bunch of/a cluster of",
-        "explanation": "一束，一群；a bunch of flowers 一束花，口语中亦指一群人"
+        "id": "exp-12",
+        "expression": "remain calm / calm determination",
+        "explanation": "保持镇静，沉着的决心；calm 可作形容词（平静的、沉着的）、动词（使平息、使冷静）和名词（风平浪静），强调临危不乱的心理素养。"
       },
       {
-        "id": "e13",
-        "expression": "burn calories/consume energy",
-        "explanation": "燃烧卡路里，消耗热量；calorie 为营养学与健身核心词汇"
+        "id": "exp-13",
+        "expression": "true calling / noble vocation",
+        "explanation": "真正的天职，崇高使命；calling 熟词僻义专指源于内心深处的召唤、崇高职业或使命感，近义替换：vocation / noble mission。"
       },
       {
-        "id": "e14",
-        "expression": "fast as a bullet/swift",
-        "explanation": "飞速如弹；bullet train 专指高速列车"
+        "id": "exp-14",
+        "expression": "renewed vitality / inject new life",
+        "explanation": "焕发的活力与生机；vitality 派生自 vital，常形容城市、经济或自然水系重新恢复强劲生机与蓬勃朝气。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "living heritage / historical legacy",
+        "explanation": "活态遗产，历史遗产；heritage 专指国家、城市或民族世代相传的文化与生态瑰宝，强调保护与传承并重。"
       }
     ],
     "coveredHeadwordIds": [
+      "decade",
       "ancient",
-      "canal",
-      "youth",
-      "campaign",
-      "launch",
-      "campus",
-      "transform",
       "urban",
-      "relieve",
+      "canal",
+      "suffer",
+      "accumulate",
+      "mud",
+      "float",
+      "trash",
+      "block",
+      "channel",
+      "impose",
+      "severe",
       "ecology",
       "burden",
-      "volunteer",
-      "read",
+      "municipal",
+      "drain",
+      "network",
+      "urgent",
       "public",
       "bulletin",
-      "decide",
-      "bypass",
-      "old",
-      "administer",
-      "delay",
+      "campus",
+      "enthusiasm",
+      "volunteer",
+      "devote",
+      "lead¹",
+      "launch",
+      "collaborate",
+      "campaign",
+      "restore",
+      "history",
       "contact",
-      "municipal",
+      "local",
       "environment",
       "bureau",
-      "busy",
-      "businessman",
-      "local",
-      "cafe",
-      "nearby",
-      "cafeteria",
-      "promise",
-      "buy",
-      "fresh",
-      "cabbage",
+      "obtain",
+      "guide",
+      "establish",
+      "realistic",
+      "operate",
+      "schedule",
+      "clean",
+      "reinforce",
+      "steep",
+      "slope",
+      "generous",
+      "merchant",
+      "commerce",
+      "district",
+      "contribute",
+      "fund",
       "supply",
-      "cabinet",
-      "cab",
-      "bump",
-      "arrive",
-      "cabin",
-      "camp",
-      "use",
+      "durable",
+      "metal",
+      "tool",
+      "rubber",
+      "boot",
       "strong",
-      "steel",
       "cable",
+      "initial",
+      "task",
+      "decide",
+      "bypass",
+      "administer",
+      "delay",
+      "assemble",
+      "refuse",
+      "passive",
+      "excuse",
+      "hinder",
+      "act",
+      "intense",
+      "physical",
+      "labor",
       "pull",
+      "decay",
+      "timber",
       "heavy",
-      "care",
-      "bumper",
-      "harm",
-      "delicate",
-      "butterfly",
+      "waste",
+      "deep",
+      "wild",
+      "weed",
+      "thick",
       "bush",
-      "bury",
-      "accumulate",
-      "trash",
-      "burn",
       "safe",
-      "channel",
-      "trap",
+      "rubbish",
+      "tie",
+      "recycle",
+      "plastic",
+      "tidy",
+      "bundle",
+      "transport",
+      "poison",
+      "chemistry",
+      "authorize",
+      "dispose",
+      "facility",
+      "meanwhile",
+      "research",
+      "collect",
+      "sample",
+      "inspect",
+      "dissolve",
+      "oxygen",
+      "monitor",
+      "contaminate",
+      "level",
+      "calculate",
+      "overall",
+      "speed",
+      "recover",
+      "current",
+      "flow",
+      "free",
+      "native",
+      "delicate",
+      "flourish",
+      "renew",
+      "nature",
+      "habitat",
+      "reside",
+      "curious",
+      "visit",
+      "gather",
+      "admire",
+      "butterfly",
+      "bloom",
+      "grace",
       "burst",
       "active",
       "motion",
       "neither",
-      "bully",
-      "passive",
-      "bystander",
-      "can²",
-      "disrupt",
-      "noble",
-      "calling",
-      "protect",
-      "nature",
-      "habitat",
-      "sudden",
-      "difficult",
-      "call",
-      "urgent",
-      "act",
-      "lead¹",
-      "remain",
+      "harsh",
+      "criticize",
+      "fatigue",
+      "shake",
       "calm",
-      "calculate",
-      "require",
-      "resource",
-      "butcher",
-      "feed",
-      "calf",
-      "gentle",
-      "camel",
-      "empty",
-      "wire",
-      "cage",
-      "gather",
-      "bunch",
-      "wild",
-      "tie",
-      "tidy",
-      "bundle",
-      "check¹",
-      "calendar",
-      "schedule",
-      "clean",
-      "press¹",
-      "power",
-      "button",
-      "generate",
-      "track",
-      "calorie",
-      "consume",
-      "labor",
-      "metal",
-      "speed",
-      "bullet",
+      "determine",
+      "defend",
+      "secure",
       "collective",
       "effort",
+      "prove",
+      "noble",
+      "calling",
       "bring",
-      "real",
-      "business",
       "vital",
-      "glory"
+      "endure",
+      "glory",
+      "live¹",
+      "heritage"
     ],
     "hasOutOfSyllabusWords": false
   },

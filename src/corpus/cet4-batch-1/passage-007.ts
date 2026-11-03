@@ -73,8 +73,8 @@ export const PASSAGE_007: Passage = {
         },
         {
           sentenceNumber: 3,
-          english: "Meanwhile, students plant native grass along the coast, creating dense root networks that stabilize soft soil and absorb ocean waves.",
-          chinese: "与此同时，学生们在沿岸栽种本土草类，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。"
+          english: "Meanwhile, students plant native grass along the coast to absorb ocean waves, creating dense root networks that stabilize soft soil.",
+          chinese: "与此同时，学生们在沿岸栽种本土草类以缓冲海浪，形成紧密的根系网络以稳固松软的土壤。"
         },
         {
           sentenceNumber: 4,
@@ -120,7 +120,7 @@ export const PASSAGE_007: Passage = {
     {
       headwordId: "flat¹",
       surface: "flats",
-      gloss: "n.浅滩；平原"
+      gloss: "n.浅滩；滩涂"
     },
     {
       headwordId: "provide",
@@ -324,7 +324,7 @@ export const PASSAGE_007: Passage = {
     {
       headwordId: "equip",
       surface: "Equipped",
-      gloss: "a.装备有…的；配备好的"
+      gloss: "a.装备齐全的；配备好的"
     },
     {
       headwordId: "port",
@@ -527,6 +527,10 @@ export const PASSAGE_007: Passage = {
       gloss: "a.本土的；当地的"
     },
     {
+      headwordId: "absorb",
+      gloss: "v.吸收；缓冲"
+    },
+    {
       headwordId: "create",
       surface: "creating",
       gloss: "v.创造；形成"
@@ -552,10 +556,6 @@ export const PASSAGE_007: Passage = {
     {
       headwordId: "soft",
       gloss: "a.松软的；柔软的"
-    },
-    {
-      headwordId: "absorb",
-      gloss: "v.吸收；缓冲"
     },
     {
       headwordId: "persist",

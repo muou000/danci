@@ -9787,7 +9787,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:flat¹",
                 "surface": "flats",
-                "gloss": "n.浅滩；平原",
+                "gloss": "n.浅滩；滩涂",
                 "headwordId": "flat¹",
                 "shiftX": -19.4
               },
@@ -10408,7 +10408,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:equip",
                 "surface": "Equipped",
-                "gloss": "a.装备有…的；配备好的",
+                "gloss": "a.装备齐全的；配备好的",
                 "headwordId": "equip"
               },
               {
@@ -10987,8 +10987,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Meanwhile, students plant native grass along the coast, creating dense root networks that stabilize soft soil and absorb ocean waves.",
-            "chinese": "与此同时，学生们在沿岸栽种本土草类，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。",
+            "english": "Meanwhile, students plant native grass along the coast to absorb ocean waves, creating dense root networks that stabilize soft soil.",
+            "chinese": "与此同时，学生们在沿岸栽种本土草类以缓冲海浪，形成紧密的根系网络以稳固松软的土壤。",
             "tokens": [
               {
                 "type": "annotation",
@@ -11012,7 +11012,19 @@
               },
               {
                 "type": "text",
-                "text": " grass along the coast, "
+                "text": " grass along the coast to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:absorb",
+                "surface": "absorb",
+                "gloss": "v.吸收；缓冲",
+                "headwordId": "absorb"
+              },
+              {
+                "type": "text",
+                "text": " ocean waves, "
               },
               {
                 "type": "annotation",
@@ -11090,19 +11102,7 @@
               },
               {
                 "type": "text",
-                "text": " soil and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:absorb",
-                "surface": "absorb",
-                "gloss": "v.吸收；缓冲",
-                "headwordId": "absorb"
-              },
-              {
-                "type": "text",
-                "text": " ocean waves."
+                "text": " soil."
               }
             ]
           },
@@ -11400,13 +11400,13 @@
       "waste",
       "meanwhile",
       "native",
+      "absorb",
       "create",
       "dense",
       "root",
       "network",
       "stable",
       "soft",
-      "absorb",
       "persist",
       "restore",
       "effort",
@@ -11432,8 +11432,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In modern science, cell biology and biochemistry help researchers understand how genes bind living organisms together from birth.",
-            "chinese": "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何从诞生之日起将生物有机体联结在一起。",
+            "english": "In modern science, cell biology and biochemistry help researchers understand how genes work and how cells bind together within living organisms from birth.",
+            "chinese": "在现代科学中，细胞生物学与生物化学帮助研究人员理解基因如何发挥作用，以及细胞如何从诞生之日起在生物有机体内部联结在一起。",
             "tokens": [
               {
                 "type": "text",
@@ -11545,12 +11545,11 @@
                 "itemKey": "word:gene",
                 "surface": "genes",
                 "gloss": "n.基因；遗传因子",
-                "headwordId": "gene",
-                "shiftX": -34.6
+                "headwordId": "gene"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " work and how cells "
               },
               {
                 "type": "annotation",
@@ -11558,12 +11557,11 @@
                 "itemKey": "word:bind",
                 "surface": "bind",
                 "gloss": "v.结合；联结；绑",
-                "headwordId": "bind",
-                "shiftX": -9.9
+                "headwordId": "bind"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " together within "
               },
               {
                 "type": "annotation",
@@ -11572,7 +11570,7 @@
                 "surface": "living",
                 "gloss": "a.活着的；有生命的",
                 "headwordId": "live¹",
-                "shiftX": 21.1
+                "shiftX": -1.1
               },
               {
                 "type": "text",
@@ -11585,11 +11583,11 @@
                 "surface": "organisms",
                 "gloss": "n.有机体；生物",
                 "headwordId": "organism",
-                "shiftX": 23.4
+                "shiftX": 1.1
               },
               {
                 "type": "text",
-                "text": " together from "
+                "text": " from "
               },
               {
                 "type": "annotation",
@@ -12561,7 +12559,7 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "To prevent scientific ambition from turning blind to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
+            "english": "To prevent scientific ambition from turning a blind eye to human dignity, regulatory authorities and ethics committees must establish clear policy guidelines.",
             "chinese": "为了防止科学野心对人类尊严视而不见，监管机构和伦理委员会必须确立明确的政策准则。",
             "tokens": [
               {
@@ -12578,7 +12576,7 @@
               },
               {
                 "type": "text",
-                "text": " from turning blind to human dignity, "
+                "text": " from turning a blind eye to human dignity, "
               },
               {
                 "type": "annotation",
@@ -12657,8 +12655,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They maintain strict supervision over genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
-            "chinese": "他们对遗传界限实施严格监督，辩论存在争议的实验，并检查实验室以消除潜在隐患。",
+            "english": "They maintain strict supervision over research teams, respect genetic boundaries, debate contentious experiments, and inspect laboratories to eliminate hidden hazards.",
+            "chinese": "他们对科研团队实施严格监督，遵守遗传界限，辩论存在争议的实验，并检查实验室以消除潜在隐患。",
             "tokens": [
               {
                 "type": "text",
@@ -12698,7 +12696,7 @@
               },
               {
                 "type": "text",
-                "text": " over genetic "
+                "text": " over research teams, respect genetic "
               },
               {
                 "type": "annotation",
@@ -14086,8 +14084,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Meanwhile, skilled carpenters assemble solid wooden furniture and tighten brass bolts into smooth joints to guarantee lasting durability.",
-            "chinese": "与此同时，娴熟的木匠细心组装坚固的木制家具，并将黄铜螺栓拧紧在平滑的接合处，以确保经久耐用。",
+            "english": "Meanwhile, skilled carpenters assemble solid wooden furniture with smooth joints and tighten brass bolts on each door to guarantee lasting durability.",
+            "chinese": "与此同时，娴熟的木匠使用平滑的榫接结构组装坚固的木制家具，并在每扇门上拧紧黄铜门闩，以确保经久耐用。",
             "tokens": [
               {
                 "type": "annotation",
@@ -14120,6 +14118,32 @@
                 "surface": "furniture",
                 "gloss": "n.家具；器具",
                 "headwordId": "furniture"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:smooth",
+                "surface": "smooth",
+                "gloss": "a.平滑的；光滑的",
+                "headwordId": "smooth",
+                "shiftX": -6.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:joint",
+                "surface": "joints",
+                "gloss": "n.接合处；榫接处",
+                "headwordId": "joint",
+                "shiftX": 6.3
               },
               {
                 "type": "text",
@@ -14162,33 +14186,7 @@
               },
               {
                 "type": "text",
-                "text": " into "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:smooth",
-                "surface": "smooth",
-                "gloss": "a.平滑的；光滑的",
-                "headwordId": "smooth",
-                "shiftX": -6.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:joint",
-                "surface": "joints",
-                "gloss": "n.接合处；榫接处",
-                "headwordId": "joint",
-                "shiftX": 6.3
-              },
-              {
-                "type": "text",
-                "text": " to "
+                "text": " on each door to "
               },
               {
                 "type": "annotation",
@@ -14538,8 +14536,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Inside an elegant trade booth, their innovative products attract urban visitors, secure commercial orders, and win widespread praise.",
-            "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，获得了商业订单，并赢得了广泛赞誉。",
+            "english": "Inside an elegant trade booth, their innovative products attract urban visitors, so the team can secure commercial orders and win widespread praise.",
+            "chinese": "在优雅的展位内，他们的创新产品吸引了都市参观者，因而团队能够获得商业订单并赢得广泛赞誉。",
             "tokens": [
               {
                 "type": "text",
@@ -14615,7 +14613,7 @@
                 "surface": "attract",
                 "gloss": "v.吸引；引起",
                 "headwordId": "attract",
-                "shiftX": -4.5
+                "shiftX": -3.7
               },
               {
                 "type": "text",
@@ -14628,7 +14626,7 @@
                 "surface": "urban",
                 "gloss": "a.都市的；城市的",
                 "headwordId": "urban",
-                "shiftX": -2.2
+                "shiftX": -1.2
               },
               {
                 "type": "text",
@@ -14641,11 +14639,11 @@
                 "surface": "visitors",
                 "gloss": "n.访客；参观者",
                 "headwordId": "visit",
-                "shiftX": 3.9
+                "shiftX": 4.9
               },
               {
                 "type": "text",
-                "text": ", "
+                "text": ", so the team can "
               },
               {
                 "type": "annotation",
@@ -14653,8 +14651,7 @@
                 "itemKey": "word:secure",
                 "surface": "secure",
                 "gloss": "v.获得；锁定；确保",
-                "headwordId": "secure",
-                "shiftX": 2.8
+                "headwordId": "secure"
               },
               {
                 "type": "text",
@@ -14682,7 +14679,7 @@
               },
               {
                 "type": "text",
-                "text": ", and "
+                "text": " and "
               },
               {
                 "type": "annotation",
@@ -15152,11 +15149,11 @@
       "meanwhile",
       "assemble",
       "furniture",
+      "smooth",
+      "joint",
       "tight",
       "brass",
       "bolt",
-      "smooth",
-      "joint",
       "guarantee",
       "durable",
       "refuse",
@@ -15785,8 +15782,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed revenue forecasts.",
-            "chinese": "在每周例会中，细心的会计会审查每一笔交易凭据，确保总体支出绝不超过收入预测。",
+            "english": "In weekly meetings, an attentive accountant reviews every transaction receipt, ensuring that overall expenditures never exceed the budget, even when revenue falls short of forecasts.",
+            "chinese": "在每周例会中，细心的会计会审查每一笔交易凭据，确保即使营收不及预期预测，总体支出也绝不超过预算。",
             "tokens": [
               {
                 "type": "text",
@@ -15910,12 +15907,11 @@
                 "itemKey": "word:exceed",
                 "surface": "exceed",
                 "gloss": "v.超过；胜过；超出",
-                "headwordId": "exceed",
-                "shiftX": -13.6
+                "headwordId": "exceed"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " the budget, even when "
               },
               {
                 "type": "annotation",
@@ -15923,12 +15919,11 @@
                 "itemKey": "word:revenue",
                 "surface": "revenue",
                 "gloss": "a.收益的；营业收入的",
-                "headwordId": "revenue",
-                "shiftX": 4.7
+                "headwordId": "revenue"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " falls short of "
               },
               {
                 "type": "annotation",
@@ -15936,8 +15931,7 @@
                 "itemKey": "word:forecast",
                 "surface": "forecasts",
                 "gloss": "n.预测；预报；前瞻",
-                "headwordId": "forecast",
-                "shiftX": 8.8
+                "headwordId": "forecast"
               },
               {
                 "type": "text",
@@ -15953,7 +15947,7 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "To avoid a severe cash deficit, the management team monitors daily bank balances and rejects speculative market bubbles that often drive careless rivals broke.",
+            "english": "To avoid a severe cash deficit, the management team monitors daily bank balances and rejects pursuing speculative market bubbles that often drive careless rivals broke.",
             "chinese": "为避免严重的资金赤字，管理团队每日监控银行结余，拒绝追逐那些常使粗心对手破产的投机市场泡沫。",
             "tokens": [
               {
@@ -16005,7 +15999,7 @@
                 "surface": "monitors",
                 "gloss": "v.监控；监测；监督",
                 "headwordId": "monitor",
-                "shiftX": -43.6
+                "shiftX": -43.4
               },
               {
                 "type": "text",
@@ -16018,7 +16012,7 @@
                 "surface": "daily",
                 "gloss": "a.每日的；日常的；按日的",
                 "headwordId": "daily",
-                "shiftX": -17.9
+                "shiftX": -17.2
               },
               {
                 "type": "text",
@@ -16031,7 +16025,7 @@
                 "surface": "bank",
                 "gloss": "a.银行的；库的",
                 "headwordId": "bank²",
-                "shiftX": 20.3
+                "shiftX": 22
               },
               {
                 "type": "text",
@@ -16044,7 +16038,7 @@
                 "surface": "balances",
                 "gloss": "n.结余；余额；差额",
                 "headwordId": "balance",
-                "shiftX": 29.8
+                "shiftX": 32.8
               },
               {
                 "type": "text",
@@ -16057,11 +16051,11 @@
                 "surface": "rejects",
                 "gloss": "v.拒绝；驳回；排斥",
                 "headwordId": "reject",
-                "shiftX": 1.7
+                "shiftX": 5.8
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " pursuing "
               },
               {
                 "type": "annotation",
@@ -16069,8 +16063,7 @@
                 "itemKey": "word:speculate",
                 "surface": "speculative",
                 "gloss": "a.投机的；推测的；思辨的",
-                "headwordId": "speculate",
-                "shiftX": 9.7
+                "headwordId": "speculate"
               },
               {
                 "type": "text",
