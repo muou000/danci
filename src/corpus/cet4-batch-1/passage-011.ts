@@ -14,30 +14,30 @@ export const PASSAGE_011: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'For decades, ancient urban canals suffered from accumulated mud, floating trash, and blocked channels, which imposed a severe ecological burden on the municipal drainage network.',
+            'For decades, the city\'s ancient canal suffered from severe neglect, as thick mud and floating trash choked the narrow channel.',
           chinese:
-            '数十年来，古老的城市运河饱受堆积淤泥、漂浮垃圾和堵塞水渠的困扰，这给市政排水管网带来了沉重的生态负担。',
+            '数十年来，这座城市的古老运河饱受严重荒废的困扰，厚重的淤泥和漂浮的垃圾堵塞了狭窄的水道。',
         },
         {
           sentenceNumber: 2,
           english:
-            'Moved by an urgent public bulletin on campus, enthusiastic student volunteers and devoted neighborhood leaders launched a collaborative ecological campaign to restore the historic river.',
+            'This pollution imposed a heavy ecological burden on the municipal drainage network and surrounding neighborhoods.',
           chinese:
-            '受校园内一份紧急公告的触动，热情的青年学生志愿者与敬业的社区负责人发起了一项协同生态运动，以修复这条历史悠久的河流。',
+            '这种污染给市政排水管网和周边社区带来了沉重的生态负担。',
         },
         {
           sentenceNumber: 3,
           english:
-            'They contacted the local environmental bureau to obtain guidance and establish a realistic operational schedule to clean channels and reinforce steep slopes.',
+            'Moved by an urgent public bulletin on campus, enthusiastic student volunteers launched a campaign to restore the historic river.',
           chinese:
-            '他们联系了当地环保局以获取指导，并为清理水渠和加固陡峭斜坡制定了切合实际的施工进度表。',
+            '受校园内一份紧急公告的触动，热情的青年学生志愿者发起了一项旨在修复这条历史名河的行动。',
         },
         {
           sentenceNumber: 4,
           english:
-            'Generous merchants in the commercial district contributed funds to supply durable metal tools, rubber boots, and strong cables for the initial field tasks.',
+            'Although the local environmental bureau approved the project, formal budgets faced administrative delays, prompting the youth to bypass the wait and seek initial help from generous merchants.',
           chinese:
-            '商业区的慷慨商户捐助了资金，为初期实地任务提供耐用的金属工具、橡胶靴和坚固的缆绳。',
+            '虽然当地环保局批准了该项目，但官方预算面临行政延误，这促使青年们避开漫长的等待，向慷慨的商户寻求最初的帮助。',
         },
       ],
     },
@@ -47,16 +47,16 @@ export const PASSAGE_011: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Deciding to bypass administrative delays, the teams assembled beside the water early every morning, refusing to let passive excuses hinder urgent action.',
+            'Equipped with donated tools, rubber boots, and strong cables, teams assembled along the bank to begin the demanding task.',
           chinese:
-            '团队决定绕过繁琐的行政延误，每天清晨在水边集合，拒绝让消极的借口耽搁紧急行动。',
+            '配备受赠的工具、橡胶靴和坚固的缆绳，团队在河岸边集合，开始这项要求极高的任务。',
         },
         {
           sentenceNumber: 2,
           english:
-            'Through intense physical labor, workers pulled decayed timber and heavy waste from deep channels, while volunteers cleared wild weeds and thick bushes along the muddy slope.',
+            'Through intense physical labor, workers pulled decayed timber from the water, while volunteers cleared wild weeds and bushes along the steep slope.',
           chinese:
-            '通过艰苦的体力劳动，工人们从深水渠中拉出腐烂的原木和沉重的废弃物，而志愿者们则清除了泥泞斜坡上的杂草与茂密灌木。',
+            '通过艰苦的体力劳动，工人们从水中拉出腐烂的原木，而志愿者们则清除了陡峭斜坡上的杂草与灌木。',
         },
         {
           sentenceNumber: 3,
@@ -68,9 +68,9 @@ export const PASSAGE_011: Passage = {
         {
           sentenceNumber: 4,
           english:
-            'Meanwhile, young researchers collected water samples to inspect dissolved oxygen, monitor contamination levels, and calculate the overall speed of environmental recovery.',
+            'Meanwhile, young researchers collected water samples to inspect dissolved oxygen, monitor contamination levels, and calculate the speed of recovery.',
           chinese:
-            '与此同时，年轻的研究人员采集水样以检测溶解氧，监测污染程度，并计算环境恢复的整体速度。',
+            '与此同时，年轻的研究人员采集水样以检测溶解氧，监测污染程度，并计算生态恢复的速度。',
         },
       ],
     },
@@ -80,23 +80,23 @@ export const PASSAGE_011: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'As clean currents flow freely through the restored channel, native fish and delicate wild plants flourish in the renewed natural habitat.',
+            'As clean currents flow freely through the restored canal, native fish and delicate wild plants flourish in the renewed habitat.',
           chinese:
-            '随着清澈的水流在修复后的水渠中自由流淌，本土鱼类与娇嫩的野生植物在焕然一新的自然栖息地中繁茂生长。',
+            '随着清澈的水流在修复后的运河中自由流淌，本土鱼类与娇嫩的野生植物在焕然一新的栖息地中繁茂生长。',
         },
         {
           sentenceNumber: 2,
           english:
-            'Local residents and curious visitors gather along the green banks, admiring colorful butterflies around blooming bushes and graceful birds bursting into active motion.',
+            'Local residents and curious visitors gather along the green banks, admiring colorful butterflies around blooming flowers and watching water birds soar into flight.',
           chinese:
-            '当地居民与好奇的访客聚集在绿意盎然的河岸旁，欣赏着盛开灌木丛周围的五彩蝴蝶，以及跃入欢快飞翔的优美鸟儿。',
+            '当地居民与好奇的访客聚集在绿意盎然的河岸旁，欣赏着盛开花丛周围的五彩蝴蝶，注视着水鸟展翅高飞。',
         },
         {
           sentenceNumber: 3,
           english:
-            'Neither harsh criticism nor physical fatigue could shake the team\'s calm determination to defend municipal water security.',
+            'Neither harsh weather nor physical fatigue could shake the team\'s calm determination to defend municipal water security.',
           chinese:
-            '无论是严厉的批评还是身体的疲惫，都无法动摇团队捍卫市政水安全时的冷静决心。',
+            '无论是恶劣的天气还是身体的疲惫，都无法动摇团队捍卫市政水安全时的冷静决心。',
         },
         {
           sentenceNumber: 4,
@@ -112,83 +112,72 @@ export const PASSAGE_011: Passage = {
     // Paragraph 1, Sentence 1
     { headwordId: 'decade', surface: 'decades', gloss: 'n.十年；十年期' },
     { headwordId: 'ancient', surface: 'ancient', gloss: 'a.古代的；古老的' },
-    { headwordId: 'urban', surface: 'urban', gloss: 'a.城市的；市区的' },
-    { headwordId: 'canal', surface: 'canals', gloss: 'n.运河；水道' },
+    { headwordId: 'canal', surface: 'canal', gloss: 'n.运河；水道' },
     { headwordId: 'suffer', surface: 'suffered', gloss: 'v.遭受；受苦；变差' },
-    { headwordId: 'accumulate', surface: 'accumulated', gloss: 'a.累积的；积聚的' },
+    { headwordId: 'severe', surface: 'severe', gloss: 'a.严峻的；严重的；严厉的' },
+    { headwordId: 'neglect', surface: 'neglect', gloss: 'n.忽略；疏忽；荒废' },
+    { headwordId: 'thick', surface: 'thick', gloss: 'a.厚重的；浓密的' },
     { headwordId: 'mud', surface: 'mud', gloss: 'n.淤泥；泥浆' },
     { headwordId: 'float', surface: 'floating', gloss: 'a.浮动的；漂浮的' },
     { headwordId: 'trash', surface: 'trash', gloss: 'n.垃圾；废物' },
-    { headwordId: 'block', surface: 'blocked', gloss: 'a.堵塞的；受阻的' },
-    { headwordId: 'channel', surface: 'channels', gloss: 'n.水渠；航道；渠道' },
+    { headwordId: 'choke', surface: 'choked', gloss: 'v.堵塞；窒息；哽咽' },
+    { headwordId: 'narrow', surface: 'narrow', gloss: 'a.狭窄的；勉强的' },
+    { headwordId: 'channel', surface: 'channel', gloss: 'n.水渠；航道；渠道' },
+
+    // Paragraph 1, Sentence 2
+    { headwordId: 'pollute', surface: 'pollution', gloss: 'n.污染；污染物' },
     { headwordId: 'impose', surface: 'imposed', gloss: 'v.施加；强加；征税' },
-    { headwordId: 'severe', surface: 'severe', gloss: 'a.严峻的；严重的；严厉的' },
+    { headwordId: 'heavy', surface: 'heavy', gloss: 'a.沉重的；繁重的' },
     { headwordId: 'ecology', surface: 'ecological', gloss: 'a.生态的；生态学的' },
     { headwordId: 'burden', surface: 'burden', gloss: 'n.负担；重负' },
     { headwordId: 'municipal', surface: 'municipal', gloss: 'a.市政的；地方自治的' },
     { headwordId: 'drain', surface: 'drainage', gloss: 'a.排水的；排污的' },
     { headwordId: 'network', surface: 'network', gloss: 'n.网络；网状系统' },
+    { headwordId: 'surround', surface: 'surrounding', gloss: 'a.周围的；附近的' },
 
-    // Paragraph 1, Sentence 2
+    // Paragraph 1, Sentence 3
     { headwordId: 'urgent', surface: 'urgent', gloss: 'a.紧急的；紧迫的' },
     { headwordId: 'public', surface: 'public', gloss: 'a.公共的；公众的' },
     { headwordId: 'bulletin', surface: 'bulletin', gloss: 'n.公告；简报' },
     { headwordId: 'campus', surface: 'campus', gloss: 'n.校园；校区' },
     { headwordId: 'enthusiasm', surface: 'enthusiastic', gloss: 'a.热情的；热忱的' },
     { headwordId: 'volunteer', surface: 'volunteers', gloss: 'n.志愿者；志愿兵' },
-    { headwordId: 'devote', surface: 'devoted', gloss: 'a.忠诚的；敬业的；奉献的' },
-    { headwordId: 'lead¹', surface: 'leaders', gloss: 'n.领导者；领袖' },
     { headwordId: 'launch', surface: 'launched', gloss: 'v.发起；启动；推出' },
-    { headwordId: 'collaborate', surface: 'collaborative', gloss: 'a.合作的；协同的' },
     { headwordId: 'campaign', surface: 'campaign', gloss: 'n.活动；专项运动' },
     { headwordId: 'restore', surface: 'restore', gloss: 'v.修复；恢复；归还' },
     { headwordId: 'history', surface: 'historic', gloss: 'a.有历史意义的；历史性的' },
 
-    // Paragraph 1, Sentence 3
-    { headwordId: 'contact', surface: 'contacted', gloss: 'v.联系；联络' },
+    // Paragraph 1, Sentence 4
     { headwordId: 'local', surface: 'local', gloss: 'a.当地的；地方的' },
     { headwordId: 'environment', surface: 'environmental', gloss: 'a.环境的；有关环境的' },
     { headwordId: 'bureau', surface: 'bureau', gloss: 'n.局；司；办事处' },
-    { headwordId: 'obtain', surface: 'obtain', gloss: 'v.获得；得到' },
-    { headwordId: 'guide', surface: 'guidance', gloss: 'n.指导；指引' },
-    { headwordId: 'establish', surface: 'establish', gloss: 'v.建立；制定；确立' },
-    { headwordId: 'realistic', surface: 'realistic', gloss: 'a.切合实际的；现实的' },
-    { headwordId: 'operate', surface: 'operational', gloss: 'a.操作的；运行的；可行的' },
-    { headwordId: 'schedule', surface: 'schedule', gloss: 'n.日程表；进度表' },
-    { headwordId: 'clean', surface: 'clean', gloss: 'v.打扫；清理' },
-    { headwordId: 'reinforce', surface: 'reinforce', gloss: 'v.加固；强化；增援' },
-    { headwordId: 'steep', surface: 'steep', gloss: 'a.陡峭的；险峻的' },
-    { headwordId: 'slope', surface: 'slopes', gloss: 'n.斜坡；山坡' },
-
-    // Paragraph 1, Sentence 4
-    { headwordId: 'generous', surface: 'Generous', gloss: 'a.慷慨的；大方的' },
+    { headwordId: 'approve', surface: 'approved', gloss: 'v.批准；赞成；通过' },
+    { headwordId: 'project¹', surface: 'project', gloss: 'n.工程；项目；课题' },
+    { headwordId: 'formal', surface: 'formal', gloss: 'a.正式的；形式上的' },
+    { headwordId: 'budget', surface: 'budgets', gloss: 'n.预算；收支预估' },
+    { headwordId: 'administer', surface: 'administrative', gloss: 'a.行政的；管理的' },
+    { headwordId: 'delay', surface: 'delays', gloss: 'n.耽搁；延误' },
+    { headwordId: 'prompt', surface: 'prompting', gloss: 'v.促使；激励；提示' },
+    { headwordId: 'youth', surface: 'youth', gloss: 'n.青年；年轻人' },
+    { headwordId: 'bypass', surface: 'bypass', gloss: 'v.绕过；避开' },
+    { headwordId: 'wait', surface: 'wait', gloss: 'n.等待；守候' },
+    { headwordId: 'seek', surface: 'seek', gloss: 'v.寻求；谋求' },
+    { headwordId: 'initial', surface: 'initial', gloss: 'a.最初的；开头的' },
+    { headwordId: 'help', surface: 'help', gloss: 'n.帮助；援助' },
+    { headwordId: 'generous', surface: 'generous', gloss: 'a.慷慨的；大方的' },
     { headwordId: 'merchant', surface: 'merchants', gloss: 'n.商人；商户' },
-    { headwordId: 'commerce', surface: 'commercial', gloss: 'a.商业的；商务的' },
-    { headwordId: 'district', surface: 'district', gloss: 'n.区域；地区；行政区' },
-    { headwordId: 'contribute', surface: 'contributed', gloss: 'v.捐赠；贡献；促成' },
-    { headwordId: 'fund', surface: 'funds', gloss: 'n.资金；专款' },
-    { headwordId: 'supply', surface: 'supply', gloss: 'v.供给；提供' },
-    { headwordId: 'durable', surface: 'durable', gloss: 'a.耐用的；持久的' },
-    { headwordId: 'metal', surface: 'metal', gloss: 'a.金属的；金属制的' },
+
+    // Paragraph 2, Sentence 1
+    { headwordId: 'equip', surface: 'Equipped', gloss: 'v.配备；装配' },
+    { headwordId: 'donate', surface: 'donated', gloss: 'a.受赠的；捐赠的' },
     { headwordId: 'tool', surface: 'tools', gloss: 'n.工具；用具' },
     { headwordId: 'rubber', surface: 'rubber', gloss: 'a.橡胶的；橡皮制的' },
     { headwordId: 'boot', surface: 'boots', gloss: 'n.靴子；长筒靴' },
     { headwordId: 'strong', surface: 'strong', gloss: 'a.强壮的；坚固的' },
     { headwordId: 'cable', surface: 'cables', gloss: 'n.缆绳；钢索；电缆' },
-    { headwordId: 'initial', surface: 'initial', gloss: 'a.最初的；开头的' },
-    { headwordId: 'task', surface: 'tasks', gloss: 'n.任务；作业；工作' },
-
-    // Paragraph 2, Sentence 1
-    { headwordId: 'decide', surface: 'Deciding', gloss: 'v.决定；决意' },
-    { headwordId: 'bypass', surface: 'bypass', gloss: 'v.绕过；避开' },
-    { headwordId: 'administer', surface: 'administrative', gloss: 'a.行政的；管理的' },
-    { headwordId: 'delay', surface: 'delays', gloss: 'n.耽搁；延误' },
     { headwordId: 'assemble', surface: 'assembled', gloss: 'v.聚集；集合；装配' },
-    { headwordId: 'refuse', surface: 'refusing', gloss: 'v.拒绝；回绝' },
-    { headwordId: 'passive', surface: 'passive', gloss: 'a.被动的；消极的' },
-    { headwordId: 'excuse', surface: 'excuses', gloss: 'n.借口；理由' },
-    { headwordId: 'hinder', surface: 'hinder', gloss: 'v.阻碍；妨碍' },
-    { headwordId: 'act', surface: 'action', gloss: 'n.行动；行为；活动' },
+    { headwordId: 'demand', surface: 'demanding', gloss: 'a.要求高的；费力的' },
+    { headwordId: 'task', surface: 'task', gloss: 'n.任务；工作；差事' },
 
     // Paragraph 2, Sentence 2
     { headwordId: 'intense', surface: 'intense', gloss: 'a.强烈的；紧张的；剧烈的' },
@@ -197,16 +186,15 @@ export const PASSAGE_011: Passage = {
     { headwordId: 'pull', surface: 'pulled', gloss: 'v.拖拽；拔出' },
     { headwordId: 'decay', surface: 'decayed', gloss: 'a.腐烂的；衰退的' },
     { headwordId: 'timber', surface: 'timber', gloss: 'n.木材；原木' },
-    { headwordId: 'heavy', surface: 'heavy', gloss: 'a.沉重的；繁重的' },
-    { headwordId: 'waste', surface: 'waste', gloss: 'n.废物；垃圾' },
-    { headwordId: 'deep', surface: 'deep', gloss: 'a.深的；深厚的；深刻的' },
     { headwordId: 'wild', surface: 'wild', gloss: 'a.野生的；荒凉的' },
     { headwordId: 'weed', surface: 'weeds', gloss: 'n.杂草；野草' },
-    { headwordId: 'thick', surface: 'thick', gloss: 'a.茂密的；厚重的' },
     { headwordId: 'bush', surface: 'bushes', gloss: 'n.灌木；灌木丛' },
+    { headwordId: 'steep', surface: 'steep', gloss: 'a.陡峭的；险峻的' },
+    { headwordId: 'slope', surface: 'slope', gloss: 'n.斜坡；山坡' },
 
     // Paragraph 2, Sentence 3
     { headwordId: 'safe', surface: 'safely', gloss: 'ad.安全地；平安地' },
+    { headwordId: 'accumulate', surface: 'accumulated', gloss: 'a.累积的；积聚的' },
     { headwordId: 'rubbish', surface: 'rubbish', gloss: 'n.垃圾；废物' },
     { headwordId: 'tie', surface: 'tied', gloss: 'v.捆扎；系紧' },
     { headwordId: 'recycle', surface: 'recyclable', gloss: 'a.可回收利用的；可循环的' },
@@ -232,11 +220,11 @@ export const PASSAGE_011: Passage = {
     { headwordId: 'contaminate', surface: 'contamination', gloss: 'n.污染；污染物' },
     { headwordId: 'level', surface: 'levels', gloss: 'n.水平；程度' },
     { headwordId: 'calculate', surface: 'calculate', gloss: 'v.计算；核算' },
-    { headwordId: 'overall', surface: 'overall', gloss: 'a.全面的；总体的' },
     { headwordId: 'speed', surface: 'speed', gloss: 'n.速度；速率' },
     { headwordId: 'recover', surface: 'recovery', gloss: 'n.恢复；痊愈' },
 
     // Paragraph 3, Sentence 1
+    { headwordId: 'clean', surface: 'clean', gloss: 'a.清洁的；整齐的' },
     { headwordId: 'current', surface: 'currents', gloss: 'n.水流；水动力' },
     { headwordId: 'flow', surface: 'flow', gloss: 'v.流动；流淌' },
     { headwordId: 'free', surface: 'freely', gloss: 'ad.自由地；畅通地' },
@@ -244,7 +232,6 @@ export const PASSAGE_011: Passage = {
     { headwordId: 'delicate', surface: 'delicate', gloss: 'a.娇嫩的；纤细的' },
     { headwordId: 'flourish', surface: 'flourish', gloss: 'v.繁茂；繁荣' },
     { headwordId: 'renew', surface: 'renewed', gloss: 'a.更新的；恢复的' },
-    { headwordId: 'nature', surface: 'natural', gloss: 'a.自然的；天性的' },
     { headwordId: 'habitat', surface: 'habitat', gloss: 'n.栖息地；生态环境' },
 
     // Paragraph 3, Sentence 2
@@ -255,15 +242,11 @@ export const PASSAGE_011: Passage = {
     { headwordId: 'admire', surface: 'admiring', gloss: 'v.欣赏；赞赏' },
     { headwordId: 'butterfly', surface: 'butterflies', gloss: 'n.蝴蝶；蝶泳' },
     { headwordId: 'bloom', surface: 'blooming', gloss: 'a.盛开的；蓬勃的' },
-    { headwordId: 'grace', surface: 'graceful', gloss: 'a.优美的；优雅的' },
-    { headwordId: 'burst', surface: 'bursting', gloss: 'v.突然发作；冲出' },
-    { headwordId: 'active', surface: 'active', gloss: 'a.活跃的；积极的' },
-    { headwordId: 'motion', surface: 'motion', gloss: 'n.运动；走动' },
+    { headwordId: 'soar', surface: 'soar', gloss: 'v.高飞；翱翔；猛增' },
 
     // Paragraph 3, Sentence 3
     { headwordId: 'neither', surface: 'Neither', gloss: 'conj.既不；也不' },
-    { headwordId: 'harsh', surface: 'harsh', gloss: 'a.严厉的；苛刻的' },
-    { headwordId: 'criticize', surface: 'criticism', gloss: 'n.批评；指责' },
+    { headwordId: 'harsh', surface: 'harsh', gloss: 'a.严厉的；恶劣的；苛刻的' },
     { headwordId: 'fatigue', surface: 'fatigue', gloss: 'n.疲劳；疲惫' },
     { headwordId: 'shake', surface: 'shake', gloss: 'v.摇动；动摇' },
     { headwordId: 'calm', surface: 'calm', gloss: 'a.冷静的；沉着的' },
@@ -348,9 +331,9 @@ export const PASSAGE_011: Passage = {
     },
     {
       id: 'exp-11',
-      expression: 'burst into motion / leap into flight',
+      expression: 'soar into flight / leap into the air',
       explanation:
-        '突然跃入运动，振翅疾飞；burst 熟词僻义常表示能量或动态的瞬间爆发，常用短语：burst into tears/laughter（突然大哭/大笑）、burst into flames（突然起火）。',
+        '展翅高飞，翱翔升空；soar 强调鸟类展翅滑翔并高高飞起，常比喻物价飞涨或士气高昂，如 prices soar（物价暴涨）。',
     },
     {
       id: 'exp-12',

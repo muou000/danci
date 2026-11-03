@@ -1204,10 +1204,10 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
 
     // 验证运河生态修复与志愿行动主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
-      'severe ecological burden on the municipal drainage network'
+      'severe neglect, as thick mud and floating trash choked the narrow channel'
     );
-    expect(passage!.paragraphs[1].sentences[0].english).toContain(
-      'hinder urgent action'
+    expect(passage!.paragraphs[0].sentences[3].english).toContain(
+      'bypass the wait and seek initial help from generous merchants'
     );
     expect(passage!.paragraphs[1].sentences[2].english).toContain(
       'tied recyclable plastics into tidy bundles'
@@ -1216,7 +1216,13 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'inspect dissolved oxygen'
     );
     expect(passage!.paragraphs[2].sentences[0].english).toContain(
-      'delicate wild plants flourish in the renewed natural habitat'
+      'delicate wild plants flourish in the renewed habitat'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'watching water birds soar into flight'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'Neither harsh weather nor physical fatigue'
     );
 
     expect(compiled.coveredHeadwordIds).toContain('canal');
@@ -1225,7 +1231,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('mud');
     expect(compiled.coveredHeadwordIds).toContain('steep');
     expect(compiled.coveredHeadwordIds).toContain('task');
-    expect(compiled.coveredHeadwordIds).toContain('waste');
     expect(compiled.coveredHeadwordIds).toContain('rubbish');
     expect(compiled.coveredHeadwordIds).toContain('cable');
     expect(compiled.coveredHeadwordIds).toContain('sample');
@@ -1235,32 +1240,25 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('flourish');
     expect(compiled.coveredHeadwordIds).toContain('habitat');
     expect(compiled.coveredHeadwordIds).toContain('butterfly');
+    expect(compiled.coveredHeadwordIds).toContain('soar');
     expect(compiled.coveredHeadwordIds).toContain('calling');
     expect(compiled.coveredHeadwordIds).toContain('heritage');
 
     // 验证修饰名词的形容词语境词性匹配
-    const p1s1Ecological = compiled.paragraphs[0].sentences[0].tokens.find(
+    const p1s2Ecological = compiled.paragraphs[0].sentences[1].tokens.find(
       (t) => t.type === 'annotation' && t.headwordId === 'ecology'
     );
-    expect(p1s1Ecological).toBeDefined();
-    if (p1s1Ecological && p1s1Ecological.type === 'annotation') {
-      expect(p1s1Ecological.gloss.startsWith('a.')).toBe(true);
+    expect(p1s2Ecological).toBeDefined();
+    if (p1s2Ecological && p1s2Ecological.type === 'annotation') {
+      expect(p1s2Ecological.gloss.startsWith('a.')).toBe(true);
     }
 
-    const p1s3Operational = compiled.paragraphs[0].sentences[2].tokens.find(
-      (t) => t.type === 'annotation' && t.headwordId === 'operate'
+    const p1s4Administrative = compiled.paragraphs[0].sentences[3].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'administer'
     );
-    expect(p1s3Operational).toBeDefined();
-    if (p1s3Operational && p1s3Operational.type === 'annotation') {
-      expect(p1s3Operational.gloss.startsWith('a.')).toBe(true);
-    }
-
-    const p1s4Commercial = compiled.paragraphs[0].sentences[3].tokens.find(
-      (t) => t.type === 'annotation' && t.headwordId === 'commerce'
-    );
-    expect(p1s4Commercial).toBeDefined();
-    if (p1s4Commercial && p1s4Commercial.type === 'annotation') {
-      expect(p1s4Commercial.gloss.startsWith('a.')).toBe(true);
+    expect(p1s4Administrative).toBeDefined();
+    if (p1s4Administrative && p1s4Administrative.type === 'annotation') {
+      expect(p1s4Administrative.gloss.startsWith('a.')).toBe(true);
     }
   });
 
