@@ -381,6 +381,52 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(coveredCet6Stars.length).toBeGreaterThanOrEqual(12);
   });
 
+  it('CET-4 核心篇 NO. 01 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 01');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('国际学术交流与跨文化适应');
+    expect(passage!.titleEn).toBe(
+      'Academic Exploration and Cultural Adaptation Abroad'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('ache');
+    expect(compiled.coveredHeadwordIds).not.toContain('acid');
+    expect(compiled.coveredHeadwordIds).not.toContain('ace');
+    expect(compiled.coveredHeadwordIds).not.toContain('acre');
+    expect(compiled.coveredHeadwordIds).not.toContain('abolish');
+    expect(compiled.coveredHeadwordIds).not.toContain('accuse');
+  });
+
   it('CET-4 核心篇 NO. 04 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 04');
     expect(passage).toBeDefined();

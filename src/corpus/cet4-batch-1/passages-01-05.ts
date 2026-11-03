@@ -14,23 +14,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "When scholars travel abroad to visit an international academy, they step aboard transport flights with acute curiosity.",
-            "chinese": "当学者前往海外访问一所国际学院时，他们带着敏锐的好奇心登上了交通航班。"
+            "english": "When young scholars travel abroad to visit an international academy, they step onto the foreign campus with acute curiosity and high expectations.",
+            "chinese": "当青年学者远赴海外访问一所国际学院时，他们带着敏锐的好奇心与高昂的期盼踏上外国校园。"
           },
           {
             "sentenceNumber": 2,
-            "english": "They must not abandon native roots, yet they need to adapt to new environments and absorb abundant knowledge.",
-            "chinese": "他们绝不能抛弃本土根基，然而他们需要适应全新环境并吸收丰富的知识。"
+            "english": "They must not abandon their native roots, yet they need to adapt to new environments and absorb abundant knowledge.",
+            "chinese": "他们绝不能抛弃自己的本土根基，然而他们需要适应全新环境并吸收丰富的知识。"
           },
           {
             "sentenceNumber": 3,
-            "english": "According to campus advisers, active scholars who are able to accept fresh challenges accelerate their personal growth.",
-            "chinese": "根据校园导师的说法，能够接受崭新挑战的积极学者会加速个人成长。"
+            "english": "According to experienced campus advisers, active scholars who embrace fresh challenges accelerate their personal and intellectual growth.",
+            "chinese": "根据资深校园导师的说法，勇于迎接崭新挑战的积极学者会加速个人与学识的成长。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Although a strange foreign accent may cause an occasional accident in communication, open dialogue helps them accordingly.",
-            "chinese": "尽管陌生的外国口音可能会在交流中引发偶尔的意外，但坦诚的对话会相应地帮助他们。"
+            "english": "Although a strange accent may cause occasional confusion in daily communication, sincere dialogue helps them overcome potential language barriers.",
+            "chinese": "尽管陌生的口音可能在日常交流中引起偶尔的困惑，但坦诚的对话有助于他们克服潜在的语言障碍。"
           }
         ]
       },
@@ -39,23 +39,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Young scholars soon acquaint themselves with library rules, gain digital access to research materials, and acquire accurate data.",
-            "chinese": "年轻学者们很快熟悉了图书馆规则，获得了对研究资料的数字访问权限，并获取了准确的数据。"
+            "english": "In research laboratories, young scholars soon acquaint themselves with library rules, gain digital access to primary materials, and acquire accurate experimental data.",
+            "chinese": "在科研实验室中，年轻学者很快熟悉了图书馆规则，获得了查阅原始资料的数字访问权限，并获取了准确的实验数据。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Scholars should never abuse research funding or remain absent from seminars without absolute justification.",
-            "chinese": "学者绝不应滥用科研经费，也不应在缺乏绝对正当理由的情况下缺席研讨会。"
+            "english": "They participate in regular seminars, present distinct academic arguments, and remain accountable for their actual findings.",
+            "chinese": "他们参加定期的研讨会，陈述鲜明的学术论点，并对其实际研究发现负责。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Every team member remains accountable for their actual findings and must act in accordance with strict academic standards.",
-            "chinese": "每位团队成员都对其实际研究发现负责，并且必须按照严格的学术规范行事。"
+            "english": "Every researcher must maintain academic integrity and conduct scientific investigations in accordance with strict international standards.",
+            "chinese": "每位研究人员都必须维护学术诚信，并按照严格的国际规范开展科学调查。"
           },
           {
             "sentenceNumber": 4,
-            "english": "When professors acknowledge student contributions, they accompany learners to achieve meaningful breakthroughs.",
-            "chinese": "当教授认可学生的贡献时，他们会陪伴学习者取得有意义的突破。"
+            "english": "When professors acknowledge student contributions, they accompany learners through difficult challenges and achieve meaningful breakthroughs.",
+            "chinese": "当教授认可学生的贡献时，他们会陪伴学习者度过艰难挑战，并取得有意义的重大突破。"
           }
         ]
       },
@@ -64,23 +64,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Living across a fifty acre ground, modern dormitories accommodate diverse scholars and accustom them to community life.",
-            "chinese": "坐落在五十英亩的土地上，现代化的宿舍容纳了多元的学者，并使他们习惯于集体生活。"
+            "english": "Beyond academic buildings, modern residential halls accommodate diverse scholars and accustom them to global community life.",
+            "chinese": "在教学建筑之外，现代化的住宅楼容纳了多元的学者，并使他们习惯于全球化的社区生活。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Even when an occasional tooth ache or acid criticism strikes, ace researchers accomplish difficult tasks through patient cooperation.",
-            "chinese": "即使偶尔袭来牙痛或尖酸的批评，顶尖的研究者也会通过耐心的合作完成艰巨任务。"
+            "english": "Through shared dining and cultural events, visiting researchers exchange distinct perspectives and accomplish difficult collaborative projects through patient cooperation.",
+            "chinese": "通过共同就餐与文化活动，访问研究人员交流不同视角，并通过耐心的合作完成艰巨的协作项目。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Universities abolish outdated barriers, sign a friendly accord with foreign partners, and accumulate abstract theories.",
-            "chinese": "各大学废除了过时的壁垒，与外国伙伴签署了友好协议，并积累了抽象的理论成果。"
+            "english": "Engaging with international peers helps scholars broaden their horizons, enrich their understanding, and shape an open vision.",
+            "chinese": "与国际同伴的互动帮助学者开阔眼界，丰富理解，并塑造开阔的视野。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Nobody should accuse honest learners who give a clear account of their experimental results.",
-            "chinese": "没有人应当指责那些对自己的实验结果给出清晰解释的诚实学习者。"
+            "english": "Ultimately, these exchange programs strengthen friendly ties between universities, promote mutual trust, and inspire future academic innovation.",
+            "chinese": "最终，这些交流项目加强了各大学之间的友好纽带，促进了相互信任，并激励着未来的学术创新。"
           }
         ]
       }
@@ -95,16 +95,24 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "ad.在国外地；到海外地"
       },
       {
+        "headwordId": "international",
+        "gloss": "a.国际的；世界性的"
+      },
+      {
         "headwordId": "academy",
         "gloss": "n.学院；研究院"
       },
       {
         "headwordId": "step",
-        "gloss": "v.跨步；行走"
+        "gloss": "v.跨步；迈步"
       },
       {
-        "headwordId": "aboard",
-        "gloss": "ad.在飞机上地；上船地"
+        "headwordId": "foreign",
+        "gloss": "a.外国的；对外的"
+      },
+      {
+        "headwordId": "campus",
+        "gloss": "n.校园；校区"
       },
       {
         "headwordId": "acute",
@@ -114,6 +122,11 @@ export const PASSAGES_01_05: Passage[] = [
         "headwordId": "curious",
         "surface": "curiosity",
         "gloss": "n.好奇心；求知欲"
+      },
+      {
+        "headwordId": "expect",
+        "surface": "expectations",
+        "gloss": "n.期望；预期"
       },
       {
         "headwordId": "abandon",
@@ -155,12 +168,9 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.知识；学问"
       },
       {
-        "headwordId": "according to",
-        "gloss": "prep.根据；按照"
-      },
-      {
-        "headwordId": "campus",
-        "gloss": "n.校园；校区"
+        "headwordId": "experience",
+        "surface": "experienced",
+        "gloss": "a.经验丰富的；老练的"
       },
       {
         "headwordId": "advise",
@@ -177,12 +187,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.学者；学士"
       },
       {
-        "headwordId": "able",
-        "gloss": "a.能够的；有能力的"
-      },
-      {
-        "headwordId": "accept",
-        "gloss": "v.接受；接纳"
+        "headwordId": "embrace",
+        "gloss": "v.拥抱；欣然接受"
       },
       {
         "headwordId": "fresh",
@@ -198,6 +204,10 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.加速；促进"
       },
       {
+        "headwordId": "intellectual",
+        "gloss": "a.智力的；学术的"
+      },
+      {
         "headwordId": "grow",
         "surface": "growth",
         "gloss": "n.成长；发展"
@@ -205,10 +215,6 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "strange",
         "gloss": "a.陌生的；奇怪的"
-      },
-      {
-        "headwordId": "foreign",
-        "gloss": "a.外国的；对外的"
       },
       {
         "headwordId": "accent",
@@ -224,13 +230,22 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.偶尔的；临时的"
       },
       {
-        "headwordId": "accident",
-        "gloss": "n.意外；事故"
+        "headwordId": "confuse",
+        "surface": "confusion",
+        "gloss": "n.困惑；混淆"
+      },
+      {
+        "headwordId": "daily",
+        "gloss": "a.日常的；每日的"
       },
       {
         "headwordId": "communicate",
         "surface": "communication",
         "gloss": "n.交流；沟通"
+      },
+      {
+        "headwordId": "sincere",
+        "gloss": "a.真诚的；坦率的"
       },
       {
         "headwordId": "dialog",
@@ -243,8 +258,26 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.帮助；协助"
       },
       {
-        "headwordId": "accordingly",
-        "gloss": "ad.相应地；从而地"
+        "headwordId": "overcome",
+        "gloss": "v.克服；战胜"
+      },
+      {
+        "headwordId": "potential",
+        "gloss": "a.潜在的；可能的"
+      },
+      {
+        "headwordId": "barrier",
+        "surface": "barriers",
+        "gloss": "n.壁垒；障碍"
+      },
+      {
+        "headwordId": "research",
+        "gloss": "n.科研；研究"
+      },
+      {
+        "headwordId": "laboratory",
+        "surface": "laboratories",
+        "gloss": "n.实验室；研究室"
       },
       {
         "headwordId": "acquaint",
@@ -252,7 +285,7 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "gain",
-        "gloss": "v.获得；赢得"
+        "gloss": "v.获得；取得"
       },
       {
         "headwordId": "digit",
@@ -261,41 +294,41 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "access",
-        "gloss": "n.进入权；通道"
+        "gloss": "n.进入权；访问权限"
       },
       {
-        "headwordId": "research",
-        "gloss": "n.研究；调查"
+        "headwordId": "primary",
+        "gloss": "a.原始的；首要的"
       },
       {
         "headwordId": "material",
         "surface": "materials",
-        "gloss": "n.材料；资料"
+        "gloss": "n.资料；材料"
       },
       {
         "headwordId": "acquire",
-        "gloss": "v.获得；习得"
+        "gloss": "v.获取；习得"
       },
       {
         "headwordId": "accurate",
         "gloss": "a.准确的；精确的"
       },
       {
+        "headwordId": "experiment",
+        "surface": "experimental",
+        "gloss": "a.实验的；试验性的"
+      },
+      {
         "headwordId": "data",
         "gloss": "n.数据；资料"
       },
       {
-        "headwordId": "abuse",
-        "gloss": "v.滥用；妄用"
+        "headwordId": "participate",
+        "gloss": "v.参与；参加"
       },
       {
-        "headwordId": "fund",
-        "surface": "funding",
-        "gloss": "n.资金；专款"
-      },
-      {
-        "headwordId": "absent",
-        "gloss": "a.缺席的；不在场的"
+        "headwordId": "regular",
+        "gloss": "a.定期的；例行的"
       },
       {
         "headwordId": "seminar",
@@ -303,22 +336,25 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.研讨会；讲习班"
       },
       {
-        "headwordId": "absolute",
-        "gloss": "a.绝对的；完全的"
+        "headwordId": "present¹",
+        "gloss": "v.陈述；提出"
       },
       {
-        "headwordId": "justify",
-        "surface": "justification",
-        "gloss": "n.正当理由；辩护"
+        "headwordId": "distinct",
+        "gloss": "a.鲜明的；独特的"
+      },
+      {
+        "headwordId": "argue",
+        "surface": "arguments",
+        "gloss": "n.论点；论据"
       },
       {
         "headwordId": "remain",
-        "surface": "remains",
-        "gloss": "v.保持；依然"
+        "gloss": "v.保持；仍然是"
       },
       {
         "headwordId": "accountable",
-        "gloss": "a.应负责的；有责任的"
+        "gloss": "a.负责任的；有解释义务的"
       },
       {
         "headwordId": "actual",
@@ -330,16 +366,30 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.调查结果；发现"
       },
       {
-        "headwordId": "act",
-        "gloss": "v.行动；表现"
+        "headwordId": "maintain",
+        "gloss": "v.维持；保持"
       },
       {
-        "headwordId": "accordance",
-        "gloss": "n.一致；符合"
+        "headwordId": "integrity",
+        "gloss": "n.正直；诚实"
+      },
+      {
+        "headwordId": "conduct",
+        "gloss": "v.实施；组织"
+      },
+      {
+        "headwordId": "science",
+        "surface": "scientific",
+        "gloss": "a.科学的；严谨的"
+      },
+      {
+        "headwordId": "investigate",
+        "surface": "investigations",
+        "gloss": "n.调查；研究"
       },
       {
         "headwordId": "strict",
-        "gloss": "a.严格的；精确的"
+        "gloss": "a.严格的；严谨的"
       },
       {
         "headwordId": "standard",
@@ -348,30 +398,34 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "acknowledge",
-        "gloss": "v.承认；致谢"
+        "gloss": "v.认可；承认"
       },
       {
         "headwordId": "contribute",
         "surface": "contributions",
-        "gloss": "n.贡献；捐献"
+        "gloss": "n.贡献；捐赠"
       },
       {
         "headwordId": "accompany",
-        "gloss": "v.陪伴；伴随"
+        "gloss": "v.陪伴；随行"
       },
       {
         "headwordId": "learn",
         "surface": "learners",
-        "gloss": "n.学习者；学者"
+        "gloss": "n.学习者；初学者"
+      },
+      {
+        "headwordId": "difficult",
+        "gloss": "a.困难的；艰难的"
       },
       {
         "headwordId": "achieve",
-        "gloss": "v.实现；取得"
+        "gloss": "v.取得；实现"
       },
       {
         "headwordId": "mean¹",
         "surface": "meaningful",
-        "gloss": "a.有意义的；重大的"
+        "gloss": "a.有意义的；意味深长的"
       },
       {
         "headwordId": "breakthrough",
@@ -379,22 +433,23 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.突破；重大进展"
       },
       {
-        "headwordId": "live¹",
-        "surface": "Living",
-        "gloss": "v.居住；生活"
-      },
-      {
-        "headwordId": "acre",
-        "gloss": "n.英亩；土地"
+        "headwordId": "build",
+        "surface": "buildings",
+        "gloss": "n.建筑物；大楼"
       },
       {
         "headwordId": "modern",
         "gloss": "a.现代的；新式的"
       },
       {
-        "headwordId": "dormitory",
-        "surface": "dormitories",
-        "gloss": "n.宿舍；寝室"
+        "headwordId": "reside",
+        "surface": "residential",
+        "gloss": "a.住宅的；居住的"
+      },
+      {
+        "headwordId": "hall",
+        "surface": "halls",
+        "gloss": "n.大楼；礼堂"
       },
       {
         "headwordId": "accommodate",
@@ -409,43 +464,61 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.使习惯；使适应"
       },
       {
+        "headwordId": "globe",
+        "surface": "global",
+        "gloss": "a.全球的；全世界的"
+      },
+      {
         "headwordId": "community",
         "gloss": "n.社区；团体"
       },
       {
-        "headwordId": "ache",
-        "gloss": "n.疼痛；隐痛"
+        "headwordId": "share",
+        "surface": "shared",
+        "gloss": "a.共享的；共同的"
       },
       {
-        "headwordId": "acid",
-        "gloss": "a.尖酸的；刻薄的"
+        "headwordId": "dine",
+        "surface": "dining",
+        "gloss": "n.进餐；用餐"
       },
       {
-        "headwordId": "criticize",
-        "surface": "criticism",
-        "gloss": "n.批评；指责"
+        "headwordId": "culture",
+        "surface": "cultural",
+        "gloss": "a.文化的；人文的"
       },
       {
-        "headwordId": "strike",
-        "surface": "strikes",
-        "gloss": "v.侵袭；击打"
+        "headwordId": "event",
+        "surface": "events",
+        "gloss": "n.活动；事件"
       },
       {
-        "headwordId": "ace",
-        "gloss": "a.顶尖的；一流的"
+        "headwordId": "visit",
+        "surface": "visiting",
+        "gloss": "a.访问的；客座的"
+      },
+      {
+        "headwordId": "exchange",
+        "gloss": "v.交流；交换"
+      },
+      {
+        "headwordId": "perspective",
+        "surface": "perspectives",
+        "gloss": "n.视角；观点"
       },
       {
         "headwordId": "accomplish",
         "gloss": "v.完成；实现"
       },
       {
-        "headwordId": "difficult",
-        "gloss": "a.困难的；艰难的"
+        "headwordId": "collaborate",
+        "surface": "collaborative",
+        "gloss": "a.合作的；协作的"
       },
       {
-        "headwordId": "task",
-        "surface": "tasks",
-        "gloss": "n.任务；工作"
+        "headwordId": "project¹",
+        "surface": "projects",
+        "gloss": "n.项目；工程"
       },
       {
         "headwordId": "patient¹",
@@ -457,79 +530,95 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.合作；协同"
       },
       {
-        "headwordId": "abolish",
-        "gloss": "v.废除；取消"
+        "headwordId": "engage",
+        "surface": "Engaging",
+        "gloss": "v.参与；吸引"
       },
       {
-        "headwordId": "outdated",
-        "gloss": "a.过时的；陈旧的"
+        "headwordId": "peer",
+        "surface": "peers",
+        "gloss": "n.同伴；同龄人"
       },
       {
-        "headwordId": "barrier",
-        "surface": "barriers",
-        "gloss": "n.壁垒；障碍"
+        "headwordId": "broad",
+        "surface": "broaden",
+        "gloss": "v.开阔；变宽"
       },
       {
-        "headwordId": "sign",
-        "gloss": "v.签署；签订"
+        "headwordId": "horizon",
+        "surface": "horizons",
+        "gloss": "n.眼界；地平线"
       },
       {
-        "headwordId": "accord",
-        "gloss": "n.协议；一致"
+        "headwordId": "enrich",
+        "gloss": "v.充实；丰富"
       },
       {
-        "headwordId": "partner",
-        "surface": "partners",
-        "gloss": "n.伙伴；合作者"
+        "headwordId": "understand",
+        "surface": "understanding",
+        "gloss": "n.理解；领会"
       },
       {
-        "headwordId": "accumulate",
-        "gloss": "v.积累；积聚"
+        "headwordId": "vision",
+        "gloss": "n.愿景；视力"
       },
       {
-        "headwordId": "abstract",
-        "gloss": "a.抽象的；深奥的"
+        "headwordId": "ultimate",
+        "surface": "Ultimately",
+        "gloss": "ad.最终地；根本地"
       },
       {
-        "headwordId": "theory",
-        "surface": "theories",
-        "gloss": "n.理论；学说"
+        "headwordId": "program",
+        "surface": "programs",
+        "gloss": "n.项目；方案"
       },
       {
-        "headwordId": "accuse",
-        "gloss": "v.指责；控告"
+        "headwordId": "strong",
+        "surface": "strengthen",
+        "gloss": "v.加强；巩固"
       },
       {
-        "headwordId": "honest",
-        "gloss": "a.诚实的；正直的"
+        "headwordId": "tie",
+        "surface": "ties",
+        "gloss": "n.纽带；联系"
       },
       {
-        "headwordId": "account",
-        "gloss": "n.叙述；解释"
+        "headwordId": "promote",
+        "gloss": "v.促进；提升"
       },
       {
-        "headwordId": "visit",
-        "gloss": "v.访问；拜访"
+        "headwordId": "mutual",
+        "gloss": "a.相互的；彼此的"
       },
       {
-        "headwordId": "international",
-        "gloss": "a.国际的；世界性的"
+        "headwordId": "trust",
+        "gloss": "n.信任；信赖"
       },
       {
-        "headwordId": "transport",
-        "gloss": "n.交通；运输"
+        "headwordId": "inspire",
+        "gloss": "v.激励；鼓舞"
+      },
+      {
+        "headwordId": "innovate",
+        "surface": "innovation",
+        "gloss": "n.创新；革新"
       }
     ],
     "phraseAnnotations": [
+      {
+        "phrase": "according to",
+        "surface": "According to",
+        "gloss": "根据；按照"
+      },
       {
         "phrase": "library rules",
         "surface": "library rules",
         "gloss": "图书馆规则"
       },
       {
-        "phrase": "experimental results",
-        "surface": "experimental results",
-        "gloss": "实验结果"
+        "phrase": "in accordance with",
+        "surface": "in accordance with",
+        "gloss": "依照；与…一致"
       }
     ],
     "expansionEntries": [
@@ -551,12 +640,12 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "id": "e4",
         "expression": "in accordance with/in line with",
-        "explanation": "依照，与...一致；学术论文经典介词搭配"
+        "explanation": "依照，与…一致；学术论文经典介词搭配"
       },
       {
         "id": "e5",
         "expression": "be accountable for/be responsible for",
-        "explanation": "对...负责；accountable 强调需向公众或机构解释"
+        "explanation": "对…负责；accountable 强调需向公众或机构解释"
       },
       {
         "id": "e6",
@@ -590,18 +679,23 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "id": "e12",
-        "expression": "give an account of/explain",
-        "explanation": "描述，解释；account 熟词僻义常考“叙述、说明”"
+        "expression": "broaden horizons/widen",
+        "explanation": "开阔眼界；四级高频固定表达"
       },
       {
         "id": "e13",
-        "expression": "abolish barriers/do away with",
-        "explanation": "废除壁垒；abolish 主语常为法律、制度或障碍"
+        "expression": "overcome barriers/obstacles",
+        "explanation": "克服障碍；overcome 侧重战胜困难"
       },
       {
         "id": "e14",
-        "expression": "accumulate experience/amass",
-        "explanation": "积聚经验，积累；accumulate 强调逐步递增"
+        "expression": "mutual trust/confidence",
+        "explanation": "相互信任；学术合作与人际交往核心搭配"
+      },
+      {
+        "id": "e15",
+        "expression": "strengthen ties/bonds",
+        "explanation": "巩固纽带；形容深化国际交流合作"
       }
     ]
   },
@@ -609,32 +703,32 @@ export const PASSAGES_01_05: Passage[] = [
     "id": "cet4-b1-002",
     "indexLabel": "NO. 02",
     "tier": "cet4-core",
-    "topic": "现代公共健康与航空出行服务",
-    "titleZh": "航空出行管理与公共健康关怀",
-    "titleEn": "Airline Travel Management and Public Health Care",
+    "topic": "民用航空客运服务与旅客健康应急保障",
+    "titleZh": "民用航空客运服务与旅客健康应急保障",
+    "titleEn": "Civil Aviation Passenger Services and In-Flight Health Safeguards",
     "paragraphs": [
       {
         "paragraphNumber": 1,
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "In modern times, an international airline must adjust its flight agenda ahead of winter days to keep passenger safety ahead of profits.",
-            "chinese": "在现代，国际航空公司必须在冬日来临前调整航班日程，将旅客安全置于利润之前。"
+            "english": "In modern civil aviation, an international airline must adjust its flight schedule ahead of seasonal peaks to ensure passenger safety and maintain reliable operations.",
+            "chinese": "在现代民航业中，国际航空公司必须在季节性客运高峰到来前调整航班时刻表，以确保旅客安全并维持可靠运营。"
           },
           {
             "sentenceNumber": 2,
-            "english": "When passengers board an advanced aircraft, gentle air-conditioning and a clean aisle provide an obvious advantage.",
-            "chinese": "当乘客登上先进的飞机时，温和的空调与整洁的过道提供了明显的优势。"
+            "english": "When passengers board an advanced aircraft, a clean aisle and gentle air-conditioning provide obvious comfort during travel.",
+            "chinese": "当旅客登上先进的飞机时，整洁的过道与柔和的空调为旅途提供了显著的舒适感。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Attendants address safety steps, check aerial communication gear, and never sound a false alarm without cause.",
-            "chinese": "乘务员讲解安全步骤，检查航空通讯设备，绝不在无故情况下发出虚假警报。"
+            "english": "Before departure, cabin attendants carefully inspect vital equipment, check emergency gear, and review essential safety procedures.",
+            "chinese": "起飞前，客舱乘务员仔细检查关键设备，核对应急装备，并复习必要的安全程序。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Affluent families who afford high seat prices admire the crew when staff administer medical aid to an elder passenger.",
-            "chinese": "当工作人员向年长乘客提供医疗救助时，出得起高昂座次费用的富裕家庭也十分钦佩。"
+            "english": "Airline managers emphasize that trained staff must never sound a false alarm without cause, yet they should remain alert to any potential danger.",
+            "chinese": "航空公司管理者强调，训练有素的员工绝不可在无故情况下拉响虚假警报，但他们应当对任何潜在危险保持警惕。"
           }
         ]
       },
@@ -643,23 +737,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Public health leaders advocate that airports adopt strict health rules to affect community life in a positive way.",
-            "chinese": "公共卫生领袖主张机场采取严格的健康规则，以积极的方式影响社区生活。"
+            "english": "During long flights across continents, urgent medical conditions can occasionally emerge and challenge the flight crew.",
+            "chinese": "在跨大洲的长途飞行中，紧急的身体状况偶尔可能出现，并考验机组人员。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Doctors advise that passengers should not be afraid to admit minor disease or ask for adequate medical advice.",
-            "chinese": "医生建议乘客不应害怕承认轻微疾病，而应寻求充分的医疗建议。"
+            "english": "When an elder passenger suddenly feels dizzy or displays acute breathing difficulty, attendants quickly step forward to address the crisis.",
+            "chinese": "当一位年长旅客突发眩晕或表现出急性呼吸困难时，乘务员迅速上前处理这一危机。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Hospitals monitor serious conditions like AIDS, treat any drug addict with care, and administrate isolation services.",
-            "chinese": "医院监测艾滋病等严重疾病，悉心照料药物成瘾者，并管理隔离服务。"
+            "english": "Flight attendants calmly administer basic aid, provide adequate oxygen, and relieve anxious family members sitting nearby.",
+            "chinese": "乘务员沉着地实施基础救助，提供充足的氧气，并安抚坐在附近的焦虑家属。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Afterward, official health agents agree on shared standards to prevent disease spread in public affairs.",
-            "chinese": "事后，官方卫生人员在公共事务中就共同标准达成一致，以防止疾病传播。"
+            "english": "Meanwhile, the captain communicates with ground medical agents to seek professional advice and decide whether the aircraft needs to land at the nearest airport.",
+            "chinese": "与此同时，机长与地面医疗人员沟通以寻求专业建议，并决定飞机是否需要在最近的机场降落。"
           }
         ]
       },
@@ -668,23 +762,18 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Air magazines advertise regional agriculture to show corporate affection for local food production.",
-            "chinese": "航空杂志宣传区域农业，以表达企业对当地粮食生产的关爱之情。"
+            "english": "Public health leaders advocate that commercial airlines adopt strict standards to monitor conditions and prevent the spread of infectious disease.",
+            "chinese": "公共卫生领袖主张商业航空公司采取严格标准，以监测健康状况并防止传染病的蔓延。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Passengers who start an exciting global adventure often write descriptions with a colorful adjective and an expressive adverb.",
-            "chinese": "开启精彩全球冒险的乘客经常用生动的形容词和富有表现力的副词来书写见闻。"
+            "english": "Airport authorities regularly clean public terminals and distribute protective masks to passengers facing cold symptoms or minor illness.",
+            "chinese": "机场管理机构定期清洁公共候机楼，并向出现感冒症状或轻微不适的旅客发放防护口罩。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Afterwards, passenger reviews will add helpful ideas to future flight plans with the clear aim of boosting satisfaction.",
-            "chinese": "随后，乘客的评价将为未来的飞行计划增添有益的想法，明确旨在提升满意度。"
-          },
-          {
-            "sentenceNumber": 4,
-            "english": "When passengers return home, they preserve valuable pictures in a family album without facing aggressive commercial promotion.",
-            "chinese": "当乘客返家时，他们将珍贵的照片保存在家庭相册中，无需面对激进的商业推销。"
+            "english": "By providing prompt assistance and genuine care throughout every journey, airline companies satisfy passenger expectations and strengthen public trust in aviation safety.",
+            "chinese": "通过在每次旅程中提供及时的援助与真诚的关怀，航空公司满足了旅客的期望，并增强了公众对航空安全的信任。"
           }
         ]
       }
@@ -693,6 +782,14 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "modern",
         "gloss": "a.现代的；当代的"
+      },
+      {
+        "headwordId": "civil",
+        "gloss": "a.民用的；国内的"
+      },
+      {
+        "headwordId": "aviation",
+        "gloss": "n.航空；航空学；飞行"
       },
       {
         "headwordId": "international",
@@ -704,33 +801,51 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "adjust",
-        "gloss": "v.调整；调节"
+        "gloss": "v.调整；调节；校准"
       },
       {
-        "headwordId": "agenda",
-        "gloss": "n.日程；议程"
+        "headwordId": "schedule",
+        "gloss": "n.时刻表；日程安排；计划"
       },
       {
         "headwordId": "ahead",
         "gloss": "ad.在前面地；提前地"
       },
       {
+        "headwordId": "peak",
+        "surface": "peaks",
+        "gloss": "n.高峰；顶峰；峰值"
+      },
+      {
+        "headwordId": "ensure",
+        "gloss": "v.确保；保证；担保"
+      },
+      {
         "headwordId": "passenger",
-        "gloss": "n.旅客；乘客"
+        "gloss": "a.旅客的；乘客的"
       },
       {
         "headwordId": "safe",
         "surface": "safety",
-        "gloss": "ad.安全地；平安地"
+        "gloss": "n.安全；平安；安全性"
       },
       {
-        "headwordId": "profit",
-        "surface": "profits",
-        "gloss": "n.利润；收益"
+        "headwordId": "maintain",
+        "gloss": "v.维持；保持；维护"
+      },
+      {
+        "headwordId": "rely",
+        "surface": "reliable",
+        "gloss": "a.可靠的；可信赖的"
+      },
+      {
+        "headwordId": "operate",
+        "surface": "operations",
+        "gloss": "n.运营；运转；业务"
       },
       {
         "headwordId": "board",
-        "gloss": "v.登机；上船"
+        "gloss": "v.登机；上船；登上"
       },
       {
         "headwordId": "advance",
@@ -742,391 +857,316 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.飞机；航空器"
       },
       {
-        "headwordId": "gentle",
-        "gloss": "a.温和的；轻柔的"
-      },
-      {
-        "headwordId": "air-conditioning",
-        "gloss": "n.空调；空调系统"
-      },
-      {
-        "headwordId": "aisle",
-        "gloss": "n.过道；通道"
-      },
-      {
         "headwordId": "clean",
         "gloss": "a.整洁的；干净的"
       },
       {
+        "headwordId": "aisle",
+        "gloss": "n.过道；通道；走廊"
+      },
+      {
+        "headwordId": "gentle",
+        "gloss": "a.柔和的；温和的；轻缓的"
+      },
+      {
+        "headwordId": "air-conditioning",
+        "gloss": "n.空调；空气调节系统"
+      },
+      {
         "headwordId": "provide",
-        "gloss": "v.提供；供应"
+        "gloss": "v.提供；供给；给予"
       },
       {
         "headwordId": "obvious",
         "gloss": "a.明显的；显而易见的"
       },
       {
-        "headwordId": "advantage",
-        "gloss": "n.优势；有利条件"
+        "headwordId": "comfort",
+        "gloss": "n.舒适；安逸；慰藉"
+      },
+      {
+        "headwordId": "travel",
+        "gloss": "n.旅行；出行；旅程"
+      },
+      {
+        "headwordId": "depart",
+        "surface": "departure",
+        "gloss": "n.出发；起飞；离开"
+      },
+      {
+        "headwordId": "cabin",
+        "gloss": "a.客舱的；机舱的"
       },
       {
         "headwordId": "attend",
-        "surface": "Attendants",
-        "gloss": "n.服务员；侍者"
+        "surface": "attendants",
+        "gloss": "n.服务员；侍者；随从"
       },
       {
-        "headwordId": "address",
-        "gloss": "v.讲解；处理"
+        "headwordId": "care",
+        "surface": "carefully",
+        "gloss": "ad.仔细地；小心地；认真地"
       },
       {
-        "headwordId": "step",
-        "surface": "steps",
-        "gloss": "n.步骤；措施"
+        "headwordId": "inspect",
+        "gloss": "v.检查；视察；审视"
+      },
+      {
+        "headwordId": "vital",
+        "gloss": "a.极其重要的；生死攸关的"
+      },
+      {
+        "headwordId": "equip",
+        "surface": "equipment",
+        "gloss": "n.设备；装备；器材"
       },
       {
         "headwordId": "check¹",
-        "gloss": "v.核对；检查"
+        "surface": "check",
+        "gloss": "v.检查；核对；查看"
       },
       {
-        "headwordId": "aerial",
-        "gloss": "a.航空的；空中的"
-      },
-      {
-        "headwordId": "communicate",
-        "surface": "communication",
-        "gloss": "n.通信；交流"
+        "headwordId": "emergency",
+        "gloss": "a.紧急的；应急的"
       },
       {
         "headwordId": "gear",
-        "gloss": "n.设备；齿轮"
+        "gloss": "n.装备；用具；排挡"
       },
       {
-        "headwordId": "false",
-        "gloss": "a.虚假的；错误的"
+        "headwordId": "review",
+        "gloss": "v.复习；审查；回顾"
       },
       {
-        "headwordId": "alarm",
-        "gloss": "n.警报；惊慌"
+        "headwordId": "essence",
+        "surface": "essential",
+        "gloss": "a.必不可少的；本质的"
       },
       {
-        "headwordId": "cause",
-        "gloss": "n.原因；起因"
+        "headwordId": "procedure",
+        "surface": "procedures",
+        "gloss": "n.程序；步骤；手续"
       },
       {
-        "headwordId": "affluent",
-        "gloss": "a.富裕的；充裕的"
+        "headwordId": "manage",
+        "surface": "managers",
+        "gloss": "n.经理；管理者；负责人"
       },
       {
-        "headwordId": "afford",
-        "gloss": "v.买得起；负担得起"
-      },
-      {
-        "headwordId": "seat",
-        "gloss": "n.座位；席位"
-      },
-      {
-        "headwordId": "admire",
-        "gloss": "v.钦佩；赞赏"
-      },
-      {
-        "headwordId": "crew",
-        "gloss": "n.全体人员；机组"
+        "headwordId": "emphasis",
+        "surface": "emphasize",
+        "gloss": "v.强调；着重；重视"
       },
       {
         "headwordId": "staff",
-        "gloss": "n.全体职员；员工"
+        "gloss": "n.全体职员；工作人员"
       },
       {
-        "headwordId": "administer",
-        "gloss": "v.执行；给予"
+        "headwordId": "false",
+        "gloss": "a.虚假的；错误的；伪造的"
+      },
+      {
+        "headwordId": "alarm",
+        "gloss": "n.警报；惊恐；闹钟"
+      },
+      {
+        "headwordId": "cause",
+        "gloss": "n.原因；正当理由；起因"
+      },
+      {
+        "headwordId": "remain",
+        "gloss": "v.保持；依然；留下"
+      },
+      {
+        "headwordId": "alert",
+        "gloss": "a.警惕的；警觉的；机敏的"
+      },
+      {
+        "headwordId": "potential",
+        "gloss": "a.潜在的；可能的"
+      },
+      {
+        "headwordId": "danger",
+        "gloss": "n.危险；危害；威胁"
+      },
+      {
+        "headwordId": "continent",
+        "surface": "continents",
+        "gloss": "n.大陆；大洲"
+      },
+      {
+        "headwordId": "urgent",
+        "gloss": "a.紧急的；紧迫的；急迫的"
       },
       {
         "headwordId": "medical",
         "gloss": "a.医疗的；医学的"
       },
       {
-        "headwordId": "aid",
-        "gloss": "n.援助；帮助"
+        "headwordId": "condition",
+        "surface": "conditions",
+        "gloss": "n.状况；健康状况；条件"
+      },
+      {
+        "headwordId": "occasion",
+        "surface": "occasionally",
+        "gloss": "ad.偶尔地；间或地"
+      },
+      {
+        "headwordId": "emerge",
+        "gloss": "v.浮现；出现；显露"
+      },
+      {
+        "headwordId": "challenge",
+        "gloss": "v.挑战；考验；质疑"
+      },
+      {
+        "headwordId": "crew",
+        "gloss": "n.全体机组人员；全体乘务员"
       },
       {
         "headwordId": "elder",
         "gloss": "a.年长的；资深的"
       },
       {
-        "headwordId": "public",
-        "gloss": "a.公众的；公共的"
+        "headwordId": "sudden",
+        "surface": "suddenly",
+        "gloss": "ad.突然地；出乎意料地"
       },
       {
-        "headwordId": "lead¹",
-        "surface": "leaders",
-        "gloss": "n.领袖；领导者"
+        "headwordId": "feel",
+        "surface": "feels",
+        "gloss": "v.感觉；觉得；触摸"
       },
       {
-        "headwordId": "advocate",
-        "gloss": "v.提倡；主张"
+        "headwordId": "dizzy",
+        "gloss": "a.头晕的；眩晕的"
       },
       {
-        "headwordId": "adopt",
-        "gloss": "v.采纳；采取"
+        "headwordId": "display",
+        "surface": "displays",
+        "gloss": "v.表现出；显示；展出"
       },
       {
-        "headwordId": "strict",
-        "gloss": "a.严格的；精确的"
+        "headwordId": "acute",
+        "gloss": "a.急性的；敏锐的；严重的"
       },
       {
-        "headwordId": "affect",
-        "gloss": "v.影响；波及"
+        "headwordId": "breath",
+        "surface": "breathing",
+        "gloss": "a.呼吸的；喘气的"
       },
       {
-        "headwordId": "community",
-        "gloss": "n.社区；社会"
+        "headwordId": "difficult",
+        "surface": "difficulty",
+        "gloss": "n.困难；窘境；难题"
       },
       {
-        "headwordId": "positive",
-        "gloss": "a.积极的；正面的"
+        "headwordId": "quick",
+        "surface": "quickly",
+        "gloss": "ad.迅速地；快捷地"
       },
       {
-        "headwordId": "advise",
-        "gloss": "v.建议；忠告"
+        "headwordId": "step",
+        "gloss": "v.迈步；走；跨步"
       },
       {
-        "headwordId": "afraid",
-        "gloss": "a.害怕的；担心的"
+        "headwordId": "forward",
+        "gloss": "ad.向前地；向未来地"
       },
       {
-        "headwordId": "admit",
-        "gloss": "v.承认；准许进入"
+        "headwordId": "address",
+        "gloss": "v.处理；应对；演讲"
       },
       {
-        "headwordId": "minor",
-        "gloss": "a.次要的；较小的"
+        "headwordId": "crisis",
+        "gloss": "n.危机；紧要关头；危急关头"
       },
       {
-        "headwordId": "disease",
-        "gloss": "n.疾病；病症"
+        "headwordId": "calm",
+        "surface": "calmly",
+        "gloss": "ad.沉着地；平静地；镇定地"
       },
       {
-        "headwordId": "ask",
-        "gloss": "v.请求；询问"
+        "headwordId": "administer",
+        "gloss": "v.实施；给予；执行"
+      },
+      {
+        "headwordId": "basic",
+        "gloss": "a.基础的；基本的"
+      },
+      {
+        "headwordId": "aid",
+        "gloss": "n.救助；援助；帮助"
       },
       {
         "headwordId": "adequate",
-        "gloss": "a.充分的；足够的"
+        "gloss": "a.充足的；足够的；适当的"
       },
       {
-        "headwordId": "advice",
-        "gloss": "n.建议；劝告"
+        "headwordId": "oxygen",
+        "gloss": "n.氧气；氧"
       },
       {
-        "headwordId": "monitor",
-        "gloss": "v.监视；监测"
+        "headwordId": "relieve",
+        "gloss": "v.缓解；减轻；使宽慰"
       },
       {
-        "headwordId": "serious",
-        "gloss": "a.严重的；严肃的"
+        "headwordId": "anxious",
+        "gloss": "a.焦虑的；担心的；渴望的"
       },
       {
-        "headwordId": "condition",
-        "surface": "conditions",
-        "gloss": "n.疾病；条件"
+        "headwordId": "nearby",
+        "gloss": "ad.在附近地；不远处地"
       },
       {
-        "headwordId": "AIDS",
-        "gloss": "n.艾滋病；综合征"
+        "headwordId": "meanwhile",
+        "surface": "Meanwhile",
+        "gloss": "ad.与此同时地；在此期间地"
       },
       {
-        "headwordId": "treat",
-        "gloss": "v.治疗；对待"
+        "headwordId": "captain",
+        "gloss": "n.机长；船长；队长"
       },
       {
-        "headwordId": "drug",
-        "gloss": "n.药物；毒品"
-      },
-      {
-        "headwordId": "addict",
-        "gloss": "n.瘾君子；入迷者"
-      },
-      {
-        "headwordId": "care",
-        "gloss": "n.关怀；照料"
-      },
-      {
-        "headwordId": "administrate",
-        "gloss": "v.管理；管辖"
-      },
-      {
-        "headwordId": "isolate",
-        "surface": "isolation",
-        "gloss": "n.隔离；孤立"
-      },
-      {
-        "headwordId": "serve",
-        "surface": "services",
-        "gloss": "n.服务；业务"
-      },
-      {
-        "headwordId": "afterward",
-        "gloss": "ad.后来地；以后地"
-      },
-      {
-        "headwordId": "official",
-        "gloss": "a.官方的；正式的"
+        "headwordId": "communicate",
+        "surface": "communicates",
+        "gloss": "v.沟通；交流；传达"
       },
       {
         "headwordId": "agent",
         "surface": "agents",
-        "gloss": "n.人员；代理人"
+        "gloss": "n.代理人；工作人员；特工"
       },
       {
-        "headwordId": "agree",
-        "gloss": "v.同意；赞同"
+        "headwordId": "seek",
+        "gloss": "v.寻求；寻找；谋求"
       },
       {
-        "headwordId": "share",
-        "surface": "shared",
-        "gloss": "a.共同的；共享的"
+        "headwordId": "profession",
+        "surface": "professional",
+        "gloss": "a.专业的；职业的"
       },
       {
-        "headwordId": "standard",
-        "surface": "standards",
-        "gloss": "n.标准；规范"
+        "headwordId": "advice",
+        "gloss": "n.建议；劝告；忠告"
       },
       {
-        "headwordId": "prevent",
-        "gloss": "v.预防；防止"
+        "headwordId": "decide",
+        "gloss": "v.决定；判定；决断"
       },
       {
-        "headwordId": "spread",
-        "gloss": "n.扩散；传播"
+        "headwordId": "public",
+        "gloss": "a.公共的；大众的"
       },
       {
-        "headwordId": "affair",
-        "surface": "affairs",
-        "gloss": "n.事务；事情"
+        "headwordId": "lead¹",
+        "surface": "leaders",
+        "gloss": "n.领袖；领导人；榜首"
       },
       {
-        "headwordId": "advertise",
-        "gloss": "v.做广告；宣传"
-      },
-      {
-        "headwordId": "region",
-        "surface": "regional",
-        "gloss": "a.区域的；地方的"
-      },
-      {
-        "headwordId": "agriculture",
-        "gloss": "n.农业；农学"
-      },
-      {
-        "headwordId": "show",
-        "gloss": "v.展示；表明"
-      },
-      {
-        "headwordId": "corporation",
-        "surface": "corporate",
-        "gloss": "a.企业的；法人的"
-      },
-      {
-        "headwordId": "affection",
-        "gloss": "n.喜爱；钟爱"
-      },
-      {
-        "headwordId": "local",
-        "gloss": "a.当地的；地方的"
-      },
-      {
-        "headwordId": "produce",
-        "surface": "production",
-        "gloss": "n.生产；产出"
-      },
-      {
-        "headwordId": "excite",
-        "surface": "exciting",
-        "gloss": "a.令人兴奋的；激动的"
-      },
-      {
-        "headwordId": "globe",
-        "surface": "global",
-        "gloss": "a.全球的；全世界的"
-      },
-      {
-        "headwordId": "adventure",
-        "gloss": "n.冒险；奇遇"
-      },
-      {
-        "headwordId": "write",
-        "gloss": "v.书写；记录"
-      },
-      {
-        "headwordId": "describe",
-        "surface": "descriptions",
-        "gloss": "n.描写；叙述"
-      },
-      {
-        "headwordId": "adjective",
-        "gloss": "n.形容词；修饰语"
-      },
-      {
-        "headwordId": "express",
-        "surface": "expressive",
-        "gloss": "a.有表现力的；表达的"
-      },
-      {
-        "headwordId": "adverb",
-        "gloss": "n.副词；修饰词"
-      },
-      {
-        "headwordId": "afterwards",
-        "gloss": "ad.后来地；随后地"
-      },
-      {
-        "headwordId": "review",
-        "surface": "reviews",
-        "gloss": "n.评价；审查"
-      },
-      {
-        "headwordId": "add",
-        "gloss": "v.增加；增添"
-      },
-      {
-        "headwordId": "help",
-        "surface": "helpful",
-        "gloss": "a.有帮助的；有益的"
-      },
-      {
-        "headwordId": "aim",
-        "gloss": "n.目的；目标"
-      },
-      {
-        "headwordId": "boost",
-        "surface": "boosting",
-        "gloss": "v.提高；促进"
-      },
-      {
-        "headwordId": "satisfy",
-        "surface": "satisfaction",
-        "gloss": "n.满意；满足"
-      },
-      {
-        "headwordId": "return",
-        "gloss": "v.返回；归来"
-      },
-      {
-        "headwordId": "preserve",
-        "gloss": "v.保存；保留"
-      },
-      {
-        "headwordId": "value",
-        "surface": "valuable",
-        "gloss": "a.珍贵的；有价值的"
-      },
-      {
-        "headwordId": "album",
-        "gloss": "n.相册；画册"
-      },
-      {
-        "headwordId": "aggressive",
-        "gloss": "a.侵略性的；过火的"
+        "headwordId": "advocate",
+        "gloss": "v.主张；提倡；拥护"
       },
       {
         "headwordId": "commerce",
@@ -1134,82 +1174,188 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.商业的；商务的"
       },
       {
-        "headwordId": "promote",
-        "surface": "promotion",
-        "gloss": "n.推销；推广"
+        "headwordId": "adopt",
+        "gloss": "v.采纳；采用；收养"
+      },
+      {
+        "headwordId": "strict",
+        "gloss": "a.严格的；严密的；精确的"
+      },
+      {
+        "headwordId": "standard",
+        "surface": "standards",
+        "gloss": "n.标准；规范；准则"
+      },
+      {
+        "headwordId": "monitor",
+        "gloss": "v.监测；监控；监听"
+      },
+      {
+        "headwordId": "prevent",
+        "gloss": "v.防止；预防；阻止"
+      },
+      {
+        "headwordId": "spread",
+        "gloss": "n.传播；蔓延；散布"
+      },
+      {
+        "headwordId": "infect",
+        "surface": "infectious",
+        "gloss": "a.传染性的；有感染力的"
+      },
+      {
+        "headwordId": "disease",
+        "gloss": "n.疾病；弊端"
+      },
+      {
+        "headwordId": "authority",
+        "surface": "authorities",
+        "gloss": "n.官方机构；当权者；权威"
+      },
+      {
+        "headwordId": "regular",
+        "surface": "regularly",
+        "gloss": "ad.定期地；经常地；有规律地"
+      },
+      {
+        "headwordId": "terminal",
+        "surface": "terminals",
+        "gloss": "n.航站楼；候机楼；终端"
+      },
+      {
+        "headwordId": "distribute",
+        "gloss": "v.分发；分配；散发"
+      },
+      {
+        "headwordId": "protect",
+        "surface": "protective",
+        "gloss": "a.防护的；保护性的"
+      },
+      {
+        "headwordId": "mask",
+        "surface": "masks",
+        "gloss": "n.口罩；面具；假面"
+      },
+      {
+        "headwordId": "symptom",
+        "surface": "symptoms",
+        "gloss": "n.症状；征候；征兆"
+      },
+      {
+        "headwordId": "minor",
+        "gloss": "a.轻微的；次要的；较小的"
+      },
+      {
+        "headwordId": "prompt",
+        "gloss": "a.及时的；敏捷的；迅速的"
+      },
+      {
+        "headwordId": "assist",
+        "surface": "assistance",
+        "gloss": "n.协助；援助；帮助"
+      },
+      {
+        "headwordId": "genuine",
+        "gloss": "a.真诚的；真实的；非人工的"
+      },
+      {
+        "headwordId": "throughout",
+        "gloss": "prep.贯穿；遍及"
+      },
+      {
+        "headwordId": "journey",
+        "gloss": "n.旅程；旅行；航程"
+      },
+      {
+        "headwordId": "satisfy",
+        "gloss": "v.满足；使满意；符合"
+      },
+      {
+        "headwordId": "expect",
+        "surface": "expectations",
+        "gloss": "n.期望；预期；盼望"
+      },
+      {
+        "headwordId": "strong",
+        "surface": "strengthen",
+        "gloss": "v.增强；巩固；强化"
+      },
+      {
+        "headwordId": "trust",
+        "gloss": "n.信任；信赖；信托"
       }
     ],
     "phraseAnnotations": [],
     "expansionEntries": [
       {
         "id": "e1",
-        "expression": "adjust agenda/reschedule",
-        "explanation": "调整议程，重新安排时间"
+        "expression": "ahead of time/in advance",
+        "explanation": "提前，预先；advance 熟词僻义作名词表示“预付款”"
       },
       {
         "id": "e2",
-        "expression": "ahead of time/in advance",
-        "explanation": "提前，在...之前"
+        "expression": "adjust to/adapt to",
+        "explanation": "适应，调整；adjust 侧重微调以适应，adapt 侧重改造适应"
       },
       {
         "id": "e3",
         "expression": "take advantage of/make use of",
-        "explanation": "利用，趁...之机"
+        "explanation": "利用，趁…之机；advantage 常见搭配"
       },
       {
         "id": "e4",
-        "expression": "administer aid/provide relief",
-        "explanation": "实施救助，给予援助"
+        "expression": "sound an alarm/raise the alarm",
+        "explanation": "拉响警报，发出警告；alarm 熟词僻义可作动词“使惊恐”"
       },
       {
         "id": "e5",
-        "expression": "advocate reforms/champion",
-        "explanation": "倡导改革；advocate 熟词僻义常作及物动词"
+        "expression": "administer first aid/provide relief",
+        "explanation": "实施急救；administer 熟词僻义常作动词表示“施行，给予（救助/药物）”"
       },
       {
         "id": "e6",
-        "expression": "affect vs effect",
-        "explanation": "affect 常作动词表示“影响”，effect 常作名词表示“效果”"
+        "expression": "relieve stress/alleviate burden",
+        "explanation": "缓解压力，减轻负担；relieve 派生名词 relief 常见于阅读理解"
       },
       {
         "id": "e7",
-        "expression": "adequate supply/sufficient",
-        "explanation": "充足的供给；adequate 侧重满足最低需求标准"
+        "expression": "acute vs chronic",
+        "explanation": "急性与慢性；acute 意为“急性的，敏锐的”，chronic 意为“慢性的”"
       },
       {
         "id": "e8",
-        "expression": "drug addiction/dependency",
-        "explanation": "药物成瘾；addict 派生词 addiction 常见于医疗类阅读"
+        "expression": "address a crisis/tackle a challenge",
+        "explanation": "应对危机；address 熟词僻义作动词表示“处理，着手解决”"
       },
       {
         "id": "e9",
-        "expression": "agree on/reach consensus on",
-        "explanation": "在...上达成一致；agree to 同意某计划，agree with 同意某人"
+        "expression": "seek advice/consult experts",
+        "explanation": "寻求建议；seek 为常用高频动词，过去式为 sought"
       },
       {
         "id": "e10",
-        "expression": "public affairs/matters",
-        "explanation": "公共事务；affair 常指重大的政治或公众事件"
+        "expression": "advocate reforms/champion",
+        "explanation": "倡导改革；advocate 熟词僻义作及物动词表示“主张，拥护”"
       },
       {
         "id": "e11",
-        "expression": "advertise products/promote",
-        "explanation": "刊登广告宣传；advertise 为商业类阅读高频词"
+        "expression": "adopt measures/take steps",
+        "explanation": "采取措施；adopt 意为“采纳，采用”，注意与 adapt（适应）形近混淆"
       },
       {
         "id": "e12",
-        "expression": "corporate affection/caring",
-        "explanation": "企业关怀；affection 强调温暖的关爱情感"
+        "expression": "strict standards/rigorous criteria",
+        "explanation": "严格标准；strict 强调纪律或规范上的不容违背"
       },
       {
         "id": "e13",
-        "expression": "aim at/strive for",
-        "explanation": "瞄准，旨在；aim for 表示朝着...目标努力"
+        "expression": "distribute resources/allocate",
+        "explanation": "分配资源，分发物资；distribute 派生词 distribution 常见于社科类文章"
       },
       {
         "id": "e14",
-        "expression": "photo album/record",
-        "explanation": "影集，相册；album 熟词僻义也可指音乐专辑"
+        "expression": "genuine care/authentic concern",
+        "explanation": "真诚关怀；genuine 强调发自内心、真实非虚伪的"
       }
     ]
   },
@@ -1218,31 +1364,31 @@ export const PASSAGES_01_05: Passage[] = [
     "indexLabel": "NO. 03",
     "tier": "cet4-core",
     "topic": "远古遗址考古与高海拔考察",
-    "titleZh": "荒原古遗址考察与高海拔探险",
-    "titleEn": "Ancient Archaeological Exploration and High Altitude Expeditions",
+    "titleZh": "荒原古道与高海拔古遗址考察",
+    "titleEn": "Ancient Ruins and Alpine Trail Exploration",
     "paragraphs": [
       {
         "paragraphNumber": 1,
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Amid cold mountain winds at a high altitude, an annual team sets out to explore an ancient mountain valley.",
-            "chinese": "在高海拔凛冽的山风中，一支年度团队出发去探索一座古老山谷。"
+            "english": "At a high altitude, a team of researchers entered a remote valley to explore ancient stone ruins.",
+            "chinese": "在高海拔地区，一支研究团队进入一座偏远的峡谷以考察古代石制遗迹。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Alongside experienced scholars, an amateur explorer with youthful ambition joins the trip to analyze historic stone walls.",
-            "chinese": "在经验丰富的学者身旁，一位怀揣青春抱负的业余探险家加入旅程以分析历史石墙。"
+            "english": "The survey team faced extreme climate conditions, where harsh wind and midnight frost sharply reduced available oxygen.",
+            "chinese": "勘测队面临着极端的气候条件，那里凛冽的寒风与午夜的霜冻急剧减少了可用的氧气。"
           },
           {
             "sentenceNumber": 3,
-            "english": "They pack ample supplies, an aluminum ladder, and medical kits to keep team members safe and alive.",
-            "chinese": "他们打包了充足的补给品、一架铝制梯子和医疗箱，以确保团队成员安全并活着。"
+            "english": "To climb safely along the steep mountain trail, each traveler carried a heavy pack and inspected essential outdoor gear.",
+            "chinese": "为了沿着陡峭的山道安全攀登，每位出行者都背着沉重的行囊并检查了关键的户外装备。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Leaders announce strict rules that do not allow alcohol consumption, while an alert doctor examines every injured ankle.",
-            "chinese": "领队宣布了禁止饮酒的严格规定，而警觉的医生会检查每一个受伤的脚踝。"
+            "english": "Before stepping onto narrow rocky paths, they prepared a light metal ladder to cross deep cracks between towering cliffs.",
+            "chinese": "在踏上狭窄的岩石小径之前，他们准备了一架轻便的金属梯子，以跨越耸立悬崖之间的深裂隙。"
           }
         ]
       },
@@ -1251,23 +1397,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Amidst stone ruins, scholars amaze foreign visitors by uncovering how our distant ancestor built stone shelters anew.",
-            "chinese": "在石制遗址之中，学者向外国访客揭示了我们遥远的祖先如何重新搭建石制避难所，令人赞叹不已。"
+            "english": "A compact medical kit supplied emergency items for any sudden ankle injury or muscle strain during the march.",
+            "chinese": "小巧的医疗急救包为行进中任何突发的脚踝扭伤或肌肉拉伤提供了应急物资。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Local records allege that stone workers calculated every structural angle using basic algebra and careful measurements.",
-            "chinese": "地方史料声称，石匠们利用基础代数和细致测量计算了每一个结构角度。"
+            "english": "Alert local guides maintained a reliable rescue plan, while experienced scholars looked for an ancient stone shelter on the mountain slopes.",
+            "chinese": "警惕的当地向导维持着可靠的救援预案，而经验丰富的学者则在山坡上寻找古代石质避难所。"
           },
           {
             "sentenceNumber": 3,
-            "english": "A silver statue of an angel stands near a stone anchor, showing how trade reached mountain valleys.",
-            "chinese": "一座天使银像伫立在石锚附近，展现了贸易如何抵达崇山峻岭。"
+            "english": "Distant ancestors had survived in this isolated region by building solid rock walls to endure freezing winter storms.",
+            "chinese": "遥远的祖先曾在这片偏僻地域顽强生存，他们通过筑起坚固的石墙来抵御严寒的风暴。"
           },
           {
             "sentenceNumber": 4,
-            "english": "When heavy rocks alter narrow paths in a dark alley, an emergency ambulance waits nearby with a special allowance for rescue costs.",
-            "chinese": "当巨石改变了幽暗小巷里的狭窄路径时，一辆急救救护车在附近待命，配有一笔特殊的救援费用补贴。"
+            "english": "These early families stored precious food supplies and wooden tools inside hidden caves to survive harsh winter months.",
+            "chinese": "这些早期的家族将珍贵的食物补给与木制工具储存在隐蔽的洞穴中，以度过严酷的冬日岁月。"
           }
         ]
       },
@@ -1276,312 +1422,168 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Amongst diverse findings, scholars read aloud ancient texts in an old alphabet to amuse visiting students.",
-            "chinese": "在各类发现之中，学者出声诵读用古老字母表记录的文本，以逗乐来访的学生。"
+            "english": "Digging carefully through dark soil, researchers soon uncovered a deep layer of clay dishes, animal bones, and polished stones.",
+            "chinese": "在小心挖掘深色土壤时，研究人员很快发掘出一层深厚的陶土器皿、动物骨骼与打磨石块。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Nobody feels angry or annoyed when harsh weather delays work, because each reliable ally offers an alternative solution.",
-            "chinese": "当恶劣天气延误工作时，没有人感到愤怒或恼怒，因为每一位可靠的盟友都会提供替代方案。"
+            "english": "This clear physical evidence proved that difficult mountain paths once served as active trade routes connecting distant settlements.",
+            "chinese": "这一确凿的实物证据证明，艰难的高山小道曾作为活跃的贸易路线，连接着遥远的聚落。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Altogether, a huge amount of historic evidence will anchor cultural identity on this proud anniversary.",
-            "chinese": "总共而言，大量的历史证据将在这个自豪的周年纪念日稳固文化认同。"
+            "english": "Scholars surveyed each collapsed foundation, measured stone gates, and recorded structural details to document early building methods.",
+            "chinese": "学者们勘测了每一处倒塌的地基，测量了石门，并记录了结构细节以记载早期的建筑技法。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Even a tiny ant moving across stone reminds scholars that life thrives everywhere, inspiring a visiting ambassador alike.",
-            "chinese": "甚至一只穿行在石块上的微小蚂蚁也在提醒学者生命在各处绽放，同样启发了来访的大使。"
+            "english": "Despite steep geographic barriers and severe weather challenges, scientific cooperation helped the team protect and preserve this unique cultural heritage.",
+            "chinese": "尽管存在险峻的地理障碍与严酷的天气挑战，科学合作帮助团队保护并维护了这一独特的文化遗产。"
           }
         ]
       }
     ],
     "wordAnnotations": [
       {
-        "headwordId": "amid",
-        "gloss": "prep.在...之中；在...中间"
-      },
-      {
         "headwordId": "altitude",
         "gloss": "n.高度；海拔"
       },
       {
-        "headwordId": "annual",
-        "gloss": "a.年度的；每年的"
+        "headwordId": "research",
+        "surface": "researchers",
+        "gloss": "n.研究员；调查者"
+      },
+      {
+        "headwordId": "enter",
+        "surface": "entered",
+        "gloss": "v.进入；加入"
+      },
+      {
+        "headwordId": "remote",
+        "gloss": "a.偏远的；遥远的"
+      },
+      {
+        "headwordId": "valley",
+        "gloss": "n.峡谷；山谷"
       },
       {
         "headwordId": "explore",
-        "gloss": "v.探索；探测"
+        "gloss": "v.探索；勘探；考察"
       },
       {
         "headwordId": "ancient",
         "gloss": "a.古代的；古老的"
       },
       {
-        "headwordId": "valley",
-        "gloss": "n.山谷；峡谷"
+        "headwordId": "ruin",
+        "surface": "ruins",
+        "gloss": "n.遗迹；废墟"
       },
       {
-        "headwordId": "alongside",
-        "gloss": "prep.在...旁边；与...并肩"
+        "headwordId": "survey",
+        "gloss": "a.勘测的；调查的"
       },
       {
-        "headwordId": "experience",
-        "surface": "experienced",
-        "gloss": "a.有经验的；老练的"
+        "headwordId": "extreme",
+        "gloss": "a.极端的；极度的"
       },
       {
-        "headwordId": "scholar",
-        "surface": "scholars",
-        "gloss": "n.学者；学士"
+        "headwordId": "climate",
+        "gloss": "n.气候；风气"
       },
       {
-        "headwordId": "amateur",
-        "gloss": "a.业余的；非职业的"
+        "headwordId": "condition",
+        "surface": "conditions",
+        "gloss": "n.条件；状况"
       },
       {
-        "headwordId": "ambition",
-        "gloss": "n.抱负；雄心"
+        "headwordId": "harsh",
+        "gloss": "a.严酷的；恶劣的"
       },
       {
-        "headwordId": "youth",
-        "surface": "youthful",
-        "gloss": "a.青春的；有活力的"
+        "headwordId": "wind²",
+        "surface": "wind",
+        "gloss": "n.风；气流"
       },
       {
-        "headwordId": "join",
-        "surface": "joins",
-        "gloss": "v.加入；参与"
+        "headwordId": "frost",
+        "gloss": "n.霜冻；严寒"
       },
       {
-        "headwordId": "trip",
-        "gloss": "n.旅行；出行"
+        "headwordId": "sharp",
+        "surface": "sharply",
+        "gloss": "ad.急剧地；锐利地"
       },
       {
-        "headwordId": "analyze",
-        "gloss": "v.分析；剖析"
+        "headwordId": "reduce",
+        "surface": "reduced",
+        "gloss": "v.减少；降低"
       },
       {
-        "headwordId": "history",
-        "surface": "historic",
-        "gloss": "a.历史上著名的；有历史意义的"
+        "headwordId": "available",
+        "gloss": "a.可用的；可获得的"
       },
       {
-        "headwordId": "pack",
-        "gloss": "v.打包；收拾"
+        "headwordId": "oxygen",
+        "gloss": "n.氧气；氧"
       },
       {
-        "headwordId": "ample",
-        "gloss": "a.充足的；充裕的"
-      },
-      {
-        "headwordId": "supply",
-        "surface": "supplies",
-        "gloss": "n.补给品；供给"
-      },
-      {
-        "headwordId": "aluminum",
-        "gloss": "n.铝；铝制品"
-      },
-      {
-        "headwordId": "ladder",
-        "gloss": "n.梯子；阶梯"
-      },
-      {
-        "headwordId": "medical",
-        "gloss": "a.医疗的；医学的"
-      },
-      {
-        "headwordId": "kit",
-        "surface": "kits",
-        "gloss": "n.成套工具；装备包"
+        "headwordId": "climb",
+        "gloss": "v.攀登；爬升"
       },
       {
         "headwordId": "safe",
-        "gloss": "a.安全的；平安的"
+        "surface": "safely",
+        "gloss": "ad.安全地；平稳地"
       },
       {
-        "headwordId": "alive",
-        "gloss": "a.活着的；有生气的"
+        "headwordId": "steep",
+        "gloss": "a.陡峭的；险峻的"
       },
       {
-        "headwordId": "lead¹",
-        "surface": "Leaders",
-        "gloss": "n.领袖；领导者"
+        "headwordId": "trail",
+        "gloss": "n.山道；小径；痕迹"
       },
       {
-        "headwordId": "announce",
-        "gloss": "v.宣布；宣告"
+        "headwordId": "travel",
+        "surface": "traveler",
+        "gloss": "n.出行者；旅行者"
       },
       {
-        "headwordId": "strict",
-        "gloss": "a.严格的；严密的"
-      },
-      {
-        "headwordId": "allow",
-        "gloss": "v.允许；准许"
-      },
-      {
-        "headwordId": "alcohol",
-        "gloss": "n.酒精；酒"
-      },
-      {
-        "headwordId": "consume",
-        "surface": "consumption",
-        "gloss": "n.消费；消耗"
-      },
-      {
-        "headwordId": "alert",
-        "gloss": "a.警觉的；警惕的"
-      },
-      {
-        "headwordId": "examine",
-        "surface": "examines",
-        "gloss": "v.检查；审视"
-      },
-      {
-        "headwordId": "injure",
-        "surface": "injured",
-        "gloss": "a.受伤的；受损的"
-      },
-      {
-        "headwordId": "ankle",
-        "gloss": "n.踝；踝关节"
-      },
-      {
-        "headwordId": "amidst",
-        "gloss": "prep.在...之中；在...中间"
-      },
-      {
-        "headwordId": "ruin",
-        "surface": "ruins",
-        "gloss": "n.废墟；遗迹"
-      },
-      {
-        "headwordId": "amaze",
-        "gloss": "v.使惊奇；使吃惊"
-      },
-      {
-        "headwordId": "foreign",
-        "gloss": "a.外国的；对外的"
-      },
-      {
-        "headwordId": "visit",
-        "surface": "visitors",
-        "gloss": "n.访问者；宾客"
-      },
-      {
-        "headwordId": "uncover",
-        "surface": "uncovering",
-        "gloss": "v.揭示；发现"
-      },
-      {
-        "headwordId": "distance",
-        "surface": "distant",
-        "gloss": "a.遥远的；久远的"
-      },
-      {
-        "headwordId": "ancestor",
-        "gloss": "n.祖先；先祖"
-      },
-      {
-        "headwordId": "build",
-        "surface": "built",
-        "gloss": "v.建造；构建"
-      },
-      {
-        "headwordId": "shelter",
-        "surface": "shelters",
-        "gloss": "n.庇护所；避难处"
-      },
-      {
-        "headwordId": "anew",
-        "gloss": "ad.重新地；再度地"
-      },
-      {
-        "headwordId": "local",
-        "gloss": "a.当地的；地方的"
-      },
-      {
-        "headwordId": "record",
-        "surface": "records",
-        "gloss": "n.记录；记载"
-      },
-      {
-        "headwordId": "allege",
-        "gloss": "v.断言；宣称"
-      },
-      {
-        "headwordId": "calculate",
-        "surface": "calculated",
-        "gloss": "v.计算；推算"
-      },
-      {
-        "headwordId": "structure",
-        "surface": "structural",
-        "gloss": "a.结构的；构造的"
-      },
-      {
-        "headwordId": "angle",
-        "gloss": "n.角度；视角"
-      },
-      {
-        "headwordId": "basic",
-        "gloss": "a.基础的；基本的"
-      },
-      {
-        "headwordId": "algebra",
-        "gloss": "n.代数；代数学"
-      },
-      {
-        "headwordId": "care",
-        "surface": "careful",
-        "gloss": "a.仔细的；小心的"
-      },
-      {
-        "headwordId": "measure",
-        "surface": "measurements",
-        "gloss": "n.测量；尺寸"
-      },
-      {
-        "headwordId": "statue",
-        "gloss": "n.雕像；塑像"
-      },
-      {
-        "headwordId": "angel",
-        "gloss": "n.天使；善人"
-      },
-      {
-        "headwordId": "stand",
-        "surface": "stands",
-        "gloss": "v.伫立；站立"
-      },
-      {
-        "headwordId": "anchor",
-        "gloss": "n.锚；支柱"
-      },
-      {
-        "headwordId": "show",
-        "surface": "showing",
-        "gloss": "v.显示；表明"
-      },
-      {
-        "headwordId": "trade",
-        "gloss": "n.贸易；交易"
-      },
-      {
-        "headwordId": "reach",
-        "surface": "reached",
-        "gloss": "v.到达；延伸"
+        "headwordId": "carry",
+        "surface": "carried",
+        "gloss": "v.携带；背负"
       },
       {
         "headwordId": "heavy",
         "gloss": "a.沉重的；繁重的"
       },
       {
-        "headwordId": "alter",
-        "gloss": "v.改变；更改"
+        "headwordId": "pack",
+        "gloss": "n.包裹；行囊"
+      },
+      {
+        "headwordId": "inspect",
+        "surface": "inspected",
+        "gloss": "v.检查；视察"
+      },
+      {
+        "headwordId": "essence",
+        "surface": "essential",
+        "gloss": "a.关键的；必不可少的"
+      },
+      {
+        "headwordId": "outdoor",
+        "gloss": "a.户外的；野外的"
+      },
+      {
+        "headwordId": "gear",
+        "gloss": "n.装备；用具"
+      },
+      {
+        "headwordId": "step",
+        "surface": "stepping",
+        "gloss": "v.迈步；踏上"
       },
       {
         "headwordId": "narrow",
@@ -1590,106 +1592,118 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "path",
         "surface": "paths",
-        "gloss": "n.小路；路径"
+        "gloss": "n.小径；道路"
       },
       {
-        "headwordId": "alley",
-        "gloss": "n.小巷；胡同"
+        "headwordId": "prepare",
+        "surface": "prepared",
+        "gloss": "v.准备；筹划"
+      },
+      {
+        "headwordId": "light²",
+        "surface": "light",
+        "gloss": "a.轻便的；轻盈的"
+      },
+      {
+        "headwordId": "metal",
+        "gloss": "a.金属的；金属制的"
+      },
+      {
+        "headwordId": "ladder",
+        "gloss": "n.梯子；阶梯"
+      },
+      {
+        "headwordId": "cross",
+        "gloss": "v.跨越；穿过"
+      },
+      {
+        "headwordId": "deep",
+        "gloss": "a.深的；深厚的"
+      },
+      {
+        "headwordId": "crack",
+        "surface": "cracks",
+        "gloss": "n.裂隙；裂缝"
+      },
+      {
+        "headwordId": "tower",
+        "surface": "towering",
+        "gloss": "a.高耸的；耸立的"
+      },
+      {
+        "headwordId": "cliff",
+        "surface": "cliffs",
+        "gloss": "n.悬崖；绝壁"
+      },
+      {
+        "headwordId": "compact",
+        "gloss": "a.小巧的；紧凑的"
+      },
+      {
+        "headwordId": "medical",
+        "gloss": "a.医疗的；医学的"
+      },
+      {
+        "headwordId": "kit",
+        "gloss": "n.工具箱；成套装备"
+      },
+      {
+        "headwordId": "supply",
+        "surface": "supplied",
+        "gloss": "v.供给；提供"
       },
       {
         "headwordId": "emergency",
-        "gloss": "n.紧急情况；突发事件"
+        "gloss": "a.应急的；紧急的"
       },
       {
-        "headwordId": "ambulance",
-        "gloss": "n.救护车；急救车"
+        "headwordId": "item",
+        "surface": "items",
+        "gloss": "n.物品；项目"
       },
       {
-        "headwordId": "wait",
-        "surface": "waits",
-        "gloss": "v.等待；等候"
+        "headwordId": "sudden",
+        "gloss": "a.突然的；意外的"
       },
       {
-        "headwordId": "nearby",
-        "gloss": "ad.在附近地；不远处地"
+        "headwordId": "ankle",
+        "gloss": "n.脚踝；踝关节"
       },
       {
-        "headwordId": "special",
-        "gloss": "a.特殊的；特别的"
+        "headwordId": "injure",
+        "surface": "injury",
+        "gloss": "n.损伤；受伤"
       },
       {
-        "headwordId": "allowance",
-        "gloss": "n.津贴；补助"
+        "headwordId": "muscle",
+        "gloss": "n.肌肉；力量"
       },
       {
-        "headwordId": "rescue",
-        "gloss": "n.营救；救援"
+        "headwordId": "strain¹",
+        "surface": "strain",
+        "gloss": "n.拉伤；劳损"
       },
       {
-        "headwordId": "amongst",
-        "gloss": "prep.在...之中；在...群体中"
+        "headwordId": "march",
+        "gloss": "n.行进；进军"
       },
       {
-        "headwordId": "diverse",
-        "gloss": "a.多样的；多元的"
+        "headwordId": "alert",
+        "gloss": "a.警觉的；警惕的"
       },
       {
-        "headwordId": "find",
-        "surface": "findings",
-        "gloss": "n.调查结果；发现"
+        "headwordId": "local",
+        "gloss": "a.当地的；本土的"
       },
       {
-        "headwordId": "read",
-        "gloss": "v.朗读；阅读"
+        "headwordId": "guide",
+        "surface": "guides",
+        "gloss": "n.向导；领路人"
       },
       {
-        "headwordId": "aloud",
-        "gloss": "ad.出声地；大声地"
-      },
-      {
-        "headwordId": "text",
-        "surface": "texts",
-        "gloss": "n.文本；课文"
-      },
-      {
-        "headwordId": "old",
-        "gloss": "a.古老的；年老的"
-      },
-      {
-        "headwordId": "alphabet",
-        "gloss": "n.字母表；基础知识"
-      },
-      {
-        "headwordId": "amuse",
-        "gloss": "v.逗乐；给...娱乐"
-      },
-      {
-        "headwordId": "visit",
-        "surface": "visiting",
-        "gloss": "a.访问的；来访的"
-      },
-      {
-        "headwordId": "feel",
-        "surface": "feels",
-        "gloss": "v.感觉；觉得"
-      },
-      {
-        "headwordId": "angry",
-        "gloss": "a.生气的；愤怒的"
-      },
-      {
-        "headwordId": "annoy",
-        "surface": "annoyed",
-        "gloss": "a.恼怒的；烦恼的"
-      },
-      {
-        "headwordId": "harsh",
-        "gloss": "a.恶劣的；严酷的"
-      },
-      {
-        "headwordId": "delay",
-        "surface": "delays",
-        "gloss": "v.延误；推迟"
+        "headwordId": "maintain",
+        "surface": "maintained",
+        "gloss": "v.维持；保持"
       },
       {
         "headwordId": "rely",
@@ -1697,34 +1711,144 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.可靠的；可信赖的"
       },
       {
-        "headwordId": "ally",
-        "gloss": "n.盟友；支持者"
+        "headwordId": "rescue",
+        "gloss": "n.救援；营救"
       },
       {
-        "headwordId": "offer",
-        "surface": "offers",
-        "gloss": "v.提供；提出"
+        "headwordId": "experience",
+        "surface": "experienced",
+        "gloss": "a.有经验的；熟练的"
       },
       {
-        "headwordId": "alternative",
-        "gloss": "a.供选择的；替代的"
+        "headwordId": "scholar",
+        "surface": "scholars",
+        "gloss": "n.学者；学士"
       },
       {
-        "headwordId": "solve",
-        "surface": "solution",
-        "gloss": "n.解决方案；解答"
+        "headwordId": "look",
+        "surface": "looked",
+        "gloss": "v.寻找；注视"
       },
       {
-        "headwordId": "altogether",
-        "gloss": "ad.完全地；总共地"
+        "headwordId": "shelter",
+        "gloss": "n.避难所；庇护所"
       },
       {
-        "headwordId": "huge",
-        "gloss": "a.巨大的；庞大的"
+        "headwordId": "slope",
+        "surface": "slopes",
+        "gloss": "n.斜坡；山坡"
       },
       {
-        "headwordId": "amount",
-        "gloss": "n.数量；数额"
+        "headwordId": "distance",
+        "surface": "Distant",
+        "gloss": "a.遥远的；久远的"
+      },
+      {
+        "headwordId": "ancestor",
+        "surface": "ancestors",
+        "gloss": "n.祖先；祖宗"
+      },
+      {
+        "headwordId": "survive",
+        "surface": "survived",
+        "gloss": "v.幸存；存活"
+      },
+      {
+        "headwordId": "isolate",
+        "surface": "isolated",
+        "gloss": "a.偏僻的；隔绝的"
+      },
+      {
+        "headwordId": "region",
+        "gloss": "n.地区；地带"
+      },
+      {
+        "headwordId": "build",
+        "surface": "building",
+        "gloss": "v.建造；建筑"
+      },
+      {
+        "headwordId": "solid",
+        "gloss": "a.坚固的；结实的"
+      },
+      {
+        "headwordId": "endure",
+        "gloss": "v.忍受；经受"
+      },
+      {
+        "headwordId": "freeze",
+        "surface": "freezing",
+        "gloss": "a.严寒的；冰冻的"
+      },
+      {
+        "headwordId": "storm",
+        "surface": "storms",
+        "gloss": "n.风暴；暴风雪"
+      },
+      {
+        "headwordId": "store²",
+        "surface": "stored",
+        "gloss": "v.储藏；储存"
+      },
+      {
+        "headwordId": "precious",
+        "gloss": "a.珍贵的；宝贵的"
+      },
+      {
+        "headwordId": "tool",
+        "surface": "tools",
+        "gloss": "n.工具；用具"
+      },
+      {
+        "headwordId": "hide",
+        "surface": "hidden",
+        "gloss": "a.隐蔽的；隐藏的"
+      },
+      {
+        "headwordId": "cave",
+        "surface": "caves",
+        "gloss": "n.洞穴；山洞"
+      },
+      {
+        "headwordId": "dig",
+        "surface": "Digging",
+        "gloss": "v.挖掘；掘土"
+      },
+      {
+        "headwordId": "care",
+        "surface": "carefully",
+        "gloss": "ad.小心地；谨慎地"
+      },
+      {
+        "headwordId": "soil",
+        "gloss": "n.土壤；泥土"
+      },
+      {
+        "headwordId": "uncover",
+        "surface": "uncovered",
+        "gloss": "v.发掘；揭露"
+      },
+      {
+        "headwordId": "layer",
+        "gloss": "n.层次；土层"
+      },
+      {
+        "headwordId": "clay",
+        "gloss": "a.陶土的；泥土的"
+      },
+      {
+        "headwordId": "dish",
+        "surface": "dishes",
+        "gloss": "n.器皿；盘碟"
+      },
+      {
+        "headwordId": "polish",
+        "surface": "polished",
+        "gloss": "a.打磨的；光滑的"
+      },
+      {
+        "headwordId": "physical",
+        "gloss": "a.实物的；物理的"
       },
       {
         "headwordId": "evident",
@@ -1732,130 +1856,222 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.证据；迹象"
       },
       {
+        "headwordId": "prove",
+        "surface": "proved",
+        "gloss": "v.证明；证实"
+      },
+      {
+        "headwordId": "difficult",
+        "gloss": "a.艰难的；困难的"
+      },
+      {
+        "headwordId": "serve",
+        "surface": "served",
+        "gloss": "v.充当；服务"
+      },
+      {
+        "headwordId": "active",
+        "gloss": "a.活跃的；频繁的"
+      },
+      {
+        "headwordId": "trade",
+        "gloss": "n.贸易；商业"
+      },
+      {
+        "headwordId": "route",
+        "surface": "routes",
+        "gloss": "n.路线；路途"
+      },
+      {
+        "headwordId": "connect",
+        "surface": "connecting",
+        "gloss": "v.连接；联系"
+      },
+      {
+        "headwordId": "settle",
+        "surface": "settlements",
+        "gloss": "n.聚落；定居点"
+      },
+      {
+        "headwordId": "collapse",
+        "surface": "collapsed",
+        "gloss": "a.倒塌的；塌陷的"
+      },
+      {
+        "headwordId": "foundation",
+        "gloss": "n.地基；基础"
+      },
+      {
+        "headwordId": "measure",
+        "surface": "measured",
+        "gloss": "v.测量；度量"
+      },
+      {
+        "headwordId": "gate",
+        "surface": "gates",
+        "gloss": "n.大门；通道"
+      },
+      {
+        "headwordId": "record",
+        "surface": "recorded",
+        "gloss": "v.记录；记载"
+      },
+      {
+        "headwordId": "structure",
+        "surface": "structural",
+        "gloss": "a.结构的；构造的"
+      },
+      {
+        "headwordId": "detail",
+        "surface": "details",
+        "gloss": "n.细节；详情"
+      },
+      {
+        "headwordId": "document",
+        "gloss": "v.记载；记录"
+      },
+      {
+        "headwordId": "method",
+        "surface": "methods",
+        "gloss": "n.方法；技法"
+      },
+      {
+        "headwordId": "despite",
+        "surface": "Despite",
+        "gloss": "prep.尽管；虽然"
+      },
+      {
+        "headwordId": "geography",
+        "surface": "geographic",
+        "gloss": "a.地理的；地形的"
+      },
+      {
+        "headwordId": "barrier",
+        "surface": "barriers",
+        "gloss": "n.障碍；屏障"
+      },
+      {
+        "headwordId": "severe",
+        "gloss": "a.严酷的；严重的"
+      },
+      {
+        "headwordId": "challenge",
+        "surface": "challenges",
+        "gloss": "n.挑战；难题"
+      },
+      {
+        "headwordId": "science",
+        "surface": "scientific",
+        "gloss": "a.科学的；学术的"
+      },
+      {
+        "headwordId": "cooperate",
+        "surface": "cooperation",
+        "gloss": "n.合作；协作"
+      },
+      {
+        "headwordId": "help",
+        "surface": "helped",
+        "gloss": "v.帮助；协助"
+      },
+      {
+        "headwordId": "protect",
+        "gloss": "v.保护；防护"
+      },
+      {
+        "headwordId": "preserve",
+        "gloss": "v.保护；维护"
+      },
+      {
+        "headwordId": "unique",
+        "gloss": "a.独特的；独一无二的"
+      },
+      {
         "headwordId": "culture",
         "surface": "cultural",
         "gloss": "a.文化的；人文的"
       },
       {
-        "headwordId": "identity",
-        "gloss": "n.身份；认同"
-      },
-      {
-        "headwordId": "pride",
-        "surface": "proud",
-        "gloss": "a.自豪的；骄傲的"
-      },
-      {
-        "headwordId": "anniversary",
-        "gloss": "n.周年纪念日；周年庆"
-      },
-      {
-        "headwordId": "tiny",
-        "gloss": "a.微小的；极小的"
-      },
-      {
-        "headwordId": "ant",
-        "gloss": "n.蚂蚁；勤劳者"
-      },
-      {
-        "headwordId": "remind",
-        "surface": "reminds",
-        "gloss": "v.提醒；使想起"
-      },
-      {
-        "headwordId": "thrive",
-        "surface": "thrives",
-        "gloss": "v.茁壮成长；繁荣"
-      },
-      {
-        "headwordId": "everywhere",
-        "gloss": "ad.到处地；无论何处地"
-      },
-      {
-        "headwordId": "inspire",
-        "surface": "inspiring",
-        "gloss": "v.启发；鼓舞"
-      },
-      {
-        "headwordId": "ambassador",
-        "gloss": "n.大使；使者"
-      },
-      {
-        "headwordId": "alike",
-        "gloss": "ad.同样地；一样地"
+        "headwordId": "heritage",
+        "gloss": "n.遗产；传承"
       }
     ],
     "phraseAnnotations": [],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "at high altitude/high elevations",
-        "explanation": "在高海拔地区；altitude 侧重对海平面的垂直高度"
+        "id": "exp-01",
+        "expression": "high altitude",
+        "explanation": "高海拔；指地势高、气压低且氧气较为稀薄的高山环境"
       },
       {
-        "id": "e2",
-        "expression": "alongside with/in tandem with",
-        "explanation": "与...并肩，与...一起；alongside 常用作介词"
+        "id": "exp-02",
+        "expression": "remote valley",
+        "explanation": "偏远峡谷；偏僻且交通不便的山谷深处"
       },
       {
-        "id": "e3",
-        "expression": "ample evidence/abundant",
-        "explanation": "充足的证据；ample 侧重足敷所需且有余"
+        "id": "exp-03",
+        "expression": "ancient ruins",
+        "explanation": "古老废墟，远古遗址；古代人类定居点留存至今的建筑遗迹"
       },
       {
-        "id": "e4",
-        "expression": "alert to/watchful of",
-        "explanation": "对...保持警觉；be alert to 为高频阅读搭配"
+        "id": "exp-04",
+        "expression": "extreme climate",
+        "explanation": "极端气候；表现为严寒、狂风或干燥等严苛自然气象条件"
       },
       {
-        "id": "e5",
-        "expression": "build anew/start from scratch",
-        "explanation": "重新构建；anew 多用于书面语表达“从头再次”"
+        "id": "exp-05",
+        "expression": "mountain trail",
+        "explanation": "高山小道；供行者与马帮穿行在陡峭山峦之间的险峻山路"
       },
       {
-        "id": "e6",
-        "expression": "allege that/claim without proof",
-        "explanation": "宣称，指称；allege 强调未经证实的主张"
+        "id": "exp-06",
+        "expression": "outdoor gear",
+        "explanation": "户外装备；野外考察、徒步与登山时所携带的专业用具与防护工具"
       },
       {
-        "id": "e7",
-        "expression": "alternative option/substitute",
-        "explanation": "替代选择；alternative 可作名词或形容词"
+        "id": "exp-07",
+        "expression": "medical kit",
+        "explanation": "医疗急救包；野外科考途中用于处理外伤与突发疾病的成套急救物资"
       },
       {
-        "id": "e8",
-        "expression": "read aloud/speak out",
-        "explanation": "大声朗读；aloud 与 silently 相对"
+        "id": "exp-08",
+        "expression": "ankle injury",
+        "explanation": "脚踝损伤，踝关节扭伤；在崎岖不平山地行走时常见的运动损伤"
       },
       {
-        "id": "e9",
-        "expression": "reliable ally/partner",
-        "explanation": "可靠的盟友；ally 既可指同盟国家，也可指支持者"
+        "id": "exp-09",
+        "expression": "rescue plan",
+        "explanation": "救援预案，营救计划；针对野外险情制定的紧急撤离与救助方案"
       },
       {
-        "id": "e10",
-        "expression": "a huge amount of/a large quantity of",
-        "explanation": "大量的；amount 通常用于修饰不可数名词"
+        "id": "exp-10",
+        "expression": "stone shelter",
+        "explanation": "石质避难所；先民利用天然岩石堆砌而成用于避风御寒的庇护处"
       },
       {
-        "id": "e11",
-        "expression": "celebrate anniversary/commemorate",
-        "explanation": "庆祝周年纪念；anniversary 常考其构词法"
+        "id": "exp-11",
+        "expression": "winter storms",
+        "explanation": "冬季风暴；伴随强烈降雪与刺骨低温的高山极端天气"
       },
       {
-        "id": "e12",
-        "expression": "cultural ambassador/emissary",
-        "explanation": "文化大使；ambassador 熟词僻义常比喻“桥梁与使者”"
+        "id": "exp-12",
+        "expression": "soil layer",
+        "explanation": "土壤层，地层断面；考古中辨识不同人类活动时期的关键沉积层"
       },
       {
-        "id": "e13",
-        "expression": "treat alike/equally",
-        "explanation": "同样对待；alike 作副词表示“同样地，一视同仁地”"
+        "id": "exp-13",
+        "expression": "trade route",
+        "explanation": "贸易路线，商道；古代不同文明与部落之间互通商货的固定走廊"
       },
       {
-        "id": "e14",
-        "expression": "stone anchor/firm support",
-        "explanation": "石锚，精神支柱；anchor 熟词僻义常喻为“依托与支柱”"
+        "id": "exp-14",
+        "expression": "scientific cooperation",
+        "explanation": "科学合作；不同学科专家协同攻关与实地考察的联合工作模式"
+      },
+      {
+        "id": "exp-15",
+        "expression": "cultural heritage",
+        "explanation": "文化遗产；历史长河中留存下来具有重要研究与保存价值的历史财富"
       }
     ]
   },
