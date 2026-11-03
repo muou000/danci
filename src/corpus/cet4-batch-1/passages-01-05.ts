@@ -716,8 +716,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "When passengers board an advanced aircraft, a clean aisle and gentle air-conditioning provide obvious comfort during travel.",
-            "chinese": "当旅客登上先进的飞机时，整洁的过道与柔和的空调为旅途提供了显著的舒适感。"
+            "english": "When passengers board an advanced aircraft, a clean aisle and gentle air-conditioning provide great comfort during travel.",
+            "chinese": "当旅客登上先进的飞机时，整洁的过道与柔和的空调为旅途提供了极大的舒适感。"
           },
           {
             "sentenceNumber": 3,
@@ -741,7 +741,7 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "When an elder passenger suddenly feels dizzy or displays acute breathing difficulty, attendants quickly step forward to address the crisis.",
+            "english": "When an elderly passenger suddenly feels dizzy or displays acute breathing difficulty, attendants quickly step forward to address the crisis.",
             "chinese": "当一位年长旅客突发眩晕或表现出急性呼吸困难时，乘务员迅速上前处理这一危机。"
           },
           {
@@ -751,7 +751,7 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 4,
-            "english": "Meanwhile, the captain communicates with ground medical agents to seek professional advice and decide whether the aircraft needs to land at the nearest airport.",
+            "english": "Meanwhile, the captain communicates with ground medical personnel to seek professional advice and decide whether the aircraft needs to land at the nearest airport.",
             "chinese": "与此同时，机长与地面医疗人员沟通以寻求专业建议，并决定飞机是否需要在最近的机场降落。"
           }
         ]
@@ -876,8 +876,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.提供；供给；给予"
       },
       {
-        "headwordId": "obvious",
-        "gloss": "a.明显的；显而易见的"
+        "headwordId": "great",
+        "gloss": "a.极大的；巨大的；极好的"
       },
       {
         "headwordId": "comfort",
@@ -1025,7 +1025,8 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "elder",
-        "gloss": "a.年长的；资深的"
+        "surface": "elderly",
+        "gloss": "a.年长的；年老的"
       },
       {
         "headwordId": "sudden",
@@ -1133,9 +1134,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.沟通；交流；传达"
       },
       {
-        "headwordId": "agent",
-        "surface": "agents",
-        "gloss": "n.代理人；工作人员；特工"
+        "headwordId": "personnel",
+        "gloss": "n.全体人员；职员；人事部门"
       },
       {
         "headwordId": "seek",
@@ -1298,8 +1298,8 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "id": "e3",
-        "expression": "take advantage of/make use of",
-        "explanation": "利用，趁…之机；advantage 常见搭配"
+        "expression": "advanced aircraft/cutting-edge",
+        "explanation": "先进客机，前沿航空器；advanced 作形容词表示“先进的，尖端的”"
       },
       {
         "id": "e4",
@@ -1376,8 +1376,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "The survey team faced extreme climate conditions, where harsh wind and midnight frost sharply reduced available oxygen.",
-            "chinese": "勘测队面临着极端的气候条件，那里凛冽的寒风与午夜的霜冻急剧减少了可用的氧气。"
+            "english": "The survey team faced extreme climate conditions, where thin air sharply reduced available oxygen, while harsh wind and midnight frost drained their strength.",
+            "chinese": "勘测队面临着极端的气候条件，那里稀薄的空气急剧减少了可用的氧气，而凛冽的寒风与午夜的霜冻消耗着他们的体力。"
           },
           {
             "sentenceNumber": 3,
@@ -1496,17 +1496,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.条件；状况"
       },
       {
-        "headwordId": "harsh",
-        "gloss": "a.严酷的；恶劣的"
-      },
-      {
-        "headwordId": "wind²",
-        "surface": "wind",
-        "gloss": "n.风；气流"
-      },
-      {
-        "headwordId": "frost",
-        "gloss": "n.霜冻；严寒"
+        "headwordId": "thin",
+        "gloss": "a.稀薄的；薄弱的"
       },
       {
         "headwordId": "sharp",
@@ -1525,6 +1516,29 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "oxygen",
         "gloss": "n.氧气；氧"
+      },
+      {
+        "headwordId": "harsh",
+        "gloss": "a.严酷的；恶劣的"
+      },
+      {
+        "headwordId": "wind²",
+        "surface": "wind",
+        "gloss": "n.风；气流"
+      },
+      {
+        "headwordId": "frost",
+        "gloss": "n.霜冻；严寒"
+      },
+      {
+        "headwordId": "drain",
+        "surface": "drained",
+        "gloss": "v.消耗；耗尽；排空"
+      },
+      {
+        "headwordId": "strong",
+        "surface": "strength",
+        "gloss": "n.体力；力量；力气"
       },
       {
         "headwordId": "climb",
@@ -1999,78 +2013,78 @@ export const PASSAGES_01_05: Passage[] = [
     "expansionEntries": [
       {
         "id": "exp-01",
-        "expression": "high altitude",
-        "explanation": "高海拔；指地势高、气压低且氧气较为稀薄的高山环境"
+        "expression": "remote/distant/isolated",
+        "explanation": "偏僻的，遥远的；remote 熟词僻义常考“微乎其微的”，如 a remote possibility（极小的可能）；亦可指“远程的”，如 remote control（遥控）"
       },
       {
         "id": "exp-02",
-        "expression": "remote valley",
-        "explanation": "偏远峡谷；偏僻且交通不便的山谷深处"
+        "expression": "thin air/out of thin air",
+        "explanation": "稀薄的空气；thin 熟词僻义作形容词表示“稀薄的；薄弱的”，固定短语 out of thin air 意为“凭空，无中生有”，如 disappear into thin air（消失得无影无踪）"
       },
       {
         "id": "exp-03",
-        "expression": "ancient ruins",
-        "explanation": "古老废墟，远古遗址；古代人类定居点留存至今的建筑遗迹"
+        "expression": "drain strength/deplete/exhaust",
+        "explanation": "消耗体力，耗尽精力；drain 熟词僻义作动词表示“使精力耗尽；排空”，作名词常考“消耗，负担”，如 a drain on resources（对资源的持续消耗）"
       },
       {
         "id": "exp-04",
-        "expression": "extreme climate",
-        "explanation": "极端气候；表现为严寒、狂风或干燥等严苛自然气象条件"
+        "expression": "pack/backpack/bundle",
+        "explanation": "包裹，背包；pack 熟词僻义作及物动词表示“挤满，塞满（be packed with 挤满/充满）”，作名词还可表示“一群（狼或猎犬等）”，如 a pack of wolves"
       },
       {
         "id": "exp-05",
-        "expression": "mountain trail",
-        "explanation": "高山小道；供行者与马帮穿行在陡峭山峦之间的险峻山路"
+        "expression": "shed light on/light",
+        "explanation": "阐明，揭示；light 熟词僻义作形容词表示“轻便的；少量的；浅色的”，作名词常考学术搭配 throw/shed light on（为…提供新线索，阐明）"
       },
       {
         "id": "exp-06",
-        "expression": "outdoor gear",
-        "explanation": "户外装备；野外考察、徒步与登山时所携带的专业用具与防护工具"
+        "expression": "cross/traverse/span",
+        "explanation": "跨越，穿过；cross 熟词僻义作形容词常考“生气的，恼怒的”，如 be cross with sb.（生某人的气）；作名词表示“十字形；交叉”"
       },
       {
         "id": "exp-07",
-        "expression": "medical kit",
-        "explanation": "医疗急救包；野外科考途中用于处理外伤与突发疾病的成套急救物资"
+        "expression": "compact/dense/compressed",
+        "explanation": "小巧紧凑的；compact 熟词僻义作形容词表示“紧凑小巧的”，作动词表示“压紧，夯实”，作名词常考“契约，协议”，如 sign a compact"
       },
       {
         "id": "exp-08",
-        "expression": "ankle injury",
-        "explanation": "脚踝损伤，踝关节扭伤；在崎岖不平山地行走时常见的运动损伤"
+        "expression": "muscle strain/stress/tension",
+        "explanation": "肌肉拉伤；strain 熟词僻义作动词表示“极力，竭力（strain to do sth.）”，作名词常考“精神紧张，心理压力；旋律，曲调；血统”"
       },
       {
         "id": "exp-09",
-        "expression": "rescue plan",
-        "explanation": "救援预案，营救计划；针对野外险情制定的紧急撤离与救助方案"
+        "expression": "on the march/advance/progress",
+        "explanation": "在行进中，在发展中；march 熟词僻义作名词常考比喻义“持续发展，岁月流逝”，如 the march of time/history（时间的推移）；作动词表示“齐步前行”"
       },
       {
         "id": "exp-10",
-        "expression": "stone shelter",
-        "explanation": "石质避难所；先民利用天然岩石堆砌而成用于避风御寒的庇护处"
+        "expression": "alert/vigilant/watchful",
+        "explanation": "警惕的，警觉的；alert 熟词僻义作及物动词表示“使警觉，提醒（alert sb. to sth.）”，作名词常考固定搭配 on the alert（时刻警惕，戒备）"
       },
       {
         "id": "exp-11",
-        "expression": "winter storms",
-        "explanation": "冬季风暴；伴随强烈降雪与刺骨低温的高山极端天气"
+        "expression": "endure storms/withstand/tolerate",
+        "explanation": "抵御风暴，经受考验；endure 强调经受艰难困苦而不屈服，近义词 withstand 侧重“顶住压力”，派生词 enduring 常考“持久的，不朽的”"
       },
       {
         "id": "exp-12",
-        "expression": "soil layer",
-        "explanation": "土壤层，地层断面；考古中辨识不同人类活动时期的关键沉积层"
+        "expression": "store supplies/reserve/stockpile",
+        "explanation": "储备补给物资；store 熟词僻义作动词表示“储存，储备”，固定搭配 in store for 意为“即将发生在…身上”；supplies 作复数常考“补给品，生活必需品”"
       },
       {
         "id": "exp-13",
-        "expression": "trade route",
-        "explanation": "贸易路线，商道；古代不同文明与部落之间互通商货的固定走廊"
+        "expression": "deep layer/stratum/tier",
+        "explanation": "深厚地层，层次；layer 既指具体物理沉积“层”，又可指抽象“层次，阶层”；近义词 stratum 专指地质“地层”或社会“阶层”，tier 指“层级，梯级”"
       },
       {
         "id": "exp-14",
-        "expression": "scientific cooperation",
-        "explanation": "科学合作；不同学科专家协同攻关与实地考察的联合工作模式"
+        "expression": "physical evidence vs mental",
+        "explanation": "实物证据；physical 熟词僻义不仅指“身体的，肉体的”，学术和司法语境常考“实物的，有形的，物质的（tangible/material）”，与 mental/abstract 相对"
       },
       {
         "id": "exp-15",
-        "expression": "cultural heritage",
-        "explanation": "文化遗产；历史长河中留存下来具有重要研究与保存价值的历史财富"
+        "expression": "document methods/record/archive",
+        "explanation": "记载技法，记录方法；document 熟词僻义作及物动词常考“详细记录，记载；用文献证实”，作名词指“公文，文献”，派生词 documentary 为“纪录片”"
       }
     ]
   },
@@ -2092,13 +2106,13 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "Instead of simply abandoning old downtown quarters, municipal architects now strive to restore antique brick apartments and protect local heritage.",
-            "chinese": "市政建筑师不再简单地遗弃老城区，而是努力修复古老的砖砌公寓并保护当地文化遗产。"
+            "english": "Instead of simply abandoning old downtown quarters, municipal architects now strive to restore historic brick apartments and protect local heritage.",
+            "chinese": "市政建筑师不再简单地遗弃老城区，而是努力修复历史悠久的砖砌公寓并保护当地文化遗产。"
           },
           {
             "sentenceNumber": 3,
-            "english": "By gradually repairing aging infrastructure, this approach avoids arbitrary destruction and balances historic charm with modern living standards.",
-            "chinese": "通过逐步修缮老化的基础设施，这种方法避免了任意拆毁，并在历史风貌与现代生活水准之间取得了平衡。"
+            "english": "By gradually repairing aging infrastructure, this approach avoids arbitrary destruction and balances classic charm with modern living standards.",
+            "chinese": "通过逐步修缮老化的基础设施，这种方法避免了任意拆毁，并在经典风貌与现代生活水准之间取得了平衡。"
           },
           {
             "sentenceNumber": 4,
@@ -2853,8 +2867,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 3,
-            "english": "Facing extreme cold and fierce particle attack in the outer vacuum, specialized protective layers preserve delicate electronic circuits, prevent mechanical failure, and assure continuous data transmission.",
-            "chinese": "面对外层空间真空中的极寒和猛烈的粒子袭击，专用的保护层可以保护精密的电子线路，防止机械故障，并确保连续的数据传输。"
+            "english": "Facing extreme cold and fierce particle impacts in the vacuum of outer space, specialized protective layers preserve delicate electronic circuits, prevent mechanical failure, and assure continuous data transmission.",
+            "chinese": "面对外太空真空中的极寒和猛烈的粒子撞击，专用的保护层可以保护精密的电子线路，防止机械故障，并确保连续的数据传输。"
           }
         ]
       },
@@ -2863,18 +2877,18 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "To tackle these difficult technical challenges, international space authorities cooperate to authorize ambitious exploration missions, assigning expert teams to assist global satellite ground stations.",
+            "english": "To tackle these difficult technical challenges, international space agencies cooperate to authorize ambitious exploration missions, assigning expert teams to assist global satellite ground stations.",
             "chinese": "为了应对这些艰巨的技术挑战，各国际航天机构通力合作批准宏大的探索任务，并指派专家团队协助全球卫星地面站。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Leading research scientists assume that each bold voyage into deep space will attain valuable discoveries about planetary evolution and the origin of our solar system.",
-            "chinese": "顶尖的研究科学家认为，每一次进入深空的勇敢航程都将取得关于行星演化和太阳系起源的宝贵发现。"
+            "english": "Leading research scientists expect that each bold voyage into deep space will yield valuable discoveries about planetary evolution and the origin of our solar system.",
+            "chinese": "顶尖的研究科学家预计，每一次进入深空的勇敢航程都将取得关于行星演化和太阳系起源的宝贵发现。"
           },
           {
             "sentenceNumber": 3,
-            "english": "When public institutions educate young citizens with genuine enthusiasm and make scientific knowledge readily available, society adopts a positive attitude that proudly regards space exploration as a priceless national asset.",
-            "chinese": "当公共机构以由衷的热情教育年轻公民并使科学知识触手可及时，全社会便会形成一种积极的态度，自豪地将太空探索视为无价的国家财富。"
+            "english": "When public institutions educate young citizens with genuine enthusiasm and make scientific knowledge readily available, society adopts a positive attitude toward space exploration and proudly regards it as a priceless national asset.",
+            "chinese": "当公共机构以由衷的热情教育年轻公民并使科学知识触手可及时，全社会便会对太空探索形成积极的态度，并自豪地将其视为无价的国家财富。"
           }
         ]
       }
@@ -3262,16 +3276,21 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.微粒；粒子"
       },
       {
-        "headwordId": "attack",
-        "gloss": "n.袭击；侵袭"
+        "headwordId": "impact",
+        "surface": "impacts",
+        "gloss": "n.撞击；冲击"
+      },
+      {
+        "headwordId": "vacuum",
+        "gloss": "n.真空；空白"
       },
       {
         "headwordId": "outer",
         "gloss": "a.外部的；外层的"
       },
       {
-        "headwordId": "vacuum",
-        "gloss": "n.真空；空白"
+        "headwordId": "space",
+        "gloss": "n.太空；空间"
       },
       {
         "headwordId": "protect",
@@ -3351,13 +3370,9 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.国际的；跨国的"
       },
       {
-        "headwordId": "space",
-        "gloss": "n.太空；空间"
-      },
-      {
-        "headwordId": "authority",
-        "surface": "authorities",
-        "gloss": "n.官方机构；权威"
+        "headwordId": "agent",
+        "surface": "agencies",
+        "gloss": "n.专门机构；代理机构"
       },
       {
         "headwordId": "cooperate",
@@ -3396,8 +3411,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.研究；调查"
       },
       {
-        "headwordId": "assume",
-        "gloss": "v.假定；认为"
+        "headwordId": "expect",
+        "gloss": "v.预期；期望"
       },
       {
         "headwordId": "bold",
@@ -3412,8 +3427,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.深度的；深层的"
       },
       {
-        "headwordId": "attain",
-        "gloss": "v.达到；获得"
+        "headwordId": "yield",
+        "gloss": "v.产出；带来"
       },
       {
         "headwordId": "value",
@@ -3556,13 +3571,13 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "id": "exp-10",
-        "expression": "attitude toward / approach to",
-        "explanation": "对...的态度 / 对...的方法（常考后接介词 to/toward 搭配）"
+        "expression": "attitude toward / attitude to",
+        "explanation": "对...的态度；看法（常考介词搭配：adopt a positive attitude toward/to 表示“对…采取积极态度”）"
       },
       {
         "id": "exp-11",
-        "expression": "attain / achieve / accomplish",
-        "explanation": "达到；获得 / 实现；达到 / 完成（目标与成就类近义动词替换）"
+        "expression": "yield / produce / generate",
+        "explanation": "产出；产生 / 生产；制造 / 产生；引起（科研探索取得成果与发现的高频动词；搭配如 yield valuable discoveries）"
       },
       {
         "id": "exp-12",

@@ -469,6 +469,20 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('adverb');
     expect(compiled.coveredHeadwordIds).not.toContain('album');
     expect(compiled.coveredHeadwordIds).not.toContain('agriculture');
+
+    // 验证修正地道搭配与拓展条目疏漏
+    expect(passage!.paragraphs[0].sentences[1].english).toContain('great comfort');
+    expect(passage!.paragraphs[0].sentences[1].english).not.toContain('obvious comfort');
+    expect(passage!.paragraphs[1].sentences[1].english).toContain('an elderly passenger');
+    expect(passage!.paragraphs[1].sentences[1].english).not.toContain('an elder passenger');
+    expect(passage!.paragraphs[1].sentences[3].english).toContain('ground medical personnel');
+    expect(passage!.paragraphs[1].sentences[3].english).not.toContain('ground medical agents');
+    expect(passage!.expansionEntries.map((e) => e.expression)).not.toContain(
+      'take advantage of/make use of'
+    );
+    expect(passage!.expansionEntries.map((e) => e.expression)).toContain(
+      'advanced aircraft/cutting-edge'
+    );
   });
 
   it('CET-4 核心篇 NO. 03 重写后满足主题自然度、词量及行间标注校验规范', () => {
@@ -591,7 +605,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       expect(entry?.level).not.toBe('cet6');
     }
 
-    // 验证不再强行包含旧批次拼凑词
+    // 验证不再强行包含旧批次拼凑词与不地道词汇
     expect(compiled.coveredHeadwordIds).not.toContain('ass');
     expect(compiled.coveredHeadwordIds).not.toContain('attic');
     expect(compiled.coveredHeadwordIds).not.toContain('avenue');
@@ -600,9 +614,17 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('attorney');
     expect(compiled.coveredHeadwordIds).not.toContain('asleep');
     expect(compiled.coveredHeadwordIds).not.toContain('ashore');
+    expect(compiled.coveredHeadwordIds).not.toContain('attack');
+    expect(compiled.coveredHeadwordIds).not.toContain('assume');
+    expect(compiled.coveredHeadwordIds).not.toContain('attain');
+    expect(compiled.coveredHeadwordIds).not.toContain('authority');
 
     // 验证核心目标词自然覆盖与语境词性匹配
     expect(compiled.coveredHeadwordIds).toContain('orbit');
+    expect(compiled.coveredHeadwordIds).toContain('impact');
+    expect(compiled.coveredHeadwordIds).toContain('agent');
+    expect(compiled.coveredHeadwordIds).toContain('expect');
+    expect(compiled.coveredHeadwordIds).toContain('yield');
     const p1s1Astro = compiled.paragraphs[0].sentences[0].tokens.find(
       (t) => t.type === 'annotation' && t.headwordId === 'astronomy'
     );
