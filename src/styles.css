@@ -876,3 +876,173 @@ body {
     gap: 2px;
   }
 }
+
+.passage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.passage-export-button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #1f5c4d;
+  border-radius: 4px;
+  background: #1f5c4d;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.passage-export-button:hover {
+  border-color: #194d40;
+  background: #194d40;
+}
+
+.passage-export-button:disabled {
+  border-color: #5c8478;
+  background: #5c8478;
+  cursor: progress;
+}
+
+.passage-export-button:focus-visible {
+  outline: 2px solid #c05b3a;
+  outline-offset: 2px;
+}
+
+.passage-export-status {
+  min-height: 1.2em;
+  color: #285c4c;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.passage-export-stage {
+  position: fixed;
+  top: 0;
+  left: -12000px;
+  z-index: -1;
+  width: 1080px;
+  pointer-events: none;
+}
+
+.passage-card--export {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  padding: 20px 22px 26px;
+}
+
+.passage-card--export .passage-card__header {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.passage-card--export .passage-legend {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: initial;
+  gap: 5px;
+  order: initial;
+}
+
+.passage-card--export .passage-legend__item {
+  justify-content: flex-end;
+}
+
+.passage-card--export .passage-banner {
+  padding: 10px 20px 12px;
+  text-align: center;
+  order: initial;
+}
+
+.passage-card--export .passage-banner__zh {
+  font-size: 1.55rem;
+}
+
+.passage-card--export .passage-banner__en {
+  font-size: 1.05rem;
+}
+
+.passage-card--export .passage-meta {
+  width: auto;
+  min-width: 148px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: initial;
+  order: initial;
+}
+
+.passage-card--export .passage-card__body {
+  grid-template-columns: minmax(0, 1fr) 295px;
+  gap: 0;
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.passage-card--export .passage-card__body--full-width {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.passage-card--export .passage-main {
+  min-width: 0;
+  padding-right: 20px;
+}
+
+.passage-card--export .passage-card__body--full-width .passage-main {
+  padding-right: 0;
+}
+
+.passage-card--export .passage-paragraph__en {
+  font-size: 1.16rem;
+  line-height: 2.75;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.passage-card--export .inline-annotation__gloss {
+  font-size: 0.60rem;
+  letter-spacing: -0.025em;
+}
+
+.passage-card--export .passage-paragraph__zh {
+  font-size: 0.98rem;
+}
+
+.passage-card--export .passage-expansion {
+  border-top: 0;
+  border-left: 2px dashed var(--divider-dashed);
+  border-radius: 0 4px 4px 0;
+  padding: 12px 14px 16px;
+}
+
+.passage-expansion__entry,
+.passage-expansion__hide-entry,
+.passage-expansion__restore-entry {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.passage-expansion__hide-entry,
+.passage-expansion__restore-entry {
+  cursor: pointer;
+}

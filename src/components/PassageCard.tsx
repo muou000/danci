@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { type Ref, useState } from 'react';
 import {
   PASSAGE_TIER_LABELS,
   toCircledNumber,
@@ -13,18 +13,22 @@ export interface PassageCardProps {
   hiddenExpansionIds: string[];
   onHideExpansion: (entryId: string) => void;
   onRestoreExpansion: (entryId: string) => void;
+  exportMode?: boolean;
+  exportRef?: Ref<HTMLElement>;
 }
 
 interface InlineAnnotationProps {
   token: InlineAnnotationToken;
   isMastered: boolean;
   onToggleMastered: (itemKey: string) => void;
+  exportMode: boolean;
 }
 
 function InlineAnnotation({
   token,
   isMastered,
   onToggleMastered,
+  exportMode,
 }: InlineAnnotationProps) {
   return (
     <span
@@ -34,18 +38,28 @@ function InlineAnnotation({
       data-category={token.category}
       data-item-key={token.itemKey}
     >
-      <button
-        type="button"
-        className={`inline-annotation__surface${
-          isMastered ? ' inline-annotation__surface--mastered' : ''
-        }`}
-        aria-label={token.surface}
-        aria-pressed={isMastered}
-        title={isMastered ? '点击恢复行间标注' : '点击标记为已掌握'}
-        onClick={() => onToggleMastered(token.itemKey)}
-      >
-        {token.surface}
-      </button>
+      {exportMode ? (
+        <span
+          className={`inline-annotation__surface${
+            isMastered ? ' inline-annotation__surface--mastered' : ''
+          }`}
+        >
+          {token.surface}
+        </span>
+      ) : (
+        <button
+          type="button"
+          className={`inline-annotation__surface${
+            isMastered ? ' inline-annotation__surface--mastered' : ''
+          }`}
+          aria-label={token.surface}
+          aria-pressed={isMastered}
+          title={isMastered ? '点击恢复行间标注' : '点击标记为已掌握'}
+          onClick={() => onToggleMastered(token.itemKey)}
+        >
+          {token.surface}
+        </button>
+      )}
       {!isMastered && (
         <span
           className="inline-annotation__gloss"
@@ -72,6 +86,8 @@ export function PassageCard({
   hiddenExpansionIds,
   onHideExpansion,
   onRestoreExpansion,
+  exportMode = false,
+  exportRef,
 }: PassageCardProps) {
   const [showHiddenExpansions, setShowHiddenExpansions] = useState(false);
   const hiddenSet = new Set(hiddenExpansionIds);
@@ -92,7 +108,7 @@ export function PassageCard({
     )
   );
 
-  const expansionRecovery = hiddenExpansions.length > 0 && (
+  const expansionRecovery = !exportMode && hiddenExpansions.length > 0 && (
     <div className="passage-expansion__recovery">
       <button
         type="button"
@@ -123,7 +139,10 @@ export function PassageCard({
   );
 
   return (
-    <article className="passage-card">
+    <article
+      ref={exportRef}
+      className={`passage-card${exportMode ? ' passage-card--export' : ''}`}
+    >
       <header className="passage-card__header">
         <section className="passage-legend" aria-label="标注图例">
           <div className="passage-legend__item">
@@ -210,6 +229,7 @@ export function PassageCard({
                           token={token}
                           isMastered={masteredItemKeys.has(token.itemKey)}
                           onToggleMastered={onToggleMastered}
+                          exportMode={exportMode}
                         />
                       );
                     })}
@@ -238,18 +258,9 @@ export function PassageCard({
           <aside className="passage-expansion" aria-label="熟词僻义及拓展汇总">
             <h2 className="passage-expansion__title">熟词僻义及拓展汇总：</h2>
             <ol className="passage-expansion__list">
-              {visibleExpansions.map((entry, idx) => (
-                <li
-                  key={entry.id}
-                  className="passage-expansion__item"
-                  data-expansion-id={entry.id}
-                >
-                  <button
-                    type="button"
-                    className="passage-expansion__hide-entry"
-                    aria-label={`隐藏拓展条目 ${entry.expression}`}
-                    onClick={() => onHideExpansion(entry.id)}
-                  >
+              {visibleExpansions.map((entry, idx) => {
+                const content = (
+                  <>
                     <span className="passage-expansion__num">
                       {toCircledNumber(idx + 1)}
                     </span>
@@ -260,9 +271,30 @@ export function PassageCard({
                     <span className="passage-expansion__desc">
                       {entry.explanation}
                     </span>
-                  </button>
-                </li>
-              ))}
+                  </>
+                );
+
+                return (
+                  <li
+                    key={entry.id}
+                    className="passage-expansion__item"
+                    data-expansion-id={entry.id}
+                  >
+                    {exportMode ? (
+                      <span className="passage-expansion__entry">{content}</span>
+                    ) : (
+                      <button
+                        type="button"
+                        className="passage-expansion__hide-entry"
+                        aria-label={`隐藏拓展条目 ${entry.expression}`}
+                        onClick={() => onHideExpansion(entry.id)}
+                      >
+                        {content}
+                      </button>
+                    )}
+                  </li>
+                );
+              })}
             </ol>
             {expansionRecovery}
           </aside>

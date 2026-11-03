@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { toBlob } from 'html-to-image';
 import { PASSAGE_TIER_LABELS, type CompiledPassage } from './corpus';
 import { COMPILED_DEMO_PASSAGES } from './corpus/compiled-demos';
 import {
   LearningLibrary,
   type LearningItemSummary,
 } from './components/LearningLibrary';
-import { PassageCard } from './components/PassageCard';
+import { PassageCard, type PassageCardProps } from './components/PassageCard';
 import {
   readLearningState,
   recordPassageRead,
@@ -15,6 +17,26 @@ import {
 
 export interface AppProps {
   passages?: CompiledPassage[];
+}
+
+const PASSAGE_EXPORT_WIDTH = 1080;
+
+function passageImageFilename(passage: CompiledPassage): string {
+  const safeParts = `${passage.indexLabel}-${passage.titleZh}`
+    .replace(/[<>:"/\\|?*\u0000-\u001f]/g, '-')
+    .replace(/-+/g, '-');
+  return `${safeParts}.png`;
+}
+
+function downloadPng(blob: Blob, filename: string): void {
+  const imageUrl = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = imageUrl;
+  link.download = filename;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(imageUrl), 0);
 }
 
 function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[] {
@@ -49,6 +71,9 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
   const [activeId, setActiveId] = useState<string>(passages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const libraryTrigger = useRef<HTMLButtonElement>(null);
+  const exportCardRef = useRef<HTMLElement>(null);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportMessage, setExportMessage] = useState('');
   const [learningState, setLearningState] = useState<LearningState>(() => {
     const saved = readLearningState();
     return passages[0] ? recordPassageRead(saved, passages[0].id) : saved;
@@ -100,6 +125,19 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
 
   const activePassage =
     passages.find((p) => p.id === activeId) ?? passages[0];
+  const activePassageCardProps: PassageCardProps | null = activePassage
+    ? {
+        passage: activePassage,
+        masteredItemKeys: new Set(learningState.masteredItemKeys),
+        onToggleMastered: toggleMasteredItem,
+        hiddenExpansionIds:
+          learningState.hiddenExpansionIds[activePassage.id] ?? [],
+        onHideExpansion: (entryId) =>
+          setExpansionHidden(activePassage.id, entryId, true),
+        onRestoreExpansion: (entryId) =>
+          setExpansionHidden(activePassage.id, entryId, false),
+      }
+    : null;
   const learningItems = useMemo(() => collectLearningItems(passages), [passages]);
 
   const restoreMasteredItems = (itemKeys: string[]) => {
@@ -110,6 +148,32 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
         (key) => !restored.has(key)
       ),
     });
+  };
+
+  const exportPassageImage = async () => {
+    if (!activePassage) return;
+
+    flushSync(() => {
+      setIsExporting(true);
+      setExportMessage('正在生成高清图片...');
+    });
+    try {
+      const exportCard = exportCardRef.current;
+      if (!exportCard) throw new Error('Passage image is not ready.');
+      const png = await toBlob(exportCard, {
+        width: PASSAGE_EXPORT_WIDTH,
+        pixelRatio: 2,
+        backgroundColor: '#ffffff',
+      });
+      if (!png) throw new Error('Unable to create passage image.');
+
+      downloadPng(png, passageImageFilename(activePassage));
+      setExportMessage('高清 PNG 图片已开始下载。');
+    } catch {
+      setExportMessage('图片导出失败，请重试。');
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   return (
@@ -155,22 +219,46 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
       </nav>
 
       <main className="app-main">
-        {activePassage && (
-          <PassageCard
-            key={activePassage.id}
-            passage={activePassage}
-            masteredItemKeys={new Set(learningState.masteredItemKeys)}
-            onToggleMastered={toggleMasteredItem}
-            hiddenExpansionIds={
-              learningState.hiddenExpansionIds[activePassage.id] ?? []
-            }
-            onHideExpansion={(entryId) =>
-              setExpansionHidden(activePassage.id, entryId, true)
-            }
-            onRestoreExpansion={(entryId) =>
-              setExpansionHidden(activePassage.id, entryId, false)
-            }
-          />
+        {activePassageCardProps && (
+          <>
+            <div className="passage-actions">
+              <button
+                type="button"
+                className="passage-export-button"
+                aria-busy={isExporting}
+                disabled={isExporting}
+                onClick={exportPassageImage}
+              >
+                {isExporting ? '正在导出图片...' : '导出图片'}
+              </button>
+              <span
+                className="passage-export-status"
+                role={exportMessage ? 'status' : undefined}
+                aria-live="polite"
+              >
+                {exportMessage}
+              </span>
+            </div>
+            <PassageCard
+              key={activePassageCardProps.passage.id}
+              {...activePassageCardProps}
+            />
+            {isExporting && (
+              <div
+                className="passage-export-stage"
+                aria-hidden="true"
+                inert
+                style={{ width: PASSAGE_EXPORT_WIDTH }}
+              >
+                <PassageCard
+                  key={`export-${activePassageCardProps.passage.id}`}
+                  {...activePassageCardProps}
+                  exportMode
+                  exportRef={exportCardRef}
+                />
+              </div>
+            )}
+          </>
         )}
       </main>
       {isLibraryOpen && (

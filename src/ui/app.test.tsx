@@ -1,12 +1,18 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { toBlob } from 'html-to-image';
 import { App } from '../App';
 import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
+
+vi.mock('html-to-image', () => ({
+  toBlob: vi.fn(),
+}));
 
 describe('双栏短文精读界面 (Seam 3: ui)', () => {
   beforeEach(() => {
     localStorage.clear();
+    vi.mocked(toBlob).mockReset();
   });
 
   afterEach(() => {
@@ -392,6 +398,132 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         },
       },
     });
+  });
+
+  it('按固定宽度导出当前个性化短文为高清 PNG，并省略已隐藏拓展的恢复控件', async () => {
+    const user = userEvent.setup();
+    let resolvePng: (blob: Blob | null) => void = () => undefined;
+    const pendingPng = new Promise<Blob | null>((resolve) => {
+      resolvePng = resolve;
+    });
+    vi.mocked(toBlob).mockReturnValueOnce(pendingPng);
+
+    const createObjectURL = vi.fn(() => 'blob:passage-image');
+    const revokeObjectURL = vi.fn();
+    vi.stubGlobal('URL', { createObjectURL, revokeObjectURL });
+
+    let downloadedFilename = '';
+    const downloadClick = vi
+      .spyOn(HTMLAnchorElement.prototype, 'click')
+      .mockImplementation(function (this: HTMLAnchorElement) {
+        downloadedFilename = this.download;
+      });
+
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: 'transformed' }));
+    const expansionAside = screen.getByRole('complementary', {
+      name: '熟词僻义及拓展汇总',
+    });
+    await user.click(
+      within(expansionAside).getByRole('button', {
+        name: /consume\/exhaust\/deplete/,
+      })
+    );
+
+    await user.click(screen.getByRole('button', { name: '导出图片' }));
+
+    expect(screen.getByRole('button', { name: '正在导出图片...' })).toBeDisabled();
+    expect(screen.getByRole('status')).toHaveTextContent('正在生成高清图片...');
+    expect(toBlob).toHaveBeenCalledOnce();
+
+    const [exportNode, options] = vi.mocked(toBlob).mock.calls[0];
+    expect(options).toMatchObject({ width: 1080, pixelRatio: 2 });
+    expect(exportNode).toHaveClass('passage-card--export');
+    expect(
+      exportNode.querySelector(
+        '[data-item-key="word:transform"].inline-annotation--mastered'
+      )
+    ).not.toBeNull();
+    expect(
+      exportNode.querySelector(
+        '[data-item-key="word:transform"] .inline-annotation__gloss'
+      )
+    ).toBeNull();
+    expect(
+      exportNode.querySelector(
+        '.passage-expansion__item[data-expansion-id="cet4-exp-1"]'
+      )
+    ).toBeNull();
+    expect(
+      exportNode.querySelector(
+        '.passage-expansion__item[data-expansion-id="cet4-exp-2"] .passage-expansion__num'
+      )
+    ).toHaveTextContent('①');
+    expect(exportNode.querySelector('.passage-expansion__recovery')).toBeNull();
+
+    resolvePng(new Blob(['png'], { type: 'image/png' }));
+
+    expect(await screen.findByRole('status')).toHaveTextContent(
+      '高清 PNG 图片已开始下载。'
+    );
+    expect(createObjectURL).toHaveBeenCalledWith(
+      expect.objectContaining({ type: 'image/png' })
+    );
+    expect(downloadClick).toHaveBeenCalledOnce();
+    expect(downloadedFilename).toContain('NO. 01');
+    expect(downloadedFilename).toContain('重塑校园消费习惯');
+    expect(downloadedFilename).toMatch(/\.png$/);
+  });
+
+  it('导出时省略全部已隐藏拓展，并收起已无可见标注的图例与右栏', async () => {
+    const user = userEvent.setup();
+    vi.mocked(toBlob).mockResolvedValueOnce(
+      new Blob(['png'], { type: 'image/png' })
+    );
+    vi.stubGlobal('URL', {
+      createObjectURL: vi.fn(() => 'blob:all-hidden'),
+      revokeObjectURL: vi.fn(),
+    });
+    vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(
+      () => undefined
+    );
+
+    render(<App />);
+    const nav = screen.getByRole('navigation', { name: '示例短文切换' });
+    await user.click(within(nav).getByRole('button', { name: /NO\. 02.*六级进阶篇/ }));
+
+    for (const surface of [
+      'algorithmic',
+      'exacerbate',
+      'neuroplasticity',
+      'nuances',
+    ]) {
+      await user.click(screen.getByRole('button', { name: surface }));
+    }
+
+    while (screen.queryByRole('complementary', { name: '熟词僻义及拓展汇总' })) {
+      const aside = screen.getByRole('complementary', {
+        name: '熟词僻义及拓展汇总',
+      });
+      await user.click(
+        within(aside).getAllByRole('button', { name: /^隐藏拓展条目/ })[0]
+      );
+    }
+
+    expect(screen.queryByRole('complementary')).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: '导出图片' }));
+    expect(await screen.findByRole('status')).toHaveTextContent(
+      '高清 PNG 图片已开始下载。'
+    );
+
+    const [exportNode, options] = vi.mocked(toBlob).mock.calls[0];
+    expect(options).toMatchObject({ width: 1080, pixelRatio: 2 });
+    expect(exportNode.querySelector('.passage-card__body')).toHaveClass(
+      'passage-card__body--full-width'
+    );
+    expect(exportNode.querySelector('.passage-expansion')).toBeNull();
+    expect(exportNode.querySelector('.passage-expansion__recovery')).toBeNull();
+    expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
   });
 });
 
