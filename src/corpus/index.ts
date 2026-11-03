@@ -79,6 +79,7 @@ export interface InlineAnnotationToken {
   gloss: string;
   headwordId?: string;
   phrase?: string;
+  shiftX?: number;
 }
 
 export type CompiledToken = PlainTextToken | InlineAnnotationToken;
@@ -156,6 +157,89 @@ function findPhraseMatches(
     }
   }
   return accepted;
+}
+
+function estimateEnWidth(text: string): number {
+  let w = 0;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if ('ijlI1.,;!\' '.includes(ch)) {
+      w += 5.5;
+    } else if ('mwMW'.includes(ch)) {
+      w += 15.0;
+    } else if (ch >= 'A' && ch <= 'Z') {
+      w += 12.0;
+    } else {
+      w += 9.5;
+    }
+  }
+  return w;
+}
+
+function estimateZhWidth(text: string): number {
+  let w = 0;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch >= '\u4e00' && ch <= '\u9fff') {
+      w += 8.8;
+    } else if ('；，。：'.includes(ch)) {
+      w += 6.0;
+    } else if (/[a-zA-Z.]/.test(ch)) {
+      w += 4.5;
+    } else {
+      w += 5.0;
+    }
+  }
+  return w;
+}
+
+function calculateAnnotationShifts(tokens: CompiledToken[]): void {
+  const annotTokens: {
+    token: InlineAnnotationToken;
+    center: number;
+    glossWidth: number;
+    shift: number;
+  }[] = [];
+  let x = 0;
+  for (const token of tokens) {
+    if (token.type === 'text') {
+      x += estimateEnWidth(token.text);
+    } else {
+      const wWidth = estimateEnWidth(token.surface);
+      const glossWidth = estimateZhWidth(token.gloss);
+      const center = x + wWidth / 2;
+      annotTokens.push({
+        token,
+        center,
+        glossWidth,
+        shift: 0,
+      });
+      x += wWidth;
+    }
+  }
+
+  if (annotTokens.length <= 1) return;
+
+  const MIN_GAP = 6.0;
+  for (let iter = 0; iter < 5; iter++) {
+    for (let i = 0; i < annotTokens.length - 1; i++) {
+      const a = annotTokens[i];
+      const b = annotTokens[i + 1];
+      const aRight = a.center + a.shift + a.glossWidth / 2;
+      const bLeft = b.center + b.shift - b.glossWidth / 2;
+      const overlap = aRight + MIN_GAP - bLeft;
+      if (overlap > 0) {
+        a.shift -= overlap * 0.5;
+        b.shift += overlap * 0.5;
+      }
+    }
+  }
+
+  for (const item of annotTokens) {
+    if (Math.abs(item.shift) >= 0.5) {
+      item.token.shiftX = Math.round(item.shift * 10) / 10;
+    }
+  }
 }
 
 export function compilePassage(
@@ -308,6 +392,8 @@ export function compilePassage(
           tokens.push(...compilePlainSegment(sent.english.slice(pos)));
         }
 
+        calculateAnnotationShifts(tokens);
+
         return {
           sentenceNumber: sent.sentenceNumber,
           circledNumber: toCircledNumber(sent.sentenceNumber),
@@ -395,7 +481,7 @@ export interface PassageValidationResult {
 }
 
 const WORD_GLOSS_REGEX =
-  /^(?:n|v|vt|vi|a|adj|ad|adv|prep|conj|pron|num)\.\s*[^；\s][^；]*(?:；\s*[^；\s][^；]*){0,2}$/;
+  /^(?:n|v|vt|vi|a|adj|ad|adv|prep|conj|pron|num)\.\s*[^；\s][^；]*(?:；\s*[^；\s][^；]*){1,2}$/;
 const CJK_REGEX = /[\u4e00-\u9fff]/;
 
 export function validatePassage(

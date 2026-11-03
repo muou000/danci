@@ -93,7 +93,17 @@ export function PassageCard({ passage }: PassageCardProps) {
                           <span className="inline-annotation__surface">
                             {token.surface}
                           </span>
-                          <span className="inline-annotation__gloss" lang="zh-CN">
+                          <span
+                            className="inline-annotation__gloss"
+                            lang="zh-CN"
+                            style={
+                              token.shiftX
+                                ? {
+                                    transform: `translateX(calc(-50% + ${token.shiftX}px))`,
+                                  }
+                                : undefined
+                            }
+                          >
                             {token.gloss}
                           </span>
                         </span>
