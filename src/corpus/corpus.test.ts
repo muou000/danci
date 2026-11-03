@@ -1151,6 +1151,119 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 11 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 11');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('城市运河生态修复与青年志愿行动');
+    expect(passage!.titleEn).toBe(
+      'Urban Canal Ecological Restoration and Youth Volunteer Campaign'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次单一字母拼凑词与不自然搭配
+    expect(compiled.coveredHeadwordIds).not.toContain('cabbage');
+    expect(compiled.coveredHeadwordIds).not.toContain('cabinet');
+    expect(compiled.coveredHeadwordIds).not.toContain('cab');
+    expect(compiled.coveredHeadwordIds).not.toContain('bumper');
+    expect(compiled.coveredHeadwordIds).not.toContain('bully');
+    expect(compiled.coveredHeadwordIds).not.toContain('bystander');
+    expect(compiled.coveredHeadwordIds).not.toContain('butcher');
+    expect(compiled.coveredHeadwordIds).not.toContain('calf');
+    expect(compiled.coveredHeadwordIds).not.toContain('camel');
+    expect(compiled.coveredHeadwordIds).not.toContain('cage');
+    expect(compiled.coveredHeadwordIds).not.toContain('bullet');
+    expect(compiled.coveredHeadwordIds).not.toContain('calorie');
+
+    // 验证运河生态修复与志愿行动主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'severe ecological burden on the municipal drainage network'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'hinder urgent action'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'tied recyclable plastics into tidy bundles'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'inspect dissolved oxygen'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'delicate wild plants flourish in the renewed natural habitat'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('canal');
+    expect(compiled.coveredHeadwordIds).toContain('restore');
+    expect(compiled.coveredHeadwordIds).toContain('channel');
+    expect(compiled.coveredHeadwordIds).toContain('mud');
+    expect(compiled.coveredHeadwordIds).toContain('steep');
+    expect(compiled.coveredHeadwordIds).toContain('task');
+    expect(compiled.coveredHeadwordIds).toContain('waste');
+    expect(compiled.coveredHeadwordIds).toContain('rubbish');
+    expect(compiled.coveredHeadwordIds).toContain('cable');
+    expect(compiled.coveredHeadwordIds).toContain('sample');
+    expect(compiled.coveredHeadwordIds).toContain('oxygen');
+    expect(compiled.coveredHeadwordIds).toContain('dissolve');
+    expect(compiled.coveredHeadwordIds).toContain('monitor');
+    expect(compiled.coveredHeadwordIds).toContain('flourish');
+    expect(compiled.coveredHeadwordIds).toContain('habitat');
+    expect(compiled.coveredHeadwordIds).toContain('butterfly');
+    expect(compiled.coveredHeadwordIds).toContain('calling');
+    expect(compiled.coveredHeadwordIds).toContain('heritage');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Ecological = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'ecology'
+    );
+    expect(p1s1Ecological).toBeDefined();
+    if (p1s1Ecological && p1s1Ecological.type === 'annotation') {
+      expect(p1s1Ecological.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s3Operational = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'operate'
+    );
+    expect(p1s3Operational).toBeDefined();
+    if (p1s3Operational && p1s3Operational.type === 'annotation') {
+      expect(p1s3Operational.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s4Commercial = compiled.paragraphs[0].sentences[3].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'commerce'
+    );
+    expect(p1s4Commercial).toBeDefined();
+    if (p1s4Commercial && p1s4Commercial.type === 'annotation') {
+      expect(p1s4Commercial.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
