@@ -4,10 +4,18 @@ import { toBlob } from 'html-to-image';
 import { PASSAGE_TIER_LABELS, type CompiledPassage } from './corpus';
 import { COMPILED_DEMO_PASSAGES } from './corpus/compiled-demos';
 import {
+  GlobalPassageSearch,
+  PassageDirectory,
+} from './components/PassageDiscovery';
+import {
   LearningLibrary,
   type LearningItemSummary,
 } from './components/LearningLibrary';
 import { PassageCard, type PassageCardProps } from './components/PassageCard';
+import {
+  buildPassageSearchIndex,
+  searchPassages,
+} from './passage-library';
 import {
   readLearningState,
   recordPassageRead,
@@ -70,6 +78,8 @@ function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[
 export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
   const [activeId, setActiveId] = useState<string>(passages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
+  const [isDirectoryOpen, setIsDirectoryOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const libraryTrigger = useRef<HTMLButtonElement>(null);
   const exportCardRef = useRef<HTMLElement>(null);
   const [isExporting, setIsExporting] = useState(false);
@@ -125,10 +135,17 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
 
   const activePassage =
     passages.find((p) => p.id === activeId) ?? passages[0];
+  const activePassageIndex = activePassage
+    ? passages.findIndex((passage) => passage.id === activePassage.id)
+    : -1;
+  const masteredItemKeys = useMemo(
+    () => new Set(learningState.masteredItemKeys),
+    [learningState.masteredItemKeys]
+  );
   const activePassageCardProps: PassageCardProps | null = activePassage
     ? {
         passage: activePassage,
-        masteredItemKeys: new Set(learningState.masteredItemKeys),
+        masteredItemKeys,
         onToggleMastered: toggleMasteredItem,
         hiddenExpansionIds:
           learningState.hiddenExpansionIds[activePassage.id] ?? [],
@@ -139,6 +156,21 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
       }
     : null;
   const learningItems = useMemo(() => collectLearningItems(passages), [passages]);
+  const passageSearchIndex = useMemo(
+    () => buildPassageSearchIndex(passages),
+    [passages]
+  );
+  const searchResults = useMemo(
+    () => searchPassages(passageSearchIndex, searchQuery),
+    [passageSearchIndex, searchQuery]
+  );
+
+  const openPassage = (passageId: string) => {
+    setActiveId(passageId);
+    setIsDirectoryOpen(false);
+    setSearchQuery('');
+    commitLearningState(recordPassageRead(learningState, passageId));
+  };
 
   const restoreMasteredItems = (itemKeys: string[]) => {
     const restored = new Set(itemKeys);
@@ -178,12 +210,28 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
 
   return (
     <div className="app-shell">
-      <nav className="passage-switcher" aria-label="示例短文切换">
-        <div className="passage-switcher__brand">
+      <header className="app-header">
+        <div className="app-header__brand">
           <span className="passage-switcher__brand-title">短文背单词</span>
           <span className="passage-switcher__brand-sub">
             2016版四六级大纲 · 双栏语境精读
           </span>
+        </div>
+        <GlobalPassageSearch
+          query={searchQuery}
+          results={searchResults}
+          onQueryChange={setSearchQuery}
+          onSelectResult={openPassage}
+        />
+        <div className="app-header__actions">
+          <button
+            type="button"
+            className="passage-directory-trigger"
+            aria-pressed={isDirectoryOpen}
+            onClick={() => setIsDirectoryOpen((open) => !open)}
+          >
+            {isDirectoryOpen ? '返回精读' : '短文目录'}
+          </button>
           <button
             ref={libraryTrigger}
             type="button"
@@ -195,72 +243,93 @@ export function App({ passages = COMPILED_DEMO_PASSAGES }: AppProps) {
             已掌握词库
           </button>
         </div>
-        <div className="passage-switcher__tabs">
-          {passages.map((item) => {
-            const isActive = item.id === activePassage?.id;
-            return (
+      </header>
+
+      {isDirectoryOpen ? (
+        <PassageDirectory
+          passages={passages}
+          state={learningState}
+          masteredItemKeys={masteredItemKeys}
+          onOpenPassage={openPassage}
+        />
+      ) : (
+        <main className="app-main">
+          {activePassage && (
+            <nav className="passage-reader-navigation" aria-label="短文导航">
               <button
-                key={item.id}
                 type="button"
-                className={`passage-switcher__tab${
-                  isActive ? ' passage-switcher__tab--active' : ''
-                }`}
-                aria-pressed={isActive}
+                aria-label="上一篇短文"
+                disabled={activePassageIndex <= 0}
                 onClick={() => {
-                  setActiveId(item.id);
-                  commitLearningState(recordPassageRead(learningState, item.id));
+                  const previous = passages[activePassageIndex - 1];
+                  if (previous) openPassage(previous.id);
                 }}
               >
-                {item.indexLabel} · {PASSAGE_TIER_LABELS[item.tier]} · {item.topic}
+                上一篇
               </button>
-            );
-          })}
-        </div>
-      </nav>
-
-      <main className="app-main">
-        {activePassageCardProps && (
-          <>
-            <div className="passage-actions">
+              <span>
+                {activePassage.indexLabel} ·{' '}
+                {PASSAGE_TIER_LABELS[activePassage.tier]} · {activePassage.topic}
+              </span>
               <button
                 type="button"
-                className="passage-export-button"
-                aria-busy={isExporting}
-                disabled={isExporting}
-                onClick={exportPassageImage}
+                aria-label="下一篇短文"
+                disabled={
+                  activePassageIndex < 0 ||
+                  activePassageIndex >= passages.length - 1
+                }
+                onClick={() => {
+                  const next = passages[activePassageIndex + 1];
+                  if (next) openPassage(next.id);
+                }}
               >
-                {isExporting ? '正在导出图片...' : '导出图片'}
+                下一篇
               </button>
-              <span
-                className="passage-export-status"
-                role={exportMessage ? 'status' : undefined}
-                aria-live="polite"
-              >
-                {exportMessage}
-              </span>
-            </div>
-            <PassageCard
-              key={activePassageCardProps.passage.id}
-              {...activePassageCardProps}
-            />
-            {isExporting && (
-              <div
-                className="passage-export-stage"
-                aria-hidden="true"
-                inert
-                style={{ width: PASSAGE_EXPORT_WIDTH }}
-              >
-                <PassageCard
-                  key={`export-${activePassageCardProps.passage.id}`}
-                  {...activePassageCardProps}
-                  exportMode
-                  exportRef={exportCardRef}
-                />
+            </nav>
+          )}
+          {activePassageCardProps && (
+            <>
+              <div className="passage-actions">
+                <button
+                  type="button"
+                  className="passage-export-button"
+                  aria-busy={isExporting}
+                  disabled={isExporting}
+                  onClick={exportPassageImage}
+                >
+                  {isExporting ? '正在导出图片...' : '导出图片'}
+                </button>
+                <span
+                  className="passage-export-status"
+                  role={exportMessage ? 'status' : undefined}
+                  aria-live="polite"
+                >
+                  {exportMessage}
+                </span>
               </div>
-            )}
-          </>
-        )}
-      </main>
+              <PassageCard
+                key={activePassageCardProps.passage.id}
+                {...activePassageCardProps}
+              />
+              {isExporting && (
+                <div
+                  className="passage-export-stage"
+                  aria-hidden="true"
+                  inert
+                  style={{ width: PASSAGE_EXPORT_WIDTH }}
+                >
+                  <PassageCard
+                    key={`export-${activePassageCardProps.passage.id}`}
+                    {...activePassageCardProps}
+                    exportMode
+                    exportRef={exportCardRef}
+                  />
+                </div>
+              )}
+            </>
+          )}
+        </main>
+      )}
       {isLibraryOpen && (
         <LearningLibrary
           state={learningState}

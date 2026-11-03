@@ -1,0 +1,235 @@
+import { useMemo, useState } from 'react';
+import {
+  PASSAGE_TIER_LABELS,
+  type CompiledPassage,
+} from '../corpus';
+import type { LearningState } from '../learning-state';
+import {
+  filterPassages,
+  getPassageProgress,
+  type PassageSearchResult,
+  type PassageTierFilter,
+} from '../passage-library';
+
+interface GlobalPassageSearchProps {
+  query: string;
+  results: PassageSearchResult[];
+  onQueryChange: (query: string) => void;
+  onSelectResult: (passageId: string) => void;
+}
+
+export function GlobalPassageSearch({
+  query,
+  results,
+  onQueryChange,
+  onSelectResult,
+}: GlobalPassageSearchProps) {
+  const visibleResults = results.slice(0, 12);
+
+  return (
+    <div className="corpus-search">
+      <label className="corpus-search__label">
+        <span className="visually-hidden">全局查词</span>
+        <input
+          type="search"
+          aria-label="全局查词"
+          placeholder="查英文词形、短语或中文释义"
+          value={query}
+          onChange={(event) =>
+            onQueryChange(event.currentTarget.value)
+          }
+        />
+      </label>
+      {query.trim() && (
+        <section
+          className="corpus-search__results"
+          role="region"
+          aria-label="全局查词结果"
+        >
+          <p className="corpus-search__count" aria-live="polite">
+            {results.length > 0
+              ? `匹配 ${results.length} 条${
+                  results.length > visibleResults.length ? '，显示前 12 条' : ''
+                }`
+              : '没有匹配条目'}
+          </p>
+          {visibleResults.length > 0 && (
+            <ul>
+              {visibleResults.map((result) => (
+                <li key={result.key}>
+                  <button
+                    type="button"
+                    aria-label={[
+                      result.expression,
+                      result.surface,
+                      result.summary,
+                      result.titleZh,
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    onClick={() => onSelectResult(result.passageId)}
+                  >
+                    <span className="corpus-search__entry">
+                      <strong lang="en">{result.expression}</strong>
+                      {result.surface &&
+                        result.surface !== result.expression && (
+                          <span lang="en">{result.surface}</span>
+                        )}
+                      <span>{result.summary}</span>
+                    </span>
+                    <span className="corpus-search__context">
+                      {result.indexLabel} · {result.titleZh} · {result.topic}
+                    </span>
+                    <span className="corpus-search__source">
+                      {result.kind === 'annotation' ? '行间标注' : '拓展条目'}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+    </div>
+  );
+}
+
+interface PassageDirectoryProps {
+  passages: CompiledPassage[];
+  state: LearningState;
+  masteredItemKeys: ReadonlySet<string>;
+  onOpenPassage: (passageId: string) => void;
+}
+
+const tierFilters: Array<{ value: PassageTierFilter; label: string }> = [
+  { value: 'all', label: '全部' },
+  { value: 'cet4-core', label: PASSAGE_TIER_LABELS['cet4-core'] },
+  { value: 'cet6-advanced', label: PASSAGE_TIER_LABELS['cet6-advanced'] },
+];
+
+export function PassageDirectory({
+  passages,
+  state,
+  masteredItemKeys,
+  onOpenPassage,
+}: PassageDirectoryProps) {
+  const [tierFilter, setTierFilter] = useState<PassageTierFilter>('all');
+  const [topicFilter, setTopicFilter] = useState('all');
+  const topics = useMemo(
+    () =>
+      Array.from(new Set(passages.map((passage) => passage.topic))).sort(
+        (a, b) => a.localeCompare(b, 'zh-CN')
+      ),
+    [passages]
+  );
+  const filteredPassages = useMemo(
+    () => filterPassages(passages, tierFilter, topicFilter),
+    [passages, tierFilter, topicFilter]
+  );
+
+  return (
+    <main className="passage-directory">
+      <header className="passage-directory__header">
+        <div>
+          <h1>短文目录</h1>
+          <p>{passages.length} 篇短文</p>
+        </div>
+        <span className="passage-directory__result-count" role="status">
+          显示 {filteredPassages.length} 篇
+        </span>
+      </header>
+
+      <div className="passage-directory__filters">
+        <div
+          className="passage-directory__tier-filters"
+          role="group"
+          aria-label="难度筛选"
+        >
+          {tierFilters.map((filter) => (
+            <button
+              key={filter.value}
+              type="button"
+              aria-pressed={tierFilter === filter.value}
+              onClick={() => setTierFilter(filter.value)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+        <label className="passage-directory__topic-filter">
+          <span>题材</span>
+          <select
+            aria-label="按题材筛选"
+            value={topicFilter}
+            onChange={(event) => setTopicFilter(event.currentTarget.value)}
+          >
+            <option value="all">全部题材</option>
+            {topics.map((topic) => (
+              <option key={topic} value={topic}>
+                {topic}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <ul className="passage-directory__entries" aria-label="短文列表">
+        {filteredPassages.map((passage) => {
+          const progress = getPassageProgress(passage, masteredItemKeys);
+          const readingRecord = state.readingRecords[passage.id];
+          const readStatus = readingRecord
+            ? `已读 · ${readingRecord.visits} 次`
+            : '未读';
+          const accessibleLabel = [
+            passage.indexLabel,
+            passage.titleZh,
+            passage.topic,
+            PASSAGE_TIER_LABELS[passage.tier],
+            `待背词条 ${progress.remainingCount} / ${progress.totalCount}`,
+            readStatus,
+          ].join(' ');
+
+          return (
+            <li key={passage.id}>
+              <button
+                type="button"
+                className="passage-directory__entry"
+                aria-label={accessibleLabel}
+                onClick={() => onOpenPassage(passage.id)}
+              >
+                <span className="passage-directory__entry-meta">
+                  <span className="passage-directory__index">
+                    {passage.indexLabel}
+                  </span>
+                  <span
+                    className={`passage-directory__tier passage-directory__tier--${passage.tier}`}
+                  >
+                    {PASSAGE_TIER_LABELS[passage.tier]}
+                  </span>
+                  <span className="passage-directory__topic">
+                    {passage.topic}
+                  </span>
+                </span>
+                <strong className="passage-directory__title">
+                  {passage.titleZh}
+                </strong>
+                <span className="passage-directory__title-en" lang="en">
+                  {passage.titleEn}
+                </span>
+                <span className="passage-directory__entry-footer">
+                  <span>
+                    待背词条 {progress.remainingCount} / {progress.totalCount}
+                  </span>
+                  <span>{readStatus}</span>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+        {filteredPassages.length === 0 && (
+          <li className="passage-directory__empty">没有符合条件的短文</li>
+        )}
+      </ul>
+    </main>
+  );
+}

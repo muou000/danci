@@ -20,6 +20,61 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     vi.unstubAllGlobals();
   });
 
+  it('全局查词可按中文行间释义检索并打开结果短文', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.type(
+      screen.getByRole('searchbox', { name: '全局查词' }),
+      '自主权'
+    );
+
+    const result = await screen.findByRole('button', {
+      name: /autonomous.*自主权.*守护认知自主/,
+    });
+    await user.click(result);
+
+    expect(
+      screen.getByRole('heading', {
+        name: /在算法洪流中守护认知自主与深度阅读/,
+      })
+    ).toBeInTheDocument();
+  });
+
+  it('短文目录展示待背进度与已读状态，并可按难度筛选后打开短文', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: 'transformed' }));
+    await user.click(screen.getByRole('button', { name: '短文目录' }));
+    expect(
+      screen.getByRole('heading', { name: '短文目录' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {
+        name: /NO\. 01.*待背词条 77 \/ 78.*已读/,
+      })
+    ).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: '六级进阶篇' }));
+    expect(
+      screen.queryByRole('button', { name: /NO\. 01.*重塑校园消费/ })
+    ).not.toBeInTheDocument();
+
+    await user.click(
+      screen.getByRole('button', { name: /NO\. 02.*在算法洪流/ })
+    );
+    expect(
+      screen.getByRole('heading', {
+        name: /在算法洪流中守护认知自主与深度阅读/,
+      })
+    ).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: '短文目录' }));
+    expect(
+      screen.getByRole('button', { name: /NO\. 02.*已读 · 1 次/ })
+    ).toBeInTheDocument();
+  });
+
   it('默认展示首篇四级核心篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
     render(<App />);
 
@@ -82,8 +137,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     const user = userEvent.setup();
     render(<App />);
 
-    const nav = screen.getByRole('navigation', { name: '示例短文切换' });
-    await user.click(within(nav).getByRole('button', { name: /NO\. 02.*六级进阶篇/ }));
+    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     expect(
       screen.getByRole('heading', {
@@ -109,7 +163,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(screen.getByText('neuroplasticity')).toBeInTheDocument();
     expect(screen.getByText('n.神经可塑性；脑回路重塑能力')).toBeInTheDocument();
 
-    await user.click(within(nav).getByRole('button', { name: /NO\. 01.*四级核心篇/ }));
+    await user.click(screen.getByRole('button', { name: '上一篇短文' }));
     expect(
       within(screen.getByRole('region', { name: '标注图例' })).queryByText(
         '超纲词'
@@ -218,9 +272,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     render(<App />);
 
     await user.click(screen.getByRole('button', { name: 'individual' }));
-    await user.click(
-      screen.getByRole('button', { name: /NO\. 02.*六级进阶篇/ })
-    );
+    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     const secondPassageForm = screen.getByRole('button', { name: 'individuals' });
     expect(secondPassageForm).toHaveAttribute('aria-pressed', 'true');
@@ -284,9 +336,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
   it('全部超纲词掌握后隐藏图例，恢复一个后重新显示', async () => {
     const user = userEvent.setup();
     render(<App />);
-    await user.click(
-      screen.getByRole('button', { name: /NO\. 02.*六级进阶篇/ })
-    );
+    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     const legend = screen.getByRole('region', { name: '标注图例' });
     expect(within(legend).getByText('超纲词')).toBeInTheDocument();
@@ -489,8 +539,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     );
 
     render(<App />);
-    const nav = screen.getByRole('navigation', { name: '示例短文切换' });
-    await user.click(within(nav).getByRole('button', { name: /NO\. 02.*六级进阶篇/ }));
+    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     for (const surface of [
       'algorithmic',
