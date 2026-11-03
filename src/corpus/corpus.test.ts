@@ -771,14 +771,23 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('withstand');
     expect(compiled.coveredHeadwordIds).toContain('backup');
     expect(compiled.coveredHeadwordIds).toContain('setback');
+    expect(compiled.coveredHeadwordIds).toContain('reward');
+    expect(compiled.coveredHeadwordIds).not.toContain('award');
 
-    // 验证修饰名词的形容词语境词性匹配
-    const p1s2Household = compiled.paragraphs[0].sentences[1].tokens.find(
+    // 验证地道选词、消除语境割裂与名词强行堆叠
+    expect(passage!.paragraphs[0].sentences[0].english).toContain("bachelor's degree");
+    expect(passage!.paragraphs[0].sentences[0].english).not.toContain('young bachelor leaves');
+    expect(passage!.paragraphs[0].sentences[1].english).not.toContain('household expenses');
+    expect(passage!.paragraphs[1].sentences[1].english).not.toContain('commercial awards');
+    expect(passage!.paragraphs[1].sentences[1].english).not.toContain('bargain value');
+
+    // 验证各句法位置词性匹配
+    const p3s1Household = compiled.paragraphs[2].sentences[0].tokens.find(
       (t) => t.type === 'annotation' && t.headwordId === 'household'
     );
-    expect(p1s2Household).toBeDefined();
-    if (p1s2Household && p1s2Household.type === 'annotation') {
-      expect(p1s2Household.gloss.startsWith('a.')).toBe(true);
+    expect(p3s1Household).toBeDefined();
+    if (p3s1Household && p3s1Household.type === 'annotation') {
+      expect(p3s1Household.gloss.startsWith('n.')).toBe(true);
     }
   });
 

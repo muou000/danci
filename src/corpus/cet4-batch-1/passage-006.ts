@@ -13,18 +13,18 @@ export const PASSAGE_006: Passage = {
       "sentences": [
         {
           "sentenceNumber": 1,
-          "english": "When a young bachelor leaves university and enters the workforce, establishing a solid financial foundation requires careful planning regardless of family background.",
-          "chinese": "当一个年轻的单身汉离开大学步入职场时，无论家庭背景如何，建立稳固的财务基础都需要周密的规划。"
+          "english": "When a young graduate with a bachelor's degree enters the workforce, establishing a solid financial foundation requires careful planning regardless of family background.",
+          "chinese": "当一名持有学士学位的年轻毕业生步入职场时，无论家庭背景如何，建立稳固的财务基础都需要周密的规划。"
         },
         {
           "sentenceNumber": 2,
-          "english": "Even with an average starting salary, an independent earner must learn to balance necessary household expenses and resist the urge for wasteful spending.",
-          "chinese": "即便凭借普通的起薪，独立的劳动者也必须学会平衡必要的家庭开销，并抵制铺张浪费的冲动。"
+          "english": "Even with an average starting salary, an independent earner must learn to balance necessary living expenses and resist the urge for wasteful spending.",
+          "chinese": "即便凭借普通的起薪，独立的劳动者也必须学会平衡必要的生活开销，并抵制铺张浪费的冲动。"
         },
         {
           "sentenceNumber": 3,
-          "english": "Financial advisers emphasize that creating a monthly budget enables individuals to track income accurately and manage essential living funds wisely.",
-          "chinese": "财务顾问强调，制定按月预算使个人能够准确记录收入，并明智地管理基本生活资金。"
+          "english": "Financial advisers emphasize that creating a monthly budget enables individuals to track income accurately and manage essential daily funds wisely.",
+          "chinese": "财务顾问强调，制定按月预算使个人能够准确记录收入，并明智地管理日常基本资金。"
         },
         {
           "sentenceNumber": 4,
@@ -43,8 +43,8 @@ export const PASSAGE_006: Passage = {
         },
         {
           "sentenceNumber": 2,
-          "english": "Consumers should exercise cautious judgment and seek genuine bargain value rather than chasing superficial commercial awards.",
-          "chinese": "消费者应当保持谨慎的判断并寻求真正合算的商品价值，而不是盲目追逐表面的商业奖励。"
+          "english": "Consumers should exercise cautious judgment, seek genuine bargains, and compare actual value, rather than chasing superficial commercial rewards.",
+          "chinese": "消费者应当保持谨慎的判断，寻找真正划算的商品并对比实际价值，而不是盲目追逐表面的商业奖励。"
         },
         {
           "sentenceNumber": 3,
@@ -81,8 +81,17 @@ export const PASSAGE_006: Passage = {
   ],
   "wordAnnotations": [
     {
+      "headwordId": "graduate",
+      "gloss": "n.毕业生；大学毕业生"
+    },
+    {
       "headwordId": "bachelor",
-      "gloss": "n.单身汉；学士"
+      "surface": "bachelor's",
+      "gloss": "a.学士的；单身汉的"
+    },
+    {
+      "headwordId": "degree",
+      "gloss": "n.学位；程度"
     },
     {
       "headwordId": "enter",
@@ -159,8 +168,9 @@ export const PASSAGE_006: Passage = {
       "gloss": "a.必要的；必需的"
     },
     {
-      "headwordId": "household",
-      "gloss": "a.家庭的；家用的"
+      "headwordId": "live¹",
+      "surface": "living",
+      "gloss": "a.生活的；现存的"
     },
     {
       "headwordId": "expense",
@@ -237,9 +247,8 @@ export const PASSAGE_006: Passage = {
       "gloss": "a.基本的；必不可少的"
     },
     {
-      "headwordId": "live¹",
-      "surface": "living",
-      "gloss": "a.生活的；现存的"
+      "headwordId": "daily",
+      "gloss": "a.日常的；每日的"
     },
     {
       "headwordId": "fund",
@@ -374,7 +383,16 @@ export const PASSAGE_006: Passage = {
     },
     {
       "headwordId": "bargain",
-      "gloss": "a.合算的；便宜的"
+      "surface": "bargains",
+      "gloss": "n.便宜货；特价商品"
+    },
+    {
+      "headwordId": "compare",
+      "gloss": "v.比较；对比"
+    },
+    {
+      "headwordId": "actual",
+      "gloss": "a.实际的；真实的"
     },
     {
       "headwordId": "value",
@@ -395,9 +413,9 @@ export const PASSAGE_006: Passage = {
       "gloss": "a.商业的；商务的"
     },
     {
-      "headwordId": "award",
-      "surface": "awards",
-      "gloss": "n.奖励；奖品"
+      "headwordId": "reward",
+      "surface": "rewards",
+      "gloss": "n.回报；奖励"
     },
     {
       "headwordId": "excess",
@@ -443,6 +461,11 @@ export const PASSAGE_006: Passage = {
     {
       "headwordId": "debt",
       "gloss": "n.债务；负债"
+    },
+    {
+      "headwordId": "care",
+      "surface": "careless",
+      "gloss": "a.粗心的；草率的"
     },
     {
       "headwordId": "bankrupt",
@@ -522,6 +545,11 @@ export const PASSAGE_006: Passage = {
       "gloss": "v.转变；转移"
     },
     {
+      "headwordId": "household",
+      "surface": "households",
+      "gloss": "n.家庭；户"
+    },
+    {
       "headwordId": "maintain",
       "gloss": "v.维持；保持"
     },
@@ -532,6 +560,11 @@ export const PASSAGE_006: Passage = {
     {
       "headwordId": "reserve",
       "gloss": "a.储备的；预备的"
+    },
+    {
+      "headwordId": "rely",
+      "surface": "reliable",
+      "gloss": "a.可靠的；可信赖的"
     },
     {
       "headwordId": "backup",
@@ -652,7 +685,7 @@ export const PASSAGE_006: Passage = {
     {
       "id": "exp-4",
       "expression": "bachelor / master / doctor",
-      "explanation": "学士；单身汉 / 硕士；掌握 / 博士；医生（多义词：bachelor 既指“学士学位”，又指“未婚单身汉”）"
+      "explanation": "学士；单身汉 / 硕士；掌握 / 博士；医生（多义词：bachelor's degree 为“学士学位”，bachelor 亦指“未婚单身汉”）"
     },
     {
       "id": "exp-5",
@@ -681,26 +714,31 @@ export const PASSAGE_006: Passage = {
     },
     {
       "id": "exp-10",
+      "expression": "reward vs award",
+      "explanation": "核心考点辨析：reward 指因付出努力、消费或特定行为而获得的“回报，积分返利奖励”（如 credit card rewards、customer loyalty rewards）；award 则指评委会或官方评定颁发的“荣誉奖项，奖杯”（如 Academy Awards 奥斯卡金像奖）。商场促销给予的是 reward 而非 award。"
+    },
+    {
+      "id": "exp-11",
       "expression": "withstand hardship / withstand pressure",
       "explanation": "经受困苦 / 顶住压力（前缀 with- 表“相反/抵挡”，withstand 强调经受住艰难考验或严酷外部冲击）"
     },
     {
-      "id": "exp-11",
+      "id": "exp-12",
       "expression": "recover from / bounce back",
       "explanation": "从...恢复，复原 / 迅速恢复活力（recover from setbacks/illness 表示从挫折或疾病中康复）"
     },
     {
-      "id": "exp-12",
+      "id": "exp-13",
       "expression": "deposit money / withdraw cash",
       "explanation": "存钱 / 取款（银行业务核心反义搭配；deposit 亦可作名词表示“存款；押金；定金”）"
     },
     {
-      "id": "exp-13",
+      "id": "exp-14",
       "expression": "banknote / coin / currency",
       "explanation": "纸币 / 硬币 / 货币，通货（banknote 专指纸质钞票，paper currency 为纸币通称）"
     },
     {
-      "id": "exp-14",
+      "id": "exp-15",
       "expression": "regardless of / in spite of",
       "explanation": "不论；不管；不顾（后接名词、代词或宾语从句，强调不受外部背景或条件限制）"
     }
