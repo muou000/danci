@@ -7423,12 +7423,12 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Inside a crowded university auditorium, a diverse audience gathers to attend a public lecture on modern astronomy.",
-            "chinese": "在拥挤的大学礼堂里，多元的听众聚集在一起参加一场关于现代天文学的公开讲座。",
+            "english": "Inside the crowded university auditorium, a diverse audience gathers to attend an inspiring public lecture on modern astronomy.",
+            "chinese": "在拥挤的大学礼堂里，多元的听众聚集在一起参加一场引人入胜的现代天文学公开讲座。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Inside a "
+                "text": "Inside the "
               },
               {
                 "type": "annotation",
@@ -7459,7 +7459,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:diverse",
                 "surface": "diverse",
-                "gloss": "a.多样的；多元的",
+                "gloss": "a.多元的；多样的",
                 "headwordId": "diverse"
               },
               {
@@ -7471,7 +7471,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:audience",
                 "surface": "audience",
-                "gloss": "n.观众；听众",
+                "gloss": "n.听众；观众",
                 "headwordId": "audience"
               },
               {
@@ -7483,7 +7483,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:gather",
                 "surface": "gathers",
-                "gloss": "v.聚集；收集",
+                "gloss": "v.聚集；集合",
                 "headwordId": "gather"
               },
               {
@@ -7495,21 +7495,35 @@
                 "category": "high-frequency",
                 "itemKey": "word:attend",
                 "surface": "attend",
-                "gloss": "v.出席；参加",
-                "headwordId": "attend"
+                "gloss": "v.参加；出席",
+                "headwordId": "attend",
+                "shiftX": -3.3
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:inspire",
+                "surface": "inspiring",
+                "gloss": "a.引人入胜的；鼓舞人心的",
+                "headwordId": "inspire",
+                "shiftX": -16.4
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:public",
                 "surface": "public",
-                "gloss": "a.公众的；公开的",
+                "gloss": "a.公开的；公众的",
                 "headwordId": "public",
-                "shiftX": -1.9
+                "shiftX": 8
               },
               {
                 "type": "text",
@@ -7522,7 +7536,7 @@
                 "surface": "lecture",
                 "gloss": "n.讲座；演讲",
                 "headwordId": "lecture",
-                "shiftX": 1.9
+                "shiftX": 11.7
               },
               {
                 "type": "text",
@@ -7545,7 +7559,7 @@
                 "category": "regular",
                 "itemKey": "word:astronomy",
                 "surface": "astronomy",
-                "gloss": "n.天文学；天体学",
+                "gloss": "a.天文学的；天文的",
                 "headwordId": "astronomy"
               },
               {
@@ -7557,8 +7571,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Clear audio displays attract curious students who ask how engineers automate space ships and build authentic rocket engines.",
-            "chinese": "清晰的音频展示吸引了好奇的学生，他们询问工程师如何使宇宙飞船自动化并制造真正的火箭发动机。",
+            "english": "Clear audio displays, interactive exhibits, and realistic scale models attract curious students who eagerly ask how astronauts live aboard a spacecraft.",
+            "chinese": "清晰的音频展示、互动展品以及逼真的比例模型吸引了好奇的学生，他们热切地询问宇航员在航天器上如何生活。",
             "tokens": [
               {
                 "type": "text",
@@ -7569,7 +7583,7 @@
                 "category": "regular",
                 "itemKey": "word:audio",
                 "surface": "audio",
-                "gloss": "a.声音的；音频的",
+                "gloss": "a.音频的；声音的",
                 "headwordId": "audio",
                 "shiftX": -1.9
               },
@@ -7585,6 +7599,67 @@
                 "gloss": "n.展示；显示",
                 "headwordId": "display",
                 "shiftX": 1.9
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:interact",
+                "surface": "interactive",
+                "gloss": "a.互动的；相互作用的",
+                "headwordId": "interact"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:exhibit",
+                "surface": "exhibits",
+                "gloss": "n.展品；展览",
+                "headwordId": "exhibit"
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:realistic",
+                "surface": "realistic",
+                "gloss": "a.逼真的；现实的",
+                "headwordId": "realistic",
+                "shiftX": -0.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:scale",
+                "surface": "scale",
+                "gloss": "n.比例；规模",
+                "headwordId": "scale"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:model",
+                "surface": "models",
+                "gloss": "n.模型；雏形",
+                "headwordId": "model"
               },
               {
                 "type": "text",
@@ -7616,11 +7691,25 @@
               },
               {
                 "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:eager",
+                "surface": "eagerly",
+                "gloss": "ad.热切地；渴望地",
+                "headwordId": "eager",
+                "shiftX": -8.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:ask",
                 "surface": "ask",
                 "gloss": "v.询问；提问",
-                "headwordId": "ask"
+                "headwordId": "ask",
+                "shiftX": 8.1
               },
               {
                 "type": "text",
@@ -7629,10 +7718,11 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:engineer",
-                "surface": "engineers",
-                "gloss": "n.工程师；技师",
-                "headwordId": "engineer"
+                "itemKey": "word:astronaut",
+                "surface": "astronauts",
+                "gloss": "n.宇航员；航天员",
+                "headwordId": "astronaut",
+                "shiftX": -4.9
               },
               {
                 "type": "text",
@@ -7641,37 +7731,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:automate",
-                "surface": "automate",
-                "gloss": "v.使自动化；自动操作",
-                "headwordId": "automate",
-                "shiftX": -7.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:space",
-                "surface": "space",
-                "gloss": "n.空间；太空；空地",
-                "headwordId": "space",
-                "shiftX": 7.8
-              },
-              {
-                "type": "text",
-                "text": " ships and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:build",
-                "surface": "build",
-                "gloss": "v.建造；构建；打造",
-                "headwordId": "build",
-                "shiftX": -11.4
+                "itemKey": "word:live¹",
+                "surface": "live",
+                "gloss": "v.生活；居住",
+                "headwordId": "live¹",
+                "shiftX": -7.9
               },
               {
                 "type": "text",
@@ -7680,37 +7744,23 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:authentic",
-                "surface": "authentic",
-                "gloss": "a.真正的；真实的",
-                "headwordId": "authentic",
-                "shiftX": -1.2
+                "itemKey": "word:aboard",
+                "surface": "aboard",
+                "gloss": "prep.在...上；登上",
+                "headwordId": "aboard",
+                "shiftX": 12.8
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " a "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:rocket",
-                "surface": "rocket",
-                "gloss": "n.火箭；火箭发动机",
-                "headwordId": "rocket",
-                "shiftX": 2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:engine",
-                "surface": "engines",
-                "gloss": "n.发动机；引擎",
-                "headwordId": "engine",
-                "shiftX": 10.6
+                "itemKey": "word:spacecraft",
+                "surface": "spacecraft",
+                "gloss": "n.航天器；宇宙飞船",
+                "headwordId": "spacecraft"
               },
               {
                 "type": "text",
@@ -7721,34 +7771,20 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "The invited author, a retired astronaut, explains every technical aspect of launching vehicles into the upper atmosphere.",
-            "chinese": "主讲作者是一位退役宇航员，他讲解了将航天运载工具发射至高层大气的每一个技术方面。",
+            "english": "The guest speaker, a retired mission specialist, explains every technical aspect of rocket design and describes how powerful engines launch vehicles toward the upper atmosphere.",
+            "chinese": "特邀主讲人是一位退役的任务专家，他讲解了火箭设计的每一个技术方面，并描述了强劲的发动机如何将航天运载工具发射至高层大气。",
             "tokens": [
               {
                 "type": "text",
-                "text": "The "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:invite",
-                "surface": "invited",
-                "gloss": "a.应邀的；特邀的",
-                "headwordId": "invite",
-                "shiftX": -3.1
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": "The guest "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:author",
-                "surface": "author",
-                "gloss": "n.作者；发起人",
-                "headwordId": "author",
-                "shiftX": 3.1
+                "itemKey": "word:speak",
+                "surface": "speaker",
+                "gloss": "n.发言者；演讲人",
+                "headwordId": "speak"
               },
               {
                 "type": "text",
@@ -7768,11 +7804,23 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:astronaut",
-                "surface": "astronaut",
-                "gloss": "n.宇航员；航天员",
-                "headwordId": "astronaut"
+                "category": "high-frequency",
+                "itemKey": "word:mission",
+                "surface": "mission",
+                "gloss": "n.任务；使命",
+                "headwordId": "mission"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:special",
+                "surface": "specialist",
+                "gloss": "n.专家；专科人员",
+                "headwordId": "special"
               },
               {
                 "type": "text",
@@ -7793,10 +7841,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:technique",
+                "itemKey": "word:technical",
                 "surface": "technical",
                 "gloss": "a.技术的；工艺的",
-                "headwordId": "technique"
+                "headwordId": "technical"
               },
               {
                 "type": "text",
@@ -7816,11 +7864,73 @@
               },
               {
                 "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:rocket",
+                "surface": "rocket",
+                "gloss": "n.火箭；火箭弹",
+                "headwordId": "rocket"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:design",
+                "surface": "design",
+                "gloss": "n.设计；构思",
+                "headwordId": "design"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:describe",
+                "surface": "describes",
+                "gloss": "v.描述；记述",
+                "headwordId": "describe"
+              },
+              {
+                "type": "text",
+                "text": " how "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:power",
+                "surface": "powerful",
+                "gloss": "a.强劲的；强大的",
+                "headwordId": "power"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:engine",
+                "surface": "engines",
+                "gloss": "n.发动机；引擎",
+                "headwordId": "engine",
+                "shiftX": -0.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:launch",
-                "surface": "launching",
+                "surface": "launch",
                 "gloss": "v.发射；发起",
-                "headwordId": "launch"
+                "headwordId": "launch",
+                "shiftX": -3.5
               },
               {
                 "type": "text",
@@ -7831,19 +7941,20 @@
                 "category": "high-frequency",
                 "itemKey": "word:vehicle",
                 "surface": "vehicles",
-                "gloss": "n.车辆；航天运载工具",
-                "headwordId": "vehicle"
+                "gloss": "n.航天运载工具；车辆",
+                "headwordId": "vehicle",
+                "shiftX": 4.3
               },
               {
                 "type": "text",
-                "text": " into the "
+                "text": " toward the "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:upper",
                 "surface": "upper",
-                "gloss": "a.上部的；上层的",
+                "gloss": "a.上层的；上部的",
                 "headwordId": "upper"
               },
               {
@@ -7867,17 +7978,30 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Observers atop the mountain assess distant cosmic light, observing how each atom behaves in extreme cold.",
-            "chinese": "山顶上的观测者评估着遥远的宇宙光线，观察每个原子在极寒之下的活动状态。",
+            "english": "Meanwhile, observers atop remote mountain stations use an advanced astronomical telescope to assess distant planets and explore the mysteries of the vast universe.",
+            "chinese": "与此同时，偏远高山观测站的观测员使用先进的天文望远镜评估遥远的行星，并探索辽阔宇宙的奥秘。",
             "tokens": [
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:meanwhile",
+                "surface": "Meanwhile",
+                "gloss": "ad.与此同时地；在此期间地",
+                "headwordId": "meanwhile",
+                "shiftX": -17.8
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:observe",
-                "surface": "Observers",
-                "gloss": "n.观察者；观测员",
+                "surface": "observers",
+                "gloss": "n.观测员；观察者",
                 "headwordId": "observe",
-                "shiftX": -12.8
+                "shiftX": -24.1
               },
               {
                 "type": "text",
@@ -7890,11 +8014,60 @@
                 "surface": "atop",
                 "gloss": "prep.在...顶上；在...之上",
                 "headwordId": "atop",
-                "shiftX": 12.8
+                "shiftX": 1.8
               },
               {
                 "type": "text",
-                "text": " the mountain "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:remote",
+                "surface": "remote",
+                "gloss": "a.偏远的；偏僻的",
+                "headwordId": "remote",
+                "shiftX": 40.1
+              },
+              {
+                "type": "text",
+                "text": " mountain stations "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:use",
+                "surface": "use",
+                "gloss": "v.使用；运用",
+                "headwordId": "use"
+              },
+              {
+                "type": "text",
+                "text": " an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:advance",
+                "surface": "advanced",
+                "gloss": "a.先进的；高级的",
+                "headwordId": "advance"
+              },
+              {
+                "type": "text",
+                "text": " astronomical "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:telescope",
+                "surface": "telescope",
+                "gloss": "n.望远镜；单筒望远镜",
+                "headwordId": "telescope"
+              },
+              {
+                "type": "text",
+                "text": " to "
               },
               {
                 "type": "annotation",
@@ -7902,8 +8075,7 @@
                 "itemKey": "word:assess",
                 "surface": "assess",
                 "gloss": "v.评估；评定",
-                "headwordId": "assess",
-                "shiftX": -6.8
+                "headwordId": "assess"
               },
               {
                 "type": "text",
@@ -7914,34 +8086,8 @@
                 "category": "regular",
                 "itemKey": "word:distance",
                 "surface": "distant",
-                "gloss": "a.遥远的；远距离的",
-                "headwordId": "distance",
-                "shiftX": -2.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cosmos",
-                "surface": "cosmic",
-                "gloss": "a.宇宙的；浩瀚的",
-                "headwordId": "cosmos",
-                "shiftX": 9.5
-              },
-              {
-                "type": "text",
-                "text": " light, observing how each "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:atom",
-                "surface": "atom",
-                "gloss": "n.原子；微粒",
-                "headwordId": "atom"
+                "gloss": "a.遥远的；偏远的",
+                "headwordId": "distance"
               },
               {
                 "type": "text",
@@ -7950,26 +8096,64 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:behave",
-                "surface": "behaves",
-                "gloss": "v.表现；活动",
-                "headwordId": "behave"
+                "itemKey": "word:planet",
+                "surface": "planets",
+                "gloss": "n.行星；星球",
+                "headwordId": "planet"
               },
               {
                 "type": "text",
-                "text": " in "
+                "text": " and "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:extreme",
-                "surface": "extreme",
-                "gloss": "a.极端的；极度的",
-                "headwordId": "extreme"
+                "itemKey": "word:explore",
+                "surface": "explore",
+                "gloss": "v.探索；探求",
+                "headwordId": "explore"
               },
               {
                 "type": "text",
-                "text": " cold."
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:mystery",
+                "surface": "mysteries",
+                "gloss": "n.奥秘；神秘事物",
+                "headwordId": "mystery"
+              },
+              {
+                "type": "text",
+                "text": " of the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:vast",
+                "surface": "vast",
+                "gloss": "a.辽阔的；巨大的",
+                "headwordId": "vast",
+                "shiftX": -2.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:universe",
+                "surface": "universe",
+                "gloss": "n.宇宙；万物",
+                "headwordId": "universe",
+                "shiftX": 2.3
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           }
@@ -7981,27 +8165,81 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Science centers assemble interactive exhibits that allow an eager student or young athlete to test zero gravity.",
-            "chinese": "科学中心组装了互动展品，允许热切的学生或年轻运动员体验零重力。",
+            "english": "Behind every major scientific breakthrough, skilled engineers assemble precise instruments and attach durable solar panels to robotic spacecraft.",
+            "chinese": "在每一次重大科学突破的背后，熟练的工程师组装精密仪器，并将耐用的太阳能电池板安装到机器人航天器上。",
             "tokens": [
+              {
+                "type": "text",
+                "text": "Behind every "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:major",
+                "surface": "major",
+                "gloss": "a.重大的；主要的",
+                "headwordId": "major",
+                "shiftX": -1.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:science",
-                "surface": "Science",
-                "gloss": "n.科学；学科；学问",
-                "headwordId": "science"
+                "surface": "scientific",
+                "gloss": "a.科学的；科研的",
+                "headwordId": "science",
+                "shiftX": 1.2
               },
               {
                 "type": "text",
-                "text": " centers "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:breakthrough",
+                "surface": "breakthrough",
+                "gloss": "n.突破；重大进展",
+                "headwordId": "breakthrough"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:skill",
+                "surface": "skilled",
+                "gloss": "a.熟练的；有技能的",
+                "headwordId": "skill"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:engineer",
+                "surface": "engineers",
+                "gloss": "n.工程师；工兵",
+                "headwordId": "engineer"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:assemble",
                 "surface": "assemble",
-                "gloss": "v.组装；聚集",
+                "gloss": "v.组装；装配",
                 "headwordId": "assemble"
               },
               {
@@ -8011,10 +8249,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:interact",
-                "surface": "interactive",
-                "gloss": "a.互动的；交互式的",
-                "headwordId": "interact"
+                "itemKey": "word:precise",
+                "surface": "precise",
+                "gloss": "a.精密的；精准的",
+                "headwordId": "precise"
               },
               {
                 "type": "text",
@@ -8023,385 +8261,14 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:exhibit",
-                "surface": "exhibits",
-                "gloss": "n.展品；展览",
-                "headwordId": "exhibit"
+                "itemKey": "word:instrument",
+                "surface": "instruments",
+                "gloss": "n.仪器；器具",
+                "headwordId": "instrument"
               },
               {
                 "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:allow",
-                "surface": "allow",
-                "gloss": "v.允许；准许",
-                "headwordId": "allow"
-              },
-              {
-                "type": "text",
-                "text": " an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:eager",
-                "surface": "eager",
-                "gloss": "a.渴望的；热切的",
-                "headwordId": "eager"
-              },
-              {
-                "type": "text",
-                "text": " student or young "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:athlete",
-                "surface": "athlete",
-                "gloss": "n.运动员；选手",
-                "headwordId": "athlete"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:test",
-                "surface": "test",
-                "gloss": "v.检验；测试；试验",
-                "headwordId": "test"
-              },
-              {
-                "type": "text",
-                "text": " zero "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:gravity",
-                "surface": "gravity",
-                "gloss": "n.重力；引力",
-                "headwordId": "gravity"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Space authorities authorize international missions to assure safety, while an experienced attorney manages legal agreements.",
-            "chinese": "航天机构授权开展国际任务以确保安全，而经验丰富的律师则负责管理法律协议。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Space "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:authority",
-                "surface": "authorities",
-                "gloss": "n.官方机构；权威",
-                "headwordId": "authority"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:authorize",
-                "surface": "authorize",
-                "gloss": "v.授权；批准",
-                "headwordId": "authorize"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:international",
-                "surface": "international",
-                "gloss": "a.国际的；世界性的",
-                "headwordId": "international"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:mission",
-                "surface": "missions",
-                "gloss": "n.任务；使命",
-                "headwordId": "mission"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:assure",
-                "surface": "assure",
-                "gloss": "v.保证；确保",
-                "headwordId": "assure",
-                "shiftX": -2.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:safe",
-                "surface": "safety",
-                "gloss": "ad.安全地；平安地",
-                "headwordId": "safe",
-                "shiftX": 2.4
-              },
-              {
-                "type": "text",
-                "text": ", while an "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:experience",
-                "surface": "experienced",
-                "gloss": "a.有经验的；熟练的",
-                "headwordId": "experience"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:attorney",
-                "surface": "attorney",
-                "gloss": "n.律师；代理人",
-                "headwordId": "attorney"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:manage",
-                "surface": "manages",
-                "gloss": "v.管理；处理",
-                "headwordId": "manage",
-                "shiftX": -1.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:legal",
-                "surface": "legal",
-                "gloss": "a.法律的；合法的",
-                "headwordId": "legal",
-                "shiftX": 1.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:agree",
-                "surface": "agreements",
-                "gloss": "n.协议；协定",
-                "headwordId": "agree"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Scientists assign skilled teams to assist satellite ground stations, and experts assume that new sensors will attain deeper discoveries.",
-            "chinese": "科学家指派熟练团队协助卫星地面站，专家假定新传感器将取得更深入的发现。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Scientists "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:assign",
-                "surface": "assign",
-                "gloss": "v.指派；分配",
-                "headwordId": "assign",
-                "shiftX": -2.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:skill",
-                "surface": "skilled",
-                "gloss": "a.熟练的；熟手的",
-                "headwordId": "skill",
-                "shiftX": 2.9
-              },
-              {
-                "type": "text",
-                "text": " teams to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:assist",
-                "surface": "assist",
-                "gloss": "v.协助；援助",
-                "headwordId": "assist"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:satellite",
-                "surface": "satellite",
-                "gloss": "n.卫星；人造卫星",
-                "headwordId": "satellite"
-              },
-              {
-                "type": "text",
-                "text": " ground stations, and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:expert",
-                "surface": "experts",
-                "gloss": "n.专家；能手",
-                "headwordId": "expert"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:assume",
-                "surface": "assume",
-                "gloss": "v.假定；认为",
-                "headwordId": "assume"
-              },
-              {
-                "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:new",
-                "surface": "new",
-                "gloss": "a.崭新的；全新的",
-                "headwordId": "new",
-                "shiftX": -9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:sense",
-                "surface": "sensors",
-                "gloss": "n.传感器；感应器",
-                "headwordId": "sense",
-                "shiftX": 9
-              },
-              {
-                "type": "text",
-                "text": " will "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:attain",
-                "surface": "attain",
-                "gloss": "v.达到；获得",
-                "headwordId": "attain",
-                "shiftX": -13.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:deep",
-                "surface": "deeper",
-                "gloss": "a.深度的；深刻的；深邃的",
-                "headwordId": "deep",
-                "shiftX": 7.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:discover",
-                "surface": "discoveries",
-                "gloss": "n.发现；发觉",
-                "headwordId": "discover",
-                "shiftX": 6.2
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "When engineers attach precision solar panels to spacecraft, they pay close attention to protect systems against particle attack in their attempt to explore deep space.",
-            "chinese": "当工程师将精密太阳能电池板安装到航天器上时，他们密切注意保护系统免遭粒子袭击，努力探索深空。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "When engineers "
+                "text": " and "
               },
               {
                 "type": "annotation",
@@ -8410,7 +8277,7 @@
                 "surface": "attach",
                 "gloss": "v.连接；附上",
                 "headwordId": "attach",
-                "shiftX": -10.3
+                "shiftX": -13.9
               },
               {
                 "type": "text",
@@ -8419,11 +8286,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:precise",
-                "surface": "precision",
-                "gloss": "n.精确；精密；精密度",
-                "headwordId": "precise",
-                "shiftX": -11.6
+                "itemKey": "word:durable",
+                "surface": "durable",
+                "gloss": "a.耐用的；持久的",
+                "headwordId": "durable",
+                "shiftX": -16.2
               },
               {
                 "type": "text",
@@ -8434,9 +8301,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:solar",
                 "surface": "solar",
-                "gloss": "a.太阳的；日光的",
+                "gloss": "a.太阳能的；太阳的",
                 "headwordId": "solar",
-                "shiftX": 3.1
+                "shiftX": 1.9
               },
               {
                 "type": "text",
@@ -8449,43 +8316,7 @@
                 "surface": "panels",
                 "gloss": "n.电池板；面板",
                 "headwordId": "panel",
-                "shiftX": 18.8
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:spacecraft",
-                "surface": "spacecraft",
-                "gloss": "n.航天器；宇宙飞船",
-                "headwordId": "spacecraft"
-              },
-              {
-                "type": "text",
-                "text": ", they "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:pay",
-                "surface": "pay",
-                "gloss": "v.付出；给予",
-                "headwordId": "pay"
-              },
-              {
-                "type": "text",
-                "text": " close "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:attention",
-                "surface": "attention",
-                "gloss": "n.注意；注意力",
-                "headwordId": "attention"
+                "shiftX": 21.1
               },
               {
                 "type": "text",
@@ -8494,10 +8325,83 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:protect",
-                "surface": "protect",
-                "gloss": "v.保护；防卫",
-                "headwordId": "protect"
+                "itemKey": "word:robot",
+                "surface": "robotic",
+                "gloss": "a.机器人的；自动的",
+                "headwordId": "robot",
+                "shiftX": 7.1
+              },
+              {
+                "type": "text",
+                "text": " spacecraft."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly across immense distances without direct manual assistance.",
+            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在没有人工直接协助的情况下跨越极其遥远的距离平稳运行。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "They "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:automate",
+                "surface": "automate",
+                "gloss": "v.使自动化；自动操作",
+                "headwordId": "automate"
+              },
+              {
+                "type": "text",
+                "text": " flight "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:software",
+                "surface": "software",
+                "gloss": "n.软件；系统程序",
+                "headwordId": "software"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sense",
+                "surface": "sensor",
+                "gloss": "n.传感器；感应器",
+                "headwordId": "sense"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:network",
+                "surface": "networks",
+                "gloss": "n.网络；网状系统",
+                "headwordId": "network"
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:communicate",
+                "surface": "communication",
+                "gloss": "n.通信；交流",
+                "headwordId": "communicate"
               },
               {
                 "type": "text",
@@ -8508,12 +8412,134 @@
                 "category": "high-frequency",
                 "itemKey": "word:system",
                 "surface": "systems",
-                "gloss": "n.系统；体制；机制",
+                "gloss": "n.系统；体系",
                 "headwordId": "system"
               },
               {
                 "type": "text",
-                "text": " against "
+                "text": " so that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:satellite",
+                "surface": "satellites",
+                "gloss": "n.人造卫星；卫星",
+                "headwordId": "satellite"
+              },
+              {
+                "type": "text",
+                "text": " can "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:operate",
+                "surface": "operate",
+                "gloss": "v.运行；运转",
+                "headwordId": "operate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:smooth",
+                "surface": "smoothly",
+                "gloss": "ad.平稳地；顺利地",
+                "headwordId": "smooth"
+              },
+              {
+                "type": "text",
+                "text": " across "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:immense",
+                "surface": "immense",
+                "gloss": "a.巨大的；广大的",
+                "headwordId": "immense"
+              },
+              {
+                "type": "text",
+                "text": " distances without "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:direct",
+                "surface": "direct",
+                "gloss": "a.直接的；直率的",
+                "headwordId": "direct",
+                "shiftX": -6.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:manual",
+                "surface": "manual",
+                "gloss": "a.手工的；人工的",
+                "headwordId": "manual",
+                "shiftX": 6.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:assist",
+                "surface": "assistance",
+                "gloss": "n.协助；帮助",
+                "headwordId": "assist"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "Facing extreme cold and fierce particle attack in the outer vacuum, specialized protective layers preserve delicate electronic circuits, prevent mechanical failure, and assure continuous data transmission.",
+            "chinese": "面对外层空间真空中的极寒和猛烈的粒子袭击，专用的保护层可以保护精密的电子线路，防止机械故障，并确保连续的数据传输。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Facing "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:extreme",
+                "surface": "extreme",
+                "gloss": "a.极端的；极度的",
+                "headwordId": "extreme"
+              },
+              {
+                "type": "text",
+                "text": " cold and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:fierce",
+                "surface": "fierce",
+                "gloss": "a.猛烈的；凶猛的",
+                "headwordId": "fierce"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -8532,36 +8558,194 @@
                 "category": "high-frequency",
                 "itemKey": "word:attack",
                 "surface": "attack",
-                "gloss": "n.袭击；发作",
+                "gloss": "n.袭击；侵袭",
                 "headwordId": "attack"
               },
               {
                 "type": "text",
-                "text": " in their "
+                "text": " in the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:outer",
+                "surface": "outer",
+                "gloss": "a.外部的；外层的",
+                "headwordId": "outer",
+                "shiftX": -2.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:vacuum",
+                "surface": "vacuum",
+                "gloss": "n.真空；空白",
+                "headwordId": "vacuum",
+                "shiftX": 2.3
+              },
+              {
+                "type": "text",
+                "text": ", specialized "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:attempt",
-                "surface": "attempt",
-                "gloss": "n.尝试；努力",
-                "headwordId": "attempt"
+                "itemKey": "word:protect",
+                "surface": "protective",
+                "gloss": "a.保护性的；防护的",
+                "headwordId": "protect"
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:layer",
+                "surface": "layers",
+                "gloss": "n.层；表层",
+                "headwordId": "layer"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:explore",
-                "surface": "explore",
-                "gloss": "v.探索；探究",
-                "headwordId": "explore"
+                "itemKey": "word:preserve",
+                "surface": "preserve",
+                "gloss": "v.保护；维持",
+                "headwordId": "preserve"
               },
               {
                 "type": "text",
-                "text": " deep space."
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:delicate",
+                "surface": "delicate",
+                "gloss": "a.精密的；脆弱的",
+                "headwordId": "delicate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:electron",
+                "surface": "electronic",
+                "gloss": "a.电子的；电子设备的",
+                "headwordId": "electron"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:circuit",
+                "surface": "circuits",
+                "gloss": "n.线路；电路",
+                "headwordId": "circuit"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:prevent",
+                "surface": "prevent",
+                "gloss": "v.防止；预防",
+                "headwordId": "prevent"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:mechanic",
+                "surface": "mechanical",
+                "gloss": "a.机械的；机械学的",
+                "headwordId": "mechanic"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:fail",
+                "surface": "failure",
+                "gloss": "n.故障；失败",
+                "headwordId": "fail"
+              },
+              {
+                "type": "text",
+                "text": ", and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:assure",
+                "surface": "assure",
+                "gloss": "v.保证；确保",
+                "headwordId": "assure"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:continue",
+                "surface": "continuous",
+                "gloss": "a.连续的；持续的",
+                "headwordId": "continue"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:data",
+                "surface": "data",
+                "gloss": "n.数据；资料",
+                "headwordId": "data"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transmit",
+                "surface": "transmission",
+                "gloss": "n.传输；传播",
+                "headwordId": "transmit"
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           }
@@ -8573,45 +8757,44 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "After recovery ships bring ocean boats ashore, medical doctors examine passengers who fell fast asleep on the voyage.",
-            "chinese": "在搜救船将海上小艇带上岸后，医生会为在航程中沉睡的旅行者进行检查。",
+            "english": "To tackle these difficult technical challenges, international space authorities cooperate to authorize ambitious exploration missions, assigning expert teams to assist global satellite ground stations.",
+            "chinese": "为了应对这些艰巨的技术挑战，各国际航天机构通力合作批准宏大的探索任务，并指派专家团队协助全球卫星地面站。",
             "tokens": [
               {
                 "type": "text",
-                "text": "After "
+                "text": "To "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:recover",
-                "surface": "recovery",
-                "gloss": "n.恢复；回收",
-                "headwordId": "recover"
+                "itemKey": "word:tackle",
+                "surface": "tackle",
+                "gloss": "v.应对；处理",
+                "headwordId": "tackle"
               },
               {
                 "type": "text",
-                "text": " ships "
+                "text": " these "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:bring",
-                "surface": "bring",
-                "gloss": "v.带来；引起；促使",
-                "headwordId": "bring"
+                "itemKey": "word:difficult",
+                "surface": "difficult",
+                "gloss": "a.艰难的；困苦的",
+                "headwordId": "difficult"
               },
               {
                 "type": "text",
-                "text": " ocean boats "
+                "text": " technical "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:ashore",
-                "surface": "ashore",
-                "gloss": "ad.上岸地；在岸上地",
-                "headwordId": "ashore",
-                "shiftX": -4.5
+                "category": "high-frequency",
+                "itemKey": "word:challenge",
+                "surface": "challenges",
+                "gloss": "n.挑战；难题",
+                "headwordId": "challenge"
               },
               {
                 "type": "text",
@@ -8620,23 +8803,34 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:medical",
-                "surface": "medical",
-                "gloss": "a.医学的；医疗的",
-                "headwordId": "medical",
-                "shiftX": 4.5
+                "itemKey": "word:international",
+                "surface": "international",
+                "gloss": "a.国际的；跨国的",
+                "headwordId": "international"
               },
               {
                 "type": "text",
-                "text": " doctors "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:examine",
-                "surface": "examine",
-                "gloss": "v.检查；查看",
-                "headwordId": "examine"
+                "itemKey": "word:space",
+                "surface": "space",
+                "gloss": "n.太空；空间",
+                "headwordId": "space"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:authority",
+                "surface": "authorities",
+                "gloss": "n.官方机构；权威",
+                "headwordId": "authority"
               },
               {
                 "type": "text",
@@ -8645,26 +8839,131 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:passenger",
-                "surface": "passengers",
-                "gloss": "n.乘客；旅客",
-                "headwordId": "passenger"
+                "itemKey": "word:cooperate",
+                "surface": "cooperate",
+                "gloss": "v.合作；协作",
+                "headwordId": "cooperate"
               },
               {
                 "type": "text",
-                "text": " who fell fast "
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:asleep",
-                "surface": "asleep",
-                "gloss": "a.睡着的；熟睡的",
-                "headwordId": "asleep"
+                "itemKey": "word:authorize",
+                "surface": "authorize",
+                "gloss": "v.授权；批准",
+                "headwordId": "authorize"
               },
               {
                 "type": "text",
-                "text": " on the "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ambition",
+                "surface": "ambitious",
+                "gloss": "a.宏大的；有抱负的",
+                "headwordId": "ambition"
+              },
+              {
+                "type": "text",
+                "text": " exploration missions, "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:assign",
+                "surface": "assigning",
+                "gloss": "v.指派；分配",
+                "headwordId": "assign"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:expert",
+                "surface": "expert",
+                "gloss": "a.专家的；熟练的",
+                "headwordId": "expert"
+              },
+              {
+                "type": "text",
+                "text": " teams to assist "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:globe",
+                "surface": "global",
+                "gloss": "a.全球的；全世界的",
+                "headwordId": "globe"
+              },
+              {
+                "type": "text",
+                "text": " satellite ground stations."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Leading research scientists assume that each bold voyage into deep space will attain valuable discoveries about planetary evolution and the origin of our solar system.",
+            "chinese": "顶尖的研究科学家认为，每一次进入深空的勇敢航程都将取得关于行星演化和太阳系起源的宝贵发现。",
+            "tokens": [
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:lead¹",
+                "surface": "Leading",
+                "gloss": "a.顶尖的；主要的",
+                "headwordId": "lead¹"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:research",
+                "surface": "research",
+                "gloss": "n.研究；调查",
+                "headwordId": "research"
+              },
+              {
+                "type": "text",
+                "text": " scientists "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:assume",
+                "surface": "assume",
+                "gloss": "v.假定；认为",
+                "headwordId": "assume"
+              },
+              {
+                "type": "text",
+                "text": " that each "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bold",
+                "surface": "bold",
+                "gloss": "a.大胆的；勇敢的",
+                "headwordId": "bold",
+                "shiftX": -7
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -8672,94 +8971,46 @@
                 "itemKey": "word:voyage",
                 "surface": "voyage",
                 "gloss": "n.航程；航海",
-                "headwordId": "voyage"
+                "headwordId": "voyage",
+                "shiftX": 7
               },
               {
                 "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "A critic who behaves like a foolish ass cannot deny that space technology is a valuable national asset and associate it only with waste.",
-            "chinese": "一个像蠢驴般行事的批评者不能否认航天技术是一笔宝贵的国家资产，也不能仅将其与浪费联系起来。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
+                "text": " into "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:criticize",
-                "surface": "critic",
-                "gloss": "n.批评家；评论员",
-                "headwordId": "criticize"
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深度的；深层的",
+                "headwordId": "deep"
               },
               {
                 "type": "text",
-                "text": " who behaves like a "
+                "text": " space will "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:fool",
-                "surface": "foolish",
-                "gloss": "a.愚蠢的；傻的",
-                "headwordId": "fool",
-                "shiftX": -5.8
+                "itemKey": "word:attain",
+                "surface": "attain",
+                "gloss": "v.达到；获得",
+                "headwordId": "attain",
+                "shiftX": -1.7
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:ass",
-                "surface": "ass",
-                "gloss": "n.笨蛋；蠢人",
-                "headwordId": "ass",
-                "shiftX": 5.8
-              },
-              {
-                "type": "text",
-                "text": " cannot "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:deny",
-                "surface": "deny",
-                "gloss": "v.否认；拒绝",
-                "headwordId": "deny"
-              },
-              {
-                "type": "text",
-                "text": " that space "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:technology",
-                "surface": "technology",
-                "gloss": "n.技术；工艺",
-                "headwordId": "technology"
-              },
-              {
-                "type": "text",
-                "text": " is a "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:value",
                 "surface": "valuable",
-                "gloss": "a.有价值的；宝贵的",
+                "gloss": "a.宝贵的；有价值的",
                 "headwordId": "value",
-                "shiftX": -3.7
+                "shiftX": 1.7
               },
               {
                 "type": "text",
@@ -8768,175 +9019,50 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:nation",
-                "surface": "national",
-                "gloss": "a.国家的；民族的",
-                "headwordId": "nation",
-                "shiftX": 1
+                "itemKey": "word:discover",
+                "surface": "discoveries",
+                "gloss": "n.发现；发觉",
+                "headwordId": "discover"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " about planetary "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:asset",
-                "surface": "asset",
-                "gloss": "n.资产；财富",
-                "headwordId": "asset",
-                "shiftX": 2.7
+                "itemKey": "word:evolve",
+                "surface": "evolution",
+                "gloss": "n.演化；进化",
+                "headwordId": "evolve"
               },
               {
                 "type": "text",
-                "text": " and "
+                "text": " and the "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:associate",
-                "surface": "associate",
-                "gloss": "v.联系；交往",
-                "headwordId": "associate"
+                "itemKey": "word:origin",
+                "surface": "origin",
+                "gloss": "n.起源；发端",
+                "headwordId": "origin"
               },
               {
                 "type": "text",
-                "text": " it only with "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:waste",
-                "surface": "waste",
-                "gloss": "n.浪费；垃圾",
-                "headwordId": "waste"
-              },
-              {
-                "type": "text",
-                "text": "."
+                "text": " of our solar system."
               }
             ]
           },
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Setting petty questions aside, educators astonish children with telescope models placed along an avenue park or school attic.",
-            "chinese": "抛开细微的疑问，教育工作者用放置在大道公园或学校阁楼里的望远镜模型令孩子们惊叹不已。",
+            "english": "When public institutions educate young citizens with genuine enthusiasm and make scientific knowledge readily available, society adopts a positive attitude that proudly regards space exploration as a priceless national asset.",
+            "chinese": "当公共机构以由衷的热情教育年轻公民并使科学知识触手可及时，全社会便会形成一种积极的态度，自豪地将太空探索视为无价的国家财富。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Setting "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:petty",
-                "surface": "petty",
-                "gloss": "a.微不足道的；琐碎的",
-                "headwordId": "petty"
-              },
-              {
-                "type": "text",
-                "text": " questions "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:aside",
-                "surface": "aside",
-                "gloss": "ad.在旁边地；到一边地",
-                "headwordId": "aside",
-                "shiftX": -10.1
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:educate",
-                "surface": "educators",
-                "gloss": "n.教育工作者；教师",
-                "headwordId": "educate",
-                "shiftX": 3.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:astonish",
-                "surface": "astonish",
-                "gloss": "v.使震惊；使大吃一惊",
-                "headwordId": "astonish",
-                "shiftX": 6.4
-              },
-              {
-                "type": "text",
-                "text": " children with "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:telescope",
-                "surface": "telescope",
-                "gloss": "n.望远镜；天文镜",
-                "headwordId": "telescope"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:model",
-                "surface": "models",
-                "gloss": "n.模型；模范",
-                "headwordId": "model"
-              },
-              {
-                "type": "text",
-                "text": " placed along an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:avenue",
-                "surface": "avenue",
-                "gloss": "n.林荫道；大道",
-                "headwordId": "avenue"
-              },
-              {
-                "type": "text",
-                "text": " park or school "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:attic",
-                "surface": "attic",
-                "gloss": "n.阁楼；顶楼",
-                "headwordId": "attic"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Public institutions attribute space success to a positive attitude, making aviation knowledge available to every automobile driver and citizen.",
-            "chinese": "公共机构将航天成功归功于前瞻性的态度，使航空航天知识对每一位汽车驾驶员和公民都触手可及。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Public "
+                "text": "When public "
               },
               {
                 "type": "annotation",
@@ -8953,33 +9079,120 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:attribute",
-                "surface": "attribute",
-                "gloss": "v.归因于；归功于",
-                "headwordId": "attribute"
+                "itemKey": "word:educate",
+                "surface": "educate",
+                "gloss": "v.教育；培养",
+                "headwordId": "educate"
               },
               {
                 "type": "text",
-                "text": " space "
+                "text": " young "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:success",
-                "surface": "success",
-                "gloss": "n.成功；成就；胜利",
-                "headwordId": "success"
+                "itemKey": "word:citizen",
+                "surface": "citizens",
+                "gloss": "n.公民；平民",
+                "headwordId": "citizen"
               },
               {
                 "type": "text",
-                "text": " to a "
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:genuine",
+                "surface": "genuine",
+                "gloss": "a.真诚的；由衷的",
+                "headwordId": "genuine"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:enthusiasm",
+                "surface": "enthusiasm",
+                "gloss": "n.热情；热忱",
+                "headwordId": "enthusiasm"
+              },
+              {
+                "type": "text",
+                "text": " and make scientific "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:know",
+                "surface": "knowledge",
+                "gloss": "n.知识；学问",
+                "headwordId": "know"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ready",
+                "surface": "readily",
+                "gloss": "ad.容易地；欣然地",
+                "headwordId": "ready",
+                "shiftX": -7.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:available",
+                "surface": "available",
+                "gloss": "a.可获得的；可利用的",
+                "headwordId": "available",
+                "shiftX": 6.2
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:society",
+                "surface": "society",
+                "gloss": "n.社会；社团",
+                "headwordId": "society",
+                "shiftX": 1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:adopt",
+                "surface": "adopts",
+                "gloss": "v.采取；采纳",
+                "headwordId": "adopt"
+              },
+              {
+                "type": "text",
+                "text": " a "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:positive",
                 "surface": "positive",
-                "gloss": "a.积极的；正面的",
+                "gloss": "a.积极的；正向的",
                 "headwordId": "positive"
               },
               {
@@ -8996,15 +9209,16 @@
               },
               {
                 "type": "text",
-                "text": ", making "
+                "text": " that "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:aviation",
-                "surface": "aviation",
-                "gloss": "n.航空；航空学",
-                "headwordId": "aviation"
+                "itemKey": "word:pride",
+                "surface": "proudly",
+                "gloss": "ad.自豪地；骄傲地",
+                "headwordId": "pride",
+                "shiftX": -4.2
               },
               {
                 "type": "text",
@@ -9013,10 +9227,24 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:know",
-                "surface": "knowledge",
-                "gloss": "n.知识；学识；学问",
-                "headwordId": "know"
+                "itemKey": "word:regard",
+                "surface": "regards",
+                "gloss": "v.把...看作；看待",
+                "headwordId": "regard",
+                "shiftX": 4.2
+              },
+              {
+                "type": "text",
+                "text": " space exploration as a priceless "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:nation",
+                "surface": "national",
+                "gloss": "a.国家的；民族的",
+                "headwordId": "nation",
+                "shiftX": -0.9
               },
               {
                 "type": "text",
@@ -9025,34 +9253,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:available",
-                "surface": "available",
-                "gloss": "a.可获得的；可利用的",
-                "headwordId": "available"
-              },
-              {
-                "type": "text",
-                "text": " to every "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:automobile",
-                "surface": "automobile",
-                "gloss": "n.汽车；轿车",
-                "headwordId": "automobile"
-              },
-              {
-                "type": "text",
-                "text": " driver and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:citizen",
-                "surface": "citizen",
-                "gloss": "n.公民；市民；国民",
-                "headwordId": "citizen"
+                "itemKey": "word:asset",
+                "surface": "asset",
+                "gloss": "n.资产；财富",
+                "headwordId": "asset",
+                "shiftX": 0.9
               },
               {
                 "type": "text",
@@ -9065,74 +9270,74 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "attend a lecture/be present at",
-        "explanation": "参加讲座；attend 熟词僻义还可指“照料、照应”"
+        "id": "exp-1",
+        "expression": "astronomy / astrology",
+        "explanation": "天文学 / 占星术（-nomy 表示“学科/规律”，-logy 表示“理论/学问”）"
       },
       {
-        "id": "e2",
-        "expression": "audio display/sound track",
-        "explanation": "音频展示；audio 为多媒体与科技阅读核心词"
+        "id": "exp-2",
+        "expression": "telescope / microscope",
+        "explanation": "望远镜 / 显微镜（tele- 表示“远”，micro- 表示“微小”，-scope 表示“观察仪器”）"
       },
       {
-        "id": "e3",
-        "expression": "technical aspect/facet",
-        "explanation": "技术层面，方面；aspect 常考指事物的某个侧面"
+        "id": "exp-3",
+        "expression": "spacecraft / aircraft / hovercraft",
+        "explanation": "航天器 / 航空器 / 气垫船（-craft 指“航行载具/飞行器”）"
       },
       {
-        "id": "e4",
-        "expression": "assess radiation/evaluate",
-        "explanation": "评估辐射水平；assess 侧重全面系统的考量与估价"
+        "id": "exp-4",
+        "expression": "launch a satellite / launch a campaign",
+        "explanation": "发射卫星 / 发起活动（熟词僻义：launch 作动词引申为“发起/推出”）"
       },
       {
-        "id": "e5",
-        "expression": "assemble parts/gather",
-        "explanation": "组装部件，聚集；assemble 既可指机械装配，也可指人群集合"
+        "id": "exp-5",
+        "expression": "solar panel / solar energy",
+        "explanation": "太阳能电池板 / 太阳能（solar 专指太阳的或利用太阳光的）"
       },
       {
-        "id": "e6",
-        "expression": "authorize missions/empower",
-        "explanation": "批准任务，授权；authority 派生动词 authorize"
+        "id": "exp-6",
+        "expression": "extreme / harsh / severe",
+        "explanation": "极端的；严酷的；严厉的（深空极端环境常用同义替换词群）"
       },
       {
-        "id": "e7",
-        "expression": "assign teams/allocate",
-        "explanation": "分派团队，分配；assign tasks 为职场与学术高频词"
+        "id": "exp-7",
+        "expression": "automate / automatic / automation",
+        "explanation": "使自动化 / 自动的 / 自动化（词根 auto-“自己”派生词族）"
       },
       {
-        "id": "e8",
-        "expression": "assist in/help with",
-        "explanation": "协助做某事；assist 常用句型为 assist sb in doing sth"
+        "id": "exp-8",
+        "expression": "mission / commission / emission",
+        "explanation": "任务 / 委员会；佣金 / 排放（形近词辨析，四级听力与阅读常考）"
       },
       {
-        "id": "e9",
-        "expression": "attain discoveries/achieve",
-        "explanation": "取得发现，达成；attain 侧重经过持久努力达成崇高目标"
+        "id": "exp-9",
+        "expression": "asset / liability",
+        "explanation": "资产；财富 / 负债；劣势（阅读常考反义对照表达）"
       },
       {
-        "id": "e10",
-        "expression": "attach to/fasten to",
-        "explanation": "附着于，连接到；be attached to 还可表示“依恋、依附于”"
+        "id": "exp-10",
+        "expression": "attitude toward / approach to",
+        "explanation": "对...的态度 / 对...的方法（常考后接介词 to/toward 搭配）"
       },
       {
-        "id": "e11",
-        "expression": "pay attention to/take note of",
-        "explanation": "注意，重视；attention 后接介词 to"
+        "id": "exp-11",
+        "expression": "attain / achieve / accomplish",
+        "explanation": "达到；获得 / 实现；达到 / 完成（目标与成就类近义动词替换）"
       },
       {
-        "id": "e12",
-        "expression": "national asset/valuable resource",
-        "explanation": "国家资产，宝贵财富；asset 喻指有价值的人或事物"
+        "id": "exp-12",
+        "expression": "particle / molecule / atom",
+        "explanation": "微粒；粒子 / 分子 / 原子（物理微观物质结构词汇拓展）"
       },
       {
-        "id": "e13",
-        "expression": "set aside/put on one side",
-        "explanation": "把...放在一边，暂时搁置；set aside 也是经典四六级短语"
+        "id": "exp-13",
+        "expression": "vast / immense / boundless",
+        "explanation": "辽阔的；巨大的；无边无际的（描述宇宙浩瀚维度的同义表达）"
       },
       {
-        "id": "e14",
-        "expression": "attribute to/credit to",
-        "explanation": "归功于，归因于；attribute A to B 为四六级阅读最高频因果句型之一"
+        "id": "exp-14",
+        "expression": "cooperate with / collaborate with",
+        "explanation": "与...合作；与...协作（国际跨国科研合作常用搭配）"
       }
     ],
     "coveredHeadwordIds": [
@@ -9142,121 +9347,140 @@
       "audience",
       "gather",
       "attend",
+      "inspire",
       "public",
       "lecture",
       "modern",
       "astronomy",
       "audio",
       "display",
+      "interact",
+      "exhibit",
+      "realistic",
+      "scale",
+      "model",
       "attract",
       "curious",
+      "eager",
       "ask",
-      "engineer",
-      "automate",
-      "space",
-      "build",
-      "authentic",
-      "rocket",
-      "engine",
-      "invite",
-      "author",
-      "retire",
       "astronaut",
+      "live¹",
+      "aboard",
+      "spacecraft",
+      "speak",
+      "retire",
+      "mission",
+      "special",
       "explain",
-      "technique",
+      "technical",
       "aspect",
+      "rocket",
+      "design",
+      "describe",
+      "power",
+      "engine",
       "launch",
       "vehicle",
       "upper",
       "atmosphere",
+      "meanwhile",
       "observe",
       "atop",
+      "remote",
+      "use",
+      "advance",
+      "telescope",
       "assess",
       "distance",
-      "cosmos",
-      "atom",
-      "behave",
-      "extreme",
+      "planet",
+      "explore",
+      "mystery",
+      "vast",
+      "universe",
+      "major",
       "science",
-      "assemble",
-      "interact",
-      "exhibit",
-      "allow",
-      "eager",
-      "athlete",
-      "test",
-      "gravity",
-      "authority",
-      "authorize",
-      "international",
-      "mission",
-      "assure",
-      "safe",
-      "experience",
-      "attorney",
-      "manage",
-      "legal",
-      "agree",
-      "assign",
+      "breakthrough",
       "skill",
-      "assist",
-      "satellite",
-      "expert",
-      "assume",
-      "new",
-      "sense",
-      "attain",
-      "deep",
-      "discover",
-      "attach",
+      "engineer",
+      "assemble",
       "precise",
+      "instrument",
+      "attach",
+      "durable",
       "solar",
       "panel",
-      "spacecraft",
-      "pay",
-      "attention",
-      "protect",
+      "robot",
+      "automate",
+      "software",
+      "sense",
+      "network",
+      "communicate",
       "system",
+      "satellite",
+      "operate",
+      "smooth",
+      "immense",
+      "direct",
+      "manual",
+      "assist",
+      "extreme",
+      "fierce",
       "particle",
       "attack",
-      "attempt",
-      "explore",
-      "recover",
-      "bring",
-      "ashore",
-      "medical",
-      "examine",
-      "passenger",
-      "asleep",
+      "outer",
+      "vacuum",
+      "protect",
+      "layer",
+      "preserve",
+      "delicate",
+      "electron",
+      "circuit",
+      "prevent",
+      "mechanic",
+      "fail",
+      "assure",
+      "continue",
+      "data",
+      "transmit",
+      "tackle",
+      "difficult",
+      "challenge",
+      "international",
+      "space",
+      "authority",
+      "cooperate",
+      "authorize",
+      "ambition",
+      "assign",
+      "expert",
+      "globe",
+      "lead¹",
+      "research",
+      "assume",
+      "bold",
       "voyage",
-      "criticize",
-      "fool",
-      "ass",
-      "deny",
-      "technology",
+      "deep",
+      "attain",
       "value",
-      "nation",
-      "asset",
-      "associate",
-      "waste",
-      "petty",
-      "aside",
-      "educate",
-      "astonish",
-      "telescope",
-      "model",
-      "avenue",
-      "attic",
+      "discover",
+      "evolve",
+      "origin",
       "institution",
-      "attribute",
-      "success",
+      "educate",
+      "citizen",
+      "genuine",
+      "enthusiasm",
+      "know",
+      "ready",
+      "available",
+      "society",
+      "adopt",
       "positive",
       "attitude",
-      "aviation",
-      "know",
-      "available",
-      "automobile",
-      "citizen"
+      "pride",
+      "regard",
+      "nation",
+      "asset"
     ],
     "hasOutOfSyllabusWords": false
   },

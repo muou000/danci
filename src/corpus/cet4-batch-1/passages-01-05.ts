@@ -2103,8 +2103,8 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 4,
-            "english": "Consequently, long-time citizens can remain in familiar surroundings while enjoying safer structures and convenient services.",
-            "chinese": "因此，长期居住的市民能够留在熟悉的环境中，同时享受到更安全的建筑结构与便捷的服务。"
+            "english": "Consequently, long-time residents can remain in familiar surroundings while enjoying safer structures and convenient services.",
+            "chinese": "因此，长期居住的居民能够留在熟悉的环境中，同时享受到更安全的建筑结构与便捷的服务。"
           }
         ]
       },
@@ -2118,13 +2118,13 @@ export const PASSAGES_01_05: Passage[] = [
           },
           {
             "sentenceNumber": 2,
-            "english": "These shared spaces accommodate diverse recreational activities and encourage residents to participate in public affairs.",
-            "chinese": "这些共享空间容纳了多样的休闲活动，并鼓励居民参与公共事务。"
+            "english": "These shared spaces accommodate diverse recreational activities and encourage citizens to participate in public affairs.",
+            "chinese": "这些共享空间容纳了多样的休闲活动，并鼓励市民参与公共事务。"
           },
           {
             "sentenceNumber": 3,
-            "english": "When neighbors chat along shaded benches or tend community gardens, mutual trust and social bonds naturally strengthen.",
-            "chinese": "当邻里沿着遮阴的长椅闲聊或照料社区花园时，彼此的信任与社会纽带自然得到了增强。"
+            "english": "When neighbors chat on shaded benches or tend community gardens, mutual trust and social bonds naturally strengthen.",
+            "chinese": "当邻里在阴凉的长椅上闲聊或照料社区花园时，彼此的信任与社会纽带自然得到了增强。"
           },
           {
             "sentenceNumber": 4,
@@ -2138,12 +2138,12 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Furthermore, green technologies and energy efficient facilities blend smoothly into everyday life.",
-            "chinese": "此外，绿色技术和节能设施顺利融入了日常生活。"
+            "english": "Meanwhile, clean energy technology and efficient facilities blend smoothly into everyday life.",
+            "chinese": "与此同时，清洁能源技术与高效设施顺利融入了日常生活。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Renovated buildings feature large windows that welcome natural sunlight and gentle breezes, which reduces the constant demand for artificial lighting and air conditioning.",
+            "english": "Renovated buildings feature large windows that welcome natural sunlight and gentle breezes, which reduces the constant demand for artificial lighting and air-conditioning.",
             "chinese": "翻新后的建筑以大窗户为特色，迎来自然阳光与柔和微风，从而减少了对人造照明和空调的持续需求。"
           },
           {
@@ -2175,7 +2175,7 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "worldwide",
-        "gloss": "ad.在全世界地；全世界上地"
+        "gloss": "a.全世界的；世界范围的"
       },
       {
         "headwordId": "shift",
@@ -2212,7 +2212,7 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "simple",
         "surface": "simply",
-        "gloss": "ad.简单地；仅仅地；简直地"
+        "gloss": "ad.简单地；单纯地；朴素地"
       },
       {
         "headwordId": "abandon",
@@ -2323,7 +2323,7 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "live¹",
         "surface": "living",
-        "gloss": "a.活着的；生活的"
+        "gloss": "a.生活的；居住的"
       },
       {
         "headwordId": "standard",
@@ -2333,12 +2333,12 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "consequence",
         "surface": "Consequently",
-        "gloss": "ad.因此地；所以地"
+        "gloss": "ad.相应地；必然地"
       },
       {
-        "headwordId": "citizen",
-        "surface": "citizens",
-        "gloss": "n.公民；市民；居民"
+        "headwordId": "reside",
+        "surface": "residents",
+        "gloss": "n.居民；定居者"
       },
       {
         "headwordId": "remain",
@@ -2455,9 +2455,9 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.鼓励；激励；促进"
       },
       {
-        "headwordId": "reside",
-        "surface": "residents",
-        "gloss": "n.居民；定居者"
+        "headwordId": "citizen",
+        "surface": "citizens",
+        "gloss": "n.公民；市民；居民"
       },
       {
         "headwordId": "participate",
@@ -2547,21 +2547,20 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.和谐的；融洽的"
       },
       {
-        "headwordId": "furthermore",
-        "gloss": "ad.此外地；而且地"
-      },
-      {
-        "headwordId": "technology",
-        "surface": "technologies",
-        "gloss": "n.技术；工艺"
+        "headwordId": "meanwhile",
+        "gloss": "ad.在此期间地；与此同时地"
       },
       {
         "headwordId": "energy",
         "gloss": "a.能源的；能量的"
       },
       {
+        "headwordId": "technology",
+        "gloss": "n.技术；工艺"
+      },
+      {
         "headwordId": "efficient",
-        "gloss": "a.高效率的；节能的"
+        "gloss": "a.高效的；高效率的"
       },
       {
         "headwordId": "facility",
@@ -2639,9 +2638,8 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.照明；灯光；采光"
       },
       {
-        "headwordId": "condition",
-        "surface": "conditioning",
-        "gloss": "n.调节；空调设备"
+        "headwordId": "air-conditioning",
+        "gloss": "n.空调系统；空气调节"
       },
       {
         "headwordId": "intelligent",
@@ -2701,11 +2699,11 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "ultimate",
         "surface": "Ultimately",
-        "gloss": "ad.最终地；根本上地"
+        "gloss": "ad.最终地；终极地"
       },
       {
         "headwordId": "appeal",
-        "gloss": "v.呼吁；吸引；申诉"
+        "gloss": "v.吸引；引起兴趣"
       },
       {
         "headwordId": "create",
@@ -2821,23 +2819,23 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Inside a crowded university auditorium, a diverse audience gathers to attend a public lecture on modern astronomy.",
-            "chinese": "在拥挤的大学礼堂里，多元的听众聚集在一起参加一场关于现代天文学的公开讲座。"
+            "english": "Inside the crowded university auditorium, a diverse audience gathers to attend an inspiring public lecture on modern astronomy.",
+            "chinese": "在拥挤的大学礼堂里，多元的听众聚集在一起参加一场引人入胜的现代天文学公开讲座。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Clear audio displays attract curious students who ask how engineers automate space ships and build authentic rocket engines.",
-            "chinese": "清晰的音频展示吸引了好奇的学生，他们询问工程师如何使宇宙飞船自动化并制造真正的火箭发动机。"
+            "english": "Clear audio displays, interactive exhibits, and realistic scale models attract curious students who eagerly ask how astronauts live aboard a spacecraft.",
+            "chinese": "清晰的音频展示、互动展品以及逼真的比例模型吸引了好奇的学生，他们热切地询问宇航员在航天器上如何生活。"
           },
           {
             "sentenceNumber": 3,
-            "english": "The invited author, a retired astronaut, explains every technical aspect of launching vehicles into the upper atmosphere.",
-            "chinese": "主讲作者是一位退役宇航员，他讲解了将航天运载工具发射至高层大气的每一个技术方面。"
+            "english": "The guest speaker, a retired mission specialist, explains every technical aspect of rocket design and describes how powerful engines launch vehicles toward the upper atmosphere.",
+            "chinese": "特邀主讲人是一位退役的任务专家，他讲解了火箭设计的每一个技术方面，并描述了强劲的发动机如何将航天运载工具发射至高层大气。"
           },
           {
             "sentenceNumber": 4,
-            "english": "Observers atop the mountain assess distant cosmic light, observing how each atom behaves in extreme cold.",
-            "chinese": "山顶上的观测者评估着遥远的宇宙光线，观察每个原子在极寒之下的活动状态。"
+            "english": "Meanwhile, observers atop remote mountain stations use an advanced astronomical telescope to assess distant planets and explore the mysteries of the vast universe.",
+            "chinese": "与此同时，偏远高山观测站的观测员使用先进的天文望远镜评估遥远的行星，并探索辽阔宇宙的奥秘。"
           }
         ]
       },
@@ -2846,23 +2844,18 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "Science centers assemble interactive exhibits that allow an eager student or young athlete to test zero gravity.",
-            "chinese": "科学中心组装了互动展品，允许热切的学生或年轻运动员体验零重力。"
+            "english": "Behind every major scientific breakthrough, skilled engineers assemble precise instruments and attach durable solar panels to robotic spacecraft.",
+            "chinese": "在每一次重大科学突破的背后，熟练的工程师组装精密仪器，并将耐用的太阳能电池板安装到机器人航天器上。"
           },
           {
             "sentenceNumber": 2,
-            "english": "Space authorities authorize international missions to assure safety, while an experienced attorney manages legal agreements.",
-            "chinese": "航天机构授权开展国际任务以确保安全，而经验丰富的律师则负责管理法律协议。"
+            "english": "They automate flight software, sensor networks, and communication systems so that satellites can operate smoothly across immense distances without direct manual assistance.",
+            "chinese": "他们使飞行软件、传感器网络和通信系统实现自动化，从而使人造卫星能够在没有人工直接协助的情况下跨越极其遥远的距离平稳运行。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Scientists assign skilled teams to assist satellite ground stations, and experts assume that new sensors will attain deeper discoveries.",
-            "chinese": "科学家指派熟练团队协助卫星地面站，专家假定新传感器将取得更深入的发现。"
-          },
-          {
-            "sentenceNumber": 4,
-            "english": "When engineers attach precision solar panels to spacecraft, they pay close attention to protect systems against particle attack in their attempt to explore deep space.",
-            "chinese": "当工程师将精密太阳能电池板安装到航天器上时，他们密切注意保护系统免遭粒子袭击，努力探索深空。"
+            "english": "Facing extreme cold and fierce particle attack in the outer vacuum, specialized protective layers preserve delicate electronic circuits, prevent mechanical failure, and assure continuous data transmission.",
+            "chinese": "面对外层空间真空中的极寒和猛烈的粒子袭击，专用的保护层可以保护精密的电子线路，防止机械故障，并确保连续的数据传输。"
           }
         ]
       },
@@ -2871,23 +2864,18 @@ export const PASSAGES_01_05: Passage[] = [
         "sentences": [
           {
             "sentenceNumber": 1,
-            "english": "After recovery ships bring ocean boats ashore, medical doctors examine passengers who fell fast asleep on the voyage.",
-            "chinese": "在搜救船将海上小艇带上岸后，医生会为在航程中沉睡的旅行者进行检查。"
+            "english": "To tackle these difficult technical challenges, international space authorities cooperate to authorize ambitious exploration missions, assigning expert teams to assist global satellite ground stations.",
+            "chinese": "为了应对这些艰巨的技术挑战，各国际航天机构通力合作批准宏大的探索任务，并指派专家团队协助全球卫星地面站。"
           },
           {
             "sentenceNumber": 2,
-            "english": "A critic who behaves like a foolish ass cannot deny that space technology is a valuable national asset and associate it only with waste.",
-            "chinese": "一个像蠢驴般行事的批评者不能否认航天技术是一笔宝贵的国家资产，也不能仅将其与浪费联系起来。"
+            "english": "Leading research scientists assume that each bold voyage into deep space will attain valuable discoveries about planetary evolution and the origin of our solar system.",
+            "chinese": "顶尖的研究科学家认为，每一次进入深空的勇敢航程都将取得关于行星演化和太阳系起源的宝贵发现。"
           },
           {
             "sentenceNumber": 3,
-            "english": "Setting petty questions aside, educators astonish children with telescope models placed along an avenue park or school attic.",
-            "chinese": "抛开细微的疑问，教育工作者用放置在大道公园或学校阁楼里的望远镜模型令孩子们惊叹不已。"
-          },
-          {
-            "sentenceNumber": 4,
-            "english": "Public institutions attribute space success to a positive attitude, making aviation knowledge available to every automobile driver and citizen.",
-            "chinese": "公共机构将航天成功归功于前瞻性的态度，使航空航天知识对每一位汽车驾驶员和公民都触手可及。"
+            "english": "When public institutions educate young citizens with genuine enthusiasm and make scientific knowledge readily available, society adopts a positive attitude that proudly regards space exploration as a priceless national asset.",
+            "chinese": "当公共机构以由衷的热情教育年轻公民并使科学知识触手可及时，全社会便会形成一种积极的态度，自豪地将太空探索视为无价的国家财富。"
           }
         ]
       }
@@ -2904,24 +2892,29 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "diverse",
-        "gloss": "a.多样的；多元的"
+        "gloss": "a.多元的；多样的"
       },
       {
         "headwordId": "audience",
-        "gloss": "n.观众；听众"
+        "gloss": "n.听众；观众"
       },
       {
         "headwordId": "gather",
         "surface": "gathers",
-        "gloss": "v.聚集；收集"
+        "gloss": "v.聚集；集合"
       },
       {
         "headwordId": "attend",
-        "gloss": "v.出席；参加"
+        "gloss": "v.参加；出席"
+      },
+      {
+        "headwordId": "inspire",
+        "surface": "inspiring",
+        "gloss": "a.引人入胜的；鼓舞人心的"
       },
       {
         "headwordId": "public",
-        "gloss": "a.公众的；公开的"
+        "gloss": "a.公开的；公众的"
       },
       {
         "headwordId": "lecture",
@@ -2933,16 +2926,39 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "astronomy",
-        "gloss": "n.天文学；天体学"
+        "gloss": "n.天文学；天文现象"
       },
       {
         "headwordId": "audio",
-        "gloss": "a.声音的；音频的"
+        "gloss": "a.音频的；声音的"
       },
       {
         "headwordId": "display",
         "surface": "displays",
         "gloss": "n.展示；显示"
+      },
+      {
+        "headwordId": "interact",
+        "surface": "interactive",
+        "gloss": "a.互动的；相互作用的"
+      },
+      {
+        "headwordId": "exhibit",
+        "surface": "exhibits",
+        "gloss": "n.展品；展览"
+      },
+      {
+        "headwordId": "realistic",
+        "gloss": "a.逼真的；现实的"
+      },
+      {
+        "headwordId": "scale",
+        "gloss": "n.比例；规模"
+      },
+      {
+        "headwordId": "model",
+        "surface": "models",
+        "gloss": "n.模型；雏形"
       },
       {
         "headwordId": "attract",
@@ -2953,34 +2969,36 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.好奇的；求知的"
       },
       {
+        "headwordId": "eager",
+        "surface": "eagerly",
+        "gloss": "ad.热切地；渴望地"
+      },
+      {
         "headwordId": "ask",
         "gloss": "v.询问；提问"
       },
       {
-        "headwordId": "engineer",
-        "surface": "engineers",
-        "gloss": "n.工程师；技师"
+        "headwordId": "astronaut",
+        "surface": "astronauts",
+        "gloss": "n.宇航员；航天员"
       },
       {
-        "headwordId": "automate",
-        "gloss": "v.使自动化；自动操作"
+        "headwordId": "live¹",
+        "surface": "live",
+        "gloss": "v.生活；居住"
       },
       {
-        "headwordId": "authentic",
-        "gloss": "a.真正的；真实的"
+        "headwordId": "aboard",
+        "gloss": "prep.在...上；登上"
       },
       {
-        "headwordId": "rocket",
-        "gloss": "n.火箭；火箭发动机"
+        "headwordId": "spacecraft",
+        "gloss": "n.航天器；宇宙飞船"
       },
       {
-        "headwordId": "engine",
-        "surface": "engines",
-        "gloss": "n.发动机；引擎"
-      },
-      {
-        "headwordId": "author",
-        "gloss": "n.作者；发起人"
+        "headwordId": "speak",
+        "surface": "speaker",
+        "gloss": "n.发言者；演讲人"
       },
       {
         "headwordId": "retire",
@@ -2988,8 +3006,13 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "a.退休的；退役的"
       },
       {
-        "headwordId": "astronaut",
-        "gloss": "n.宇航员；航天员"
+        "headwordId": "mission",
+        "gloss": "n.任务；使命"
+      },
+      {
+        "headwordId": "special",
+        "surface": "specialist",
+        "gloss": "n.专家；专科人员"
       },
       {
         "headwordId": "explain",
@@ -2997,8 +3020,7 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "v.解释；说明"
       },
       {
-        "headwordId": "technique",
-        "surface": "technical",
+        "headwordId": "technical",
         "gloss": "a.技术的；工艺的"
       },
       {
@@ -3006,166 +3028,159 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.方面；侧面"
       },
       {
+        "headwordId": "rocket",
+        "gloss": "n.火箭；火箭弹"
+      },
+      {
+        "headwordId": "design",
+        "gloss": "n.设计；构思"
+      },
+      {
+        "headwordId": "describe",
+        "surface": "describes",
+        "gloss": "v.描述；记述"
+      },
+      {
+        "headwordId": "power",
+        "surface": "powerful",
+        "gloss": "a.强劲的；强大的"
+      },
+      {
+        "headwordId": "engine",
+        "surface": "engines",
+        "gloss": "n.发动机；引擎"
+      },
+      {
         "headwordId": "launch",
-        "surface": "launching",
         "gloss": "v.发射；发起"
       },
       {
         "headwordId": "vehicle",
         "surface": "vehicles",
-        "gloss": "n.车辆；航天运载工具"
+        "gloss": "n.航天运载工具；车辆"
       },
       {
         "headwordId": "upper",
-        "gloss": "a.上部的；上层的"
+        "gloss": "a.上层的；上部的"
       },
       {
         "headwordId": "atmosphere",
         "gloss": "n.大气层；气氛"
       },
       {
+        "headwordId": "meanwhile",
+        "surface": "Meanwhile",
+        "gloss": "ad.与此同时地；在此期间地"
+      },
+      {
         "headwordId": "observe",
-        "surface": "Observers",
-        "gloss": "n.观察者；观测员"
+        "surface": "observers",
+        "gloss": "n.观测员；观察者"
       },
       {
         "headwordId": "atop",
         "gloss": "prep.在...顶上；在...之上"
       },
       {
+        "headwordId": "remote",
+        "gloss": "a.偏远的；偏僻的"
+      },
+      {
+        "headwordId": "use",
+        "gloss": "v.使用；运用"
+      },
+      {
+        "headwordId": "advance",
+        "surface": "advanced",
+        "gloss": "a.先进的；高级的"
+      },
+      {
+        "headwordId": "astronomy",
+        "surface": "astronomical",
+        "gloss": "a.天文学的；天文的"
+      },
+      {
+        "headwordId": "telescope",
+        "gloss": "n.望远镜；单筒望远镜"
+      },
+      {
         "headwordId": "assess",
         "gloss": "v.评估；评定"
       },
       {
-        "headwordId": "atom",
-        "gloss": "n.原子；微粒"
+        "headwordId": "distance",
+        "surface": "distant",
+        "gloss": "a.遥远的；偏远的"
       },
       {
-        "headwordId": "behave",
-        "surface": "behaves",
-        "gloss": "v.表现；活动"
+        "headwordId": "planet",
+        "surface": "planets",
+        "gloss": "n.行星；星球"
       },
       {
-        "headwordId": "extreme",
-        "gloss": "a.极端的；极度的"
+        "headwordId": "explore",
+        "gloss": "v.探索；探求"
       },
       {
-        "headwordId": "assemble",
-        "gloss": "v.组装；聚集"
+        "headwordId": "mystery",
+        "surface": "mysteries",
+        "gloss": "n.奥秘；神秘事物"
       },
       {
-        "headwordId": "exhibit",
-        "surface": "exhibits",
-        "gloss": "n.展品；展览"
+        "headwordId": "vast",
+        "gloss": "a.辽阔的；巨大的"
       },
       {
-        "headwordId": "allow",
-        "gloss": "v.允许；准许"
+        "headwordId": "universe",
+        "gloss": "n.宇宙；万物"
       },
       {
-        "headwordId": "eager",
-        "gloss": "a.渴望的；热切的"
+        "headwordId": "major",
+        "gloss": "a.重大的；主要的"
       },
       {
-        "headwordId": "athlete",
-        "gloss": "n.运动员；选手"
+        "headwordId": "science",
+        "surface": "scientific",
+        "gloss": "a.科学的；科研的"
       },
       {
-        "headwordId": "gravity",
-        "gloss": "n.重力；引力"
-      },
-      {
-        "headwordId": "authority",
-        "surface": "authorities",
-        "gloss": "n.官方机构；权威"
-      },
-      {
-        "headwordId": "authorize",
-        "gloss": "v.授权；批准"
-      },
-      {
-        "headwordId": "international",
-        "gloss": "a.国际的；世界性的"
-      },
-      {
-        "headwordId": "mission",
-        "surface": "missions",
-        "gloss": "n.任务；使命"
-      },
-      {
-        "headwordId": "assure",
-        "gloss": "v.保证；确保"
-      },
-      {
-        "headwordId": "safe",
-        "surface": "safety",
-        "gloss": "ad.安全地；平安地"
-      },
-      {
-        "headwordId": "experience",
-        "surface": "experienced",
-        "gloss": "a.有经验的；熟练的"
-      },
-      {
-        "headwordId": "attorney",
-        "gloss": "n.律师；代理人"
-      },
-      {
-        "headwordId": "manage",
-        "surface": "manages",
-        "gloss": "v.管理；处理"
-      },
-      {
-        "headwordId": "legal",
-        "gloss": "a.法律的；合法的"
-      },
-      {
-        "headwordId": "agree",
-        "surface": "agreements",
-        "gloss": "n.协议；协定"
-      },
-      {
-        "headwordId": "assign",
-        "gloss": "v.指派；分配"
+        "headwordId": "breakthrough",
+        "gloss": "n.突破；重大进展"
       },
       {
         "headwordId": "skill",
         "surface": "skilled",
-        "gloss": "a.熟练的；熟手的"
+        "gloss": "a.熟练的；有技能的"
       },
       {
-        "headwordId": "assist",
-        "gloss": "v.协助；援助"
+        "headwordId": "engineer",
+        "surface": "engineers",
+        "gloss": "n.工程师；工兵"
       },
       {
-        "headwordId": "satellite",
-        "gloss": "n.卫星；人造卫星"
+        "headwordId": "assemble",
+        "gloss": "v.组装；装配"
       },
       {
-        "headwordId": "expert",
-        "surface": "experts",
-        "gloss": "n.专家；能手"
+        "headwordId": "precise",
+        "gloss": "a.精密的；精准的"
       },
       {
-        "headwordId": "assume",
-        "gloss": "v.假定；认为"
-      },
-      {
-        "headwordId": "attain",
-        "gloss": "v.达到；获得"
-      },
-      {
-        "headwordId": "discover",
-        "surface": "discoveries",
-        "gloss": "n.发现；发觉"
+        "headwordId": "instrument",
+        "surface": "instruments",
+        "gloss": "n.仪器；器具"
       },
       {
         "headwordId": "attach",
         "gloss": "v.连接；附上"
       },
       {
+        "headwordId": "durable",
+        "gloss": "a.耐用的；持久的"
+      },
+      {
         "headwordId": "solar",
-        "gloss": "a.太阳的；日光的"
+        "gloss": "a.太阳能的；太阳的"
       },
       {
         "headwordId": "panel",
@@ -3173,20 +3188,81 @@ export const PASSAGES_01_05: Passage[] = [
         "gloss": "n.电池板；面板"
       },
       {
-        "headwordId": "spacecraft",
-        "gloss": "n.航天器；宇宙飞船"
+        "headwordId": "robot",
+        "surface": "robotic",
+        "gloss": "a.机器人的；自动的"
       },
       {
-        "headwordId": "pay",
-        "gloss": "v.付出；给予"
+        "headwordId": "automate",
+        "gloss": "v.使自动化；自动操作"
       },
       {
-        "headwordId": "attention",
-        "gloss": "n.注意；注意力"
+        "headwordId": "software",
+        "gloss": "n.软件；系统程序"
       },
       {
-        "headwordId": "protect",
-        "gloss": "v.保护；防卫"
+        "headwordId": "sense",
+        "surface": "sensor",
+        "gloss": "n.传感器；感应器"
+      },
+      {
+        "headwordId": "network",
+        "surface": "networks",
+        "gloss": "n.网络；网状系统"
+      },
+      {
+        "headwordId": "communicate",
+        "surface": "communication",
+        "gloss": "n.通信；交流"
+      },
+      {
+        "headwordId": "system",
+        "surface": "systems",
+        "gloss": "n.系统；体系"
+      },
+      {
+        "headwordId": "satellite",
+        "surface": "satellites",
+        "gloss": "n.人造卫星；卫星"
+      },
+      {
+        "headwordId": "operate",
+        "gloss": "v.运行；运转"
+      },
+      {
+        "headwordId": "smooth",
+        "surface": "smoothly",
+        "gloss": "ad.平稳地；顺利地"
+      },
+      {
+        "headwordId": "immense",
+        "gloss": "a.巨大的；广大的"
+      },
+      {
+        "headwordId": "distance",
+        "surface": "distances",
+        "gloss": "n.距离；远方"
+      },
+      {
+        "headwordId": "direct",
+        "gloss": "a.直接的；直率的"
+      },
+      {
+        "headwordId": "manual",
+        "gloss": "a.手工的；人工的"
+      },
+      {
+        "headwordId": "assist",
+        "surface": "assistance",
+        "gloss": "n.协助；帮助"
+      },
+      {
+        "headwordId": "extreme",
+        "gloss": "a.极端的；极度的"
+      },
+      {
+        "headwordId": "fierce",
+        "gloss": "a.猛烈的；凶猛的"
       },
       {
         "headwordId": "particle",
@@ -3194,62 +3270,244 @@ export const PASSAGES_01_05: Passage[] = [
       },
       {
         "headwordId": "attack",
-        "gloss": "n.袭击；发作"
+        "gloss": "n.袭击；侵袭"
       },
       {
-        "headwordId": "attempt",
-        "gloss": "n.尝试；努力"
+        "headwordId": "outer",
+        "gloss": "a.外部的；外层的"
       },
       {
-        "headwordId": "explore",
-        "gloss": "v.探索；探究"
+        "headwordId": "vacuum",
+        "gloss": "n.真空；空白"
       },
       {
-        "headwordId": "recover",
-        "surface": "recovery",
-        "gloss": "n.恢复；回收"
+        "headwordId": "special",
+        "surface": "specialized",
+        "gloss": "a.专门的；专用的"
       },
       {
-        "headwordId": "ashore",
-        "gloss": "ad.上岸地；在岸上地"
+        "headwordId": "protect",
+        "surface": "protective",
+        "gloss": "a.保护性的；防护的"
       },
       {
-        "headwordId": "medical",
-        "gloss": "a.医学的；医疗的"
+        "headwordId": "layer",
+        "surface": "layers",
+        "gloss": "n.层；表层"
       },
       {
-        "headwordId": "examine",
-        "gloss": "v.检查；查看"
+        "headwordId": "preserve",
+        "gloss": "v.保护；维持"
       },
       {
-        "headwordId": "asleep",
-        "gloss": "a.睡着的；熟睡的"
+        "headwordId": "delicate",
+        "gloss": "a.精密的；脆弱的"
+      },
+      {
+        "headwordId": "electron",
+        "surface": "electronic",
+        "gloss": "a.电子的；电子设备的"
+      },
+      {
+        "headwordId": "circuit",
+        "surface": "circuits",
+        "gloss": "n.线路；电路"
+      },
+      {
+        "headwordId": "prevent",
+        "gloss": "v.防止；预防"
+      },
+      {
+        "headwordId": "mechanic",
+        "surface": "mechanical",
+        "gloss": "a.机械的；机械学的"
+      },
+      {
+        "headwordId": "fail",
+        "surface": "failure",
+        "gloss": "n.故障；失败"
+      },
+      {
+        "headwordId": "assure",
+        "gloss": "v.保证；确保"
+      },
+      {
+        "headwordId": "continue",
+        "surface": "continuous",
+        "gloss": "a.连续的；持续的"
+      },
+      {
+        "headwordId": "data",
+        "gloss": "n.数据；资料"
+      },
+      {
+        "headwordId": "transmit",
+        "surface": "transmission",
+        "gloss": "n.传输；传播"
+      },
+      {
+        "headwordId": "tackle",
+        "gloss": "v.应对；处理"
+      },
+      {
+        "headwordId": "difficult",
+        "gloss": "a.艰难的；困苦的"
+      },
+      {
+        "headwordId": "challenge",
+        "surface": "challenges",
+        "gloss": "n.挑战；难题"
+      },
+      {
+        "headwordId": "international",
+        "gloss": "a.国际的；跨国的"
+      },
+      {
+        "headwordId": "space",
+        "gloss": "n.太空；空间"
+      },
+      {
+        "headwordId": "authority",
+        "surface": "authorities",
+        "gloss": "n.官方机构；权威"
+      },
+      {
+        "headwordId": "cooperate",
+        "gloss": "v.合作；协作"
+      },
+      {
+        "headwordId": "authorize",
+        "gloss": "v.授权；批准"
+      },
+      {
+        "headwordId": "ambition",
+        "surface": "ambitious",
+        "gloss": "a.宏大的；有抱负的"
+      },
+      {
+        "headwordId": "assign",
+        "surface": "assigning",
+        "gloss": "v.指派；分配"
+      },
+      {
+        "headwordId": "expert",
+        "gloss": "a.专家的；熟练的"
+      },
+      {
+        "headwordId": "globe",
+        "surface": "global",
+        "gloss": "a.全球的；全世界的"
+      },
+      {
+        "headwordId": "lead¹",
+        "surface": "Leading",
+        "gloss": "a.顶尖的；主要的"
+      },
+      {
+        "headwordId": "research",
+        "gloss": "n.研究；调查"
+      },
+      {
+        "headwordId": "assume",
+        "gloss": "v.假定；认为"
+      },
+      {
+        "headwordId": "bold",
+        "gloss": "a.大胆的；勇敢的"
       },
       {
         "headwordId": "voyage",
         "gloss": "n.航程；航海"
       },
       {
-        "headwordId": "fool",
-        "surface": "foolish",
-        "gloss": "a.愚蠢的；傻的"
+        "headwordId": "deep",
+        "gloss": "a.深度的；深层的"
       },
       {
-        "headwordId": "ass",
-        "gloss": "n.笨蛋；蠢人"
-      },
-      {
-        "headwordId": "deny",
-        "gloss": "v.否认；拒绝"
-      },
-      {
-        "headwordId": "technology",
-        "gloss": "n.技术；工艺"
+        "headwordId": "attain",
+        "gloss": "v.达到；获得"
       },
       {
         "headwordId": "value",
         "surface": "valuable",
-        "gloss": "a.有价值的；宝贵的"
+        "gloss": "a.宝贵的；有价值的"
+      },
+      {
+        "headwordId": "discover",
+        "surface": "discoveries",
+        "gloss": "n.发现；发觉"
+      },
+      {
+        "headwordId": "evolve",
+        "surface": "evolution",
+        "gloss": "n.演化；进化"
+      },
+      {
+        "headwordId": "origin",
+        "gloss": "n.起源；发端"
+      },
+      {
+        "headwordId": "institution",
+        "surface": "institutions",
+        "gloss": "n.机构；团体"
+      },
+      {
+        "headwordId": "educate",
+        "gloss": "v.教育；培养"
+      },
+      {
+        "headwordId": "citizen",
+        "surface": "citizens",
+        "gloss": "n.公民；平民"
+      },
+      {
+        "headwordId": "genuine",
+        "gloss": "a.真诚的；由衷的"
+      },
+      {
+        "headwordId": "enthusiasm",
+        "gloss": "n.热情；热忱"
+      },
+      {
+        "headwordId": "know",
+        "surface": "knowledge",
+        "gloss": "n.知识；学问"
+      },
+      {
+        "headwordId": "ready",
+        "surface": "readily",
+        "gloss": "ad.容易地；欣然地"
+      },
+      {
+        "headwordId": "available",
+        "gloss": "a.可获得的；可利用的"
+      },
+      {
+        "headwordId": "society",
+        "gloss": "n.社会；社团"
+      },
+      {
+        "headwordId": "adopt",
+        "surface": "adopts",
+        "gloss": "v.采取；采纳"
+      },
+      {
+        "headwordId": "positive",
+        "gloss": "a.积极的；正向的"
+      },
+      {
+        "headwordId": "attitude",
+        "gloss": "n.态度；看法"
+      },
+      {
+        "headwordId": "pride",
+        "surface": "proudly",
+        "gloss": "ad.自豪地；骄傲地"
+      },
+      {
+        "headwordId": "regard",
+        "surface": "regards",
+        "gloss": "v.把...看作；看待"
       },
       {
         "headwordId": "nation",
@@ -3259,247 +3517,79 @@ export const PASSAGES_01_05: Passage[] = [
       {
         "headwordId": "asset",
         "gloss": "n.资产；财富"
-      },
-      {
-        "headwordId": "associate",
-        "gloss": "v.联系；交往"
-      },
-      {
-        "headwordId": "waste",
-        "gloss": "n.浪费；垃圾"
-      },
-      {
-        "headwordId": "petty",
-        "gloss": "a.微不足道的；琐碎的"
-      },
-      {
-        "headwordId": "aside",
-        "gloss": "ad.在旁边地；到一边地"
-      },
-      {
-        "headwordId": "educate",
-        "surface": "educators",
-        "gloss": "n.教育工作者；教师"
-      },
-      {
-        "headwordId": "astonish",
-        "gloss": "v.使震惊；使大吃一惊"
-      },
-      {
-        "headwordId": "telescope",
-        "gloss": "n.望远镜；天文镜"
-      },
-      {
-        "headwordId": "model",
-        "surface": "models",
-        "gloss": "n.模型；模范"
-      },
-      {
-        "headwordId": "avenue",
-        "gloss": "n.林荫道；大道"
-      },
-      {
-        "headwordId": "attic",
-        "gloss": "n.阁楼；顶楼"
-      },
-      {
-        "headwordId": "institution",
-        "surface": "institutions",
-        "gloss": "n.机构；团体"
-      },
-      {
-        "headwordId": "attribute",
-        "gloss": "v.归因于；归功于"
-      },
-      {
-        "headwordId": "attitude",
-        "gloss": "n.态度；看法"
-      },
-      {
-        "headwordId": "available",
-        "gloss": "a.可获得的；可利用的"
-      },
-      {
-        "headwordId": "automobile",
-        "gloss": "n.汽车；轿车"
-      },
-      {
-        "headwordId": "space",
-        "surface": "space",
-        "gloss": "n.空间；太空；空地"
-      },
-      {
-        "headwordId": "build",
-        "surface": "build",
-        "gloss": "v.建造；构建；打造"
-      },
-      {
-        "headwordId": "invite",
-        "surface": "invited",
-        "gloss": "a.应邀的；特邀的"
-      },
-      {
-        "headwordId": "distance",
-        "surface": "distant",
-        "gloss": "a.遥远的；远距离的"
-      },
-      {
-        "headwordId": "cosmos",
-        "surface": "cosmic",
-        "gloss": "a.宇宙的；浩瀚的"
-      },
-      {
-        "headwordId": "science",
-        "surface": "Science",
-        "gloss": "n.科学；学科；学问"
-      },
-      {
-        "headwordId": "interact",
-        "surface": "interactive",
-        "gloss": "a.互动的；交互式的"
-      },
-      {
-        "headwordId": "test",
-        "surface": "test",
-        "gloss": "v.检验；测试；试验"
-      },
-      {
-        "headwordId": "new",
-        "surface": "new",
-        "gloss": "a.崭新的；全新的"
-      },
-      {
-        "headwordId": "sense",
-        "surface": "sensors",
-        "gloss": "n.传感器；感应器"
-      },
-      {
-        "headwordId": "deep",
-        "surface": "deeper",
-        "gloss": "a.深度的；深刻的；深邃的"
-      },
-      {
-        "headwordId": "precise",
-        "surface": "precision",
-        "gloss": "n.精确；精密；精密度"
-      },
-      {
-        "headwordId": "system",
-        "surface": "systems",
-        "gloss": "n.系统；体制；机制"
-      },
-      {
-        "headwordId": "bring",
-        "surface": "bring",
-        "gloss": "v.带来；引起；促使"
-      },
-      {
-        "headwordId": "passenger",
-        "surface": "passengers",
-        "gloss": "n.乘客；旅客"
-      },
-      {
-        "headwordId": "criticize",
-        "surface": "critic",
-        "gloss": "n.批评家；评论员"
-      },
-      {
-        "headwordId": "success",
-        "surface": "success",
-        "gloss": "n.成功；成就；胜利"
-      },
-      {
-        "headwordId": "positive",
-        "surface": "positive",
-        "gloss": "a.积极的；正面的"
-      },
-      {
-        "headwordId": "aviation",
-        "surface": "aviation",
-        "gloss": "n.航空；航空学"
-      },
-      {
-        "headwordId": "know",
-        "surface": "knowledge",
-        "gloss": "n.知识；学识；学问"
-      },
-      {
-        "headwordId": "citizen",
-        "surface": "citizen",
-        "gloss": "n.公民；市民；国民"
       }
     ],
     "phraseAnnotations": [],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "attend a lecture/be present at",
-        "explanation": "参加讲座；attend 熟词僻义还可指“照料、照应”"
+        "id": "exp-1",
+        "expression": "astronomy / astrology",
+        "explanation": "天文学 / 占星术（-nomy 表示“学科/规律”，-logy 表示“理论/学问”）"
       },
       {
-        "id": "e2",
-        "expression": "audio display/sound track",
-        "explanation": "音频展示；audio 为多媒体与科技阅读核心词"
+        "id": "exp-2",
+        "expression": "telescope / microscope",
+        "explanation": "望远镜 / 显微镜（tele- 表示“远”，micro- 表示“微小”，-scope 表示“观察仪器”）"
       },
       {
-        "id": "e3",
-        "expression": "technical aspect/facet",
-        "explanation": "技术层面，方面；aspect 常考指事物的某个侧面"
+        "id": "exp-3",
+        "expression": "spacecraft / aircraft / hovercraft",
+        "explanation": "航天器 / 航空器 / 气垫船（-craft 指“航行载具/飞行器”）"
       },
       {
-        "id": "e4",
-        "expression": "assess radiation/evaluate",
-        "explanation": "评估辐射水平；assess 侧重全面系统的考量与估价"
+        "id": "exp-4",
+        "expression": "launch a satellite / launch a campaign",
+        "explanation": "发射卫星 / 发起活动（熟词僻义：launch 作动词引申为“发起/推出”）"
       },
       {
-        "id": "e5",
-        "expression": "assemble parts/gather",
-        "explanation": "组装部件，聚集；assemble 既可指机械装配，也可指人群集合"
+        "id": "exp-5",
+        "expression": "solar panel / solar energy",
+        "explanation": "太阳能电池板 / 太阳能（solar 专指太阳的或利用太阳光的）"
       },
       {
-        "id": "e6",
-        "expression": "authorize missions/empower",
-        "explanation": "批准任务，授权；authority 派生动词 authorize"
+        "id": "exp-6",
+        "expression": "extreme / harsh / severe",
+        "explanation": "极端的；严酷的；严厉的（深空极端环境常用同义替换词群）"
       },
       {
-        "id": "e7",
-        "expression": "assign teams/allocate",
-        "explanation": "分派团队，分配；assign tasks 为职场与学术高频词"
+        "id": "exp-7",
+        "expression": "automate / automatic / automation",
+        "explanation": "使自动化 / 自动的 / 自动化（词根 auto-“自己”派生词族）"
       },
       {
-        "id": "e8",
-        "expression": "assist in/help with",
-        "explanation": "协助做某事；assist 常用句型为 assist sb in doing sth"
+        "id": "exp-8",
+        "expression": "mission / commission / emission",
+        "explanation": "任务 / 委员会；佣金 / 排放（形近词辨析，四级听力与阅读常考）"
       },
       {
-        "id": "e9",
-        "expression": "attain discoveries/achieve",
-        "explanation": "取得发现，达成；attain 侧重经过持久努力达成崇高目标"
+        "id": "exp-9",
+        "expression": "asset / liability",
+        "explanation": "资产；财富 / 负债；劣势（阅读常考反义对照表达）"
       },
       {
-        "id": "e10",
-        "expression": "attach to/fasten to",
-        "explanation": "附着于，连接到；be attached to 还可表示“依恋、依附于”"
+        "id": "exp-10",
+        "expression": "attitude toward / approach to",
+        "explanation": "对...的态度 / 对...的方法（常考后接介词 to/toward 搭配）"
       },
       {
-        "id": "e11",
-        "expression": "pay attention to/take note of",
-        "explanation": "注意，重视；attention 后接介词 to"
+        "id": "exp-11",
+        "expression": "attain / achieve / accomplish",
+        "explanation": "达到；获得 / 实现；达到 / 完成（目标与成就类近义动词替换）"
       },
       {
-        "id": "e12",
-        "expression": "national asset/valuable resource",
-        "explanation": "国家资产，宝贵财富；asset 喻指有价值的人或事物"
+        "id": "exp-12",
+        "expression": "particle / molecule / atom",
+        "explanation": "微粒；粒子 / 分子 / 原子（物理微观物质结构词汇拓展）"
       },
       {
-        "id": "e13",
-        "expression": "set aside/put on one side",
-        "explanation": "把...放在一边，暂时搁置；set aside 也是经典四六级短语"
+        "id": "exp-13",
+        "expression": "vast / immense / boundless",
+        "explanation": "辽阔的；巨大的；无边无际的（描述宇宙浩瀚维度的同义表达）"
       },
       {
-        "id": "e14",
-        "expression": "attribute to/credit to",
-        "explanation": "归功于，归因于；attribute A to B 为四六级阅读最高频因果句型之一"
+        "id": "exp-14",
+        "expression": "cooperate with / collaborate with",
+        "explanation": "与...合作；与...协作（国际跨国科研合作常用搭配）"
       }
     ]
   }
