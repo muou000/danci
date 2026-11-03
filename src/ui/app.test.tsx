@@ -3,7 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { toBlob } from 'html-to-image';
 import { App } from '../App';
+import { GlobalPassageSearch } from '../components/PassageDiscovery';
 import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
+import type { PassageSearchResult } from '../passage-library';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
@@ -41,6 +43,39 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
   });
 
+  it('全局查词结果可继续展开到第 12 条之后', async () => {
+    const user = userEvent.setup();
+    const results: PassageSearchResult[] = Array.from(
+      { length: 13 },
+      (_, index) => ({
+        key: `result-${index + 1}`,
+        passageId: `passage-${index + 1}`,
+        indexLabel: `NO. ${String(index + 1).padStart(2, '0')}`,
+        tier: 'cet4-core',
+        topic: '测试题材',
+        titleZh: `测试短文 ${index + 1}`,
+        titleEn: `Passage ${index + 1}`,
+        kind: 'annotation',
+        expression: `word-${index + 1}`,
+        summary: 'n.词条；单词',
+      })
+    );
+    render(
+      <GlobalPassageSearch
+        query="word"
+        results={results}
+        onQueryChange={vi.fn()}
+        onSelectResult={vi.fn()}
+      />
+    );
+
+    expect(
+      screen.queryByRole('button', { name: /word-13/ })
+    ).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /显示更多结果/ }));
+    expect(screen.getByRole('button', { name: /word-13/ })).toBeInTheDocument();
+  });
+
   it('短文目录展示待背进度与已读状态，并可按难度筛选后打开短文', async () => {
     const user = userEvent.setup();
     render(<App />);
@@ -55,6 +90,16 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         name: /NO\. 01.*待背词条 77 \/ 78.*已读/,
       })
     ).toBeInTheDocument();
+
+    const topicFilter = screen.getByRole('combobox', { name: '按题材筛选' });
+    await user.selectOptions(topicFilter, 'category:科技人工智能');
+    expect(
+      screen.queryByRole('button', { name: /NO\. 01.*重塑校园消费/ })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /NO\. 02.*在算法洪流/ })
+    ).toBeInTheDocument();
+    await user.selectOptions(topicFilter, 'all');
 
     await user.click(screen.getByRole('button', { name: '六级进阶篇' }));
     expect(

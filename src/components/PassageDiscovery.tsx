@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   PASSAGE_TIER_LABELS,
   type CompiledPassage,
@@ -7,6 +7,8 @@ import type { LearningState } from '../learning-state';
 import {
   filterPassages,
   getPassageProgress,
+  getPassageTopicCategories,
+  PASSAGE_TOPIC_CATEGORIES,
   type PassageSearchResult,
   type PassageTierFilter,
 } from '../passage-library';
@@ -24,7 +26,9 @@ export function GlobalPassageSearch({
   onQueryChange,
   onSelectResult,
 }: GlobalPassageSearchProps) {
-  const visibleResults = results.slice(0, 12);
+  const [visibleCount, setVisibleCount] = useState(12);
+  useEffect(() => setVisibleCount(12), [query]);
+  const visibleResults = results.slice(0, visibleCount);
 
   return (
     <div className="corpus-search">
@@ -88,6 +92,15 @@ export function GlobalPassageSearch({
               ))}
             </ul>
           )}
+          {results.length > visibleResults.length && (
+            <button
+              type="button"
+              className="corpus-search__show-more"
+              onClick={() => setVisibleCount((count) => count + 12)}
+            >
+              显示更多结果（剩余 {results.length - visibleResults.length} 条）
+            </button>
+          )}
         </section>
       )}
     </div>
@@ -119,6 +132,15 @@ export function PassageDirectory({
     () =>
       Array.from(new Set(passages.map((passage) => passage.topic))).sort(
         (a, b) => a.localeCompare(b, 'zh-CN')
+      ),
+    [passages]
+  );
+  const topicCategories = useMemo(
+    () =>
+      PASSAGE_TOPIC_CATEGORIES.filter((category) =>
+        passages.some((passage) =>
+          getPassageTopicCategories(passage.topic).includes(category)
+        )
       ),
     [passages]
   );
@@ -164,11 +186,22 @@ export function PassageDirectory({
             onChange={(event) => setTopicFilter(event.currentTarget.value)}
           >
             <option value="all">全部题材</option>
-            {topics.map((topic) => (
-              <option key={topic} value={topic}>
-                {topic}
-              </option>
-            ))}
+            {topicCategories.length > 0 && (
+              <optgroup label="常考题材">
+                {topicCategories.map((category) => (
+                  <option key={category} value={`category:${category}`}>
+                    {category}
+                  </option>
+                ))}
+              </optgroup>
+            )}
+            <optgroup label="具体题材">
+              {topics.map((topic) => (
+                <option key={topic} value={`topic:${topic}`}>
+                  {topic}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </label>
       </div>

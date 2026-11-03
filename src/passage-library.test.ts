@@ -55,15 +55,18 @@ function passage(
 
 describe('passage library discovery', () => {
   const passages = [
-    passage('cet4-ecology', 'cet4-core', '生态环境', [annotation('word:habit')]),
-    passage('cet6-ai', 'cet6-advanced', '科技人工智能', [annotation('word:study')]),
+    passage('cet4-ecology', 'cet4-core', '绿色校园与消费转型', [annotation('word:habit')]),
+    passage('cet6-ai', 'cet6-advanced', '算法生态与认知自主', [annotation('word:study')]),
   ];
 
-  it('filters the corpus by exam tier and topic together', () => {
+  it('filters by shared topic family and exact passage topic together', () => {
     expect(filterPassages(passages, 'cet6-advanced', '科技人工智能')).toEqual([
       passages[1],
     ]);
     expect(filterPassages(passages, 'cet4-core', '科技人工智能')).toEqual([]);
+    expect(
+      filterPassages(passages, 'cet4-core', 'topic:绿色校园与消费转型')
+    ).toEqual([passages[0]]);
     expect(filterPassages(passages, 'all', 'all')).toEqual(passages);
   });
 
@@ -94,6 +97,12 @@ describe('passage library discovery', () => {
           gloss: 'v.学习；研究',
           headwordId: 'study',
         },
+        {
+          ...annotation('word:fast'),
+          surface: 'fast',
+          gloss: 'a.快速的；迅速的',
+          headwordId: 'fast',
+        },
       ]
     );
     searchablePassage.expansionEntries = [
@@ -107,6 +116,12 @@ describe('passage library discovery', () => {
 
     expect(searchPassages(index, 'studies').map((result) => result.expression)).toContain(
       'study'
+    );
+    expect(searchPassages(index, 'faster').map((result) => result.expression)).toContain(
+      'fast'
+    );
+    expect(searchPassages(index, 'fastest').map((result) => result.expression)).toContain(
+      'fast'
     );
     expect(searchPassages(index, '研究').map((result) => result.expression)).toContain(
       'study'

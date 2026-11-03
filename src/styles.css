@@ -1053,6 +1053,20 @@ body {
   background: #f1f8f5;
 }
 
+.corpus-search__results .corpus-search__show-more {
+  padding: 10px 12px;
+  border-top: 1px solid #dce7e3;
+  background: #f7fbf9;
+  color: #315d4f;
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-align: center;
+}
+
+.corpus-search__results .corpus-search__show-more:hover {
+  background: #eaf5f0;
+}
+
 .corpus-search__entry {
   display: flex;
   flex-wrap: wrap;
