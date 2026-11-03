@@ -30,6 +30,10 @@ function InlineAnnotation({
   onToggleMastered,
   exportMode,
 }: InlineAnnotationProps) {
+  const surfaceClassName = `inline-annotation__surface${
+    isMastered ? ' inline-annotation__surface--mastered' : ''
+  }`;
+
   return (
     <span
       className={`inline-annotation inline-annotation--${token.category}${
@@ -39,19 +43,11 @@ function InlineAnnotation({
       data-item-key={token.itemKey}
     >
       {exportMode ? (
-        <span
-          className={`inline-annotation__surface${
-            isMastered ? ' inline-annotation__surface--mastered' : ''
-          }`}
-        >
-          {token.surface}
-        </span>
+        <span className={surfaceClassName}>{token.surface}</span>
       ) : (
         <button
           type="button"
-          className={`inline-annotation__surface${
-            isMastered ? ' inline-annotation__surface--mastered' : ''
-          }`}
+          className={surfaceClassName}
           aria-label={token.surface}
           aria-pressed={isMastered}
           title={isMastered ? '点击恢复行间标注' : '点击标记为已掌握'}

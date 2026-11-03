@@ -493,7 +493,7 @@ body {
     text-justify: inter-word;
   }
 
-  .inline-annotation__gloss {
+  .passage-card:not(.passage-card--export) .inline-annotation__gloss {
     font-size: 0.56rem;
     letter-spacing: -0.03em;
     white-space: nowrap;
@@ -1010,11 +1010,6 @@ body {
   line-height: 2.75;
   text-align: justify;
   text-justify: inter-word;
-}
-
-.passage-card--export .inline-annotation__gloss {
-  font-size: 0.60rem;
-  letter-spacing: -0.025em;
 }
 
 .passage-card--export .passage-paragraph__zh {
