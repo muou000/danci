@@ -782,6 +782,85 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 07 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 07');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('滨海湿地生态保护与科研监测');
+    expect(passage!.titleEn).toBe(
+      'Coastal Wetland Restoration and Migratory Habitat Conservation'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次单一字母拼凑词与不地道搭配
+    expect(compiled.coveredHeadwordIds).not.toContain('barber');
+    expect(compiled.coveredHeadwordIds).not.toContain('beard');
+    expect(compiled.coveredHeadwordIds).not.toContain('baseball');
+    expect(compiled.coveredHeadwordIds).not.toContain('barrel');
+    expect(compiled.coveredHeadwordIds).not.toContain('beast');
+    expect(compiled.coveredHeadwordIds).not.toContain('belly');
+    expect(compiled.coveredHeadwordIds).not.toContain('bargain');
+    expect(compiled.coveredHeadwordIds).not.toContain('battalion');
+
+    // 验证核心目标词自然覆盖与语境词性匹配
+    expect(compiled.coveredHeadwordIds).toContain('marsh');
+    expect(compiled.coveredHeadwordIds).toContain('tide');
+    expect(compiled.coveredHeadwordIds).toContain('shelter');
+    expect(compiled.coveredHeadwordIds).toContain('migrate');
+    expect(compiled.coveredHeadwordIds).toContain('breed');
+    expect(compiled.coveredHeadwordIds).toContain('survey');
+    expect(compiled.coveredHeadwordIds).toContain('soil');
+    expect(compiled.coveredHeadwordIds).toContain('sample');
+    expect(compiled.coveredHeadwordIds).toContain('track');
+    expect(compiled.coveredHeadwordIds).toContain('thrive');
+    expect(compiled.coveredHeadwordIds).toContain('harmony');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Scenic = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'scene'
+    );
+    expect(p1s1Scenic).toBeDefined();
+    if (p1s1Scenic && p1s1Scenic.type === 'annotation') {
+      expect(p1s1Scenic.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s1Vital = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'vital'
+    );
+    expect(p1s1Vital).toBeDefined();
+    if (p1s1Vital && p1s1Vital.type === 'annotation') {
+      expect(p1s1Vital.gloss.startsWith('a.')).toBe(true);
+      expect(p1s1Vital.gloss).toContain('至关重要');
+    }
+  });
+
   it('CET-4 核心篇 NO. 08 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 08');
     expect(passage).toBeDefined();

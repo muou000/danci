@@ -14,7 +14,7 @@ export const PASSAGE_007: Passage = {
         {
           sentenceNumber: 1,
           english: "Along a scenic coastal bay, vast areas of shallow marshes and tidal flats provide vital shelter for diverse wildlife.",
-          chinese: "沿着风景秀丽的海岸海湾，大片浅滩沼泽与潮间带泥滩为多样的野生动植物提供了至关重要的庇护所。"
+          chinese: "沿着风景秀丽的沿海海湾，大片浅滩沼泽与潮间带泥滩为多样的野生动植物提供了至关重要的庇护所。"
         },
         {
           sentenceNumber: 2,
@@ -74,7 +74,7 @@ export const PASSAGE_007: Passage = {
         {
           sentenceNumber: 3,
           english: "Meanwhile, students plant native grass along the coast, creating dense root networks that stabilize soft soil and absorb ocean waves.",
-          chinese: "与此同时，学生们在沿岸栽种本土植物草，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。"
+          chinese: "与此同时，学生们在沿岸栽种本土草类，形成紧密的根系网络以稳固松软的土壤并吸收海浪冲击。"
         },
         {
           sentenceNumber: 4,
@@ -520,7 +520,7 @@ export const PASSAGE_007: Passage = {
     {
       headwordId: "meanwhile",
       surface: "Meanwhile",
-      gloss: "ad.与此同时；在此期间地"
+      gloss: "ad.与此同时地；在此期间地"
     },
     {
       headwordId: "native",
@@ -581,11 +581,6 @@ export const PASSAGE_007: Passage = {
       headwordId: "recover",
       surface: "recovers",
       gloss: "v.恢复；重新获得"
-    },
-    {
-      headwordId: "vital",
-      surface: "vitality",
-      gloss: "n.活力；生机"
     },
     {
       headwordId: "allow",
