@@ -25,7 +25,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:modern",
                 "surface": "modern",
-                "gloss": "a.现代的；近代的；新式的",
+                "gloss": "a.现代；新式",
                 "headwordId": "modern"
               },
               {
@@ -37,7 +37,7 @@
                 "category": "regular",
                 "itemKey": "word:rapid",
                 "surface": "rapid",
-                "gloss": "a.迅速的；快捷的；急促的",
+                "gloss": "a.迅速；快捷",
                 "headwordId": "rapid"
               },
               {
@@ -49,7 +49,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:deliver",
                 "surface": "delivery",
-                "gloss": "n.投递；配送；交付",
+                "gloss": "n.配送；交付",
                 "headwordId": "deliver"
               },
               {
@@ -61,7 +61,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:serve",
                 "surface": "services",
-                "gloss": "n.服务；公共设施；效劳",
+                "gloss": "n.服务；设施",
                 "headwordId": "serve"
               },
               {
@@ -73,7 +73,7 @@
                 "category": "regular",
                 "itemKey": "word:convenient",
                 "surface": "convenient",
-                "gloss": "a.便利的；方便的；近便的",
+                "gloss": "a.便利；快捷",
                 "headwordId": "convenient"
               },
               {
@@ -109,7 +109,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:daily",
                 "surface": "daily",
-                "gloss": "a.日常的；每日的；按天的",
+                "gloss": "a.日常；每日",
                 "headwordId": "daily"
               },
               {
@@ -121,7 +121,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:consume",
                 "surface": "consumption",
-                "gloss": "n.消费；消耗；摄入",
+                "gloss": "n.消费；消耗",
                 "headwordId": "consume"
               },
               {
@@ -133,7 +133,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:pattern",
                 "surface": "patterns",
-                "gloss": "n.模式；格局；图案",
+                "gloss": "n.模式；格局",
                 "headwordId": "pattern"
               },
               {
@@ -169,7 +169,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:package",
                 "surface": "packaging",
-                "gloss": "n.包装；包裹；一揽子方案",
+                "gloss": "n.包装；包裹",
                 "headwordId": "package"
               },
               {
@@ -181,7 +181,7 @@
                 "category": "regular",
                 "itemKey": "word:harm",
                 "surface": "harmful",
-                "gloss": "a.有害的；致伤的；不利的",
+                "gloss": "a.有害；不利",
                 "headwordId": "harm"
               },
               {
@@ -205,7 +205,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:generate",
                 "surface": "generate",
-                "gloss": "v.产生；引发；发电",
+                "gloss": "v.产生；引发",
                 "headwordId": "generate"
               },
               {
@@ -217,7 +217,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:mass",
                 "surface": "massive",
-                "gloss": "a.大量的；巨大的；大规模的",
+                "gloss": "a.大量；巨大",
                 "headwordId": "mass"
               },
               {
@@ -229,7 +229,7 @@
                 "category": "regular",
                 "itemKey": "word:waste",
                 "surface": "waste",
-                "gloss": "n.废料；浪费；荒地",
+                "gloss": "n.废料；垃圾",
                 "headwordId": "waste"
               },
               {
@@ -241,7 +241,7 @@
                 "category": "regular",
                 "itemKey": "word:heavy",
                 "surface": "heavy",
-                "gloss": "a.沉重的；繁重的；大量的",
+                "gloss": "a.沉重；繁重",
                 "headwordId": "heavy"
               },
               {
@@ -253,7 +253,7 @@
                 "category": "regular",
                 "itemKey": "word:press²",
                 "surface": "pressure",
-                "gloss": "n.压力；催促；新闻界",
+                "gloss": "n.压力；催促",
                 "headwordId": "press²"
               },
               {
@@ -265,7 +265,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:campus",
                 "surface": "campus",
-                "gloss": "n.大学校园；校区",
+                "gloss": "n.校园；校区",
                 "headwordId": "campus"
               },
               {
@@ -277,7 +277,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:environment",
                 "surface": "environments",
-                "gloss": "n.环境；自然界；周围状况",
+                "gloss": "n.环境；生态",
                 "headwordId": "environment"
               },
               {
@@ -301,7 +301,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:acknowledge",
                 "surface": "acknowledge",
-                "gloss": "v.承认；正视；致谢",
+                "gloss": "v.正视；承认",
                 "headwordId": "acknowledge"
               },
               {
@@ -313,7 +313,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:challenge",
                 "surface": "challenges",
-                "gloss": "n.挑战；艰巨任务；质疑",
+                "gloss": "n.挑战；难关",
                 "headwordId": "challenge"
               },
               {
@@ -325,7 +325,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:adopt",
                 "surface": "adopt",
-                "gloss": "v.采用；采纳；收养",
+                "gloss": "v.采纳；采取",
                 "headwordId": "adopt"
               },
               {
@@ -337,7 +337,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:practical",
                 "surface": "practical",
-                "gloss": "a.切实可行的；实际的；实用的",
+                "gloss": "a.可行；务实",
                 "headwordId": "practical"
               },
               {
@@ -349,7 +349,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:strategy",
                 "surface": "strategies",
-                "gloss": "n.策略；规划；战略",
+                "gloss": "n.策略；规划",
                 "headwordId": "strategy"
               },
               {
@@ -361,7 +361,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:reduce",
                 "surface": "reduce",
-                "gloss": "v.减少；降低；缩减",
+                "gloss": "v.减少；削减",
                 "headwordId": "reduce"
               },
               {
@@ -390,7 +390,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:effect",
                 "surface": "effective",
-                "gloss": "a.有效的；生效的；实际的",
+                "gloss": "a.有效；生效",
                 "headwordId": "effect"
               },
               {
@@ -402,7 +402,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:approach",
                 "surface": "approach",
-                "gloss": "n.方法；途径；靠近",
+                "gloss": "n.方法；途径",
                 "headwordId": "approach"
               },
               {
@@ -414,7 +414,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:promote",
                 "surface": "promoting",
-                "gloss": "v.推广；促进；提拔",
+                "gloss": "v.推广；提倡",
                 "headwordId": "promote"
               },
               {
@@ -426,7 +426,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:durable",
                 "surface": "durable",
-                "gloss": "a.耐用的；持久的；耐久的",
+                "gloss": "a.耐用；持久",
                 "headwordId": "durable"
               },
               {
@@ -438,7 +438,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:item",
                 "surface": "items",
-                "gloss": "n.物品；项目；条款",
+                "gloss": "n.物品；用品",
                 "headwordId": "item"
               },
               {
@@ -450,7 +450,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:encourage",
                 "surface": "encouraging",
-                "gloss": "v.鼓励；支持；促进",
+                "gloss": "v.鼓励；倡导",
                 "headwordId": "encourage"
               },
               {
@@ -474,7 +474,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:recycle",
                 "surface": "recycling",
-                "gloss": "n.回收利用；循环利用",
+                "gloss": "n.循环；回收",
                 "headwordId": "recycle"
               },
               {
@@ -486,7 +486,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:program",
                 "surface": "programs",
-                "gloss": "n.计划；项目；程序",
+                "gloss": "n.项目；计划",
                 "headwordId": "program"
               },
               {
@@ -530,7 +530,7 @@
                 "category": "regular",
                 "itemKey": "word:textbook",
                 "surface": "textbooks",
-                "gloss": "n.教科书；课本",
+                "gloss": "n.教材；课本",
                 "headwordId": "textbook"
               },
               {
@@ -542,7 +542,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:electron",
                 "surface": "electronic",
-                "gloss": "a.电子的；电子设备的",
+                "gloss": "a.电子；数码",
                 "headwordId": "electron"
               },
               {
@@ -554,7 +554,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:device",
                 "surface": "devices",
-                "gloss": "n.设备；装置；仪器",
+                "gloss": "n.设备；装置",
                 "headwordId": "device"
               },
               {
@@ -566,7 +566,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:exchange",
                 "surface": "exchange",
-                "gloss": "v.交换；调换；交流",
+                "gloss": "v.交换；互换",
                 "headwordId": "exchange"
               },
               {
@@ -578,7 +578,7 @@
                 "category": "regular",
                 "itemKey": "word:idle",
                 "surface": "idle",
-                "gloss": "a.闲置的；空闲的；懒散的",
+                "gloss": "a.闲；空",
                 "headwordId": "idle"
               },
               {
@@ -590,7 +590,7 @@
                 "category": "regular",
                 "itemKey": "word:goods",
                 "surface": "goods",
-                "gloss": "n.商品；货物；物品",
+                "gloss": "n.物；货",
                 "headwordId": "goods"
               },
               {
@@ -626,7 +626,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:initiate",
                 "surface": "initiatives",
-                "gloss": "n.举措；倡议；主动性",
+                "gloss": "n.举措；倡议",
                 "headwordId": "initiate"
               },
               {
@@ -638,7 +638,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:conserve",
                 "surface": "conserve",
-                "gloss": "v.节约；保护；保存",
+                "gloss": "v.节约；保护",
                 "headwordId": "conserve"
               },
               {
@@ -650,7 +650,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:value",
                 "surface": "valuable",
-                "gloss": "a.宝贵的；贵重的；有价值的",
+                "gloss": "a.宝贵；珍贵",
                 "headwordId": "value"
               },
               {
@@ -662,7 +662,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:resource",
                 "surface": "resources",
-                "gloss": "n.资源；财力；智谋",
+                "gloss": "n.资源；财富",
                 "headwordId": "resource"
               },
               {
@@ -674,7 +674,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:cultivate",
                 "surface": "cultivate",
-                "gloss": "v.培养；培育；耕作",
+                "gloss": "v.培养；树立",
                 "headwordId": "cultivate"
               },
               {
@@ -686,7 +686,7 @@
                 "category": "regular",
                 "itemKey": "word:thrift",
                 "surface": "thrift",
-                "gloss": "n.节俭；节约；繁茂",
+                "gloss": "n.节俭；节约",
                 "headwordId": "thrift"
               },
               {
@@ -727,7 +727,7 @@
                 "category": "regular",
                 "itemKey": "word:guide",
                 "surface": "guiding",
-                "gloss": "v.引导；指导；带领",
+                "gloss": "v.引导；指导",
                 "headwordId": "guide"
               },
               {
@@ -739,7 +739,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:behave",
                 "surface": "behavior",
-                "gloss": "n.行为；举止；表现",
+                "gloss": "n.行为；表现",
                 "headwordId": "behave"
               },
               {
@@ -751,7 +751,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:policy",
                 "surface": "policies",
-                "gloss": "n.政策；方针；保险单",
+                "gloss": "n.政策；准则",
                 "headwordId": "policy"
               },
               {
@@ -763,7 +763,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:sufficient",
                 "surface": "sufficient",
-                "gloss": "a.充分的；足够的",
+                "gloss": "a.充分；完备",
                 "headwordId": "sufficient"
               },
               {
@@ -775,7 +775,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:facility",
                 "surface": "facilities",
-                "gloss": "n.设施；设备；场所",
+                "gloss": "n.设施；设备",
                 "headwordId": "facility"
               },
               {
@@ -799,7 +799,7 @@
                 "category": "regular",
                 "itemKey": "word:dine",
                 "surface": "dining",
-                "gloss": "n.食堂；餐厅",
+                "gloss": "n.就餐；食堂",
                 "headwordId": "dine"
               },
               {
@@ -811,7 +811,7 @@
                 "category": "regular",
                 "itemKey": "word:hall",
                 "surface": "halls",
-                "gloss": "n.大厅；礼堂；食堂",
+                "gloss": "n.堂；厅",
                 "headwordId": "hall"
               },
               {
@@ -823,7 +823,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:reward",
                 "surface": "reward",
-                "gloss": "v.奖励；回报；酬谢",
+                "gloss": "v.奖励；回报",
                 "headwordId": "reward"
               },
               {
@@ -835,7 +835,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:habit",
                 "surface": "habits",
-                "gloss": "n.习惯；习性；规矩",
+                "gloss": "n.习惯；日常",
                 "headwordId": "habit"
               },
               {
@@ -847,7 +847,7 @@
                 "category": "regular",
                 "itemKey": "word:dormitory",
                 "surface": "dormitories",
-                "gloss": "n.学生宿舍；集体寝室",
+                "gloss": "n.宿舍；寝室",
                 "headwordId": "dormitory"
               },
               {
@@ -859,7 +859,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:simple",
                 "surface": "simplify",
-                "gloss": "v.简化；使简易",
+                "gloss": "v.简化；精简",
                 "headwordId": "simple"
               },
               {
@@ -871,7 +871,7 @@
                 "category": "regular",
                 "itemKey": "word:garbage",
                 "surface": "garbage",
-                "gloss": "n.垃圾；废物",
+                "gloss": "n.垃圾；废弃",
                 "headwordId": "garbage"
               },
               {
@@ -883,7 +883,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:classify",
                 "surface": "classification",
-                "gloss": "n.分类；分级；归类",
+                "gloss": "n.分类；归类",
                 "headwordId": "classify"
               },
               {
@@ -895,7 +895,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:sustain",
                 "surface": "sustainable",
-                "gloss": "a.可持续的；合理利用的",
+                "gloss": "a.持续；长久",
                 "headwordId": "sustain"
               },
               {
@@ -907,7 +907,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:choice",
                 "surface": "choices",
-                "gloss": "n.选择；抉择；挑选",
+                "gloss": "n.选择；抉择",
                 "headwordId": "choice"
               },
               {
@@ -919,7 +919,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:nature",
                 "surface": "natural",
-                "gloss": "a.自然的；天生的；正常的",
+                "gloss": "a.自然；自发",
                 "headwordId": "nature"
               },
               {
@@ -931,7 +931,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:routine",
                 "surface": "routines",
-                "gloss": "n.例行公事；常规；日常工作",
+                "gloss": "n.常规；惯例",
                 "headwordId": "routine"
               },
               {
@@ -963,7 +963,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:combine",
                 "surface": "combining",
-                "gloss": "v.结合；联合；组合",
+                "gloss": "v.结合；相融",
                 "headwordId": "combine"
               },
               {
@@ -975,7 +975,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:individual",
                 "surface": "individual",
-                "gloss": "a.个人的；个体的；独特的",
+                "gloss": "a.个人；个体",
                 "headwordId": "individual"
               },
               {
@@ -987,7 +987,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:aware",
                 "surface": "awareness",
-                "gloss": "n.意识；认识；知觉",
+                "gloss": "n.意识；认知",
                 "headwordId": "aware"
               },
               {
@@ -999,7 +999,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:institution",
                 "surface": "institutional",
-                "gloss": "a.制度的；机构的；团体的",
+                "gloss": "a.制度；机制",
                 "headwordId": "institution"
               },
               {
@@ -1011,7 +1011,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:support",
                 "surface": "support",
-                "gloss": "n.支持；支撑；资助",
+                "gloss": "n.支持；支撑",
                 "headwordId": "support"
               },
               {
@@ -1023,7 +1023,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:yield",
                 "surface": "yield",
-                "gloss": "v.产生；出产；放弃",
+                "gloss": "v.产生；产出",
                 "headwordId": "yield"
               },
               {
@@ -1035,7 +1035,7 @@
                 "category": "regular",
                 "itemKey": "word:ecology",
                 "surface": "ecological",
-                "gloss": "a.生态的；生态学的",
+                "gloss": "a.生态；环保",
                 "headwordId": "ecology"
               },
               {
@@ -1047,7 +1047,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:benefit",
                 "surface": "benefits",
-                "gloss": "n.效益；好处；福利",
+                "gloss": "n.效益；益处",
                 "headwordId": "benefit"
               },
               {
@@ -1231,7 +1231,7 @@
                 "category": "regular",
                 "itemKey": "word:era",
                 "surface": "era",
-                "gloss": "n.时代；纪元；年代",
+                "gloss": "n.时代；纪元",
                 "headwordId": "era"
               },
               {
@@ -1243,7 +1243,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:dominate",
                 "surface": "dominated",
-                "gloss": "v.主导；支配；占优势",
+                "gloss": "v.主导；支配",
                 "headwordId": "dominate"
               },
               {
@@ -1266,7 +1266,7 @@
                 "category": "regular",
                 "itemKey": "word:feed",
                 "surface": "feeds",
-                "gloss": "n.信息流；饲料；供应",
+                "gloss": "n.推送；流",
                 "headwordId": "feed"
               },
               {
@@ -1278,7 +1278,7 @@
                 "category": "regular",
                 "itemKey": "word:sensation",
                 "surface": "sensational",
-                "gloss": "a.耸人听闻的；轰动的；极好的",
+                "gloss": "a.轰动；骇人",
                 "headwordId": "sensation"
               },
               {
@@ -1290,7 +1290,7 @@
                 "category": "regular",
                 "itemKey": "word:headline",
                 "surface": "headlines",
-                "gloss": "n.大字标题；头条新闻；要闻",
+                "gloss": "n.标题；头条",
                 "headwordId": "headline"
               },
               {
@@ -1302,7 +1302,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:compete",
                 "surface": "compete",
-                "gloss": "v.竞争；争夺；对抗",
+                "gloss": "v.竞争；争夺",
                 "headwordId": "compete"
               },
               {
@@ -1314,7 +1314,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:attention",
                 "surface": "attention",
-                "gloss": "n.注意力；关注；留心",
+                "gloss": "n.专注；注意",
                 "headwordId": "attention"
               },
               {
@@ -1338,7 +1338,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:relentless",
                 "surface": "relentless",
-                "gloss": "a.无休止的；坚韧的；无情的",
+                "gloss": "a.无休止；顽强",
                 "headwordId": "relentless"
               },
               {
@@ -1350,7 +1350,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:stream",
                 "surface": "stream",
-                "gloss": "n.溪流；一连串；信息流",
+                "gloss": "n.信息流；溪流",
                 "headwordId": "stream"
               },
               {
@@ -1362,7 +1362,7 @@
                 "category": "regular",
                 "itemKey": "word:transient",
                 "surface": "transient",
-                "gloss": "a.短暂的；转瞬即逝的",
+                "gloss": "a.短暂；即逝",
                 "headwordId": "transient"
               },
               {
@@ -1374,7 +1374,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:stimulate",
                 "surface": "stimuli",
-                "gloss": "n.刺激；激励物；促进因素",
+                "gloss": "n.刺激；诱因",
                 "headwordId": "stimulate"
               },
               {
@@ -1386,7 +1386,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:erode",
                 "surface": "erode",
-                "gloss": "v.侵蚀；削弱；损害",
+                "gloss": "v.侵蚀；削弱",
                 "headwordId": "erode"
               },
               {
@@ -1398,7 +1398,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:patient¹",
                 "surface": "patience",
-                "gloss": "n.耐心；忍耐力；毅力",
+                "gloss": "n.耐心；毅力",
                 "headwordId": "patient¹"
               },
               {
@@ -1410,7 +1410,7 @@
                 "category": "out-of-syllabus",
                 "itemKey": "oos:exacerbate",
                 "surface": "exacerbate",
-                "gloss": "v.使加剧；使恶化；激怒"
+                "gloss": "v.加剧；恶化"
               },
               {
                 "type": "text",
@@ -1421,7 +1421,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:mental",
                 "surface": "mental",
-                "gloss": "a.心理的；精神的；智力的",
+                "gloss": "a.精神；心理",
                 "headwordId": "mental"
               },
               {
@@ -1433,7 +1433,7 @@
                 "category": "regular",
                 "itemKey": "word:fatigue",
                 "surface": "fatigue",
-                "gloss": "n.疲劳；疲惫；劳累",
+                "gloss": "n.疲劳；疲惫",
                 "headwordId": "fatigue"
               },
               {
@@ -1445,7 +1445,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:read",
                 "surface": "readers",
-                "gloss": "n.读者；读本",
+                "gloss": "n.读者；受众",
                 "headwordId": "read"
               },
               {
@@ -1465,7 +1465,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:consequence",
                 "surface": "Consequently",
-                "gloss": "ad.因此；所以；结果",
+                "gloss": "ad.因此；结果",
                 "headwordId": "consequence"
               },
               {
@@ -1477,7 +1477,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:individual",
                 "surface": "individuals",
-                "gloss": "n.个人；个体；单个人",
+                "gloss": "n.个人；个体",
                 "headwordId": "individual"
               },
               {
@@ -1489,7 +1489,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:vulnerable",
                 "surface": "vulnerable",
-                "gloss": "a.脆弱的；易受攻击的",
+                "gloss": "a.脆弱；易损",
                 "headwordId": "vulnerable"
               },
               {
@@ -1501,7 +1501,7 @@
                 "category": "regular",
                 "itemKey": "word:superficial",
                 "surface": "superficial",
-                "gloss": "a.肤浅的；表面的；浅薄的",
+                "gloss": "a.肤浅；表面",
                 "headwordId": "superficial"
               },
               {
@@ -1513,7 +1513,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:think",
                 "surface": "thinking",
-                "gloss": "n.思考；思想；见解",
+                "gloss": "n.思考；思辨",
                 "headwordId": "think"
               },
               {
@@ -1525,7 +1525,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:lose",
                 "surface": "lose",
-                "gloss": "v.丧失；失去；输掉",
+                "gloss": "v.丧失；失去",
                 "headwordId": "lose"
               },
               {
@@ -1537,7 +1537,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:capacity",
                 "surface": "capacity",
-                "gloss": "n.能力；容量；职责",
+                "gloss": "n.能力；容量",
                 "headwordId": "capacity"
               },
               {
@@ -1549,7 +1549,7 @@
                 "category": "regular",
                 "itemKey": "word:rigor",
                 "surface": "rigorous",
-                "gloss": "a.严密的；严谨的；严格的",
+                "gloss": "a.严密；严谨",
                 "headwordId": "rigor"
               },
               {
@@ -1561,7 +1561,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:scrutiny",
                 "surface": "scrutiny",
-                "gloss": "n.仔细审视；严密监督；详查",
+                "gloss": "n.审视；详查",
                 "headwordId": "scrutiny"
               },
               {
@@ -1586,7 +1586,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:research",
                 "surface": "Researchers",
-                "gloss": "n.研究人员；学者；调查者",
+                "gloss": "n.学者；调查者",
                 "headwordId": "research"
               },
               {
@@ -1598,7 +1598,7 @@
                 "category": "regular",
                 "itemKey": "word:warn",
                 "surface": "warn",
-                "gloss": "v.警告；提醒；告诫",
+                "gloss": "v.警告；告诫",
                 "headwordId": "warn"
               },
               {
@@ -1610,7 +1610,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:habit",
                 "surface": "habitual",
-                "gloss": "a.习惯性的；惯常的；积习的",
+                "gloss": "a.习惯；惯常",
                 "headwordId": "habit"
               },
               {
@@ -1622,7 +1622,7 @@
                 "category": "regular",
                 "itemKey": "word:skim",
                 "surface": "skimming",
-                "gloss": "n.略读；浏览；撇去浮沫",
+                "gloss": "n.略读；浏览",
                 "headwordId": "skim"
               },
               {
@@ -1646,7 +1646,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:deep",
                 "surface": "deep",
-                "gloss": "a.深度的；深刻的；精深的",
+                "gloss": "a.深度；深刻",
                 "headwordId": "deep"
               },
               {
@@ -1658,7 +1658,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:contemplate",
                 "surface": "contemplation",
-                "gloss": "n.沉思；深思熟虑；凝视",
+                "gloss": "n.沉思；深思",
                 "headwordId": "contemplate"
               },
               {
@@ -1670,7 +1670,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:hamper",
                 "surface": "hamper",
-                "gloss": "v.阻碍；妨碍；束缚",
+                "gloss": "v.阻碍；束缚",
                 "headwordId": "hamper"
               },
               {
@@ -1705,7 +1705,7 @@
                 "category": "regular",
                 "itemKey": "word:instant",
                 "surface": "instant",
-                "gloss": "a.即时的；速溶的；紧迫的",
+                "gloss": "a.即时；速成",
                 "headwordId": "instant"
               },
               {
@@ -1717,7 +1717,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:summary",
                 "surface": "summaries",
-                "gloss": "n.摘要；概要；总结",
+                "gloss": "n.摘要；概要",
                 "headwordId": "summary"
               },
               {
@@ -1729,7 +1729,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:seem",
                 "surface": "seem",
-                "gloss": "v.看似；好像；似乎",
+                "gloss": "v.看似；显得",
                 "headwordId": "seem"
               },
               {
@@ -1741,7 +1741,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:plausible",
                 "surface": "plausible",
-                "gloss": "a.貌似合理的；似乎可信的；花言巧语的",
+                "gloss": "a.合理；可信",
                 "headwordId": "plausible"
               },
               {
@@ -1753,7 +1753,7 @@
                 "category": "regular",
                 "itemKey": "word:route",
                 "surface": "routes",
-                "gloss": "n.途径；路线；渠道",
+                "gloss": "n.途径；捷径",
                 "headwordId": "route"
               },
               {
@@ -1765,7 +1765,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:obscure",
                 "surface": "obscure",
-                "gloss": "v.掩盖；使模糊；使费解",
+                "gloss": "v.掩盖；遮蔽",
                 "headwordId": "obscure"
               },
               {
@@ -1777,7 +1777,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:intricate",
                 "surface": "intricate",
-                "gloss": "a.错综复杂的；精细的；难懂的",
+                "gloss": "a.复杂；精细",
                 "headwordId": "intricate"
               },
               {
@@ -1789,7 +1789,7 @@
                 "category": "regular",
                 "itemKey": "word:logic",
                 "surface": "logic",
-                "gloss": "n.逻辑；推理方法；道理",
+                "gloss": "n.逻辑；理路",
                 "headwordId": "logic"
               },
               {
@@ -1801,7 +1801,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:subtle",
                 "surface": "subtle",
-                "gloss": "a.微妙的；精细的；不易察觉的",
+                "gloss": "a.微细；精妙",
                 "headwordId": "subtle"
               },
               {
@@ -1813,7 +1813,7 @@
                 "category": "out-of-syllabus",
                 "itemKey": "oos:nuance",
                 "surface": "nuances",
-                "gloss": "n.细微差别；微妙之处"
+                "gloss": "n.微差；细微"
               },
               {
                 "type": "text",
@@ -1824,7 +1824,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:classic",
                 "surface": "classic",
-                "gloss": "a.经典的；第一流的；典型的",
+                "gloss": "a.经典；典范",
                 "headwordId": "classic"
               },
               {
@@ -1836,7 +1836,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:text",
                 "surface": "texts",
-                "gloss": "n.文本；原文；正文",
+                "gloss": "n.文本；原著",
                 "headwordId": "text"
               },
               {
@@ -1860,7 +1860,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:offset",
                 "surface": "offset",
-                "gloss": "v.抵消；弥补；补偿",
+                "gloss": "v.抵消；弥补",
                 "headwordId": "offset"
               },
               {
@@ -1872,7 +1872,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:inherent",
                 "surface": "inherent",
-                "gloss": "a.固有的；内在的；生来的",
+                "gloss": "a.固有；内在",
                 "headwordId": "inherent"
               },
               {
@@ -1884,7 +1884,7 @@
                 "category": "regular",
                 "itemKey": "word:drawback",
                 "surface": "drawbacks",
-                "gloss": "n.弊端；缺点；不利条件",
+                "gloss": "n.弊端；缺点",
                 "headwordId": "drawback"
               },
               {
@@ -1896,7 +1896,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:educate",
                 "surface": "educators",
-                "gloss": "n.教育工作者；教育家；教师",
+                "gloss": "n.教育家；教师",
                 "headwordId": "educate"
               },
               {
@@ -1908,7 +1908,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:contend",
                 "surface": "contend",
-                "gloss": "v.主张；声称；竞争",
+                "gloss": "v.主张；强调",
                 "headwordId": "contend"
               },
               {
@@ -1920,7 +1920,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:foster",
                 "surface": "foster",
-                "gloss": "v.培养；促进；助长",
+                "gloss": "v.培养；促进",
                 "headwordId": "foster"
               },
               {
@@ -1932,7 +1932,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:sustain",
                 "surface": "sustained",
-                "gloss": "a.持久的；持续不断的；经久不衰的",
+                "gloss": "a.持久；长久",
                 "headwordId": "sustain"
               },
               {
@@ -1944,7 +1944,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:intellectual",
                 "surface": "intellectual",
-                "gloss": "a.智力的；理智的；学术的",
+                "gloss": "a.智力；学术",
                 "headwordId": "intellectual"
               },
               {
@@ -1956,7 +1956,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:engage",
                 "surface": "engagement",
-                "gloss": "n.投入；参与；约定",
+                "gloss": "n.投入；研读",
                 "headwordId": "engage"
               },
               {
@@ -1981,7 +1981,7 @@
                 "category": "regular",
                 "itemKey": "word:retrieve",
                 "surface": "Retrieving",
-                "gloss": "v.重新获得；收回；检索",
+                "gloss": "v.重获；检索",
                 "headwordId": "retrieve"
               },
               {
@@ -1993,7 +1993,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:cognitive",
                 "surface": "cognitive",
-                "gloss": "a.认知的；认识能力的",
+                "gloss": "a.认知；感知",
                 "headwordId": "cognitive"
               },
               {
@@ -2005,7 +2005,7 @@
                 "category": "regular",
                 "itemKey": "word:autonomous",
                 "surface": "autonomy",
-                "gloss": "n.自主权；自治；独立性",
+                "gloss": "n.自主；独立",
                 "headwordId": "autonomous"
               },
               {
@@ -2017,7 +2017,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:entail",
                 "surface": "entails",
-                "gloss": "v.需要；牵涉；使必要",
+                "gloss": "v.需要；包含",
                 "headwordId": "entail"
               },
               {
@@ -2029,7 +2029,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:deliberate",
                 "surface": "deliberate",
-                "gloss": "a.有意识的；故意的；审慎的",
+                "gloss": "a.审慎；刻意",
                 "headwordId": "deliberate"
               },
               {
@@ -2041,7 +2041,7 @@
                 "category": "regular",
                 "itemKey": "word:boundary",
                 "surface": "boundaries",
-                "gloss": "n.边界；界限；分界线",
+                "gloss": "n.边界；界限",
                 "headwordId": "boundary"
               },
               {
@@ -2065,7 +2065,7 @@
                 "category": "regular",
                 "itemKey": "word:threshold",
                 "surface": "thresholds",
-                "gloss": "n.上限；门槛；起始点",
+                "gloss": "n.上限；门槛",
                 "headwordId": "threshold"
               },
               {
@@ -2077,7 +2077,7 @@
                 "category": "regular",
                 "itemKey": "word:passive",
                 "surface": "passive",
-                "gloss": "a.被动的；消极的",
+                "gloss": "a.被动；消极",
                 "headwordId": "passive"
               },
               {
@@ -2089,7 +2089,7 @@
                 "category": "regular",
                 "itemKey": "word:screen",
                 "surface": "screen",
-                "gloss": "n.屏幕；荧光屏；遮蔽",
+                "gloss": "n.屏幕；界面",
                 "headwordId": "screen"
               },
               {
@@ -2101,7 +2101,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:expose",
                 "surface": "exposure",
-                "gloss": "n.接触；暴露；揭露",
+                "gloss": "n.接触；暴露",
                 "headwordId": "expose"
               },
               {
@@ -2137,7 +2137,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:remain",
                 "surface": "remain",
-                "gloss": "v.保持；依然；留存",
+                "gloss": "v.保持；依然",
                 "headwordId": "remain"
               },
               {
@@ -2149,7 +2149,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:skeptical",
                 "surface": "skeptical",
-                "gloss": "a.怀疑的；持怀疑态度的",
+                "gloss": "a.怀疑；审慎",
                 "headwordId": "skeptical"
               },
               {
@@ -2161,7 +2161,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:bias",
                 "surface": "biased",
-                "gloss": "a.有偏见的；片面的",
+                "gloss": "a.偏颇；片面",
                 "headwordId": "bias"
               },
               {
@@ -2185,7 +2185,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:strive",
                 "surface": "strive",
-                "gloss": "v.努力；奋斗；力求",
+                "gloss": "v.努力；力求",
                 "headwordId": "strive"
               },
               {
@@ -2197,7 +2197,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:alleviate",
                 "surface": "alleviate",
-                "gloss": "v.缓解；减轻；缓和",
+                "gloss": "v.缓解；减轻",
                 "headwordId": "alleviate"
               },
               {
@@ -2209,7 +2209,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:digit",
                 "surface": "digital",
-                "gloss": "a.数字的；数码的",
+                "gloss": "a.数字；数码",
                 "headwordId": "digit"
               },
               {
@@ -2221,7 +2221,7 @@
                 "category": "regular",
                 "itemKey": "word:distract",
                 "surface": "distraction",
-                "gloss": "n.分心；分散注意力的事物",
+                "gloss": "n.干扰；分心",
                 "headwordId": "distract"
               },
               {
@@ -2245,7 +2245,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:imperative",
                 "surface": "imperative",
-                "gloss": "a.必要的；紧迫的；至关重要的",
+                "gloss": "a.必要；紧迫",
                 "headwordId": "imperative"
               },
               {
@@ -2257,7 +2257,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:preserve",
                 "surface": "preserve",
-                "gloss": "v.保留；维持；保护",
+                "gloss": "v.维持；保留",
                 "headwordId": "preserve"
               },
               {
@@ -2269,7 +2269,7 @@
                 "category": "regular",
                 "itemKey": "word:interval",
                 "surface": "intervals",
-                "gloss": "n.间隔；间隙；休息时间",
+                "gloss": "n.间隙；间隔",
                 "headwordId": "interval"
               },
               {
@@ -2293,7 +2293,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:genuine",
                 "surface": "genuine",
-                "gloss": "a.真正的；真诚的；非伪造的",
+                "gloss": "a.真正；纯粹",
                 "headwordId": "genuine"
               },
               {
@@ -2305,7 +2305,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:insight",
                 "surface": "insight",
-                "gloss": "n.洞察力；洞见；深入了解",
+                "gloss": "n.洞见；见地",
                 "headwordId": "insight"
               },
               {
@@ -2317,7 +2317,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:create",
                 "surface": "creative",
-                "gloss": "a.创造性的；有创意的；独创的",
+                "gloss": "a.创意；独创",
                 "headwordId": "create"
               },
               {
@@ -2329,7 +2329,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:prevail",
                 "surface": "prevail",
-                "gloss": "v.盛行；占上风；获胜",
+                "gloss": "v.盛行；占优",
                 "headwordId": "prevail"
               },
               {

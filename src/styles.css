@@ -356,9 +356,10 @@ body {
     'Noto Sans SC',
     'Microsoft YaHei',
     sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.60rem;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1;
+  letter-spacing: -0.025em;
   color: var(--text-gloss);
   text-align: center;
   white-space: nowrap;
@@ -489,7 +490,8 @@ body {
   }
 
   .inline-annotation__gloss {
-    font-size: 0.64rem;
+    font-size: 0.58rem;
+    letter-spacing: -0.03em;
     white-space: nowrap;
     max-width: none;
   }
