@@ -1921,6 +1921,149 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 16 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 16');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('现代工程团队协作、系统研发与职业操守');
+    expect(passage!.titleEn).toBe(
+      'Modern Engineering Collaboration, Systems Innovation, and Professional Ethics'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('commune');
+    expect(compiled.coveredHeadwordIds).not.toContain('compass');
+    expect(compiled.coveredHeadwordIds).not.toContain('concert');
+    expect(compiled.coveredHeadwordIds).not.toContain('comrade');
+    expect(compiled.coveredHeadwordIds).not.toContain('condemn');
+
+    // 验证现代工程团队协作、系统研发与职业操守主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'competent team collaborates to advance a comprehensive technological program'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'design a compact device compatible with mobile systems'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'assemble each essential component with steady precision'
+    );
+    expect(passage!.paragraphs[0].sentences[3].english).toContain(
+      'winning positive comments from respected industry experts'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'never conceal defect warnings or compromise on safety standards'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'strictly comply with concrete regulations and complete compulsory test procedures'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'concentrate on core design concepts and communicate with clarity'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'comprehend complex user needs and complete demanding tasks together'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'condense extensive testing feedback into a coherent summary report'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'technical competence and moral conduct together comprise the true foundation'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'commonplace reality that benefits the daily life of our community'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('compound²');
+    expect(compiled.coveredHeadwordIds).toContain('competent');
+    expect(compiled.coveredHeadwordIds).toContain('comprehensive');
+    expect(compiled.coveredHeadwordIds).toContain('collaborate');
+    expect(compiled.coveredHeadwordIds).toContain('hardware');
+    expect(compiled.coveredHeadwordIds).toContain('compute');
+    expect(compiled.coveredHeadwordIds).toContain('compact');
+    expect(compiled.coveredHeadwordIds).toContain('compatible');
+    expect(compiled.coveredHeadwordIds).toContain('component');
+    expect(compiled.coveredHeadwordIds).toContain('complicate');
+    expect(compiled.coveredHeadwordIds).toContain('conference');
+    expect(compiled.coveredHeadwordIds).toContain('compel');
+    expect(compiled.coveredHeadwordIds).toContain('conceal');
+    expect(compiled.coveredHeadwordIds).toContain('compromise');
+    expect(compiled.coveredHeadwordIds).toContain('comply');
+    expect(compiled.coveredHeadwordIds).toContain('concrete');
+    expect(compiled.coveredHeadwordIds).toContain('compulsory');
+    expect(compiled.coveredHeadwordIds).toContain('compensate');
+    expect(compiled.coveredHeadwordIds).toContain('concentrate');
+    expect(compiled.coveredHeadwordIds).toContain('concept');
+    expect(compiled.coveredHeadwordIds).toContain('communicate');
+    expect(compiled.coveredHeadwordIds).toContain('complain');
+    expect(compiled.coveredHeadwordIds).toContain('compete');
+    expect(compiled.coveredHeadwordIds).toContain('comprehend');
+    expect(compiled.coveredHeadwordIds).toContain('complete');
+    expect(compiled.coveredHeadwordIds).toContain('condense');
+    expect(compiled.coveredHeadwordIds).toContain('conduct');
+    expect(compiled.coveredHeadwordIds).toContain('comprise');
+    expect(compiled.coveredHeadwordIds).toContain('commonplace');
+    expect(compiled.coveredHeadwordIds).toContain('community');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'engineer'],
+      [0, 0, 'research'],
+      [0, 0, 'technology'],
+      [0, 1, 'hardware'],
+      [0, 1, 'experiment'],
+      [0, 1, 'mobile'],
+      [0, 2, 'essence'],
+      [0, 2, 'manufacture'],
+      [0, 3, 'industry'],
+      [1, 0, 'deliver'],
+      [1, 0, 'defect¹'],
+      [1, 0, 'safe'],
+      [1, 1, 'test'],
+      [1, 3, 'peer'],
+      [1, 3, 'use'],
+      [2, 0, 'project¹'],
+      [2, 0, 'summary'],
+      [2, 2, 'daily'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 

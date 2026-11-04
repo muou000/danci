@@ -27311,9 +27311,9 @@
     "id": "cet4-b1-016",
     "indexLabel": "NO. 16",
     "tier": "cet4-core",
-    "topic": "现代团队协作与职场沟通素养",
-    "titleZh": "现代团队协作与职场沟通素养",
-    "titleEn": "Workplace Communication, Team Collaboration, and Professional Ethics",
+    "topic": "现代工程团队协作、系统研发与职业操守",
+    "titleZh": "现代工程团队协作、系统研发与职业操守",
+    "titleEn": "Modern Engineering Collaboration, Systems Innovation, and Professional Ethics",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -27321,8 +27321,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In a modern city, employees commute daily by subway to an enterprise compound, where a major annual conference is held.",
-            "chinese": "在一座现代化城市里，员工们每天乘地铁前往一家企业大院通勤，那里正在举行重大的年度会议。",
+            "english": "In a modern engineering research compound, a competent team collaborates to advance a comprehensive technological program.",
+            "chinese": "在一座现代工程研发园区内，一支能干的团队紧密协作，推进一项全面的技术攻关项目。",
             "tokens": [
               {
                 "type": "text",
@@ -27338,15 +27338,27 @@
               },
               {
                 "type": "text",
-                "text": " city, "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:engineer",
+                "surface": "engineering",
+                "gloss": "a.工程的；工程学的",
+                "headwordId": "engineer"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:employ",
-                "surface": "employees",
-                "gloss": "v.雇用；使用",
-                "headwordId": "employ"
+                "itemKey": "word:research",
+                "surface": "research",
+                "gloss": "a.研发的；研究的",
+                "headwordId": "research"
               },
               {
                 "type": "text",
@@ -27355,112 +27367,14 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:commute",
-                "surface": "commute",
-                "gloss": "v.通勤；上下班往返",
-                "headwordId": "commute"
-              },
-              {
-                "type": "text",
-                "text": " daily by "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:subway",
-                "surface": "subway",
-                "gloss": "n.地铁；地道",
-                "headwordId": "subway"
-              },
-              {
-                "type": "text",
-                "text": " to an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:enterprise",
-                "surface": "enterprise",
-                "gloss": "n.企业；事业",
-                "headwordId": "enterprise"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:compound¹",
+                "itemKey": "word:compound²",
                 "surface": "compound",
-                "gloss": "n.化合物；复合物",
-                "headwordId": "compound¹"
+                "gloss": "n.大院；园区；围地",
+                "headwordId": "compound²"
               },
               {
                 "type": "text",
-                "text": ", where a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:major",
-                "surface": "major",
-                "gloss": "a.重大的；主要的",
-                "headwordId": "major",
-                "shiftX": -8.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:annual",
-                "surface": "annual",
-                "gloss": "a.年度的；每年的",
-                "headwordId": "annual",
-                "shiftX": 8.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:conference",
-                "surface": "conference",
-                "gloss": "n.会议；研讨会",
-                "headwordId": "conference"
-              },
-              {
-                "type": "text",
-                "text": " is "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:hold",
-                "surface": "held",
-                "gloss": "v.举行；拥有",
-                "headwordId": "hold"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "A competent project leader and his trusted companion guide a comprehensive program, making sure all team members communicate with clarity.",
-            "chinese": "一位能干的项目主管与他值得信赖的伙伴共同指导一个全面的项目，确保所有团队成员都能清晰沟通。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
+                "text": ", a "
               },
               {
                 "type": "annotation",
@@ -27472,63 +27386,27 @@
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " team "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:collaborate",
+                "surface": "collaborates",
+                "gloss": "v.协作；合作",
+                "headwordId": "collaborate"
+              },
+              {
+                "type": "text",
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:project¹",
-                "surface": "project",
-                "gloss": "n.方案；工程",
-                "headwordId": "project¹"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:lead¹",
-                "surface": "leader",
-                "gloss": "n.领袖；领导者",
-                "headwordId": "lead¹"
-              },
-              {
-                "type": "text",
-                "text": " and his "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:trust",
-                "surface": "trusted",
-                "gloss": "v.信任；信赖",
-                "headwordId": "trust"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:companion",
-                "surface": "companion",
-                "gloss": "n.同伴；伴侣",
-                "headwordId": "companion"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:guide",
-                "surface": "guide",
-                "gloss": "n.导游者；领路者",
-                "headwordId": "guide"
+                "itemKey": "word:advance",
+                "surface": "advance",
+                "gloss": "v.推进；促进",
+                "headwordId": "advance"
               },
               {
                 "type": "text",
@@ -27549,46 +27427,22 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
+                "itemKey": "word:technology",
+                "surface": "technological",
+                "gloss": "a.技术的；工艺的",
+                "headwordId": "technology"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
                 "itemKey": "word:program",
                 "surface": "program",
-                "gloss": "n.项目；程序",
+                "gloss": "n.项目；程序；计划",
                 "headwordId": "program"
-              },
-              {
-                "type": "text",
-                "text": ", making "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:sure",
-                "surface": "sure",
-                "gloss": "a.确信的；确实的",
-                "headwordId": "sure"
-              },
-              {
-                "type": "text",
-                "text": " all team members "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:communicate",
-                "surface": "communicate",
-                "gloss": "v.沟通；交流",
-                "headwordId": "communicate"
-              },
-              {
-                "type": "text",
-                "text": " with "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clarity",
-                "surface": "clarity",
-                "gloss": "n.清晰；清澈",
-                "headwordId": "clarity"
               },
               {
                 "type": "text",
@@ -27597,22 +27451,62 @@
             ]
           },
           {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Engineers compute massive experimental data and compare various hardware options to develop a compact device compatible with mobile systems.",
-            "chinese": "工程师们计算海量的实验数据，对比不同的硬件选择，以开发出与移动系统兼容的紧凑设备。",
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Engineers compare diverse hardware options and compute experimental data to design a compact device compatible with mobile systems.",
+            "chinese": "工程师们对比多样化的硬件方案并计算实验数据，以设计出能与移动系统兼容的紧凑设备。",
             "tokens": [
               {
+                "type": "text",
+                "text": "Engineers "
+              },
+              {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:engineer",
-                "surface": "Engineers",
-                "gloss": "n.工程师；技工",
-                "headwordId": "engineer"
+                "category": "high-frequency",
+                "itemKey": "word:compare",
+                "surface": "compare",
+                "gloss": "v.比较；对比",
+                "headwordId": "compare"
               },
               {
                 "type": "text",
                 "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:diverse",
+                "surface": "diverse",
+                "gloss": "a.多样化的；不同的",
+                "headwordId": "diverse"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:hardware",
+                "surface": "hardware",
+                "gloss": "a.硬件的；五金的",
+                "headwordId": "hardware"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:opt",
+                "surface": "options",
+                "gloss": "n.选择；方案",
+                "headwordId": "opt"
+              },
+              {
+                "type": "text",
+                "text": " and "
               },
               {
                 "type": "annotation",
@@ -27629,21 +27523,9 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:mass",
-                "surface": "massive",
-                "gloss": "a.海量的；巨大的",
-                "headwordId": "mass"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
                 "itemKey": "word:experiment",
                 "surface": "experimental",
-                "gloss": "a.实验的；试验的",
+                "gloss": "a.实验的；试验性的",
                 "headwordId": "experiment"
               },
               {
@@ -27660,66 +27542,15 @@
               },
               {
                 "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:compare",
-                "surface": "compare",
-                "gloss": "v.比较；对比",
-                "headwordId": "compare",
-                "shiftX": -2.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:various",
-                "surface": "various",
-                "gloss": "a.各种各样的；不同的",
-                "headwordId": "various",
-                "shiftX": -1.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:hardware",
-                "surface": "hardware",
-                "gloss": "n.硬件；五金器具",
-                "headwordId": "hardware",
-                "shiftX": 3.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:opt",
-                "surface": "options",
-                "gloss": "n.选择；选项",
-                "headwordId": "opt"
-              },
-              {
-                "type": "text",
                 "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:develop",
-                "surface": "develop",
-                "gloss": "v.开发；发展",
-                "headwordId": "develop"
+                "itemKey": "word:design",
+                "surface": "design",
+                "gloss": "v.设计；构思",
+                "headwordId": "design"
               },
               {
                 "type": "text",
@@ -27766,7 +27597,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:mobile",
                 "surface": "mobile",
-                "gloss": "a.移动的；活动的",
+                "gloss": "a.移动的；流动的",
                 "headwordId": "mobile"
               },
               {
@@ -27788,10 +27619,10 @@
             ]
           },
           {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "They carefully assemble each essential component, taking care that no complex technical compound will complicate manufacturing stages.",
-            "chinese": "他们细心装配每一个核心组件，注意不让任何复杂的工程复合物使制造阶段变得繁杂。",
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "They assemble each essential component with steady precision, ensuring that minor technical flaws do not complicate manufacturing stages.",
+            "chinese": "他们以稳健的精准度装配每一个核心组件，确保细微的技术缺陷不会使制造阶段变得复杂。",
             "tokens": [
               {
                 "type": "text",
@@ -27799,22 +27630,10 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:care",
-                "surface": "carefully",
-                "gloss": "ad.仔细地；小心地",
-                "headwordId": "care"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:assemble",
                 "surface": "assemble",
-                "gloss": "v.装配；集合",
+                "gloss": "v.装配；组装",
                 "headwordId": "assemble"
               },
               {
@@ -27826,7 +27645,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:essence",
                 "surface": "essential",
-                "gloss": "a.核心的；必要的",
+                "gloss": "a.必不可少的；核心的",
                 "headwordId": "essence"
               },
               {
@@ -27838,20 +27657,57 @@
                 "category": "high-frequency",
                 "itemKey": "word:component",
                 "surface": "component",
-                "gloss": "n.部件；组成部分",
+                "gloss": "n.部件；组件",
                 "headwordId": "component"
               },
               {
                 "type": "text",
-                "text": ", taking care that no "
+                "text": " with "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:complex",
-                "surface": "complex",
-                "gloss": "a.复杂的；复合的",
-                "headwordId": "complex"
+                "itemKey": "word:steady",
+                "surface": "steady",
+                "gloss": "a.稳健的；持续的",
+                "headwordId": "steady"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:precise",
+                "surface": "precision",
+                "gloss": "n.精确；精准度",
+                "headwordId": "precise"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ensure",
+                "surface": "ensuring",
+                "gloss": "v.确保；保证",
+                "headwordId": "ensure"
+              },
+              {
+                "type": "text",
+                "text": " that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:minor",
+                "surface": "minor",
+                "gloss": "a.较小的；次要的",
+                "headwordId": "minor",
+                "shiftX": -2.5
               },
               {
                 "type": "text",
@@ -27863,7 +27719,8 @@
                 "itemKey": "word:technical",
                 "surface": "technical",
                 "gloss": "a.技术的；工艺的",
-                "headwordId": "technical"
+                "headwordId": "technical",
+                "shiftX": 2.5
               },
               {
                 "type": "text",
@@ -27871,15 +27728,15 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:compound²",
-                "surface": "compound",
-                "gloss": "n.大院；围地",
-                "headwordId": "compound²"
+                "category": "high-frequency",
+                "itemKey": "word:flaw",
+                "surface": "flaws",
+                "gloss": "n.缺陷；瑕疵",
+                "headwordId": "flaw"
               },
               {
                 "type": "text",
-                "text": " will "
+                "text": " do not "
               },
               {
                 "type": "annotation",
@@ -27898,7 +27755,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:manufacture",
                 "surface": "manufacturing",
-                "gloss": "v.制造；加工",
+                "gloss": "a.制造的；生产的",
                 "headwordId": "manufacture"
               },
               {
@@ -27918,6 +27775,152 @@
                 "text": "."
               }
             ]
+          },
+          {
+            "sentenceNumber": 4,
+            "circledNumber": "④",
+            "english": "At an annual technology conference, the team openly demonstrates the new model, winning positive comments from respected industry experts.",
+            "chinese": "在一场年度技术会议上，团队公开展示了该新型样机，赢得了受人尊敬的业内专家的积极评价。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "At an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:annual",
+                "surface": "annual",
+                "gloss": "a.每年的；年度的",
+                "headwordId": "annual"
+              },
+              {
+                "type": "text",
+                "text": " technology "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:conference",
+                "surface": "conference",
+                "gloss": "n.会议；研讨会",
+                "headwordId": "conference"
+              },
+              {
+                "type": "text",
+                "text": ", the team openly "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:demonstrate",
+                "surface": "demonstrates",
+                "gloss": "v.演示；论证",
+                "headwordId": "demonstrate"
+              },
+              {
+                "type": "text",
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:new",
+                "surface": "new",
+                "gloss": "a.新的；新型的",
+                "headwordId": "new",
+                "shiftX": -6.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:model",
+                "surface": "model",
+                "gloss": "n.模型；样机",
+                "headwordId": "model",
+                "shiftX": 6.8
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:win",
+                "surface": "winning",
+                "gloss": "v.赢得；获胜",
+                "headwordId": "win"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:positive",
+                "surface": "positive",
+                "gloss": "a.积极的；正面的",
+                "headwordId": "positive"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:comment",
+                "surface": "comments",
+                "gloss": "n.评价；评论",
+                "headwordId": "comment"
+              },
+              {
+                "type": "text",
+                "text": " from "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:respect",
+                "surface": "respected",
+                "gloss": "a.受尊敬的；敬重的",
+                "headwordId": "respect"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:industry",
+                "surface": "industry",
+                "gloss": "a.工业的；行业的",
+                "headwordId": "industry"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:expert",
+                "surface": "experts",
+                "gloss": "n.专家；能手",
+                "headwordId": "expert"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ]
       },
@@ -27927,58 +27930,21 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "When market pressure tends to compel rapid delivery, responsible workers never conceal errors or compromise on quality standards.",
-            "chinese": "当市场压力倾向于迫使快速交付时，负责任的员工从不隐瞒错误，也绝不在质量标准上妥协。",
+            "english": "When urgent delivery deadlines tend to compel rapid compromises, responsible workers never conceal defect warnings or compromise on safety standards.",
+            "chinese": "当紧迫的交付期限往往迫使快速妥协时，负责任的员工从不隐瞒缺陷预警，也绝不在安全标准上妥协。",
             "tokens": [
               {
                 "type": "text",
-                "text": "When market "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:press²",
-                "surface": "pressure",
-                "gloss": "n.压力；迫切要求",
-                "headwordId": "press²"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": "When "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:tend",
-                "surface": "tends",
-                "gloss": "v.倾向；趋向",
-                "headwordId": "tend"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:compel",
-                "surface": "compel",
-                "gloss": "v.强迫；迫使",
-                "headwordId": "compel",
-                "shiftX": -6.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:rapid",
-                "surface": "rapid",
-                "gloss": "a.迅速的；快捷的",
-                "headwordId": "rapid",
-                "shiftX": 1.6
+                "itemKey": "word:urgent",
+                "surface": "urgent",
+                "gloss": "a.紧迫的；急迫的",
+                "headwordId": "urgent",
+                "shiftX": -10.9
               },
               {
                 "type": "text",
@@ -27989,9 +27955,72 @@
                 "category": "high-frequency",
                 "itemKey": "word:deliver",
                 "surface": "delivery",
-                "gloss": "n.交付；递送",
+                "gloss": "a.交付的；递送的",
                 "headwordId": "deliver",
-                "shiftX": 5.3
+                "shiftX": -6.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:deadline",
+                "surface": "deadlines",
+                "gloss": "n.最后期限；截止时间",
+                "headwordId": "deadline",
+                "shiftX": -4.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:tend",
+                "surface": "tend",
+                "gloss": "v.往往会；倾向于",
+                "headwordId": "tend",
+                "shiftX": 13.8
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:compel",
+                "surface": "compel",
+                "gloss": "v.迫使；强迫",
+                "headwordId": "compel"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:rapid",
+                "surface": "rapid",
+                "gloss": "a.快速的；迅速的",
+                "headwordId": "rapid",
+                "shiftX": 8.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:compromise",
+                "surface": "compromises",
+                "gloss": "n.妥协；折中",
+                "headwordId": "compromise"
               },
               {
                 "type": "text",
@@ -28002,7 +28031,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:responsible",
                 "surface": "responsible",
-                "gloss": "a.有责任的；尽责的",
+                "gloss": "a.负责任的；可靠的",
                 "headwordId": "responsible"
               },
               {
@@ -28023,35 +28052,35 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:err",
-                "surface": "errors",
-                "gloss": "n.错误；失误",
-                "headwordId": "err"
+                "category": "regular",
+                "itemKey": "word:defect¹",
+                "surface": "defect",
+                "gloss": "a.缺陷的；瑕疵的",
+                "headwordId": "defect¹"
               },
               {
                 "type": "text",
-                "text": " or "
+                "text": " "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:compromise",
-                "surface": "compromise",
-                "gloss": "v.妥协；折衷",
-                "headwordId": "compromise"
+                "category": "regular",
+                "itemKey": "word:warn",
+                "surface": "warnings",
+                "gloss": "n.警报；警告",
+                "headwordId": "warn"
               },
               {
                 "type": "text",
-                "text": " on "
+                "text": " or compromise on "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:quality",
-                "surface": "quality",
-                "gloss": "n.质量；品质",
-                "headwordId": "quality"
+                "category": "regular",
+                "itemKey": "word:safe",
+                "surface": "safety",
+                "gloss": "a.安全的；保险的",
+                "headwordId": "safe"
               },
               {
                 "type": "text",
@@ -28074,8 +28103,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "They strictly comply with concrete safety regulations and fulfill compulsory training, determined that fair wages must compensate hard labor.",
-            "chinese": "他们严格遵守具体的安全规章并完成强制性培训，坚信合理的薪酬必须补偿辛勤的劳动。",
+            "english": "They strictly comply with concrete regulations and complete compulsory test procedures, convinced that superior quality must compensate for their intensive labor.",
+            "chinese": "他们严格遵守具体的规章制度并完成强制性测试程序，坚信卓越的品质必将补偿其辛勤的付出。",
             "tokens": [
               {
                 "type": "text",
@@ -28086,7 +28115,7 @@
                 "category": "regular",
                 "itemKey": "word:strict",
                 "surface": "strictly",
-                "gloss": "ad.严格地；精确地",
+                "gloss": "ad.严格地；严厉地",
                 "headwordId": "strict"
               },
               {
@@ -28098,7 +28127,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:comply",
                 "surface": "comply",
-                "gloss": "v.遵从；服从",
+                "gloss": "v.遵守；遵从",
                 "headwordId": "comply"
               },
               {
@@ -28110,22 +28139,8 @@
                 "category": "high-frequency",
                 "itemKey": "word:concrete",
                 "surface": "concrete",
-                "gloss": "a.具体的；有形的",
-                "headwordId": "concrete",
-                "shiftX": -0.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:safe",
-                "surface": "safety",
-                "gloss": "a.安全的；稳妥的",
-                "headwordId": "safe",
-                "shiftX": 0.9
+                "gloss": "a.具体的；明确的",
+                "headwordId": "concrete"
               },
               {
                 "type": "text",
@@ -28136,7 +28151,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:regulate",
                 "surface": "regulations",
-                "gloss": "v.管理；调控",
+                "gloss": "n.规章；管理条例",
                 "headwordId": "regulate"
               },
               {
@@ -28146,10 +28161,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:fulfill",
-                "surface": "fulfill",
-                "gloss": "v.完成；履行",
-                "headwordId": "fulfill"
+                "itemKey": "word:complete",
+                "surface": "complete",
+                "gloss": "v.完成；结束",
+                "headwordId": "complete"
               },
               {
                 "type": "text",
@@ -28161,19 +28176,45 @@
                 "itemKey": "word:compulsory",
                 "surface": "compulsory",
                 "gloss": "a.强制的；必修的",
-                "headwordId": "compulsory"
+                "headwordId": "compulsory",
+                "shiftX": -0.5
               },
               {
                 "type": "text",
-                "text": " training, "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:determine",
-                "surface": "determined",
-                "gloss": "a.坚决的；决意的",
-                "headwordId": "determine"
+                "itemKey": "word:test",
+                "surface": "test",
+                "gloss": "a.测试的；试验的",
+                "headwordId": "test",
+                "shiftX": 0.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:procedure",
+                "surface": "procedures",
+                "gloss": "n.程序；步骤",
+                "headwordId": "procedure"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:convince",
+                "surface": "convinced",
+                "gloss": "a.确信的；深信的",
+                "headwordId": "convince"
               },
               {
                 "type": "text",
@@ -28182,11 +28223,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:fair¹",
-                "surface": "fair",
-                "gloss": "a.合理的；公平的",
-                "headwordId": "fair¹",
-                "shiftX": -8
+                "itemKey": "word:superior",
+                "surface": "superior",
+                "gloss": "a.卓越的；优良的",
+                "headwordId": "superior"
               },
               {
                 "type": "text",
@@ -28194,12 +28234,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:wage",
-                "surface": "wages",
-                "gloss": "n.薪酬；工资",
-                "headwordId": "wage",
-                "shiftX": 8
+                "category": "high-frequency",
+                "itemKey": "word:quality",
+                "surface": "quality",
+                "gloss": "n.品质；质量",
+                "headwordId": "quality"
               },
               {
                 "type": "text",
@@ -28210,20 +28249,34 @@
                 "category": "high-frequency",
                 "itemKey": "word:compensate",
                 "surface": "compensate",
-                "gloss": "v.补偿；赔偿",
+                "gloss": "v.补偿；弥补",
                 "headwordId": "compensate"
               },
               {
                 "type": "text",
-                "text": " hard "
+                "text": " for their "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:intensive",
+                "surface": "intensive",
+                "gloss": "a.高强度的；密集的",
+                "headwordId": "intensive",
+                "shiftX": -1.7
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:labor",
                 "surface": "labor",
-                "gloss": "n.劳动；劳动力",
-                "headwordId": "labor"
+                "gloss": "n.劳动；辛劳",
+                "headwordId": "labor",
+                "shiftX": 1.7
               },
               {
                 "type": "text",
@@ -28234,52 +28287,68 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Comrades concentrate on key research concepts, refusing to complain about long hours or condemn partners when minor flaws emerge.",
-            "chinese": "同志们专注于核心研究概念，在出现小缺陷时从不抱怨加班，也不指责伙伴。",
+            "english": "Members concentrate on core design concepts and communicate with clarity, refusing to complain about pressure when sudden challenges arise.",
+            "chinese": "成员们专注于核心设计概念并清晰沟通，在出现突发的挑战时从不抱怨压力。",
             "tokens": [
               {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:comrade",
-                "surface": "Comrades",
-                "gloss": "n.同志；同僚",
-                "headwordId": "comrade"
-              },
-              {
                 "type": "text",
-                "text": " "
+                "text": "Members "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:concentrate",
                 "surface": "concentrate",
-                "gloss": "v.集中；专心",
+                "gloss": "v.专注；集中",
                 "headwordId": "concentrate"
               },
               {
                 "type": "text",
-                "text": " on key "
+                "text": " on "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:research",
-                "surface": "research",
-                "gloss": "n.研究；调查",
-                "headwordId": "research"
+                "category": "regular",
+                "itemKey": "word:core",
+                "surface": "core",
+                "gloss": "a.核心的；主要的",
+                "headwordId": "core"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " design "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:concept",
                 "surface": "concepts",
-                "gloss": "n.概念；观念",
+                "gloss": "n.概念；构想",
                 "headwordId": "concept"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:communicate",
+                "surface": "communicate",
+                "gloss": "v.沟通；交流",
+                "headwordId": "communicate"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clarity",
+                "surface": "clarity",
+                "gloss": "n.清晰；明晰",
+                "headwordId": "clarity"
               },
               {
                 "type": "text",
@@ -28290,7 +28359,7 @@
                 "category": "regular",
                 "itemKey": "word:refuse",
                 "surface": "refusing",
-                "gloss": "v.拒绝；不肯",
+                "gloss": "v.拒绝；不愿",
                 "headwordId": "refuse"
               },
               {
@@ -28302,32 +28371,20 @@
                 "category": "high-frequency",
                 "itemKey": "word:complain",
                 "surface": "complain",
-                "gloss": "v.抱怨；投诉",
+                "gloss": "v.抱怨；发牢骚",
                 "headwordId": "complain"
               },
               {
                 "type": "text",
-                "text": " about long hours or "
+                "text": " about "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:condemn",
-                "surface": "condemn",
-                "gloss": "v.谴责；指责",
-                "headwordId": "condemn"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:partner",
-                "surface": "partners",
-                "gloss": "n.伙伴；搭档",
-                "headwordId": "partner"
+                "itemKey": "word:press²",
+                "surface": "pressure",
+                "gloss": "n.压力；紧迫",
+                "headwordId": "press²"
               },
               {
                 "type": "text",
@@ -28335,12 +28392,11 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:minor",
-                "surface": "minor",
-                "gloss": "a.较小的；较次要的",
-                "headwordId": "minor",
-                "shiftX": -8.2
+                "category": "regular",
+                "itemKey": "word:sudden",
+                "surface": "sudden",
+                "gloss": "a.突然的；意外的",
+                "headwordId": "sudden"
               },
               {
                 "type": "text",
@@ -28349,11 +28405,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:flaw",
-                "surface": "flaws",
-                "gloss": "n.瑕疵；缺陷",
-                "headwordId": "flaw",
-                "shiftX": 6.6
+                "itemKey": "word:challenge",
+                "surface": "challenges",
+                "gloss": "n.挑战；艰巨任务",
+                "headwordId": "challenge"
               },
               {
                 "type": "text",
@@ -28362,11 +28417,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:emerge",
-                "surface": "emerge",
-                "gloss": "v.出现；涌现",
-                "headwordId": "emerge",
-                "shiftX": 1.6
+                "itemKey": "word:arise",
+                "surface": "arise",
+                "gloss": "v.出现；产生",
+                "headwordId": "arise"
               },
               {
                 "type": "text",
@@ -28377,8 +28431,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Under such positive conditions, healthy peer competition inspires staff to comprehend market needs and complete demanding tasks.",
-            "chinese": "在这样积极的条件下，良性的同行竞争激励员工理解市场需求并完成艰巨任务。",
+            "english": "Under such supportive conditions, healthy peer competition inspires staff to comprehend complex user needs and complete demanding tasks together.",
+            "chinese": "在这样支持性的条件下，良性的同行竞争激励员工深入理解复杂的客户需求，齐心协力攻克苛刻的任务。",
             "tokens": [
               {
                 "type": "text",
@@ -28387,10 +28441,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:positive",
-                "surface": "positive",
-                "gloss": "a.积极的；正面的",
-                "headwordId": "positive"
+                "itemKey": "word:support",
+                "surface": "supportive",
+                "gloss": "a.支持的；鼓励的",
+                "headwordId": "support"
               },
               {
                 "type": "text",
@@ -28401,7 +28455,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:condition",
                 "surface": "conditions",
-                "gloss": "n.条件；状况",
+                "gloss": "n.环境；条件",
                 "headwordId": "condition"
               },
               {
@@ -28413,7 +28467,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:peer",
                 "surface": "peer",
-                "gloss": "n.同行；同龄人",
+                "gloss": "a.同行的；同辈的",
                 "headwordId": "peer"
               },
               {
@@ -28450,7 +28504,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:staff",
                 "surface": "staff",
-                "gloss": "n.员工；全体职员",
+                "gloss": "n.全体员工；职员",
                 "headwordId": "staff",
                 "shiftX": 0.9
               },
@@ -28463,20 +28517,8 @@
                 "category": "high-frequency",
                 "itemKey": "word:comprehend",
                 "surface": "comprehend",
-                "gloss": "v.理解；领悟",
+                "gloss": "v.理解；领会",
                 "headwordId": "comprehend"
-              },
-              {
-                "type": "text",
-                "text": " market needs and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:complete",
-                "surface": "complete",
-                "gloss": "v.完成；使完整",
-                "headwordId": "complete"
               },
               {
                 "type": "text",
@@ -28485,10 +28527,37 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "a.复杂的；错综的",
+                "headwordId": "complex",
+                "shiftX": -9.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:use",
+                "surface": "user",
+                "gloss": "a.用户的；使用者的",
+                "headwordId": "use",
+                "shiftX": 9.9
+              },
+              {
+                "type": "text",
+                "text": " needs and complete "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
                 "itemKey": "word:demand",
                 "surface": "demanding",
-                "gloss": "a.艰巨的；要求高的",
-                "headwordId": "demand"
+                "gloss": "a.苛求的；要求极高的",
+                "headwordId": "demand",
+                "shiftX": -0.5
               },
               {
                 "type": "text",
@@ -28500,11 +28569,12 @@
                 "itemKey": "word:task",
                 "surface": "tasks",
                 "gloss": "n.任务；工作",
-                "headwordId": "task"
+                "headwordId": "task",
+                "shiftX": 0.5
               },
               {
                 "type": "text",
-                "text": "."
+                "text": " together."
               }
             ]
           }
@@ -28516,20 +28586,20 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In a spacious community commune, staff discuss common social concerns and condense long survey findings into a short report.",
-            "chinese": "在一间宽敞的社区公社大厅里，员工们讨论共同的社会关切，并将冗长的调查结果浓缩为一份简短报告。",
+            "english": "At the project conclusion meeting, leaders condense extensive testing feedback into a coherent summary report.",
+            "chinese": "在项目总结会议上，负责人将详尽的测试反馈浓缩为一份条理清晰的总结报告。",
             "tokens": [
               {
                 "type": "text",
-                "text": "In a "
+                "text": "At the "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:space",
-                "surface": "spacious",
-                "gloss": "a.宽敞的；广阔的",
-                "headwordId": "space"
+                "itemKey": "word:project¹",
+                "surface": "project",
+                "gloss": "a.项目的；工程的",
+                "headwordId": "project¹"
               },
               {
                 "type": "text",
@@ -28538,34 +28608,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:community",
-                "surface": "community",
-                "gloss": "n.社区；团体",
-                "headwordId": "community"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:commune",
-                "surface": "commune",
-                "gloss": "n.公社；自治体",
-                "headwordId": "commune"
-              },
-              {
-                "type": "text",
-                "text": ", staff "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:discuss",
-                "surface": "discuss",
-                "gloss": "v.讨论；谈论",
-                "headwordId": "discuss"
+                "itemKey": "word:conclude",
+                "surface": "conclusion",
+                "gloss": "a.总结的；结论的",
+                "headwordId": "conclude"
               },
               {
                 "type": "text",
@@ -28574,60 +28620,34 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:common",
-                "surface": "common",
-                "gloss": "a.共同的；普通的",
-                "headwordId": "common",
-                "shiftX": -0.5
+                "itemKey": "word:meeting",
+                "surface": "meeting",
+                "gloss": "n.会议；集会",
+                "headwordId": "meeting"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:society",
-                "surface": "social",
-                "gloss": "n.社会；社团",
-                "headwordId": "society",
-                "shiftX": 0.5
+                "itemKey": "word:lead¹",
+                "surface": "leaders",
+                "gloss": "n.领导者；负责人",
+                "headwordId": "lead¹"
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:concern",
-                "surface": "concerns",
-                "gloss": "n.关切；关心",
-                "headwordId": "concern"
-              },
-              {
-                "type": "text",
-                "text": " and "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:condense",
                 "surface": "condense",
-                "gloss": "v.浓缩；精简",
+                "gloss": "v.浓缩；精炼",
                 "headwordId": "condense"
-              },
-              {
-                "type": "text",
-                "text": " long "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:survey",
-                "surface": "survey",
-                "gloss": "n.调查；勘测",
-                "headwordId": "survey"
               },
               {
                 "type": "text",
@@ -28636,14 +28656,52 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:find",
-                "surface": "findings",
-                "gloss": "v.发现；找到；查明",
-                "headwordId": "find"
+                "itemKey": "word:extend",
+                "surface": "extensive",
+                "gloss": "a.广泛的；大量的",
+                "headwordId": "extend"
               },
               {
                 "type": "text",
-                "text": " into a short "
+                "text": " testing "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:feedback",
+                "surface": "feedback",
+                "gloss": "n.反馈；意见",
+                "headwordId": "feedback"
+              },
+              {
+                "type": "text",
+                "text": " into a "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:coherent",
+                "surface": "coherent",
+                "gloss": "a.条理清晰的；连贯的",
+                "headwordId": "coherent",
+                "shiftX": -2.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:summary",
+                "surface": "summary",
+                "gloss": "a.总结性的；概要的",
+                "headwordId": "summary",
+                "shiftX": 2.4
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -28662,197 +28720,21 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Writers compose an inspiring article showing that technological progress has become a commonplace reality in everyday life.",
-            "chinese": "作者们撰写了一份鼓舞人心的时事简报，表明技术进步已成为日常生活中寻常的现实。",
-            "tokens": [
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:write",
-                "surface": "Writers",
-                "gloss": "n.作者；作家",
-                "headwordId": "write"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:compose",
-                "surface": "compose",
-                "gloss": "v.撰写；组成",
-                "headwordId": "compose"
-              },
-              {
-                "type": "text",
-                "text": " an inspiring "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:article",
-                "surface": "article",
-                "gloss": "n.文章；报道",
-                "headwordId": "article"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:show",
-                "surface": "showing",
-                "gloss": "v.表明；展示",
-                "headwordId": "show"
-              },
-              {
-                "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:technology",
-                "surface": "technological",
-                "gloss": "n.科技；技术",
-                "headwordId": "technology"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:progress",
-                "surface": "progress",
-                "gloss": "n.进步；进展",
-                "headwordId": "progress"
-              },
-              {
-                "type": "text",
-                "text": " has become a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:commonplace",
-                "surface": "commonplace",
-                "gloss": "a.平常的；普遍的",
-                "headwordId": "commonplace"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:real",
-                "surface": "reality",
-                "gloss": "n.现实；真实",
-                "headwordId": "real"
-              },
-              {
-                "type": "text",
-                "text": " in "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:everyday",
-                "surface": "everyday",
-                "gloss": "a.日常的；每日的",
-                "headwordId": "everyday"
-              },
-              {
-                "type": "text",
-                "text": " life."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Using a digital compass to open new markets, managers conclude that moral conduct comprises the true foundation of sustainable success.",
-            "chinese": "使用数字化指南针开辟新市场，管理者们总结出崇高的品行构成可持续成功的真正基石。",
+            "english": "They conclude that technical competence and moral conduct together comprise the true foundation of sustainable innovation.",
+            "chinese": "他们总结认为，技术能力与道德操守共同构成了持续创新的真正基石。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Using a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:digit",
-                "surface": "digital",
-                "gloss": "a.数字的；数码的",
-                "headwordId": "digit"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:compass",
-                "surface": "compass",
-                "gloss": "n.指南针；罗盘",
-                "headwordId": "compass"
-              },
-              {
-                "type": "text",
-                "text": " to open "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:new",
-                "surface": "new",
-                "gloss": "a.崭新的；全新的",
-                "headwordId": "new"
-              },
-              {
-                "type": "text",
-                "text": " markets, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:manage",
-                "surface": "managers",
-                "gloss": "n.管理者；经理",
-                "headwordId": "manage"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:conclude",
-                "surface": "conclude",
-                "gloss": "v.得出结论；推断",
-                "headwordId": "conclude"
-              },
-              {
-                "type": "text",
-                "text": " that "
+                "text": "They conclude that technical competence and "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:moral",
                 "surface": "moral",
-                "gloss": "a.道德的；精神的",
+                "gloss": "a.道德的；操守上的",
                 "headwordId": "moral",
-                "shiftX": -0.9
+                "shiftX": -9
               },
               {
                 "type": "text",
@@ -28863,20 +28745,20 @@
                 "category": "high-frequency",
                 "itemKey": "word:conduct",
                 "surface": "conduct",
-                "gloss": "n.行为；举止",
+                "gloss": "n.操守；品行；行为",
                 "headwordId": "conduct",
-                "shiftX": 0.9
+                "shiftX": 9
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " together "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:comprise",
-                "surface": "comprises",
-                "gloss": "v.包含；构成",
+                "surface": "comprise",
+                "gloss": "v.构成；组成",
                 "headwordId": "comprise"
               },
               {
@@ -28888,7 +28770,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:true",
                 "surface": "true",
-                "gloss": "a.真实的；真正的",
+                "gloss": "a.真正的；真实的",
                 "headwordId": "true"
               },
               {
@@ -28912,7 +28794,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:sustain",
                 "surface": "sustainable",
-                "gloss": "a.可持续的；支撑的",
+                "gloss": "a.可持续的；持久的",
                 "headwordId": "sustain"
               },
               {
@@ -28922,10 +28804,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:success",
-                "surface": "success",
-                "gloss": "n.成功；成就",
-                "headwordId": "success"
+                "itemKey": "word:innovate",
+                "surface": "innovation",
+                "gloss": "n.创新；革新",
+                "headwordId": "innovate"
               },
               {
                 "type": "text",
@@ -28934,35 +28816,82 @@
             ]
           },
           {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "In the evening, team members gather at an outdoor concert to celebrate friendship and shared achievements.",
-            "chinese": "傍晚时分，团队成员相聚在户外音乐会上，共同庆祝友谊与共有成就。",
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "By combining engineering excellence with social responsibility, the team transforms advanced science into a commonplace reality that benefits the daily life of our community.",
+            "chinese": "通过将工程追求与社会责任相结合，团队将前沿科技转化为造福社区日常生活的寻常现实。",
             "tokens": [
               {
                 "type": "text",
-                "text": "In the evening, team members "
+                "text": "By "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:gather",
-                "surface": "gather",
-                "gloss": "v.聚集；集合",
-                "headwordId": "gather"
+                "itemKey": "word:combine",
+                "surface": "combining",
+                "gloss": "v.结合；整合",
+                "headwordId": "combine"
               },
               {
                 "type": "text",
-                "text": " at an "
+                "text": " engineering "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:outdoor",
-                "surface": "outdoor",
-                "gloss": "a.户外的；野外的",
-                "headwordId": "outdoor",
-                "shiftX": -0.9
+                "itemKey": "word:excellent",
+                "surface": "excellence",
+                "gloss": "n.卓越；优秀",
+                "headwordId": "excellent"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:society",
+                "surface": "social",
+                "gloss": "a.社会的；社交的",
+                "headwordId": "society"
+              },
+              {
+                "type": "text",
+                "text": " responsibility, the team "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transform",
+                "surface": "transforms",
+                "gloss": "v.转变；转化",
+                "headwordId": "transform"
+              },
+              {
+                "type": "text",
+                "text": " advanced "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:science",
+                "surface": "science",
+                "gloss": "n.科学；科技",
+                "headwordId": "science"
+              },
+              {
+                "type": "text",
+                "text": " into a "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:commonplace",
+                "surface": "commonplace",
+                "gloss": "a.平常的；普遍的",
+                "headwordId": "commonplace"
               },
               {
                 "type": "text",
@@ -28970,48 +28899,47 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:concert",
-                "surface": "concert",
-                "gloss": "n.音乐会；演奏会",
-                "headwordId": "concert",
-                "shiftX": 0.9
+                "category": "high-frequency",
+                "itemKey": "word:real",
+                "surface": "reality",
+                "gloss": "n.现实；实际",
+                "headwordId": "real"
               },
               {
                 "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:celebrate",
-                "surface": "celebrate",
-                "gloss": "v.庆祝；赞颂",
-                "headwordId": "celebrate"
-              },
-              {
-                "type": "text",
-                "text": " friendship and "
+                "text": " that "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:share",
-                "surface": "shared",
-                "gloss": "a.共同的；共享的",
-                "headwordId": "share"
+                "itemKey": "word:benefit",
+                "surface": "benefits",
+                "gloss": "v.造福；有益于",
+                "headwordId": "benefit"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " the "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:achieve",
-                "surface": "achievements",
-                "gloss": "v.完成；实现",
-                "headwordId": "achieve"
+                "itemKey": "word:daily",
+                "surface": "daily",
+                "gloss": "a.日常的；每日的",
+                "headwordId": "daily"
+              },
+              {
+                "type": "text",
+                "text": " life of our "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:community",
+                "surface": "community",
+                "gloss": "n.社区；公众团体",
+                "headwordId": "community"
               },
               {
                 "type": "text",
@@ -29024,205 +28952,204 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "daily commute/travel to work",
-        "explanation": "日常通勤；commute 亦可指减刑或转换支付方式"
+        "id": "exp-01",
+        "expression": "engineering research / hardware option",
+        "explanation": "工程研发，硬件方案；engineering 指工程学或技术工程实践；hardware 熟词僻义在计算科学中指物理硬件设备与电子元器件，而非传统五金器具。"
       },
       {
-        "id": "e2",
-        "expression": "enterprise compound/facility",
-        "explanation": "企业大院；compound 熟词僻义指围墙环绕的建筑群"
+        "id": "exp-02",
+        "expression": "research compound / science park",
+        "explanation": "研发园区，科技园区；compound 熟词僻义指由围墙围起的建筑群或独立园区、厂区大院，而非化学化合物。"
       },
       {
-        "id": "e3",
-        "expression": "backward compatible/interoperable",
-        "explanation": "向下兼容；compatible 科技领域核心词汇"
+        "id": "exp-03",
+        "expression": "competent team / technical capability",
+        "explanation": "能胜任的团队，技术实力；competent 指具备充足技能、资质足以胜任复杂工程攻关；capability 指解决技术难题的综合能力。"
       },
       {
-        "id": "e4",
-        "expression": "chemical compound/mixture",
-        "explanation": "化合物；compound 作名词表示化合物质或复合物"
+        "id": "exp-04",
+        "expression": "compact device / portable equipment",
+        "explanation": "紧凑型设备，便携式装备；compact 形容构造精密小巧且空间利用率极高；device 指具有特定功能的电子或机械设备。"
       },
       {
-        "id": "e5",
-        "expression": "reach a compromise/settlement",
-        "explanation": "达成妥协；compromise 亦可作及物动词表示危及、损害"
+        "id": "exp-05",
+        "expression": "compatible platform / system integration",
+        "explanation": "兼容平台，系统集成；compatible 指软硬件之间接口相容、能无缝协同运行；platform 指承载应用与服务的软硬件底层架构。"
       },
       {
-        "id": "e6",
-        "expression": "comply with regulations/adhere to",
-        "explanation": "遵守规章；comply with 为固定介词搭配"
+        "id": "exp-06",
+        "expression": "assemble components / precision engineering",
+        "explanation": "装配零部件，精密工程；assemble 指将分散的精密部件组装成完整设备；component 指构成机械或电子系统的核心独立元器件。"
       },
       {
-        "id": "e7",
-        "expression": "concrete evidence/tangible",
-        "explanation": "具体证据；concrete 作名词指混凝土，作形容词指具体的"
+        "id": "exp-07",
+        "expression": "manufacturing stage / production cycle",
+        "explanation": "制造阶段，生产周期；manufacture 专指工业化规模生产与装配；stage 指工程生命周期中环环相扣的特定流程节点。"
       },
       {
-        "id": "e8",
-        "expression": "compulsory education/mandatory",
-        "explanation": "义务教育，强制性的；与 optional 相对"
+        "id": "exp-08",
+        "expression": "delivery deadline / urgent schedule",
+        "explanation": "交付截止时间，紧迫排期；deadline 指项目必须完成的刚性最终期限；delivery 指工程项目向客户或产线的正式交付与移交。"
       },
       {
-        "id": "e9",
-        "expression": "compensate for losses/make up for",
-        "explanation": "弥补损失，赔偿；compensation 为其名词形式"
+        "id": "exp-09",
+        "expression": "conceal defect / quality compromise",
+        "explanation": "隐瞒缺陷，质量妥协；conceal 指故意掩盖故障或隐患；compromise 作动词或名词指在进度压力下降低标准或做出原则让步。"
       },
       {
-        "id": "e10",
-        "expression": "commonplace occurrence/ordinary",
-        "explanation": "司空见惯的事；commonplace 强调极普通且不新奇"
+        "id": "exp-10",
+        "expression": "comply with regulations / statutory compliance",
+        "explanation": "遵守规章，法定合规；comply 与 with 搭配为法律与工业合规标准表达，指严格服从并执行规程；regulation 指官方制定的技术管理法规。"
       },
       {
-        "id": "e11",
-        "expression": "moral compass/guiding principle",
-        "explanation": "道德指南针；比喻指导人辨别是非的良知原则"
+        "id": "exp-11",
+        "expression": "compulsory test / compliance inspection",
+        "explanation": "强制性测试，合规性检查；compulsory 指法律或行业标准强制要求、不容跳过的硬性检验环节；inspection 指严密的质量把关。"
       },
       {
-        "id": "e12",
-        "expression": "code of conduct/behavior",
-        "explanation": "行为准则；conduct 重音在后为动词指挥、组织，在前为名词品行"
+        "id": "exp-12",
+        "expression": "condense feedback / summary report",
+        "explanation": "浓缩反馈，总结报告；condense 熟词僻义在信息处理中指去粗取精、浓缩精炼海量数据或文字信息；summary 指提纲挈领的概要。"
       },
       {
-        "id": "e13",
-        "expression": "comprise several parts/consist of",
-        "explanation": "包含若干部分，由...构成；主语常为整体"
+        "id": "exp-13",
+        "expression": "moral conduct / professional ethics",
+        "explanation": "道德操守，职业伦理；conduct 熟词僻义作名词指人的品行、行为表现或职业道德操守（重音在前），而非组织领导（动词重音在后）。"
       },
       {
-        "id": "e14",
-        "expression": "in concert with/together with",
-        "explanation": "齐心协力，同心协力；concert 熟词僻义常比喻一致行动"
+        "id": "exp-14",
+        "expression": "comprise the foundation / core pillar",
+        "explanation": "构成基石，核心支柱；comprise 指多个要素共同组成或构成整体；foundation 比喻推动长期事业发展的坚固基石。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "commonplace reality / widespread adoption",
+        "explanation": "寻常现实，广泛应用；commonplace 熟词僻义指技术从前沿攻关演变为日常生活中司空见惯、习以为常的客观事实，非贬义平庸。"
       }
     ],
     "coveredHeadwordIds": [
       "modern",
-      "employ",
-      "commute",
-      "subway",
-      "enterprise",
-      "compound¹",
-      "major",
-      "annual",
-      "conference",
-      "hold",
-      "competent",
-      "project¹",
-      "lead¹",
-      "trust",
-      "companion",
-      "guide",
-      "comprehensive",
-      "program",
-      "sure",
-      "communicate",
-      "clarity",
       "engineer",
-      "compute",
-      "mass",
-      "experiment",
-      "data",
+      "research",
+      "compound²",
+      "competent",
+      "collaborate",
+      "advance",
+      "comprehensive",
+      "technology",
+      "program",
       "compare",
-      "various",
+      "diverse",
       "hardware",
       "opt",
-      "develop",
+      "compute",
+      "experiment",
+      "data",
+      "design",
       "compact",
       "device",
       "compatible",
       "mobile",
       "system",
-      "care",
       "assemble",
       "essence",
       "component",
-      "complex",
+      "steady",
+      "precise",
+      "ensure",
+      "minor",
       "technical",
-      "compound²",
+      "flaw",
       "complicate",
       "manufacture",
       "stage",
-      "press²",
+      "annual",
+      "conference",
+      "demonstrate",
+      "new",
+      "model",
+      "win",
+      "positive",
+      "comment",
+      "respect",
+      "industry",
+      "expert",
+      "urgent",
+      "deliver",
+      "deadline",
       "tend",
       "compel",
       "rapid",
-      "deliver",
+      "compromise",
       "responsible",
       "conceal",
-      "err",
-      "compromise",
-      "quality",
+      "defect¹",
+      "warn",
+      "safe",
       "standard",
       "strict",
       "comply",
       "concrete",
-      "safe",
       "regulate",
-      "fulfill",
+      "complete",
       "compulsory",
-      "determine",
-      "fair¹",
-      "wage",
+      "test",
+      "procedure",
+      "convince",
+      "superior",
+      "quality",
       "compensate",
+      "intensive",
       "labor",
-      "comrade",
       "concentrate",
-      "research",
+      "core",
       "concept",
+      "communicate",
+      "clarity",
       "refuse",
       "complain",
-      "condemn",
-      "partner",
-      "minor",
-      "flaw",
-      "emerge",
-      "positive",
+      "press²",
+      "sudden",
+      "challenge",
+      "arise",
+      "support",
       "condition",
       "peer",
       "compete",
       "inspire",
       "staff",
       "comprehend",
-      "complete",
+      "complex",
+      "use",
       "demand",
       "task",
-      "space",
-      "community",
-      "commune",
-      "discuss",
-      "common",
-      "society",
-      "concern",
-      "condense",
-      "survey",
-      "find",
-      "report",
-      "write",
-      "compose",
-      "article",
-      "show",
-      "technology",
-      "progress",
-      "commonplace",
-      "real",
-      "everyday",
-      "digit",
-      "compass",
-      "new",
-      "manage",
+      "project¹",
       "conclude",
+      "meeting",
+      "lead¹",
+      "condense",
+      "extend",
+      "feedback",
+      "coherent",
+      "summary",
+      "report",
       "moral",
       "conduct",
       "comprise",
       "true",
       "foundation",
       "sustain",
-      "success",
-      "gather",
-      "outdoor",
-      "concert",
-      "celebrate",
-      "share",
-      "achieve"
+      "innovate",
+      "combine",
+      "excellent",
+      "society",
+      "transform",
+      "science",
+      "commonplace",
+      "real",
+      "benefit",
+      "daily",
+      "community"
     ],
     "hasOutOfSyllabusWords": false
   },
