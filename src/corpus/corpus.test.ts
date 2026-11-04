@@ -1311,18 +1311,27 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('cave');
     expect(compiled.coveredHeadwordIds).not.toContain('cell');
 
-    // 验证气候适应型农业与冷链物流主题的地道选词与自然搭配
+    // 验证气候适应型农业与冷链物流主题的地道选词与自然搭配（消除 cease damage、cold carriers 生造与 packing 重复）
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
       'temperatures exceed forty degrees Celsius'
     );
     expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'To protect vulnerable crops from continuous heat damage'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
       'modern storage facility capable of capturing clean solar energy'
     );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'preserves freshly harvested produce from severe field heat'
+    );
     expect(passage!.paragraphs[1].sentences[0].english).toContain(
-      'durable cardboard cases'
+      'placing them into durable cardboard cases'
     );
     expect(passage!.paragraphs[1].sentences[1].english).toContain(
-      'transferred swiftly to chilled cargo carriers'
+      'transferred swiftly into chilled cargo vans'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'Transport teams from the regional carrier monitor temperature data'
     );
     expect(passage!.paragraphs[2].sentences[0].english).toContain(
       'caters fresh organic food to university canteens'
@@ -1336,15 +1345,17 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('carbon');
     expect(compiled.coveredHeadwordIds).toContain('drought');
     expect(compiled.coveredHeadwordIds).toContain('cancel');
-    expect(compiled.coveredHeadwordIds).toContain('cease');
     expect(compiled.coveredHeadwordIds).toContain('capital');
     expect(compiled.coveredHeadwordIds).toContain('solar');
     expect(compiled.coveredHeadwordIds).toContain('capacity');
     expect(compiled.coveredHeadwordIds).toContain('warehouse');
+    expect(compiled.coveredHeadwordIds).toContain('preserve');
     expect(compiled.coveredHeadwordIds).toContain('carrot');
     expect(compiled.coveredHeadwordIds).toContain('cardboard');
     expect(compiled.coveredHeadwordIds).toContain('cargo');
+    expect(compiled.coveredHeadwordIds).toContain('van');
     expect(compiled.coveredHeadwordIds).toContain('carrier');
+    expect(compiled.coveredHeadwordIds).toContain('region');
     expect(compiled.coveredHeadwordIds).toContain('canteen');
     expect(compiled.coveredHeadwordIds).toContain('catalog');
     expect(compiled.coveredHeadwordIds).toContain('cater');

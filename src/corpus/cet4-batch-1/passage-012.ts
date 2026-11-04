@@ -21,14 +21,14 @@ export const PASSAGE_012: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'To cease continuous heat damage to vulnerable crops, the rural cooperative invested collective capital to build a modern storage facility capable of capturing clean solar energy.',
+            'To protect vulnerable crops from continuous heat damage, the rural cooperative invested collective capital to build a modern storage facility capable of capturing clean solar energy.',
           chinese:
-            '为了制止脆弱农作物持续遭受高温损害，农村合作社投入集体资金建造了一座有能力采集清洁太阳能的现代仓储设施。',
+            '为了保护脆弱农作物免受持续高温损害，农村合作社投入集体资金建造了一座有能力采集清洁太阳能的现代仓储设施。',
         },
         {
           sentenceNumber: 3,
           english:
-            'Equipped with reliable chilling capacity, the new cold warehouse now protects freshly harvested produce from severe field heat and prevents delicate vegetables from spoiling.',
+            'Equipped with reliable chilling capacity, the new cold warehouse now preserves freshly harvested produce from severe field heat and prevents delicate vegetables from spoiling.',
           chinese:
             '配备了可靠的制冷能力，这座新建的冷库如今保护新采收的农产品免受田间严酷积热的影响，并防止娇嫩的蔬菜变质。',
         },
@@ -40,16 +40,16 @@ export const PASSAGE_012: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Inside the clean packing area, workers sort ripe carrots and sweet melons by product category, packing them into durable cardboard cases.',
+            'Inside the clean packing area, workers sort ripe carrots and sweet melons by product category, placing them into durable cardboard cases.',
           chinese:
-            '在清洁的包装作业区内，工人们按产品类别对成熟的胡萝卜和甜瓜进行分拣，并将它们装入耐用的纸板箱中。',
+            '在清洁的包装作业区内，工人们按产品类别对成熟的胡萝卜和甜瓜进行分拣，并将它们放入耐用的纸板箱中。',
         },
         {
           sentenceNumber: 2,
           english:
-            'Handled with extreme care, sealed boxes are loaded onto electric carts, secured with tight straps, and transferred swiftly to chilled cargo carriers.',
+            'Handled with extreme care, sealed boxes are loaded onto electric carts, secured with tight straps, and transferred swiftly into chilled cargo vans.',
           chinese:
-            '经过极其细致的照料，密封的箱子被装上电动推车，用紧固带固定，并迅速转运至冷藏货运车辆。',
+            '经过极其细致的照料，密封的箱子被装上电动推车，用紧固带固定，并迅速转运至冷藏货运厢式车内。',
         },
         {
           sentenceNumber: 3,
@@ -61,9 +61,9 @@ export const PASSAGE_012: Passage = {
         {
           sentenceNumber: 4,
           english:
-            'Transport teams monitor temperature data throughout transit, ensuring cold carriers catch morning delivery schedules without compromising quality.',
+            'Transport teams from the regional carrier monitor temperature data throughout transit, ensuring deliveries catch morning market schedules without compromising quality.',
           chinese:
-            '运输团队在整个运输途中监测温度数据，确保冷藏车赶上早间配送日程，同时不降低产品品质。',
+            '来自区域承运企业的运输团队在整个运输途中监测温度数据，确保配送货物赶上早市日程，同时不降低产品品质。',
         },
       ],
     },
@@ -117,11 +117,11 @@ export const PASSAGE_012: Passage = {
     { headwordId: 'heat', surface: 'heat', gloss: 'n.高温；炎热；热度' },
 
     // Paragraph 1, Sentence 2
-    { headwordId: 'cease', surface: 'cease', gloss: 'v.停止；终止；平息' },
-    { headwordId: 'continue', surface: 'continuous', gloss: 'a.持续的；连绵不断的' },
-    { headwordId: 'damage', surface: 'damage', gloss: 'n.损害；破坏；损失' },
+    { headwordId: 'protect', surface: 'protect', gloss: 'v.保护；保卫；防护' },
     { headwordId: 'vulnerable', surface: 'vulnerable', gloss: 'a.脆弱的；易受损的' },
     { headwordId: 'crop', surface: 'crops', gloss: 'n.农作物；庄稼' },
+    { headwordId: 'continue', surface: 'continuous', gloss: 'a.持续的；连绵不断的' },
+    { headwordId: 'damage', surface: 'damage', gloss: 'n.损害；破坏；损失' },
     { headwordId: 'rural', surface: 'rural', gloss: 'a.农村的；田园的' },
     { headwordId: 'cooperate', surface: 'cooperative', gloss: 'n.合作社；合作企业' },
     { headwordId: 'invest', surface: 'invested', gloss: 'v.投资；投入；授予' },
@@ -144,7 +144,7 @@ export const PASSAGE_012: Passage = {
     { headwordId: 'capacity', surface: 'capacity', gloss: 'n.能力；容量；生产力' },
     { headwordId: 'new', surface: 'new', gloss: 'a.新的；新鲜的' },
     { headwordId: 'warehouse', surface: 'warehouse', gloss: 'n.仓库；货栈' },
-    { headwordId: 'protect', surface: 'protects', gloss: 'v.保护；保卫；防护' },
+    { headwordId: 'preserve', surface: 'preserves', gloss: 'v.保鲜；保存；保护' },
     { headwordId: 'fresh', surface: 'freshly', gloss: 'ad.刚刚地；新鲜地' },
     { headwordId: 'harvest', surface: 'harvested', gloss: 'a.收割的；采收的' },
     { headwordId: 'produce', surface: 'produce', gloss: 'n.农产品；物产' },
@@ -178,7 +178,7 @@ export const PASSAGE_012: Passage = {
     { headwordId: 'transfer', surface: 'transferred', gloss: 'v.转移；转运；调动' },
     { headwordId: 'swift', surface: 'swiftly', gloss: 'ad.飞快地；敏捷地' },
     { headwordId: 'cargo', surface: 'cargo', gloss: 'a.货运的；货物的' },
-    { headwordId: 'carrier', surface: 'carriers', gloss: 'n.承运工具；承运人；载体' },
+    { headwordId: 'van', surface: 'vans', gloss: 'n.厢式货车；面包车' },
 
     // Paragraph 2, Sentence 3
     { headwordId: 'inspect', surface: 'Inspectors', gloss: 'n.检验员；检查员；巡视员' },
@@ -193,13 +193,15 @@ export const PASSAGE_012: Passage = {
 
     // Paragraph 2, Sentence 4
     { headwordId: 'transport', surface: 'Transport', gloss: 'a.运输的；运送的' },
+    { headwordId: 'region', surface: 'regional', gloss: 'a.区域的；地方的' },
+    { headwordId: 'carrier', surface: 'carrier', gloss: 'n.承运企业；承运人；载体' },
     { headwordId: 'monitor', surface: 'monitor', gloss: 'v.监控；监测；监督' },
     { headwordId: 'data', surface: 'data', gloss: 'n.数据；资料' },
     { headwordId: 'throughout', surface: 'throughout', gloss: 'prep.在整个期间；遍及' },
     { headwordId: 'transit', surface: 'transit', gloss: 'n.运输；中转；通行' },
     { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证' },
+    { headwordId: 'deliver', surface: 'deliveries', gloss: 'n.交付；投递；配送' },
     { headwordId: 'catch', surface: 'catch', gloss: 'v.赶上；抓住；捕获' },
-    { headwordId: 'deliver', surface: 'delivery', gloss: 'a.配送的；递送的' },
     { headwordId: 'schedule', surface: 'schedules', gloss: 'n.日程；时间表；计划' },
     { headwordId: 'compromise', surface: 'compromising', gloss: 'v.危及；损害；妥协' },
     { headwordId: 'quality', surface: 'quality', gloss: 'n.品质；质量；特征' },
@@ -263,9 +265,9 @@ export const PASSAGE_012: Passage = {
     },
     {
       id: 'exp-04',
-      expression: 'cease operations / bring to a halt',
+      expression: 'preserve freshness / food preservation',
       explanation:
-        '停止运营，中止活动；cease 为正式用语，表示某动作或状态的停止或终止，近义替换：halt / stop / discontinue。',
+        '保持新鲜，食品保鲜；preserve 作动词表示保护、维持或使免于变质腐败，在农产品与冷链物流中常指低温保鲜与品质保存。',
     },
     {
       id: 'exp-05',
@@ -293,9 +295,9 @@ export const PASSAGE_012: Passage = {
     },
     {
       id: 'exp-09',
-      expression: 'cargo carrier / freight transporter',
+      expression: 'cargo van / freight carrier',
       explanation:
-        '货运承运工具，货物运输载体；cargo 专指船只、车辆或飞行器装运的货物，carrier 指从事客货运送的承运企业或运载工具。',
+        '货运厢式车与货运承运商；cargo van 专指城市物流配送中常见的厢式货运车，carrier 则指依法从事客货运输业务的承运企业或专业物流机构。',
     },
     {
       id: 'exp-10',
