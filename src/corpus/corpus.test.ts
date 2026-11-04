@@ -1792,6 +1792,11 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('clockwise');
     expect(compiled.coveredHeadwordIds).not.toContain('cock');
     expect(compiled.coveredHeadwordIds).not.toContain('cling');
+    expect(compiled.coveredHeadwordIds).not.toContain('code');
+    expect(compiled.coveredHeadwordIds).not.toContain('conduct');
+    expect(compiled.coveredHeadwordIds).not.toContain('column');
+    expect(compiled.coveredHeadwordIds).not.toContain('collapse');
+    expect(compiled.coveredHeadwordIds).not.toContain('comfort');
 
     // 验证现代化港口商贸、海运物流与区域多边合作主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1801,10 +1806,10 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'cranes lift heavy container boxes with steady precision'
     );
     expect(passage!.paragraphs[0].sentences[2].english).toContain(
-      'digital code of conduct'
+      'digital management systems to track continuous freight flows and prevent sudden warehouse breakdowns'
     );
     expect(passage!.paragraphs[1].sentences[0].english).toContain(
-      'regional trade commission holds regular meetings'
+      'At a nearby conference center, a regional trade commission holds regular meetings'
     );
     expect(passage!.paragraphs[1].sentences[1].english).toContain(
       'commence duty talks and remove artificial trade barriers'
@@ -1816,7 +1821,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'combining financial resources is vital to combat severe market risks'
     );
     expect(passage!.paragraphs[2].sentences[0].english).toContain(
-      'strengthens regional cohesion, bringing sustained economic stability and genuine comfort'
+      'These collective efforts strengthen regional cohesion, bringing sustained economic stability and genuine security'
     );
     expect(passage!.paragraphs[2].sentences[1].english).toContain(
       'ensure transparent customs inspections and minimize schedule delays'
@@ -1841,13 +1846,10 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('command');
     expect(compiled.coveredHeadwordIds).toContain('collect');
     expect(compiled.coveredHeadwordIds).toContain('comment');
-    expect(compiled.coveredHeadwordIds).toContain('column');
-    expect(compiled.coveredHeadwordIds).toContain('collapse');
     expect(compiled.coveredHeadwordIds).toContain('crane');
     expect(compiled.coveredHeadwordIds).toContain('coal');
     expect(compiled.coveredHeadwordIds).toContain('bulk');
     expect(compiled.coveredHeadwordIds).toContain('dock');
-    expect(compiled.coveredHeadwordIds).toContain('comfort');
     expect(compiled.coveredHeadwordIds).toContain('colleague');
     expect(compiled.coveredHeadwordIds).toContain('cargo');
     expect(compiled.coveredHeadwordIds).toContain('vessel');
@@ -1858,11 +1860,14 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('authority');
     expect(compiled.coveredHeadwordIds).toContain('maintain');
     expect(compiled.coveredHeadwordIds).toContain('order');
-    expect(compiled.coveredHeadwordIds).toContain('code');
-    expect(compiled.coveredHeadwordIds).toContain('conduct');
     expect(compiled.coveredHeadwordIds).toContain('freight');
     expect(compiled.coveredHeadwordIds).toContain('flow');
     expect(compiled.coveredHeadwordIds).toContain('warehouse');
+    expect(compiled.coveredHeadwordIds).toContain('system');
+    expect(compiled.coveredHeadwordIds).toContain('track');
+    expect(compiled.coveredHeadwordIds).toContain('breakdown');
+    expect(compiled.coveredHeadwordIds).toContain('effort');
+    expect(compiled.coveredHeadwordIds).toContain('secure');
     expect(compiled.coveredHeadwordIds).toContain('customs');
     expect(compiled.coveredHeadwordIds).toContain('policy');
     expect(compiled.coveredHeadwordIds).toContain('delegate');
@@ -1894,6 +1899,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       [0, 2, 'port'],
       [0, 2, 'order'],
       [0, 2, 'digit'],
+      [0, 2, 'manage'],
       [0, 2, 'freight'],
       [0, 2, 'warehouse'],
       [1, 0, 'conference'],

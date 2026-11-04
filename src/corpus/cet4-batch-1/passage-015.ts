@@ -28,9 +28,9 @@ export const PASSAGE_015: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'Port authorities collaborate in a joint committee to maintain orderly operations, relying on a digital code of conduct to manage continuous freight flows and prevent sudden warehouse collapse.',
+            'Port authorities collaborate in a joint committee to maintain orderly operations, relying on digital management systems to track continuous freight flows and prevent sudden warehouse breakdowns.',
           chinese:
-            '港口管理当局在联合委员会中紧密协作以维护有序运转，依托数字化行为准则管理持续的货物流动，防止突发性的仓储瘫痪。',
+            '港口管理当局在联合委员会中紧密协作以维护有序运转，依托数字化管理系统追踪持续的货物流动，防止突发性的仓库瘫痪。',
         },
       ],
     },
@@ -40,9 +40,9 @@ export const PASSAGE_015: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Inside a nearby conference hall supported by tall stone columns, a regional trade commission holds regular meetings to coordinate border customs policies.',
+            'At a nearby conference center, a regional trade commission holds regular meetings to coordinate border customs policies.',
           chinese:
-            '在由高大石柱支撑的邻近会议大厅内，一个区域贸易委员会定期举行会议以协调边境海关政策。',
+            '在邻近的会议中心，一个区域贸易委员会定期举行会议以协调边境海关政策。',
         },
         {
           sentenceNumber: 2,
@@ -73,9 +73,9 @@ export const PASSAGE_015: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'This collective cooperation strengthens regional cohesion, bringing sustained economic stability and genuine comfort to coastal communities and trade partners.',
+            'These collective efforts strengthen regional cohesion, bringing sustained economic stability and genuine security to coastal communities and trade partners.',
           chinese:
-            '这种集体合作增强了区域凝聚力，为沿海社区和贸易伙伴带来了持久的经济稳定与切实的安心。',
+            '这些共同努力增强了区域凝聚力，为沿海社区和贸易伙伴带来了持久的经济稳定与切实的保障。',
         },
         {
           sentenceNumber: 2,
@@ -138,24 +138,20 @@ export const PASSAGE_015: Passage = {
     { headwordId: 'operate', surface: 'operations', gloss: 'n.运转；操作；业务' },
     { headwordId: 'rely', surface: 'relying', gloss: 'v.依靠；依赖' },
     { headwordId: 'digit', surface: 'digital', gloss: 'a.数字的；数码的' },
-    { headwordId: 'code', surface: 'code', gloss: 'n.准则；规范；法则' },
-    { headwordId: 'conduct', surface: 'conduct', gloss: 'n.行为；举止' },
-    { headwordId: 'manage', surface: 'manage', gloss: 'v.管理；经营' },
+    { headwordId: 'manage', surface: 'management', gloss: 'a.管理的；经营的' },
+    { headwordId: 'system', surface: 'systems', gloss: 'n.系统；体制' },
+    { headwordId: 'track', surface: 'track', gloss: 'v.追踪；跟踪' },
     { headwordId: 'continue', surface: 'continuous', gloss: 'a.持续的；不间断的' },
     { headwordId: 'freight', surface: 'freight', gloss: 'a.货运的；货物的' },
     { headwordId: 'flow', surface: 'flows', gloss: 'n.流动；流量' },
     { headwordId: 'prevent', surface: 'prevent', gloss: 'v.防止；预防' },
     { headwordId: 'sudden', surface: 'sudden', gloss: 'a.突然的；意外的' },
     { headwordId: 'warehouse', surface: 'warehouse', gloss: 'a.仓储的；仓库的' },
-    { headwordId: 'collapse', surface: 'collapse', gloss: 'n.崩溃；瘫痪；倒塌' },
+    { headwordId: 'breakdown', surface: 'breakdowns', gloss: 'n.瘫痪；故障；衰竭' },
 
     // Paragraph 2, Sentence 1
     { headwordId: 'nearby', surface: 'nearby', gloss: 'a.附近的；邻近的' },
     { headwordId: 'conference', surface: 'conference', gloss: 'a.会议的；商讨的' },
-    { headwordId: 'hall', surface: 'hall', gloss: 'n.大厅；礼堂' },
-    { headwordId: 'support', surface: 'supported', gloss: 'v.支撑；支持' },
-    { headwordId: 'tall', surface: 'tall', gloss: 'a.高大的；长身的' },
-    { headwordId: 'column', surface: 'columns', gloss: 'n.支柱；圆柱' },
     { headwordId: 'region', surface: 'regional', gloss: 'a.区域的；地方的' },
     { headwordId: 'trade', surface: 'trade', gloss: 'a.贸易的；商业的' },
     { headwordId: 'commission', surface: 'commission', gloss: 'n.委员会；专门机构' },
@@ -215,14 +211,14 @@ export const PASSAGE_015: Passage = {
 
     // Paragraph 3, Sentence 1
     { headwordId: 'collective', surface: 'collective', gloss: 'a.集体的；共同的' },
-    { headwordId: 'cooperate', surface: 'cooperation', gloss: 'n.合作；协作' },
-    { headwordId: 'strong', surface: 'strengthens', gloss: 'v.加强；巩固' },
+    { headwordId: 'effort', surface: 'efforts', gloss: 'n.努力；艰难尝试' },
+    { headwordId: 'strong', surface: 'strengthen', gloss: 'v.加强；巩固' },
     { headwordId: 'cohesion', surface: 'cohesion', gloss: 'n.凝聚力；结合力' },
     { headwordId: 'bring', surface: 'bringing', gloss: 'v.带来；引起' },
     { headwordId: 'sustain', surface: 'sustained', gloss: 'a.持久的；持续的' },
     { headwordId: 'stable', surface: 'stability', gloss: 'n.稳定；稳定性' },
     { headwordId: 'genuine', surface: 'genuine', gloss: 'a.切实的；真正的' },
-    { headwordId: 'comfort', surface: 'comfort', gloss: 'n.安心；宽慰；慰藉' },
+    { headwordId: 'secure', surface: 'security', gloss: 'n.保障；安全' },
     { headwordId: 'community', surface: 'communities', gloss: 'n.社区；团体' },
     { headwordId: 'partner', surface: 'partners', gloss: 'n.伙伴；合作方' },
 
@@ -284,9 +280,9 @@ export const PASSAGE_015: Passage = {
     },
     {
       id: 'exp-06',
-      expression: 'code of conduct / administrative rule',
+      expression: 'management system / automated tracking',
       explanation:
-        '行为准则，行政规范；code 熟词僻义指官方制定的一整套成文准则、规范或操作守则，而非仅指计算机代码。',
+        '管理系统，自动追踪；system 指港口用于统筹货物调度的数字化管理体系；track 指全流程实时定位与追踪货运动态。',
     },
     {
       id: 'exp-07',
@@ -296,9 +292,9 @@ export const PASSAGE_015: Passage = {
     },
     {
       id: 'exp-08',
-      expression: 'warehouse collapse / supply chain disruption',
+      expression: 'warehouse breakdown / logistics interruption',
       explanation:
-        '仓储瘫痪，供应链中断；collapse 熟词僻义指运行机制的突然瓦解、系统崩溃或价格暴跌，而非仅指建筑物物理倒塌。',
+        '仓储瘫痪，物流中断；breakdown 熟词僻义指物流体系与仓储运转的突发失灵或全面瘫痪，而非机械毁损；interruption 指供应链链条的中断。',
     },
     {
       id: 'exp-09',
@@ -308,9 +304,9 @@ export const PASSAGE_015: Passage = {
     },
     {
       id: 'exp-10',
-      expression: 'stone column / structural pillar',
+      expression: 'pillar of growth / strategic foundation',
       explanation:
-        '石制立柱，结构支柱；column 原指支撑大厅的宏伟石柱，在经济语境中熟词僻义常比喻为支撑经济繁荣的“核心支柱”。',
+        '增长支柱，战略基石；pillar 熟词僻义在经济语境中比喻为支撑经济稳健繁荣的“核心支柱”，而非物理建筑立柱。',
     },
     {
       id: 'exp-11',
@@ -338,9 +334,9 @@ export const PASSAGE_015: Passage = {
     },
     {
       id: 'exp-15',
-      expression: 'bring comfort / economic relief',
+      expression: 'economic security / commercial stability',
       explanation:
-        '带来安心，经济宽慰；comfort 熟词僻义指在市场动荡与风险化解后带给民生与企业的安全感、安定感与切实宽慰。',
+        '经济保障，商业稳定；security 熟词僻义在宏观经贸语境中指供应链稳定带来的民生福祉与商业安全保障，而非日常安保防范。',
     },
   ],
 };

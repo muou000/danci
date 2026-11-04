@@ -27394,8 +27394,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Port authorities collaborate in a joint committee to maintain orderly operations, relying on a digital code of conduct to manage continuous freight flows and prevent sudden warehouse collapse.",
-            "chinese": "港口管理当局在联合委员会中紧密协作以维护有序运转，依托数字化行为准则管理持续的货物流动，防止突发性的仓储瘫痪。",
+            "english": "Port authorities collaborate in a joint committee to maintain orderly operations, relying on digital management systems to track continuous freight flows and prevent sudden warehouse breakdowns.",
+            "chinese": "港口管理当局在联合委员会中紧密协作以维护有序运转，依托数字化管理系统追踪持续的货物流动，防止突发性的仓库瘫痪。",
             "tokens": [
               {
                 "type": "annotation",
@@ -27507,7 +27507,7 @@
               },
               {
                 "type": "text",
-                "text": " on a "
+                "text": " on "
               },
               {
                 "type": "annotation",
@@ -27515,8 +27515,7 @@
                 "itemKey": "word:digit",
                 "surface": "digital",
                 "gloss": "a.数字的；数码的",
-                "headwordId": "digit",
-                "shiftX": -12.5
+                "headwordId": "digit"
               },
               {
                 "type": "text",
@@ -27525,23 +27524,22 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:code",
-                "surface": "code",
-                "gloss": "n.准则；规范；法则",
-                "headwordId": "code",
-                "shiftX": 12.5
+                "itemKey": "word:manage",
+                "surface": "management",
+                "gloss": "a.管理的；经营的",
+                "headwordId": "manage"
               },
               {
                 "type": "text",
-                "text": " of "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:conduct",
-                "surface": "conduct",
-                "gloss": "n.行为；举止",
-                "headwordId": "conduct"
+                "itemKey": "word:system",
+                "surface": "systems",
+                "gloss": "n.系统；体制",
+                "headwordId": "system"
               },
               {
                 "type": "text",
@@ -27550,10 +27548,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:manage",
-                "surface": "manage",
-                "gloss": "v.管理；经营",
-                "headwordId": "manage"
+                "itemKey": "word:track",
+                "surface": "track",
+                "gloss": "v.追踪；跟踪",
+                "headwordId": "track"
               },
               {
                 "type": "text",
@@ -27635,11 +27633,11 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:collapse",
-                "surface": "collapse",
-                "gloss": "n.崩溃；瘫痪；倒塌",
-                "headwordId": "collapse"
+                "category": "regular",
+                "itemKey": "word:breakdown",
+                "surface": "breakdowns",
+                "gloss": "n.瘫痪；故障；衰竭",
+                "headwordId": "breakdown"
               },
               {
                 "type": "text",
@@ -27655,12 +27653,12 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Inside a nearby conference hall supported by tall stone columns, a regional trade commission holds regular meetings to coordinate border customs policies.",
-            "chinese": "在由高大石柱支撑的邻近会议大厅内，一个区域贸易委员会定期举行会议以协调边境海关政策。",
+            "english": "At a nearby conference center, a regional trade commission holds regular meetings to coordinate border customs policies.",
+            "chinese": "在邻近的会议中心，一个区域贸易委员会定期举行会议以协调边境海关政策。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Inside a "
+                "text": "At a "
               },
               {
                 "type": "annotation",
@@ -27684,55 +27682,7 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:hall",
-                "surface": "hall",
-                "gloss": "n.大厅；礼堂",
-                "headwordId": "hall"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:support",
-                "surface": "supported",
-                "gloss": "v.支撑；支持",
-                "headwordId": "support"
-              },
-              {
-                "type": "text",
-                "text": " by "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:tall",
-                "surface": "tall",
-                "gloss": "a.高大的；长身的",
-                "headwordId": "tall"
-              },
-              {
-                "type": "text",
-                "text": " stone "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:column",
-                "surface": "columns",
-                "gloss": "n.支柱；圆柱",
-                "headwordId": "column"
-              },
-              {
-                "type": "text",
-                "text": ", a "
+                "text": " center, a "
               },
               {
                 "type": "annotation",
@@ -28395,12 +28345,12 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "This collective cooperation strengthens regional cohesion, bringing sustained economic stability and genuine comfort to coastal communities and trade partners.",
-            "chinese": "这种集体合作增强了区域凝聚力，为沿海社区和贸易伙伴带来了持久的经济稳定与切实的安心。",
+            "english": "These collective efforts strengthen regional cohesion, bringing sustained economic stability and genuine security to coastal communities and trade partners.",
+            "chinese": "这些共同努力增强了区域凝聚力，为沿海社区和贸易伙伴带来了持久的经济稳定与切实的保障。",
             "tokens": [
               {
                 "type": "text",
-                "text": "This "
+                "text": "These "
               },
               {
                 "type": "annotation",
@@ -28416,11 +28366,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cooperate",
-                "surface": "cooperation",
-                "gloss": "n.合作；协作",
-                "headwordId": "cooperate"
+                "category": "high-frequency",
+                "itemKey": "word:effort",
+                "surface": "efforts",
+                "gloss": "n.努力；艰难尝试",
+                "headwordId": "effort"
               },
               {
                 "type": "text",
@@ -28430,7 +28380,7 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:strong",
-                "surface": "strengthens",
+                "surface": "strengthen",
                 "gloss": "v.加强；巩固",
                 "headwordId": "strong"
               },
@@ -28492,8 +28442,7 @@
                 "itemKey": "word:genuine",
                 "surface": "genuine",
                 "gloss": "a.切实的；真正的",
-                "headwordId": "genuine",
-                "shiftX": -2
+                "headwordId": "genuine"
               },
               {
                 "type": "text",
@@ -28501,12 +28450,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:comfort",
-                "surface": "comfort",
-                "gloss": "n.安心；宽慰；慰藉",
-                "headwordId": "comfort",
-                "shiftX": 2
+                "category": "high-frequency",
+                "itemKey": "word:secure",
+                "surface": "security",
+                "gloss": "n.保障；安全",
+                "headwordId": "secure"
               },
               {
                 "type": "text",
@@ -28833,8 +28781,8 @@
       },
       {
         "id": "exp-06",
-        "expression": "code of conduct / administrative rule",
-        "explanation": "行为准则，行政规范；code 熟词僻义指官方制定的一整套成文准则、规范或操作守则，而非仅指计算机代码。"
+        "expression": "management system / automated tracking",
+        "explanation": "管理系统，自动追踪；system 指港口用于统筹货物调度的数字化管理体系；track 指全流程实时定位与追踪货运动态。"
       },
       {
         "id": "exp-07",
@@ -28843,8 +28791,8 @@
       },
       {
         "id": "exp-08",
-        "expression": "warehouse collapse / supply chain disruption",
-        "explanation": "仓储瘫痪，供应链中断；collapse 熟词僻义指运行机制的突然瓦解、系统崩溃或价格暴跌，而非仅指建筑物物理倒塌。"
+        "expression": "warehouse breakdown / logistics interruption",
+        "explanation": "仓储瘫痪，物流中断；breakdown 熟词僻义指物流体系与仓储运转的突发失灵或全面瘫痪，而非机械毁损；interruption 指供应链链条的中断。"
       },
       {
         "id": "exp-09",
@@ -28853,8 +28801,8 @@
       },
       {
         "id": "exp-10",
-        "expression": "stone column / structural pillar",
-        "explanation": "石制立柱，结构支柱；column 原指支撑大厅的宏伟石柱，在经济语境中熟词僻义常比喻为支撑经济繁荣的“核心支柱”。"
+        "expression": "pillar of growth / strategic foundation",
+        "explanation": "增长支柱，战略基石；pillar 熟词僻义在经济语境中比喻为支撑经济稳健繁荣的“核心支柱”，而非物理建筑立柱。"
       },
       {
         "id": "exp-11",
@@ -28878,8 +28826,8 @@
       },
       {
         "id": "exp-15",
-        "expression": "bring comfort / economic relief",
-        "explanation": "带来安心，经济宽慰；comfort 熟词僻义指在市场动荡与风险化解后带给民生与企业的安全感、安定感与切实宽慰。"
+        "expression": "economic security / commercial stability",
+        "explanation": "经济保障，商业稳定；security 熟词僻义在宏观经贸语境中指供应链稳定带来的民生福祉与商业安全保障，而非日常安保防范。"
       }
     ],
     "coveredHeadwordIds": [
@@ -28921,22 +28869,18 @@
       "operate",
       "rely",
       "digit",
-      "code",
-      "conduct",
       "manage",
+      "system",
+      "track",
       "continue",
       "freight",
       "flow",
       "prevent",
       "sudden",
       "warehouse",
-      "collapse",
+      "breakdown",
       "nearby",
       "conference",
-      "hall",
-      "support",
-      "tall",
-      "column",
       "region",
       "trade",
       "commission",
@@ -28988,14 +28932,14 @@
       "chain",
       "disrupt",
       "collective",
-      "cooperate",
+      "effort",
       "strong",
       "cohesion",
       "bring",
       "sustain",
       "stable",
       "genuine",
-      "comfort",
+      "secure",
       "community",
       "partner",
       "common",
