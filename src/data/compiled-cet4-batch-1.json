@@ -25200,8 +25200,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In modern digital commerce, ordinary citizens and civilian consumers frequently click electronic contract terms without examining every complex clause.",
-            "chinese": "在现代数字商业中，普通市民和平民消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。",
+            "english": "In modern digital commerce, ordinary consumers frequently click electronic contract terms without examining every complex clause.",
+            "chinese": "在现代数字商业中，普通消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。",
             "tokens": [
               {
                 "type": "text",
@@ -25252,30 +25252,6 @@
                 "surface": "ordinary",
                 "gloss": "a.普通的；平常的",
                 "headwordId": "ordinary"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:citizen",
-                "surface": "citizens",
-                "gloss": "n.公民；市民",
-                "headwordId": "citizen"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:civilian",
-                "surface": "civilian",
-                "gloss": "a.平民的；民用的",
-                "headwordId": "civilian"
               },
               {
                 "type": "text",
@@ -26130,8 +26106,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with absolute clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.",
-            "chinese": "通过引用经典的法律规则和界限分明的行政标准，这些顾问以绝对的清晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。",
+            "english": "By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with greater clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.",
+            "chinese": "通过引用经典的法律规则和界限分明的行政标准，这些顾问以更高的明晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。",
             "tokens": [
               {
                 "type": "text",
@@ -26237,11 +26213,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:absolute",
-                "surface": "absolute",
-                "gloss": "a.绝对的；完全的",
-                "headwordId": "absolute"
+                "category": "high-frequency",
+                "itemKey": "word:great",
+                "surface": "greater",
+                "gloss": "a.更大的；更高的；更重大的",
+                "headwordId": "great"
               },
               {
                 "type": "text",
@@ -26512,8 +26488,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "A clever advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides complete certainty for future dealings.",
-            "chinese": "聪明的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了完全的确定性。",
+            "english": "A competent advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides legal certainty for future dealings.",
+            "chinese": "称职的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了法律确定性。",
             "tokens": [
               {
                 "type": "text",
@@ -26522,10 +26498,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:clever",
-                "surface": "clever",
-                "gloss": "a.聪明的；精明的；巧妙的",
-                "headwordId": "clever"
+                "itemKey": "word:competent",
+                "surface": "competent",
+                "gloss": "a.称职的；胜任的；有能力的",
+                "headwordId": "competent"
               },
               {
                 "type": "text",
@@ -26627,19 +26603,7 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:complete",
-                "surface": "complete",
-                "gloss": "a.完全的；彻底的",
-                "headwordId": "complete"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " legal "
               },
               {
                 "type": "annotation",
@@ -26670,8 +26634,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect civilian welfare but also inspire deep trust and harmony throughout the civil community.",
-            "chinese": "通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了平民福祉，也在整个文明社区中激发了深厚的信任与和谐。",
+            "english": "By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect public welfare but also inspire deep trust and harmony throughout the local community.",
+            "chinese": "通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了公共福祉，也在整个当地社区中激发了深厚的信任与和谐。",
             "tokens": [
               {
                 "type": "text",
@@ -26731,11 +26695,24 @@
                 "itemKey": "word:protect",
                 "surface": "protect",
                 "gloss": "v.保护；维护",
-                "headwordId": "protect"
+                "headwordId": "protect",
+                "shiftX": -1.5
               },
               {
                 "type": "text",
-                "text": " civilian "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:public",
+                "surface": "public",
+                "gloss": "a.公众的；公共的",
+                "headwordId": "public"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -26743,7 +26720,8 @@
                 "itemKey": "word:welfare",
                 "surface": "welfare",
                 "gloss": "n.福利；福祉",
-                "headwordId": "welfare"
+                "headwordId": "welfare",
+                "shiftX": 1.2
               },
               {
                 "type": "text",
@@ -26810,7 +26788,19 @@
               },
               {
                 "type": "text",
-                "text": " the civil community."
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:local",
+                "surface": "local",
+                "gloss": "a.当地的；地方的",
+                "headwordId": "local"
+              },
+              {
+                "type": "text",
+                "text": " community."
               }
             ]
           }
@@ -26899,8 +26889,6 @@
       "digit",
       "commerce",
       "ordinary",
-      "citizen",
-      "civilian",
       "consume",
       "frequent",
       "click",
@@ -26973,7 +26961,7 @@
       "advise",
       "interpret",
       "complicate",
-      "absolute",
+      "great",
       "ensure",
       "buy",
       "understand",
@@ -26994,7 +26982,7 @@
       "resort¹",
       "hostile",
       "confront",
-      "clever",
+      "competent",
       "draft",
       "mutual",
       "bind",
@@ -27003,7 +26991,6 @@
       "outstanding",
       "damage",
       "provide",
-      "complete",
       "certain",
       "deal¹",
       "bitter",
@@ -27011,12 +26998,14 @@
       "access",
       "serve",
       "protect",
+      "public",
       "welfare",
       "inspire",
       "deep",
       "trust",
       "harmony",
-      "throughout"
+      "throughout",
+      "local"
     ],
     "hasOutOfSyllabusWords": false
   },

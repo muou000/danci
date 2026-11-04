@@ -1613,6 +1613,9 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).not.toContain('climate');
     expect(compiled.coveredHeadwordIds).not.toContain('climax');
     expect(compiled.coveredHeadwordIds).not.toContain('chip');
+    expect(compiled.coveredHeadwordIds).not.toContain('civilian');
+    expect(compiled.coveredHeadwordIds).not.toContain('clever');
+    expect(compiled.coveredHeadwordIds).not.toContain('absolute');
 
     // 验证民商事合同纠纷调解与社区法律诊所便民服务主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1640,11 +1643,9 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'mutually binding agreement that settles outstanding damages'
     );
     expect(passage!.paragraphs[2].sentences[2].english).toContain(
-      'throughout the civil community'
+      'throughout the local community'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('citizen');
-    expect(compiled.coveredHeadwordIds).toContain('civilian');
     expect(compiled.coveredHeadwordIds).toContain('clause');
     expect(compiled.coveredHeadwordIds).toContain('clarity');
     expect(compiled.coveredHeadwordIds).toContain('clash');
@@ -1661,7 +1662,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('clinic');
     expect(compiled.coveredHeadwordIds).toContain('clue');
     expect(compiled.coveredHeadwordIds).toContain('choice');
-    expect(compiled.coveredHeadwordIds).toContain('clever');
+    expect(compiled.coveredHeadwordIds).toContain('competent');
     expect(compiled.coveredHeadwordIds).toContain('dispute');
     expect(compiled.coveredHeadwordIds).toContain('arise');
     expect(compiled.coveredHeadwordIds).toContain('party');
@@ -1673,16 +1674,26 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(compiled.coveredHeadwordIds).toContain('damage');
     expect(compiled.coveredHeadwordIds).toContain('certain');
     expect(compiled.coveredHeadwordIds).toContain('trial');
+    expect(compiled.coveredHeadwordIds).toContain('public');
     expect(compiled.coveredHeadwordIds).toContain('welfare');
     expect(compiled.coveredHeadwordIds).toContain('harmony');
+    expect(compiled.coveredHeadwordIds).toContain('local');
 
     // 验证修饰名词的形容词语境词性匹配
-    const p1s1Civilian = compiled.paragraphs[0].sentences[0].tokens.find(
-      (t) => t.type === 'annotation' && t.headwordId === 'civilian'
+    const p3s2Competent = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'competent'
     );
-    expect(p1s1Civilian).toBeDefined();
-    if (p1s1Civilian && p1s1Civilian.type === 'annotation') {
-      expect(p1s1Civilian.gloss.startsWith('a.')).toBe(true);
+    expect(p3s2Competent).toBeDefined();
+    if (p3s2Competent && p3s2Competent.type === 'annotation') {
+      expect(p3s2Competent.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Public = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'public'
+    );
+    expect(p3s3Public).toBeDefined();
+    if (p3s3Public && p3s3Public.type === 'annotation') {
+      expect(p3s3Public.gloss.startsWith('a.')).toBe(true);
     }
 
     const p1s1Electronic = compiled.paragraphs[0].sentences[0].tokens.find(

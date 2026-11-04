@@ -14,9 +14,9 @@ export const PASSAGE_014: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'In modern digital commerce, ordinary citizens and civilian consumers frequently click electronic contract terms without examining every complex clause.',
+            'In modern digital commerce, ordinary consumers frequently click electronic contract terms without examining every complex clause.',
           chinese:
-            '在现代数字商业中，普通市民和平民消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。',
+            '在现代数字商业中，普通消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。',
         },
         {
           sentenceNumber: 2,
@@ -54,9 +54,9 @@ export const PASSAGE_014: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with absolute clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.',
+            'By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with greater clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.',
           chinese:
-            '通过引用经典的法律规则和界限分明的行政标准，这些顾问以绝对的清晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。',
+            '通过引用经典的法律规则和界限分明的行政标准，这些顾问以更高的明晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。',
         },
       ],
     },
@@ -73,16 +73,16 @@ export const PASSAGE_014: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'A clever advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides complete certainty for future dealings.',
+            'A competent advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides legal certainty for future dealings.',
           chinese:
-            '聪明的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了完全的确定性。',
+            '称职的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了法律确定性。',
         },
         {
           sentenceNumber: 3,
           english:
-            'By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect civilian welfare but also inspire deep trust and harmony throughout the civil community.',
+            'By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect public welfare but also inspire deep trust and harmony throughout the local community.',
           chinese:
-            '通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了平民福祉，也在整个文明社区中激发了深厚的信任与和谐。',
+            '通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了公共福祉，也在整个当地社区中激发了深厚的信任与和谐。',
         },
       ],
     },
@@ -93,8 +93,6 @@ export const PASSAGE_014: Passage = {
     { headwordId: 'digit', surface: 'digital', gloss: 'a.数字的；数码的' },
     { headwordId: 'commerce', surface: 'commerce', gloss: 'n.商业；贸易' },
     { headwordId: 'ordinary', surface: 'ordinary', gloss: 'a.普通的；平常的' },
-    { headwordId: 'citizen', surface: 'citizens', gloss: 'n.公民；市民' },
-    { headwordId: 'civilian', surface: 'civilian', gloss: 'a.平民的；民用的' },
     { headwordId: 'consume', surface: 'consumers', gloss: 'n.消费者；用户' },
     { headwordId: 'frequent', surface: 'frequently', gloss: 'ad.频繁地；屡次地' },
     { headwordId: 'click', surface: 'click', gloss: 'v.点击；轻击' },
@@ -177,7 +175,7 @@ export const PASSAGE_014: Passage = {
     { headwordId: 'advise', surface: 'advisors', gloss: 'n.顾问；劝告者' },
     { headwordId: 'interpret', surface: 'interpret', gloss: 'v.解释；阐释' },
     { headwordId: 'complicate', surface: 'complicated', gloss: 'a.复杂的；难懂的' },
-    { headwordId: 'absolute', surface: 'absolute', gloss: 'a.绝对的；完全的' },
+    { headwordId: 'great', surface: 'greater', gloss: 'a.更大的；更高的；更重大的' },
     { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证' },
     { headwordId: 'buy', surface: 'buyers', gloss: 'n.买家；买方' },
     { headwordId: 'understand', surface: 'understand', gloss: 'v.理解；领会' },
@@ -202,7 +200,7 @@ export const PASSAGE_014: Passage = {
     { headwordId: 'confront', surface: 'confrontation', gloss: 'n.对抗；冲突' },
 
     // Paragraph 3, Sentence 2
-    { headwordId: 'clever', surface: 'clever', gloss: 'a.聪明的；精明的；巧妙的' },
+    { headwordId: 'competent', surface: 'competent', gloss: 'a.称职的；胜任的；有能力的' },
     { headwordId: 'draft', surface: 'drafts', gloss: 'v.起草；拟定' },
     { headwordId: 'mutual', surface: 'mutually', gloss: 'ad.相互地；共同地' },
     { headwordId: 'bind', surface: 'binding', gloss: 'a.有约束力的；捆绑的' },
@@ -211,7 +209,6 @@ export const PASSAGE_014: Passage = {
     { headwordId: 'outstanding', surface: 'outstanding', gloss: 'a.未解决的；未支付的' },
     { headwordId: 'damage', surface: 'damages', gloss: 'n.损害赔偿金；损失' },
     { headwordId: 'provide', surface: 'provides', gloss: 'v.提供；给予' },
-    { headwordId: 'complete', surface: 'complete', gloss: 'a.完全的；彻底的' },
     { headwordId: 'certain', surface: 'certainty', gloss: 'n.确定性；必然性' },
     { headwordId: 'deal¹', surface: 'dealings', gloss: 'n.交易；交往' },
 
@@ -221,12 +218,14 @@ export const PASSAGE_014: Passage = {
     { headwordId: 'access', surface: 'accessible', gloss: 'a.易接近的；方便获得的' },
     { headwordId: 'serve', surface: 'services', gloss: 'n.服务；帮助' },
     { headwordId: 'protect', surface: 'protect', gloss: 'v.保护；维护' },
+    { headwordId: 'public', surface: 'public', gloss: 'a.公众的；公共的' },
     { headwordId: 'welfare', surface: 'welfare', gloss: 'n.福利；福祉' },
     { headwordId: 'inspire', surface: 'inspire', gloss: 'v.激发；鼓舞' },
     { headwordId: 'deep', surface: 'deep', gloss: 'a.深厚的；深刻的' },
     { headwordId: 'trust', surface: 'trust', gloss: 'n.信任；信赖' },
     { headwordId: 'harmony', surface: 'harmony', gloss: 'n.和谐；融洽' },
     { headwordId: 'throughout', surface: 'throughout', gloss: 'prep.在各处；自始至终' },
+    { headwordId: 'local', surface: 'local', gloss: 'a.当地的；地方的' },
   ],
   phraseAnnotations: [],
   expansionEntries: [
