@@ -1555,6 +1555,177 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 14 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 14');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('民商事合同纠纷调解与社区法律诊所便民服务');
+    expect(passage!.titleEn).toBe(
+      'Civil Contract Dispute Mediation and Community Legal Clinic Services'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('cholesterol');
+    expect(compiled.coveredHeadwordIds).not.toContain('chopstick');
+    expect(compiled.coveredHeadwordIds).not.toContain('cigar');
+    expect(compiled.coveredHeadwordIds).not.toContain('cigarette');
+    expect(compiled.coveredHeadwordIds).not.toContain('choke');
+    expect(compiled.coveredHeadwordIds).not.toContain('circuit');
+    expect(compiled.coveredHeadwordIds).not.toContain('chore');
+    expect(compiled.coveredHeadwordIds).not.toContain('chin');
+    expect(compiled.coveredHeadwordIds).not.toContain('china');
+    expect(compiled.coveredHeadwordIds).not.toContain('clay');
+    expect(compiled.coveredHeadwordIds).not.toContain('circus');
+    expect(compiled.coveredHeadwordIds).not.toContain('clap');
+    expect(compiled.coveredHeadwordIds).not.toContain('claw');
+    expect(compiled.coveredHeadwordIds).not.toContain('chorus');
+    expect(compiled.coveredHeadwordIds).not.toContain('Christ');
+    expect(compiled.coveredHeadwordIds).not.toContain('climb');
+    expect(compiled.coveredHeadwordIds).not.toContain('cliff');
+    expect(compiled.coveredHeadwordIds).not.toContain('climate');
+    expect(compiled.coveredHeadwordIds).not.toContain('climax');
+    expect(compiled.coveredHeadwordIds).not.toContain('chip');
+
+    // 验证民商事合同纠纷调解与社区法律诊所便民服务主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'frequently click electronic contract terms'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'merchant cancellation policies clash with consumer expectations'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'community legal clinic'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'classifying disputed claims according to established civil laws'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'examine transaction records and message histories for factual clues'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'clear-cut administrative standards'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'balanced compromise'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'mutually binding agreement that settles outstanding damages'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'throughout the civil community'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('citizen');
+    expect(compiled.coveredHeadwordIds).toContain('civilian');
+    expect(compiled.coveredHeadwordIds).toContain('clause');
+    expect(compiled.coveredHeadwordIds).toContain('clarity');
+    expect(compiled.coveredHeadwordIds).toContain('clash');
+    expect(compiled.coveredHeadwordIds).toContain('claim');
+    expect(compiled.coveredHeadwordIds).toContain('client');
+    expect(compiled.coveredHeadwordIds).toContain('clerk');
+    expect(compiled.coveredHeadwordIds).toContain('classify');
+    expect(compiled.coveredHeadwordIds).toContain('classic');
+    expect(compiled.coveredHeadwordIds).toContain('clear-cut');
+    expect(compiled.coveredHeadwordIds).toContain('circumstance');
+    expect(compiled.coveredHeadwordIds).toContain('court¹');
+    expect(compiled.coveredHeadwordIds).toContain('contract¹');
+    expect(compiled.coveredHeadwordIds).toContain('civil');
+    expect(compiled.coveredHeadwordIds).toContain('clinic');
+    expect(compiled.coveredHeadwordIds).toContain('clue');
+    expect(compiled.coveredHeadwordIds).toContain('choice');
+    expect(compiled.coveredHeadwordIds).toContain('clever');
+    expect(compiled.coveredHeadwordIds).toContain('dispute');
+    expect(compiled.coveredHeadwordIds).toContain('arise');
+    expect(compiled.coveredHeadwordIds).toContain('party');
+    expect(compiled.coveredHeadwordIds).toContain('arbitrary');
+    expect(compiled.coveredHeadwordIds).toContain('resort¹');
+    expect(compiled.coveredHeadwordIds).toContain('compromise');
+    expect(compiled.coveredHeadwordIds).toContain('bind');
+    expect(compiled.coveredHeadwordIds).toContain('settle');
+    expect(compiled.coveredHeadwordIds).toContain('damage');
+    expect(compiled.coveredHeadwordIds).toContain('certain');
+    expect(compiled.coveredHeadwordIds).toContain('trial');
+    expect(compiled.coveredHeadwordIds).toContain('welfare');
+    expect(compiled.coveredHeadwordIds).toContain('harmony');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Civilian = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'civilian'
+    );
+    expect(p1s1Civilian).toBeDefined();
+    if (p1s1Civilian && p1s1Civilian.type === 'annotation') {
+      expect(p1s1Civilian.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s1Electronic = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'electron'
+    );
+    expect(p1s1Electronic).toBeDefined();
+    if (p1s1Electronic && p1s1Electronic.type === 'annotation') {
+      expect(p1s1Electronic.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Corporate = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'corporation'
+    );
+    expect(p2s2Corporate).toBeDefined();
+    if (p2s2Corporate && p2s2Corporate.type === 'annotation') {
+      expect(p2s2Corporate.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Admin = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'administer'
+    );
+    expect(p2s3Admin).toBeDefined();
+    if (p2s3Admin && p2s3Admin.type === 'annotation') {
+      expect(p2s3Admin.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Economic = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'economy'
+    );
+    expect(p2s3Economic).toBeDefined();
+    if (p2s3Economic && p2s3Economic.type === 'annotation') {
+      expect(p2s3Economic.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Binding = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'bind'
+    );
+    expect(p3s2Binding).toBeDefined();
+    if (p3s2Binding && p3s2Binding.type === 'annotation') {
+      expect(p3s2Binding.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 

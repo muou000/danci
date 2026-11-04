@@ -23532,9 +23532,9 @@
     "id": "cet4-b1-014",
     "indexLabel": "NO. 14",
     "tier": "cet4-core",
-    "topic": "公民健康素养、法律法治与社会治理",
-    "titleZh": "公民健康素养、法律法治与社会治理",
-    "titleEn": "Civic Health Literacy, Rule of Law, and Social Governance",
+    "topic": "民商事合同纠纷调解与社区法律诊所便民服务",
+    "titleZh": "民商事合同纠纷调解与社区法律诊所便民服务",
+    "titleEn": "Civil Contract Dispute Mediation and Community Legal Clinic Services",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -23542,12 +23542,12 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "In a modern civil community, responsible citizens know that maintaining low blood cholesterol and clean living habits are an essential personal choice.",
-            "chinese": "在现代文明社区中，负责任的公民深知保持较低的血液胆固醇和清洁的生活习惯是一项必不可少的个人选择。",
+            "english": "In modern digital commerce, ordinary citizens and civilian consumers frequently click electronic contract terms without examining every complex clause.",
+            "chinese": "在现代数字商业中，普通市民和平民消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。",
             "tokens": [
               {
                 "type": "text",
-                "text": "In a "
+                "text": "In "
               },
               {
                 "type": "annotation",
@@ -23556,20 +23556,7 @@
                 "surface": "modern",
                 "gloss": "a.现代的；新式的",
                 "headwordId": "modern",
-                "shiftX": -11.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:civil",
-                "surface": "civil",
-                "gloss": "a.公民的；民事的",
-                "headwordId": "civil",
-                "shiftX": 7.9
+                "shiftX": -4.9
               },
               {
                 "type": "text",
@@ -23578,11 +23565,23 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:community",
-                "surface": "community",
-                "gloss": "n.社区；社会",
-                "headwordId": "community",
-                "shiftX": 3.4
+                "itemKey": "word:digit",
+                "surface": "digital",
+                "gloss": "a.数字的；数码的",
+                "headwordId": "digit",
+                "shiftX": 4.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:commerce",
+                "surface": "commerce",
+                "gloss": "n.商业；贸易",
+                "headwordId": "commerce"
               },
               {
                 "type": "text",
@@ -23590,11 +23589,11 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:responsible",
-                "surface": "responsible",
-                "gloss": "a.有责任的；尽责的",
-                "headwordId": "responsible"
+                "category": "regular",
+                "itemKey": "word:ordinary",
+                "surface": "ordinary",
+                "gloss": "a.普通的；平常的",
+                "headwordId": "ordinary"
               },
               {
                 "type": "text",
@@ -23606,45 +23605,7 @@
                 "itemKey": "word:citizen",
                 "surface": "citizens",
                 "gloss": "n.公民；市民",
-                "headwordId": "citizen",
-                "shiftX": -3.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:know",
-                "surface": "know",
-                "gloss": "n.知识；学识；学问",
-                "headwordId": "know",
-                "shiftX": 3.4
-              },
-              {
-                "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:maintain",
-                "surface": "maintaining",
-                "gloss": "v.维持；赡养",
-                "headwordId": "maintain"
-              },
-              {
-                "type": "text",
-                "text": " low blood "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cholesterol",
-                "surface": "cholesterol",
-                "gloss": "n.胆固醇；固醇",
-                "headwordId": "cholesterol"
+                "headwordId": "citizen"
               },
               {
                 "type": "text",
@@ -23652,12 +23613,11 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:clean",
-                "surface": "clean",
-                "gloss": "a.洁净的；干净的",
-                "headwordId": "clean",
-                "shiftX": -15.1
+                "category": "regular",
+                "itemKey": "word:civilian",
+                "surface": "civilian",
+                "gloss": "a.平民的；民用的",
+                "headwordId": "civilian"
               },
               {
                 "type": "text",
@@ -23666,11 +23626,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:live¹",
-                "surface": "living",
-                "gloss": "a.活的；生动的",
-                "headwordId": "live¹",
-                "shiftX": 4.5
+                "itemKey": "word:consume",
+                "surface": "consumers",
+                "gloss": "n.消费者；用户",
+                "headwordId": "consume"
               },
               {
                 "type": "text",
@@ -23679,229 +23638,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:habit",
-                "surface": "habits",
-                "gloss": "n.习惯；习性",
-                "headwordId": "habit",
-                "shiftX": 10.6
-              },
-              {
-                "type": "text",
-                "text": " are an "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:essence",
-                "surface": "essential",
-                "gloss": "a.必不可少的；本质的",
-                "headwordId": "essence"
-              },
-              {
-                "type": "text",
-                "text": " personal "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:choice",
-                "surface": "choice",
-                "gloss": "n.选择；挑拣",
-                "headwordId": "choice"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Health experts urge people to choose healthy food, chop fresh vegetables with care, and hold a wooden chopstick to eat healthy rice.",
-            "chinese": "健康专家敦促人们选择健康食品，细心切碎新鲜蔬菜，并拿起木筷食用营养米饭。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Health "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:expert",
-                "surface": "experts",
-                "gloss": "n.专家；能手",
-                "headwordId": "expert"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:urge",
-                "surface": "urge",
-                "gloss": "v.敦促；催促",
-                "headwordId": "urge"
-              },
-              {
-                "type": "text",
-                "text": " people to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:choose",
-                "surface": "choose",
-                "gloss": "v.选择；挑选",
-                "headwordId": "choose"
-              },
-              {
-                "type": "text",
-                "text": " healthy food, "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chop",
-                "surface": "chop",
-                "gloss": "v.砍碎；切碎",
-                "headwordId": "chop",
-                "shiftX": -8.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:fresh",
-                "surface": "fresh",
-                "gloss": "a.新鲜的；清新的",
-                "headwordId": "fresh",
-                "shiftX": 8.4
-              },
-              {
-                "type": "text",
-                "text": " vegetables with "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:care",
-                "surface": "care",
-                "gloss": "n.小心；照料",
-                "headwordId": "care"
-              },
-              {
-                "type": "text",
-                "text": ", and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:hold",
-                "surface": "hold",
-                "gloss": "v.拿住；握住",
-                "headwordId": "hold"
-              },
-              {
-                "type": "text",
-                "text": " a wooden "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chopstick",
-                "surface": "chopstick",
-                "gloss": "n.筷子；餐箸",
-                "headwordId": "chopstick"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:eat",
-                "surface": "eat",
-                "gloss": "v.吃；消耗",
-                "headwordId": "eat"
-              },
-              {
-                "type": "text",
-                "text": " healthy rice."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "They caution that breathing dark smoke from a cigar or burning cigarette can choke sensitive lungs and damage the heart circuit.",
-            "chinese": "他们警告称，吸入雪茄或燃烧香烟的浓烟会阻塞敏感的肺部并损害心脏循环系统。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "They "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:caution",
-                "surface": "caution",
-                "gloss": "v.告诫；警告",
-                "headwordId": "caution"
-              },
-              {
-                "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:breath",
-                "surface": "breathing",
-                "gloss": "n.气息；呼吸",
-                "headwordId": "breath"
-              },
-              {
-                "type": "text",
-                "text": " dark "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:smoke",
-                "surface": "smoke",
-                "gloss": "n.烟雾；烟气",
-                "headwordId": "smoke"
-              },
-              {
-                "type": "text",
-                "text": " from a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cigar",
-                "surface": "cigar",
-                "gloss": "n.雪茄烟；雪茄",
-                "headwordId": "cigar"
-              },
-              {
-                "type": "text",
-                "text": " or "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:burn",
-                "surface": "burning",
-                "gloss": "v.燃烧；烧着",
-                "headwordId": "burn"
+                "itemKey": "word:frequent",
+                "surface": "frequently",
+                "gloss": "ad.频繁地；屡次地",
+                "headwordId": "frequent"
               },
               {
                 "type": "text",
@@ -23910,23 +23650,11 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cigarette",
-                "surface": "cigarette",
-                "gloss": "n.香烟；纸烟",
-                "headwordId": "cigarette"
-              },
-              {
-                "type": "text",
-                "text": " can "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:choke",
-                "surface": "choke",
-                "gloss": "v.使窒息；阻塞",
-                "headwordId": "choke",
-                "shiftX": -0.7
+                "itemKey": "word:click",
+                "surface": "click",
+                "gloss": "v.点击；轻击",
+                "headwordId": "click",
+                "shiftX": -2.5
               },
               {
                 "type": "text",
@@ -23935,210 +23663,15 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:sensitive",
-                "surface": "sensitive",
-                "gloss": "a.敏感的；灵敏的",
-                "headwordId": "sensitive",
-                "shiftX": 0.7
+                "itemKey": "word:electron",
+                "surface": "electronic",
+                "gloss": "a.电子的；电子设备的",
+                "headwordId": "electron",
+                "shiftX": 2.5
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:lung",
-                "surface": "lungs",
-                "gloss": "n.肺部；肺",
-                "headwordId": "lung"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:damage",
-                "surface": "damage",
-                "gloss": "n.破坏；损失",
-                "headwordId": "damage"
-              },
-              {
-                "type": "text",
-                "text": " the heart "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:circuit",
-                "surface": "circuit",
-                "gloss": "n.电路；环行道",
-                "headwordId": "circuit"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Regular daily chores keep muscles active, helping workers circulate fresh oxygen through the body from head to chin.",
-            "chinese": "规律的日常家务保持肌肉活跃，帮助工人们将新鲜氧气从头部输送到下巴，循环全身。",
-            "tokens": [
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:regular",
-                "surface": "Regular",
-                "gloss": "a.规律的；定期的",
-                "headwordId": "regular"
-              },
-              {
-                "type": "text",
-                "text": " daily "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chore",
-                "surface": "chores",
-                "gloss": "n.日常杂务；琐事",
-                "headwordId": "chore"
-              },
-              {
-                "type": "text",
-                "text": " keep "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:muscle",
-                "surface": "muscles",
-                "gloss": "n.肌肉；体力",
-                "headwordId": "muscle"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:active",
-                "surface": "active",
-                "gloss": "a.活跃的；积极的",
-                "headwordId": "active"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:help",
-                "surface": "helping",
-                "gloss": "v.帮助；援助",
-                "headwordId": "help"
-              },
-              {
-                "type": "text",
-                "text": " workers "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:circulate",
-                "surface": "circulate",
-                "gloss": "v.循环；流传",
-                "headwordId": "circulate"
-              },
-              {
-                "type": "text",
-                "text": " fresh "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:oxygen",
-                "surface": "oxygen",
-                "gloss": "n.氧气；氧",
-                "headwordId": "oxygen"
-              },
-              {
-                "type": "text",
-                "text": " through the body from head to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chin",
-                "surface": "chin",
-                "gloss": "n.下巴；颏",
-                "headwordId": "chin"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "paragraphNumber": 2,
-        "sentences": [
-          {
-            "sentenceNumber": 1,
-            "circledNumber": "①",
-            "english": "Under the rule of law, every legal clause in a contract must display absolute clarity so that no misunderstanding can clash with civilian rights.",
-            "chinese": "在法治之下，合同中的每个法律条款都必须展现绝对的清晰度，以使任何误解都不会与平民权利发生冲突。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Under the rule of "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:law",
-                "surface": "law",
-                "gloss": "n.法律；法规",
-                "headwordId": "law"
-              },
-              {
-                "type": "text",
-                "text": ", every "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:legal",
-                "surface": "legal",
-                "gloss": "a.法律的；合法的",
-                "headwordId": "legal",
-                "shiftX": -6.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clause",
-                "surface": "clause",
-                "gloss": "n.条款；从句",
-                "headwordId": "clause",
-                "shiftX": 6.6
-              },
-              {
-                "type": "text",
-                "text": " in a "
               },
               {
                 "type": "annotation",
@@ -24150,15 +23683,39 @@
               },
               {
                 "type": "text",
-                "text": " must "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:display",
-                "surface": "display",
-                "gloss": "v.展示；表现",
-                "headwordId": "display"
+                "itemKey": "word:term",
+                "surface": "terms",
+                "gloss": "n.条款；条件",
+                "headwordId": "term"
+              },
+              {
+                "type": "text",
+                "text": " without "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:examine",
+                "surface": "examining",
+                "gloss": "v.审查；检查；细看",
+                "headwordId": "examine"
+              },
+              {
+                "type": "text",
+                "text": " every "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "a.复杂的；错综的",
+                "headwordId": "complex"
               },
               {
                 "type": "text",
@@ -24167,10 +23724,160 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:absolute",
-                "surface": "absolute",
-                "gloss": "a.绝对的；纯粹的",
-                "headwordId": "absolute"
+                "itemKey": "word:clause",
+                "surface": "clause",
+                "gloss": "n.条款；款项",
+                "headwordId": "clause"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "When sudden extra charges arise or merchant cancellation policies clash with consumer expectations, confusing terms lacking clarity can trigger intense commercial disputes.",
+            "chinese": "当突然的额外收费产生，或商家的取消政策与消费者预期发生冲突时，缺乏清晰度的令人困惑的条款会引发激烈的商业纠纷。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "When "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:sudden",
+                "surface": "sudden",
+                "gloss": "a.突然的；意外的",
+                "headwordId": "sudden",
+                "shiftX": -14.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:extra",
+                "surface": "extra",
+                "gloss": "a.额外的；附加的",
+                "headwordId": "extra",
+                "shiftX": 0.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:charge",
+                "surface": "charges",
+                "gloss": "n.费用；收费",
+                "headwordId": "charge",
+                "shiftX": 3.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:arise",
+                "surface": "arise",
+                "gloss": "v.产生；出现；发生",
+                "headwordId": "arise",
+                "shiftX": 10.6
+              },
+              {
+                "type": "text",
+                "text": " or "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:merchant",
+                "surface": "merchant",
+                "gloss": "n.商家；商人",
+                "headwordId": "merchant"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:cancel",
+                "surface": "cancellation",
+                "gloss": "n.取消；作废",
+                "headwordId": "cancel"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:policy",
+                "surface": "policies",
+                "gloss": "n.政策；规定",
+                "headwordId": "policy",
+                "shiftX": -6.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clash",
+                "surface": "clash",
+                "gloss": "v.冲突；抵触；不一致",
+                "headwordId": "clash",
+                "shiftX": 6.6
+              },
+              {
+                "type": "text",
+                "text": " with consumer "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:expect",
+                "surface": "expectations",
+                "gloss": "n.期望；预期",
+                "headwordId": "expect"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:confuse",
+                "surface": "confusing",
+                "gloss": "a.令人困惑的；难以理解的",
+                "headwordId": "confuse"
+              },
+              {
+                "type": "text",
+                "text": " terms "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:lack",
+                "surface": "lacking",
+                "gloss": "v.缺乏；不足",
+                "headwordId": "lack"
               },
               {
                 "type": "text",
@@ -24186,243 +23893,41 @@
               },
               {
                 "type": "text",
-                "text": " so that no "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:misunderstand",
-                "surface": "misunderstanding",
-                "gloss": "n.误解；误会",
-                "headwordId": "misunderstand"
-              },
-              {
-                "type": "text",
                 "text": " can "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clash",
-                "surface": "clash",
-                "gloss": "v.冲突；抵触",
-                "headwordId": "clash"
+                "category": "high-frequency",
+                "itemKey": "word:trigger",
+                "surface": "trigger",
+                "gloss": "v.引发；触发；促成",
+                "headwordId": "trigger",
+                "shiftX": -4.4
               },
               {
                 "type": "text",
-                "text": " with "
+                "text": " "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:civilian",
-                "surface": "civilian",
-                "gloss": "n.平民；百姓",
-                "headwordId": "civilian"
+                "category": "high-frequency",
+                "itemKey": "word:intense",
+                "surface": "intense",
+                "gloss": "a.激烈的；剧烈的",
+                "headwordId": "intense",
+                "shiftX": 4.4
               },
               {
                 "type": "text",
-                "text": " rights."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "A clever clerk working for a corporate client will click digital files, check small chip circuits, cite exact rules, and reject any financial claim.",
-            "chinese": "为企业客户服务的聪明职员会点击数字文件，检查小型芯片电路，引用确切规则，并驳回任何财务索赔。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
+                "text": " commercial "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:clever",
-                "surface": "clever",
-                "gloss": "a.聪明的；机灵的",
-                "headwordId": "clever",
-                "shiftX": -7.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clerk",
-                "surface": "clerk",
-                "gloss": "n.办事员；职员",
-                "headwordId": "clerk",
-                "shiftX": 7.8
-              },
-              {
-                "type": "text",
-                "text": " working for a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:corporation",
-                "surface": "corporate",
-                "gloss": "a.企业的；公司的",
-                "headwordId": "corporation",
-                "shiftX": -1.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:client",
-                "surface": "client",
-                "gloss": "n.客户；委托人",
-                "headwordId": "client",
-                "shiftX": -7.2
-              },
-              {
-                "type": "text",
-                "text": " will "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:click",
-                "surface": "click",
-                "gloss": "v.点击；发出咔嗒声",
-                "headwordId": "click",
-                "shiftX": -24.5
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:digit",
-                "surface": "digital",
-                "gloss": "a.数字的；计数的",
-                "headwordId": "digit",
-                "shiftX": -4.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:file",
-                "surface": "files",
-                "gloss": "n.文件；档案",
-                "headwordId": "file",
-                "shiftX": 3.3
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:check¹",
-                "surface": "check",
-                "gloss": "v.检查；核实",
-                "headwordId": "check¹",
-                "shiftX": 1.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:small",
-                "surface": "small",
-                "gloss": "a.小的；微少的",
-                "headwordId": "small",
-                "shiftX": 8.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:chip",
-                "surface": "chip",
-                "gloss": "n.芯片；碎片",
-                "headwordId": "chip",
-                "shiftX": 24
-              },
-              {
-                "type": "text",
-                "text": " circuits, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:cite",
-                "surface": "cite",
-                "gloss": "v.引用；引证",
-                "headwordId": "cite",
-                "shiftX": -9.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:exact",
-                "surface": "exact",
-                "gloss": "a.确切的；精确的",
-                "headwordId": "exact",
-                "shiftX": 9.4
-              },
-              {
-                "type": "text",
-                "text": " rules, and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:reject",
-                "surface": "reject",
-                "gloss": "v.驳回；拒绝",
-                "headwordId": "reject"
-              },
-              {
-                "type": "text",
-                "text": " any "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:finance",
-                "surface": "financial",
-                "gloss": "n.财政；金融",
-                "headwordId": "finance"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:claim",
-                "surface": "claim",
-                "gloss": "n.索赔；要求",
-                "headwordId": "claim"
+                "itemKey": "word:dispute",
+                "surface": "disputes",
+                "gloss": "n.纠纷；争议",
+                "headwordId": "dispute"
               },
               {
                 "type": "text",
@@ -24433,20 +23938,57 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "When disputes arise, teams help parties classify facts according to classic legal rules and achieve a clear-cut agreement.",
-            "chinese": "当发生争端时，工作小组帮助各方根据经典法律规则对事实进行分类，并达成明确的协议。",
+            "english": "Instead of rushing to file costly claims in a formal court, parties are increasingly encouraged to seek early consultation at a community legal clinic, resolving differences with professional care.",
+            "chinese": "与其匆忙在正式法庭提起代价高昂的索赔，各方越来越受到鼓励前往社区法律诊所寻求早期咨询，以专业的审慎化解分歧。",
             "tokens": [
               {
                 "type": "text",
-                "text": "When "
+                "text": "Instead of "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:dispute",
-                "surface": "disputes",
-                "gloss": "n.争端；纠纷",
-                "headwordId": "dispute"
+                "itemKey": "word:rush",
+                "surface": "rushing",
+                "gloss": "v.匆忙；仓促",
+                "headwordId": "rush"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:file",
+                "surface": "file",
+                "gloss": "v.提出；提交；立案",
+                "headwordId": "file"
+              },
+              {
+                "type": "text",
+                "text": " costly "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:claim",
+                "surface": "claims",
+                "gloss": "n.索赔；要求",
+                "headwordId": "claim"
+              },
+              {
+                "type": "text",
+                "text": " in a "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:formal",
+                "surface": "formal",
+                "gloss": "a.正式的；正规的",
+                "headwordId": "formal",
+                "shiftX": -4
               },
               {
                 "type": "text",
@@ -24455,22 +23997,36 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:arise",
-                "surface": "arise",
-                "gloss": "v.发生；产生",
-                "headwordId": "arise"
+                "itemKey": "word:court¹",
+                "surface": "court",
+                "gloss": "n.法庭；法院",
+                "headwordId": "court¹",
+                "shiftX": 2.5
               },
               {
                 "type": "text",
-                "text": ", teams help "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:party",
                 "surface": "parties",
-                "gloss": "n.当事方；党派",
-                "headwordId": "party"
+                "gloss": "n.当事方；当事人",
+                "headwordId": "party",
+                "shiftX": 1.5
+              },
+              {
+                "type": "text",
+                "text": " are "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:increase",
+                "surface": "increasingly",
+                "gloss": "ad.日益地；越来越多地",
+                "headwordId": "increase"
               },
               {
                 "type": "text",
@@ -24479,22 +24035,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:classify",
-                "surface": "classify",
-                "gloss": "v.分类；归类",
-                "headwordId": "classify"
-              },
-              {
-                "type": "text",
-                "text": " facts "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:accord",
-                "surface": "according",
-                "gloss": "v.使一致；调解",
-                "headwordId": "accord"
+                "itemKey": "word:encourage",
+                "surface": "encouraged",
+                "gloss": "v.鼓励；支持",
+                "headwordId": "encourage"
               },
               {
                 "type": "text",
@@ -24503,34 +24047,35 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:classic",
-                "surface": "classic",
-                "gloss": "a.经典的；典范的",
-                "headwordId": "classic"
+                "itemKey": "word:seek",
+                "surface": "seek",
+                "gloss": "v.寻求；谋求",
+                "headwordId": "seek"
               },
               {
                 "type": "text",
-                "text": " legal rules and "
+                "text": " early "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:achieve",
-                "surface": "achieve",
-                "gloss": "v.达成；实现",
-                "headwordId": "achieve"
+                "itemKey": "word:consult",
+                "surface": "consultation",
+                "gloss": "n.咨询；请教",
+                "headwordId": "consult"
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " at a "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clear-cut",
-                "surface": "clear-cut",
-                "gloss": "a.明确的；轮廓分明的",
-                "headwordId": "clear-cut"
+                "category": "high-frequency",
+                "itemKey": "word:community",
+                "surface": "community",
+                "gloss": "n.社区；公众",
+                "headwordId": "community",
+                "shiftX": -3
               },
               {
                 "type": "text",
@@ -24539,34 +24084,127 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:agree",
-                "surface": "agreement",
-                "gloss": "v.同意；赞同",
-                "headwordId": "agree"
+                "itemKey": "word:legal",
+                "surface": "legal",
+                "gloss": "a.法律的；合法的",
+                "headwordId": "legal",
+                "shiftX": -9.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clinic",
+                "surface": "clinic",
+                "gloss": "n.诊所；咨询所",
+                "headwordId": "clinic",
+                "shiftX": 12.1
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:resolve",
+                "surface": "resolving",
+                "gloss": "v.解决；化解",
+                "headwordId": "resolve"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:differ",
+                "surface": "differences",
+                "gloss": "n.分歧；差异",
+                "headwordId": "differ"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:profession",
+                "surface": "professional",
+                "gloss": "a.专业的；职业的",
+                "headwordId": "profession"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:care",
+                "surface": "care",
+                "gloss": "n.谨慎；审慎；关照",
+                "headwordId": "care"
               },
               {
                 "type": "text",
                 "text": "."
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "paragraphNumber": 2,
+        "sentences": [
           {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Under any changing circumstance, citizens respect established courts rather than resorting to arbitrary force.",
-            "chinese": "在任何变化的境况下，公民都尊重既定法庭，而不是诉诸任意武力。",
+            "sentenceNumber": 1,
+            "circledNumber": "①",
+            "english": "Inside the clinic, active clerks and legal volunteers patiently assist each visiting client, classifying disputed claims according to established civil laws.",
+            "chinese": "在诊所内部，活跃的职员和法律志愿者耐心地协助每位来访的客户，根据既定的民事法律对有争议的索赔主张进行分类。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Under any "
+                "text": "Inside the clinic, "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:change",
-                "surface": "changing",
-                "gloss": "v.改变；变化",
-                "headwordId": "change"
+                "itemKey": "word:active",
+                "surface": "active",
+                "gloss": "a.积极的；活跃的",
+                "headwordId": "active",
+                "shiftX": -13.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clerk",
+                "surface": "clerks",
+                "gloss": "n.办事员；职员；书记员",
+                "headwordId": "clerk",
+                "shiftX": 13.5
+              },
+              {
+                "type": "text",
+                "text": " and legal "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:volunteer",
+                "surface": "volunteers",
+                "gloss": "n.志愿者；义工",
+                "headwordId": "volunteer"
               },
               {
                 "type": "text",
@@ -24575,22 +24213,72 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:circumstance",
-                "surface": "circumstance",
-                "gloss": "n.境况；情况",
-                "headwordId": "circumstance"
+                "itemKey": "word:patient¹",
+                "surface": "patiently",
+                "gloss": "ad.耐心地；容忍地",
+                "headwordId": "patient¹"
               },
               {
                 "type": "text",
-                "text": ", citizens "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:assist",
+                "surface": "assist",
+                "gloss": "v.协助；帮助",
+                "headwordId": "assist"
+              },
+              {
+                "type": "text",
+                "text": " each "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:respect",
-                "surface": "respect",
-                "gloss": "v.尊重；恪守",
-                "headwordId": "respect"
+                "itemKey": "word:visit",
+                "surface": "visiting",
+                "gloss": "a.来访的；访问的",
+                "headwordId": "visit",
+                "shiftX": -3.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:client",
+                "surface": "client",
+                "gloss": "n.委托人；客户",
+                "headwordId": "client",
+                "shiftX": 3.7
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:classify",
+                "surface": "classifying",
+                "gloss": "v.分类；归类",
+                "headwordId": "classify"
+              },
+              {
+                "type": "text",
+                "text": " disputed claims "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:according to",
+                "surface": "according to",
+                "gloss": "prep.按照；根据",
+                "headwordId": "according to"
               },
               {
                 "type": "text",
@@ -24601,8 +24289,22 @@
                 "category": "high-frequency",
                 "itemKey": "word:establish",
                 "surface": "established",
-                "gloss": "a.知名的；确立的",
-                "headwordId": "establish"
+                "gloss": "a.确立的；公认的",
+                "headwordId": "establish",
+                "shiftX": -8.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:civil",
+                "surface": "civil",
+                "gloss": "a.民事的；民法的",
+                "headwordId": "civil",
+                "shiftX": -6.6
               },
               {
                 "type": "text",
@@ -24611,34 +24313,180 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:court¹",
-                "surface": "courts",
-                "gloss": "n.法院；法庭",
-                "headwordId": "court¹"
+                "itemKey": "word:law",
+                "surface": "laws",
+                "gloss": "n.法律；法规",
+                "headwordId": "law",
+                "shiftX": 15.4
               },
               {
                 "type": "text",
-                "text": " rather than "
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "They carefully examine transaction records and message histories for factual clues, distinguishing genuine corporate faults from arbitrary consumer demands.",
+            "chinese": "他们仔细核查交易记录和留言记录以寻找事实线索，将真正的企业过错与任意的消费者过分要求区分开来。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "They carefully examine "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transaction",
+                "surface": "transaction",
+                "gloss": "n.交易；业务",
+                "headwordId": "transaction"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:record",
+                "surface": "records",
+                "gloss": "n.记录；记载",
+                "headwordId": "record"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:message",
+                "surface": "message",
+                "gloss": "n.留言；讯息",
+                "headwordId": "message"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:history",
+                "surface": "histories",
+                "gloss": "n.历史；记录",
+                "headwordId": "history"
+              },
+              {
+                "type": "text",
+                "text": " for factual "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:resort¹",
-                "surface": "resorting",
-                "gloss": "n.渡假；胜地",
-                "headwordId": "resort¹"
+                "itemKey": "word:clue",
+                "surface": "clues",
+                "gloss": "n.线索；根据",
+                "headwordId": "clue"
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:distinguish",
+                "surface": "distinguishing",
+                "gloss": "v.区分；辨别",
+                "headwordId": "distinguish"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:genuine",
+                "surface": "genuine",
+                "gloss": "a.真实的；真正的",
+                "headwordId": "genuine"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:corporation",
+                "surface": "corporate",
+                "gloss": "a.企业的；公司的",
+                "headwordId": "corporation"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:fault",
+                "surface": "faults",
+                "gloss": "n.过错；过失",
+                "headwordId": "fault"
+              },
+              {
+                "type": "text",
+                "text": " from "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:arbitrary",
                 "surface": "arbitrary",
-                "gloss": "a.任意的；专断的",
+                "gloss": "a.任意的；专断的；武断的",
                 "headwordId": "arbitrary"
+              },
+              {
+                "type": "text",
+                "text": " consumer "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:demand",
+                "surface": "demands",
+                "gloss": "n.要求；索求",
+                "headwordId": "demand"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with absolute clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.",
+            "chinese": "通过引用经典的法律规则和界限分明的行政标准，这些顾问以绝对的清晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "By "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:cite",
+                "surface": "citing",
+                "gloss": "v.引用；引证",
+                "headwordId": "cite",
+                "shiftX": -2.9
               },
               {
                 "type": "text",
@@ -24647,10 +24495,191 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:force",
-                "surface": "force",
-                "gloss": "v.迫使；强迫",
-                "headwordId": "force"
+                "itemKey": "word:classic",
+                "surface": "classic",
+                "gloss": "a.经典的；典范的",
+                "headwordId": "classic",
+                "shiftX": 2.9
+              },
+              {
+                "type": "text",
+                "text": " legal rules and "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clear-cut",
+                "surface": "clear-cut",
+                "gloss": "a.界限分明的；明确的",
+                "headwordId": "clear-cut"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:administer",
+                "surface": "administrative",
+                "gloss": "a.行政的；管理的",
+                "headwordId": "administer"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:standard",
+                "surface": "standards",
+                "gloss": "n.标准；规范",
+                "headwordId": "standard"
+              },
+              {
+                "type": "text",
+                "text": ", these "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:advise",
+                "surface": "advisors",
+                "gloss": "n.顾问；劝告者",
+                "headwordId": "advise"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:interpret",
+                "surface": "interpret",
+                "gloss": "v.解释；阐释",
+                "headwordId": "interpret"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:complicate",
+                "surface": "complicated",
+                "gloss": "a.复杂的；难懂的",
+                "headwordId": "complicate"
+              },
+              {
+                "type": "text",
+                "text": " terms with "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:absolute",
+                "surface": "absolute",
+                "gloss": "a.绝对的；完全的",
+                "headwordId": "absolute"
+              },
+              {
+                "type": "text",
+                "text": " clarity, "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ensure",
+                "surface": "ensuring",
+                "gloss": "v.确保；保证",
+                "headwordId": "ensure"
+              },
+              {
+                "type": "text",
+                "text": " that both "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:buy",
+                "surface": "buyers",
+                "gloss": "n.买家；买方",
+                "headwordId": "buy"
+              },
+              {
+                "type": "text",
+                "text": " and merchants "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:understand",
+                "surface": "understand",
+                "gloss": "v.理解；领会",
+                "headwordId": "understand"
+              },
+              {
+                "type": "text",
+                "text": " their "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:actual",
+                "surface": "actual",
+                "gloss": "a.实际的；真实的",
+                "headwordId": "actual"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:oblige",
+                "surface": "obligations",
+                "gloss": "n.义务；责任",
+                "headwordId": "oblige"
+              },
+              {
+                "type": "text",
+                "text": " under "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:change",
+                "surface": "changing",
+                "gloss": "a.变化的；多变的",
+                "headwordId": "change"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:economy",
+                "surface": "economic",
+                "gloss": "a.经济的；经济上的",
+                "headwordId": "economy"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:circumstance",
+                "surface": "circumstances",
+                "gloss": "n.情况；境况；条件",
+                "headwordId": "circumstance"
               },
               {
                 "type": "text",
@@ -24666,47 +24695,34 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "On sunny weekends, classmates visit a historic church to appreciate ancient fine china dishes and bowls shaped from soft clay.",
-            "chinese": "在晴朗的周末，同学们参观一座历史悠久的教堂，欣赏古老精美的瓷器花瓶和用软粘土塑造的碗盘。",
+            "english": "Through calm, neutral discussions, the legal clinic guides disputing parties toward a balanced compromise, helping consumers make an informed choice rather than resorting to hostile confrontation.",
+            "chinese": "通过心平气和、保持中立的商议，法律诊所引导争议各方达成平衡的妥协，帮助消费者做出知情的选择，而不是诉诸敌对对抗。",
             "tokens": [
               {
                 "type": "text",
-                "text": "On sunny weekends, "
+                "text": "Through "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:classmate",
-                "surface": "classmates",
-                "gloss": "n.同班同学；同学",
-                "headwordId": "classmate",
-                "shiftX": -1.1
+                "itemKey": "word:calm",
+                "surface": "calm",
+                "gloss": "a.心平气和的；冷静的",
+                "headwordId": "calm",
+                "shiftX": -15.9
               },
               {
                 "type": "text",
-                "text": " "
+                "text": ", "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:visit",
-                "surface": "visit",
-                "gloss": "v.参观；拜访",
-                "headwordId": "visit",
-                "shiftX": -10
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:history",
-                "surface": "historic",
-                "gloss": "a.历史上的；有历史意义的",
-                "headwordId": "history",
-                "shiftX": -1.8
+                "category": "regular",
+                "itemKey": "word:neutral",
+                "surface": "neutral",
+                "gloss": "a.中立的；不偏不倚的",
+                "headwordId": "neutral",
+                "shiftX": 13.5
               },
               {
                 "type": "text",
@@ -24715,11 +24731,95 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:church",
-                "surface": "church",
-                "gloss": "n.教堂；教会",
-                "headwordId": "church",
-                "shiftX": 12.8
+                "itemKey": "word:discuss",
+                "surface": "discussions",
+                "gloss": "n.讨论；商议",
+                "headwordId": "discuss",
+                "shiftX": 2.3
+              },
+              {
+                "type": "text",
+                "text": ", the legal clinic "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:guide",
+                "surface": "guides",
+                "gloss": "v.引导；指导",
+                "headwordId": "guide"
+              },
+              {
+                "type": "text",
+                "text": " disputing parties toward a "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:balance",
+                "surface": "balanced",
+                "gloss": "a.均衡的；公平的",
+                "headwordId": "balance"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:compromise",
+                "surface": "compromise",
+                "gloss": "n.妥协；和解；折中",
+                "headwordId": "compromise"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:help",
+                "surface": "helping",
+                "gloss": "v.帮助；协助",
+                "headwordId": "help"
+              },
+              {
+                "type": "text",
+                "text": " consumers make an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:inform",
+                "surface": "informed",
+                "gloss": "a.知情的；明智的",
+                "headwordId": "inform"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:choice",
+                "surface": "choice",
+                "gloss": "n.选择；权衡",
+                "headwordId": "choice"
+              },
+              {
+                "type": "text",
+                "text": " rather than "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:resort¹",
+                "surface": "resorting",
+                "gloss": "v.诉诸；求助于",
+                "headwordId": "resort¹"
               },
               {
                 "type": "text",
@@ -24728,11 +24828,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:appreciate",
-                "surface": "appreciate",
-                "gloss": "v.欣赏；鉴赏",
-                "headwordId": "appreciate",
-                "shiftX": -4
+                "itemKey": "word:hostile",
+                "surface": "hostile",
+                "gloss": "a.敌对的；不友好的",
+                "headwordId": "hostile"
               },
               {
                 "type": "text",
@@ -24741,76 +24840,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:ancient",
-                "surface": "ancient",
-                "gloss": "a.古代的；古老的",
-                "headwordId": "ancient",
-                "shiftX": -23.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:fine¹",
-                "surface": "fine",
-                "gloss": "a.精美的；纤细的",
-                "headwordId": "fine¹",
-                "shiftX": -5
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:china",
-                "surface": "china",
-                "gloss": "n.瓷器；陶瓷",
-                "headwordId": "china",
-                "shiftX": 14.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:dish",
-                "surface": "dishes",
-                "gloss": "n.盘子；菜肴",
-                "headwordId": "dish",
-                "shiftX": 17.4
-              },
-              {
-                "type": "text",
-                "text": " and bowls shaped from "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:soft",
-                "surface": "soft",
-                "gloss": "a.柔软的；温和的",
-                "headwordId": "soft",
-                "shiftX": -11.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clay",
-                "surface": "clay",
-                "gloss": "n.粘土；陶土",
-                "headwordId": "clay",
-                "shiftX": 11.8
+                "itemKey": "word:confront",
+                "surface": "confrontation",
+                "gloss": "n.对抗；冲突",
+                "headwordId": "confront"
               },
               {
                 "type": "text",
@@ -24821,33 +24854,45 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Families enjoy a traveling circus in an open park, where people clap their hands when a trained lion shows its sharp claw.",
-            "chinese": "家庭在开阔公园里欣赏巡回马戏团演出，当受训的狮子收回锋利爪子时，人们热烈拍手。",
+            "english": "A clever advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides complete certainty for future dealings.",
+            "chinese": "聪明的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了完全的确定性。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Families "
+                "text": "A "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:enjoy",
-                "surface": "enjoy",
-                "gloss": "v.欣赏；享受",
-                "headwordId": "enjoy"
+                "category": "regular",
+                "itemKey": "word:clever",
+                "surface": "clever",
+                "gloss": "a.聪明的；精明的；巧妙的",
+                "headwordId": "clever"
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " advisor "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:draft",
+                "surface": "drafts",
+                "gloss": "v.起草；拟定",
+                "headwordId": "draft"
+              },
+              {
+                "type": "text",
+                "text": " a clear, "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:travel",
-                "surface": "traveling",
-                "gloss": "a.巡回的；旅行的",
-                "headwordId": "travel",
-                "shiftX": -3.7
+                "itemKey": "word:mutual",
+                "surface": "mutually",
+                "gloss": "ad.相互地；共同地",
+                "headwordId": "mutual",
+                "shiftX": -6.7
               },
               {
                 "type": "text",
@@ -24856,48 +24901,35 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:circus",
-                "surface": "circus",
-                "gloss": "n.马戏团；马戏表演",
-                "headwordId": "circus",
-                "shiftX": 3.7
+                "itemKey": "word:bind",
+                "surface": "binding",
+                "gloss": "a.有约束力的；捆绑的",
+                "headwordId": "bind",
+                "shiftX": 6.6
               },
               {
                 "type": "text",
-                "text": " in an open park, where people "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clap",
-                "surface": "clap",
-                "gloss": "v.拍手；鼓掌",
-                "headwordId": "clap"
-              },
-              {
-                "type": "text",
-                "text": " their hands when a trained lion "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:show",
-                "surface": "shows",
-                "gloss": "v.展示；显露",
-                "headwordId": "show"
+                "itemKey": "word:agree",
+                "surface": "agreement",
+                "gloss": "n.协议；协定",
+                "headwordId": "agree"
               },
               {
                 "type": "text",
-                "text": " its "
+                "text": " that "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sharp",
-                "surface": "sharp",
-                "gloss": "a.锋利的；敏锐的",
-                "headwordId": "sharp",
-                "shiftX": -8
+                "category": "high-frequency",
+                "itemKey": "word:settle",
+                "surface": "settles",
+                "gloss": "v.解决；结算；了结",
+                "headwordId": "settle"
               },
               {
                 "type": "text",
@@ -24906,11 +24938,70 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:claw",
-                "surface": "claw",
-                "gloss": "n.爪；爪状物",
-                "headwordId": "claw",
-                "shiftX": 8
+                "itemKey": "word:outstanding",
+                "surface": "outstanding",
+                "gloss": "a.未解决的；未支付的",
+                "headwordId": "outstanding"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:damage",
+                "surface": "damages",
+                "gloss": "n.损害赔偿金；损失",
+                "headwordId": "damage"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:provide",
+                "surface": "provides",
+                "gloss": "v.提供；给予",
+                "headwordId": "provide"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:complete",
+                "surface": "complete",
+                "gloss": "a.完全的；彻底的",
+                "headwordId": "complete"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:certain",
+                "surface": "certainty",
+                "gloss": "n.确定性；必然性",
+                "headwordId": "certain"
+              },
+              {
+                "type": "text",
+                "text": " for future "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:deal¹",
+                "surface": "dealings",
+                "gloss": "n.交易；交往",
+                "headwordId": "deal¹"
               },
               {
                 "type": "text",
@@ -24921,169 +25012,93 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "A local church chorus sings songs in praise of Christ, bringing spiritual warmth to every visitor.",
-            "chinese": "当地教堂唱诗班演唱赞美诗以颂扬基督，为每位访客带来心灵的温暖。",
+            "english": "By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect civilian welfare but also inspire deep trust and harmony throughout the civil community.",
+            "chinese": "通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了平民福祉，也在整个文明社区中激发了深厚的信任与和谐。",
             "tokens": [
               {
                 "type": "text",
-                "text": "A "
+                "text": "By resolving civil disputes before they turn into a "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bitter",
+                "surface": "bitter",
+                "gloss": "a.激烈的；痛苦的",
+                "headwordId": "bitter"
+              },
+              {
+                "type": "text",
+                "text": " court "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:local",
-                "surface": "local",
-                "gloss": "a.当地的；地方的",
-                "headwordId": "local"
+                "itemKey": "word:trial",
+                "surface": "trial",
+                "gloss": "n.审判；审理",
+                "headwordId": "trial"
               },
               {
                 "type": "text",
-                "text": " church "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chorus",
-                "surface": "chorus",
-                "gloss": "n.合唱队；副歌",
-                "headwordId": "chorus",
-                "shiftX": -2.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sing",
-                "surface": "sings",
-                "gloss": "v.演唱；吟诵",
-                "headwordId": "sing",
-                "shiftX": 2.4
-              },
-              {
-                "type": "text",
-                "text": " songs in "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:praise",
-                "surface": "praise",
-                "gloss": "n.赞美；颂扬",
-                "headwordId": "praise"
-              },
-              {
-                "type": "text",
-                "text": " of "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:Christ",
-                "surface": "Christ",
-                "gloss": "n.基督；救世主",
-                "headwordId": "Christ"
-              },
-              {
-                "type": "text",
-                "text": ", "
+                "text": ", such "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:bring",
-                "surface": "bringing",
-                "gloss": "v.带来；促使",
-                "headwordId": "bring"
+                "itemKey": "word:access",
+                "surface": "accessible",
+                "gloss": "a.易接近的；方便获得的",
+                "headwordId": "access"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:spirit",
-                "surface": "spiritual",
-                "gloss": "n.精神；斗志",
-                "headwordId": "spirit"
-              },
-              {
-                "type": "text",
-                "text": " warmth to every visitor."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Young athletes climb a steep stone cliff, embracing challenging mountain climate and celebrating the climax of outdoor adventure.",
-            "chinese": "年轻运动员攀登陡峭的花岗岩悬崖，拥抱具有挑战性的山地气候，庆祝户外探险的顶点。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Young "
+                "text": " neighborhood "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:athlete",
-                "surface": "athletes",
-                "gloss": "n.运动员；田径选手",
-                "headwordId": "athlete",
-                "shiftX": -3
+                "itemKey": "word:serve",
+                "surface": "services",
+                "gloss": "n.服务；帮助",
+                "headwordId": "serve"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:climb",
-                "surface": "climb",
-                "gloss": "v.攀登；爬升",
-                "headwordId": "climb",
-                "shiftX": 2.4
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:steep",
-                "surface": "steep",
-                "gloss": "a.陡峭的；险峻的",
-                "headwordId": "steep",
-                "shiftX": 0.6
-              },
-              {
-                "type": "text",
-                "text": " stone "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cliff",
-                "surface": "cliff",
-                "gloss": "n.悬崖；绝壁",
-                "headwordId": "cliff"
-              },
-              {
-                "type": "text",
-                "text": ", "
+                "text": " not only "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:embrace",
-                "surface": "embracing",
-                "gloss": "v.拥抱；欣然接受",
-                "headwordId": "embrace"
+                "itemKey": "word:protect",
+                "surface": "protect",
+                "gloss": "v.保护；维护",
+                "headwordId": "protect"
+              },
+              {
+                "type": "text",
+                "text": " civilian "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:welfare",
+                "surface": "welfare",
+                "gloss": "n.福利；福祉",
+                "headwordId": "welfare"
+              },
+              {
+                "type": "text",
+                "text": " but also "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:inspire",
+                "surface": "inspire",
+                "gloss": "v.激发；鼓舞",
+                "headwordId": "inspire",
+                "shiftX": -13.1
               },
               {
                 "type": "text",
@@ -25092,22 +25107,24 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:challenge",
-                "surface": "challenging",
-                "gloss": "n.挑战；要求",
-                "headwordId": "challenge"
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深厚的；深刻的",
+                "headwordId": "deep",
+                "shiftX": -1.8
               },
               {
                 "type": "text",
-                "text": " mountain "
+                "text": " "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:climate",
-                "surface": "climate",
-                "gloss": "n.气候；风气",
-                "headwordId": "climate"
+                "category": "regular",
+                "itemKey": "word:trust",
+                "surface": "trust",
+                "gloss": "n.信任；信赖",
+                "headwordId": "trust",
+                "shiftX": 14.9
               },
               {
                 "type": "text",
@@ -25116,34 +25133,10 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:celebrate",
-                "surface": "celebrating",
-                "gloss": "v.庆祝；歌颂",
-                "headwordId": "celebrate"
-              },
-              {
-                "type": "text",
-                "text": " the "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:climax",
-                "surface": "climax",
-                "gloss": "n.高潮；顶点",
-                "headwordId": "climax"
-              },
-              {
-                "type": "text",
-                "text": " of "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:outdoor",
-                "surface": "outdoor",
-                "gloss": "a.户外的；野外的",
-                "headwordId": "outdoor"
+                "itemKey": "word:harmony",
+                "surface": "harmony",
+                "gloss": "n.和谐；融洽",
+                "headwordId": "harmony"
               },
               {
                 "type": "text",
@@ -25151,15 +25144,15 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:adventure",
-                "surface": "adventure",
-                "gloss": "n.探险；冒险经历",
-                "headwordId": "adventure"
+                "category": "high-frequency",
+                "itemKey": "word:throughout",
+                "surface": "throughout",
+                "gloss": "prep.在各处；自始至终",
+                "headwordId": "throughout"
               },
               {
                 "type": "text",
-                "text": "."
+                "text": " the civil community."
               }
             ]
           }
@@ -25168,196 +25161,204 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "blood cholesterol/lipid",
-        "explanation": "血液胆固醇；现代心血管健康体检的核心生理指标"
+        "id": "exp-01",
+        "expression": "civil law / contract dispute",
+        "explanation": "民事法律，合同纠纷；civil 指民事的、公民的，与 criminal 刑事相对；dispute 指因权利义务认知差异产生的争端或争议。"
       },
       {
-        "id": "e2",
-        "expression": "civil rights/liberties",
-        "explanation": "公民权利；civil 还常用于 civil law 民法或 civil servant 公务员"
+        "id": "exp-02",
+        "expression": "standard clause / fine print",
+        "explanation": "格式条款，附属细则；clause 指合同、法律文书中的独立条款；fine print 熟词僻义指易被忽略的小字说明或限制性免责条款。"
       },
       {
-        "id": "e3",
-        "expression": "choke up/constrict",
-        "explanation": "阻塞，哽咽；choke 可指因烟雾窒息或因情绪激动说不出话"
+        "id": "exp-03",
+        "expression": "contract clarity / unambiguous terms",
+        "explanation": "合同明晰度，确切条款；clarity 强调表意清晰、无歧义，与 ambiguous 相对，是合同起草的核心准则。"
       },
       {
-        "id": "e4",
-        "expression": "integrated circuit/microchip",
-        "explanation": "集成电路；circuit 亦常指巡回巡回赛或环行路线"
+        "id": "exp-04",
+        "expression": "clash of interests / conflicting claims",
+        "explanation": "利益冲突，索赔抵触；clash 熟词僻义指权益、主张上的尖锐抵触或不一致，而非仅指物理碰撞。"
       },
       {
-        "id": "e5",
-        "expression": "under no circumstance/never",
-        "explanation": "在任何情况下都不；常用于句首倒装句型"
+        "id": "exp-05",
+        "expression": "legal clinic / grassroots assistance",
+        "explanation": "法律诊所，基层援助；clinic 原指医疗门诊，在法学教育与社会服务中熟词僻义指为公众提供免费法律咨询与实践的“法律诊所”。"
       },
       {
-        "id": "e6",
-        "expression": "cite examples/quote authorities",
-        "explanation": "引用范例，援引；学术写作与法律辩护常用动词"
+        "id": "exp-06",
+        "expression": "legal clerk / court recorder",
+        "explanation": "法务职员，书记员；clerk 在法律行政语境中熟词僻义指协助整理卷宗、接待当事人或记录调解过程的法务秘书或书记员。"
       },
       {
-        "id": "e7",
-        "expression": "make an insurance claim/assert",
-        "explanation": "提出保险索赔；claim 亦常表示断言声称"
+        "id": "exp-07",
+        "expression": "factual clue / evidentiary trace",
+        "explanation": "事实线索，证据凭证；clue 指解开疑团或查明事实的关键线索与依据，在纠纷调查中指交易凭据或聊天记录。"
       },
       {
-        "id": "e8",
-        "expression": "clear-cut distinction/unambiguous",
-        "explanation": "明确的区分；clear-cut 强调界限分明、毫无含糊"
+        "id": "exp-08",
+        "expression": "classify claims / categorise evidence",
+        "explanation": "归类主张，梳理证据；classify 指依法律性质将诉求分门别类，理清争议焦点。"
       },
       {
-        "id": "e9",
-        "expression": "fine bone china/porcelain",
-        "explanation": "精美骨瓷；china 首字母小写时专指瓷器"
+        "id": "exp-09",
+        "expression": "classic precedent / established rule",
+        "explanation": "典型判例，既定规则；classic 熟词僻义指具有代表性、典范性的典型案例或成熟规则。"
       },
       {
-        "id": "e10",
-        "expression": "feet of clay/hidden flaw",
-        "explanation": "致命弱点，泥足；源自典故，比喻看似崇高者隐藏的缺点"
+        "id": "exp-10",
+        "expression": "clear-cut boundary / distinct demarcation",
+        "explanation": "界限分明，权责清晰；clear-cut 形容权利、责任与界限清晰明确、不容含糊。"
       },
       {
-        "id": "e11",
-        "expression": "reach a climax/peak",
-        "explanation": "达到高潮，登上巅峰；戏剧结构与人生经历高频词"
+        "id": "exp-11",
+        "expression": "circumstances beyond control / changing conditions",
+        "explanation": "情势变迁，不可抗力境况；circumstance 复数形式常用于法律条款，指履约时的外部情势、条件或境况。"
       },
       {
-        "id": "e12",
-        "expression": "clash with/conflict",
-        "explanation": "与...产生冲突；可指色彩不搭调或时间利益相撞"
+        "id": "exp-12",
+        "expression": "reach a compromise / amicable settlement",
+        "explanation": "达成和解，折中妥协；compromise 指双方互谅互让达成共识，以避免对簿公堂。"
       },
       {
-        "id": "e13",
-        "expression": "silicon chip/processor",
-        "explanation": "硅芯片；chip 熟词僻义常考炸薯片或微小碎屑"
+        "id": "exp-13",
+        "expression": "informed choice / autonomous decision",
+        "explanation": "知情选择，自主决定；informed 指在充分了解事实、权利及后果的前提下做出的理性选择。"
       },
       {
-        "id": "e14",
-        "expression": "climate of opinion/prevailing trend",
-        "explanation": "舆论风气；climate 熟词僻义常喻社会心理或时代风向"
+        "id": "exp-14",
+        "expression": "resort to litigation / alternative resolution",
+        "explanation": "诉诸诉讼，非诉解决；resort to 熟词僻义指在其他途径穷尽时“诉诸、采取”某种手段，如诉诸武力或诉讼。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "liquidated damages / compensatory remedy",
+        "explanation": "损害赔偿金，违约救济；damages 复数形式为法律专门术语，指依法或依约主张的财产损害赔偿金，而非物理毁损。"
       }
     ],
     "coveredHeadwordIds": [
       "modern",
-      "civil",
-      "community",
-      "responsible",
-      "citizen",
-      "know",
-      "maintain",
-      "cholesterol",
-      "clean",
-      "live¹",
-      "habit",
-      "essence",
-      "choice",
-      "expert",
-      "urge",
-      "choose",
-      "chop",
-      "fresh",
-      "care",
-      "hold",
-      "chopstick",
-      "eat",
-      "caution",
-      "breath",
-      "smoke",
-      "cigar",
-      "burn",
-      "cigarette",
-      "choke",
-      "sensitive",
-      "lung",
-      "damage",
-      "circuit",
-      "regular",
-      "chore",
-      "muscle",
-      "active",
-      "help",
-      "circulate",
-      "oxygen",
-      "chin",
-      "law",
-      "legal",
-      "clause",
-      "contract¹",
-      "display",
-      "absolute",
-      "clarity",
-      "misunderstand",
-      "clash",
-      "civilian",
-      "clever",
-      "clerk",
-      "corporation",
-      "client",
-      "click",
       "digit",
-      "file",
-      "check¹",
-      "small",
-      "chip",
-      "cite",
-      "exact",
-      "reject",
-      "finance",
-      "claim",
-      "dispute",
+      "commerce",
+      "ordinary",
+      "citizen",
+      "civilian",
+      "consume",
+      "frequent",
+      "click",
+      "electron",
+      "contract¹",
+      "term",
+      "examine",
+      "complex",
+      "clause",
+      "sudden",
+      "extra",
+      "charge",
       "arise",
-      "party",
-      "classify",
-      "accord",
-      "classic",
-      "achieve",
-      "clear-cut",
-      "agree",
-      "change",
-      "circumstance",
-      "respect",
-      "establish",
+      "merchant",
+      "cancel",
+      "policy",
+      "clash",
+      "expect",
+      "confuse",
+      "lack",
+      "clarity",
+      "trigger",
+      "intense",
+      "dispute",
+      "rush",
+      "file",
+      "claim",
+      "formal",
       "court¹",
-      "resort¹",
-      "arbitrary",
-      "force",
-      "classmate",
+      "party",
+      "increase",
+      "encourage",
+      "seek",
+      "consult",
+      "community",
+      "legal",
+      "clinic",
+      "resolve",
+      "differ",
+      "profession",
+      "care",
+      "active",
+      "clerk",
+      "volunteer",
+      "patient¹",
+      "assist",
       "visit",
+      "client",
+      "classify",
+      "according to",
+      "establish",
+      "civil",
+      "law",
+      "transaction",
+      "record",
+      "message",
       "history",
-      "church",
-      "appreciate",
-      "ancient",
-      "fine¹",
-      "china",
-      "dish",
-      "soft",
-      "clay",
-      "enjoy",
-      "travel",
-      "circus",
-      "clap",
-      "show",
-      "sharp",
-      "claw",
-      "local",
-      "chorus",
-      "sing",
-      "praise",
-      "Christ",
-      "bring",
-      "spirit",
-      "athlete",
-      "climb",
-      "steep",
-      "cliff",
-      "embrace",
-      "challenge",
-      "climate",
-      "celebrate",
-      "climax",
-      "outdoor",
-      "adventure"
+      "clue",
+      "distinguish",
+      "genuine",
+      "corporation",
+      "fault",
+      "arbitrary",
+      "demand",
+      "cite",
+      "classic",
+      "clear-cut",
+      "administer",
+      "standard",
+      "advise",
+      "interpret",
+      "complicate",
+      "absolute",
+      "ensure",
+      "buy",
+      "understand",
+      "actual",
+      "oblige",
+      "change",
+      "economy",
+      "circumstance",
+      "calm",
+      "neutral",
+      "discuss",
+      "guide",
+      "balance",
+      "compromise",
+      "help",
+      "inform",
+      "choice",
+      "resort¹",
+      "hostile",
+      "confront",
+      "clever",
+      "draft",
+      "mutual",
+      "bind",
+      "agree",
+      "settle",
+      "outstanding",
+      "damage",
+      "provide",
+      "complete",
+      "certain",
+      "deal¹",
+      "bitter",
+      "trial",
+      "access",
+      "serve",
+      "protect",
+      "welfare",
+      "inspire",
+      "deep",
+      "trust",
+      "harmony",
+      "throughout"
     ],
     "hasOutOfSyllabusWords": false
   },

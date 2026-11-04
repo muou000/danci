@@ -1,714 +1,324 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_014: Passage = {
-  "id": "cet4-b1-014",
-  "indexLabel": "NO. 14",
-  "tier": "cet4-core",
-  "topic": "公民健康素养、法律法治与社会治理",
-  "titleZh": "公民健康素养、法律法治与社会治理",
-  "titleEn": "Civic Health Literacy, Rule of Law, and Social Governance",
-  "paragraphs": [
+  id: 'cet4-b1-014',
+  indexLabel: 'NO. 14',
+  tier: 'cet4-core',
+  topic: '民商事合同纠纷调解与社区法律诊所便民服务',
+  titleZh: '民商事合同纠纷调解与社区法律诊所便民服务',
+  titleEn: 'Civil Contract Dispute Mediation and Community Legal Clinic Services',
+  paragraphs: [
     {
-      "paragraphNumber": 1,
-      "sentences": [
+      paragraphNumber: 1,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "In a modern civil community, responsible citizens know that maintaining low blood cholesterol and clean living habits are an essential personal choice.",
-          "chinese": "在现代文明社区中，负责任的公民深知保持较低的血液胆固醇和清洁的生活习惯是一项必不可少的个人选择。"
+          sentenceNumber: 1,
+          english:
+            'In modern digital commerce, ordinary citizens and civilian consumers frequently click electronic contract terms without examining every complex clause.',
+          chinese:
+            '在现代数字商业中，普通市民和平民消费者频繁点击电子合同条款，而未能细看每一项复杂的条款。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "Health experts urge people to choose healthy food, chop fresh vegetables with care, and hold a wooden chopstick to eat healthy rice.",
-          "chinese": "健康专家敦促人们选择健康食品，细心切碎新鲜蔬菜，并拿起木筷食用营养米饭。"
+          sentenceNumber: 2,
+          english:
+            'When sudden extra charges arise or merchant cancellation policies clash with consumer expectations, confusing terms lacking clarity can trigger intense commercial disputes.',
+          chinese:
+            '当突然的额外收费产生，或商家的取消政策与消费者预期发生冲突时，缺乏清晰度的令人困惑的条款会引发激烈的商业纠纷。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "They caution that breathing dark smoke from a cigar or burning cigarette can choke sensitive lungs and damage the heart circuit.",
-          "chinese": "他们警告称，吸入雪茄或燃烧香烟的浓烟会阻塞敏感的肺部并损害心脏循环系统。"
+          sentenceNumber: 3,
+          english:
+            'Instead of rushing to file costly claims in a formal court, parties are increasingly encouraged to seek early consultation at a community legal clinic, resolving differences with professional care.',
+          chinese:
+            '与其匆忙在正式法庭提起代价高昂的索赔，各方越来越受到鼓励前往社区法律诊所寻求早期咨询，以专业的审慎化解分歧。',
         },
-        {
-          "sentenceNumber": 4,
-          "english": "Regular daily chores keep muscles active, helping workers circulate fresh oxygen through the body from head to chin.",
-          "chinese": "规律的日常家务保持肌肉活跃，帮助工人们将新鲜氧气从头部输送到下巴，循环全身。"
-        }
-      ]
+      ],
     },
     {
-      "paragraphNumber": 2,
-      "sentences": [
+      paragraphNumber: 2,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Under the rule of law, every legal clause in a contract must display absolute clarity so that no misunderstanding can clash with civilian rights.",
-          "chinese": "在法治之下，合同中的每个法律条款都必须展现绝对的清晰度，以使任何误解都不会与平民权利发生冲突。"
+          sentenceNumber: 1,
+          english:
+            'Inside the clinic, active clerks and legal volunteers patiently assist each visiting client, classifying disputed claims according to established civil laws.',
+          chinese:
+            '在诊所内部，活跃的职员和法律志愿者耐心地协助每位来访的客户，根据既定的民事法律对有争议的索赔主张进行分类。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "A clever clerk working for a corporate client will click digital files, check small chip circuits, cite exact rules, and reject any financial claim.",
-          "chinese": "为企业客户服务的聪明职员会点击数字文件，检查小型芯片电路，引用确切规则，并驳回任何财务索赔。"
+          sentenceNumber: 2,
+          english:
+            'They carefully examine transaction records and message histories for factual clues, distinguishing genuine corporate faults from arbitrary consumer demands.',
+          chinese:
+            '他们仔细核查交易记录和留言记录以寻找事实线索，将真正的企业过错与任意的消费者过分要求区分开来。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "When disputes arise, teams help parties classify facts according to classic legal rules and achieve a clear-cut agreement.",
-          "chinese": "当发生争端时，工作小组帮助各方根据经典法律规则对事实进行分类，并达成明确的协议。"
+          sentenceNumber: 3,
+          english:
+            'By citing classic legal rules and clear-cut administrative standards, these advisors interpret complicated terms with absolute clarity, ensuring that both buyers and merchants understand their actual obligations under changing economic circumstances.',
+          chinese:
+            '通过引用经典的法律规则和界限分明的行政标准，这些顾问以绝对的清晰度解释复杂条款，确保买家与商家均理解自己在变化的经济环境下的实际义务。',
         },
-        {
-          "sentenceNumber": 4,
-          "english": "Under any changing circumstance, citizens respect established courts rather than resorting to arbitrary force.",
-          "chinese": "在任何变化的境况下，公民都尊重既定法庭，而不是诉诸任意武力。"
-        }
-      ]
+      ],
     },
     {
-      "paragraphNumber": 3,
-      "sentences": [
+      paragraphNumber: 3,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "On sunny weekends, classmates visit a historic church to appreciate ancient fine china dishes and bowls shaped from soft clay.",
-          "chinese": "在晴朗的周末，同学们参观一座历史悠久的教堂，欣赏古老精美的瓷器花瓶和用软粘土塑造的碗盘。"
+          sentenceNumber: 1,
+          english:
+            'Through calm, neutral discussions, the legal clinic guides disputing parties toward a balanced compromise, helping consumers make an informed choice rather than resorting to hostile confrontation.',
+          chinese:
+            '通过心平气和、保持中立的商议，法律诊所引导争议各方达成平衡的妥协，帮助消费者做出知情的选择，而不是诉诸敌对对抗。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "Families enjoy a traveling circus in an open park, where people clap their hands when a trained lion shows its sharp claw.",
-          "chinese": "家庭在开阔公园里欣赏巡回马戏团演出，当受训的狮子收回锋利爪子时，人们热烈拍手。"
+          sentenceNumber: 2,
+          english:
+            'A clever advisor drafts a clear, mutually binding agreement that settles outstanding damages and provides complete certainty for future dealings.',
+          chinese:
+            '聪明的顾问起草了一份明确且具有双向约束力的协议，了结了未决的损害赔偿，并为未来的交易提供了完全的确定性。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "A local church chorus sings songs in praise of Christ, bringing spiritual warmth to every visitor.",
-          "chinese": "当地教堂唱诗班演唱赞美诗以颂扬基督，为每位访客带来心灵的温暖。"
+          sentenceNumber: 3,
+          english:
+            'By resolving civil disputes before they turn into a bitter court trial, such accessible neighborhood services not only protect civilian welfare but also inspire deep trust and harmony throughout the civil community.',
+          chinese:
+            '通过在民事纠纷恶化为痛苦的法庭审理之前予以化解，此类便捷的邻里服务不仅保障了平民福祉，也在整个文明社区中激发了深厚的信任与和谐。',
         },
-        {
-          "sentenceNumber": 4,
-          "english": "Young athletes climb a steep stone cliff, embracing challenging mountain climate and celebrating the climax of outdoor adventure.",
-          "chinese": "年轻运动员攀登陡峭的花岗岩悬崖，拥抱具有挑战性的山地气候，庆祝户外探险的顶点。"
-        }
-      ]
-    }
+      ],
+    },
   ],
-  "wordAnnotations": [
-    {
-      "headwordId": "civil",
-      "gloss": "a.公民的；民事的"
-    },
-    {
-      "headwordId": "citizen",
-      "gloss": "n.公民；市民"
-    },
-    {
-      "headwordId": "cholesterol",
-      "gloss": "n.胆固醇；固醇"
-    },
-    {
-      "headwordId": "clean",
-      "gloss": "a.洁净的；干净的"
-    },
-    {
-      "headwordId": "choice",
-      "gloss": "n.选择；挑拣"
-    },
-    {
-      "headwordId": "choose",
-      "gloss": "v.选择；挑选"
-    },
-    {
-      "headwordId": "chop",
-      "gloss": "v.砍碎；切碎"
-    },
-    {
-      "headwordId": "chopstick",
-      "gloss": "n.筷子；餐箸"
-    },
-    {
-      "headwordId": "cigar",
-      "gloss": "n.雪茄烟；雪茄"
-    },
-    {
-      "headwordId": "cigarette",
-      "gloss": "n.香烟；纸烟"
-    },
-    {
-      "headwordId": "choke",
-      "gloss": "v.使窒息；阻塞"
-    },
-    {
-      "headwordId": "circuit",
-      "gloss": "n.电路；环行道"
-    },
-    {
-      "headwordId": "chore",
-      "gloss": "n.日常杂务；琐事"
-    },
-    {
-      "headwordId": "circulate",
-      "gloss": "v.循环；流传"
-    },
-    {
-      "headwordId": "chin",
-      "gloss": "n.下巴；颏"
-    },
-    {
-      "headwordId": "clause",
-      "gloss": "n.条款；从句"
-    },
-    {
-      "headwordId": "clarity",
-      "gloss": "n.清晰；明晰"
-    },
-    {
-      "headwordId": "clash",
-      "gloss": "v.冲突；抵触"
-    },
-    {
-      "headwordId": "civilian",
-      "gloss": "n.平民；百姓"
-    },
-    {
-      "headwordId": "clever",
-      "gloss": "a.聪明的；机灵的"
-    },
-    {
-      "headwordId": "clerk",
-      "gloss": "n.办事员；职员"
-    },
-    {
-      "headwordId": "client",
-      "gloss": "n.客户；委托人"
-    },
-    {
-      "headwordId": "click",
-      "gloss": "v.点击；发出咔嗒声"
-    },
-    {
-      "headwordId": "cite",
-      "gloss": "v.引用；引证"
-    },
-    {
-      "headwordId": "claim",
-      "gloss": "n.索赔；要求"
-    },
-    {
-      "headwordId": "classify",
-      "gloss": "v.分类；归类"
-    },
-    {
-      "headwordId": "classic",
-      "gloss": "a.经典的；典范的"
-    },
-    {
-      "headwordId": "clear-cut",
-      "gloss": "a.明确的；轮廓分明的"
-    },
-    {
-      "headwordId": "circumstance",
-      "gloss": "n.境况；情况"
-    },
-    {
-      "headwordId": "classmate",
-      "gloss": "n.同班同学；同学"
-    },
-    {
-      "headwordId": "church",
-      "gloss": "n.教堂；教会"
-    },
-    {
-      "headwordId": "china",
-      "gloss": "n.瓷器；陶瓷"
-    },
-    {
-      "headwordId": "clay",
-      "gloss": "n.粘土；陶土"
-    },
-    {
-      "headwordId": "circus",
-      "gloss": "n.马戏团；马戏表演"
-    },
-    {
-      "headwordId": "clap",
-      "gloss": "v.拍手；鼓掌"
-    },
-    {
-      "headwordId": "claw",
-      "gloss": "n.爪；爪状物"
-    },
-    {
-      "headwordId": "chorus",
-      "gloss": "n.合唱队；副歌"
-    },
-    {
-      "headwordId": "Christ",
-      "gloss": "n.基督；救世主"
-    },
-    {
-      "headwordId": "climb",
-      "gloss": "v.攀登；爬升"
-    },
-    {
-      "headwordId": "cliff",
-      "gloss": "n.悬崖；绝壁"
-    },
-    {
-      "headwordId": "climate",
-      "gloss": "n.气候；风气"
-    },
-    {
-      "headwordId": "climax",
-      "gloss": "n.高潮；顶点"
-    },
-    {
-      "headwordId": "chip",
-      "gloss": "n.芯片；碎片"
-    },
-    {
-      "headwordId": "modern",
-      "surface": "modern",
-      "gloss": "a.现代的；新式的"
-    },
-    {
-      "headwordId": "community",
-      "surface": "community",
-      "gloss": "n.社区；社会"
-    },
-    {
-      "headwordId": "responsible",
-      "surface": "responsible",
-      "gloss": "a.有责任的；尽责的"
-    },
-    {
-      "headwordId": "know",
-      "surface": "know",
-      "gloss": "n.知识；学识；学问"
-    },
-    {
-      "headwordId": "maintain",
-      "surface": "maintaining",
-      "gloss": "v.维持；赡养"
-    },
-    {
-      "headwordId": "live¹",
-      "surface": "living",
-      "gloss": "a.活的；生动的"
-    },
-    {
-      "headwordId": "habit",
-      "surface": "habits",
-      "gloss": "n.习惯；习性"
-    },
-    {
-      "headwordId": "essence",
-      "surface": "essential",
-      "gloss": "a.必不可少的；本质的"
-    },
-    {
-      "headwordId": "expert",
-      "surface": "experts",
-      "gloss": "n.专家；能手"
-    },
-    {
-      "headwordId": "urge",
-      "surface": "urge",
-      "gloss": "v.敦促；催促"
-    },
-    {
-      "headwordId": "fresh",
-      "surface": "fresh",
-      "gloss": "a.新鲜的；清新的"
-    },
-    {
-      "headwordId": "care",
-      "surface": "care",
-      "gloss": "n.小心；照料"
-    },
-    {
-      "headwordId": "hold",
-      "surface": "hold",
-      "gloss": "v.拿住；握住"
-    },
-    {
-      "headwordId": "eat",
-      "surface": "eat",
-      "gloss": "v.吃；消耗"
-    },
-    {
-      "headwordId": "caution",
-      "surface": "caution",
-      "gloss": "v.告诫；警告"
-    },
-    {
-      "headwordId": "breath",
-      "surface": "breathing",
-      "gloss": "n.气息；呼吸"
-    },
-    {
-      "headwordId": "smoke",
-      "surface": "smoke",
-      "gloss": "n.烟雾；烟气"
-    },
-    {
-      "headwordId": "burn",
-      "surface": "burning",
-      "gloss": "v.燃烧；烧着"
-    },
-    {
-      "headwordId": "sensitive",
-      "surface": "sensitive",
-      "gloss": "a.敏感的；灵敏的"
-    },
-    {
-      "headwordId": "lung",
-      "surface": "lungs",
-      "gloss": "n.肺部；肺"
-    },
-    {
-      "headwordId": "damage",
-      "surface": "damage",
-      "gloss": "n.破坏；损失"
-    },
-    {
-      "headwordId": "regular",
-      "surface": "Regular",
-      "gloss": "a.规律的；定期的"
-    },
-    {
-      "headwordId": "muscle",
-      "surface": "muscles",
-      "gloss": "n.肌肉；体力"
-    },
-    {
-      "headwordId": "active",
-      "surface": "active",
-      "gloss": "a.活跃的；积极的"
-    },
-    {
-      "headwordId": "help",
-      "surface": "helping",
-      "gloss": "v.帮助；援助"
-    },
-    {
-      "headwordId": "oxygen",
-      "surface": "oxygen",
-      "gloss": "n.氧气；氧"
-    },
-    {
-      "headwordId": "law",
-      "surface": "law",
-      "gloss": "n.法律；法规"
-    },
-    {
-      "headwordId": "legal",
-      "surface": "legal",
-      "gloss": "a.法律的；合法的"
-    },
-    {
-      "headwordId": "contract¹",
-      "surface": "contract",
-      "gloss": "n.合同；契约"
-    },
-    {
-      "headwordId": "display",
-      "surface": "display",
-      "gloss": "v.展示；表现"
-    },
-    {
-      "headwordId": "absolute",
-      "surface": "absolute",
-      "gloss": "a.绝对的；纯粹的"
-    },
-    {
-      "headwordId": "misunderstand",
-      "surface": "misunderstanding",
-      "gloss": "n.误解；误会"
-    },
-    {
-      "headwordId": "corporation",
-      "surface": "corporate",
-      "gloss": "a.企业的；公司的"
-    },
-    {
-      "headwordId": "digit",
-      "surface": "digital",
-      "gloss": "a.数字的；计数的"
-    },
-    {
-      "headwordId": "file",
-      "surface": "files",
-      "gloss": "n.文件；档案"
-    },
-    {
-      "headwordId": "check¹",
-      "surface": "check",
-      "gloss": "v.检查；核实"
-    },
-    {
-      "headwordId": "small",
-      "surface": "small",
-      "gloss": "a.小的；微少的"
-    },
-    {
-      "headwordId": "exact",
-      "surface": "exact",
-      "gloss": "a.确切的；精确的"
-    },
-    {
-      "headwordId": "reject",
-      "surface": "reject",
-      "gloss": "v.驳回；拒绝"
-    },
-    {
-      "headwordId": "finance",
-      "surface": "financial",
-      "gloss": "n.财政；金融"
-    },
-    {
-      "headwordId": "dispute",
-      "surface": "disputes",
-      "gloss": "n.争端；纠纷"
-    },
-    {
-      "headwordId": "arise",
-      "surface": "arise",
-      "gloss": "v.发生；产生"
-    },
-    {
-      "headwordId": "party",
-      "surface": "parties",
-      "gloss": "n.当事方；党派"
-    },
-    {
-      "headwordId": "accord",
-      "surface": "according",
-      "gloss": "v.使一致；调解"
-    },
-    {
-      "headwordId": "achieve",
-      "surface": "achieve",
-      "gloss": "v.达成；实现"
-    },
-    {
-      "headwordId": "agree",
-      "surface": "agreement",
-      "gloss": "v.同意；赞同"
-    },
-    {
-      "headwordId": "change",
-      "surface": "changing",
-      "gloss": "v.改变；变化"
-    },
-    {
-      "headwordId": "respect",
-      "surface": "respect",
-      "gloss": "v.尊重；恪守"
-    },
-    {
-      "headwordId": "establish",
-      "surface": "established",
-      "gloss": "a.知名的；确立的"
-    },
-    {
-      "headwordId": "court¹",
-      "surface": "courts",
-      "gloss": "n.法院；法庭"
-    },
-    {
-      "headwordId": "resort¹",
-      "surface": "resorting",
-      "gloss": "n.渡假；胜地"
-    },
-    {
-      "headwordId": "arbitrary",
-      "surface": "arbitrary",
-      "gloss": "a.任意的；专断的"
-    },
-    {
-      "headwordId": "force",
-      "surface": "force",
-      "gloss": "v.迫使；强迫"
-    },
-    {
-      "headwordId": "visit",
-      "surface": "visit",
-      "gloss": "v.参观；拜访"
-    },
-    {
-      "headwordId": "history",
-      "surface": "historic",
-      "gloss": "a.历史上的；有历史意义的"
-    },
-    {
-      "headwordId": "appreciate",
-      "surface": "appreciate",
-      "gloss": "v.欣赏；鉴赏"
-    },
-    {
-      "headwordId": "ancient",
-      "surface": "ancient",
-      "gloss": "a.古代的；古老的"
-    },
-    {
-      "headwordId": "fine¹",
-      "surface": "fine",
-      "gloss": "a.精美的；纤细的"
-    },
-    {
-      "headwordId": "dish",
-      "surface": "dishes",
-      "gloss": "n.盘子；菜肴"
-    },
-    {
-      "headwordId": "soft",
-      "surface": "soft",
-      "gloss": "a.柔软的；温和的"
-    },
-    {
-      "headwordId": "enjoy",
-      "surface": "enjoy",
-      "gloss": "v.欣赏；享受"
-    },
-    {
-      "headwordId": "travel",
-      "surface": "traveling",
-      "gloss": "a.巡回的；旅行的"
-    },
-    {
-      "headwordId": "show",
-      "surface": "shows",
-      "gloss": "v.展示；显露"
-    },
-    {
-      "headwordId": "sharp",
-      "surface": "sharp",
-      "gloss": "a.锋利的；敏锐的"
-    },
-    {
-      "headwordId": "local",
-      "surface": "local",
-      "gloss": "a.当地的；地方的"
-    },
-    {
-      "headwordId": "sing",
-      "surface": "sings",
-      "gloss": "v.演唱；吟诵"
-    },
-    {
-      "headwordId": "praise",
-      "surface": "praise",
-      "gloss": "n.赞美；颂扬"
-    },
-    {
-      "headwordId": "bring",
-      "surface": "bringing",
-      "gloss": "v.带来；促使"
-    },
-    {
-      "headwordId": "spirit",
-      "surface": "spiritual",
-      "gloss": "n.精神；斗志"
-    },
-    {
-      "headwordId": "athlete",
-      "surface": "athletes",
-      "gloss": "n.运动员；田径选手"
-    },
-    {
-      "headwordId": "steep",
-      "surface": "steep",
-      "gloss": "a.陡峭的；险峻的"
-    },
-    {
-      "headwordId": "embrace",
-      "surface": "embracing",
-      "gloss": "v.拥抱；欣然接受"
-    },
-    {
-      "headwordId": "challenge",
-      "surface": "challenging",
-      "gloss": "n.挑战；要求"
-    },
-    {
-      "headwordId": "celebrate",
-      "surface": "celebrating",
-      "gloss": "v.庆祝；歌颂"
-    },
-    {
-      "headwordId": "outdoor",
-      "surface": "outdoor",
-      "gloss": "a.户外的；野外的"
-    },
-    {
-      "headwordId": "adventure",
-      "surface": "adventure",
-      "gloss": "n.探险；冒险经历"
-    }
+  wordAnnotations: [
+    // Paragraph 1, Sentence 1
+    { headwordId: 'modern', surface: 'modern', gloss: 'a.现代的；新式的' },
+    { headwordId: 'digit', surface: 'digital', gloss: 'a.数字的；数码的' },
+    { headwordId: 'commerce', surface: 'commerce', gloss: 'n.商业；贸易' },
+    { headwordId: 'ordinary', surface: 'ordinary', gloss: 'a.普通的；平常的' },
+    { headwordId: 'citizen', surface: 'citizens', gloss: 'n.公民；市民' },
+    { headwordId: 'civilian', surface: 'civilian', gloss: 'a.平民的；民用的' },
+    { headwordId: 'consume', surface: 'consumers', gloss: 'n.消费者；用户' },
+    { headwordId: 'frequent', surface: 'frequently', gloss: 'ad.频繁地；屡次地' },
+    { headwordId: 'click', surface: 'click', gloss: 'v.点击；轻击' },
+    { headwordId: 'electron', surface: 'electronic', gloss: 'a.电子的；电子设备的' },
+    { headwordId: 'contract¹', surface: 'contract', gloss: 'n.合同；契约' },
+    { headwordId: 'term', surface: 'terms', gloss: 'n.条款；条件' },
+    { headwordId: 'examine', surface: 'examining', gloss: 'v.审查；检查；细看' },
+    { headwordId: 'complex', surface: 'complex', gloss: 'a.复杂的；错综的' },
+    { headwordId: 'clause', surface: 'clause', gloss: 'n.条款；款项' },
+
+    // Paragraph 1, Sentence 2
+    { headwordId: 'sudden', surface: 'sudden', gloss: 'a.突然的；意外的' },
+    { headwordId: 'extra', surface: 'extra', gloss: 'a.额外的；附加的' },
+    { headwordId: 'charge', surface: 'charges', gloss: 'n.费用；收费' },
+    { headwordId: 'arise', surface: 'arise', gloss: 'v.产生；出现；发生' },
+    { headwordId: 'merchant', surface: 'merchant', gloss: 'n.商家；商人' },
+    { headwordId: 'cancel', surface: 'cancellation', gloss: 'n.取消；作废' },
+    { headwordId: 'policy', surface: 'policies', gloss: 'n.政策；规定' },
+    { headwordId: 'clash', surface: 'clash', gloss: 'v.冲突；抵触；不一致' },
+    { headwordId: 'expect', surface: 'expectations', gloss: 'n.期望；预期' },
+    { headwordId: 'confuse', surface: 'confusing', gloss: 'a.令人困惑的；难以理解的' },
+    { headwordId: 'lack', surface: 'lacking', gloss: 'v.缺乏；不足' },
+    { headwordId: 'clarity', surface: 'clarity', gloss: 'n.清晰；明晰' },
+    { headwordId: 'trigger', surface: 'trigger', gloss: 'v.引发；触发；促成' },
+    { headwordId: 'intense', surface: 'intense', gloss: 'a.激烈的；剧烈的' },
+    { headwordId: 'dispute', surface: 'disputes', gloss: 'n.纠纷；争议' },
+
+    // Paragraph 1, Sentence 3
+    { headwordId: 'rush', surface: 'rushing', gloss: 'v.匆忙；仓促' },
+    { headwordId: 'file', surface: 'file', gloss: 'v.提出；提交；立案' },
+    { headwordId: 'claim', surface: 'claims', gloss: 'n.索赔；要求' },
+    { headwordId: 'formal', surface: 'formal', gloss: 'a.正式的；正规的' },
+    { headwordId: 'court¹', surface: 'court', gloss: 'n.法庭；法院' },
+    { headwordId: 'party', surface: 'parties', gloss: 'n.当事方；当事人' },
+    { headwordId: 'increase', surface: 'increasingly', gloss: 'ad.日益地；越来越多地' },
+    { headwordId: 'encourage', surface: 'encouraged', gloss: 'v.鼓励；支持' },
+    { headwordId: 'seek', surface: 'seek', gloss: 'v.寻求；谋求' },
+    { headwordId: 'consult', surface: 'consultation', gloss: 'n.咨询；请教' },
+    { headwordId: 'community', surface: 'community', gloss: 'n.社区；公众' },
+    { headwordId: 'legal', surface: 'legal', gloss: 'a.法律的；合法的' },
+    { headwordId: 'clinic', surface: 'clinic', gloss: 'n.诊所；咨询所' },
+    { headwordId: 'resolve', surface: 'resolving', gloss: 'v.解决；化解' },
+    { headwordId: 'differ', surface: 'differences', gloss: 'n.分歧；差异' },
+    { headwordId: 'profession', surface: 'professional', gloss: 'a.专业的；职业的' },
+    { headwordId: 'care', surface: 'care', gloss: 'n.谨慎；审慎；关照' },
+
+    // Paragraph 2, Sentence 1
+    { headwordId: 'active', surface: 'active', gloss: 'a.积极的；活跃的' },
+    { headwordId: 'clerk', surface: 'clerks', gloss: 'n.办事员；职员；书记员' },
+    { headwordId: 'volunteer', surface: 'volunteers', gloss: 'n.志愿者；义工' },
+    { headwordId: 'patient¹', surface: 'patiently', gloss: 'ad.耐心地；容忍地' },
+    { headwordId: 'assist', surface: 'assist', gloss: 'v.协助；帮助' },
+    { headwordId: 'visit', surface: 'visiting', gloss: 'a.来访的；访问的' },
+    { headwordId: 'client', surface: 'client', gloss: 'n.委托人；客户' },
+    { headwordId: 'classify', surface: 'classifying', gloss: 'v.分类；归类' },
+    { headwordId: 'according to', surface: 'according to', gloss: 'prep.按照；根据' },
+    { headwordId: 'establish', surface: 'established', gloss: 'a.确立的；公认的' },
+    { headwordId: 'civil', surface: 'civil', gloss: 'a.民事的；民法的' },
+    { headwordId: 'law', surface: 'laws', gloss: 'n.法律；法规' },
+
+    // Paragraph 2, Sentence 2
+    { headwordId: 'transaction', surface: 'transaction', gloss: 'n.交易；业务' },
+    { headwordId: 'record', surface: 'records', gloss: 'n.记录；记载' },
+    { headwordId: 'message', surface: 'message', gloss: 'n.留言；讯息' },
+    { headwordId: 'history', surface: 'histories', gloss: 'n.历史；记录' },
+    { headwordId: 'clue', surface: 'clues', gloss: 'n.线索；根据' },
+    { headwordId: 'distinguish', surface: 'distinguishing', gloss: 'v.区分；辨别' },
+    { headwordId: 'genuine', surface: 'genuine', gloss: 'a.真实的；真正的' },
+    { headwordId: 'corporation', surface: 'corporate', gloss: 'a.企业的；公司的' },
+    { headwordId: 'fault', surface: 'faults', gloss: 'n.过错；过失' },
+    { headwordId: 'arbitrary', surface: 'arbitrary', gloss: 'a.任意的；专断的；武断的' },
+    { headwordId: 'demand', surface: 'demands', gloss: 'n.要求；索求' },
+
+    // Paragraph 2, Sentence 3
+    { headwordId: 'cite', surface: 'citing', gloss: 'v.引用；引证' },
+    { headwordId: 'classic', surface: 'classic', gloss: 'a.经典的；典范的' },
+    { headwordId: 'clear-cut', surface: 'clear-cut', gloss: 'a.界限分明的；明确的' },
+    { headwordId: 'administer', surface: 'administrative', gloss: 'a.行政的；管理的' },
+    { headwordId: 'standard', surface: 'standards', gloss: 'n.标准；规范' },
+    { headwordId: 'advise', surface: 'advisors', gloss: 'n.顾问；劝告者' },
+    { headwordId: 'interpret', surface: 'interpret', gloss: 'v.解释；阐释' },
+    { headwordId: 'complicate', surface: 'complicated', gloss: 'a.复杂的；难懂的' },
+    { headwordId: 'absolute', surface: 'absolute', gloss: 'a.绝对的；完全的' },
+    { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证' },
+    { headwordId: 'buy', surface: 'buyers', gloss: 'n.买家；买方' },
+    { headwordId: 'understand', surface: 'understand', gloss: 'v.理解；领会' },
+    { headwordId: 'actual', surface: 'actual', gloss: 'a.实际的；真实的' },
+    { headwordId: 'oblige', surface: 'obligations', gloss: 'n.义务；责任' },
+    { headwordId: 'change', surface: 'changing', gloss: 'a.变化的；多变的' },
+    { headwordId: 'economy', surface: 'economic', gloss: 'a.经济的；经济上的' },
+    { headwordId: 'circumstance', surface: 'circumstances', gloss: 'n.情况；境况；条件' },
+
+    // Paragraph 3, Sentence 1
+    { headwordId: 'calm', surface: 'calm', gloss: 'a.心平气和的；冷静的' },
+    { headwordId: 'neutral', surface: 'neutral', gloss: 'a.中立的；不偏不倚的' },
+    { headwordId: 'discuss', surface: 'discussions', gloss: 'n.讨论；商议' },
+    { headwordId: 'guide', surface: 'guides', gloss: 'v.引导；指导' },
+    { headwordId: 'balance', surface: 'balanced', gloss: 'a.均衡的；公平的' },
+    { headwordId: 'compromise', surface: 'compromise', gloss: 'n.妥协；和解；折中' },
+    { headwordId: 'help', surface: 'helping', gloss: 'v.帮助；协助' },
+    { headwordId: 'inform', surface: 'informed', gloss: 'a.知情的；明智的' },
+    { headwordId: 'choice', surface: 'choice', gloss: 'n.选择；权衡' },
+    { headwordId: 'resort¹', surface: 'resorting', gloss: 'v.诉诸；求助于' },
+    { headwordId: 'hostile', surface: 'hostile', gloss: 'a.敌对的；不友好的' },
+    { headwordId: 'confront', surface: 'confrontation', gloss: 'n.对抗；冲突' },
+
+    // Paragraph 3, Sentence 2
+    { headwordId: 'clever', surface: 'clever', gloss: 'a.聪明的；精明的；巧妙的' },
+    { headwordId: 'draft', surface: 'drafts', gloss: 'v.起草；拟定' },
+    { headwordId: 'mutual', surface: 'mutually', gloss: 'ad.相互地；共同地' },
+    { headwordId: 'bind', surface: 'binding', gloss: 'a.有约束力的；捆绑的' },
+    { headwordId: 'agree', surface: 'agreement', gloss: 'n.协议；协定' },
+    { headwordId: 'settle', surface: 'settles', gloss: 'v.解决；结算；了结' },
+    { headwordId: 'outstanding', surface: 'outstanding', gloss: 'a.未解决的；未支付的' },
+    { headwordId: 'damage', surface: 'damages', gloss: 'n.损害赔偿金；损失' },
+    { headwordId: 'provide', surface: 'provides', gloss: 'v.提供；给予' },
+    { headwordId: 'complete', surface: 'complete', gloss: 'a.完全的；彻底的' },
+    { headwordId: 'certain', surface: 'certainty', gloss: 'n.确定性；必然性' },
+    { headwordId: 'deal¹', surface: 'dealings', gloss: 'n.交易；交往' },
+
+    // Paragraph 3, Sentence 3
+    { headwordId: 'bitter', surface: 'bitter', gloss: 'a.激烈的；痛苦的' },
+    { headwordId: 'trial', surface: 'trial', gloss: 'n.审判；审理' },
+    { headwordId: 'access', surface: 'accessible', gloss: 'a.易接近的；方便获得的' },
+    { headwordId: 'serve', surface: 'services', gloss: 'n.服务；帮助' },
+    { headwordId: 'protect', surface: 'protect', gloss: 'v.保护；维护' },
+    { headwordId: 'welfare', surface: 'welfare', gloss: 'n.福利；福祉' },
+    { headwordId: 'inspire', surface: 'inspire', gloss: 'v.激发；鼓舞' },
+    { headwordId: 'deep', surface: 'deep', gloss: 'a.深厚的；深刻的' },
+    { headwordId: 'trust', surface: 'trust', gloss: 'n.信任；信赖' },
+    { headwordId: 'harmony', surface: 'harmony', gloss: 'n.和谐；融洽' },
+    { headwordId: 'throughout', surface: 'throughout', gloss: 'prep.在各处；自始至终' },
   ],
-  "phraseAnnotations": [],
-  "expansionEntries": [
+  phraseAnnotations: [],
+  expansionEntries: [
     {
-      "id": "e1",
-      "expression": "blood cholesterol/lipid",
-      "explanation": "血液胆固醇；现代心血管健康体检的核心生理指标"
+      id: 'exp-01',
+      expression: 'civil law / contract dispute',
+      explanation:
+        '民事法律，合同纠纷；civil 指民事的、公民的，与 criminal 刑事相对；dispute 指因权利义务认知差异产生的争端或争议。',
     },
     {
-      "id": "e2",
-      "expression": "civil rights/liberties",
-      "explanation": "公民权利；civil 还常用于 civil law 民法或 civil servant 公务员"
+      id: 'exp-02',
+      expression: 'standard clause / fine print',
+      explanation:
+        '格式条款，附属细则；clause 指合同、法律文书中的独立条款；fine print 熟词僻义指易被忽略的小字说明或限制性免责条款。',
     },
     {
-      "id": "e3",
-      "expression": "choke up/constrict",
-      "explanation": "阻塞，哽咽；choke 可指因烟雾窒息或因情绪激动说不出话"
+      id: 'exp-03',
+      expression: 'contract clarity / unambiguous terms',
+      explanation:
+        '合同明晰度，确切条款；clarity 强调表意清晰、无歧义，与 ambiguous 相对，是合同起草的核心准则。',
     },
     {
-      "id": "e4",
-      "expression": "integrated circuit/microchip",
-      "explanation": "集成电路；circuit 亦常指巡回巡回赛或环行路线"
+      id: 'exp-04',
+      expression: 'clash of interests / conflicting claims',
+      explanation:
+        '利益冲突，索赔抵触；clash 熟词僻义指权益、主张上的尖锐抵触或不一致，而非仅指物理碰撞。',
     },
     {
-      "id": "e5",
-      "expression": "under no circumstance/never",
-      "explanation": "在任何情况下都不；常用于句首倒装句型"
+      id: 'exp-05',
+      expression: 'legal clinic / grassroots assistance',
+      explanation:
+        '法律诊所，基层援助；clinic 原指医疗门诊，在法学教育与社会服务中熟词僻义指为公众提供免费法律咨询与实践的“法律诊所”。',
     },
     {
-      "id": "e6",
-      "expression": "cite examples/quote authorities",
-      "explanation": "引用范例，援引；学术写作与法律辩护常用动词"
+      id: 'exp-06',
+      expression: 'legal clerk / court recorder',
+      explanation:
+        '法务职员，书记员；clerk 在法律行政语境中熟词僻义指协助整理卷宗、接待当事人或记录调解过程的法务秘书或书记员。',
     },
     {
-      "id": "e7",
-      "expression": "make an insurance claim/assert",
-      "explanation": "提出保险索赔；claim 亦常表示断言声称"
+      id: 'exp-07',
+      expression: 'factual clue / evidentiary trace',
+      explanation:
+        '事实线索，证据凭证；clue 指解开疑团或查明事实的关键线索与依据，在纠纷调查中指交易凭据或聊天记录。',
     },
     {
-      "id": "e8",
-      "expression": "clear-cut distinction/unambiguous",
-      "explanation": "明确的区分；clear-cut 强调界限分明、毫无含糊"
+      id: 'exp-08',
+      expression: 'classify claims / categorise evidence',
+      explanation:
+        '归类主张，梳理证据；classify 指依法律性质将诉求分门别类，理清争议焦点。',
     },
     {
-      "id": "e9",
-      "expression": "fine bone china/porcelain",
-      "explanation": "精美骨瓷；china 首字母小写时专指瓷器"
+      id: 'exp-09',
+      expression: 'classic precedent / established rule',
+      explanation:
+        '典型判例，既定规则；classic 熟词僻义指具有代表性、典范性的典型案例或成熟规则。',
     },
     {
-      "id": "e10",
-      "expression": "feet of clay/hidden flaw",
-      "explanation": "致命弱点，泥足；源自典故，比喻看似崇高者隐藏的缺点"
+      id: 'exp-10',
+      expression: 'clear-cut boundary / distinct demarcation',
+      explanation:
+        '界限分明，权责清晰；clear-cut 形容权利、责任与界限清晰明确、不容含糊。',
     },
     {
-      "id": "e11",
-      "expression": "reach a climax/peak",
-      "explanation": "达到高潮，登上巅峰；戏剧结构与人生经历高频词"
+      id: 'exp-11',
+      expression: 'circumstances beyond control / changing conditions',
+      explanation:
+        '情势变迁，不可抗力境况；circumstance 复数形式常用于法律条款，指履约时的外部情势、条件或境况。',
     },
     {
-      "id": "e12",
-      "expression": "clash with/conflict",
-      "explanation": "与...产生冲突；可指色彩不搭调或时间利益相撞"
+      id: 'exp-12',
+      expression: 'reach a compromise / amicable settlement',
+      explanation:
+        '达成和解，折中妥协；compromise 指双方互谅互让达成共识，以避免对簿公堂。',
     },
     {
-      "id": "e13",
-      "expression": "silicon chip/processor",
-      "explanation": "硅芯片；chip 熟词僻义常考炸薯片或微小碎屑"
+      id: 'exp-13',
+      expression: 'informed choice / autonomous decision',
+      explanation:
+        '知情选择，自主决定；informed 指在充分了解事实、权利及后果的前提下做出的理性选择。',
     },
     {
-      "id": "e14",
-      "expression": "climate of opinion/prevailing trend",
-      "explanation": "舆论风气；climate 熟词僻义常喻社会心理或时代风向"
-    }
-  ]
+      id: 'exp-14',
+      expression: 'resort to litigation / alternative resolution',
+      explanation:
+        '诉诸诉讼，非诉解决；resort to 熟词僻义指在其他途径穷尽时“诉诸、采取”某种手段，如诉诸武力或诉讼。',
+    },
+    {
+      id: 'exp-15',
+      expression: 'liquidated damages / compensatory remedy',
+      explanation:
+        '损害赔偿金，违约救济；damages 复数形式为法律专门术语，指依法或依约主张的财产损害赔偿金，而非物理毁损。',
+    },
+  ],
 };
