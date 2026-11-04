@@ -30815,9 +30815,9 @@
     "id": "cet4-b1-017",
     "indexLabel": "NO. 17",
     "tier": "cet4-core",
-    "topic": "现代伦理、儒家思想与当代社会共识",
-    "titleZh": "现代伦理、儒家思想与社会共识",
-    "titleEn": "Social Ethics, Confucian Heritage, and Civic Consensus",
+    "topic": "现代社会伦理、儒家思想与公共协商共识",
+    "titleZh": "现代社会伦理、儒家思想与公共协商共识",
+    "titleEn": "Modern Social Ethics, Confucian Heritage, and Civic Consensus",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -30849,8 +30849,9 @@
                 "category": "regular",
                 "itemKey": "word:ethic",
                 "surface": "ethics",
-                "gloss": "n.伦理；道德",
-                "headwordId": "ethic"
+                "gloss": "a.伦理的；道德的",
+                "headwordId": "ethic",
+                "shiftX": -8.7
               },
               {
                 "type": "text",
@@ -30861,8 +30862,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:congress",
                 "surface": "congress",
-                "gloss": "n.大会；国会",
-                "headwordId": "congress"
+                "gloss": "n.大会；代表会议；国会",
+                "headwordId": "congress",
+                "shiftX": 6.8
               },
               {
                 "type": "text",
@@ -30874,7 +30876,8 @@
                 "itemKey": "word:scholar",
                 "surface": "scholars",
                 "gloss": "n.学者；学士",
-                "headwordId": "scholar"
+                "headwordId": "scholar",
+                "shiftX": -1.4
               },
               {
                 "type": "text",
@@ -30885,8 +30888,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:meet",
                 "surface": "meet",
-                "gloss": "v.相聚；开会",
-                "headwordId": "meet"
+                "gloss": "v.相聚；开会；相遇",
+                "headwordId": "meet",
+                "shiftX": 3.3
               },
               {
                 "type": "text",
@@ -30897,7 +30901,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:consider",
                 "surface": "consider",
-                "gloss": "v.考虑；认为",
+                "gloss": "v.考虑；深思；认为",
                 "headwordId": "consider"
               },
               {
@@ -30910,7 +30914,8 @@
                 "itemKey": "word:tradition",
                 "surface": "traditional",
                 "gloss": "a.传统的；惯例的",
-                "headwordId": "tradition"
+                "headwordId": "tradition",
+                "shiftX": -3.7
               },
               {
                 "type": "text",
@@ -30921,8 +30926,9 @@
                 "category": "regular",
                 "itemKey": "word:Confucian",
                 "surface": "Confucian",
-                "gloss": "a.儒家的；儒学的",
-                "headwordId": "Confucian"
+                "gloss": "a.儒家的；孔子学说的",
+                "headwordId": "Confucian",
+                "shiftX": -15.5
               },
               {
                 "type": "text",
@@ -30933,7 +30939,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:value",
                 "surface": "values",
-                "gloss": "n.价值观；价值",
+                "gloss": "n.价值观；准则；价值",
                 "headwordId": "value"
               },
               {
@@ -30945,8 +30951,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:connect",
                 "surface": "connect",
-                "gloss": "v.联系；连接",
-                "headwordId": "connect"
+                "gloss": "v.联系；联结；相连",
+                "headwordId": "connect",
+                "shiftX": 19.1
               },
               {
                 "type": "text",
@@ -30981,8 +30988,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "When modern communities confront environmental conflict, conscientious citizens consult legal scholars and consolidate public consensus without contempt.",
-            "chinese": "当现代社区面临环境冲突时，有良知的公民咨询法学学者，在毫无轻蔑的前提下凝聚公众共识。",
+            "english": "When modern communities confront complex moral controversies and social conflicts, conscientious leaders consult historical wisdom to consolidate public consensus.",
+            "chinese": "当现代社区面临复杂的道德争议与社会冲突时，有良知的领导者咨询历史智慧以凝聚公众共识。",
             "tokens": [
               {
                 "type": "text",
@@ -30993,7 +31000,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:modern",
                 "surface": "modern",
-                "gloss": "a.现代的；新式的",
+                "gloss": "a.现代的；近代的",
                 "headwordId": "modern"
               },
               {
@@ -31005,7 +31012,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:community",
                 "surface": "communities",
-                "gloss": "n.社区；社会",
+                "gloss": "n.社区；共同体；界",
                 "headwordId": "community"
               },
               {
@@ -31017,8 +31024,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:confront",
                 "surface": "confront",
-                "gloss": "v.面临；正视",
-                "headwordId": "confront"
+                "gloss": "v.面临；面对；正视",
+                "headwordId": "confront",
+                "shiftX": -4.3
               },
               {
                 "type": "text",
@@ -31027,21 +31035,47 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:environment",
-                "surface": "environmental",
-                "gloss": "a.环境的；生态的",
-                "headwordId": "environment"
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "a.复杂的；错综的",
+                "headwordId": "complex",
+                "shiftX": -5.1
               },
               {
                 "type": "text",
                 "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:moral",
+                "surface": "moral",
+                "gloss": "a.道德的；精神上的",
+                "headwordId": "moral",
+                "shiftX": 9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:controversy",
+                "surface": "controversies",
+                "gloss": "n.争议；争论；辩论",
+                "headwordId": "controversy"
+              },
+              {
+                "type": "text",
+                "text": " and social "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:conflict",
-                "surface": "conflict",
-                "gloss": "n.冲突；抵触",
+                "surface": "conflicts",
+                "gloss": "n.冲突；抵触；争端",
                 "headwordId": "conflict"
               },
               {
@@ -31053,7 +31087,7 @@
                 "category": "regular",
                 "itemKey": "word:conscientious",
                 "surface": "conscientious",
-                "gloss": "a.认真的；有良心的",
+                "gloss": "a.认真的；有良知的",
                 "headwordId": "conscientious"
               },
               {
@@ -31063,10 +31097,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:citizen",
-                "surface": "citizens",
-                "gloss": "n.公民；市民",
-                "headwordId": "citizen"
+                "itemKey": "word:lead¹",
+                "surface": "leaders",
+                "gloss": "n.领导者；领袖",
+                "headwordId": "lead¹",
+                "shiftX": -5.6
               },
               {
                 "type": "text",
@@ -31077,9 +31112,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:consult",
                 "surface": "consult",
-                "gloss": "v.咨询；商议",
+                "gloss": "v.咨询；请教；借鉴",
                 "headwordId": "consult",
-                "shiftX": -4.2
+                "shiftX": -1.3
               },
               {
                 "type": "text",
@@ -31088,22 +31123,35 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:legal",
-                "surface": "legal",
-                "gloss": "a.法律的；法学的",
-                "headwordId": "legal",
-                "shiftX": 4.3
+                "itemKey": "word:history",
+                "surface": "historical",
+                "gloss": "a.历史的；有关历史的",
+                "headwordId": "history",
+                "shiftX": 6
               },
               {
                 "type": "text",
-                "text": " scholars and "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:wise",
+                "surface": "wisdom",
+                "gloss": "n.智慧；明智",
+                "headwordId": "wise",
+                "shiftX": 0.8
+              },
+              {
+                "type": "text",
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:consolidate",
                 "surface": "consolidate",
-                "gloss": "v.巩固；整合",
+                "gloss": "v.巩固；凝聚；整合",
                 "headwordId": "consolidate"
               },
               {
@@ -31134,18 +31182,6 @@
               },
               {
                 "type": "text",
-                "text": " without "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:contempt",
-                "surface": "contempt",
-                "gloss": "n.轻视；蔑视",
-                "headwordId": "contempt"
-              },
-              {
-                "type": "text",
                 "text": "."
               }
             ]
@@ -31153,92 +31189,85 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "They remain conscious of the consequences of excessive resource consumption, refusing to contaminate precious rivers with industrial waste.",
-            "chinese": "他们清醒意识到过度资源消耗的后果，拒绝用工业废弃物污染珍贵河流。",
+            "english": "Rather than relying solely on strict legal enforcement, community leaders seek to construct consistent principles that inspire personal conscience and social responsibility.",
+            "chinese": "社区领导者没有单纯依赖严苛的法律强制，而是寻求构建一贯的原则，以唤醒个人良知与社会责任感。",
             "tokens": [
               {
                 "type": "text",
-                "text": "They "
+                "text": "Rather than "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:remain",
-                "surface": "remain",
-                "gloss": "v.剩下；余留",
-                "headwordId": "remain"
+                "itemKey": "word:rely",
+                "surface": "relying",
+                "gloss": "v.依靠；依赖；信赖",
+                "headwordId": "rely",
+                "shiftX": -38.6
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:conscious",
-                "surface": "conscious",
-                "gloss": "a.有意识的；清醒的",
-                "headwordId": "conscious"
-              },
-              {
-                "type": "text",
-                "text": " of the "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:consequence",
-                "surface": "consequences",
-                "gloss": "n.后果；影响",
-                "headwordId": "consequence"
-              },
-              {
-                "type": "text",
-                "text": " of "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:excess",
-                "surface": "excessive",
-                "gloss": "a.过多的；过分的",
-                "headwordId": "excess"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:resource",
-                "surface": "resource",
-                "gloss": "n.资源；物力",
-                "headwordId": "resource"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:consume",
-                "surface": "consumption",
-                "gloss": "n.消耗；消费",
-                "headwordId": "consume"
-              },
-              {
-                "type": "text",
-                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:refuse",
-                "surface": "refusing",
-                "gloss": "v.拒绝；不肯",
-                "headwordId": "refuse"
+                "itemKey": "word:sole",
+                "surface": "solely",
+                "gloss": "ad.单纯地；唯一地；仅仅地",
+                "headwordId": "sole",
+                "shiftX": -6.1
+              },
+              {
+                "type": "text",
+                "text": " on "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:strict",
+                "surface": "strict",
+                "gloss": "a.严格的；严谨的",
+                "headwordId": "strict",
+                "shiftX": 2.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:legal",
+                "surface": "legal",
+                "gloss": "a.法律的；法定的",
+                "headwordId": "legal",
+                "shiftX": 22.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:enforce",
+                "surface": "enforcement",
+                "gloss": "n.实施；强制；执行",
+                "headwordId": "enforce",
+                "shiftX": 19.5
+              },
+              {
+                "type": "text",
+                "text": ", community leaders "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:seek",
+                "surface": "seek",
+                "gloss": "v.寻求；谋求；力求",
+                "headwordId": "seek"
               },
               {
                 "type": "text",
@@ -31247,117 +31276,9 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:contaminate",
-                "surface": "contaminate",
-                "gloss": "v.污染；弄脏",
-                "headwordId": "contaminate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:precious",
-                "surface": "precious",
-                "gloss": "a.珍贵的；宝贵的",
-                "headwordId": "precious"
-              },
-              {
-                "type": "text",
-                "text": " rivers with "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:industry",
-                "surface": "industrial",
-                "gloss": "a.工业的；产业的",
-                "headwordId": "industry"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:waste",
-                "surface": "waste",
-                "gloss": "n.废弃物；垃圾",
-                "headwordId": "waste"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "In conjunction with constitutional principles, community leaders construct consistent rules that confine pollution and conquer shared ecological crises.",
-            "chinese": "结合宪法原则，社区领导者构建了一贯的规则，以限制污染并战胜共同的生态危机。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "In "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:conjunction",
-                "surface": "conjunction",
-                "gloss": "n.结合；连接词",
-                "headwordId": "conjunction"
-              },
-              {
-                "type": "text",
-                "text": " with "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:constitution",
-                "surface": "constitutional",
-                "gloss": "a.宪法的；章程的",
-                "headwordId": "constitution"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:principle",
-                "surface": "principles",
-                "gloss": "n.原则；准则",
-                "headwordId": "principle"
-              },
-              {
-                "type": "text",
-                "text": ", community "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:lead¹",
-                "surface": "leaders",
-                "gloss": "n.领导者；领袖",
-                "headwordId": "lead¹"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
                 "itemKey": "word:construct",
                 "surface": "construct",
-                "gloss": "v.构建；建造",
+                "gloss": "v.构建；建立；构筑",
                 "headwordId": "construct"
               },
               {
@@ -31374,79 +31295,192 @@
               },
               {
                 "type": "text",
-                "text": " rules that "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:confine",
-                "surface": "confine",
-                "gloss": "v.限制；禁闭",
-                "headwordId": "confine"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:pollute",
-                "surface": "pollution",
-                "gloss": "n.污染；污染物",
-                "headwordId": "pollute"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:conquer",
-                "surface": "conquer",
-                "gloss": "v.征服；战胜",
-                "headwordId": "conquer"
-              },
-              {
-                "type": "text",
                 "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:share",
-                "surface": "shared",
-                "gloss": "a.共同的；共享的",
-                "headwordId": "share"
+                "itemKey": "word:principle",
+                "surface": "principles",
+                "gloss": "n.原则；准则；操守",
+                "headwordId": "principle"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:ecology",
-                "surface": "ecological",
-                "gloss": "a.生态的；环境的",
-                "headwordId": "ecology"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " that "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:crisis",
-                "surface": "crises",
-                "gloss": "n.危机；紧要关头",
-                "headwordId": "crisis"
+                "itemKey": "word:inspire",
+                "surface": "inspire",
+                "gloss": "v.激励；启发；唤起",
+                "headwordId": "inspire"
+              },
+              {
+                "type": "text",
+                "text": " personal "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:conscience",
+                "surface": "conscience",
+                "gloss": "n.良心；良知",
+                "headwordId": "conscience"
+              },
+              {
+                "type": "text",
+                "text": " and social "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:responsible",
+                "surface": "responsibility",
+                "gloss": "n.责任；职责；责任感",
+                "headwordId": "responsible"
               },
               {
                 "type": "text",
                 "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 4,
+            "circledNumber": "④",
+            "english": "By analyzing cultural traditions within a modern context, participants gain considerable confidence that moral philosophy can guide daily public life.",
+            "chinese": "通过在现代语境中分析文化传统，与会者获得了相当大的信心，深信道德哲学能够指引日常公共生活。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "By "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:analyze",
+                "surface": "analyzing",
+                "gloss": "v.分析；剖析；研究",
+                "headwordId": "analyze"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:culture",
+                "surface": "cultural",
+                "gloss": "a.文化的；文明的",
+                "headwordId": "culture"
+              },
+              {
+                "type": "text",
+                "text": " traditions within a modern "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:context",
+                "surface": "context",
+                "gloss": "n.语境；背景；环境",
+                "headwordId": "context"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:participate",
+                "surface": "participants",
+                "gloss": "n.参与者；与会者",
+                "headwordId": "participate",
+                "shiftX": -2.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:gain",
+                "surface": "gain",
+                "gloss": "v.获得；赢得；收获",
+                "headwordId": "gain",
+                "shiftX": -1.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:considerable",
+                "surface": "considerable",
+                "gloss": "a.相当大的；重要的",
+                "headwordId": "considerable",
+                "shiftX": 4.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:confidence",
+                "surface": "confidence",
+                "gloss": "n.信心；信任",
+                "headwordId": "confidence"
+              },
+              {
+                "type": "text",
+                "text": " that moral "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:philosophy",
+                "surface": "philosophy",
+                "gloss": "n.哲学；哲理",
+                "headwordId": "philosophy"
+              },
+              {
+                "type": "text",
+                "text": " can "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:guide",
+                "surface": "guide",
+                "gloss": "v.指引；引导；指导",
+                "headwordId": "guide",
+                "shiftX": -14.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:daily",
+                "surface": "daily",
+                "gloss": "a.日常的；每日的",
+                "headwordId": "daily",
+                "shiftX": 14.9
+              },
+              {
+                "type": "text",
+                "text": " public life."
               }
             ]
           }
@@ -31458,92 +31492,21 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Rather than confuse public debate, speakers confirm facts and confess previous policy shortcomings with genuine sincerity.",
-            "chinese": "发言者们没有混淆公众辩论，而是以真诚的坦率证实事实并承认以往政策的不足。",
+            "english": "During panel discussions, scholars contend that enduring social harmony consists of mutual respect, where conservative and progressive voices converse with sincere respect.",
+            "chinese": "在专题研讨中，学者们主张持久的社会和谐由相互尊重所构成，保守与进步的声音以真诚的尊重展开对话。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Rather than "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:confuse",
-                "surface": "confuse",
-                "gloss": "v.使困惑；混淆",
-                "headwordId": "confuse"
-              },
-              {
-                "type": "text",
-                "text": " public "
+                "text": "During "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:debate",
-                "surface": "debate",
-                "gloss": "v.争论；辩论",
-                "headwordId": "debate"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:speak",
-                "surface": "speakers",
-                "gloss": "n.演讲者；发言人",
-                "headwordId": "speak"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:confirm",
-                "surface": "confirm",
-                "gloss": "v.证实；确认",
-                "headwordId": "confirm"
-              },
-              {
-                "type": "text",
-                "text": " facts and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:confess",
-                "surface": "confess",
-                "gloss": "v.供认；坦白",
-                "headwordId": "confess"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:previous",
-                "surface": "previous",
-                "gloss": "a.以往的；先前的",
-                "headwordId": "previous"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:policy",
-                "surface": "policy",
-                "gloss": "n.政策；方针",
-                "headwordId": "policy"
+                "itemKey": "word:panel",
+                "surface": "panel",
+                "gloss": "a.专门小组的；讨论组的",
+                "headwordId": "panel",
+                "shiftX": -7.2
               },
               {
                 "type": "text",
@@ -31552,227 +31515,46 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:shortcoming",
-                "surface": "shortcomings",
-                "gloss": "n.不足；缺点",
-                "headwordId": "shortcoming"
+                "itemKey": "word:discuss",
+                "surface": "discussions",
+                "gloss": "n.讨论；商讨；研讨",
+                "headwordId": "discuss",
+                "shiftX": 7.3
               },
               {
                 "type": "text",
-                "text": " with "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:genuine",
-                "surface": "genuine",
-                "gloss": "a.真诚的；真实的",
-                "headwordId": "genuine"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sincere",
-                "surface": "sincerity",
-                "gloss": "n.坦率；真诚",
-                "headwordId": "sincere"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "A considerate chairperson congratulates candidates who win a speech contest, encouraging everyone to feel content with honest efforts.",
-            "chinese": "一位体贴的主席向赢得演讲比赛的候选人表示祝贺，鼓励每个人对诚实的努力感到心满意足。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:considerate",
-                "surface": "considerate",
-                "gloss": "a.体贴的；周到的",
-                "headwordId": "considerate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chairperson",
-                "surface": "chairperson",
-                "gloss": "n.主席；议长",
-                "headwordId": "chairperson"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:congratulate",
-                "surface": "congratulates",
-                "gloss": "v.祝贺；道喜",
-                "headwordId": "congratulate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:candidate",
-                "surface": "candidates",
-                "gloss": "n.候选人；应试者",
-                "headwordId": "candidate"
-              },
-              {
-                "type": "text",
-                "text": " who "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:win",
-                "surface": "win",
-                "gloss": "v.赢得；获胜",
-                "headwordId": "win"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:speech",
-                "surface": "speech",
-                "gloss": "n.演讲；演说",
-                "headwordId": "speech"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contest",
-                "surface": "contest",
-                "gloss": "n.比赛；竞赛",
-                "headwordId": "contest"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:encourage",
-                "surface": "encouraging",
-                "gloss": "v.鼓励；支持",
-                "headwordId": "encourage"
-              },
-              {
-                "type": "text",
-                "text": " everyone to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:feel",
-                "surface": "feel",
-                "gloss": "v.感觉；觉得",
-                "headwordId": "feel"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:content¹",
-                "surface": "content",
-                "gloss": "n.内容；容量",
-                "headwordId": "content¹"
-              },
-              {
-                "type": "text",
-                "text": " with "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:honest",
-                "surface": "honest",
-                "gloss": "a.诚实的；可敬的",
-                "headwordId": "honest",
-                "shiftX": -3.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:effort",
-                "surface": "efforts",
-                "gloss": "n.努力；艰难尝试",
-                "headwordId": "effort",
-                "shiftX": 3.3
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Scholars contend that social harmony consists of mutual respect, where conservative and progressive scholars converse with consent.",
-            "chinese": "学者们主张社会和谐由相互尊重所构成，保守与进步的思想家在征得同意的情况下进行对话。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Scholars "
+                "text": ", scholars "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:contend",
                 "surface": "contend",
-                "gloss": "v.主张；争论",
+                "gloss": "v.主张；坚称；争论",
                 "headwordId": "contend"
               },
               {
                 "type": "text",
-                "text": " that social "
+                "text": " that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:endure",
+                "surface": "enduring",
+                "gloss": "a.持久的；不朽的",
+                "headwordId": "endure"
+              },
+              {
+                "type": "text",
+                "text": " social "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:harmony",
                 "surface": "harmony",
-                "gloss": "n.和谐；协调",
+                "gloss": "n.和谐；协调；融洽",
                 "headwordId": "harmony"
               },
               {
@@ -31784,7 +31566,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:consist",
                 "surface": "consists",
-                "gloss": "v.由...组成；在于",
+                "gloss": "v.由…组成；在于",
                 "headwordId": "consist"
               },
               {
@@ -31797,7 +31579,8 @@
                 "itemKey": "word:mutual",
                 "surface": "mutual",
                 "gloss": "a.相互的；彼此的",
-                "headwordId": "mutual"
+                "headwordId": "mutual",
+                "shiftX": -4.4
               },
               {
                 "type": "text",
@@ -31808,8 +31591,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:respect",
                 "surface": "respect",
-                "gloss": "v.尊重；恪守",
-                "headwordId": "respect"
+                "gloss": "n.尊重；敬意；重视",
+                "headwordId": "respect",
+                "shiftX": 4.4
               },
               {
                 "type": "text",
@@ -31832,19 +31616,19 @@
                 "category": "high-frequency",
                 "itemKey": "word:progress",
                 "surface": "progressive",
-                "gloss": "n.进步；进展",
+                "gloss": "a.进步的；进取的",
                 "headwordId": "progress"
               },
               {
                 "type": "text",
-                "text": " scholars "
+                "text": " voices "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:converse¹",
                 "surface": "converse",
-                "gloss": "v.交谈；谈话",
+                "gloss": "v.交谈；谈话；对话",
                 "headwordId": "converse¹"
               },
               {
@@ -31854,10 +31638,401 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:consent",
-                "surface": "consent",
-                "gloss": "n.同意；赞同",
-                "headwordId": "consent"
+                "itemKey": "word:sincere",
+                "surface": "sincere",
+                "gloss": "a.真诚的；诚挚的",
+                "headwordId": "sincere"
+              },
+              {
+                "type": "text",
+                "text": " respect."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "In conjunction with constitutional values, community members confirm their commitment to civil dialogue, refusing to let bitter hostility disrupt rational debate.",
+            "chinese": "结合宪法价值，社区成员确认了他们对文明对话的承诺，拒绝让刻骨敌意破坏理性辩论。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "In "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:conjunction",
+                "surface": "conjunction",
+                "gloss": "n.结合；协同；连词",
+                "headwordId": "conjunction"
+              },
+              {
+                "type": "text",
+                "text": " with "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:constitution",
+                "surface": "constitutional",
+                "gloss": "a.宪法的；章程的",
+                "headwordId": "constitution"
+              },
+              {
+                "type": "text",
+                "text": " values, community members "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:confirm",
+                "surface": "confirm",
+                "gloss": "v.确认；证实；肯定",
+                "headwordId": "confirm"
+              },
+              {
+                "type": "text",
+                "text": " their "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:commit",
+                "surface": "commitment",
+                "gloss": "n.承诺；投入；奉献",
+                "headwordId": "commit",
+                "shiftX": -7.8
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:civil",
+                "surface": "civil",
+                "gloss": "a.文明的；公民的；民事的",
+                "headwordId": "civil",
+                "shiftX": -16.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:dialog",
+                "surface": "dialogue",
+                "gloss": "n.对话；交流；商谈",
+                "headwordId": "dialog",
+                "shiftX": 18.8
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:refuse",
+                "surface": "refusing",
+                "gloss": "v.拒绝；不肯",
+                "headwordId": "refuse",
+                "shiftX": 5.8
+              },
+              {
+                "type": "text",
+                "text": " to let "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bitter",
+                "surface": "bitter",
+                "gloss": "a.刻骨的；强烈的；痛苦的",
+                "headwordId": "bitter",
+                "shiftX": -12.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:hostile",
+                "surface": "hostility",
+                "gloss": "n.敌意；敌对",
+                "headwordId": "hostile",
+                "shiftX": -2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:disrupt",
+                "surface": "disrupt",
+                "gloss": "v.扰乱；破坏；使中断",
+                "headwordId": "disrupt",
+                "shiftX": -4.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:rational",
+                "surface": "rational",
+                "gloss": "a.理性的；合理的",
+                "headwordId": "rational",
+                "shiftX": 5.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:debate",
+                "surface": "debate",
+                "gloss": "n.辩论；争论；讨论",
+                "headwordId": "debate",
+                "shiftX": 14
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "When addressing collective challenges, responsible citizens remain conscious of the consequences of excessive consumption and selfish desires, agreeing to confine narrow disputes for the common good.",
+            "chinese": "在应对集体挑战时，负责任的公民清醒意识到过度消费与自私欲望的后果，同意为了公共利益克制狭隘分歧。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "When "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:address",
+                "surface": "addressing",
+                "gloss": "v.设法解决；处理；应对",
+                "headwordId": "address"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:collective",
+                "surface": "collective",
+                "gloss": "a.集体的；共同的",
+                "headwordId": "collective"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:challenge",
+                "surface": "challenges",
+                "gloss": "n.挑战；艰巨任务",
+                "headwordId": "challenge"
+              },
+              {
+                "type": "text",
+                "text": ", responsible "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:citizen",
+                "surface": "citizens",
+                "gloss": "n.公民；市民",
+                "headwordId": "citizen",
+                "shiftX": -1.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:remain",
+                "surface": "remain",
+                "gloss": "v.保持；依然；留存",
+                "headwordId": "remain",
+                "shiftX": -2.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:conscious",
+                "surface": "conscious",
+                "gloss": "a.有意识的；清醒的",
+                "headwordId": "conscious",
+                "shiftX": 3.5
+              },
+              {
+                "type": "text",
+                "text": " of the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:consequence",
+                "surface": "consequences",
+                "gloss": "n.后果；影响；结果",
+                "headwordId": "consequence"
+              },
+              {
+                "type": "text",
+                "text": " of "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:excess",
+                "surface": "excessive",
+                "gloss": "a.过度的；过分的",
+                "headwordId": "excess"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:consume",
+                "surface": "consumption",
+                "gloss": "n.消耗；消费",
+                "headwordId": "consume"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:self",
+                "surface": "selfish",
+                "gloss": "a.自私的；利己的",
+                "headwordId": "self",
+                "shiftX": -5.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:desire",
+                "surface": "desires",
+                "gloss": "n.欲望；渴望；心愿",
+                "headwordId": "desire",
+                "shiftX": 5.4
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:agree",
+                "surface": "agreeing",
+                "gloss": "v.同意；赞同",
+                "headwordId": "agree"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:confine",
+                "surface": "confine",
+                "gloss": "v.限制；克制；局限",
+                "headwordId": "confine",
+                "shiftX": -7.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:narrow",
+                "surface": "narrow",
+                "gloss": "a.狭隘的；狭窄的",
+                "headwordId": "narrow",
+                "shiftX": 1.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:dispute",
+                "surface": "disputes",
+                "gloss": "n.分歧；争端；争论",
+                "headwordId": "dispute",
+                "shiftX": 5.6
+              },
+              {
+                "type": "text",
+                "text": " for the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:common",
+                "surface": "common",
+                "gloss": "a.共同的；普遍的",
+                "headwordId": "common",
+                "shiftX": -9.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:good",
+                "surface": "good",
+                "gloss": "n.福祉；利益；好处",
+                "headwordId": "good",
+                "shiftX": 9.2
               },
               {
                 "type": "text",
@@ -31868,20 +32043,45 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Citizens maintain constant contact through digital media, ensuring that educational programs contain substantial historical content.",
-            "chinese": "公民们通过数字媒体保持持续联系，确保教育项目包含实质性的历史内容。",
+            "english": "Through patient consultation, diverse groups reach broad consensus and establish clear moral standards for community cooperation.",
+            "chinese": "通过耐心的协商，多元群体达成了广泛的共识，并为社区合作确立了明确的道德标准。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Citizens "
+                "text": "Through "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:maintain",
-                "surface": "maintain",
-                "gloss": "v.保持；维持",
-                "headwordId": "maintain"
+                "itemKey": "word:patient¹",
+                "surface": "patient",
+                "gloss": "a.耐心的；容忍的",
+                "headwordId": "patient¹"
+              },
+              {
+                "type": "text",
+                "text": " consultation, "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:diverse",
+                "surface": "diverse",
+                "gloss": "a.多元的；多样的",
+                "headwordId": "diverse"
+              },
+              {
+                "type": "text",
+                "text": " groups "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:reach",
+                "surface": "reach",
+                "gloss": "v.达成；到达；触及",
+                "headwordId": "reach",
+                "shiftX": -11.9
               },
               {
                 "type": "text",
@@ -31890,132 +32090,47 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:constant",
-                "surface": "constant",
-                "gloss": "a.持续的；恒定的",
-                "headwordId": "constant"
+                "itemKey": "word:broad",
+                "surface": "broad",
+                "gloss": "a.广泛的；宽广的",
+                "headwordId": "broad",
+                "shiftX": 11.9
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " consensus and "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:contact",
-                "surface": "contact",
-                "gloss": "n.联系；联络",
-                "headwordId": "contact"
+                "itemKey": "word:establish",
+                "surface": "establish",
+                "gloss": "v.确立；建立；设立",
+                "headwordId": "establish"
               },
               {
                 "type": "text",
-                "text": " through "
+                "text": " clear moral "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:digit",
-                "surface": "digital",
-                "gloss": "a.数字的；数码的",
-                "headwordId": "digit",
-                "shiftX": -3.9
+                "itemKey": "word:standard",
+                "surface": "standards",
+                "gloss": "n.标准；准则；规范",
+                "headwordId": "standard"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:medium",
-                "surface": "media",
-                "gloss": "n.媒体；媒介",
-                "headwordId": "medium",
-                "shiftX": 3.9
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:ensure",
-                "surface": "ensuring",
-                "gloss": "v.确保；保证",
-                "headwordId": "ensure"
-              },
-              {
-                "type": "text",
-                "text": " that "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:educate",
-                "surface": "educational",
-                "gloss": "a.教育的；有教育意义的",
-                "headwordId": "educate"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:program",
-                "surface": "programs",
-                "gloss": "n.项目；程序",
-                "headwordId": "program"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contain",
-                "surface": "contain",
-                "gloss": "v.包含；容纳",
-                "headwordId": "contain"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:substance",
-                "surface": "substantial",
-                "gloss": "a.实质性的；大量的",
-                "headwordId": "substance"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:history",
-                "surface": "historical",
-                "gloss": "a.历史的；历史性的",
-                "headwordId": "history"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " for community "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:content²",
-                "surface": "content",
-                "gloss": "a.满意的；满足的",
-                "headwordId": "content²"
+                "itemKey": "word:cooperate",
+                "surface": "cooperation",
+                "gloss": "n.合作；协作；配合",
+                "headwordId": "cooperate"
               },
               {
                 "type": "text",
@@ -32031,68 +32146,74 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Moral integrity must constitute the inner conscience of every citizen, inspiring individuals to conform to high moral standards.",
-            "chinese": "道德操守必须构成每位公民内心的良知，激励个人遵从高尚的道德标准。",
+            "english": "Scholars emphasize that moral integrity constitutes the inner foundation of good citizenship, inspiring individuals to conform to shared standards of justice.",
+            "chinese": "学者们强调，道德操守构成了良好公民素养的内在根基，激励个人遵从共同的正义标准。",
             "tokens": [
+              {
+                "type": "text",
+                "text": "Scholars "
+              },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:moral",
-                "surface": "Moral",
-                "gloss": "a.道德的；精神的",
-                "headwordId": "moral"
+                "itemKey": "word:emphasis",
+                "surface": "emphasize",
+                "gloss": "v.强调；着重",
+                "headwordId": "emphasis"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " that moral "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:integrity",
                 "surface": "integrity",
-                "gloss": "n.操守；正直",
+                "gloss": "n.操守；正直；诚实",
                 "headwordId": "integrity"
               },
               {
                 "type": "text",
-                "text": " must "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:constitute",
-                "surface": "constitute",
-                "gloss": "v.构成；组成",
+                "surface": "constitutes",
+                "gloss": "v.构成；组成；形成",
                 "headwordId": "constitute"
               },
               {
                 "type": "text",
-                "text": " the inner "
+                "text": " the "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:conscience",
-                "surface": "conscience",
-                "gloss": "n.良心；良知",
-                "headwordId": "conscience"
-              },
-              {
-                "type": "text",
-                "text": " of every citizen, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:inspire",
-                "surface": "inspiring",
-                "gloss": "a.鼓舞人心的；启发灵感的",
-                "headwordId": "inspire"
+                "itemKey": "word:inner",
+                "surface": "inner",
+                "gloss": "a.内部的；内心的",
+                "headwordId": "inner",
+                "shiftX": -2
               },
               {
                 "type": "text",
                 "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:foundation",
+                "surface": "foundation",
+                "gloss": "n.根基；基础；创立",
+                "headwordId": "foundation",
+                "shiftX": 2
+              },
+              {
+                "type": "text",
+                "text": " of good citizenship, inspiring "
               },
               {
                 "type": "annotation",
@@ -32111,20 +32232,32 @@
                 "category": "regular",
                 "itemKey": "word:conform",
                 "surface": "conform",
-                "gloss": "v.遵从；符合",
+                "gloss": "v.遵从；符合；顺应",
                 "headwordId": "conform"
               },
               {
                 "type": "text",
-                "text": " to high moral "
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:standard",
-                "surface": "standards",
-                "gloss": "n.标准；规范",
-                "headwordId": "standard"
+                "itemKey": "word:share",
+                "surface": "shared",
+                "gloss": "a.共同的；共享的",
+                "headwordId": "share"
+              },
+              {
+                "type": "text",
+                "text": " standards of "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:justice",
+                "surface": "justice",
+                "gloss": "n.正义；公正；司法",
+                "headwordId": "justice"
               },
               {
                 "type": "text",
@@ -32135,44 +32268,16 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "When people analyze historical events in proper context, they gain considerable confidence to face future challenges.",
-            "chinese": "当人们在恰当的语境中分析历史事件时，他们获得了面对未来挑战的巨大信心。",
+            "english": "Continuous educational efforts and constant cultural exchange help communities eliminate prejudice and resolve deep controversy through rational dialogue.",
+            "chinese": "持续的教育努力与不断的文化交流帮助社区消除偏见，并通过理性的对话化解深层争议。",
             "tokens": [
               {
-                "type": "text",
-                "text": "When people "
-              },
-              {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:analyze",
-                "surface": "analyze",
-                "gloss": "v.分析；解析",
-                "headwordId": "analyze"
-              },
-              {
-                "type": "text",
-                "text": " historical "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:event",
-                "surface": "events",
-                "gloss": "n.事件；大事",
-                "headwordId": "event"
-              },
-              {
-                "type": "text",
-                "text": " in "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:proper",
-                "surface": "proper",
-                "gloss": "a.恰当的；合适的",
-                "headwordId": "proper"
+                "itemKey": "word:continue",
+                "surface": "Continuous",
+                "gloss": "a.持续的；不间断的",
+                "headwordId": "continue"
               },
               {
                 "type": "text",
@@ -32181,22 +32286,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:context",
-                "surface": "context",
-                "gloss": "n.语境；背景",
-                "headwordId": "context"
-              },
-              {
-                "type": "text",
-                "text": ", they "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:gain",
-                "surface": "gain",
-                "gloss": "v.获得；赢得",
-                "headwordId": "gain"
+                "itemKey": "word:educate",
+                "surface": "educational",
+                "gloss": "a.教育的；有教育意义的",
+                "headwordId": "educate"
               },
               {
                 "type": "text",
@@ -32205,58 +32298,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:considerable",
-                "surface": "considerable",
-                "gloss": "a.相当大的；重要的",
-                "headwordId": "considerable"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:confidence",
-                "surface": "confidence",
-                "gloss": "n.信心；信任",
-                "headwordId": "confidence"
-              },
-              {
-                "type": "text",
-                "text": " to face future "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:challenge",
-                "surface": "challenges",
-                "gloss": "n.挑战；难关",
-                "headwordId": "challenge"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Through open communication and patient dialogue, people learn to respect diverse opinions and eliminate prejudice.",
-            "chinese": "通过开诚布公的交流与耐心的对话，人们学会尊重多元观点并消除偏见。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Through open "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:communicate",
-                "surface": "communication",
-                "gloss": "n.交流；沟通",
-                "headwordId": "communicate"
+                "itemKey": "word:effort",
+                "surface": "efforts",
+                "gloss": "n.努力；艰苦尝试",
+                "headwordId": "effort"
               },
               {
                 "type": "text",
@@ -32265,46 +32310,23 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:patient¹",
-                "surface": "patient",
-                "gloss": "a.耐心的；容忍的",
-                "headwordId": "patient¹"
+                "itemKey": "word:constant",
+                "surface": "constant",
+                "gloss": "a.持续的；恒定的",
+                "headwordId": "constant"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:dialog",
-                "surface": "dialogue",
-                "gloss": "n.对话；对白",
-                "headwordId": "dialog"
-              },
-              {
-                "type": "text",
-                "text": ", people "
+                "text": " cultural "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:learn",
-                "surface": "learn",
-                "gloss": "v.学会；学习",
-                "headwordId": "learn"
-              },
-              {
-                "type": "text",
-                "text": " to respect "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:diverse",
-                "surface": "diverse",
-                "gloss": "a.多元的；多样的",
-                "headwordId": "diverse"
+                "itemKey": "word:exchange",
+                "surface": "exchange",
+                "gloss": "n.交流；交换；互换",
+                "headwordId": "exchange",
+                "shiftX": -9.6
               },
               {
                 "type": "text",
@@ -32313,21 +32335,22 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:opinion",
-                "surface": "opinions",
-                "gloss": "n.观点；意见",
-                "headwordId": "opinion"
+                "itemKey": "word:help",
+                "surface": "help",
+                "gloss": "v.帮助；协助；改善",
+                "headwordId": "help",
+                "shiftX": 9.6
               },
               {
                 "type": "text",
-                "text": " and "
+                "text": " communities "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:eliminate",
                 "surface": "eliminate",
-                "gloss": "v.消除；淘汰",
+                "gloss": "v.消除；排除；淘汰",
                 "headwordId": "eliminate"
               },
               {
@@ -32339,8 +32362,94 @@
                 "category": "high-frequency",
                 "itemKey": "word:prejudice",
                 "surface": "prejudice",
-                "gloss": "n.偏见；歧见",
+                "gloss": "n.偏见；成见",
                 "headwordId": "prejudice"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:resolve",
+                "surface": "resolve",
+                "gloss": "v.解决；化解；决意",
+                "headwordId": "resolve",
+                "shiftX": -18.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深层的；深刻的；深邃的",
+                "headwordId": "deep",
+                "shiftX": 18.6
+              },
+              {
+                "type": "text",
+                "text": " controversy through rational dialogue."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "When citizens cooperate with mutual trust, shared moral commitments transform into lasting social cohesion and public vitality.",
+            "chinese": "当公民以互信开展合作时，共同的道德承诺便转化为持久的社会凝聚力与公共生机。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "When citizens cooperate with mutual "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:trust",
+                "surface": "trust",
+                "gloss": "n.信任；信赖；托付",
+                "headwordId": "trust"
+              },
+              {
+                "type": "text",
+                "text": ", shared moral commitments "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transform",
+                "surface": "transform",
+                "gloss": "v.转化；转变；改变",
+                "headwordId": "transform"
+              },
+              {
+                "type": "text",
+                "text": " into lasting social "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cohesion",
+                "surface": "cohesion",
+                "gloss": "n.凝聚力；结合力",
+                "headwordId": "cohesion"
+              },
+              {
+                "type": "text",
+                "text": " and public "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:vital",
+                "surface": "vitality",
+                "gloss": "n.生机；活力；生命力",
+                "headwordId": "vital"
               },
               {
                 "type": "text",
@@ -32351,12 +32460,20 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "A harmonious community thrives when citizens cooperate with mutual trust, turning moral consensus into lasting social vitality.",
-            "chinese": "当公民以互信开展合作，将道德共识转化为持久的社会生机时，和谐社区便会欣欣向荣。",
+            "english": "Ultimately, a healthy society thrives when traditional wisdom and modern democracy collaborate, turning moral consensus into a durable pillar of collective flourishing.",
+            "chinese": "最终，当传统智慧与现代民主携手协作，将道德共识转化为集体繁荣的持久支柱时，健康的社会便会蓬勃发展。",
             "tokens": [
               {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ultimate",
+                "surface": "Ultimately",
+                "gloss": "ad.最终地；根本上地",
+                "headwordId": "ultimate"
+              },
+              {
                 "type": "text",
-                "text": "A harmonious community "
+                "text": ", a healthy society "
               },
               {
                 "type": "annotation",
@@ -32368,39 +32485,65 @@
               },
               {
                 "type": "text",
-                "text": " when citizens "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cooperate",
-                "surface": "cooperate",
-                "gloss": "v.合作；协作",
-                "headwordId": "cooperate"
-              },
-              {
-                "type": "text",
-                "text": " with mutual "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:trust",
-                "surface": "trust",
-                "gloss": "v.信任；信赖",
-                "headwordId": "trust"
-              },
-              {
-                "type": "text",
-                "text": ", turning moral consensus into lasting social "
+                "text": " when traditional wisdom and modern "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:vital",
-                "surface": "vitality",
-                "gloss": "a.核心的；至关重要的",
-                "headwordId": "vital"
+                "itemKey": "word:democracy",
+                "surface": "democracy",
+                "gloss": "n.民主；民主制度",
+                "headwordId": "democracy"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:collaborate",
+                "surface": "collaborate",
+                "gloss": "v.合作；协作；携手",
+                "headwordId": "collaborate"
+              },
+              {
+                "type": "text",
+                "text": ", turning moral consensus into a "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:durable",
+                "surface": "durable",
+                "gloss": "a.持久的；耐用的",
+                "headwordId": "durable",
+                "shiftX": -8.8
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:pillar",
+                "surface": "pillar",
+                "gloss": "n.支柱；基石；栋梁",
+                "headwordId": "pillar",
+                "shiftX": 8.8
+              },
+              {
+                "type": "text",
+                "text": " of collective "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:flourish",
+                "surface": "flourishing",
+                "gloss": "n.繁荣；蓬勃兴旺",
+                "headwordId": "flourish"
               },
               {
                 "type": "text",
@@ -32413,74 +32556,79 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "reach a consensus/unanimity",
-        "explanation": "达成共识；consensus 指团体内部广泛认可的一致意见"
+        "id": "exp-01",
+        "expression": "ethics congress / academic symposium",
+        "explanation": "伦理大会，学术研讨会；congress 熟词僻义在学术与专业语境中指大型代表大会或行业年会，而非专属国会；symposium 指专题研讨会。"
       },
       {
-        "id": "e2",
-        "expression": "in conjunction with/together with",
-        "explanation": "与...协同配合；conjunction 亦指语法中的连词"
+        "id": "exp-02",
+        "expression": "Confucian values / traditional heritage",
+        "explanation": "儒家价值观，传统文化遗产；Confucian 专指儒家的、孔子学说的；heritage 指代代相传的历史文化遗产。"
       },
       {
-        "id": "e3",
-        "expression": "hold in contempt/scorn",
-        "explanation": "对...嗤之以鼻，鄙视；contempt of court 指藐视法庭罪"
+        "id": "exp-03",
+        "expression": "conscientious leader / civic responsibility",
+        "explanation": "尽责的领导者，公民责任；conscientious 强调严谨认真且具有强烈道德是非感，非单纯勤勉；responsibility 指社会责任。"
       },
       {
-        "id": "e4",
-        "expression": "clear conscience/integrity",
-        "explanation": "问心无愧；conscience 指内心的道德良知与是非感"
+        "id": "exp-04",
+        "expression": "consult wisdom / seek counsel",
+        "explanation": "请教智慧，征询建议；consult 指正式向专家、学者请教或借鉴智慧；counsel 指专业意见或顾问指导。"
       },
       {
-        "id": "e5",
-        "expression": "conscientious worker/diligent",
-        "explanation": "勤勉尽责的员工；conscientious 强调高度责任心"
+        "id": "exp-05",
+        "expression": "consolidate consensus / unite opinions",
+        "explanation": "凝聚共识，巩固统一意见；consolidate 熟词僻义指将分散的意见或力量予以强化、整合并巩固；consensus 指全体普遍认可的共识。"
       },
       {
-        "id": "e6",
-        "expression": "confine to/restrict",
-        "explanation": "局限于，限制；be confined to bed 卧病在床"
+        "id": "exp-06",
+        "expression": "construct principles / ethical framework",
+        "explanation": "构建原则，伦理准则框架；construct 熟词僻义指在思想、制度或理论层面系统性构建，而非物理建造；framework 指行动架构。"
       },
       {
-        "id": "e7",
-        "expression": "feel content with/satisfied",
-        "explanation": "对...感到满足；content 作形容词表满足，作名词表内容"
+        "id": "exp-07",
+        "expression": "historical context / contemporary background",
+        "explanation": "历史语境，当代背景；context 强调事件或理论所处的时代背景、前后关联与具体语境，避免断章取义。"
       },
       {
-        "id": "e8",
-        "expression": "contend that/assert",
-        "explanation": "坚决主张，声称；contend for 则表示为争夺某物而竞争"
+        "id": "exp-08",
+        "expression": "contend that / assert a view",
+        "explanation": "坚决主张，声称；contend 在学术论辩中表示经过深思熟虑后坚定主张某一论点；contend with 则表示应对困境。"
       },
       {
-        "id": "e9",
-        "expression": "with consent/permission",
-        "explanation": "经同意；by common consent 经大家一致同意"
+        "id": "exp-09",
+        "expression": "consist of / comprise elements",
+        "explanation": "由…组成，在于；consist of 表示由若干部分或要素构成，通常不用被动语态；consist in 则表示“主要在于、存在于”。"
       },
       {
-        "id": "e10",
-        "expression": "constitutional amendment/charter",
-        "explanation": "宪法修正案；constitution 熟词僻义亦指人的体质"
+        "id": "exp-10",
+        "expression": "converse with / engage in dialogue",
+        "explanation": "与…交谈对话；converse 熟词僻义在正式文体中作动词指深入交谈、对话，其形容词形式 converse 则表示相反的。"
       },
       {
-        "id": "e11",
-        "expression": "conform to standards/adapt",
-        "explanation": "符合标准，遵从规章；conformity 为其名词形式"
+        "id": "exp-11",
+        "expression": "in conjunction with / joint cooperation",
+        "explanation": "与…结合协同；in conjunction with 为固定搭配，表示与某原则、机构或力量协同配合；conjunction 亦指语法中的连词。"
       },
       {
-        "id": "e12",
-        "expression": "in the context of/background",
-        "explanation": "在...的语境或背景下；context 强调事实所处的历史环境"
+        "id": "exp-12",
+        "expression": "constitutional values / legal charter",
+        "explanation": "宪法价值，法定章程；constitutional 强调符合宪法根本精神与宪政制度；constitution 兼指人体体质。"
       },
       {
-        "id": "e13",
-        "expression": "considerable progress/substantial",
-        "explanation": "可观的进展；considerable 强调数量或程度相当大"
+        "id": "exp-13",
+        "expression": "conscious of / mindful of consequences",
+        "explanation": "意识到，清醒察觉后果；conscious 指在认知与心理上清醒意识到行为的影响或潜在风险；mindful 强调留心注意。"
       },
       {
-        "id": "e14",
-        "expression": "win confidence/gain trust",
-        "explanation": "赢得信任；confidence 兼指自信心与信任感"
+        "id": "exp-14",
+        "expression": "constitute foundation / form the basis",
+        "explanation": "构成根基，奠定基础；constitute 在正式公文与哲学文体中指在本质上“构成、组成”，相当于 make up 或 form。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "conform to standards / observe rules",
+        "explanation": "遵从标准，遵守规范；conform to 指自觉遵守社会规范、法律准则或道德共识，其名词形式为 conformity。"
       }
     ],
     "coveredHeadwordIds": [
@@ -32499,62 +32647,44 @@
       "modern",
       "community",
       "confront",
-      "environment",
+      "complex",
+      "moral",
+      "controversy",
       "conflict",
       "conscientious",
-      "citizen",
+      "lead¹",
       "consult",
-      "legal",
+      "history",
+      "wise",
       "consolidate",
       "public",
       "consensus",
-      "contempt",
-      "remain",
-      "conscious",
-      "consequence",
-      "excess",
-      "resource",
-      "consume",
-      "refuse",
-      "contaminate",
-      "precious",
-      "industry",
-      "waste",
-      "conjunction",
-      "constitution",
-      "principle",
-      "lead¹",
+      "rely",
+      "sole",
+      "strict",
+      "legal",
+      "enforce",
+      "seek",
       "construct",
       "consistent",
-      "confine",
-      "pollute",
-      "conquer",
-      "share",
-      "ecology",
-      "crisis",
-      "confuse",
-      "debate",
-      "speak",
-      "confirm",
-      "confess",
-      "previous",
-      "policy",
-      "shortcoming",
-      "genuine",
-      "sincere",
-      "considerate",
-      "chairperson",
-      "congratulate",
-      "candidate",
-      "win",
-      "speech",
-      "contest",
-      "encourage",
-      "feel",
-      "content¹",
-      "honest",
-      "effort",
+      "principle",
+      "inspire",
+      "conscience",
+      "responsible",
+      "analyze",
+      "culture",
+      "context",
+      "participate",
+      "gain",
+      "considerable",
+      "confidence",
+      "philosophy",
+      "guide",
+      "daily",
+      "panel",
+      "discuss",
       "contend",
+      "endure",
       "harmony",
       "consist",
       "mutual",
@@ -32562,47 +32692,73 @@
       "conservative",
       "progress",
       "converse¹",
-      "consent",
-      "maintain",
-      "constant",
-      "contact",
-      "digit",
-      "medium",
-      "ensure",
-      "educate",
-      "program",
-      "contain",
-      "substance",
-      "history",
-      "content²",
-      "moral",
+      "sincere",
+      "conjunction",
+      "constitution",
+      "confirm",
+      "commit",
+      "civil",
+      "dialog",
+      "refuse",
+      "bitter",
+      "hostile",
+      "disrupt",
+      "rational",
+      "debate",
+      "address",
+      "collective",
+      "challenge",
+      "citizen",
+      "remain",
+      "conscious",
+      "consequence",
+      "excess",
+      "consume",
+      "self",
+      "desire",
+      "agree",
+      "confine",
+      "narrow",
+      "dispute",
+      "common",
+      "good",
+      "patient¹",
+      "diverse",
+      "reach",
+      "broad",
+      "establish",
+      "standard",
+      "cooperate",
+      "emphasis",
       "integrity",
       "constitute",
-      "conscience",
-      "inspire",
+      "inner",
+      "foundation",
       "individual",
       "conform",
-      "standard",
-      "analyze",
-      "event",
-      "proper",
-      "context",
-      "gain",
-      "considerable",
-      "confidence",
-      "challenge",
-      "communicate",
-      "patient¹",
-      "dialog",
-      "learn",
-      "diverse",
-      "opinion",
+      "share",
+      "justice",
+      "continue",
+      "educate",
+      "effort",
+      "constant",
+      "exchange",
+      "help",
       "eliminate",
       "prejudice",
-      "thrive",
-      "cooperate",
+      "resolve",
+      "deep",
       "trust",
-      "vital"
+      "transform",
+      "cohesion",
+      "vital",
+      "ultimate",
+      "thrive",
+      "democracy",
+      "collaborate",
+      "durable",
+      "pillar",
+      "flourish"
     ],
     "hasOutOfSyllabusWords": false
   },

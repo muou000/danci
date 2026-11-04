@@ -2064,6 +2064,133 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 17 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 17');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('现代社会伦理、儒家思想与公共协商共识');
+    expect(passage!.titleEn).toBe(
+      'Modern Social Ethics, Confucian Heritage, and Civic Consensus'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('congratulate');
+    expect(compiled.coveredHeadwordIds).not.toContain('contest');
+    expect(compiled.coveredHeadwordIds).not.toContain('contempt');
+    expect(compiled.coveredHeadwordIds).not.toContain('confess');
+    expect(compiled.coveredHeadwordIds).not.toContain('conquer');
+    expect(compiled.coveredHeadwordIds).not.toContain('confuse');
+    expect(compiled.coveredHeadwordIds).not.toContain('contaminate');
+
+    // 验证现代社会伦理、儒家思想与公共协商共识主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'traditional Confucian values connect with contemporary society'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'conscientious leaders consult historical wisdom to consolidate public consensus'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'conservative and progressive voices converse with sincere respect'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'refusing to let bitter hostility disrupt rational debate'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'agreeing to confine narrow disputes for the common good'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'moral integrity constitutes the inner foundation of good citizenship'
+    );
+    expect(passage!.paragraphs[2].sentences[3].english).toContain(
+      'turning moral consensus into a durable pillar of collective flourishing'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('congress');
+    expect(compiled.coveredHeadwordIds).toContain('consider');
+    expect(compiled.coveredHeadwordIds).toContain('Confucian');
+    expect(compiled.coveredHeadwordIds).toContain('connect');
+    expect(compiled.coveredHeadwordIds).toContain('contemporary');
+    expect(compiled.coveredHeadwordIds).toContain('confront');
+    expect(compiled.coveredHeadwordIds).toContain('conflict');
+    expect(compiled.coveredHeadwordIds).toContain('conscientious');
+    expect(compiled.coveredHeadwordIds).toContain('consult');
+    expect(compiled.coveredHeadwordIds).toContain('consolidate');
+    expect(compiled.coveredHeadwordIds).toContain('consensus');
+    expect(compiled.coveredHeadwordIds).toContain('conscious');
+    expect(compiled.coveredHeadwordIds).toContain('consequence');
+    expect(compiled.coveredHeadwordIds).toContain('consume');
+    expect(compiled.coveredHeadwordIds).toContain('conjunction');
+    expect(compiled.coveredHeadwordIds).toContain('constitution');
+    expect(compiled.coveredHeadwordIds).toContain('construct');
+    expect(compiled.coveredHeadwordIds).toContain('consistent');
+    expect(compiled.coveredHeadwordIds).toContain('confine');
+    expect(compiled.coveredHeadwordIds).toContain('confirm');
+    expect(compiled.coveredHeadwordIds).toContain('contend');
+    expect(compiled.coveredHeadwordIds).toContain('consist');
+    expect(compiled.coveredHeadwordIds).toContain('conservative');
+    expect(compiled.coveredHeadwordIds).toContain('converse¹');
+    expect(compiled.coveredHeadwordIds).toContain('constant');
+    expect(compiled.coveredHeadwordIds).toContain('constitute');
+    expect(compiled.coveredHeadwordIds).toContain('conscience');
+    expect(compiled.coveredHeadwordIds).toContain('conform');
+    expect(compiled.coveredHeadwordIds).toContain('context');
+    expect(compiled.coveredHeadwordIds).toContain('considerable');
+    expect(compiled.coveredHeadwordIds).toContain('confidence');
+    expect(compiled.coveredHeadwordIds).toContain('controversy');
+    expect(compiled.coveredHeadwordIds).toContain('cooperate');
+    expect(compiled.coveredHeadwordIds).toContain('collaborate');
+    expect(compiled.coveredHeadwordIds).toContain('cohesion');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'ethic'],
+      [0, 1, 'public'],
+      [1, 0, 'panel'],
+      [1, 1, 'constitution'],
+      [2, 1, 'continue'],
+      [2, 1, 'educate'],
+      [0, 3, 'culture'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
