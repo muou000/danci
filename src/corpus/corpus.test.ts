@@ -2329,6 +2329,172 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 20 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 20');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('现代数字健康管理、日常预防医疗与身心平衡');
+    expect(passage!.titleEn).toBe(
+      'Digital Health Technologies, Everyday Preventive Care, and Well-being'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证彻底剔除旧版拼凑的割裂生硬词
+    expect(compiled.coveredHeadwordIds).not.toContain('cucumber');
+    expect(compiled.coveredHeadwordIds).not.toContain('cupboard');
+    expect(compiled.coveredHeadwordIds).not.toContain('cushion');
+    expect(compiled.coveredHeadwordIds).not.toContain('curve');
+    expect(compiled.coveredHeadwordIds).not.toContain('crush');
+    expect(compiled.coveredHeadwordIds).not.toContain('cute');
+    expect(compiled.coveredHeadwordIds).not.toContain('curl');
+    expect(compiled.coveredHeadwordIds).not.toContain('dam');
+    expect(compiled.coveredHeadwordIds).not.toContain('darling');
+    expect(compiled.coveredHeadwordIds).not.toContain('curse');
+    expect(compiled.coveredHeadwordIds).not.toContain('dash');
+    expect(compiled.coveredHeadwordIds).not.toContain('cry');
+    expect(compiled.coveredHeadwordIds).not.toContain('lace');
+    expect(compiled.coveredHeadwordIds).not.toContain('dairy');
+    expect(compiled.coveredHeadwordIds).not.toContain('cube');
+    expect(compiled.coveredHeadwordIds).not.toContain('damn');
+
+    // 验证现代数字健康管理与预防医疗的地道搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'heavy desk duties often disrupt natural biological cycles'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'creating persistent health deficits that curb daily vitality'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'feeling dizzy, digestive disorders, or severe stress'
+    );
+    expect(passage!.paragraphs[0].sentences[3].english).toContain(
+      'demonstrate the urgent necessity of defining preventive health habits'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'devise intelligent platforms and digital devices'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'detect sudden fluctuations and deliver timely cues'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'diagnose potential health risks, prescribe balanced diet plans'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'converting complex records into direct, practical insights'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'requires a deliberate shift in perspective'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'defend against sudden illness, defeat bodily decay'
+    );
+    expect(passage!.paragraphs[2].sentences[3].english).toContain(
+      'durable foundation for human dignity'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('digit');
+    expect(compiled.coveredHeadwordIds).toContain('disrupt');
+    expect(compiled.coveredHeadwordIds).toContain('cycle');
+    expect(compiled.coveredHeadwordIds).toContain('fatigue');
+    expect(compiled.coveredHeadwordIds).toContain('distress');
+    expect(compiled.coveredHeadwordIds).toContain('confront');
+    expect(compiled.coveredHeadwordIds).toContain('irregular');
+    expect(compiled.coveredHeadwordIds).toContain('diet');
+    expect(compiled.coveredHeadwordIds).toContain('deficit');
+    expect(compiled.coveredHeadwordIds).toContain('curb');
+    expect(compiled.coveredHeadwordIds).toContain('daily');
+    expect(compiled.coveredHeadwordIds).toContain('vital');
+    expect(compiled.coveredHeadwordIds).toContain('dizzy');
+    expect(compiled.coveredHeadwordIds).toContain('digest');
+    expect(compiled.coveredHeadwordIds).toContain('disorder');
+    expect(compiled.coveredHeadwordIds).toContain('deteriorate');
+    expect(compiled.coveredHeadwordIds).toContain('demonstrate');
+    expect(compiled.coveredHeadwordIds).toContain('urgent');
+    expect(compiled.coveredHeadwordIds).toContain('necessity');
+    expect(compiled.coveredHeadwordIds).toContain('define');
+    expect(compiled.coveredHeadwordIds).toContain('prevent');
+    expect(compiled.coveredHeadwordIds).toContain('exhaust');
+    expect(compiled.coveredHeadwordIds).toContain('disease');
+    expect(compiled.coveredHeadwordIds).toContain('dilemma');
+    expect(compiled.coveredHeadwordIds).toContain('devise');
+    expect(compiled.coveredHeadwordIds).toContain('intelligent');
+    expect(compiled.coveredHeadwordIds).toContain('platform');
+    expect(compiled.coveredHeadwordIds).toContain('device');
+    expect(compiled.coveredHeadwordIds).toContain('database');
+    expect(compiled.coveredHeadwordIds).toContain('detect');
+    expect(compiled.coveredHeadwordIds).toContain('fluctuate');
+    expect(compiled.coveredHeadwordIds).toContain('deliver');
+    expect(compiled.coveredHeadwordIds).toContain('cue');
+    expect(compiled.coveredHeadwordIds).toContain('diagnose');
+    expect(compiled.coveredHeadwordIds).toContain('prescribe');
+    expect(compiled.coveredHeadwordIds).toContain('dynamic');
+    expect(compiled.coveredHeadwordIds).toContain('convert');
+    expect(compiled.coveredHeadwordIds).toContain('insight');
+    expect(compiled.coveredHeadwordIds).toContain('deliberate');
+    expect(compiled.coveredHeadwordIds).toContain('shift');
+    expect(compiled.coveredHeadwordIds).toContain('perspective');
+    expect(compiled.coveredHeadwordIds).toContain('devote');
+    expect(compiled.coveredHeadwordIds).toContain('discourage');
+    expect(compiled.coveredHeadwordIds).toContain('discipline');
+    expect(compiled.coveredHeadwordIds).toContain('defend');
+    expect(compiled.coveredHeadwordIds).toContain('defeat');
+    expect(compiled.coveredHeadwordIds).toContain('decay');
+    expect(compiled.coveredHeadwordIds).toContain('decrease');
+    expect(compiled.coveredHeadwordIds).toContain('durable');
+    expect(compiled.coveredHeadwordIds).toContain('dignity');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'digit'],
+      [0, 0, 'biology'],
+      [0, 1, 'screen'],
+      [0, 2, 'digest'],
+      [0, 3, 'clinic'],
+      [0, 3, 'prevent'],
+      [1, 2, 'balance'],
+      [2, 0, 'deliberate'],
+      [2, 1, 'support'],
+      [2, 2, 'discipline'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 

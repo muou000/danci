@@ -856,18 +856,18 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('button', {
-        name: /^NO\. 20.*数字生活赋能与现代日常文化/,
+        name: /^NO\. 20.*现代数字健康管理、日常预防医疗与身心平衡/,
       })
     ).toBeInTheDocument();
 
     // Navigate to NO. 20
     await user.click(
       screen.getByRole('button', {
-        name: /^NO\. 20.*数字生活赋能与现代日常文化/,
+        name: /^NO\. 20.*现代数字健康管理、日常预防医疗与身心平衡/,
       })
     );
     expect(
-      screen.getByRole('heading', { name: /数字生活赋能与现代日常文化/ })
+      screen.getByRole('heading', { name: /现代数字健康管理、日常预防医疗与身心平衡/ })
     ).toBeInTheDocument();
   });
 });
