@@ -2329,6 +2329,166 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 19 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 19');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('海洋科学考察、极地生态危机与科研实证评估');
+    expect(passage!.titleEn).toBe(
+      'Polar Marine Expeditions, Ecological Crisis Response, and Empirical Scientific Assessment'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证彻底剔除旧版拼凑的割裂生硬词
+    expect(compiled.coveredHeadwordIds).not.toContain('cracker');
+    expect(compiled.coveredHeadwordIds).not.toContain('cream');
+    expect(compiled.coveredHeadwordIds).not.toContain('cowboy');
+    expect(compiled.coveredHeadwordIds).not.toContain('coupon');
+    expect(compiled.coveredHeadwordIds).not.toContain('crocodile');
+    expect(compiled.coveredHeadwordIds).not.toContain('crab');
+    expect(compiled.coveredHeadwordIds).not.toContain('crawl');
+    expect(compiled.coveredHeadwordIds).not.toContain('creep');
+    expect(compiled.coveredHeadwordIds).not.toContain('crane');
+    expect(compiled.coveredHeadwordIds).not.toContain('coward');
+    expect(compiled.coveredHeadwordIds).not.toContain('crazy');
+    expect(compiled.coveredHeadwordIds).not.toContain('crown');
+
+    // 验证极地海洋科考、生态危机应对与科研实证评估的地道搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'launches an ambitious marine cruise'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'research craft equipped with vital sailing gear'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'survey shallow bays and cross deep polar zones'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'triggers sudden ecological disruptions'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'ice shelves crack along the coast'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'falling ice blocks crash violently into the freezing ocean'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'maintain professional courage'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'apply strict objective criteria to assess oceanic fluctuations'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'collaborating closely with international counterparts'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'crucial to overcome global ecological challenges and sustain marine heritage'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('crew');
+    expect(compiled.coveredHeadwordIds).toContain('cruise');
+    expect(compiled.coveredHeadwordIds).toContain('course');
+    expect(compiled.coveredHeadwordIds).toContain('craft');
+    expect(compiled.coveredHeadwordIds).toContain('creature');
+    expect(compiled.coveredHeadwordIds).toContain('crack');
+    expect(compiled.coveredHeadwordIds).toContain('crash');
+    expect(compiled.coveredHeadwordIds).toContain('courage');
+    expect(compiled.coveredHeadwordIds).toContain('crisis');
+    expect(compiled.coveredHeadwordIds).toContain('criterion');
+    expect(compiled.coveredHeadwordIds).toContain('criticize');
+    expect(compiled.coveredHeadwordIds).toContain('crucial');
+    expect(compiled.coveredHeadwordIds).toContain('counterpart');
+    expect(compiled.coveredHeadwordIds).toContain('cross');
+    expect(compiled.coveredHeadwordIds).toContain('create');
+    expect(compiled.coveredHeadwordIds).toContain('credit');
+    expect(compiled.coveredHeadwordIds).toContain('marine');
+    expect(compiled.coveredHeadwordIds).toContain('harbor');
+    expect(compiled.coveredHeadwordIds).toContain('adventure');
+    expect(compiled.coveredHeadwordIds).toContain('vital');
+    expect(compiled.coveredHeadwordIds).toContain('gear');
+    expect(compiled.coveredHeadwordIds).toContain('survey');
+    expect(compiled.coveredHeadwordIds).toContain('shallow');
+    expect(compiled.coveredHeadwordIds).toContain('delicate');
+    expect(compiled.coveredHeadwordIds).toContain('specimen');
+    expect(compiled.coveredHeadwordIds).toContain('strict');
+    expect(compiled.coveredHeadwordIds).toContain('environment');
+    expect(compiled.coveredHeadwordIds).toContain('guideline');
+    expect(compiled.coveredHeadwordIds).toContain('observe');
+    expect(compiled.coveredHeadwordIds).toContain('rare');
+    expect(compiled.coveredHeadwordIds).toContain('habitat');
+    expect(compiled.coveredHeadwordIds).toContain('regulate');
+    expect(compiled.coveredHeadwordIds).toContain('vulnerable');
+    expect(compiled.coveredHeadwordIds).toContain('species');
+    expect(compiled.coveredHeadwordIds).toContain('rapid');
+    expect(compiled.coveredHeadwordIds).toContain('climate');
+    expect(compiled.coveredHeadwordIds).toContain('disrupt');
+    expect(compiled.coveredHeadwordIds).toContain('alarm');
+    expect(compiled.coveredHeadwordIds).toContain('sensitive');
+    expect(compiled.coveredHeadwordIds).toContain('shelf');
+    expect(compiled.coveredHeadwordIds).toContain('threat');
+    expect(compiled.coveredHeadwordIds).toContain('emergency');
+    expect(compiled.coveredHeadwordIds).toContain('deck');
+    expect(compiled.coveredHeadwordIds).toContain('discipline');
+    expect(compiled.coveredHeadwordIds).toContain('protect');
+    expect(compiled.coveredHeadwordIds).toContain('hazard');
+    expect(compiled.coveredHeadwordIds).toContain('collaborate');
+    expect(compiled.coveredHeadwordIds).toContain('overcome');
+    expect(compiled.coveredHeadwordIds).toContain('sustain');
+    expect(compiled.coveredHeadwordIds).toContain('heritage');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'coast'],
+      [0, 0, 'science'],
+      [0, 0, 'marine'],
+      [0, 1, 'research'],
+      [0, 1, 'sail'],
+      [0, 1, 'pole'],
+      [0, 2, 'environment'],
+      [1, 0, 'ecology'],
+      [1, 2, 'protect'],
+      [2, 1, 'international'],
+      [2, 3, 'joint'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心篇 NO. 20 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 20');
     expect(passage).toBeDefined();

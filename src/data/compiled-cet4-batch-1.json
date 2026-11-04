@@ -34811,9 +34811,9 @@
     "id": "cet4-b1-019",
     "indexLabel": "NO. 19",
     "tier": "cet4-core",
-    "topic": "青年海洋航行探险、生态危机与批判性思维",
-    "titleZh": "青年海洋探险、生态危机与批判思维",
-    "titleEn": "Marine Exploration, Ecological Crises, and Critical Thinking",
+    "topic": "海洋科学考察、极地生态危机与科研实证评估",
+    "titleZh": "极地海洋科考、生态危机应对与科研实证评估",
+    "titleEn": "Polar Marine Expeditions, Ecological Crisis Response, and Empirical Scientific Assessment",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -34821,20 +34821,21 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "From a quiet countryside county, an adventurous ship crew begins a daring marine cruise across open waters.",
-            "chinese": "从一个宁静的乡村小县出发，一支具有冒险精神的船员队伍开始了穿越辽阔水域的勇敢海上航行。",
+            "english": "Leaving a busy coastal harbor behind, an adventurous scientific crew launches an ambitious marine cruise across remote northern courses.",
+            "chinese": "告别繁忙的海岸港口，一支富有探索精神的科考队伍开启了一场宏大的海洋巡航，穿越遥远的北方航线。",
             "tokens": [
               {
                 "type": "text",
-                "text": "From a quiet "
+                "text": "Leaving a "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:countryside",
-                "surface": "countryside",
-                "gloss": "n.农村；乡下",
-                "headwordId": "countryside"
+                "itemKey": "word:busy",
+                "surface": "busy",
+                "gloss": "a.繁忙的；忙碌的",
+                "headwordId": "busy",
+                "shiftX": -13.4
               },
               {
                 "type": "text",
@@ -34843,47 +34844,102 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:county",
-                "surface": "county",
-                "gloss": "n.县；郡",
-                "headwordId": "county"
+                "itemKey": "word:coast",
+                "surface": "coastal",
+                "gloss": "a.沿海的；海岸的",
+                "headwordId": "coast",
+                "shiftX": 4.6
               },
               {
                 "type": "text",
-                "text": ", an "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:harbor",
+                "surface": "harbor",
+                "gloss": "n.海港；避风港",
+                "headwordId": "harbor",
+                "shiftX": 8.8
+              },
+              {
+                "type": "text",
+                "text": " behind, an "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:adventure",
                 "surface": "adventurous",
-                "gloss": "a.具有冒险精神的；大胆的",
-                "headwordId": "adventure"
+                "gloss": "a.富有冒险精神的；大胆的",
+                "headwordId": "adventure",
+                "shiftX": -5.8
               },
               {
                 "type": "text",
-                "text": " ship "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:science",
+                "surface": "scientific",
+                "gloss": "a.科学的；科研的",
+                "headwordId": "science",
+                "shiftX": -15.4
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:crew",
                 "surface": "crew",
-                "gloss": "n.全体船员；乘务员",
-                "headwordId": "crew"
+                "gloss": "n.全体船员；科考队伍",
+                "headwordId": "crew",
+                "shiftX": -4
               },
               {
                 "type": "text",
-                "text": " begins a daring "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:launch",
+                "surface": "launches",
+                "gloss": "v.发起；开启；发射",
+                "headwordId": "launch",
+                "shiftX": 16
+              },
+              {
+                "type": "text",
+                "text": " an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ambition",
+                "surface": "ambitious",
+                "gloss": "a.宏大的；雄心勃勃的",
+                "headwordId": "ambition",
+                "shiftX": -7.7
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:marine",
                 "surface": "marine",
-                "gloss": "a.海上的；海洋的",
+                "gloss": "a.海洋的；海上的",
                 "headwordId": "marine",
-                "shiftX": -6.3
+                "shiftX": -2.2
               },
               {
                 "type": "text",
@@ -34894,33 +34950,54 @@
                 "category": "regular",
                 "itemKey": "word:cruise",
                 "surface": "cruise",
-                "gloss": "n.乘船游览；巡航",
+                "gloss": "n.海上巡航；乘船游览",
                 "headwordId": "cruise",
-                "shiftX": 6.3
+                "shiftX": 19.1
               },
               {
                 "type": "text",
-                "text": " across open waters."
+                "text": " across "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:remote",
+                "surface": "remote",
+                "gloss": "a.遥远的；偏僻的",
+                "headwordId": "remote"
+              },
+              {
+                "type": "text",
+                "text": " northern "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:course",
+                "surface": "courses",
+                "gloss": "n.航线；航道；进程",
+                "headwordId": "course"
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           },
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "As the final countdown begins at the port service counter, a young couple leaves the dock courtyard holding a discount coupon.",
-            "chinese": "当港口服务柜台开始最后的倒计时，一对年轻夫妇拿着折扣券离开了码头庭院。",
+            "english": "Operating aboard an advanced research craft equipped with vital sailing gear, marine biologists survey shallow bays and cross deep polar zones to collect delicate biological specimens.",
+            "chinese": "他们在一艘配备了核心航行装备的先进科考船上开展作业，海洋生物学家考察浅水海湾并穿越极地深水区，以采集脆弱的生物标本。",
             "tokens": [
               {
-                "type": "text",
-                "text": "As the "
-              },
-              {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:final",
-                "surface": "final",
-                "gloss": "a.最后的；最终的",
-                "headwordId": "final"
+                "itemKey": "word:operate",
+                "surface": "Operating",
+                "gloss": "v.运转；开展作业；操作",
+                "headwordId": "operate",
+                "shiftX": -6
               },
               {
                 "type": "text",
@@ -34929,22 +35006,23 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:countdown",
-                "surface": "countdown",
-                "gloss": "n.倒计时；倒数",
-                "headwordId": "countdown"
+                "itemKey": "word:aboard",
+                "surface": "aboard",
+                "gloss": "prep.在船上；上船",
+                "headwordId": "aboard",
+                "shiftX": 6
               },
               {
                 "type": "text",
-                "text": " begins at the "
+                "text": " an "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:port",
-                "surface": "port",
-                "gloss": "n.港口；口岸",
-                "headwordId": "port"
+                "category": "high-frequency",
+                "itemKey": "word:advance",
+                "surface": "advanced",
+                "gloss": "a.先进的；高级的",
+                "headwordId": "advance"
               },
               {
                 "type": "text",
@@ -34953,10 +35031,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:serve",
-                "surface": "service",
-                "gloss": "v.摆上；端上",
-                "headwordId": "serve"
+                "itemKey": "word:research",
+                "surface": "research",
+                "gloss": "a.研发的；研究的",
+                "headwordId": "research",
+                "shiftX": -8.8
               },
               {
                 "type": "text",
@@ -34965,46 +35044,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:counter",
-                "surface": "counter",
-                "gloss": "n.柜台；计数器",
-                "headwordId": "counter"
-              },
-              {
-                "type": "text",
-                "text": ", a young "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:couple",
-                "surface": "couple",
-                "gloss": "n.一对；夫妇",
-                "headwordId": "couple"
-              },
-              {
-                "type": "text",
-                "text": " leaves the "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:dock",
-                "surface": "dock",
-                "gloss": "n.码头；船坞",
-                "headwordId": "dock"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:courtyard",
-                "surface": "courtyard",
-                "gloss": "n.庭院；院子",
-                "headwordId": "courtyard"
+                "itemKey": "word:craft",
+                "surface": "craft",
+                "gloss": "n.船只；工艺；手艺",
+                "headwordId": "craft",
+                "shiftX": -2.2
               },
               {
                 "type": "text",
@@ -35013,22 +35057,24 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:hold",
-                "surface": "holding",
-                "gloss": "v.举行；拥有",
-                "headwordId": "hold"
+                "itemKey": "word:equip",
+                "surface": "equipped",
+                "gloss": "v.配备；装备",
+                "headwordId": "equip",
+                "shiftX": -2.7
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " with "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:discount",
-                "surface": "discount",
-                "gloss": "n.折扣；减价",
-                "headwordId": "discount"
+                "category": "high-frequency",
+                "itemKey": "word:vital",
+                "surface": "vital",
+                "gloss": "a.极其重要的；生死攸关的",
+                "headwordId": "vital",
+                "shiftX": -28.9
               },
               {
                 "type": "text",
@@ -35037,10 +35083,166 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:coupon",
-                "surface": "coupon",
-                "gloss": "n.礼券；优惠券",
-                "headwordId": "coupon"
+                "itemKey": "word:sail",
+                "surface": "sailing",
+                "gloss": "a.航行的；航海的",
+                "headwordId": "sail",
+                "shiftX": 8.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:gear",
+                "surface": "gear",
+                "gloss": "n.装备；器械；齿轮",
+                "headwordId": "gear",
+                "shiftX": 31.8
+              },
+              {
+                "type": "text",
+                "text": ", marine "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:biology",
+                "surface": "biologists",
+                "gloss": "n.生物学家；生物学者",
+                "headwordId": "biology",
+                "shiftX": -20
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:survey",
+                "surface": "survey",
+                "gloss": "v.勘测；调查；全面审视",
+                "headwordId": "survey",
+                "shiftX": -4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:shallow",
+                "surface": "shallow",
+                "gloss": "a.浅的；浅显的",
+                "headwordId": "shallow",
+                "shiftX": 6.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:bay",
+                "surface": "bays",
+                "gloss": "n.海湾；湾",
+                "headwordId": "bay",
+                "shiftX": -1.4
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:cross",
+                "surface": "cross",
+                "gloss": "v.跨越；穿过；穿越",
+                "headwordId": "cross",
+                "shiftX": -29.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深的；深奥的",
+                "headwordId": "deep",
+                "shiftX": -15.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:pole",
+                "surface": "polar",
+                "gloss": "a.极地的；两极的",
+                "headwordId": "pole",
+                "shiftX": -0.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:zone",
+                "surface": "zones",
+                "gloss": "n.地带；区域；范围",
+                "headwordId": "zone",
+                "shiftX": 18.5
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:collect",
+                "surface": "collect",
+                "gloss": "v.采集；收集；聚集",
+                "headwordId": "collect",
+                "shiftX": 12
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:delicate",
+                "surface": "delicate",
+                "gloss": "a.脆弱的；娇嫩的；精细的",
+                "headwordId": "delicate",
+                "shiftX": 36.3
+              },
+              {
+                "type": "text",
+                "text": " biological "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:specimen",
+                "surface": "specimens",
+                "gloss": "n.标本；样本",
+                "headwordId": "specimen"
               },
               {
                 "type": "text",
@@ -35051,20 +35253,20 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "A cheerful traveler snacks on a cracker spread with milk cream, while a daring cowboy starts a traditional folk song.",
-            "chinese": "一位欢快的旅行者享用着涂抹了牛奶奶油的薄饼，而一位大胆的牛仔唱起了一首传统民谣。",
+            "english": "Under strict environmental guidelines, the team observes rare marine creatures in their natural habitats, recording how seasonal sea ice regulates vulnerable ocean species beneath the waves.",
+            "chinese": "在严格的环境准则指引下，团队观察了处于自然栖息地的珍稀海洋生物，记录了季节性海冰如何调节海浪之下脆弱的海洋物种。",
             "tokens": [
               {
                 "type": "text",
-                "text": "A "
+                "text": "Under "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cheer",
-                "surface": "cheerful",
-                "gloss": "v.欢呼；喝彩",
-                "headwordId": "cheer"
+                "itemKey": "word:strict",
+                "surface": "strict",
+                "gloss": "a.严格的；精确的",
+                "headwordId": "strict"
               },
               {
                 "type": "text",
@@ -35073,85 +35275,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:travel",
-                "surface": "traveler",
-                "gloss": "n.旅行者；游客",
-                "headwordId": "travel",
-                "shiftX": -1.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:snack",
-                "surface": "snacks",
-                "gloss": "v.享用小吃；吃点心",
-                "headwordId": "snack",
-                "shiftX": 1.9
-              },
-              {
-                "type": "text",
-                "text": " on a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cracker",
-                "surface": "cracker",
-                "gloss": "n.薄脆饼干；爆竹",
-                "headwordId": "cracker"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:spread",
-                "surface": "spread",
-                "gloss": "v.涂抹；铺开",
-                "headwordId": "spread"
-              },
-              {
-                "type": "text",
-                "text": " with milk "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cream",
-                "surface": "cream",
-                "gloss": "n.奶油；乳脂",
-                "headwordId": "cream"
-              },
-              {
-                "type": "text",
-                "text": ", while a daring "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cowboy",
-                "surface": "cowboy",
-                "gloss": "n.牛仔；牧童",
-                "headwordId": "cowboy"
-              },
-              {
-                "type": "text",
-                "text": " starts a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:tradition",
-                "surface": "traditional",
-                "gloss": "a.传统的；惯例的",
-                "headwordId": "tradition",
-                "shiftX": -2.5
+                "itemKey": "word:environment",
+                "surface": "environmental",
+                "gloss": "a.环境的；有关环境的",
+                "headwordId": "environment"
               },
               {
                 "type": "text",
@@ -35160,121 +35287,27 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:folk",
-                "surface": "folk",
-                "gloss": "a.民间的；民谣的",
-                "headwordId": "folk",
-                "shiftX": 2.5
+                "itemKey": "word:guideline",
+                "surface": "guidelines",
+                "gloss": "n.指导方针；准则",
+                "headwordId": "guideline"
               },
               {
                 "type": "text",
-                "text": " song."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Guided by clear sailing courses, their craft sails past a coastal reserve where a small crab and rare creature crawl through marsh mud.",
-            "chinese": "在清晰航海航线的指引下，他们的小船驶过一个海岸保护区，那里一只小螃蟹和罕见的生物在沼泽泥地中爬行。",
-            "tokens": [
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:guide",
-                "surface": "Guided",
-                "gloss": "n.导游者；领路者",
-                "headwordId": "guide"
-              },
-              {
-                "type": "text",
-                "text": " by clear "
+                "text": ", the team "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sail",
-                "surface": "sailing",
-                "gloss": "v.航行；驶过",
-                "headwordId": "sail"
+                "category": "high-frequency",
+                "itemKey": "word:observe",
+                "surface": "observes",
+                "gloss": "v.观察；注意到；遵守",
+                "headwordId": "observe",
+                "shiftX": -9.3
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:course",
-                "surface": "courses",
-                "gloss": "n.航线；课程",
-                "headwordId": "course"
-              },
-              {
-                "type": "text",
-                "text": ", their "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:craft",
-                "surface": "craft",
-                "gloss": "n.船只；工艺",
-                "headwordId": "craft"
-              },
-              {
-                "type": "text",
-                "text": " sails past a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:coast",
-                "surface": "coastal",
-                "gloss": "n.海岸；海滨",
-                "headwordId": "coast"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:reserve",
-                "surface": "reserve",
-                "gloss": "n.保护区；储备",
-                "headwordId": "reserve"
-              },
-              {
-                "type": "text",
-                "text": " where a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:small",
-                "surface": "small",
-                "gloss": "a.小的；幼小的",
-                "headwordId": "small",
-                "shiftX": -6.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:crab",
-                "surface": "crab",
-                "gloss": "n.螃蟹；蟹肉",
-                "headwordId": "crab",
-                "shiftX": 6.8
-              },
-              {
-                "type": "text",
-                "text": " and "
               },
               {
                 "type": "annotation",
@@ -35283,20 +35316,32 @@
                 "surface": "rare",
                 "gloss": "a.罕见的；珍稀的",
                 "headwordId": "rare",
-                "shiftX": -1.2
+                "shiftX": 9.3
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " marine "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:creature",
-                "surface": "creature",
+                "surface": "creatures",
                 "gloss": "n.生物；动物",
-                "headwordId": "creature",
-                "shiftX": 1.3
+                "headwordId": "creature"
+              },
+              {
+                "type": "text",
+                "text": " in their "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:nature",
+                "surface": "natural",
+                "gloss": "a.自然的；天然的",
+                "headwordId": "nature",
+                "shiftX": -2.7
               },
               {
                 "type": "text",
@@ -35305,23 +35350,60 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:crawl",
-                "surface": "crawl",
-                "gloss": "v.爬行；缓慢行进",
-                "headwordId": "crawl"
+                "itemKey": "word:habitat",
+                "surface": "habitats",
+                "gloss": "n.栖息地；生长环境",
+                "headwordId": "habitat",
+                "shiftX": 2.7
               },
               {
                 "type": "text",
-                "text": " through "
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:record",
+                "surface": "recording",
+                "gloss": "v.记录；记载",
+                "headwordId": "record"
+              },
+              {
+                "type": "text",
+                "text": " how seasonal sea ice "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:regulate",
+                "surface": "regulates",
+                "gloss": "v.调节；控制；规范",
+                "headwordId": "regulate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:vulnerable",
+                "surface": "vulnerable",
+                "gloss": "a.易受伤害的；脆弱的",
+                "headwordId": "vulnerable"
+              },
+              {
+                "type": "text",
+                "text": " ocean "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:marsh",
-                "surface": "marsh",
-                "gloss": "n.沼泽；湿地",
-                "headwordId": "marsh",
-                "shiftX": -3.6
+                "itemKey": "word:species",
+                "surface": "species",
+                "gloss": "n.物种；种类",
+                "headwordId": "species",
+                "shiftX": -4.3
               },
               {
                 "type": "text",
@@ -35330,11 +35412,23 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:mud",
-                "surface": "mud",
-                "gloss": "n.泥地；烂泥",
-                "headwordId": "mud",
-                "shiftX": 3.6
+                "itemKey": "word:beneath",
+                "surface": "beneath",
+                "gloss": "prep.在…之下；在正下方",
+                "headwordId": "beneath",
+                "shiftX": 4.3
+              },
+              {
+                "type": "text",
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:wave",
+                "surface": "waves",
+                "gloss": "n.波浪；海浪；波动",
+                "headwordId": "wave"
               },
               {
                 "type": "text",
@@ -35350,137 +35444,51 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "A tall harbor crane moves cargo from a safe distance, far from any fierce crocodile that might creep along the river bank.",
-            "chinese": "高大的港口起重机在安全距离外卸载货物，远离任何可能沿着河岸爬行的凶猛鳄鱼。",
+            "english": "However, rapid climate warming triggers sudden ecological disruptions, creating an alarming crisis throughout sensitive coastal waters.",
+            "chinese": "然而，急剧的气候变暖引发了突发的生态扰乱，在敏感的沿海水域中酿成了一场令人担忧的危机。",
             "tokens": [
               {
                 "type": "text",
-                "text": "A "
+                "text": "However, "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:tall",
-                "surface": "tall",
-                "gloss": "a.高的；身材高的",
-                "headwordId": "tall",
-                "shiftX": -14.5
+                "itemKey": "word:rapid",
+                "surface": "rapid",
+                "gloss": "a.快速的；迅捷的",
+                "headwordId": "rapid",
+                "shiftX": -2.9
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:harbor",
-                "surface": "harbor",
-                "gloss": "n.海港；避风港",
-                "headwordId": "harbor",
-                "shiftX": 5.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:crane",
-                "surface": "crane",
-                "gloss": "n.起重机；鹤",
-                "headwordId": "crane",
-                "shiftX": 8.7
-              },
-              {
-                "type": "text",
-                "text": " moves "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cargo",
-                "surface": "cargo",
-                "gloss": "n.货物；船货",
-                "headwordId": "cargo"
-              },
-              {
-                "type": "text",
-                "text": " from a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:safe",
-                "surface": "safe",
-                "gloss": "a.安全的；稳妥的",
-                "headwordId": "safe",
-                "shiftX": -2.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:distance",
-                "surface": "distance",
-                "gloss": "n.距离；远处",
-                "headwordId": "distance",
-                "shiftX": 2.3
-              },
-              {
-                "type": "text",
-                "text": ", far from any "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:fierce",
-                "surface": "fierce",
-                "gloss": "a.凶猛的；狂暴的",
-                "headwordId": "fierce"
+                "itemKey": "word:climate",
+                "surface": "climate",
+                "gloss": "n.气候；风气",
+                "headwordId": "climate",
+                "shiftX": 2.9
+              },
+              {
+                "type": "text",
+                "text": " warming "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:trigger",
+                "surface": "triggers",
+                "gloss": "v.引发；触发；引起",
+                "headwordId": "trigger",
+                "shiftX": -5.4
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:crocodile",
-                "surface": "crocodile",
-                "gloss": "n.鳄鱼；鳄鱼皮",
-                "headwordId": "crocodile"
-              },
-              {
-                "type": "text",
-                "text": " that might "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:creep",
-                "surface": "creep",
-                "gloss": "v.悄悄行进；爬行",
-                "headwordId": "creep"
-              },
-              {
-                "type": "text",
-                "text": " along the river bank."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "When a sudden storm threatens to crash against the wooden ship and crack the deck, no coward flees his post.",
-            "chinese": "当突发的暴风雨威胁要撞击木质船体并使甲板开裂时，没有一个懦夫擅离职守。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "When a "
               },
               {
                 "type": "annotation",
@@ -35489,7 +35497,7 @@
                 "surface": "sudden",
                 "gloss": "a.突发的；突然的",
                 "headwordId": "sudden",
-                "shiftX": -4.5
+                "shiftX": 1.4
               },
               {
                 "type": "text",
@@ -35498,11 +35506,11 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:storm",
-                "surface": "storm",
-                "gloss": "n.暴风雨；风暴",
-                "headwordId": "storm",
-                "shiftX": 4.5
+                "itemKey": "word:ecology",
+                "surface": "ecological",
+                "gloss": "a.生态的；生态学的",
+                "headwordId": "ecology",
+                "shiftX": 4.1
               },
               {
                 "type": "text",
@@ -35511,26 +35519,163 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:threat",
-                "surface": "threatens",
-                "gloss": "n.威胁；恐吓",
-                "headwordId": "threat"
+                "itemKey": "word:disrupt",
+                "surface": "disruptions",
+                "gloss": "n.扰乱；中断；瓦解",
+                "headwordId": "disrupt"
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:crash",
-                "surface": "crash",
-                "gloss": "v.碰撞；坠落",
-                "headwordId": "crash"
+                "itemKey": "word:create",
+                "surface": "creating",
+                "gloss": "v.造成；创造；建立",
+                "headwordId": "create"
               },
               {
                 "type": "text",
-                "text": " against the wooden ship and "
+                "text": " an "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:alarm",
+                "surface": "alarming",
+                "gloss": "a.令人担忧的；惊人的",
+                "headwordId": "alarm",
+                "shiftX": -8.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:crisis",
+                "surface": "crisis",
+                "gloss": "n.危机；紧要关头",
+                "headwordId": "crisis",
+                "shiftX": 7.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:throughout",
+                "surface": "throughout",
+                "gloss": "prep.遍及；贯穿",
+                "headwordId": "throughout",
+                "shiftX": 1.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sensitive",
+                "surface": "sensitive",
+                "gloss": "a.敏感的；易受影响的",
+                "headwordId": "sensitive"
+              },
+              {
+                "type": "text",
+                "text": " coastal waters."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Under intense heat and shifting pressure, massive ice shelves crack along the coast, and falling ice blocks crash violently into the freezing ocean, threatening vulnerable feeding grounds.",
+            "chinese": "在强烈的热力与变动重压下，巨大的冰架沿着海岸发生断裂，坠落的冰块剧烈撞击冰冷的海面，威胁着脆弱的摄食场。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Under "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:intense",
+                "surface": "intense",
+                "gloss": "a.强烈的；剧烈的",
+                "headwordId": "intense",
+                "shiftX": -4.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:heat",
+                "surface": "heat",
+                "gloss": "n.热度；高温",
+                "headwordId": "heat",
+                "shiftX": 4.6
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:shift",
+                "surface": "shifting",
+                "gloss": "a.变动的；移动的",
+                "headwordId": "shift"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:press²",
+                "surface": "pressure",
+                "gloss": "n.压力；重压",
+                "headwordId": "press²"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:mass",
+                "surface": "massive",
+                "gloss": "a.巨大的；大块的",
+                "headwordId": "mass"
+              },
+              {
+                "type": "text",
+                "text": " ice "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:shelf",
+                "surface": "shelves",
+                "gloss": "n.陆架；架子",
+                "headwordId": "shelf"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -35542,7 +35687,131 @@
               },
               {
                 "type": "text",
-                "text": " the "
+                "text": " along the coast, and falling ice "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:block",
+                "surface": "blocks",
+                "gloss": "n.大块；冰块；街区",
+                "headwordId": "block",
+                "shiftX": -20.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:crash",
+                "surface": "crash",
+                "gloss": "v.碰撞；坠落；砸碎",
+                "headwordId": "crash",
+                "shiftX": 3.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:violent",
+                "surface": "violently",
+                "gloss": "ad.猛烈地；剧烈地",
+                "headwordId": "violent",
+                "shiftX": 16.7
+              },
+              {
+                "type": "text",
+                "text": " into the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:freeze",
+                "surface": "freezing",
+                "gloss": "a.极冷的；冰冻的",
+                "headwordId": "freeze"
+              },
+              {
+                "type": "text",
+                "text": " ocean, "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:threat",
+                "surface": "threatening",
+                "gloss": "v.威胁到；危及",
+                "headwordId": "threat"
+              },
+              {
+                "type": "text",
+                "text": " vulnerable "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:feed",
+                "surface": "feeding",
+                "gloss": "a.摄食的；饲育的",
+                "headwordId": "feed"
+              },
+              {
+                "type": "text",
+                "text": " grounds."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "When emergency alarms echo across the slippery deck, disciplined researchers maintain professional courage, coordinating swift protective measures to secure essential equipment.",
+            "chinese": "当紧急警报在湿滑的甲板上回荡时，纪律严明的科研人员保持着专业勇气，协调迅速的防护措施以稳固关键设备。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "When "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:emergency",
+                "surface": "emergency",
+                "gloss": "a.紧急的；应急的",
+                "headwordId": "emergency"
+              },
+              {
+                "type": "text",
+                "text": " alarms "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:echo",
+                "surface": "echo",
+                "gloss": "v.回响；回荡",
+                "headwordId": "echo"
+              },
+              {
+                "type": "text",
+                "text": " across the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:slip",
+                "surface": "slippery",
+                "gloss": "a.湿滑的；滑的",
+                "headwordId": "slip",
+                "shiftX": -4.2
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -35550,258 +35819,37 @@
                 "itemKey": "word:deck",
                 "surface": "deck",
                 "gloss": "n.甲板；舱面",
-                "headwordId": "deck"
+                "headwordId": "deck",
+                "shiftX": -2.1
               },
               {
                 "type": "text",
-                "text": ", no "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:coward",
-                "surface": "coward",
-                "gloss": "n.懦夫；胆怯者",
-                "headwordId": "coward",
-                "shiftX": -1.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:flee",
-                "surface": "flees",
-                "gloss": "v.逃跑；逃离",
-                "headwordId": "flee",
-                "shiftX": 1.1
-              },
-              {
-                "type": "text",
-                "text": " his "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:post¹",
-                "surface": "post",
-                "gloss": "n.岗位；哨位",
-                "headwordId": "post¹"
+                "itemKey": "word:discipline",
+                "surface": "disciplined",
+                "gloss": "a.遵守纪律的；受过训练的",
+                "headwordId": "discipline",
+                "shiftX": 6.3
               },
               {
                 "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "With extraordinary courage, the team works through crazy wind to cover emergency hatches and protect vital gear.",
-            "chinese": "凭借非凡的勇气，团队顶着狂乱的大风遮盖应急舱口并保护核心装备。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "With "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:extraordinary",
-                "surface": "extraordinary",
-                "gloss": "a.非凡的；极佳的",
-                "headwordId": "extraordinary"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:courage",
-                "surface": "courage",
-                "gloss": "n.勇气；胆量",
-                "headwordId": "courage"
-              },
-              {
-                "type": "text",
-                "text": ", the team works through "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:crazy",
-                "surface": "crazy",
-                "gloss": "a.狂热的；疯狂的",
-                "headwordId": "crazy"
-              },
-              {
-                "type": "text",
-                "text": " wind to "
+                "text": " researchers "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:cover",
-                "surface": "cover",
-                "gloss": "v.遮盖；覆盖",
-                "headwordId": "cover"
+                "itemKey": "word:maintain",
+                "surface": "maintain",
+                "gloss": "v.保持；维持",
+                "headwordId": "maintain"
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:emergency",
-                "surface": "emergency",
-                "gloss": "a.应急的；紧急的",
-                "headwordId": "emergency"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:hatch",
-                "surface": "hatches",
-                "gloss": "n.舱口；舱门",
-                "headwordId": "hatch"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:protect",
-                "surface": "protect",
-                "gloss": "v.保护；保卫",
-                "headwordId": "protect",
-                "shiftX": -20
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:vital",
-                "surface": "vital",
-                "gloss": "a.核心的；至关重要的",
-                "headwordId": "vital",
-                "shiftX": -4.8
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:gear",
-                "surface": "gear",
-                "gloss": "n.装备；齿轮",
-                "headwordId": "gear",
-                "shiftX": 24.8
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Rather than criticize companions or commit a cruel crime against sea rules, sailors act with professional discipline.",
-            "chinese": "水手们没有互相指责，也没有犯下违反海上规则的残忍罪行，而是表现出专业的纪律。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Rather than "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:criticize",
-                "surface": "criticize",
-                "gloss": "v.批评；责备",
-                "headwordId": "criticize"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:companion",
-                "surface": "companions",
-                "gloss": "n.同伴；同事",
-                "headwordId": "companion"
-              },
-              {
-                "type": "text",
-                "text": " or "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:commit",
-                "surface": "commit",
-                "gloss": "v.犯下；做出",
-                "headwordId": "commit"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cruel",
-                "surface": "cruel",
-                "gloss": "a.残酷的；残忍的",
-                "headwordId": "cruel",
-                "shiftX": -6.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:crime",
-                "surface": "crime",
-                "gloss": "n.罪行；犯罪",
-                "headwordId": "crime",
-                "shiftX": 6.6
-              },
-              {
-                "type": "text",
-                "text": " against sea rules, sailors "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:act",
-                "surface": "act",
-                "gloss": "v.表现；行事",
-                "headwordId": "act"
-              },
-              {
-                "type": "text",
-                "text": " with "
               },
               {
                 "type": "annotation",
@@ -35817,15 +35865,91 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:discipline",
-                "surface": "discipline",
-                "gloss": "n.纪律；自律",
-                "headwordId": "discipline"
+                "category": "regular",
+                "itemKey": "word:courage",
+                "surface": "courage",
+                "gloss": "n.勇气；胆量",
+                "headwordId": "courage"
               },
               {
                 "type": "text",
-                "text": "."
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:coordinate",
+                "surface": "coordinating",
+                "gloss": "v.协调；配合",
+                "headwordId": "coordinate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:swift",
+                "surface": "swift",
+                "gloss": "a.迅速的；敏捷的",
+                "headwordId": "swift",
+                "shiftX": -1.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:protect",
+                "surface": "protective",
+                "gloss": "a.防护的；保护性的",
+                "headwordId": "protect",
+                "shiftX": 1.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:measure",
+                "surface": "measures",
+                "gloss": "n.措施；办法",
+                "headwordId": "measure"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:secure",
+                "surface": "secure",
+                "gloss": "v.固定；稳固；保卫",
+                "headwordId": "secure",
+                "shiftX": -6.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:essence",
+                "surface": "essential",
+                "gloss": "a.必不可少的；实质的",
+                "headwordId": "essence",
+                "shiftX": 6.4
+              },
+              {
+                "type": "text",
+                "text": " equipment."
               }
             ]
           }
@@ -35837,55 +35961,92 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Strict safety criteria prove crucial to overcome the crisis, helping the crew court success and keep food crops in the hold.",
-            "chinese": "严格的安全标准在克服危机中被证明至关重要，帮助船员赢得成功并保全了货舱中的粮食作物。",
+            "english": "Facing complex marine hazards, scientists refuse to jump to hasty conclusions; instead, they apply strict objective criteria to assess oceanic fluctuations.",
+            "chinese": "面对复杂的海洋险情，科学家们拒绝草率得出结论；相反，他们运用严格的客观准则来评估海洋波动。",
             "tokens": [
               {
+                "type": "text",
+                "text": "Facing "
+              },
+              {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:strict",
-                "surface": "Strict",
-                "gloss": "a.严格的；精确的",
-                "headwordId": "strict"
+                "category": "high-frequency",
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "a.复杂的；复合的",
+                "headwordId": "complex"
               },
               {
                 "type": "text",
-                "text": " safety "
+                "text": " marine "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:hazard",
+                "surface": "hazards",
+                "gloss": "n.危险；隐患；危害",
+                "headwordId": "hazard"
+              },
+              {
+                "type": "text",
+                "text": ", scientists "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:refuse",
+                "surface": "refuse",
+                "gloss": "v.拒绝；不愿",
+                "headwordId": "refuse"
+              },
+              {
+                "type": "text",
+                "text": " to jump to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:haste",
+                "surface": "hasty",
+                "gloss": "a.草率的；仓促的",
+                "headwordId": "haste"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:conclude",
+                "surface": "conclusions",
+                "gloss": "n.结论；推论",
+                "headwordId": "conclude"
+              },
+              {
+                "type": "text",
+                "text": "; instead, they apply strict "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:objective",
+                "surface": "objective",
+                "gloss": "a.客观的；实事求是的",
+                "headwordId": "objective"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:criterion",
                 "surface": "criteria",
-                "gloss": "n.标准；准则",
-                "headwordId": "criterion",
-                "shiftX": -1.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:prove",
-                "surface": "prove",
-                "gloss": "v.证明；证实",
-                "headwordId": "prove",
-                "shiftX": -8.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:crucial",
-                "surface": "crucial",
-                "gloss": "a.至关重要的；决定性的",
-                "headwordId": "crucial",
-                "shiftX": 10.8
+                "gloss": "n.准则；标准",
+                "headwordId": "criterion"
               },
               {
                 "type": "text",
@@ -35894,22 +36055,82 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:overcome",
-                "surface": "overcome",
-                "gloss": "v.战胜；克服",
-                "headwordId": "overcome"
+                "itemKey": "word:assess",
+                "surface": "assess",
+                "gloss": "v.评估；评定；估算",
+                "headwordId": "assess"
               },
               {
                 "type": "text",
-                "text": " the "
+                "text": " oceanic "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:crisis",
-                "surface": "crisis",
-                "gloss": "n.危机；紧要关头",
-                "headwordId": "crisis"
+                "itemKey": "word:fluctuate",
+                "surface": "fluctuations",
+                "gloss": "n.波动；起伏",
+                "headwordId": "fluctuate"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Young researchers learn to evaluate evidence critically, collaborating closely with international counterparts and university colleagues to verify environmental data.",
+            "chinese": "青年研究人员学会了批判性地审视证据，与国际同行和大学同事密切合作，核实环境数据。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Young researchers "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:learn",
+                "surface": "learn",
+                "gloss": "v.学会；得知；领会",
+                "headwordId": "learn"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:evaluate",
+                "surface": "evaluate",
+                "gloss": "v.评估；评价",
+                "headwordId": "evaluate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:evident",
+                "surface": "evidence",
+                "gloss": "n.证据；根据",
+                "headwordId": "evident"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:criticize",
+                "surface": "critically",
+                "gloss": "ad.批判性地；审慎地",
+                "headwordId": "criticize"
               },
               {
                 "type": "text",
@@ -35917,139 +36138,23 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:help",
-                "surface": "helping",
-                "gloss": "v.帮助；援助",
-                "headwordId": "help"
-              },
-              {
-                "type": "text",
-                "text": " the crew "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:court¹",
-                "surface": "court",
-                "gloss": "n.法院；法庭",
-                "headwordId": "court¹"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:success",
-                "surface": "success",
-                "gloss": "n.成功；成就",
-                "headwordId": "success"
-              },
-              {
-                "type": "text",
-                "text": " and keep food "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:crop",
-                "surface": "crops",
-                "gloss": "n.庄稼；作物",
-                "headwordId": "crop"
-              },
-              {
-                "type": "text",
-                "text": " in the hold."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Returning home to cross the harbor bar, the sailors count their blessings and meet regional counterparts as an admiring crowd cheers their safe arrival.",
-            "chinese": "返回家园跨过海港沙洲，水手们感恩庆幸，并与地方同行相会，赞赏的人群为他们的安全抵达欢呼。",
-            "tokens": [
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:return",
-                "surface": "Returning",
-                "gloss": "v.返回；归来",
-                "headwordId": "return"
-              },
-              {
-                "type": "text",
-                "text": " home to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:cross",
-                "surface": "cross",
-                "gloss": "v.越过；穿过",
-                "headwordId": "cross"
-              },
-              {
-                "type": "text",
-                "text": " the harbor "
-              },
-              {
-                "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:bar",
-                "surface": "bar",
-                "gloss": "n.沙洲；浅滩",
-                "headwordId": "bar"
+                "itemKey": "word:collaborate",
+                "surface": "collaborating",
+                "gloss": "v.合作；协作",
+                "headwordId": "collaborate"
               },
               {
                 "type": "text",
-                "text": ", the sailors "
+                "text": " closely with "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:count",
-                "surface": "count",
-                "gloss": "v.计算；数数",
-                "headwordId": "count"
-              },
-              {
-                "type": "text",
-                "text": " their "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:bless",
-                "surface": "blessings",
-                "gloss": "v.赐福；祈佑",
-                "headwordId": "bless"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:meet",
-                "surface": "meet",
-                "gloss": "v.相聚；开会",
-                "headwordId": "meet"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:region",
-                "surface": "regional",
-                "gloss": "n.地区；地带",
-                "headwordId": "region"
+                "itemKey": "word:international",
+                "surface": "international",
+                "gloss": "a.国际的；跨国的",
+                "headwordId": "international"
               },
               {
                 "type": "text",
@@ -36060,44 +36165,44 @@
                 "category": "high-frequency",
                 "itemKey": "word:counterpart",
                 "surface": "counterparts",
-                "gloss": "n.对应的人；相当物",
+                "gloss": "n.同行；对等的人",
                 "headwordId": "counterpart"
               },
               {
                 "type": "text",
-                "text": " as an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:admire",
-                "surface": "admiring",
-                "gloss": "a.赞赏的；钦佩的",
-                "headwordId": "admire"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " and university "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:crowd",
-                "surface": "crowd",
-                "gloss": "n.人群；群众",
-                "headwordId": "crowd"
+                "itemKey": "word:colleague",
+                "surface": "colleagues",
+                "gloss": "n.同事；同僚",
+                "headwordId": "colleague"
               },
               {
                 "type": "text",
-                "text": " cheers their safe "
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:arrive",
-                "surface": "arrival",
-                "gloss": "n.抵达；到来",
-                "headwordId": "arrive"
+                "itemKey": "word:verify",
+                "surface": "verify",
+                "gloss": "v.核实；查证；证实",
+                "headwordId": "verify"
+              },
+              {
+                "type": "text",
+                "text": " environmental "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:data",
+                "surface": "data",
+                "gloss": "n.数据；资料",
+                "headwordId": "data"
               },
               {
                 "type": "text",
@@ -36108,46 +36213,33 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "In a formal court, judges create honorable credit records, awarding a symbolic gold crown upon the brave captain.",
-            "chinese": "在一座正式法庭上，委员们建立了光荣的信誉档案，将象征性的金色花冠授予英勇的船长。",
+            "english": "By creating transparent observation records, the voyage earns worldwide scientific credit, demonstrating that shared knowledge is crucial to overcome global ecological challenges and sustain marine heritage.",
+            "chinese": "通过建立透明的观测记录，这次科考航行赢得了全球科研声誉，证明了共享知识对于克服全球生态挑战以及维护海洋遗产至关重要。",
             "tokens": [
               {
                 "type": "text",
-                "text": "In a "
+                "text": "By creating "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:formal",
-                "surface": "formal",
-                "gloss": "a.正式的；正规的",
-                "headwordId": "formal",
-                "shiftX": -3.2
+                "itemKey": "word:transparent",
+                "surface": "transparent",
+                "gloss": "a.透明的；公开的",
+                "headwordId": "transparent"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " observation records, the "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:court²",
-                "surface": "court",
-                "gloss": "v.追求；招致",
-                "headwordId": "court²",
-                "shiftX": 3.3
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:judge",
-                "surface": "judges",
-                "gloss": "n.法官；裁判",
-                "headwordId": "judge"
+                "itemKey": "word:voyage",
+                "surface": "voyage",
+                "gloss": "n.航行；航程",
+                "headwordId": "voyage",
+                "shiftX": -10.8
               },
               {
                 "type": "text",
@@ -36156,10 +36248,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:create",
-                "surface": "create",
-                "gloss": "v.创造；建立",
-                "headwordId": "create"
+                "itemKey": "word:earn",
+                "surface": "earns",
+                "gloss": "v.赢得；博得；赚得",
+                "headwordId": "earn",
+                "shiftX": -0.6
               },
               {
                 "type": "text",
@@ -36167,37 +36260,24 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:honor",
-                "surface": "honorable",
-                "gloss": "a.光荣的；值得尊敬的",
-                "headwordId": "honor",
-                "shiftX": -0.5
+                "category": "high-frequency",
+                "itemKey": "word:worldwide",
+                "surface": "worldwide",
+                "gloss": "a.世界范围的；全球的",
+                "headwordId": "worldwide",
+                "shiftX": 11.5
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " scientific "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:credit",
                 "surface": "credit",
-                "gloss": "n.信用；荣誉",
-                "headwordId": "credit",
-                "shiftX": 0.5
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:record",
-                "surface": "records",
-                "gloss": "n.档案；记录",
-                "headwordId": "record"
+                "gloss": "n.信誉；声誉；赞誉",
+                "headwordId": "credit"
               },
               {
                 "type": "text",
@@ -36206,23 +36286,22 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:award",
-                "surface": "awarding",
-                "gloss": "v.授予；颁发",
-                "headwordId": "award"
+                "itemKey": "word:demonstrate",
+                "surface": "demonstrating",
+                "gloss": "v.表明；证实；论证",
+                "headwordId": "demonstrate"
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " that "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:symbol",
-                "surface": "symbolic",
-                "gloss": "a.象征性的；象征的",
-                "headwordId": "symbol",
-                "shiftX": -17.9
+                "itemKey": "word:share",
+                "surface": "shared",
+                "gloss": "a.共享的；共同的",
+                "headwordId": "share"
               },
               {
                 "type": "text",
@@ -36230,12 +36309,35 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:gold",
-                "surface": "gold",
-                "gloss": "a.金色的；黄金的",
-                "headwordId": "gold",
-                "shiftX": 1
+                "category": "high-frequency",
+                "itemKey": "word:know",
+                "surface": "knowledge",
+                "gloss": "n.知识；学问；见闻",
+                "headwordId": "know"
+              },
+              {
+                "type": "text",
+                "text": " is "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:crucial",
+                "surface": "crucial",
+                "gloss": "a.至关重要的；决定性的",
+                "headwordId": "crucial"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:overcome",
+                "surface": "overcome",
+                "gloss": "v.克服；战胜",
+                "headwordId": "overcome"
               },
               {
                 "type": "text",
@@ -36243,42 +36345,186 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:crown",
-                "surface": "crown",
-                "gloss": "n.王冠；桂冠",
-                "headwordId": "crown",
-                "shiftX": 17
+                "category": "high-frequency",
+                "itemKey": "word:globe",
+                "surface": "global",
+                "gloss": "a.全球的；全世界的",
+                "headwordId": "globe"
               },
               {
                 "type": "text",
-                "text": " upon the "
+                "text": " ecological "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:challenge",
+                "surface": "challenges",
+                "gloss": "n.挑战；艰巨任务",
+                "headwordId": "challenge"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sustain",
+                "surface": "sustain",
+                "gloss": "v.维持；支撑；使持续",
+                "headwordId": "sustain"
+              },
+              {
+                "type": "text",
+                "text": " marine "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:brave",
-                "surface": "brave",
-                "gloss": "a.英勇的；勇敢的",
-                "headwordId": "brave",
-                "shiftX": -2.2
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:captain",
-                "surface": "captain",
-                "gloss": "n.船长；领队",
-                "headwordId": "captain",
-                "shiftX": 2.3
+                "itemKey": "word:heritage",
+                "surface": "heritage",
+                "gloss": "n.遗产；传统",
+                "headwordId": "heritage"
               },
               {
                 "type": "text",
                 "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 4,
+            "circledNumber": "④",
+            "english": "When diverse research groups unite under common standards, their joint efforts inspire future generations to explore and protect living oceans.",
+            "chinese": "当多元的科研群体在共同标准下团结起来时，他们的联合努力将激励未来世代去探索并保护充满生机的海洋。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "When "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:diverse",
+                "surface": "diverse",
+                "gloss": "a.多元的；多样的",
+                "headwordId": "diverse"
+              },
+              {
+                "type": "text",
+                "text": " research groups "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:unite",
+                "surface": "unite",
+                "gloss": "v.团结；联合",
+                "headwordId": "unite"
+              },
+              {
+                "type": "text",
+                "text": " under "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:common",
+                "surface": "common",
+                "gloss": "a.共同的；普通的",
+                "headwordId": "common"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:standard",
+                "surface": "standards",
+                "gloss": "n.标准；准则",
+                "headwordId": "standard"
+              },
+              {
+                "type": "text",
+                "text": ", their "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:joint",
+                "surface": "joint",
+                "gloss": "a.联合的；共同的",
+                "headwordId": "joint",
+                "shiftX": -9.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:effort",
+                "surface": "efforts",
+                "gloss": "n.努力；艰难尝试",
+                "headwordId": "effort",
+                "shiftX": 6.1
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:inspire",
+                "surface": "inspire",
+                "gloss": "v.激励；启发",
+                "headwordId": "inspire",
+                "shiftX": 3.1
+              },
+              {
+                "type": "text",
+                "text": " future "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:generation",
+                "surface": "generations",
+                "gloss": "n.世代；一代人",
+                "headwordId": "generation"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:explore",
+                "surface": "explore",
+                "gloss": "v.探索；勘察；探究",
+                "headwordId": "explore"
+              },
+              {
+                "type": "text",
+                "text": " and protect "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:live¹",
+                "surface": "living",
+                "gloss": "a.有生命的；活着的",
+                "headwordId": "live¹"
+              },
+              {
+                "type": "text",
+                "text": " oceans."
               }
             ]
           }
@@ -36287,185 +36533,214 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "final countdown/ticking down",
-        "explanation": "最后的倒计时；countdown 常用作航天发射或关键时刻"
+        "id": "exp-01",
+        "expression": "marine cruise / ocean expedition",
+        "explanation": "海洋巡航，远洋科考；cruise 指乘船巡游或海洋科考航行；expedition 侧重带有明确科研或探索目标的远征任务。"
       },
       {
-        "id": "e2",
-        "expression": "over the counter/direct",
-        "explanation": "柜台直接交易；OTC 亦指非处方药"
+        "id": "exp-02",
+        "expression": "coastal harbor / seaport",
+        "explanation": "海岸港口，海港避风港；harbor 侧重天然或人工筑成的避风港湾；port 侧重商贸口岸与大型货运集散码头。"
       },
       {
-        "id": "e3",
-        "expression": "chart a course/route",
-        "explanation": "制定航线，规划方向；course 常见义项还包括课程和一道菜"
+        "id": "exp-03",
+        "expression": "research craft / scientific vessel",
+        "explanation": "科考船只，专业科研船；craft 为单复数同形集合词，指船舶、航天器或航空器；vessel 泛指大型船舶与舰艇。"
       },
       {
-        "id": "e4",
-        "expression": "court disaster/provoke",
-        "explanation": "招致灾难，招惹；court 作动词熟词僻义常表示追求或自招"
+        "id": "exp-04",
+        "expression": "sailing gear / nautical equipment",
+        "explanation": "航行装备，航海器材；gear 泛指成套装备、传动齿轮或专用工具；equipment 强调成套专业设施与机械器械。"
       },
       {
-        "id": "e5",
-        "expression": "tough cracker/hard problem",
-        "explanation": "难解的问题；cracker 原指薄脆饼干"
+        "id": "exp-05",
+        "expression": "polar zones / arctic regions",
+        "explanation": "极地带，两极区域；zone 指气候带、防区或特定功能区域；polar 作形容词指两极的或极地的。"
       },
       {
-        "id": "e6",
-        "expression": "crawl like a snail/creep slowly",
-        "explanation": "爬行，缓慢移动；crawl 亦可指游泳中的爬泳（自由泳）"
+        "id": "exp-06",
+        "expression": "delicate specimen / fragile sample",
+        "explanation": "脆弱标本，精细样品；specimen 指动植物或矿物提取供科学检验的典型标本；delicate 强调结构精妙而易受损。"
       },
       {
-        "id": "e7",
-        "expression": "shed crocodile tears/hypocrisy",
-        "explanation": "掉鳄鱼的眼泪，假慈悲；常用习语"
+        "id": "exp-07",
+        "expression": "marine creature / aquatic organism",
+        "explanation": "海洋生物，水生有机体；creature 强调有生命的气息与造物；organism 侧重生物学上的有机体与机体组织结构。"
       },
       {
-        "id": "e8",
-        "expression": "crash and burn/fail completely",
-        "explanation": "惨败，毁灭；crash 原指飞机坠毁或剧烈碰撞"
+        "id": "exp-08",
+        "expression": "natural habitat / native environment",
+        "explanation": "自然栖息地，原生环境；habitat 专指动植物赖以生存繁衍的特定天然生境；environment 涵盖更宏观的环境系统。"
       },
       {
-        "id": "e9",
-        "expression": "crack down on/suppress",
-        "explanation": "严厉打击；crack 作动词指破裂，作名词指裂纹"
+        "id": "exp-09",
+        "expression": "ecological disruption / environmental upheaval",
+        "explanation": "生态扰乱，环境剧变；disruption 指体系、秩序或生存平衡的瓦解与扰乱；ecological 强调生态链层面的相互依存。"
       },
       {
-        "id": "e10",
-        "expression": "vital criterion/benchmark",
-        "explanation": "重要评判准则；单数为 criterion，复数常为 criteria"
+        "id": "exp-10",
+        "expression": "alarming crisis / pressing emergency",
+        "explanation": "令人担忧的危机，紧迫紧要关头；crisis 指转折关头与严重危局；alarm 兼作动词报警与名词警报、惊恐。"
       },
       {
-        "id": "e11",
-        "expression": "crucial turning point/pivotal",
-        "explanation": "决定性的转折点；crucial 强调生死攸关的重要性"
+        "id": "exp-11",
+        "expression": "ice shelves / continental ice sheet",
+        "explanation": "冰架，大陆冰盖；shelf 熟词僻义在极地海洋学中指延伸入海的冰架或大陆架；crack 指受力产生裂缝或断裂。"
       },
       {
-        "id": "e12",
-        "expression": "take the credit/praise",
-        "explanation": "居功，获得荣誉；give credit to 赞赏某人"
+        "id": "exp-12",
+        "expression": "crash violently / collide with force",
+        "explanation": "剧烈撞击，猛烈崩塌；crash 强调伴随巨大声响与冲击力的碰撞坠落；violently 为副词修饰动作的猛烈程度。"
       },
       {
-        "id": "e13",
-        "expression": "triple crown/supreme honor",
-        "explanation": "三连冠，最高荣耀；crown 作动词表示为...加冕"
+        "id": "exp-13",
+        "expression": "professional courage / steadfast bravery",
+        "explanation": "专业勇气，坚定胆识；courage 指面对险境时的从容气魄与道德勇气；bravery 侧重勇往直前、无所畏惧的行为表现。"
       },
       {
-        "id": "e14",
-        "expression": "international counterpart/equivalent",
-        "explanation": "国际同行，相对应的人或机构；counterpart 强调对等地位"
+        "id": "exp-14",
+        "expression": "objective criteria / empirical benchmarks",
+        "explanation": "客观准则，实证评判基准；criterion 为单数形式，criteria 为复数，指科学评估或决策的核心准则；objective 强调客观中立。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "international counterparts / foreign peers",
+        "explanation": "国际同行，境外对口机构人员；counterpart 指在不同国家、组织中处于对等地位、承担相应职能的机构或人员。"
+      },
+      {
+        "id": "exp-16",
+        "expression": "sustain marine heritage / preserve ocean legacy",
+        "explanation": "维护海洋遗产，守护海洋生态传承；sustain 强调长久维持、支撑与延续；heritage 指自然生态与文化历史的无价遗产。"
       }
     ],
     "coveredHeadwordIds": [
-      "countryside",
-      "county",
+      "busy",
+      "coast",
+      "harbor",
       "adventure",
+      "science",
       "crew",
+      "launch",
+      "ambition",
       "marine",
       "cruise",
-      "final",
-      "countdown",
-      "port",
-      "serve",
-      "counter",
-      "couple",
-      "dock",
-      "courtyard",
-      "hold",
-      "discount",
-      "coupon",
-      "cheer",
-      "travel",
-      "snack",
-      "cracker",
-      "spread",
-      "cream",
-      "cowboy",
-      "tradition",
-      "folk",
-      "guide",
-      "sail",
+      "remote",
       "course",
+      "operate",
+      "aboard",
+      "advance",
+      "research",
       "craft",
-      "coast",
-      "reserve",
-      "small",
-      "crab",
+      "equip",
+      "vital",
+      "sail",
+      "gear",
+      "biology",
+      "survey",
+      "shallow",
+      "bay",
+      "cross",
+      "deep",
+      "pole",
+      "zone",
+      "collect",
+      "delicate",
+      "specimen",
+      "strict",
+      "environment",
+      "guideline",
+      "observe",
       "rare",
       "creature",
-      "crawl",
-      "marsh",
-      "mud",
-      "tall",
-      "harbor",
-      "crane",
-      "cargo",
-      "safe",
-      "distance",
-      "fierce",
-      "crocodile",
-      "creep",
+      "nature",
+      "habitat",
+      "record",
+      "regulate",
+      "vulnerable",
+      "species",
+      "beneath",
+      "wave",
+      "rapid",
+      "climate",
+      "trigger",
       "sudden",
-      "storm",
-      "threat",
-      "crash",
+      "ecology",
+      "disrupt",
+      "create",
+      "alarm",
+      "crisis",
+      "throughout",
+      "sensitive",
+      "intense",
+      "heat",
+      "shift",
+      "press²",
+      "mass",
+      "shelf",
       "crack",
-      "deck",
-      "coward",
-      "flee",
-      "post¹",
-      "extraordinary",
-      "courage",
-      "crazy",
-      "cover",
+      "block",
+      "crash",
+      "violent",
+      "freeze",
+      "threat",
+      "feed",
       "emergency",
-      "hatch",
-      "protect",
-      "vital",
-      "gear",
-      "criticize",
-      "companion",
-      "commit",
-      "cruel",
-      "crime",
-      "act",
-      "profession",
+      "echo",
+      "slip",
+      "deck",
       "discipline",
-      "strict",
+      "maintain",
+      "profession",
+      "courage",
+      "coordinate",
+      "swift",
+      "protect",
+      "measure",
+      "secure",
+      "essence",
+      "complex",
+      "hazard",
+      "refuse",
+      "haste",
+      "conclude",
+      "objective",
       "criterion",
-      "prove",
+      "assess",
+      "fluctuate",
+      "learn",
+      "evaluate",
+      "evident",
+      "criticize",
+      "collaborate",
+      "international",
+      "counterpart",
+      "colleague",
+      "verify",
+      "data",
+      "transparent",
+      "voyage",
+      "earn",
+      "worldwide",
+      "credit",
+      "demonstrate",
+      "share",
+      "know",
       "crucial",
       "overcome",
-      "crisis",
-      "help",
-      "court¹",
-      "success",
-      "crop",
-      "return",
-      "cross",
-      "bar",
-      "count",
-      "bless",
-      "meet",
-      "region",
-      "counterpart",
-      "admire",
-      "crowd",
-      "arrive",
-      "formal",
-      "court²",
-      "judge",
-      "create",
-      "honor",
-      "credit",
-      "record",
-      "award",
-      "symbol",
-      "gold",
-      "crown",
-      "brave",
-      "captain"
+      "globe",
+      "challenge",
+      "sustain",
+      "heritage",
+      "diverse",
+      "unite",
+      "common",
+      "standard",
+      "joint",
+      "effort",
+      "inspire",
+      "generation",
+      "explore",
+      "live¹"
     ],
     "hasOutOfSyllabusWords": false
   },
