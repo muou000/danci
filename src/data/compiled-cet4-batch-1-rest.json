@@ -31108,9 +31108,9 @@
     "id": "cet4-b1-018",
     "indexLabel": "NO. 18",
     "tier": "cet4-core",
-    "topic": "跨国企业合规治理与法律咨询体系",
-    "titleZh": "跨国合规治理与法律咨询体系",
-    "titleEn": "Corporate Governance, Legal Counsel, and Global Compliance",
+    "topic": "跨国企业治理、商业合规与契约诚信",
+    "titleZh": "跨国企业治理、商业合规与契约诚信",
+    "titleEn": "Corporate Governance, Contract Integrity, and Legal Compliance",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -31118,44 +31118,33 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Across a vast continent, a technology corporation coordinates with a city council to establish a regional legal convention.",
-            "chinese": "在一片广袤的大陆上，一家科技公司与市政委员会协调合作，以建立一项区域法律公约。",
+            "english": "Across continents, global corporations establish governing councils to coordinate commercial activities and observe international conventions.",
+            "chinese": "在大洲之间，跨国企业建立治理委员会以协调商业活动并遵循国际公约。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Across a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:vast",
-                "surface": "vast",
-                "gloss": "a.巨大的；大量的",
-                "headwordId": "vast"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": "Across "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:continent",
-                "surface": "continent",
-                "gloss": "n.大陆；洲",
+                "surface": "continents",
+                "gloss": "n.大陆；大洲",
                 "headwordId": "continent"
               },
               {
                 "type": "text",
-                "text": ", a "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:technology",
-                "surface": "technology",
-                "gloss": "n.科技；技术",
-                "headwordId": "technology"
+                "itemKey": "word:globe",
+                "surface": "global",
+                "gloss": "a.全球的；全世界的",
+                "headwordId": "globe",
+                "shiftX": -2.5
               },
               {
                 "type": "text",
@@ -31165,9 +31154,10 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:corporation",
-                "surface": "corporation",
-                "gloss": "n.公司；法人公司",
-                "headwordId": "corporation"
+                "surface": "corporations",
+                "gloss": "n.公司；法人组织；企业",
+                "headwordId": "corporation",
+                "shiftX": 2.5
               },
               {
                 "type": "text",
@@ -31175,23 +31165,38 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:coordinate",
-                "surface": "coordinates",
-                "gloss": "v.协调；配合",
-                "headwordId": "coordinate"
+                "category": "high-frequency",
+                "itemKey": "word:establish",
+                "surface": "establish",
+                "gloss": "v.建立；设立；确立",
+                "headwordId": "establish",
+                "shiftX": -5.6
               },
               {
                 "type": "text",
-                "text": " with a city "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:govern",
+                "surface": "governing",
+                "gloss": "a.执政的；起管理作用的",
+                "headwordId": "govern",
+                "shiftX": -0.6
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:council",
-                "surface": "council",
-                "gloss": "n.理事会；委员会",
-                "headwordId": "council"
+                "surface": "councils",
+                "gloss": "n.委员会；理事会",
+                "headwordId": "council",
+                "shiftX": 6.2
               },
               {
                 "type": "text",
@@ -31199,145 +31204,11 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:establish",
-                "surface": "establish",
-                "gloss": "v.建立；设立",
-                "headwordId": "establish"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:region",
-                "surface": "regional",
-                "gloss": "n.地区；地带",
-                "headwordId": "region",
-                "shiftX": -2.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:legal",
-                "surface": "legal",
-                "gloss": "a.法律的；法学的",
-                "headwordId": "legal",
-                "shiftX": 2.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:convention",
-                "surface": "convention",
-                "gloss": "n.公约；大会",
-                "headwordId": "convention"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "In a quiet cottage office decorated with cotton curtains, legal counsel reviews a formal commercial contract with care.",
-            "chinese": "在一间装饰着棉质窗帘的安静农舍办公室里，法律顾问细致地审查一份正式的商业合同。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "In a quiet "
-              },
-              {
-                "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cottage",
-                "surface": "cottage",
-                "gloss": "n.村舍；小屋",
-                "headwordId": "cottage"
-              },
-              {
-                "type": "text",
-                "text": " office "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:decorate",
-                "surface": "decorated",
-                "gloss": "v.装饰；布置",
-                "headwordId": "decorate"
-              },
-              {
-                "type": "text",
-                "text": " with "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cotton",
-                "surface": "cotton",
-                "gloss": "n.棉花；棉布",
-                "headwordId": "cotton"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:curtain",
-                "surface": "curtains",
-                "gloss": "n.窗帘；遮蔽物",
-                "headwordId": "curtain"
-              },
-              {
-                "type": "text",
-                "text": ", legal "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:counsel",
-                "surface": "counsel",
-                "gloss": "n.顾问；辩护律师",
-                "headwordId": "counsel"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:review",
-                "surface": "reviews",
-                "gloss": "v.审查；审视",
-                "headwordId": "review"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:formal",
-                "surface": "formal",
-                "gloss": "a.正式的；正规的",
-                "headwordId": "formal"
+                "itemKey": "word:coordinate",
+                "surface": "coordinate",
+                "gloss": "v.协调；配合；整合",
+                "headwordId": "coordinate"
               },
               {
                 "type": "text",
@@ -31357,23 +31228,244 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:contract²",
-                "surface": "contract",
-                "gloss": "v.收缩；缩小",
-                "headwordId": "contract²"
+                "category": "high-frequency",
+                "itemKey": "word:active",
+                "surface": "activities",
+                "gloss": "n.活动；行动；活力",
+                "headwordId": "active"
               },
               {
                 "type": "text",
-                "text": " with "
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:observe",
+                "surface": "observe",
+                "gloss": "v.遵守；奉行；观察",
+                "headwordId": "observe"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:international",
+                "surface": "international",
+                "gloss": "a.国际的；跨国的",
+                "headwordId": "international"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:convention",
+                "surface": "conventions",
+                "gloss": "n.公约；常规；惯例",
+                "headwordId": "convention"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Inside these modern enterprises, professional legal counsel carefully reviews commercial contracts, ensuring every clause corresponds to strict legal norms and clear moral standards.",
+            "chinese": "在这些现代企业内部，专业法律顾问审慎审查商业合同，确保每项条款均符合严格的法律规范与明确的道德标准。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Inside these "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:modern",
+                "surface": "modern",
+                "gloss": "a.现代的；当代的",
+                "headwordId": "modern"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:enterprise",
+                "surface": "enterprises",
+                "gloss": "n.企业；事业",
+                "headwordId": "enterprise"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:profession",
+                "surface": "professional",
+                "gloss": "a.专业的；职业的",
+                "headwordId": "profession",
+                "shiftX": -12.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:legal",
+                "surface": "legal",
+                "gloss": "a.法律的；合法的",
+                "headwordId": "legal",
+                "shiftX": -19.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:counsel",
+                "surface": "counsel",
+                "gloss": "n.法律顾问；辩护律师",
+                "headwordId": "counsel",
+                "shiftX": 4.8
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:care",
-                "surface": "care",
-                "gloss": "n.关怀；照料",
-                "headwordId": "care"
+                "surface": "carefully",
+                "gloss": "ad.审慎地；细心地",
+                "headwordId": "care",
+                "shiftX": 13.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:review",
+                "surface": "reviews",
+                "gloss": "v.审查；复查；评审",
+                "headwordId": "review",
+                "shiftX": 14
+              },
+              {
+                "type": "text",
+                "text": " commercial "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:contract¹",
+                "surface": "contracts",
+                "gloss": "n.合同；契约",
+                "headwordId": "contract¹"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:ensure",
+                "surface": "ensuring",
+                "gloss": "v.确保；保证",
+                "headwordId": "ensure"
+              },
+              {
+                "type": "text",
+                "text": " every "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:clause",
+                "surface": "clause",
+                "gloss": "n.条款；从句",
+                "headwordId": "clause"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:correspond",
+                "surface": "corresponds",
+                "gloss": "v.符合；相符；相应",
+                "headwordId": "correspond"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:strict",
+                "surface": "strict",
+                "gloss": "a.严格的；严谨的",
+                "headwordId": "strict"
+              },
+              {
+                "type": "text",
+                "text": " legal "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:norm",
+                "surface": "norms",
+                "gloss": "n.规范；准则",
+                "headwordId": "norm"
+              },
+              {
+                "type": "text",
+                "text": " and clear "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:moral",
+                "surface": "moral",
+                "gloss": "a.道德的；道义上的",
+                "headwordId": "moral"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:standard",
+                "surface": "standards",
+                "gloss": "n.标准；准则",
+                "headwordId": "standard"
               },
               {
                 "type": "text",
@@ -31384,14 +31476,26 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Advisers warn executives never to engage in corrupt bribery or violate international copyright, keeping corporate reputation pure.",
-            "chinese": "顾问警告高管绝不参与腐败贿赂，也绝不侵犯国际版权，以保持企业声誉纯洁。",
+            "english": "Independent advisers supervise corporate transactions to prevent corrupt bribery and protect intellectual copyright, guaranteeing that official statements never contradict verified facts.",
+            "chinese": "独立顾问监督企业交易以防范腐败贿赂并保护知识产权版权，确保官方声明绝不与核实的事实相抵触。",
             "tokens": [
               {
                 "type": "annotation",
                 "category": "regular",
+                "itemKey": "word:independent",
+                "surface": "Independent",
+                "gloss": "a.独立的；自主的",
+                "headwordId": "independent"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
                 "itemKey": "word:advise",
-                "surface": "Advisers",
+                "surface": "advisers",
                 "gloss": "n.顾问；劝告者",
                 "headwordId": "advise"
               },
@@ -31402,38 +31506,39 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:warn",
-                "surface": "warn",
-                "gloss": "v.警告；告诫",
-                "headwordId": "warn"
+                "itemKey": "word:supervise",
+                "surface": "supervise",
+                "gloss": "v.监督；管理；指导",
+                "headwordId": "supervise"
+              },
+              {
+                "type": "text",
+                "text": " corporate "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transaction",
+                "surface": "transactions",
+                "gloss": "n.交易；业务",
+                "headwordId": "transaction"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:prevent",
+                "surface": "prevent",
+                "gloss": "v.防止；防范；阻止",
+                "headwordId": "prevent",
+                "shiftX": -4.5
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:execute",
-                "surface": "executives",
-                "gloss": "v.实施；执行",
-                "headwordId": "execute"
-              },
-              {
-                "type": "text",
-                "text": " never to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:engage",
-                "surface": "engage",
-                "gloss": "v.参与；从事",
-                "headwordId": "engage"
-              },
-              {
-                "type": "text",
-                "text": " in "
               },
               {
                 "type": "annotation",
@@ -31452,20 +31557,21 @@
                 "category": "regular",
                 "itemKey": "word:bribe",
                 "surface": "bribery",
-                "gloss": "n.贿赂；行贿",
-                "headwordId": "bribe"
+                "gloss": "n.贿赂；受贿行为",
+                "headwordId": "bribe",
+                "shiftX": 4.1
               },
               {
                 "type": "text",
-                "text": " or "
+                "text": " and "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:violate",
-                "surface": "violate",
-                "gloss": "v.侵犯；违背",
-                "headwordId": "violate"
+                "itemKey": "word:protect",
+                "surface": "protect",
+                "gloss": "v.保护；维护",
+                "headwordId": "protect"
               },
               {
                 "type": "text",
@@ -31474,10 +31580,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:international",
-                "surface": "international",
-                "gloss": "a.国际的；世界性的",
-                "headwordId": "international"
+                "itemKey": "word:intellectual",
+                "surface": "intellectual",
+                "gloss": "a.知识的；智力的",
+                "headwordId": "intellectual"
               },
               {
                 "type": "text",
@@ -31493,15 +31599,51 @@
               },
               {
                 "type": "text",
-                "text": ", keeping corporate "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:reputation",
-                "surface": "reputation",
-                "gloss": "n.名誉；名声",
-                "headwordId": "reputation"
+                "itemKey": "word:guarantee",
+                "surface": "guaranteeing",
+                "gloss": "v.确保；保证；担保",
+                "headwordId": "guarantee"
+              },
+              {
+                "type": "text",
+                "text": " that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:official",
+                "surface": "official",
+                "gloss": "a.官方的；正式的",
+                "headwordId": "official"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:state",
+                "surface": "statements",
+                "gloss": "n.声明；陈述",
+                "headwordId": "state"
+              },
+              {
+                "type": "text",
+                "text": " never "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:contradict",
+                "surface": "contradict",
+                "gloss": "v.相抵触；反驳",
+                "headwordId": "contradict"
               },
               {
                 "type": "text",
@@ -31510,47 +31652,46 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:pure",
-                "surface": "pure",
-                "gloss": "a.纯洁的；纯净的",
-                "headwordId": "pure"
+                "itemKey": "word:verify",
+                "surface": "verified",
+                "gloss": "a.核实的；已证实的",
+                "headwordId": "verify"
               },
               {
                 "type": "text",
-                "text": "."
+                "text": " facts."
               }
             ]
           },
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "They ensure each signed copy will correspond to clear norms, making sure no statement will contradict official facts.",
-            "chinese": "他们确保每份签署的副本都符合明确规范，确保没有任何声明会与官方事实相抵触。",
+            "english": "By circulating an authorized copy of internal guidelines, leadership ensures that operational practices remain honest across every department.",
+            "chinese": "通过分发内部准则的正式副本，领导层确保各部门的运营实践始终保持诚实守信。",
             "tokens": [
               {
                 "type": "text",
-                "text": "They "
+                "text": "By "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:ensure",
-                "surface": "ensure",
-                "gloss": "v.确保；保证",
-                "headwordId": "ensure"
+                "category": "regular",
+                "itemKey": "word:circulate",
+                "surface": "circulating",
+                "gloss": "v.分发；流传；传阅",
+                "headwordId": "circulate"
               },
               {
                 "type": "text",
-                "text": " each "
+                "text": " an "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:sign",
-                "surface": "signed",
-                "gloss": "a.已签署的；签字的",
-                "headwordId": "sign",
-                "shiftX": -9.2
+                "category": "regular",
+                "itemKey": "word:authorize",
+                "surface": "authorized",
+                "gloss": "a.授权的；核准的",
+                "headwordId": "authorize"
               },
               {
                 "type": "text",
@@ -31562,68 +31703,56 @@
                 "itemKey": "word:copy",
                 "surface": "copy",
                 "gloss": "n.副本；抄本",
-                "headwordId": "copy",
-                "shiftX": 9.2
+                "headwordId": "copy"
               },
               {
                 "type": "text",
-                "text": " will "
+                "text": " of "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:correspond",
-                "surface": "correspond",
-                "gloss": "v.相符；相应",
-                "headwordId": "correspond"
+                "itemKey": "word:internal",
+                "surface": "internal",
+                "gloss": "a.内部的；国内的",
+                "headwordId": "internal"
               },
               {
                 "type": "text",
-                "text": " to clear "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:guideline",
+                "surface": "guidelines",
+                "gloss": "n.指导方针；准则",
+                "headwordId": "guideline"
+              },
+              {
+                "type": "text",
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:norm",
-                "surface": "norms",
-                "gloss": "n.规范；准则",
-                "headwordId": "norm"
+                "itemKey": "word:lead¹",
+                "surface": "leadership",
+                "gloss": "n.领导层；领导",
+                "headwordId": "lead¹"
               },
               {
                 "type": "text",
-                "text": ", making "
+                "text": " ensures that "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:sure",
-                "surface": "sure",
-                "gloss": "a.确信的；确实的",
-                "headwordId": "sure"
-              },
-              {
-                "type": "text",
-                "text": " no "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:state",
-                "surface": "statement",
-                "gloss": "n.声明；陈述",
-                "headwordId": "state"
-              },
-              {
-                "type": "text",
-                "text": " will "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contradict",
-                "surface": "contradict",
-                "gloss": "v.反驳；与...相抵触",
-                "headwordId": "contradict"
+                "itemKey": "word:operate",
+                "surface": "operational",
+                "gloss": "a.操作的；运行的；业务的",
+                "headwordId": "operate",
+                "shiftX": -3.9
               },
               {
                 "type": "text",
@@ -31632,14 +31761,53 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:official",
-                "surface": "official",
-                "gloss": "a.官方的；正规的",
-                "headwordId": "official"
+                "itemKey": "word:practice",
+                "surface": "practices",
+                "gloss": "n.实践；做法；常规",
+                "headwordId": "practice",
+                "shiftX": -5.9
               },
               {
                 "type": "text",
-                "text": " facts."
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:remain",
+                "surface": "remain",
+                "gloss": "v.保持；仍是；留存",
+                "headwordId": "remain",
+                "shiftX": -1.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:honest",
+                "surface": "honest",
+                "gloss": "a.诚实的；正直的",
+                "headwordId": "honest",
+                "shiftX": 11.7
+              },
+              {
+                "type": "text",
+                "text": " across every "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:department",
+                "surface": "department",
+                "gloss": "n.部门；科室",
+                "headwordId": "department"
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           }
@@ -31651,20 +31819,32 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "When market troubles threaten to contract quarterly revenue, managers converse in a corridor to cope with commercial controversy.",
-            "chinese": "当市场动荡威胁要收缩季度收益时，经理们在走廊中交谈以应对商业争议。",
+            "english": "When sudden market fluctuations threaten quarterly revenue, responsible executives take prompt measures to cope with commercial controversies rather than adopting secretive approaches.",
+            "chinese": "当突发市场波动威胁季度收益时，负责任的高管采取果断措施妥善应对商业争议，而非采取隐秘手段。",
             "tokens": [
               {
                 "type": "text",
-                "text": "When market "
+                "text": "When "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:sudden",
+                "surface": "sudden",
+                "gloss": "a.突发的；突然的",
+                "headwordId": "sudden"
+              },
+              {
+                "type": "text",
+                "text": " market "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:trouble",
-                "surface": "troubles",
-                "gloss": "n.动荡；麻烦",
-                "headwordId": "trouble"
+                "itemKey": "word:fluctuate",
+                "surface": "fluctuations",
+                "gloss": "n.波动；起伏",
+                "headwordId": "fluctuate"
               },
               {
                 "type": "text",
@@ -31675,20 +31855,8 @@
                 "category": "high-frequency",
                 "itemKey": "word:threat",
                 "surface": "threaten",
-                "gloss": "v.威胁；恐吓",
+                "gloss": "v.威胁；危及",
                 "headwordId": "threat"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contract¹",
-                "surface": "contract",
-                "gloss": "n.合同；契约",
-                "headwordId": "contract¹"
               },
               {
                 "type": "text",
@@ -31699,7 +31867,7 @@
                 "category": "regular",
                 "itemKey": "word:quarter",
                 "surface": "quarterly",
-                "gloss": "a.季度的；每季的",
+                "gloss": "a.按季度的；每季的",
                 "headwordId": "quarter"
               },
               {
@@ -31711,7 +31879,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:revenue",
                 "surface": "revenue",
-                "gloss": "n.收益；税收",
+                "gloss": "n.收益；营业额",
                 "headwordId": "revenue"
               },
               {
@@ -31721,10 +31889,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:manage",
-                "surface": "managers",
-                "gloss": "n.管理者；经理",
-                "headwordId": "manage"
+                "itemKey": "word:responsible",
+                "surface": "responsible",
+                "gloss": "a.负责任的；可靠的",
+                "headwordId": "responsible"
               },
               {
                 "type": "text",
@@ -31733,22 +31901,34 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:converse¹",
-                "surface": "converse",
-                "gloss": "v.交谈；谈话",
-                "headwordId": "converse¹"
+                "itemKey": "word:execute",
+                "surface": "executives",
+                "gloss": "n.高管；主管",
+                "headwordId": "execute"
               },
               {
                 "type": "text",
-                "text": " in a "
+                "text": " take "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:corridor",
-                "surface": "corridor",
-                "gloss": "n.走廊；过道",
-                "headwordId": "corridor"
+                "category": "high-frequency",
+                "itemKey": "word:prompt",
+                "surface": "prompt",
+                "gloss": "a.及时的；果断的",
+                "headwordId": "prompt"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:measure",
+                "surface": "measures",
+                "gloss": "n.措施；手段",
+                "headwordId": "measure"
               },
               {
                 "type": "text",
@@ -31759,7 +31939,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:cope",
                 "surface": "cope",
-                "gloss": "v.应对；应付",
+                "gloss": "v.应对；处理",
                 "headwordId": "cope"
               },
               {
@@ -31770,9 +31950,45 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:controversy",
-                "surface": "controversy",
-                "gloss": "n.争议；辩论",
+                "surface": "controversies",
+                "gloss": "n.争议；纠纷",
                 "headwordId": "controversy"
+              },
+              {
+                "type": "text",
+                "text": " rather than "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:adopt",
+                "surface": "adopting",
+                "gloss": "v.采取；采纳",
+                "headwordId": "adopt"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:secret",
+                "surface": "secretive",
+                "gloss": "a.隐秘的；保密的",
+                "headwordId": "secret"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:approach",
+                "surface": "approaches",
+                "gloss": "n.方式；途径",
+                "headwordId": "approach"
               },
               {
                 "type": "text",
@@ -31783,8 +31999,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "In sharp contrast to secretive rivals, they hold no contrary opinions; transparent dialogue and convenient digital tools convey mutual trust to every concerned client.",
-            "chinese": "与保密的竞争对手形成鲜明对比的是，他们没有任何相左的意见；透明的对话和便捷的数字工具向每位相关客户传递出相互信任。",
+            "english": "In sharp contrast to aggressive rivals who ignore warning signs, transparent management systems convey timely risk assessments to every concerned client and commercial partner.",
+            "chinese": "与忽视预警信号的激进对手形成鲜明对比的是，透明的管理体系向每位关切的客户及商业伙伴传达及时的风险评估。",
             "tokens": [
               {
                 "type": "text",
@@ -31795,8 +32011,9 @@
                 "category": "regular",
                 "itemKey": "word:sharp",
                 "surface": "sharp",
-                "gloss": "a.锋利的；敏锐的",
-                "headwordId": "sharp"
+                "gloss": "a.鲜明的；尖锐的",
+                "headwordId": "sharp",
+                "shiftX": -3.3
               },
               {
                 "type": "text",
@@ -31807,8 +32024,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:contrast",
                 "surface": "contrast",
-                "gloss": "n.对比；对照",
-                "headwordId": "contrast"
+                "gloss": "n.对比；鲜明反差",
+                "headwordId": "contrast",
+                "shiftX": 3.3
               },
               {
                 "type": "text",
@@ -31816,12 +32034,12 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:secret",
-                "surface": "secretive",
-                "gloss": "a.保密的；隐秘的",
-                "headwordId": "secret",
-                "shiftX": -1.5
+                "category": "high-frequency",
+                "itemKey": "word:aggressive",
+                "surface": "aggressive",
+                "gloss": "a.激进的；好斗的；侵略性的",
+                "headwordId": "aggressive",
+                "shiftX": -9.4
               },
               {
                 "type": "text",
@@ -31834,31 +32052,32 @@
                 "surface": "rivals",
                 "gloss": "n.竞争对手；敌手",
                 "headwordId": "rival",
-                "shiftX": 1.5
+                "shiftX": 9.4
               },
               {
                 "type": "text",
-                "text": ", they "
+                "text": " who "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:hold",
-                "surface": "hold",
-                "gloss": "v.举行；拥有",
-                "headwordId": "hold"
+                "itemKey": "word:ignore",
+                "surface": "ignore",
+                "gloss": "v.忽视；不理睬",
+                "headwordId": "ignore",
+                "shiftX": -3.5
               },
               {
                 "type": "text",
-                "text": " no "
+                "text": " "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contrary",
-                "surface": "contrary",
-                "gloss": "n.相反；对立面",
-                "headwordId": "contrary"
+                "category": "regular",
+                "itemKey": "word:warn",
+                "surface": "warning",
+                "gloss": "a.预警的；警告的",
+                "headwordId": "warn"
               },
               {
                 "type": "text",
@@ -31867,21 +32086,22 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:opinion",
-                "surface": "opinions",
-                "gloss": "n.观点；意见",
-                "headwordId": "opinion"
+                "itemKey": "word:sign",
+                "surface": "signs",
+                "gloss": "n.征兆；迹象",
+                "headwordId": "sign",
+                "shiftX": 3.6
               },
               {
                 "type": "text",
-                "text": "; "
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:transparent",
                 "surface": "transparent",
-                "gloss": "a.透明的；直率的",
+                "gloss": "a.透明的；公开的",
                 "headwordId": "transparent"
               },
               {
@@ -31890,24 +32110,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:dialog",
-                "surface": "dialogue",
-                "gloss": "n.对话；对白",
-                "headwordId": "dialog"
-              },
-              {
-                "type": "text",
-                "text": " and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:convenient",
-                "surface": "convenient",
-                "gloss": "a.方便的；便利的",
-                "headwordId": "convenient",
-                "shiftX": -2.7
+                "category": "high-frequency",
+                "itemKey": "word:manage",
+                "surface": "management",
+                "gloss": "a.管理的；经营上的",
+                "headwordId": "manage"
               },
               {
                 "type": "text",
@@ -31916,24 +32123,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:digit",
-                "surface": "digital",
-                "gloss": "a.数字的；数码的",
-                "headwordId": "digit",
-                "shiftX": -8.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:tool",
-                "surface": "tools",
-                "gloss": "n.工具；用具",
-                "headwordId": "tool",
-                "shiftX": 0.9
+                "itemKey": "word:system",
+                "surface": "systems",
+                "gloss": "n.体系；系统",
+                "headwordId": "system"
               },
               {
                 "type": "text",
@@ -31944,8 +32137,20 @@
                 "category": "high-frequency",
                 "itemKey": "word:convey",
                 "surface": "convey",
-                "gloss": "v.传达；表达",
+                "gloss": "v.传达；传递",
                 "headwordId": "convey"
+              },
+              {
+                "type": "text",
+                "text": " timely "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:risk",
+                "surface": "risk",
+                "gloss": "a.风险的；危险性的",
+                "headwordId": "risk"
               },
               {
                 "type": "text",
@@ -31954,24 +32159,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:mutual",
-                "surface": "mutual",
-                "gloss": "a.相互的；彼此的",
-                "headwordId": "mutual",
-                "shiftX": 1.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:trust",
-                "surface": "trust",
-                "gloss": "v.信任；信赖",
-                "headwordId": "trust",
-                "shiftX": 8.1
+                "itemKey": "word:assess",
+                "surface": "assessments",
+                "gloss": "n.评估；评定",
+                "headwordId": "assess"
               },
               {
                 "type": "text",
@@ -31982,8 +32173,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:concern",
                 "surface": "concerned",
-                "gloss": "n.关心；人或事",
-                "headwordId": "concern"
+                "gloss": "a.关切的；担心的；有关的",
+                "headwordId": "concern",
+                "shiftX": -6.4
               },
               {
                 "type": "text",
@@ -31995,7 +32187,20 @@
                 "itemKey": "word:client",
                 "surface": "client",
                 "gloss": "n.客户；委托人",
-                "headwordId": "client"
+                "headwordId": "client",
+                "shiftX": 6.4
+              },
+              {
+                "type": "text",
+                "text": " and commercial "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:partner",
+                "surface": "partner",
+                "gloss": "n.伙伴；合作方",
+                "headwordId": "partner"
               },
               {
                 "type": "text",
@@ -32006,16 +32211,32 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "Technicians replace an old copper cord, convert raw electronic data, and correct system errors to maintain overall control.",
-            "chinese": "技术员更换了一根旧铜电线，转换了原始电子数据，并纠正了系统错误以保持全面控制。",
+            "english": "By utilizing convenient digital platforms, internal teams track operational records, convert complex data into practical insights, and correct system errors to strengthen overall control.",
+            "chinese": "通过利用便捷的数字平台，内部团队追踪运营记录，将复杂数据转化为实用见解，并纠正系统错误以强化全面的内部控制。",
             "tokens": [
               {
+                "type": "text",
+                "text": "By "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:utilize",
+                "surface": "utilizing",
+                "gloss": "v.利用；运用",
+                "headwordId": "utilize"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:technical",
-                "surface": "Technicians",
-                "gloss": "a.技术的；工艺的",
-                "headwordId": "technical"
+                "itemKey": "word:convenient",
+                "surface": "convenient",
+                "gloss": "a.便捷的；方便的",
+                "headwordId": "convenient"
               },
               {
                 "type": "text",
@@ -32024,49 +32245,46 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:replace",
-                "surface": "replace",
-                "gloss": "v.更换；代替",
-                "headwordId": "replace"
+                "itemKey": "word:digit",
+                "surface": "digital",
+                "gloss": "a.数字的；数码的",
+                "headwordId": "digit"
               },
               {
                 "type": "text",
-                "text": " an "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:old",
-                "surface": "old",
-                "gloss": "a.旧的；陈旧的",
-                "headwordId": "old",
-                "shiftX": -8.8
+                "itemKey": "word:platform",
+                "surface": "platforms",
+                "gloss": "n.平台；讲台",
+                "headwordId": "platform"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": ", internal teams "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:copper",
-                "surface": "copper",
-                "gloss": "n.铜；铜币",
-                "headwordId": "copper",
-                "shiftX": -1.7
+                "category": "high-frequency",
+                "itemKey": "word:track",
+                "surface": "track",
+                "gloss": "v.追踪；跟踪",
+                "headwordId": "track"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " operational "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cord",
-                "surface": "cord",
-                "gloss": "n.电线；绳索",
-                "headwordId": "cord",
-                "shiftX": -6.4
+                "category": "high-frequency",
+                "itemKey": "word:record",
+                "surface": "records",
+                "gloss": "n.记录；档案",
+                "headwordId": "record"
               },
               {
                 "type": "text",
@@ -32077,22 +32295,8 @@
                 "category": "high-frequency",
                 "itemKey": "word:convert",
                 "surface": "convert",
-                "gloss": "v.转换；使转变",
-                "headwordId": "convert",
-                "shiftX": -12.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:raw",
-                "surface": "raw",
-                "gloss": "a.原始的；未加工的",
-                "headwordId": "raw",
-                "shiftX": 3.4
+                "gloss": "v.转换；转化",
+                "headwordId": "convert"
               },
               {
                 "type": "text",
@@ -32101,11 +32305,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:electron",
-                "surface": "electronic",
-                "gloss": "a.电子的；电器的",
-                "headwordId": "electron",
-                "shiftX": 14.4
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "a.复杂的；错综的",
+                "headwordId": "complex",
+                "shiftX": -3.2
               },
               {
                 "type": "text",
@@ -32118,7 +32322,31 @@
                 "surface": "data",
                 "gloss": "n.数据；资料",
                 "headwordId": "data",
-                "shiftX": 11.4
+                "shiftX": 3.3
+              },
+              {
+                "type": "text",
+                "text": " into "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:practical",
+                "surface": "practical",
+                "gloss": "a.实用的；实际的",
+                "headwordId": "practical"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:insight",
+                "surface": "insights",
+                "gloss": "n.见解；洞察力",
+                "headwordId": "insight"
               },
               {
                 "type": "text",
@@ -32134,26 +32362,14 @@
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:system",
-                "surface": "system",
-                "gloss": "n.系统；体制",
-                "headwordId": "system"
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " system "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:err",
                 "surface": "errors",
-                "gloss": "n.错误；失误",
+                "gloss": "n.错误；差错",
                 "headwordId": "err"
               },
               {
@@ -32163,10 +32379,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:maintain",
-                "surface": "maintain",
-                "gloss": "v.保持；维持",
-                "headwordId": "maintain"
+                "itemKey": "word:strong",
+                "surface": "strengthen",
+                "gloss": "v.加强；巩固",
+                "headwordId": "strong"
               },
               {
                 "type": "text",
@@ -32197,140 +32413,6 @@
                 "text": "."
               }
             ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "A security cop watches the facility where workers sit on a couch, coughing softly while enjoying a sweet cookie and warm corn soup.",
-            "chinese": "一名保安警员看守着设施，工人们坐在长沙发上，轻声咳嗽着，同时享用着香甜的饼干和热腾腾的玉米汤。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "A "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:secure",
-                "surface": "security",
-                "gloss": "n.保安；安全",
-                "headwordId": "secure"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cop",
-                "surface": "cop",
-                "gloss": "n.警察；警员",
-                "headwordId": "cop"
-              },
-              {
-                "type": "text",
-                "text": " watches the "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:facility",
-                "surface": "facility",
-                "gloss": "n.设施；场所",
-                "headwordId": "facility"
-              },
-              {
-                "type": "text",
-                "text": " where workers sit on a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:couch",
-                "surface": "couch",
-                "gloss": "n.长沙发；长榻",
-                "headwordId": "couch"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cough",
-                "surface": "coughing",
-                "gloss": "v.咳嗽；咳出",
-                "headwordId": "cough"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:soft",
-                "surface": "softly",
-                "gloss": "ad.轻柔地；轻声地",
-                "headwordId": "soft"
-              },
-              {
-                "type": "text",
-                "text": " while "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:enjoy",
-                "surface": "enjoying",
-                "gloss": "v.享受；欣赏",
-                "headwordId": "enjoy"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:sweet",
-                "surface": "sweet",
-                "gloss": "a.香甜的；甜美的",
-                "headwordId": "sweet",
-                "shiftX": -5.4
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cookie",
-                "surface": "cookie",
-                "gloss": "n.饼干；小甜饼",
-                "headwordId": "cookie",
-                "shiftX": 5.4
-              },
-              {
-                "type": "text",
-                "text": " and warm "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:corn",
-                "surface": "corn",
-                "gloss": "n.玉米；谷物",
-                "headwordId": "corn"
-              },
-              {
-                "type": "text",
-                "text": " soup."
-              }
-            ]
           }
         ]
       },
@@ -32340,21 +32422,20 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "By maintaining core values as the cornerstone of future cooperation, leaders convince diverse teams to contribute actively.",
-            "chinese": "通过将核心价值观作为长期合作的基石，领导者说服多元团队做出建设性贡献。",
+            "english": "To resolve emerging disputes effectively, corporate boards encourage direct negotiation and mutual compromise to settle differences peacefully.",
+            "chinese": "为有效化解新出现的争端，公司董事会鼓励直接谈判与相互妥协以和平解决分歧。",
             "tokens": [
               {
                 "type": "text",
-                "text": "By maintaining "
+                "text": "To "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:core",
-                "surface": "core",
-                "gloss": "a.核心的；主要的",
-                "headwordId": "core",
-                "shiftX": -9.2
+                "category": "high-frequency",
+                "itemKey": "word:resolve",
+                "surface": "resolve",
+                "gloss": "v.解决；化解",
+                "headwordId": "resolve"
               },
               {
                 "type": "text",
@@ -32363,35 +32444,178 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:value",
-                "surface": "values",
-                "gloss": "n.价值观；价值",
-                "headwordId": "value",
-                "shiftX": 9.2
+                "itemKey": "word:emerge",
+                "surface": "emerging",
+                "gloss": "a.新兴的；新出现的",
+                "headwordId": "emerge"
               },
               {
                 "type": "text",
-                "text": " as the "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cornerstone",
-                "surface": "cornerstone",
-                "gloss": "n.基石；奠基石",
-                "headwordId": "cornerstone"
+                "itemKey": "word:dispute",
+                "surface": "disputes",
+                "gloss": "n.争端；纠纷",
+                "headwordId": "dispute"
               },
               {
                 "type": "text",
-                "text": " of future "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:effect",
+                "surface": "effectively",
+                "gloss": "ad.有效地；有力地",
+                "headwordId": "effect"
+              },
+              {
+                "type": "text",
+                "text": ", corporate "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:board",
+                "surface": "boards",
+                "gloss": "n.董事会；委员会",
+                "headwordId": "board"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:encourage",
+                "surface": "encourage",
+                "gloss": "v.鼓励；激励",
+                "headwordId": "encourage"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:direct",
+                "surface": "direct",
+                "gloss": "a.直接的；坦率的",
+                "headwordId": "direct"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:negotiate",
+                "surface": "negotiation",
+                "gloss": "n.谈判；协商",
+                "headwordId": "negotiate"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:mutual",
+                "surface": "mutual",
+                "gloss": "a.相互的；彼此的",
+                "headwordId": "mutual"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:compromise",
+                "surface": "compromise",
+                "gloss": "n.妥协；和解",
+                "headwordId": "compromise"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:settle",
+                "surface": "settle",
+                "gloss": "v.解决；和解",
+                "headwordId": "settle"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:differ",
+                "surface": "differences",
+                "gloss": "n.分歧；差异",
+                "headwordId": "differ"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cooperate",
-                "surface": "cooperation",
-                "gloss": "n.合作；协作",
-                "headwordId": "cooperate"
+                "itemKey": "word:peace",
+                "surface": "peacefully",
+                "gloss": "ad.和平地；平稳地",
+                "headwordId": "peace"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 2,
+            "circledNumber": "②",
+            "english": "Beyond formal legal requirements, enlightened leadership convinces diverse business divisions that firm integrity must serve as the core cornerstone of sustainable cooperation.",
+            "chinese": "除正式法律要求外，开明的领导层让各个业务部门深信，坚定的契约诚信必须作为可持续合作的核心基石。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "Beyond "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:formal",
+                "surface": "formal",
+                "gloss": "a.正式的；形式上的",
+                "headwordId": "formal"
+              },
+              {
+                "type": "text",
+                "text": " legal "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:require",
+                "surface": "requirements",
+                "gloss": "n.要求；规定",
+                "headwordId": "require"
               },
               {
                 "type": "text",
@@ -32399,22 +32623,22 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:lead¹",
-                "surface": "leaders",
-                "gloss": "n.领导者；领袖",
-                "headwordId": "lead¹"
+                "category": "regular",
+                "itemKey": "word:enlighten",
+                "surface": "enlightened",
+                "gloss": "a.开明的；有见识的",
+                "headwordId": "enlighten"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " leadership "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:convince",
-                "surface": "convince",
-                "gloss": "v.说服；使确信",
+                "surface": "convinces",
+                "gloss": "v.使确信；说服",
                 "headwordId": "convince"
               },
               {
@@ -32427,19 +32651,8 @@
                 "itemKey": "word:diverse",
                 "surface": "diverse",
                 "gloss": "a.多元的；多样的",
-                "headwordId": "diverse"
-              },
-              {
-                "type": "text",
-                "text": " teams to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:contribute",
-                "surface": "contribute",
-                "gloss": "v.贡献；捐助",
-                "headwordId": "contribute"
+                "headwordId": "diverse",
+                "shiftX": -0.5
               },
               {
                 "type": "text",
@@ -32448,10 +32661,109 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:active",
-                "surface": "actively",
-                "gloss": "ad.积极地；活跃地",
-                "headwordId": "active"
+                "itemKey": "word:business",
+                "surface": "business",
+                "gloss": "a.商业的；商务的",
+                "headwordId": "business",
+                "shiftX": 0.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:divide",
+                "surface": "divisions",
+                "gloss": "n.部门；分部",
+                "headwordId": "divide"
+              },
+              {
+                "type": "text",
+                "text": " that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:firm¹",
+                "surface": "firm",
+                "gloss": "a.坚定的；稳固的",
+                "headwordId": "firm¹",
+                "shiftX": -6.4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:integrity",
+                "surface": "integrity",
+                "gloss": "n.正直；诚实；完整",
+                "headwordId": "integrity",
+                "shiftX": 6.4
+              },
+              {
+                "type": "text",
+                "text": " must "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:serve",
+                "surface": "serve",
+                "gloss": "v.作为；服务",
+                "headwordId": "serve"
+              },
+              {
+                "type": "text",
+                "text": " as the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:core",
+                "surface": "core",
+                "gloss": "a.核心的；主要的",
+                "headwordId": "core"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cornerstone",
+                "surface": "cornerstone",
+                "gloss": "n.基石；奠基石",
+                "headwordId": "cornerstone"
+              },
+              {
+                "type": "text",
+                "text": " of "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sustain",
+                "surface": "sustainable",
+                "gloss": "a.可持续的；能持久的",
+                "headwordId": "sustain"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cooperate",
+                "surface": "cooperation",
+                "gloss": "n.合作；协作",
+                "headwordId": "cooperate"
               },
               {
                 "type": "text",
@@ -32460,30 +32772,22 @@
             ]
           },
           {
-            "sentenceNumber": 2,
-            "circledNumber": "②",
-            "english": "Staff in the volunteer corps dress in colorful holiday costumes, showing that human warmth can explore cosmos frontiers and continue forever.",
-            "chinese": "志愿兵团的员工身着色彩鲜艳的节日服装，表明人类的温情能够探索宇宙前沿并永远延续。",
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "When committed employees actively contribute to a culture of compliance and mutual trust, the entire enterprise secures lasting commercial reputation and flourishes in a competitive global economy.",
+            "chinese": "当尽责员工积极为合规文化与相互信任做出贡献时，整个企业就能赢得持久的商业声誉，并在充满竞争的全球经济中繁荣发展。",
             "tokens": [
               {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:staff",
-                "surface": "Staff",
-                "gloss": "n.员工；全体职员",
-                "headwordId": "staff"
-              },
-              {
                 "type": "text",
-                "text": " in the "
+                "text": "When "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:volunteer",
-                "surface": "volunteer",
-                "gloss": "n.志愿；志愿者",
-                "headwordId": "volunteer"
+                "itemKey": "word:commit",
+                "surface": "committed",
+                "gloss": "a.尽责的；坚定的",
+                "headwordId": "commit"
               },
               {
                 "type": "text",
@@ -32491,83 +32795,95 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:corps",
-                "surface": "corps",
-                "gloss": "n.兵团；专业团队",
-                "headwordId": "corps"
+                "category": "high-frequency",
+                "itemKey": "word:employ",
+                "surface": "employees",
+                "gloss": "n.员工；雇员",
+                "headwordId": "employ"
               },
               {
                 "type": "text",
-                "text": " dress in colorful "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:holiday",
-                "surface": "holiday",
-                "gloss": "a.节日的；假日的",
-                "headwordId": "holiday"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:costume",
-                "surface": "costumes",
-                "gloss": "n.服装；戏装",
-                "headwordId": "costume"
-              },
-              {
-                "type": "text",
-                "text": ", "
+                "text": " actively "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:show",
-                "surface": "showing",
-                "gloss": "v.表明；展示",
-                "headwordId": "show"
+                "itemKey": "word:contribute",
+                "surface": "contribute",
+                "gloss": "v.做出贡献；捐助",
+                "headwordId": "contribute"
               },
               {
                 "type": "text",
-                "text": " that human warmth can "
+                "text": " to a "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:explore",
-                "surface": "explore",
-                "gloss": "v.探索；探求",
-                "headwordId": "explore"
+                "itemKey": "word:culture",
+                "surface": "culture",
+                "gloss": "n.文化；文明",
+                "headwordId": "culture"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " of "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:comply",
+                "surface": "compliance",
+                "gloss": "n.合规；顺从",
+                "headwordId": "comply"
+              },
+              {
+                "type": "text",
+                "text": " and mutual "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cosmos",
-                "surface": "cosmos",
-                "gloss": "n.宇宙；完整体系",
-                "headwordId": "cosmos"
+                "itemKey": "word:trust",
+                "surface": "trust",
+                "gloss": "n.信任；信赖",
+                "headwordId": "trust"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": ", the "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:frontier",
-                "surface": "frontiers",
-                "gloss": "n.前沿；边境",
-                "headwordId": "frontier"
+                "itemKey": "word:entire",
+                "surface": "entire",
+                "gloss": "a.整个的；完全的",
+                "headwordId": "entire"
+              },
+              {
+                "type": "text",
+                "text": " enterprise "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:secure",
+                "surface": "secures",
+                "gloss": "v.赢得；确保",
+                "headwordId": "secure"
+              },
+              {
+                "type": "text",
+                "text": " lasting commercial "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:reputation",
+                "surface": "reputation",
+                "gloss": "n.声誉；名气",
+                "headwordId": "reputation"
               },
               {
                 "type": "text",
@@ -32575,23 +32891,35 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:continue",
-                "surface": "continue",
-                "gloss": "v.继续；延续",
-                "headwordId": "continue"
+                "category": "regular",
+                "itemKey": "word:flourish",
+                "surface": "flourishes",
+                "gloss": "v.繁荣；蓬勃发展",
+                "headwordId": "flourish"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " in a "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:forever",
-                "surface": "forever",
-                "gloss": "ad.永远地；永久地",
-                "headwordId": "forever"
+                "category": "high-frequency",
+                "itemKey": "word:compete",
+                "surface": "competitive",
+                "gloss": "a.有竞争力的；竞争的",
+                "headwordId": "compete"
+              },
+              {
+                "type": "text",
+                "text": " global "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:economy",
+                "surface": "economy",
+                "gloss": "n.经济；节约",
+                "headwordId": "economy"
               },
               {
                 "type": "text",
@@ -32604,189 +32932,220 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "city council/municipal board",
-        "explanation": "市政委员会；council 指具有决议权的管理机构"
+        "id": "exp-01",
+        "expression": "governing council / regulatory board",
+        "explanation": "治理委员会，监管委员会；govern 在公司治理语境中指行使管辖权、规范与督导，governing council 指具备决策监督权的治理委员会；regulatory 指监管性质的。"
       },
       {
-        "id": "e2",
-        "expression": "legal counsel/adviser",
-        "explanation": "法律顾问，辩护律师；counsel 熟词僻义专指法律代表"
+        "id": "exp-02",
+        "expression": "legal counsel / corporate attorney",
+        "explanation": "法律顾问，企业律师；counsel 为不可数名词指专业法律咨询或法律顾问团队（亦可指辩护律师），作动词表示正式建议或劝告；corporate attorney 指公司常年律师。"
       },
       {
-        "id": "e3",
-        "expression": "sign a contract/binding deal",
-        "explanation": "签署合同；contract 作动词重音在后，表示收缩或感染疾病"
+        "id": "exp-03",
+        "expression": "commercial contract / binding agreement",
+        "explanation": "商业合同，具约束力协议；contract 作名词重音在前指契约合同，作动词重音在后指收缩或感染；binding 强调具有法定义务与约束力。"
       },
       {
-        "id": "e4",
-        "expression": "infringe copyright/intellectual property",
-        "explanation": "侵犯版权；copyright 属于知识产权保护范畴"
+        "id": "exp-04",
+        "expression": "clause / contractual provision",
+        "explanation": "合同条款，契约细则；clause 指法律文书、条约或合同中具有独立法律效力的细则条款，语法中亦指从句；provision 指法律明文规定或计提准备金。"
       },
       {
-        "id": "e5",
-        "expression": "on the contrary/conversely",
-        "explanation": "正相反；用于引出完全相反的观点或事实"
+        "id": "exp-05",
+        "expression": "correspond to / be consistent with",
+        "explanation": "符合，与…相一致；correspond to 表示在特征、标准或规范上相契合；correspond with 则多指与某人通信交流。"
       },
       {
-        "id": "e6",
-        "expression": "convey my gratitude/express",
-        "explanation": "表达感激，传达；convey 原意为运输，常引申为传递思想"
+        "id": "exp-06",
+        "expression": "prevent bribery / combat corruption",
+        "explanation": "防范贿赂，打击腐败；bribery 专指行贿受贿的违法行为，bribe 兼作名词贿赂与动词行贿；corrupt 兼指腐败堕落的与腐蚀败坏。"
       },
       {
-        "id": "e7",
-        "expression": "power cord/insulated cable",
-        "explanation": "电源软线；cord 专指较细的绝缘电线或皮绳"
+        "id": "exp-07",
+        "expression": "intellectual copyright / proprietary rights",
+        "explanation": "知识产权版权，专有权利；copyright 专指受法律保护的著作权、版权；proprietary 指专有的或专利所有的。"
       },
       {
-        "id": "e8",
-        "expression": "convert currency/transform",
-        "explanation": "兑换货币，转变；convert into 将某种形式转换为另一形式"
+        "id": "exp-08",
+        "expression": "contradict facts / dispute evidence",
+        "explanation": "与事实相抵触，反驳证据；contradict 强调陈述、言论与已知客观事实存在根本冲突相斥；dispute 指对证据或主张提出异议。"
       },
       {
-        "id": "e9",
-        "expression": "beyond control/unmanageable",
-        "explanation": "失控；under control 处于受控状态"
+        "id": "exp-09",
+        "expression": "quarterly revenue / financial turnover",
+        "explanation": "季度营收，财务营业额；revenue 指企业或政府的整体进账与财政总收入，不同于净利润 profit；quarterly 指按季度结算的。"
       },
       {
-        "id": "e10",
-        "expression": "couch potato/lazy person",
-        "explanation": "整日坐在沙发上看电视的人；couch 指长软椅"
+        "id": "exp-10",
+        "expression": "cope with controversy / handle disputes",
+        "explanation": "应对争议纠纷，妥善处置；cope with 强调面对复杂动荡局势或困难争议时妥善应对处理；controversy 指公开的原则性争端。"
       },
       {
-        "id": "e11",
-        "expression": "cornerstone of success/foundation",
-        "explanation": "成功的基石；cornerstone 原指建筑物奠基角石"
+        "id": "exp-11",
+        "expression": "in sharp contrast to / differ markedly from",
+        "explanation": "与…形成鲜明对比；contrast 指两者之间明显的对立与反差，作动词时常与 with 搭配表示显出差异。"
       },
       {
-        "id": "e12",
-        "expression": "diplomatic corps/brigade",
-        "explanation": "外交使团；corps 末尾字母 s 不发音，读作 /kɔːr/"
+        "id": "exp-12",
+        "expression": "convey risk assessments / communicate warnings",
+        "explanation": "传达风险评估，传递预警；convey 在商业沟通中表示准确传达信息、观点或关切；assessment 指系统化估定与评估。"
       },
       {
-        "id": "e13",
-        "expression": "in stark contrast to/divergence",
-        "explanation": "与...形成鲜明对比；contrast 强调两者差异显著"
+        "id": "exp-13",
+        "expression": "internal control / operational oversight",
+        "explanation": "内部控制，运营监管；control 熟词僻义在企业管理制度中指防范风险与规范流程的“内控体系”；oversight 指高层监督审查。"
       },
       {
-        "id": "e14",
-        "expression": "cope with crisis/manage",
-        "explanation": "应对危机；cope with 为高频动介搭配"
+        "id": "exp-14",
+        "expression": "settle disputes / reach compromise",
+        "explanation": "化解争端，达成妥协；settle 指通过友好协商解决纷争或达成协议；compromise 指双方互谅互让达成的折中方案。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "core cornerstone / foundational pillar",
+        "explanation": "核心基石，根本支柱；cornerstone 原指建筑物奠基石，引申为理念、制度或合作赖以建立的最根本基石；pillar 指坚实支柱。"
       }
     ],
     "coveredHeadwordIds": [
-      "vast",
       "continent",
-      "technology",
+      "globe",
       "corporation",
-      "coordinate",
-      "council",
       "establish",
-      "region",
-      "legal",
-      "convention",
-      "cottage",
-      "decorate",
-      "cotton",
-      "curtain",
-      "counsel",
-      "review",
-      "formal",
+      "govern",
+      "council",
+      "coordinate",
       "commerce",
-      "contract²",
+      "active",
+      "observe",
+      "international",
+      "convention",
+      "modern",
+      "enterprise",
+      "profession",
+      "legal",
+      "counsel",
       "care",
+      "review",
+      "contract¹",
+      "ensure",
+      "clause",
+      "correspond",
+      "strict",
+      "norm",
+      "moral",
+      "standard",
+      "independent",
       "advise",
-      "warn",
-      "execute",
-      "engage",
+      "supervise",
+      "transaction",
+      "prevent",
       "corrupt",
       "bribe",
-      "violate",
-      "international",
+      "protect",
+      "intellectual",
       "copyright",
-      "reputation",
-      "pure",
-      "ensure",
-      "sign",
-      "copy",
-      "correspond",
-      "norm",
-      "sure",
+      "guarantee",
+      "official",
       "state",
       "contradict",
-      "official",
-      "trouble",
+      "verify",
+      "circulate",
+      "authorize",
+      "copy",
+      "internal",
+      "guideline",
+      "lead¹",
+      "operate",
+      "practice",
+      "remain",
+      "honest",
+      "department",
+      "sudden",
+      "fluctuate",
       "threat",
-      "contract¹",
       "quarter",
       "revenue",
-      "manage",
-      "converse¹",
-      "corridor",
+      "responsible",
+      "execute",
+      "prompt",
+      "measure",
       "cope",
       "controversy",
+      "adopt",
+      "secret",
+      "approach",
       "sharp",
       "contrast",
-      "secret",
+      "aggressive",
       "rival",
-      "hold",
-      "contrary",
-      "opinion",
+      "ignore",
+      "warn",
+      "sign",
       "transparent",
-      "dialog",
-      "convenient",
-      "digit",
-      "tool",
+      "manage",
+      "system",
       "convey",
-      "mutual",
-      "trust",
+      "risk",
+      "assess",
       "concern",
       "client",
-      "technical",
-      "replace",
-      "old",
-      "copper",
-      "cord",
+      "partner",
+      "utilize",
+      "convenient",
+      "digit",
+      "platform",
+      "track",
+      "record",
       "convert",
-      "raw",
-      "electron",
+      "complex",
       "data",
+      "practical",
+      "insight",
       "correct",
-      "system",
       "err",
-      "maintain",
+      "strong",
       "overall",
       "control",
-      "secure",
-      "cop",
-      "facility",
-      "couch",
-      "cough",
-      "soft",
-      "enjoy",
-      "sweet",
-      "cookie",
-      "corn",
-      "core",
-      "value",
-      "cornerstone",
-      "cooperate",
-      "lead¹",
+      "resolve",
+      "emerge",
+      "dispute",
+      "effect",
+      "board",
+      "encourage",
+      "direct",
+      "negotiate",
+      "mutual",
+      "compromise",
+      "settle",
+      "differ",
+      "peace",
+      "formal",
+      "require",
+      "enlighten",
       "convince",
       "diverse",
+      "business",
+      "divide",
+      "firm¹",
+      "integrity",
+      "serve",
+      "core",
+      "cornerstone",
+      "sustain",
+      "cooperate",
+      "commit",
+      "employ",
       "contribute",
-      "active",
-      "staff",
-      "volunteer",
-      "corps",
-      "holiday",
-      "costume",
-      "show",
-      "explore",
-      "cosmos",
-      "frontier",
-      "continue",
-      "forever"
+      "culture",
+      "comply",
+      "trust",
+      "entire",
+      "secure",
+      "reputation",
+      "flourish",
+      "compete",
+      "economy"
     ],
     "hasOutOfSyllabusWords": false
   },

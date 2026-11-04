@@ -2191,6 +2191,144 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 18 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 18');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('跨国企业治理、商业合规与契约诚信');
+    expect(passage!.titleEn).toBe(
+      'Corporate Governance, Contract Integrity, and Legal Compliance'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证彻底剔除旧版拼凑的割裂生硬词
+    expect(compiled.coveredHeadwordIds).not.toContain('cottage');
+    expect(compiled.coveredHeadwordIds).not.toContain('cotton');
+    expect(compiled.coveredHeadwordIds).not.toContain('copper');
+    expect(compiled.coveredHeadwordIds).not.toContain('cord');
+    expect(compiled.coveredHeadwordIds).not.toContain('cop');
+    expect(compiled.coveredHeadwordIds).not.toContain('couch');
+    expect(compiled.coveredHeadwordIds).not.toContain('cough');
+    expect(compiled.coveredHeadwordIds).not.toContain('cookie');
+    expect(compiled.coveredHeadwordIds).not.toContain('corn');
+    expect(compiled.coveredHeadwordIds).not.toContain('corps');
+    expect(compiled.coveredHeadwordIds).not.toContain('costume');
+    expect(compiled.coveredHeadwordIds).not.toContain('cosmos');
+
+    // 验证跨国企业合规治理与商业契约诚信的地道搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'councils to coordinate commercial activities'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'counsel carefully reviews commercial contracts'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'supervise corporate transactions to prevent corrupt bribery'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'threaten quarterly revenue'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'cope with commercial controversies'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'convey timely risk assessments'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'strengthen overall control'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'settle differences peacefully'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'core cornerstone of sustainable cooperation'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'culture of compliance and mutual trust'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('corporation');
+    expect(compiled.coveredHeadwordIds).toContain('counsel');
+    expect(compiled.coveredHeadwordIds).toContain('contract¹');
+    expect(compiled.coveredHeadwordIds).toContain('coordinate');
+    expect(compiled.coveredHeadwordIds).toContain('council');
+    expect(compiled.coveredHeadwordIds).toContain('convention');
+    expect(compiled.coveredHeadwordIds).toContain('corrupt');
+    expect(compiled.coveredHeadwordIds).toContain('bribe');
+    expect(compiled.coveredHeadwordIds).toContain('copyright');
+    expect(compiled.coveredHeadwordIds).toContain('copy');
+    expect(compiled.coveredHeadwordIds).toContain('correspond');
+    expect(compiled.coveredHeadwordIds).toContain('contradict');
+    expect(compiled.coveredHeadwordIds).toContain('cope');
+    expect(compiled.coveredHeadwordIds).toContain('controversy');
+    expect(compiled.coveredHeadwordIds).toContain('contrast');
+    expect(compiled.coveredHeadwordIds).toContain('transparent');
+    expect(compiled.coveredHeadwordIds).toContain('convey');
+    expect(compiled.coveredHeadwordIds).toContain('client');
+    expect(compiled.coveredHeadwordIds).toContain('convenient');
+    expect(compiled.coveredHeadwordIds).toContain('convert');
+    expect(compiled.coveredHeadwordIds).toContain('correct');
+    expect(compiled.coveredHeadwordIds).toContain('control');
+    expect(compiled.coveredHeadwordIds).toContain('resolve');
+    expect(compiled.coveredHeadwordIds).toContain('dispute');
+    expect(compiled.coveredHeadwordIds).toContain('compromise');
+    expect(compiled.coveredHeadwordIds).toContain('convince');
+    expect(compiled.coveredHeadwordIds).toContain('core');
+    expect(compiled.coveredHeadwordIds).toContain('cornerstone');
+    expect(compiled.coveredHeadwordIds).toContain('cooperate');
+    expect(compiled.coveredHeadwordIds).toContain('contribute');
+    expect(compiled.coveredHeadwordIds).toContain('reputation');
+    expect(compiled.coveredHeadwordIds).toContain('flourish');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'govern'],
+      [0, 0, 'commerce'],
+      [0, 3, 'operate'],
+      [1, 0, 'quarter'],
+      [1, 1, 'manage'],
+      [1, 1, 'risk'],
+      [2, 1, 'business'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
