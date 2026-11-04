@@ -1262,6 +1262,130 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 12 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 12');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('气候适应型农业与绿色冷链物流');
+    expect(passage!.titleEn).toBe(
+      'Climate-Resilient Agriculture and Green Cold-Chain Logistics'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('carpenter');
+    expect(compiled.coveredHeadwordIds).not.toContain('ceiling');
+    expect(compiled.coveredHeadwordIds).not.toContain('castle');
+    expect(compiled.coveredHeadwordIds).not.toContain('candle');
+    expect(compiled.coveredHeadwordIds).not.toContain('cellar');
+    expect(compiled.coveredHeadwordIds).not.toContain('cartoon');
+    expect(compiled.coveredHeadwordIds).not.toContain('carriage');
+    expect(compiled.coveredHeadwordIds).not.toContain('captain');
+    expect(compiled.coveredHeadwordIds).not.toContain('cave');
+    expect(compiled.coveredHeadwordIds).not.toContain('cell');
+
+    // 验证气候适应型农业与冷链物流主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'temperatures exceed forty degrees Celsius'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'modern storage facility capable of capturing clean solar energy'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'durable cardboard cases'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'transferred swiftly to chilled cargo carriers'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'caters fresh organic food to university canteens'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'agricultural career both sustainable and rewarding'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('Celsius');
+    expect(compiled.coveredHeadwordIds).toContain('caution');
+    expect(compiled.coveredHeadwordIds).toContain('carbon');
+    expect(compiled.coveredHeadwordIds).toContain('drought');
+    expect(compiled.coveredHeadwordIds).toContain('cancel');
+    expect(compiled.coveredHeadwordIds).toContain('cease');
+    expect(compiled.coveredHeadwordIds).toContain('capital');
+    expect(compiled.coveredHeadwordIds).toContain('solar');
+    expect(compiled.coveredHeadwordIds).toContain('capacity');
+    expect(compiled.coveredHeadwordIds).toContain('warehouse');
+    expect(compiled.coveredHeadwordIds).toContain('carrot');
+    expect(compiled.coveredHeadwordIds).toContain('cardboard');
+    expect(compiled.coveredHeadwordIds).toContain('cargo');
+    expect(compiled.coveredHeadwordIds).toContain('carrier');
+    expect(compiled.coveredHeadwordIds).toContain('canteen');
+    expect(compiled.coveredHeadwordIds).toContain('catalog');
+    expect(compiled.coveredHeadwordIds).toContain('cater');
+    expect(compiled.coveredHeadwordIds).toContain('revenue');
+    expect(compiled.coveredHeadwordIds).toContain('career');
+    expect(compiled.coveredHeadwordIds).toContain('celebrate');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Carbon = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'carbon'
+    );
+    expect(p1s1Carbon).toBeDefined();
+    if (p1s1Carbon && p1s1Carbon.type === 'annotation') {
+      expect(p1s1Carbon.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Solar = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'solar'
+    );
+    expect(p1s2Solar).toBeDefined();
+    if (p1s2Solar && p1s2Solar.type === 'annotation') {
+      expect(p1s2Solar.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Cardboard = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'cardboard'
+    );
+    expect(p2s1Cardboard).toBeDefined();
+    if (p2s1Cardboard && p2s1Cardboard.type === 'annotation') {
+      expect(p2s1Cardboard.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Commercial = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'commerce'
+    );
+    expect(p3s3Commercial).toBeDefined();
+    if (p3s3Commercial && p3s3Commercial.type === 'annotation') {
+      expect(p3s3Commercial.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
