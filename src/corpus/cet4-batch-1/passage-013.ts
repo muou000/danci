@@ -1,720 +1,349 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_013: Passage = {
-  "id": "cet4-b1-013",
-  "indexLabel": "NO. 13",
-  "tier": "cet4-core",
-  "topic": "传统手工艺遗产与化学工业文明",
-  "titleZh": "传统手工艺遗产与化学工业文明",
-  "titleEn": "Craft Heritage, Chemical Industry, and Modern Architecture",
-  "paragraphs": [
+  id: 'cet4-b1-013',
+  indexLabel: 'NO. 13',
+  tier: 'cet4-core',
+  topic: '工业建筑遗产更新与低碳社区活化',
+  titleZh: '工业建筑遗产更新与低碳社区活化',
+  titleEn: 'Industrial Heritage Regeneration and Low-Carbon Community Renewal',
+  paragraphs: [
     {
-      "paragraphNumber": 1,
-      "sentences": [
+      paragraphNumber: 1,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "A century ago, early industrial pioneers faced a fierce challenge to produce durable cement and transform regional architecture.",
-          "chinese": "一个世纪前，早期的工业先驱面临着生产耐用水泥和改造区域建筑的激烈挑战。"
+          sentenceNumber: 1,
+          english:
+            'Over a century ago, early industrial pioneers constructed a massive manufacturing plant with durable brick architecture and a towering chimney.',
+          chinese:
+            '一个多世纪前，早期的工业先驱建造了一座拥有耐用砖砌建筑和高耸烟囱的大型制造工厂。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "In a chemistry laboratory, the chief scientist mixed white chalk with river sand, heating the oven to one thousand degrees centigrade.",
-          "chinese": "在一间化学实验室里，首席科学家将白垩粉与河沙混合，将窑炉加热至一千摄氏度。"
+          sentenceNumber: 2,
+          english:
+            'When manufacturing ceased and decades of neglect brought structural damage, facing the threat of chaotic destruction, the municipal council stepped in to protect the site.',
+          chinese:
+            '当制造业停产、数十年的荒废造成结构损坏时，面对混乱破坏的威胁，市政委员会介入保护了这处遗址。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "Researchers measured each centimeter of expansion, drawing a neat chart on paper to record changes across every chapter of experiments.",
-          "chinese": "研究人员测量膨胀的每一厘米，在纸上绘制整洁的图表以记录实验各个章节的变化。"
+          sentenceNumber: 3,
+          english:
+            'An urban renewal committee led by an insightful chairperson drafted a historic restoration charter, preserving its distinct charm and original character while planning creative public uses.',
+          chinese:
+            '一个由富有远见的主席领导的城市更新委员会起草了一份历史保护修复章程，在规划创意公共再利用的同时保留了其独特的魅力与原始特色。',
         },
-        {
-          "sentenceNumber": 4,
-          "english": "A tall brick chimney rose high above the plant, into the winter chill while workers felt a cheerful spirit and noble character warming their chest.",
-          "chinese": "高耸的砖砌烟囱高高耸立在工厂上方，直入冬日严寒，而工人们感到欢快的精神与高尚的品质温暖着胸膛。"
-        }
-      ]
+      ],
     },
     {
-      "paragraphNumber": 2,
-      "sentences": [
+      paragraphNumber: 2,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "To avoid chaos on the production line, the committee chairperson established a strict safety charter to regulate the supply chain.",
-          "chinese": "为了避免生产线上的混乱，委员会主席制定了严格的安全章程以规范供应链。"
+          sentenceNumber: 1,
+          english:
+            'Inside the transformed materials chemistry laboratory, researchers conduct systematic experiments to develop clean cement and recycled construction products.',
+          chinese:
+            '在改造后的材料化学实验室里，研究人员进行系统实验，研制清洁水泥和循环利用的建筑产品。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "Leaders take charge of workshop training, cherishing the chance to reform old practices without causing financial trouble.",
-          "chinese": "负责人承担车间培训职责，珍惜革新旧做法的机遇而不引起财务麻烦。"
+          sentenceNumber: 2,
+          english:
+            'Technicians mark test samples with white chalk, accurately measuring temperature changes in degrees centigrade and heating experimental ovens to test chemical stability.',
+          chinese:
+            '技术人员用白垩粉在测试样品上做标记，以摄氏度为单位精确测量温度变化，并加热实验烘箱以测试化学稳定性。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "During a morning break, employees eat healthy cereal, drink warm tea, and chew fresh biscuits while they chat together.",
-          "chinese": "在晨间休息时，员工们食用营养丰富的谷物食品，饮用热茶，一边聊天一边咀嚼新鲜饼干。"
+          sentenceNumber: 3,
+          english:
+            'They plot expansion curves on a digital chart down to the centimeter, recording temperature data to guarantee safety under severe climate stress.',
+          chinese:
+            '他们在数字图表上绘制精确到厘米的膨胀曲线，记录温度数据以确保在严酷气候压力下的安全性。',
         },
         {
-          "sentenceNumber": 4,
-          "english": "A master chef prepares cheap hot lunches for all workers, bringing authentic cooking charm to the busy factory yard.",
-          "chinese": "一位大厨为所有工人准备廉价实惠的热午餐，为繁忙的工厂大院带来地道的烹饪魅力。"
-        }
-      ]
+          sentenceNumber: 4,
+          english:
+            'Quality inspectors in charge strictly verify each sample batch, ensuring every finished component earns formal green building certificates before delivery.',
+          chinese:
+            '负责的质检员严格核实每一批样品，确保每个完工构件在交付前均获得正式的绿色建筑认证证书。',
+        },
+      ],
     },
     {
-      "paragraphNumber": 3,
-      "sentences": [
+      paragraphNumber: 3,
+      sentences: [
         {
-          "sentenceNumber": 1,
-          "english": "Inspectors check raw material quality with care, and technicians wear a check pattern jacket while verifying each formal certificate.",
-          "chinese": "质检员细致检查原材料质量，技术员身着方格图案夹克，核实每份正式合格证书。"
+          sentenceNumber: 1,
+          english:
+            'Today, the complex houses creative design workshops, dynamic studios, and educational exhibition channels, cherishing industrial heritage while reforming old urban spaces.',
+          chinese:
+            '如今，这处综合建筑群容纳了创意设计工坊、活力工作室和教育展览渠道，在珍视工业遗产的同时改造了老旧城市空间。',
         },
         {
-          "sentenceNumber": 2,
-          "english": "Honest workers never cheat on safety rules or chase high speed, keeping pride on each cheek.",
-          "chinese": "诚实的工人从不在安全规范上弄虚作假，也不追逐盲目高速，每张脸颊上都带着自豪。"
+          sentenceNumber: 2,
+          english:
+            'Offering local citizens a rare chance to explore craft traditions, renovated halls seal out the winter chill and avoid excessive heating waste.',
+          chinese:
+            '翻新的大厅为当地市民提供了探索手工艺传统的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。',
         },
         {
-          "sentenceNumber": 3,
-          "english": "In an annual celebration ceremony, the factory chairman gave a champagne toast to honor a champion pioneer who opened a new channel for growth.",
-          "chinese": "在年度庆祝典礼上，工厂董事长举起香槟祝酒，表彰为增长开辟新渠道的冠军创新者。"
+          sentenceNumber: 3,
+          english:
+            'At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride and cheering a new community chapter.',
+          chinese:
+            '在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，为社区翻开了欢欣鼓舞的新篇章。',
         },
-        {
-          "sentenceNumber": 4,
-          "english": "Colleagues play friendly chess in the evening, sharing certain charity donations to cheer local families in need.",
-          "chinese": "傍晚同事们下友谊国际象棋，分享确定的慈善捐款以激励当地有需要的家庭。"
-        }
-      ]
-    }
+      ],
+    },
   ],
-  "wordAnnotations": [
-    {
-      "headwordId": "century",
-      "gloss": "n.世纪；百年"
-    },
-    {
-      "headwordId": "challenge",
-      "gloss": "n.挑战；艰巨任务"
-    },
-    {
-      "headwordId": "cement",
-      "gloss": "n.水泥；胶结材料"
-    },
-    {
-      "headwordId": "chemistry",
-      "gloss": "n.化学；化学过程"
-    },
-    {
-      "headwordId": "chief",
-      "gloss": "a.首席的；主要的"
-    },
-    {
-      "headwordId": "chalk",
-      "gloss": "n.白垩；粉笔"
-    },
-    {
-      "headwordId": "centigrade",
-      "gloss": "a.摄氏的；百分度的"
-    },
-    {
-      "headwordId": "centimeter",
-      "gloss": "n.厘米；公分"
-    },
-    {
-      "headwordId": "chart",
-      "gloss": "n.图表；海图"
-    },
-    {
-      "headwordId": "change",
-      "gloss": "n.变化；变革"
-    },
-    {
-      "headwordId": "chapter",
-      "gloss": "n.章节；时期"
-    },
-    {
-      "headwordId": "chimney",
-      "gloss": "n.烟囱；烟道"
-    },
-    {
-      "headwordId": "chill",
-      "gloss": "n.寒冷；寒气"
-    },
-    {
-      "headwordId": "chest",
-      "gloss": "n.胸部；大箱子"
-    },
-    {
-      "headwordId": "chaos",
-      "gloss": "n.混乱；紊乱"
-    },
-    {
-      "headwordId": "chairperson",
-      "gloss": "n.主席；议长"
-    },
-    {
-      "headwordId": "charter",
-      "gloss": "n.宪章；章程"
-    },
-    {
-      "headwordId": "chain",
-      "gloss": "n.链条；连锁店"
-    },
-    {
-      "headwordId": "charge",
-      "gloss": "n.管理；电荷"
-    },
-    {
-      "headwordId": "cherish",
-      "gloss": "v.珍爱；怀抱"
-    },
-    {
-      "headwordId": "chance",
-      "gloss": "n.机会；偶然"
-    },
-    {
-      "headwordId": "cereal",
-      "gloss": "n.谷类植物；谷物早餐"
-    },
-    {
-      "headwordId": "chew",
-      "gloss": "v.咀嚼；深思"
-    },
-    {
-      "headwordId": "chat",
-      "gloss": "v.闲聊；交谈"
-    },
-    {
-      "headwordId": "chef",
-      "gloss": "n.厨师长；主厨"
-    },
-    {
-      "headwordId": "cheap",
-      "gloss": "a.廉价的；便宜的"
-    },
-    {
-      "headwordId": "charm",
-      "gloss": "n.魅力；吸引力"
-    },
-    {
-      "headwordId": "check¹",
-      "gloss": "v.检查；核实"
-    },
-    {
-      "headwordId": "check²",
-      "surface": "check",
-      "gloss": "n.方格图案；阻碍"
-    },
-    {
-      "headwordId": "certificate",
-      "gloss": "n.证书；执照"
-    },
-    {
-      "headwordId": "cheat",
-      "gloss": "v.欺骗；作弊"
-    },
-    {
-      "headwordId": "chase",
-      "gloss": "v.追逐；追赶"
-    },
-    {
-      "headwordId": "cheek",
-      "gloss": "n.面颊；脸蛋"
-    },
-    {
-      "headwordId": "ceremony",
-      "gloss": "n.典礼；仪式"
-    },
-    {
-      "headwordId": "chairman",
-      "gloss": "n.董事长；主席"
-    },
-    {
-      "headwordId": "champagne",
-      "gloss": "n.香槟酒；佳酿"
-    },
-    {
-      "headwordId": "champion",
-      "gloss": "n.冠军；优胜者"
-    },
-    {
-      "headwordId": "channel",
-      "gloss": "n.渠道；水渠"
-    },
-    {
-      "headwordId": "chess",
-      "gloss": "n.国际象棋；棋"
-    },
-    {
-      "headwordId": "certain",
-      "gloss": "a.确定的；必然的"
-    },
-    {
-      "headwordId": "charity",
-      "gloss": "n.慈善；施舍"
-    },
-    {
-      "headwordId": "cheer",
-      "gloss": "v.使振奋；欢呼"
-    },
-    {
-      "headwordId": "character",
-      "gloss": "n.品质；性格"
-    },
-    {
-      "headwordId": "industry",
-      "surface": "industrial",
-      "gloss": "n.工业；产业"
-    },
-    {
-      "headwordId": "pioneer",
-      "surface": "pioneers",
-      "gloss": "n.先驱；倡导者"
-    },
-    {
-      "headwordId": "fierce",
-      "surface": "fierce",
-      "gloss": "a.激烈的；狂暴的"
-    },
-    {
-      "headwordId": "produce",
-      "surface": "produce",
-      "gloss": "v.生产；产生"
-    },
-    {
-      "headwordId": "durable",
-      "surface": "durable",
-      "gloss": "a.耐用的；持久的"
-    },
-    {
-      "headwordId": "transform",
-      "surface": "transform",
-      "gloss": "v.改变；使改观"
-    },
-    {
-      "headwordId": "region",
-      "surface": "regional",
-      "gloss": "a.区域的；地方的"
-    },
-    {
-      "headwordId": "architecture",
-      "surface": "architecture",
-      "gloss": "n.建筑；建筑学"
-    },
-    {
-      "headwordId": "laboratory",
-      "surface": "laboratory",
-      "gloss": "n.实验室；研究室"
-    },
-    {
-      "headwordId": "science",
-      "surface": "scientist",
-      "gloss": "n.科学家；学者"
-    },
-    {
-      "headwordId": "mix",
-      "surface": "mixed",
-      "gloss": "v.混合；掺和"
-    },
-    {
-      "headwordId": "heat",
-      "surface": "heating",
-      "gloss": "v.加热；发热"
-    },
-    {
-      "headwordId": "oven",
-      "surface": "oven",
-      "gloss": "n.烤箱；窑炉"
-    },
-    {
-      "headwordId": "degree",
-      "surface": "degrees",
-      "gloss": "n.度数；程度"
-    },
-    {
-      "headwordId": "research",
-      "surface": "Researchers",
-      "gloss": "n.研究人员；调查者"
-    },
-    {
-      "headwordId": "measure",
-      "surface": "measured",
-      "gloss": "v.测量；衡量"
-    },
-    {
-      "headwordId": "expand",
-      "surface": "expansion",
-      "gloss": "n.膨胀；扩张"
-    },
-    {
-      "headwordId": "draw",
-      "surface": "drawing",
-      "gloss": "v.绘制；画出"
-    },
-    {
-      "headwordId": "neat",
-      "surface": "neat",
-      "gloss": "a.整洁的；熟练的"
-    },
-    {
-      "headwordId": "record",
-      "surface": "record",
-      "gloss": "v.记录；记载"
-    },
-    {
-      "headwordId": "experiment",
-      "surface": "experiments",
-      "gloss": "n.实验；试验"
-    },
-    {
-      "headwordId": "tall",
-      "surface": "tall",
-      "gloss": "a.高耸的；高的"
-    },
-    {
-      "headwordId": "brick",
-      "surface": "brick",
-      "gloss": "a.砖砌的；红砖的"
-    },
-    {
-      "headwordId": "rise",
-      "surface": "rose",
-      "gloss": "n.蔷薇花；蔷薇科植物"
-    },
-    {
-      "headwordId": "feel",
-      "surface": "felt",
-      "gloss": "v.感觉；体会"
-    },
-    {
-      "headwordId": "spirit",
-      "surface": "spirit",
-      "gloss": "n.精神；斗志"
-    },
-    {
-      "headwordId": "noble",
-      "surface": "noble",
-      "gloss": "a.高尚的；贵族的"
-    },
-    {
-      "headwordId": "avoid",
-      "surface": "avoid",
-      "gloss": "v.避免；躲开"
-    },
-    {
-      "headwordId": "committee",
-      "surface": "committee",
-      "gloss": "n.委员会；全体委员"
-    },
-    {
-      "headwordId": "establish",
-      "surface": "established",
-      "gloss": "a.知名的；确立的"
-    },
-    {
-      "headwordId": "strict",
-      "surface": "strict",
-      "gloss": "a.严格的；精确的"
-    },
-    {
-      "headwordId": "safe",
-      "surface": "safety",
-      "gloss": "ad.安全地；平安地"
-    },
-    {
-      "headwordId": "regulate",
-      "surface": "regulate",
-      "gloss": "v.规范；管理"
-    },
-    {
-      "headwordId": "supply",
-      "surface": "supply",
-      "gloss": "v.供应；提供"
-    },
-    {
-      "headwordId": "lead¹",
-      "surface": "Leaders",
-      "gloss": "n.领导者；领袖"
-    },
-    {
-      "headwordId": "workshop",
-      "surface": "workshop",
-      "gloss": "n.车间；作坊"
-    },
-    {
-      "headwordId": "reform",
-      "surface": "reform",
-      "gloss": "n.改革；革新"
-    },
-    {
-      "headwordId": "old",
-      "surface": "old",
-      "gloss": "a.古老的；年老的"
-    },
-    {
-      "headwordId": "practice",
-      "surface": "practices",
-      "gloss": "n.做法；惯例"
-    },
-    {
-      "headwordId": "cause",
-      "surface": "causing",
-      "gloss": "v.引起；导致"
-    },
-    {
-      "headwordId": "finance",
-      "surface": "financial",
-      "gloss": "n.财政；金融"
-    },
-    {
-      "headwordId": "trouble",
-      "surface": "trouble",
-      "gloss": "n.麻烦；困扰"
-    },
-    {
-      "headwordId": "break",
-      "surface": "break",
-      "gloss": "n.休息；中断"
-    },
-    {
-      "headwordId": "employ",
-      "surface": "employees",
-      "gloss": "v.雇用；使用"
-    },
-    {
-      "headwordId": "eat",
-      "surface": "eat",
-      "gloss": "v.吃；消耗"
-    },
-    {
-      "headwordId": "fresh",
-      "surface": "fresh",
-      "gloss": "a.新鲜的；清新的"
-    },
-    {
-      "headwordId": "biscuit",
-      "surface": "biscuits",
-      "gloss": "n.饼干；点心"
-    },
-    {
-      "headwordId": "master",
-      "surface": "master",
-      "gloss": "a.精通的；主人的"
-    },
-    {
-      "headwordId": "prepare",
-      "surface": "prepares",
-      "gloss": "v.准备；预备"
-    },
-    {
-      "headwordId": "bring",
-      "surface": "bringing",
-      "gloss": "v.带来；促使"
-    },
-    {
-      "headwordId": "authentic",
-      "surface": "authentic",
-      "gloss": "a.地道的；真实的"
-    },
-    {
-      "headwordId": "busy",
-      "surface": "busy",
-      "gloss": "a.忙的；繁忙的"
-    },
-    {
-      "headwordId": "yard",
-      "surface": "yard",
-      "gloss": "n.大院；场地"
-    },
-    {
-      "headwordId": "inspect",
-      "surface": "Inspectors",
-      "gloss": "n.检查员；巡视员"
-    },
-    {
-      "headwordId": "raw",
-      "surface": "raw",
-      "gloss": "a.生的；未加工的"
-    },
-    {
-      "headwordId": "material",
-      "surface": "material",
-      "gloss": "n.材料；原料"
-    },
-    {
-      "headwordId": "quality",
-      "surface": "quality",
-      "gloss": "n.质量；品质"
-    },
-    {
-      "headwordId": "care",
-      "surface": "care",
-      "gloss": "n.小心；照料"
-    },
-    {
-      "headwordId": "technical",
-      "surface": "technicians",
-      "gloss": "n.技术员；技师"
-    },
-    {
-      "headwordId": "wear",
-      "surface": "wear",
-      "gloss": "v.穿着；佩戴"
-    },
-    {
-      "headwordId": "pattern",
-      "surface": "pattern",
-      "gloss": "n.图案；模式"
-    },
-    {
-      "headwordId": "verify",
-      "surface": "verifying",
-      "gloss": "v.核实；查证"
-    },
-    {
-      "headwordId": "formal",
-      "surface": "formal",
-      "gloss": "a.正式的；正规的"
-    },
-    {
-      "headwordId": "honest",
-      "surface": "Honest",
-      "gloss": "a.诚实的；可敬的"
-    },
-    {
-      "headwordId": "speed",
-      "surface": "speed",
-      "gloss": "n.速度；速率"
-    },
-    {
-      "headwordId": "pride",
-      "surface": "pride",
-      "gloss": "n.骄傲；自豪"
-    },
-    {
-      "headwordId": "annual",
-      "surface": "annual",
-      "gloss": "a.年度的；每年的"
-    },
-    {
-      "headwordId": "celebrate",
-      "surface": "celebration",
-      "gloss": "v.庆祝；歌颂"
-    },
-    {
-      "headwordId": "toast",
-      "surface": "toast",
-      "gloss": "n.祝酒；干杯"
-    },
-    {
-      "headwordId": "honor",
-      "surface": "honor",
-      "gloss": "v.表彰；致敬"
-    },
-    {
-      "headwordId": "new",
-      "surface": "new",
-      "gloss": "a.崭新的；全新的"
-    },
-    {
-      "headwordId": "grow",
-      "surface": "growth",
-      "gloss": "n.增长；发展"
-    },
-    {
-      "headwordId": "colleague",
-      "surface": "Colleagues",
-      "gloss": "n.同事；同僚"
-    },
-    {
-      "headwordId": "play",
-      "surface": "play",
-      "gloss": "v.玩耍；参加比赛"
-    },
-    {
-      "headwordId": "share",
-      "surface": "sharing",
-      "gloss": "v.分享；分担"
-    },
-    {
-      "headwordId": "donate",
-      "surface": "donations",
-      "gloss": "n.捐款；捐赠物"
-    },
-    {
-      "headwordId": "local",
-      "surface": "local",
-      "gloss": "a.当地的；地方的"
-    }
+  wordAnnotations: [
+    // Paragraph 1, Sentence 1
+    { headwordId: 'century', surface: 'century', gloss: 'n.世纪；百年' },
+    { headwordId: 'industry', surface: 'industrial', gloss: 'a.工业的；产业的' },
+    { headwordId: 'pioneer', surface: 'pioneers', gloss: 'n.先驱；开拓者；倡导者' },
+    { headwordId: 'construct', surface: 'constructed', gloss: 'v.建造；构建；创建' },
+    { headwordId: 'mass', surface: 'massive', gloss: 'a.巨大的；大规模的；厚重的' },
+    { headwordId: 'manufacture', surface: 'manufacturing', gloss: 'a.制造业的；制造的' },
+    { headwordId: 'durable', surface: 'durable', gloss: 'a.耐用的；持久的' },
+    { headwordId: 'brick', surface: 'brick', gloss: 'a.砖砌的；砖块的' },
+    { headwordId: 'architecture', surface: 'architecture', gloss: 'n.建筑；建筑学；建筑风格' },
+    { headwordId: 'tower', surface: 'towering', gloss: 'a.高耸的；高大的；杰出的' },
+    { headwordId: 'chimney', surface: 'chimney', gloss: 'n.烟囱；烟道' },
+
+    // Paragraph 1, Sentence 2
+    { headwordId: 'cease', surface: 'ceased', gloss: 'v.停止；终止；平息' },
+    { headwordId: 'decade', surface: 'decades', gloss: 'n.十年；十年期' },
+    { headwordId: 'neglect', surface: 'neglect', gloss: 'n.荒废；疏忽；忽视' },
+    { headwordId: 'bring', surface: 'brought', gloss: 'v.带来；引起；导致' },
+    { headwordId: 'structure', surface: 'structural', gloss: 'a.结构的；构造的' },
+    { headwordId: 'damage', surface: 'damage', gloss: 'n.破坏；损失；损坏' },
+    { headwordId: 'threat', surface: 'threat', gloss: 'n.威胁；恐吓；凶兆' },
+    { headwordId: 'chaos', surface: 'chaotic', gloss: 'a.混乱的；无序的；杂乱的' },
+    { headwordId: 'destroy', surface: 'destruction', gloss: 'n.毁灭；破坏；消灭' },
+    { headwordId: 'municipal', surface: 'municipal', gloss: 'a.市政的；地方自治的' },
+    { headwordId: 'council', surface: 'council', gloss: 'n.委员会；政务委员会；理事会' },
+    { headwordId: 'step', surface: 'stepped', gloss: 'v.跨步；迈步；介入' },
+    { headwordId: 'protect', surface: 'protect', gloss: 'v.保护；保卫；防护' },
+    { headwordId: 'site', surface: 'site', gloss: 'n.遗址；场所；地点' },
+
+    // Paragraph 1, Sentence 3
+    { headwordId: 'urban', surface: 'urban', gloss: 'a.城市的；市区的' },
+    { headwordId: 'renew', surface: 'renewal', gloss: 'n.更新；复兴；重申' },
+    { headwordId: 'committee', surface: 'committee', gloss: 'n.委员会；全体委员' },
+    { headwordId: 'lead¹', surface: 'led', gloss: 'v.领导；引领；率领' },
+    { headwordId: 'insight', surface: 'insightful', gloss: 'a.富有洞察力的；有真知灼见的' },
+    { headwordId: 'chairperson', surface: 'chairperson', gloss: 'n.主席；负责人；主持人' },
+    { headwordId: 'draft', surface: 'drafted', gloss: 'v.起草；拟订；草拟' },
+    { headwordId: 'history', surface: 'historic', gloss: 'a.历史性的；有重大历史意义的' },
+    { headwordId: 'restore', surface: 'restoration', gloss: 'a.修复的；整修的' },
+    { headwordId: 'charter', surface: 'charter', gloss: 'n.章程；宪章；特许状' },
+    { headwordId: 'preserve', surface: 'preserving', gloss: 'v.保留；保存；守护' },
+    { headwordId: 'distinct', surface: 'distinct', gloss: 'a.独特的；截然不同的；清晰的' },
+    { headwordId: 'charm', surface: 'charm', gloss: 'n.魅力；吸引力；风采' },
+    { headwordId: 'origin', surface: 'original', gloss: 'a.原始的；原初的；独创的' },
+    { headwordId: 'character', surface: 'character', gloss: 'n.特色；风貌；特质' },
+    { headwordId: 'create', surface: 'creative', gloss: 'a.创意的；创造性的；有创造力的' },
+    { headwordId: 'public', surface: 'public', gloss: 'a.公共的；公众的；公用的' },
+    { headwordId: 'use', surface: 'uses', gloss: 'n.用途；利用；使用' },
+
+    // Paragraph 2, Sentence 1
+    { headwordId: 'transform', surface: 'transformed', gloss: 'a.改造后的；改头换面的' },
+    { headwordId: 'material', surface: 'materials', gloss: 'a.材料的；物质的' },
+    { headwordId: 'chemistry', surface: 'chemistry', gloss: 'a.化学的；化学反应的' },
+    { headwordId: 'laboratory', surface: 'laboratory', gloss: 'n.实验室；研究室' },
+    { headwordId: 'research', surface: 'researchers', gloss: 'n.研究人员；调查者' },
+    { headwordId: 'conduct', surface: 'conduct', gloss: 'v.实施；组织；引导' },
+    { headwordId: 'system', surface: 'systematic', gloss: 'a.系统的；有条理的；有计划的' },
+    { headwordId: 'experiment', surface: 'experiments', gloss: 'n.实验；试验' },
+    { headwordId: 'develop', surface: 'develop', gloss: 'v.研制；开发；发展' },
+    { headwordId: 'clean', surface: 'clean', gloss: 'a.清洁的；环保的；无污染的' },
+    { headwordId: 'cement', surface: 'cement', gloss: 'n.水泥；胶结材料' },
+    { headwordId: 'recycle', surface: 'recycled', gloss: 'a.循环再造的；回收利用的' },
+    { headwordId: 'product', surface: 'products', gloss: 'n.产品；产物；成效' },
+
+    // Paragraph 2, Sentence 2
+    { headwordId: 'technical', surface: 'Technicians', gloss: 'n.技术员；技师' },
+    { headwordId: 'mark', surface: 'mark', gloss: 'v.做标记；标明；标示' },
+    { headwordId: 'test', surface: 'test', gloss: 'a.测试的；试验的' },
+    { headwordId: 'sample', surface: 'samples', gloss: 'n.样品；样本；标本' },
+    { headwordId: 'chalk', surface: 'chalk', gloss: 'n.白垩；粉笔；白垩粉' },
+    { headwordId: 'accurate', surface: 'accurately', gloss: 'ad.精确地；准确认真地' },
+    { headwordId: 'measure', surface: 'measuring', gloss: 'v.测量；衡量；计量' },
+    { headwordId: 'temperature', surface: 'temperature', gloss: 'n.温度；气温；体温' },
+    { headwordId: 'change', surface: 'changes', gloss: 'n.变化；改变；变更' },
+    { headwordId: 'degree', surface: 'degrees', gloss: 'n.度数；程度；学位' },
+    { headwordId: 'centigrade', surface: 'centigrade', gloss: 'n.摄氏度；百分度' },
+    { headwordId: 'heat', surface: 'heating', gloss: 'v.加热；使变热' },
+    { headwordId: 'oven', surface: 'ovens', gloss: 'n.烘箱；烤箱；窑炉' },
+    { headwordId: 'stable', surface: 'stability', gloss: 'n.稳定性；牢固性；坚定性' },
+
+    // Paragraph 2, Sentence 3
+    { headwordId: 'plot', surface: 'plot', gloss: 'v.标绘；绘制；密谋' },
+    { headwordId: 'expand', surface: 'expansion', gloss: 'n.膨胀；扩大；扩建' },
+    { headwordId: 'curve', surface: 'curves', gloss: 'n.曲线；弯曲' },
+    { headwordId: 'digit', surface: 'digital', gloss: 'a.数字的；数码的' },
+    { headwordId: 'chart', surface: 'chart', gloss: 'n.图表；示意图；航海图' },
+    { headwordId: 'centimeter', surface: 'centimeter', gloss: 'n.厘米；公分' },
+    { headwordId: 'record', surface: 'recording', gloss: 'v.记录；记载；录制' },
+    { headwordId: 'data', surface: 'data', gloss: 'n.数据；资料' },
+    { headwordId: 'guarantee', surface: 'guarantee', gloss: 'v.保证；担保；确保' },
+    { headwordId: 'safe', surface: 'safety', gloss: 'n.安全；平安；安全性' },
+    { headwordId: 'severe', surface: 'severe', gloss: 'a.严酷的；严重的；剧烈的' },
+    { headwordId: 'climate', surface: 'climate', gloss: 'a.气候的；风土的' },
+    { headwordId: 'stress', surface: 'stress', gloss: 'n.应力；压力；紧迫' },
+
+    // Paragraph 2, Sentence 4
+    { headwordId: 'quality', surface: 'Quality', gloss: 'a.质量的；优质的' },
+    { headwordId: 'inspect', surface: 'inspectors', gloss: 'n.检验员；检查员；巡视员' },
+    { headwordId: 'charge', surface: 'charge', gloss: 'n.管理；监管；负责' },
+    { headwordId: 'strict', surface: 'strictly', gloss: 'ad.严格地；严谨地' },
+    { headwordId: 'verify', surface: 'verify', gloss: 'v.核实；查证；检验' },
+    { headwordId: 'batch', surface: 'batch', gloss: 'n.一批；一炉；成批' },
+    { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证；担保' },
+    { headwordId: 'component', surface: 'component', gloss: 'n.构件；组件；零件' },
+    { headwordId: 'earn', surface: 'earns', gloss: 'v.赢得；获得；挣得' },
+    { headwordId: 'formal', surface: 'formal', gloss: 'a.正式的；正规的；礼仪的' },
+    { headwordId: 'build', surface: 'building', gloss: 'a.建筑的；建造的' },
+    { headwordId: 'certificate', surface: 'certificates', gloss: 'n.证书；合格证；凭证' },
+    { headwordId: 'deliver', surface: 'delivery', gloss: 'n.交付；递送；发行' },
+
+    // Paragraph 3, Sentence 1
+    { headwordId: 'complex', surface: 'complex', gloss: 'n.综合楼群；综合体' },
+    { headwordId: 'design', surface: 'design', gloss: 'a.设计的；图案的' },
+    { headwordId: 'workshop', surface: 'workshops', gloss: 'n.工坊；车间；研讨会' },
+    { headwordId: 'dynamic', surface: 'dynamic', gloss: 'a.充满活力的；动态的；能动的' },
+    { headwordId: 'studio', surface: 'studios', gloss: 'n.工作室；画室；演播室' },
+    { headwordId: 'educate', surface: 'educational', gloss: 'a.教育的；启发性的；有教益的' },
+    { headwordId: 'exhibit', surface: 'exhibition', gloss: 'a.展览的；展出的' },
+    { headwordId: 'channel', surface: 'channels', gloss: 'n.渠道；途径；频道' },
+    { headwordId: 'cherish', surface: 'cherishing', gloss: 'v.珍视；珍爱；怀抱' },
+    { headwordId: 'heritage', surface: 'heritage', gloss: 'n.遗产；传统；继承物' },
+    { headwordId: 'reform', surface: 'reforming', gloss: 'v.改造；革新；改革' },
+    { headwordId: 'old', surface: 'old', gloss: 'a.老旧的；陈旧的；古老的' },
+    { headwordId: 'space', surface: 'spaces', gloss: 'n.空间；场地；空地' },
+
+    // Paragraph 3, Sentence 2
+    { headwordId: 'offer', surface: 'Offering', gloss: 'v.提供；给予；提出' },
+    { headwordId: 'local', surface: 'local', gloss: 'a.当地的；地方的；本处的' },
+    { headwordId: 'citizen', surface: 'citizens', gloss: 'n.市民；公民；居民' },
+    { headwordId: 'rare', surface: 'rare', gloss: 'a.珍贵的；罕见的；稀有的' },
+    { headwordId: 'chance', surface: 'chance', gloss: 'n.机会；机遇；几率' },
+    { headwordId: 'explore', surface: 'explore', gloss: 'v.探索；探求；考察' },
+    { headwordId: 'craft', surface: 'craft', gloss: 'a.手工艺的；工艺的' },
+    { headwordId: 'tradition', surface: 'traditions', gloss: 'n.传统；惯例；规矩' },
+    { headwordId: 'renovate', surface: 'renovated', gloss: 'a.翻新的；修缮一新的' },
+    { headwordId: 'hall', surface: 'halls', gloss: 'n.大厅；礼堂；会堂' },
+    { headwordId: 'seal', surface: 'seal', gloss: 'v.封闭；密封；封住' },
+    { headwordId: 'chill', surface: 'chill', gloss: 'n.寒意；寒冷；凛冽' },
+    { headwordId: 'avoid', surface: 'avoid', gloss: 'v.避免；避开；防止' },
+    { headwordId: 'excess', surface: 'excessive', gloss: 'a.过度的；过多的；极度的' },
+    { headwordId: 'waste', surface: 'waste', gloss: 'n.浪费；损耗；废料' },
+
+    // Paragraph 3, Sentence 3
+    { headwordId: 'annual', surface: 'annual', gloss: 'a.年度的；每年的；一年一次的' },
+    { headwordId: 'region', surface: 'regional', gloss: 'a.区域的；地方的；片区的' },
+    { headwordId: 'ceremony', surface: 'ceremony', gloss: 'n.典礼；仪式；礼节' },
+    { headwordId: 'project¹', surface: 'project', gloss: 'n.项目；工程；规划' },
+    { headwordId: 'honor', surface: 'honored', gloss: 'v.表彰；授予荣誉；敬重' },
+    { headwordId: 'sustain', surface: 'sustainable', gloss: 'a.可持续的；能支撑的' },
+    { headwordId: 'champion', surface: 'champion', gloss: 'n.捍卫者；倡导者；支持者' },
+    { headwordId: 'inspire', surface: 'inspiring', gloss: 'v.激发；鼓舞；启示' },
+    { headwordId: 'deep', surface: 'deep', gloss: 'a.深厚的；深刻的；深切的' },
+    { headwordId: 'pride', surface: 'pride', gloss: 'n.自豪；骄傲；自尊心' },
+    { headwordId: 'cheer', surface: 'cheering', gloss: 'v.欢呼；鼓舞；激励' },
+    { headwordId: 'new', surface: 'new', gloss: 'a.崭新的；全新的；新近的' },
+    { headwordId: 'community', surface: 'community', gloss: 'n.社区；社会；界' },
+    { headwordId: 'chapter', surface: 'chapter', gloss: 'n.篇章；章节；分会' },
   ],
-  "phraseAnnotations": [],
-  "expansionEntries": [
+  phraseAnnotations: [],
+  expansionEntries: [
     {
-      "id": "e1",
-      "expression": "supply chain/logistics",
-      "explanation": "供应链；现代化生产制造的核心物流管理网络"
+      id: 'exp-01',
+      expression: 'industrial heritage / architectural conservation',
+      explanation:
+        '工业遗产，建筑保护；heritage 指具有历史文化价值的遗产，conservation 侧重对历史遗存、自然环境的保护与审慎维护。',
     },
     {
-      "id": "e2",
-      "expression": "in charge of/responsible for",
-      "explanation": "负责，掌管；take charge of 主动承担领导责任"
+      id: 'exp-02',
+      expression: 'cease production / bring to a halt',
+      explanation:
+        '停止生产，中止运营；cease 为正式书面语，常接名词或动名词表示某项活动彻底中止或停歇。',
     },
     {
-      "id": "e3",
-      "expression": "cherish the memory/treasure",
-      "explanation": "珍藏回忆，珍惜；cherish 常用于表达深厚感情"
+      id: 'exp-03',
+      expression: 'restoration charter / formal guidelines',
+      explanation:
+        '修复章程，保护准则；charter 指机构、委员会制定的纲领性章程或特许准则，如威尼斯宪章（Venice Charter）。',
     },
     {
-      "id": "e4",
-      "expression": "open up a channel/pathway",
-      "explanation": "开辟渠道；channel 既指水渠电视频道，也喻沟通渠道"
+      id: 'exp-04',
+      expression: 'distinct charm / unique character',
+      explanation:
+        '独特的魅力，鲜明特色；charm 指事物吸引人的魅力或风采，character 熟词僻义指建筑物或地区的风貌、特色与特质。',
     },
     {
-      "id": "e5",
-      "expression": "stand a good chance/likely",
-      "explanation": "很有可能，大有希望；chance 作名词常表机率"
+      id: 'exp-05',
+      expression: 'chemistry laboratory / material science testing',
+      explanation:
+        '化学实验室，材料科学试验；laboratory 为科研实验场所，与 chemistry 连用表示进行化学配方与材料性能检测的实验室。',
     },
     {
-      "id": "e6",
-      "expression": "check and balance/scrutiny",
-      "explanation": "制衡机制；check 作名词熟词僻义常指检查、支票或方格"
+      id: 'exp-06',
+      expression: 'degrees centigrade / Celsius temperature',
+      explanation:
+        '摄氏度；centigrade 与 Celsius 同义，指百分度温标，常与 degree 连用（如 degrees centigrade）表示测试温度。',
     },
     {
-      "id": "e7",
-      "expression": "corporate charter/constitution",
-      "explanation": "公司章程，特许状；charter 亦可作动词包租车辆"
+      id: 'exp-07',
+      expression: 'down to the centimeter / precise dimension',
+      explanation:
+        '精确到厘米；centimeter 为公制长度单位（厘米），down to the centimeter 强调测量与施工精细度达到厘米级。',
     },
     {
-      "id": "e8",
-      "expression": "champagne celebration/luxury toast",
-      "explanation": "香槟庆功宴；champagne 常作为庆祝胜利的象征"
+      id: 'exp-08',
+      expression: 'plot a chart / graphical representation',
+      explanation:
+        '绘制图表，标绘曲线；chart 作名词指图表、示意图或航海图，作动词指绘制图表或规划航线。',
     },
     {
-      "id": "e9",
-      "expression": "charity foundation/philanthropy",
-      "explanation": "慈善基金会；charity 熟词僻义指宽容同情心"
+      id: 'exp-09',
+      expression: 'in charge of / assume responsibility',
+      explanation:
+        '负责，掌管；charge 熟词僻义表示监管或主管责任，person in charge 指负责人或主管官员。',
     },
     {
-      "id": "e10",
-      "expression": "chew over/ponder carefully",
-      "explanation": "仔细琢磨，深思熟虑；chew on sth 比喻深入思考"
+      id: 'exp-10',
+      expression: 'verify compliance / quality certification',
+      explanation:
+        '核实合规，品质认证；verify 强调通过对照标准、测试数据来证实真实性与有效性，certificate 为官方颁发的合格证或证书。',
     },
     {
-      "id": "e11",
-      "expression": "reign as champion/advocate",
-      "explanation": "高居榜首；champion 亦可作动词表捍卫、支持某种理念"
+      id: 'exp-11',
+      expression: 'creative workshop / collaborative studio',
+      explanation:
+        '创意工坊，研讨工作室；workshop 原指工厂车间，在现代语境中广泛指开展创意设计、工艺实践的专题研讨工坊。',
     },
     {
-      "id": "e12",
-      "expression": "degrees centigrade/temperature",
-      "explanation": "摄氏度；centigrade 强调百分温标体系"
+      id: 'exp-12',
+      expression: 'exhibition channel / public platform',
+      explanation:
+        '展示渠道，传播途径；channel 熟词僻义指信息传播、文化交流的渠道或路径，而非仅指河道或海峡。',
     },
     {
-      "id": "e13",
-      "expression": "bring under one roof/cement",
-      "explanation": "加固，巩固；cement 熟词僻义常比喻巩固双方友谊"
+      id: 'exp-13',
+      expression: 'cherish heritage / value traditions',
+      explanation:
+        '珍视遗产，珍爱传统；cherish 表达对历史价值、文化记忆的深切珍视与悉心呵护，常接抽象名词作宾语。',
     },
     {
-      "id": "e14",
-      "expression": "moral character/nature",
-      "explanation": "道德品质；character 指人的性格、汉字或文艺作品角色"
-    }
-  ]
+      id: 'exp-14',
+      expression: 'seal against the chill / thermal insulation',
+      explanation:
+        '抵御严寒，防风隔冷；chill 指刺骨的寒意或阴冷，seal 作及物动词指密封堵漏以阻挡风寒渗透。',
+    },
+    {
+      id: 'exp-15',
+      expression: 'sustainability champion / pioneering leader',
+      explanation:
+        '可持续发展倡导者，先锋典范；champion 熟词僻义指某项理念、事业的坚定捍卫者或积极倡导者，而非仅指体育冠军。',
+    },
+  ],
 };

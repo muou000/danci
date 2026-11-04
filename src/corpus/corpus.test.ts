@@ -1397,6 +1397,139 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 13 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 13');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('工业建筑遗产更新与低碳社区活化');
+    expect(passage!.titleEn).toBe(
+      'Industrial Heritage Regeneration and Low-Carbon Community Renewal'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('cereal');
+    expect(compiled.coveredHeadwordIds).not.toContain('chew');
+    expect(compiled.coveredHeadwordIds).not.toContain('chef');
+    expect(compiled.coveredHeadwordIds).not.toContain('cheap');
+    expect(compiled.coveredHeadwordIds).not.toContain('cheat');
+    expect(compiled.coveredHeadwordIds).not.toContain('cheek');
+    expect(compiled.coveredHeadwordIds).not.toContain('champagne');
+    expect(compiled.coveredHeadwordIds).not.toContain('chess');
+
+    // 验证工业建筑遗产更新与低碳社区活化主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'durable brick architecture and a towering chimney'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'drafted a historic restoration charter'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'materials chemistry laboratory'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'temperature changes in degrees centigrade'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'chart down to the centimeter'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'creative design workshops'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'seal out the winter chill'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'sustainable urban renewal champion'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('century');
+    expect(compiled.coveredHeadwordIds).toContain('industry');
+    expect(compiled.coveredHeadwordIds).toContain('pioneer');
+    expect(compiled.coveredHeadwordIds).toContain('chimney');
+    expect(compiled.coveredHeadwordIds).toContain('cease');
+    expect(compiled.coveredHeadwordIds).toContain('charter');
+    expect(compiled.coveredHeadwordIds).toContain('chairperson');
+    expect(compiled.coveredHeadwordIds).toContain('charm');
+    expect(compiled.coveredHeadwordIds).toContain('character');
+    expect(compiled.coveredHeadwordIds).toContain('chemistry');
+    expect(compiled.coveredHeadwordIds).toContain('laboratory');
+    expect(compiled.coveredHeadwordIds).toContain('cement');
+    expect(compiled.coveredHeadwordIds).toContain('chalk');
+    expect(compiled.coveredHeadwordIds).toContain('centigrade');
+    expect(compiled.coveredHeadwordIds).toContain('centimeter');
+    expect(compiled.coveredHeadwordIds).toContain('chart');
+    expect(compiled.coveredHeadwordIds).toContain('certificate');
+    expect(compiled.coveredHeadwordIds).toContain('workshop');
+    expect(compiled.coveredHeadwordIds).toContain('channel');
+    expect(compiled.coveredHeadwordIds).toContain('cherish');
+    expect(compiled.coveredHeadwordIds).toContain('chill');
+    expect(compiled.coveredHeadwordIds).toContain('ceremony');
+    expect(compiled.coveredHeadwordIds).toContain('champion');
+    expect(compiled.coveredHeadwordIds).toContain('pride');
+    expect(compiled.coveredHeadwordIds).toContain('chapter');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Industrial = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'industry'
+    );
+    expect(p1s1Industrial).toBeDefined();
+    if (p1s1Industrial && p1s1Industrial.type === 'annotation') {
+      expect(p1s1Industrial.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Materials = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'material'
+    );
+    expect(p2s1Materials).toBeDefined();
+    if (p2s1Materials && p2s1Materials.type === 'annotation') {
+      expect(p2s1Materials.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Chemistry = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'chemistry'
+    );
+    expect(p2s1Chemistry).toBeDefined();
+    if (p2s1Chemistry && p2s1Chemistry.type === 'annotation') {
+      expect(p2s1Chemistry.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s1Design = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'design'
+    );
+    expect(p3s1Design).toBeDefined();
+    if (p3s1Design && p3s1Design.type === 'annotation') {
+      expect(p3s1Design.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
