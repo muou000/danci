@@ -21,9 +21,9 @@ export const PASSAGE_013: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'When manufacturing ceased and decades of neglect brought structural damage, facing the threat of chaotic destruction, the municipal council stepped in to protect the site.',
+            'When manufacturing ceased and decades of neglect brought severe structural decay, facing the threat of structural collapse and permanent ruin, the municipal council stepped in to protect the historic site.',
           chinese:
-            '当制造业停产、数十年的荒废造成结构损坏时，面对混乱破坏的威胁，市政委员会介入保护了这处遗址。',
+            '当制造业停产、数十年的荒废带来严重的结构破败时，面对结构坍塌与永久损毁的威胁，市政委员会介入保护了这处历史遗存。',
         },
         {
           sentenceNumber: 3,
@@ -40,30 +40,30 @@ export const PASSAGE_013: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Inside the transformed materials chemistry laboratory, researchers conduct systematic experiments to develop clean cement and recycled construction products.',
+            'To reinforce aging brick walls without altering their historic appearance, engineers in the testing laboratory conduct systematic restoration experiments with clean cement and recycled materials.',
           chinese:
-            '在改造后的材料化学实验室里，研究人员进行系统实验，研制清洁水泥和循环利用的建筑产品。',
+            '为了在不改变老旧砖墙历史风貌的前提下对其进行加固，检测实验室的工程师使用清洁水泥和循环利用的材料开展系统性修复实验。',
         },
         {
           sentenceNumber: 2,
           english:
-            'Technicians mark test samples with white chalk, accurately measuring temperature changes in degrees centigrade and heating experimental ovens to test chemical stability.',
+            'Technicians accurately measure temperature changes in degrees centigrade, heating test samples in experimental ovens to verify chemical stability and structural strength.',
           chinese:
-            '技术人员用白垩粉在测试样品上做标记，以摄氏度为单位精确测量温度变化，并加热实验烘箱以测试化学稳定性。',
+            '技术人员以摄氏度为单位精确测量温度变化，在实验烘箱中加热测试样品以核验化学稳定性与结构强度。',
         },
         {
           sentenceNumber: 3,
           english:
             'They plot expansion curves on a digital chart down to the centimeter, recording temperature data to guarantee safety under severe climate stress.',
           chinese:
-            '他们在数字图表上绘制精确到厘米的膨胀曲线，记录温度数据以确保在严酷气候压力下的安全性。',
+            '他们在数字图表上标绘精确到厘米的膨胀曲线，记录温度数据以确保在严酷气候压力下的安全性。',
         },
         {
           sentenceNumber: 4,
           english:
-            'Quality inspectors in charge strictly verify each sample batch, ensuring every finished component earns formal green building certificates before delivery.',
+            'Quality inspectors in charge strictly verify each restored section, ensuring the renovated complex earns formal green building certificates.',
           chinese:
-            '负责的质检员严格核实每一批样品，确保每个完工构件在交付前均获得正式的绿色建筑认证证书。',
+            '负责的质检员严格核验每一个修复区段，确保翻新后的综合体获得正式的绿色建筑认证证书。',
         },
       ],
     },
@@ -73,23 +73,23 @@ export const PASSAGE_013: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Today, the complex houses creative design workshops, dynamic studios, and educational exhibition channels, cherishing industrial heritage while reforming old urban spaces.',
+            'Today, the complex houses creative design workshops, dynamic studios, and spacious exhibition galleries, opening public cultural channels to cherish industrial heritage while reforming old urban spaces.',
           chinese:
-            '如今，这处综合建筑群容纳了创意设计工坊、活力工作室和教育展览渠道，在珍视工业遗产的同时改造了老旧城市空间。',
+            '如今，这处综合建筑群容纳了创意设计工坊、活力工作室和宽敞的展览馆，开启了珍视工业遗产的公共文化渠道，同时改造了老旧城市空间。',
         },
         {
           sentenceNumber: 2,
           english:
             'Offering local citizens a rare chance to explore craft traditions, renovated halls seal out the winter chill and avoid excessive heating waste.',
           chinese:
-            '翻新的大厅为当地市民提供了探索手工艺传统的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。',
+            '翻新后的大厅为当地市民提供了探索传统手工艺的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。',
         },
         {
           sentenceNumber: 3,
           english:
-            'At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride and cheering a new community chapter.',
+            'At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride as local citizens cheer the transformation and celebrate an encouraging new community chapter.',
           chinese:
-            '在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，为社区翻开了欢欣鼓舞的新篇章。',
+            '在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，当地市民为这一蜕变欢呼喝彩，共同庆祝充满鼓舞的社区新篇章。',
         },
       ],
     },
@@ -113,15 +113,18 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'decade', surface: 'decades', gloss: 'n.十年；十年期' },
     { headwordId: 'neglect', surface: 'neglect', gloss: 'n.荒废；疏忽；忽视' },
     { headwordId: 'bring', surface: 'brought', gloss: 'v.带来；引起；导致' },
+    { headwordId: 'severe', surface: 'severe', gloss: 'a.严重的；严厉的；剧烈的' },
     { headwordId: 'structure', surface: 'structural', gloss: 'a.结构的；构造的' },
-    { headwordId: 'damage', surface: 'damage', gloss: 'n.破坏；损失；损坏' },
+    { headwordId: 'decay', surface: 'decay', gloss: 'n.破败；腐朽；衰退' },
     { headwordId: 'threat', surface: 'threat', gloss: 'n.威胁；恐吓；凶兆' },
-    { headwordId: 'chaos', surface: 'chaotic', gloss: 'a.混乱的；无序的；杂乱的' },
-    { headwordId: 'destroy', surface: 'destruction', gloss: 'n.毁灭；破坏；消灭' },
+    { headwordId: 'collapse', surface: 'collapse', gloss: 'n.坍塌；倒塌；崩溃' },
+    { headwordId: 'permanent', surface: 'permanent', gloss: 'a.永久的；长期的；永恒的' },
+    { headwordId: 'ruin', surface: 'ruin', gloss: 'n.损毁；废墟；毁灭' },
     { headwordId: 'municipal', surface: 'municipal', gloss: 'a.市政的；地方自治的' },
     { headwordId: 'council', surface: 'council', gloss: 'n.委员会；政务委员会；理事会' },
     { headwordId: 'step', surface: 'stepped', gloss: 'v.跨步；迈步；介入' },
     { headwordId: 'protect', surface: 'protect', gloss: 'v.保护；保卫；防护' },
+    { headwordId: 'history', surface: 'historic', gloss: 'a.历史性的；有重大历史意义的' },
     { headwordId: 'site', surface: 'site', gloss: 'n.遗址；场所；地点' },
 
     // Paragraph 1, Sentence 3
@@ -132,7 +135,6 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'insight', surface: 'insightful', gloss: 'a.富有洞察力的；有真知灼见的' },
     { headwordId: 'chairperson', surface: 'chairperson', gloss: 'n.主席；负责人；主持人' },
     { headwordId: 'draft', surface: 'drafted', gloss: 'v.起草；拟订；草拟' },
-    { headwordId: 'history', surface: 'historic', gloss: 'a.历史性的；有重大历史意义的' },
     { headwordId: 'restore', surface: 'restoration', gloss: 'a.修复的；整修的' },
     { headwordId: 'charter', surface: 'charter', gloss: 'n.章程；宪章；特许状' },
     { headwordId: 'preserve', surface: 'preserving', gloss: 'v.保留；保存；守护' },
@@ -145,35 +147,35 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'use', surface: 'uses', gloss: 'n.用途；利用；使用' },
 
     // Paragraph 2, Sentence 1
-    { headwordId: 'transform', surface: 'transformed', gloss: 'a.改造后的；改头换面的' },
-    { headwordId: 'material', surface: 'materials', gloss: 'a.材料的；物质的' },
-    { headwordId: 'chemistry', surface: 'chemistry', gloss: 'a.化学的；化学反应的' },
+    { headwordId: 'reinforce', surface: 'reinforce', gloss: 'v.加固；加强；增援' },
+    { headwordId: 'alter', surface: 'altering', gloss: 'v.改变；更改；变动' },
+    { headwordId: 'appear', surface: 'appearance', gloss: 'n.外观；外貌；显现' },
+    { headwordId: 'engineer', surface: 'engineers', gloss: 'n.工程师；技师' },
+    { headwordId: 'test', surface: 'testing', gloss: 'a.检测的；测试的' },
     { headwordId: 'laboratory', surface: 'laboratory', gloss: 'n.实验室；研究室' },
-    { headwordId: 'research', surface: 'researchers', gloss: 'n.研究人员；调查者' },
     { headwordId: 'conduct', surface: 'conduct', gloss: 'v.实施；组织；引导' },
     { headwordId: 'system', surface: 'systematic', gloss: 'a.系统的；有条理的；有计划的' },
     { headwordId: 'experiment', surface: 'experiments', gloss: 'n.实验；试验' },
-    { headwordId: 'develop', surface: 'develop', gloss: 'v.研制；开发；发展' },
     { headwordId: 'clean', surface: 'clean', gloss: 'a.清洁的；环保的；无污染的' },
     { headwordId: 'cement', surface: 'cement', gloss: 'n.水泥；胶结材料' },
     { headwordId: 'recycle', surface: 'recycled', gloss: 'a.循环再造的；回收利用的' },
-    { headwordId: 'product', surface: 'products', gloss: 'n.产品；产物；成效' },
+    { headwordId: 'material', surface: 'materials', gloss: 'n.材料；原料；物资' },
 
     // Paragraph 2, Sentence 2
     { headwordId: 'technical', surface: 'Technicians', gloss: 'n.技术员；技师' },
-    { headwordId: 'mark', surface: 'mark', gloss: 'v.做标记；标明；标示' },
-    { headwordId: 'test', surface: 'test', gloss: 'a.测试的；试验的' },
-    { headwordId: 'sample', surface: 'samples', gloss: 'n.样品；样本；标本' },
-    { headwordId: 'chalk', surface: 'chalk', gloss: 'n.白垩；粉笔；白垩粉' },
     { headwordId: 'accurate', surface: 'accurately', gloss: 'ad.精确地；准确认真地' },
-    { headwordId: 'measure', surface: 'measuring', gloss: 'v.测量；衡量；计量' },
+    { headwordId: 'measure', surface: 'measure', gloss: 'v.测量；衡量；计量' },
     { headwordId: 'temperature', surface: 'temperature', gloss: 'n.温度；气温；体温' },
     { headwordId: 'change', surface: 'changes', gloss: 'n.变化；改变；变更' },
     { headwordId: 'degree', surface: 'degrees', gloss: 'n.度数；程度；学位' },
     { headwordId: 'centigrade', surface: 'centigrade', gloss: 'n.摄氏度；百分度' },
     { headwordId: 'heat', surface: 'heating', gloss: 'v.加热；使变热' },
+    { headwordId: 'sample', surface: 'samples', gloss: 'n.样品；样本；标本' },
     { headwordId: 'oven', surface: 'ovens', gloss: 'n.烘箱；烤箱；窑炉' },
+    { headwordId: 'verify', surface: 'verify', gloss: 'v.核实；查证；检验' },
+    { headwordId: 'chemistry', surface: 'chemical', gloss: 'a.化学的；化学反应的' },
     { headwordId: 'stable', surface: 'stability', gloss: 'n.稳定性；牢固性；坚定性' },
+    { headwordId: 'strong', surface: 'strength', gloss: 'n.强度；力量；实力' },
 
     // Paragraph 2, Sentence 3
     { headwordId: 'plot', surface: 'plot', gloss: 'v.标绘；绘制；密谋' },
@@ -186,7 +188,6 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'data', surface: 'data', gloss: 'n.数据；资料' },
     { headwordId: 'guarantee', surface: 'guarantee', gloss: 'v.保证；担保；确保' },
     { headwordId: 'safe', surface: 'safety', gloss: 'n.安全；平安；安全性' },
-    { headwordId: 'severe', surface: 'severe', gloss: 'a.严酷的；严重的；剧烈的' },
     { headwordId: 'climate', surface: 'climate', gloss: 'a.气候的；风土的' },
     { headwordId: 'stress', surface: 'stress', gloss: 'n.应力；压力；紧迫' },
 
@@ -195,30 +196,29 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'inspect', surface: 'inspectors', gloss: 'n.检验员；检查员；巡视员' },
     { headwordId: 'charge', surface: 'charge', gloss: 'n.管理；监管；负责' },
     { headwordId: 'strict', surface: 'strictly', gloss: 'ad.严格地；严谨地' },
-    { headwordId: 'verify', surface: 'verify', gloss: 'v.核实；查证；检验' },
-    { headwordId: 'batch', surface: 'batch', gloss: 'n.一批；一炉；成批' },
+    { headwordId: 'section', surface: 'section', gloss: 'n.区段；部分；截面' },
     { headwordId: 'ensure', surface: 'ensuring', gloss: 'v.确保；保证；担保' },
-    { headwordId: 'component', surface: 'component', gloss: 'n.构件；组件；零件' },
+    { headwordId: 'renovate', surface: 'renovated', gloss: 'a.翻新的；修缮一新的' },
+    { headwordId: 'complex', surface: 'complex', gloss: 'n.综合楼群；综合体' },
     { headwordId: 'earn', surface: 'earns', gloss: 'v.赢得；获得；挣得' },
     { headwordId: 'formal', surface: 'formal', gloss: 'a.正式的；正规的；礼仪的' },
     { headwordId: 'build', surface: 'building', gloss: 'a.建筑的；建造的' },
     { headwordId: 'certificate', surface: 'certificates', gloss: 'n.证书；合格证；凭证' },
-    { headwordId: 'deliver', surface: 'delivery', gloss: 'n.交付；递送；发行' },
 
     // Paragraph 3, Sentence 1
-    { headwordId: 'complex', surface: 'complex', gloss: 'n.综合楼群；综合体' },
     { headwordId: 'design', surface: 'design', gloss: 'a.设计的；图案的' },
     { headwordId: 'workshop', surface: 'workshops', gloss: 'n.工坊；车间；研讨会' },
     { headwordId: 'dynamic', surface: 'dynamic', gloss: 'a.充满活力的；动态的；能动的' },
     { headwordId: 'studio', surface: 'studios', gloss: 'n.工作室；画室；演播室' },
-    { headwordId: 'educate', surface: 'educational', gloss: 'a.教育的；启发性的；有教益的' },
+    { headwordId: 'space', surface: 'spacious', gloss: 'a.宽敞的；广阔的' },
     { headwordId: 'exhibit', surface: 'exhibition', gloss: 'a.展览的；展出的' },
+    { headwordId: 'gallery', surface: 'galleries', gloss: 'n.展馆；画廊；美术馆' },
+    { headwordId: 'culture', surface: 'cultural', gloss: 'a.文化的；人文的' },
     { headwordId: 'channel', surface: 'channels', gloss: 'n.渠道；途径；频道' },
-    { headwordId: 'cherish', surface: 'cherishing', gloss: 'v.珍视；珍爱；怀抱' },
+    { headwordId: 'cherish', surface: 'cherish', gloss: 'v.珍视；珍爱；怀抱' },
     { headwordId: 'heritage', surface: 'heritage', gloss: 'n.遗产；传统；继承物' },
     { headwordId: 'reform', surface: 'reforming', gloss: 'v.改造；革新；改革' },
     { headwordId: 'old', surface: 'old', gloss: 'a.老旧的；陈旧的；古老的' },
-    { headwordId: 'space', surface: 'spaces', gloss: 'n.空间；场地；空地' },
 
     // Paragraph 3, Sentence 2
     { headwordId: 'offer', surface: 'Offering', gloss: 'v.提供；给予；提出' },
@@ -229,7 +229,6 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'explore', surface: 'explore', gloss: 'v.探索；探求；考察' },
     { headwordId: 'craft', surface: 'craft', gloss: 'a.手工艺的；工艺的' },
     { headwordId: 'tradition', surface: 'traditions', gloss: 'n.传统；惯例；规矩' },
-    { headwordId: 'renovate', surface: 'renovated', gloss: 'a.翻新的；修缮一新的' },
     { headwordId: 'hall', surface: 'halls', gloss: 'n.大厅；礼堂；会堂' },
     { headwordId: 'seal', surface: 'seal', gloss: 'v.封闭；密封；封住' },
     { headwordId: 'chill', surface: 'chill', gloss: 'n.寒意；寒冷；凛冽' },
@@ -248,7 +247,10 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'inspire', surface: 'inspiring', gloss: 'v.激发；鼓舞；启示' },
     { headwordId: 'deep', surface: 'deep', gloss: 'a.深厚的；深刻的；深切的' },
     { headwordId: 'pride', surface: 'pride', gloss: 'n.自豪；骄傲；自尊心' },
-    { headwordId: 'cheer', surface: 'cheering', gloss: 'v.欢呼；鼓舞；激励' },
+    { headwordId: 'cheer', surface: 'cheer', gloss: 'v.欢呼；喝彩；激励' },
+    { headwordId: 'transform', surface: 'transformation', gloss: 'n.转变；改观；蜕变' },
+    { headwordId: 'celebrate', surface: 'celebrate', gloss: 'v.庆祝；赞美；颂扬' },
+    { headwordId: 'encourage', surface: 'encouraging', gloss: 'a.令人鼓舞的；振奋人心的' },
     { headwordId: 'new', surface: 'new', gloss: 'a.崭新的；全新的；新近的' },
     { headwordId: 'community', surface: 'community', gloss: 'n.社区；社会；界' },
     { headwordId: 'chapter', surface: 'chapter', gloss: 'n.篇章；章节；分会' },
@@ -263,9 +265,9 @@ export const PASSAGE_013: Passage = {
     },
     {
       id: 'exp-02',
-      expression: 'cease production / bring to a halt',
+      expression: 'structural collapse / permanent ruin',
       explanation:
-        '停止生产，中止运营；cease 为正式书面语，常接名词或动名词表示某项活动彻底中止或停歇。',
+        '结构坍塌，永久损毁；collapse 指建筑物或结构的倒塌与塌陷，ruin 作名词表示严重毁坏或废墟状态。',
     },
     {
       id: 'exp-03',
@@ -281,9 +283,9 @@ export const PASSAGE_013: Passage = {
     },
     {
       id: 'exp-05',
-      expression: 'chemistry laboratory / material science testing',
+      expression: 'testing laboratory / material science testing',
       explanation:
-        '化学实验室，材料科学试验；laboratory 为科研实验场所，与 chemistry 连用表示进行化学配方与材料性能检测的实验室。',
+        '检测实验室，材料科学试验；laboratory 为科研实验场所，常与 testing 连用表示开展建筑材料性能与安全性检测的实验室。',
     },
     {
       id: 'exp-06',
@@ -313,7 +315,7 @@ export const PASSAGE_013: Passage = {
       id: 'exp-10',
       expression: 'verify compliance / quality certification',
       explanation:
-        '核实合规，品质认证；verify 强调通过对照标准、测试数据来证实真实性与有效性，certificate 为官方颁发的合格证或证书。',
+        '核实验证，品质认证；verify 强调通过对照标准、测试数据来证实真实性与有效性，certificate 为官方颁发的合格证或证书。',
     },
     {
       id: 'exp-11',
@@ -323,9 +325,9 @@ export const PASSAGE_013: Passage = {
     },
     {
       id: 'exp-12',
-      expression: 'exhibition channel / public platform',
+      expression: 'cultural channel / public platform',
       explanation:
-        '展示渠道，传播途径；channel 熟词僻义指信息传播、文化交流的渠道或路径，而非仅指河道或海峡。',
+        '文化渠道，交流平台；channel 熟词僻义指信息传播、文化交流的渠道或路径，而非仅指河道或海峡。',
     },
     {
       id: 'exp-13',

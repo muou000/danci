@@ -21562,8 +21562,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "When manufacturing ceased and decades of neglect brought structural damage, facing the threat of chaotic destruction, the municipal council stepped in to protect the site.",
-            "chinese": "当制造业停产、数十年的荒废造成结构损坏时，面对混乱破坏的威胁，市政委员会介入保护了这处遗址。",
+            "english": "When manufacturing ceased and decades of neglect brought severe structural decay, facing the threat of structural collapse and permanent ruin, the municipal council stepped in to protect the historic site.",
+            "chinese": "当制造业停产、数十年的荒废带来严重的结构破败时，面对结构坍塌与永久损毁的威胁，市政委员会介入保护了这处历史遗存。",
             "tokens": [
               {
                 "type": "text",
@@ -21600,7 +21600,7 @@
                 "surface": "neglect",
                 "gloss": "n.荒废；疏忽；忽视",
                 "headwordId": "neglect",
-                "shiftX": -4.9
+                "shiftX": -23.5
               },
               {
                 "type": "text",
@@ -21613,7 +21613,20 @@
                 "surface": "brought",
                 "gloss": "v.带来；引起；导致",
                 "headwordId": "bring",
-                "shiftX": 4.9
+                "shiftX": -16.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:severe",
+                "surface": "severe",
+                "gloss": "a.严重的；严厉的；剧烈的",
+                "headwordId": "severe",
+                "shiftX": 6.6
               },
               {
                 "type": "text",
@@ -21625,7 +21638,8 @@
                 "itemKey": "word:structure",
                 "surface": "structural",
                 "gloss": "a.结构的；构造的",
-                "headwordId": "structure"
+                "headwordId": "structure",
+                "shiftX": 15.8
               },
               {
                 "type": "text",
@@ -21633,11 +21647,12 @@
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:damage",
-                "surface": "damage",
-                "gloss": "n.破坏；损失；损坏",
-                "headwordId": "damage"
+                "category": "regular",
+                "itemKey": "word:decay",
+                "surface": "decay",
+                "gloss": "n.破败；腐朽；衰退",
+                "headwordId": "decay",
+                "shiftX": 17.9
               },
               {
                 "type": "text",
@@ -21649,21 +21664,32 @@
                 "itemKey": "word:threat",
                 "surface": "threat",
                 "gloss": "n.威胁；恐吓；凶兆",
-                "headwordId": "threat",
-                "shiftX": -4.2
+                "headwordId": "threat"
               },
               {
                 "type": "text",
-                "text": " of "
+                "text": " of structural "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chaos",
-                "surface": "chaotic",
-                "gloss": "a.混乱的；无序的；杂乱的",
-                "headwordId": "chaos",
-                "shiftX": -0.9
+                "category": "high-frequency",
+                "itemKey": "word:collapse",
+                "surface": "collapse",
+                "gloss": "n.坍塌；倒塌；崩溃",
+                "headwordId": "collapse"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:permanent",
+                "surface": "permanent",
+                "gloss": "a.永久的；长期的；永恒的",
+                "headwordId": "permanent",
+                "shiftX": -24
               },
               {
                 "type": "text",
@@ -21671,12 +21697,12 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:destroy",
-                "surface": "destruction",
-                "gloss": "n.毁灭；破坏；消灭",
-                "headwordId": "destroy",
-                "shiftX": 5.1
+                "category": "high-frequency",
+                "itemKey": "word:ruin",
+                "surface": "ruin",
+                "gloss": "n.损毁；废墟；毁灭",
+                "headwordId": "ruin",
+                "shiftX": -3.5
               },
               {
                 "type": "text",
@@ -21689,7 +21715,7 @@
                 "surface": "municipal",
                 "gloss": "a.市政的；地方自治的",
                 "headwordId": "municipal",
-                "shiftX": -33.4
+                "shiftX": -24.4
               },
               {
                 "type": "text",
@@ -21701,7 +21727,8 @@
                 "itemKey": "word:council",
                 "surface": "council",
                 "gloss": "n.委员会；政务委员会；理事会",
-                "headwordId": "council"
+                "headwordId": "council",
+                "shiftX": 3.9
               },
               {
                 "type": "text",
@@ -21714,7 +21741,7 @@
                 "surface": "stepped",
                 "gloss": "v.跨步；迈步；介入",
                 "headwordId": "step",
-                "shiftX": 33.6
+                "shiftX": 33.2
               },
               {
                 "type": "text",
@@ -21726,7 +21753,8 @@
                 "itemKey": "word:protect",
                 "surface": "protect",
                 "gloss": "v.保护；保卫；防护",
-                "headwordId": "protect"
+                "headwordId": "protect",
+                "shiftX": -7.2
               },
               {
                 "type": "text",
@@ -21735,10 +21763,24 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
+                "itemKey": "word:history",
+                "surface": "historic",
+                "gloss": "a.历史性的；有重大历史意义的",
+                "headwordId": "history",
+                "shiftX": -12.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
                 "itemKey": "word:site",
                 "surface": "site",
                 "gloss": "n.遗址；场所；地点",
-                "headwordId": "site"
+                "headwordId": "site",
+                "shiftX": 34.4
               },
               {
                 "type": "text",
@@ -21789,7 +21831,7 @@
                 "surface": "committee",
                 "gloss": "n.委员会；全体委员",
                 "headwordId": "committee",
-                "shiftX": -10.1
+                "shiftX": -9.5
               },
               {
                 "type": "text",
@@ -21802,7 +21844,7 @@
                 "surface": "led",
                 "gloss": "v.领导；引领；率领",
                 "headwordId": "lead¹",
-                "shiftX": 2.1
+                "shiftX": 4.7
               },
               {
                 "type": "text",
@@ -21815,7 +21857,7 @@
                 "surface": "insightful",
                 "gloss": "a.富有洞察力的；有真知灼见的",
                 "headwordId": "insight",
-                "shiftX": -8.5
+                "shiftX": -2.5
               },
               {
                 "type": "text",
@@ -21828,7 +21870,7 @@
                 "surface": "chairperson",
                 "gloss": "n.主席；负责人；主持人",
                 "headwordId": "chairperson",
-                "shiftX": 0.8
+                "shiftX": 11.1
               },
               {
                 "type": "text",
@@ -21841,24 +21883,11 @@
                 "surface": "drafted",
                 "gloss": "v.起草；拟订；草拟",
                 "headwordId": "draft",
-                "shiftX": -4.1
+                "shiftX": 10.7
               },
               {
                 "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:history",
-                "surface": "historic",
-                "gloss": "a.历史性的；有重大历史意义的",
-                "headwordId": "history",
-                "shiftX": 7.7
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " a historic "
               },
               {
                 "type": "annotation",
@@ -21866,8 +21895,7 @@
                 "itemKey": "word:restore",
                 "surface": "restoration",
                 "gloss": "a.修复的；整修的",
-                "headwordId": "restore",
-                "shiftX": 14.6
+                "headwordId": "restore"
               },
               {
                 "type": "text",
@@ -21880,7 +21908,7 @@
                 "surface": "charter",
                 "gloss": "n.章程；宪章；特许状",
                 "headwordId": "charter",
-                "shiftX": 2.5
+                "shiftX": -2.3
               },
               {
                 "type": "text",
@@ -21893,7 +21921,7 @@
                 "surface": "preserving",
                 "gloss": "v.保留；保存；守护",
                 "headwordId": "preserve",
-                "shiftX": -7.9
+                "shiftX": -10.8
               },
               {
                 "type": "text",
@@ -21906,7 +21934,7 @@
                 "surface": "distinct",
                 "gloss": "a.独特的；截然不同的；清晰的",
                 "headwordId": "distinct",
-                "shiftX": -25.5
+                "shiftX": -27.3
               },
               {
                 "type": "text",
@@ -21919,7 +21947,7 @@
                 "surface": "charm",
                 "gloss": "n.魅力；吸引力；风采",
                 "headwordId": "charm",
-                "shiftX": 11.5
+                "shiftX": 10.4
               },
               {
                 "type": "text",
@@ -21932,7 +21960,7 @@
                 "surface": "original",
                 "gloss": "a.原始的；原初的；独创的",
                 "headwordId": "origin",
-                "shiftX": 9.3
+                "shiftX": 8.6
               },
               {
                 "type": "text",
@@ -21945,7 +21973,7 @@
                 "surface": "character",
                 "gloss": "n.特色；风貌；特质",
                 "headwordId": "character",
-                "shiftX": 22.1
+                "shiftX": 21.3
               },
               {
                 "type": "text",
@@ -22000,44 +22028,68 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Inside the transformed materials chemistry laboratory, researchers conduct systematic experiments to develop clean cement and recycled construction products.",
-            "chinese": "在改造后的材料化学实验室里，研究人员进行系统实验，研制清洁水泥和循环利用的建筑产品。",
+            "english": "To reinforce aging brick walls without altering their historic appearance, engineers in the testing laboratory conduct systematic restoration experiments with clean cement and recycled materials.",
+            "chinese": "为了在不改变老旧砖墙历史风貌的前提下对其进行加固，检测实验室的工程师使用清洁水泥和循环利用的材料开展系统性修复实验。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Inside the "
+                "text": "To "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:transform",
-                "surface": "transformed",
-                "gloss": "a.改造后的；改头换面的",
-                "headwordId": "transform"
+                "itemKey": "word:reinforce",
+                "surface": "reinforce",
+                "gloss": "v.加固；加强；增援",
+                "headwordId": "reinforce"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " aging brick walls without "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:material",
-                "surface": "materials",
-                "gloss": "a.材料的；物质的",
-                "headwordId": "material"
+                "itemKey": "word:alter",
+                "surface": "altering",
+                "gloss": "v.改变；更改；变动",
+                "headwordId": "alter"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " their historic "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:appear",
+                "surface": "appearance",
+                "gloss": "n.外观；外貌；显现",
+                "headwordId": "appear"
+              },
+              {
+                "type": "text",
+                "text": ", "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:chemistry",
-                "surface": "chemistry",
-                "gloss": "a.化学的；化学反应的",
-                "headwordId": "chemistry"
+                "itemKey": "word:engineer",
+                "surface": "engineers",
+                "gloss": "n.工程师；技师",
+                "headwordId": "engineer"
+              },
+              {
+                "type": "text",
+                "text": " in the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:test",
+                "surface": "testing",
+                "gloss": "a.检测的；测试的",
+                "headwordId": "test"
               },
               {
                 "type": "text",
@@ -22050,18 +22102,6 @@
                 "surface": "laboratory",
                 "gloss": "n.实验室；研究室",
                 "headwordId": "laboratory"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:research",
-                "surface": "researchers",
-                "gloss": "n.研究人员；调查者",
-                "headwordId": "research"
               },
               {
                 "type": "text",
@@ -22091,7 +22131,7 @@
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " restoration "
               },
               {
                 "type": "annotation",
@@ -22103,20 +22143,7 @@
               },
               {
                 "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:develop",
-                "surface": "develop",
-                "gloss": "v.研制；开发；发展",
-                "headwordId": "develop",
-                "shiftX": -42
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " with "
               },
               {
                 "type": "annotation",
@@ -22125,7 +22152,7 @@
                 "surface": "clean",
                 "gloss": "a.清洁的；环保的；无污染的",
                 "headwordId": "clean",
-                "shiftX": -4.4
+                "shiftX": -21.7
               },
               {
                 "type": "text",
@@ -22138,7 +22165,7 @@
                 "surface": "cement",
                 "gloss": "n.水泥；胶结材料",
                 "headwordId": "cement",
-                "shiftX": 30.9
+                "shiftX": 13.8
               },
               {
                 "type": "text",
@@ -22151,19 +22178,20 @@
                 "surface": "recycled",
                 "gloss": "a.循环再造的；回收利用的",
                 "headwordId": "recycle",
-                "shiftX": 15.5
+                "shiftX": -1.8
               },
               {
                 "type": "text",
-                "text": " construction "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:product",
-                "surface": "products",
-                "gloss": "n.产品；产物；成效",
-                "headwordId": "product"
+                "itemKey": "word:material",
+                "surface": "materials",
+                "gloss": "n.材料；原料；物资",
+                "headwordId": "material",
+                "shiftX": 9.6
               },
               {
                 "type": "text",
@@ -22174,8 +22202,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Technicians mark test samples with white chalk, accurately measuring temperature changes in degrees centigrade and heating experimental ovens to test chemical stability.",
-            "chinese": "技术人员用白垩粉在测试样品上做标记，以摄氏度为单位精确测量温度变化，并加热实验烘箱以测试化学稳定性。",
+            "english": "Technicians accurately measure temperature changes in degrees centigrade, heating test samples in experimental ovens to verify chemical stability and structural strength.",
+            "chinese": "技术人员以摄氏度为单位精确测量温度变化，在实验烘箱中加热测试样品以核验化学稳定性与结构强度。",
             "tokens": [
               {
                 "type": "annotation",
@@ -22183,64 +22211,11 @@
                 "itemKey": "word:technical",
                 "surface": "Technicians",
                 "gloss": "n.技术员；技师",
-                "headwordId": "technical",
-                "shiftX": -20.4
+                "headwordId": "technical"
               },
               {
                 "type": "text",
                 "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:mark",
-                "surface": "mark",
-                "gloss": "v.做标记；标明；标示",
-                "headwordId": "mark",
-                "shiftX": -22
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:test",
-                "surface": "test",
-                "gloss": "a.测试的；试验的",
-                "headwordId": "test",
-                "shiftX": 12.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:sample",
-                "surface": "samples",
-                "gloss": "n.样品；样本；标本",
-                "headwordId": "sample",
-                "shiftX": 30.4
-              },
-              {
-                "type": "text",
-                "text": " with white "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:chalk",
-                "surface": "chalk",
-                "gloss": "n.白垩；粉笔；白垩粉",
-                "headwordId": "chalk",
-                "shiftX": -7.1
-              },
-              {
-                "type": "text",
-                "text": ", "
               },
               {
                 "type": "annotation",
@@ -22248,8 +22223,7 @@
                 "itemKey": "word:accurate",
                 "surface": "accurately",
                 "gloss": "ad.精确地；准确认真地",
-                "headwordId": "accurate",
-                "shiftX": 6.9
+                "headwordId": "accurate"
               },
               {
                 "type": "text",
@@ -22259,7 +22233,7 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:measure",
-                "surface": "measuring",
+                "surface": "measure",
                 "gloss": "v.测量；衡量；计量",
                 "headwordId": "measure"
               },
@@ -22313,7 +22287,7 @@
               },
               {
                 "type": "text",
-                "text": " and "
+                "text": ", "
               },
               {
                 "type": "annotation",
@@ -22325,7 +22299,19 @@
               },
               {
                 "type": "text",
-                "text": " experimental "
+                "text": " test "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:sample",
+                "surface": "samples",
+                "gloss": "n.样品；样本；标本",
+                "headwordId": "sample"
+              },
+              {
+                "type": "text",
+                "text": " in experimental "
               },
               {
                 "type": "annotation",
@@ -22333,11 +22319,38 @@
                 "itemKey": "word:oven",
                 "surface": "ovens",
                 "gloss": "n.烘箱；烤箱；窑炉",
-                "headwordId": "oven"
+                "headwordId": "oven",
+                "shiftX": -11.9
               },
               {
                 "type": "text",
-                "text": " to test chemical "
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:verify",
+                "surface": "verify",
+                "gloss": "v.核实；查证；检验",
+                "headwordId": "verify",
+                "shiftX": -13.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:chemistry",
+                "surface": "chemical",
+                "gloss": "a.化学的；化学反应的",
+                "headwordId": "chemistry",
+                "shiftX": 2.8
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -22345,7 +22358,20 @@
                 "itemKey": "word:stable",
                 "surface": "stability",
                 "gloss": "n.稳定性；牢固性；坚定性",
-                "headwordId": "stable"
+                "headwordId": "stable",
+                "shiftX": 22.6
+              },
+              {
+                "type": "text",
+                "text": " and structural "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:strong",
+                "surface": "strength",
+                "gloss": "n.强度；力量；实力",
+                "headwordId": "strong"
               },
               {
                 "type": "text",
@@ -22357,7 +22383,7 @@
             "sentenceNumber": 3,
             "circledNumber": "③",
             "english": "They plot expansion curves on a digital chart down to the centimeter, recording temperature data to guarantee safety under severe climate stress.",
-            "chinese": "他们在数字图表上绘制精确到厘米的膨胀曲线，记录温度数据以确保在严酷气候压力下的安全性。",
+            "chinese": "他们在数字图表上标绘精确到厘米的膨胀曲线，记录温度数据以确保在严酷气候压力下的安全性。",
             "tokens": [
               {
                 "type": "text",
@@ -22471,7 +22497,7 @@
                 "surface": "guarantee",
                 "gloss": "v.保证；担保；确保",
                 "headwordId": "guarantee",
-                "shiftX": -5.3
+                "shiftX": -3.7
               },
               {
                 "type": "text",
@@ -22484,24 +22510,11 @@
                 "surface": "safety",
                 "gloss": "n.安全；平安；安全性",
                 "headwordId": "safe",
-                "shiftX": 1.1
+                "shiftX": 3.7
               },
               {
                 "type": "text",
-                "text": " under "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:severe",
-                "surface": "severe",
-                "gloss": "a.严酷的；严重的；剧烈的",
-                "headwordId": "severe",
-                "shiftX": -17.9
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": " under severe "
               },
               {
                 "type": "annotation",
@@ -22510,7 +22523,7 @@
                 "surface": "climate",
                 "gloss": "a.气候的；风土的",
                 "headwordId": "climate",
-                "shiftX": 5.7
+                "shiftX": -5.4
               },
               {
                 "type": "text",
@@ -22523,7 +22536,7 @@
                 "surface": "stress",
                 "gloss": "n.应力；压力；紧迫",
                 "headwordId": "stress",
-                "shiftX": 16.5
+                "shiftX": 5.4
               },
               {
                 "type": "text",
@@ -22534,8 +22547,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Quality inspectors in charge strictly verify each sample batch, ensuring every finished component earns formal green building certificates before delivery.",
-            "chinese": "负责的质检员严格核实每一批样品，确保每个完工构件在交付前均获得正式的绿色建筑认证证书。",
+            "english": "Quality inspectors in charge strictly verify each restored section, ensuring the renovated complex earns formal green building certificates.",
+            "chinese": "负责的质检员严格核验每一个修复区段，确保翻新后的综合体获得正式的绿色建筑认证证书。",
             "tokens": [
               {
                 "type": "annotation",
@@ -22544,7 +22557,7 @@
                 "surface": "Quality",
                 "gloss": "a.质量的；优质的",
                 "headwordId": "quality",
-                "shiftX": -7.5
+                "shiftX": -5.5
               },
               {
                 "type": "text",
@@ -22556,7 +22569,8 @@
                 "itemKey": "word:inspect",
                 "surface": "inspectors",
                 "gloss": "n.检验员；检查员；巡视员",
-                "headwordId": "inspect"
+                "headwordId": "inspect",
+                "shiftX": 2.9
               },
               {
                 "type": "text",
@@ -22569,7 +22583,7 @@
                 "surface": "charge",
                 "gloss": "n.管理；监管；负责",
                 "headwordId": "charge",
-                "shiftX": -8.7
+                "shiftX": -4.2
               },
               {
                 "type": "text",
@@ -22582,33 +22596,20 @@
                 "surface": "strictly",
                 "gloss": "ad.严格地；严谨地",
                 "headwordId": "strict",
-                "shiftX": 1.8
+                "shiftX": 6.8
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " verify each restored "
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:verify",
-                "surface": "verify",
-                "gloss": "v.核实；查证；检验",
-                "headwordId": "verify",
-                "shiftX": 14.9
-              },
-              {
-                "type": "text",
-                "text": " each sample "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:batch",
-                "surface": "batch",
-                "gloss": "n.一批；一炉；成批",
-                "headwordId": "batch",
-                "shiftX": -4.5
+                "category": "high-frequency",
+                "itemKey": "word:section",
+                "surface": "section",
+                "gloss": "n.区段；部分；截面",
+                "headwordId": "section",
+                "shiftX": -0.8
               },
               {
                 "type": "text",
@@ -22621,20 +22622,33 @@
                 "surface": "ensuring",
                 "gloss": "v.确保；保证；担保",
                 "headwordId": "ensure",
-                "shiftX": 4.5
+                "shiftX": 0.8
               },
               {
                 "type": "text",
-                "text": " every finished "
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:renovate",
+                "surface": "renovated",
+                "gloss": "a.翻新的；修缮一新的",
+                "headwordId": "renovate",
+                "shiftX": -19.4
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:component",
-                "surface": "component",
-                "gloss": "n.构件；组件；零件",
-                "headwordId": "component",
-                "shiftX": -14.8
+                "itemKey": "word:complex",
+                "surface": "complex",
+                "gloss": "n.综合楼群；综合体",
+                "headwordId": "complex",
+                "shiftX": -16.8
               },
               {
                 "type": "text",
@@ -22646,8 +22660,7 @@
                 "itemKey": "word:earn",
                 "surface": "earns",
                 "gloss": "v.赢得；获得；挣得",
-                "headwordId": "earn",
-                "shiftX": -9.8
+                "headwordId": "earn"
               },
               {
                 "type": "text",
@@ -22660,7 +22673,7 @@
                 "surface": "formal",
                 "gloss": "a.正式的；正规的；礼仪的",
                 "headwordId": "formal",
-                "shiftX": 24.7
+                "shiftX": 33.2
               },
               {
                 "type": "text",
@@ -22672,7 +22685,8 @@
                 "itemKey": "word:build",
                 "surface": "building",
                 "gloss": "a.建筑的；建造的",
-                "headwordId": "build"
+                "headwordId": "build",
+                "shiftX": 3.5
               },
               {
                 "type": "text",
@@ -22688,18 +22702,6 @@
               },
               {
                 "type": "text",
-                "text": " before "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:deliver",
-                "surface": "delivery",
-                "gloss": "n.交付；递送；发行",
-                "headwordId": "deliver"
-              },
-              {
-                "type": "text",
                 "text": "."
               }
             ]
@@ -22712,24 +22714,12 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Today, the complex houses creative design workshops, dynamic studios, and educational exhibition channels, cherishing industrial heritage while reforming old urban spaces.",
-            "chinese": "如今，这处综合建筑群容纳了创意设计工坊、活力工作室和教育展览渠道，在珍视工业遗产的同时改造了老旧城市空间。",
+            "english": "Today, the complex houses creative design workshops, dynamic studios, and spacious exhibition galleries, opening public cultural channels to cherish industrial heritage while reforming old urban spaces.",
+            "chinese": "如今，这处综合建筑群容纳了创意设计工坊、活力工作室和宽敞的展览馆，开启了珍视工业遗产的公共文化渠道，同时改造了老旧城市空间。",
             "tokens": [
               {
                 "type": "text",
-                "text": "Today, the "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:complex",
-                "surface": "complex",
-                "gloss": "n.综合楼群；综合体",
-                "headwordId": "complex"
-              },
-              {
-                "type": "text",
-                "text": " houses creative "
+                "text": "Today, the complex houses creative "
               },
               {
                 "type": "annotation",
@@ -22738,7 +22728,7 @@
                 "surface": "design",
                 "gloss": "a.设计的；图案的",
                 "headwordId": "design",
-                "shiftX": -20.7
+                "shiftX": -19.1
               },
               {
                 "type": "text",
@@ -22751,7 +22741,7 @@
                 "surface": "workshops",
                 "gloss": "n.工坊；车间；研讨会",
                 "headwordId": "workshop",
-                "shiftX": -21.4
+                "shiftX": -18.1
               },
               {
                 "type": "text",
@@ -22764,7 +22754,7 @@
                 "surface": "dynamic",
                 "gloss": "a.充满活力的；动态的；能动的",
                 "headwordId": "dynamic",
-                "shiftX": -10.2
+                "shiftX": -4.6
               },
               {
                 "type": "text",
@@ -22777,7 +22767,7 @@
                 "surface": "studios",
                 "gloss": "n.工作室；画室；演播室",
                 "headwordId": "studio",
-                "shiftX": 25.9
+                "shiftX": 34.2
               },
               {
                 "type": "text",
@@ -22786,11 +22776,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:educate",
-                "surface": "educational",
-                "gloss": "a.教育的；启发性的；有教益的",
-                "headwordId": "educate",
-                "shiftX": 9.3
+                "itemKey": "word:space",
+                "surface": "spacious",
+                "gloss": "a.宽敞的；广阔的",
+                "headwordId": "space",
+                "shiftX": 7.6
               },
               {
                 "type": "text",
@@ -22802,8 +22792,32 @@
                 "itemKey": "word:exhibit",
                 "surface": "exhibition",
                 "gloss": "a.展览的；展出的",
-                "headwordId": "exhibit",
-                "shiftX": 11.6
+                "headwordId": "exhibit"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:gallery",
+                "surface": "galleries",
+                "gloss": "n.展馆；画廊；美术馆",
+                "headwordId": "gallery"
+              },
+              {
+                "type": "text",
+                "text": ", opening public "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:culture",
+                "surface": "cultural",
+                "gloss": "a.文化的；人文的",
+                "headwordId": "culture",
+                "shiftX": -0.7
               },
               {
                 "type": "text",
@@ -22816,17 +22830,17 @@
                 "surface": "channels",
                 "gloss": "n.渠道；途径；频道",
                 "headwordId": "channel",
-                "shiftX": 5.4
+                "shiftX": 0.7
               },
               {
                 "type": "text",
-                "text": ", "
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:cherish",
-                "surface": "cherishing",
+                "surface": "cherish",
                 "gloss": "v.珍视；珍爱；怀抱",
                 "headwordId": "cherish"
               },
@@ -22853,7 +22867,7 @@
                 "surface": "reforming",
                 "gloss": "v.改造；革新；改革",
                 "headwordId": "reform",
-                "shiftX": -19.1
+                "shiftX": -15.9
               },
               {
                 "type": "text",
@@ -22866,24 +22880,11 @@
                 "surface": "old",
                 "gloss": "a.老旧的；陈旧的；古老的",
                 "headwordId": "old",
-                "shiftX": 12.7
+                "shiftX": 15.9
               },
               {
                 "type": "text",
-                "text": " urban "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:space",
-                "surface": "spaces",
-                "gloss": "n.空间；场地；空地",
-                "headwordId": "space",
-                "shiftX": 6.4
-              },
-              {
-                "type": "text",
-                "text": "."
+                "text": " urban spaces."
               }
             ]
           },
@@ -22891,7 +22892,7 @@
             "sentenceNumber": 2,
             "circledNumber": "②",
             "english": "Offering local citizens a rare chance to explore craft traditions, renovated halls seal out the winter chill and avoid excessive heating waste.",
-            "chinese": "翻新的大厅为当地市民提供了探索手工艺传统的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。",
+            "chinese": "翻新后的大厅为当地市民提供了探索传统手工艺的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。",
             "tokens": [
               {
                 "type": "annotation",
@@ -22952,7 +22953,7 @@
                 "surface": "chance",
                 "gloss": "n.机会；机遇；几率",
                 "headwordId": "chance",
-                "shiftX": 25.1
+                "shiftX": 26.1
               },
               {
                 "type": "text",
@@ -22965,7 +22966,7 @@
                 "surface": "explore",
                 "gloss": "v.探索；探求；考察",
                 "headwordId": "explore",
-                "shiftX": 3
+                "shiftX": 8.3
               },
               {
                 "type": "text",
@@ -22978,7 +22979,7 @@
                 "surface": "craft",
                 "gloss": "a.手工艺的；工艺的",
                 "headwordId": "craft",
-                "shiftX": 12.1
+                "shiftX": 25
               },
               {
                 "type": "text",
@@ -22991,24 +22992,11 @@
                 "surface": "traditions",
                 "gloss": "n.传统；惯例；规矩",
                 "headwordId": "tradition",
-                "shiftX": 10.7
+                "shiftX": 33.4
               },
               {
                 "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:renovate",
-                "surface": "renovated",
-                "gloss": "a.翻新的；修缮一新的",
-                "headwordId": "renovate",
-                "shiftX": -7.9
-              },
-              {
-                "type": "text",
-                "text": " "
+                "text": ", renovated "
               },
               {
                 "type": "annotation",
@@ -23017,7 +23005,7 @@
                 "surface": "halls",
                 "gloss": "n.大厅；礼堂；会堂",
                 "headwordId": "hall",
-                "shiftX": 6.2
+                "shiftX": -18.8
               },
               {
                 "type": "text",
@@ -23030,7 +23018,7 @@
                 "surface": "seal",
                 "gloss": "v.封闭；密封；封住",
                 "headwordId": "seal",
-                "shiftX": 43.7
+                "shiftX": 18.8
               },
               {
                 "type": "text",
@@ -23092,8 +23080,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride and cheering a new community chapter.",
-            "chinese": "在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，为社区翻开了欢欣鼓舞的新篇章。",
+            "english": "At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride as local citizens cheer the transformation and celebrate an encouraging new community chapter.",
+            "chinese": "在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，当地市民为这一蜕变欢呼喝彩，共同庆祝充满鼓舞的社区新篇章。",
             "tokens": [
               {
                 "type": "text",
@@ -23180,7 +23168,7 @@
                 "surface": "champion",
                 "gloss": "n.捍卫者；倡导者；支持者",
                 "headwordId": "champion",
-                "shiftX": -19.4
+                "shiftX": -18.9
               },
               {
                 "type": "text",
@@ -23193,7 +23181,7 @@
                 "surface": "inspiring",
                 "gloss": "v.激发；鼓舞；启示",
                 "headwordId": "inspire",
-                "shiftX": -16
+                "shiftX": -13.4
               },
               {
                 "type": "text",
@@ -23206,7 +23194,7 @@
                 "surface": "deep",
                 "gloss": "a.深厚的；深刻的；深切的",
                 "headwordId": "deep",
-                "shiftX": 11.4
+                "shiftX": 17.8
               },
               {
                 "type": "text",
@@ -23219,7 +23207,31 @@
                 "surface": "pride",
                 "gloss": "n.自豪；骄傲；自尊心",
                 "headwordId": "pride",
-                "shiftX": 3.3
+                "shiftX": 14.5
+              },
+              {
+                "type": "text",
+                "text": " as local citizens "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cheer",
+                "surface": "cheer",
+                "gloss": "v.欢呼；喝彩；激励",
+                "headwordId": "cheer"
+              },
+              {
+                "type": "text",
+                "text": " the "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transform",
+                "surface": "transformation",
+                "gloss": "n.转变；改观；蜕变",
+                "headwordId": "transform"
               },
               {
                 "type": "text",
@@ -23228,15 +23240,28 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:cheer",
-                "surface": "cheering",
-                "gloss": "v.欢呼；鼓舞；激励",
-                "headwordId": "cheer",
-                "shiftX": -13.9
+                "itemKey": "word:celebrate",
+                "surface": "celebrate",
+                "gloss": "v.庆祝；赞美；颂扬",
+                "headwordId": "celebrate",
+                "shiftX": -3.1
               },
               {
                 "type": "text",
-                "text": " a "
+                "text": " an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:encourage",
+                "surface": "encouraging",
+                "gloss": "a.令人鼓舞的；振奋人心的",
+                "headwordId": "encourage",
+                "shiftX": -31.5
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -23245,7 +23270,7 @@
                 "surface": "new",
                 "gloss": "a.崭新的；全新的；新近的",
                 "headwordId": "new",
-                "shiftX": 2.5
+                "shiftX": 2
               },
               {
                 "type": "text",
@@ -23258,7 +23283,7 @@
                 "surface": "community",
                 "gloss": "n.社区；社会；界",
                 "headwordId": "community",
-                "shiftX": 20.9
+                "shiftX": 21.1
               },
               {
                 "type": "text",
@@ -23271,7 +23296,7 @@
                 "surface": "chapter",
                 "gloss": "n.篇章；章节；分会",
                 "headwordId": "chapter",
-                "shiftX": 11.3
+                "shiftX": 11.5
               },
               {
                 "type": "text",
@@ -23290,8 +23315,8 @@
       },
       {
         "id": "exp-02",
-        "expression": "cease production / bring to a halt",
-        "explanation": "停止生产，中止运营；cease 为正式书面语，常接名词或动名词表示某项活动彻底中止或停歇。"
+        "expression": "structural collapse / permanent ruin",
+        "explanation": "结构坍塌，永久损毁；collapse 指建筑物或结构的倒塌与塌陷，ruin 作名词表示严重毁坏或废墟状态。"
       },
       {
         "id": "exp-03",
@@ -23305,8 +23330,8 @@
       },
       {
         "id": "exp-05",
-        "expression": "chemistry laboratory / material science testing",
-        "explanation": "化学实验室，材料科学试验；laboratory 为科研实验场所，与 chemistry 连用表示进行化学配方与材料性能检测的实验室。"
+        "expression": "testing laboratory / material science testing",
+        "explanation": "检测实验室，材料科学试验；laboratory 为科研实验场所，常与 testing 连用表示开展建筑材料性能与安全性检测的实验室。"
       },
       {
         "id": "exp-06",
@@ -23331,7 +23356,7 @@
       {
         "id": "exp-10",
         "expression": "verify compliance / quality certification",
-        "explanation": "核实合规，品质认证；verify 强调通过对照标准、测试数据来证实真实性与有效性，certificate 为官方颁发的合格证或证书。"
+        "explanation": "核实验证，品质认证；verify 强调通过对照标准、测试数据来证实真实性与有效性，certificate 为官方颁发的合格证或证书。"
       },
       {
         "id": "exp-11",
@@ -23340,8 +23365,8 @@
       },
       {
         "id": "exp-12",
-        "expression": "exhibition channel / public platform",
-        "explanation": "展示渠道，传播途径；channel 熟词僻义指信息传播、文化交流的渠道或路径，而非仅指河道或海峡。"
+        "expression": "cultural channel / public platform",
+        "explanation": "文化渠道，交流平台；channel 熟词僻义指信息传播、文化交流的渠道或路径，而非仅指河道或海峡。"
       },
       {
         "id": "exp-13",
@@ -23375,15 +23400,18 @@
       "decade",
       "neglect",
       "bring",
+      "severe",
       "structure",
-      "damage",
+      "decay",
       "threat",
-      "chaos",
-      "destroy",
+      "collapse",
+      "permanent",
+      "ruin",
       "municipal",
       "council",
       "step",
       "protect",
+      "history",
       "site",
       "urban",
       "renew",
@@ -23392,7 +23420,6 @@
       "insight",
       "chairperson",
       "draft",
-      "history",
       "restore",
       "charter",
       "preserve",
@@ -23403,24 +23430,20 @@
       "create",
       "public",
       "use",
-      "transform",
-      "material",
-      "chemistry",
+      "reinforce",
+      "alter",
+      "appear",
+      "engineer",
+      "test",
       "laboratory",
-      "research",
       "conduct",
       "system",
       "experiment",
-      "develop",
       "clean",
       "cement",
       "recycle",
-      "product",
+      "material",
       "technical",
-      "mark",
-      "test",
-      "sample",
-      "chalk",
       "accurate",
       "measure",
       "temperature",
@@ -23428,8 +23451,12 @@
       "degree",
       "centigrade",
       "heat",
+      "sample",
       "oven",
+      "verify",
+      "chemistry",
       "stable",
+      "strong",
       "plot",
       "expand",
       "curve",
@@ -23440,35 +23467,33 @@
       "data",
       "guarantee",
       "safe",
-      "severe",
       "climate",
       "stress",
       "quality",
       "inspect",
       "charge",
       "strict",
-      "verify",
-      "batch",
+      "section",
       "ensure",
-      "component",
+      "renovate",
+      "complex",
       "earn",
       "formal",
       "build",
       "certificate",
-      "deliver",
-      "complex",
       "design",
       "workshop",
       "dynamic",
       "studio",
-      "educate",
+      "space",
       "exhibit",
+      "gallery",
+      "culture",
       "channel",
       "cherish",
       "heritage",
       "reform",
       "old",
-      "space",
       "offer",
       "local",
       "citizen",
@@ -23477,7 +23502,6 @@
       "explore",
       "craft",
       "tradition",
-      "renovate",
       "hall",
       "seal",
       "chill",
@@ -23495,6 +23519,9 @@
       "deep",
       "pride",
       "cheer",
+      "transform",
+      "celebrate",
+      "encourage",
       "new",
       "community",
       "chapter"
