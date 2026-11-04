@@ -27013,9 +27013,9 @@
     "id": "cet4-b1-015",
     "indexLabel": "NO. 15",
     "tier": "cet4-core",
-    "topic": "港口商业贸易与区域经济合作",
-    "titleZh": "港口商业贸易与区域经济合作",
-    "titleEn": "Port Commerce, Regional Logistics, and Community Life",
+    "topic": "现代化港口商贸、海运物流与区域多边合作",
+    "titleZh": "现代化港口商贸、海运物流与区域多边合作",
+    "titleEn": "Modern Port Commerce, Maritime Logistics, and Regional Economic Cooperation",
     "paragraphs": [
       {
         "paragraphNumber": 1,
@@ -27023,8 +27023,8 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "Along an active ocean coast, international commerce flourished as trading ships dock to deliver essential bulk commodity shipments.",
-            "chinese": "在一条活跃的海洋海岸线上，国际商业蓬勃发展，贸易货船停靠以运送基础大宗商品货物。",
+            "english": "Along an active ocean coast, international commerce flourishes as massive cargo vessels dock to deliver vital bulk commodity shipments.",
+            "chinese": "在活跃的海洋海岸线上，随着大型货轮靠泊运送重要的大宗商品物资，国际商业蓬勃发展。",
             "tokens": [
               {
                 "type": "text",
@@ -27059,7 +27059,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:international",
                 "surface": "international",
-                "gloss": "a.国际的；世界的",
+                "gloss": "a.国际的；世界性的",
                 "headwordId": "international"
               },
               {
@@ -27082,8 +27082,8 @@
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:flourish",
-                "surface": "flourished",
-                "gloss": "v.繁荣；昌盛",
+                "surface": "flourishes",
+                "gloss": "v.繁荣；蓬勃发展",
                 "headwordId": "flourish"
               },
               {
@@ -27093,22 +27093,50 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:trade",
-                "surface": "trading",
-                "gloss": "v.贸易；经商",
-                "headwordId": "trade"
+                "itemKey": "word:mass",
+                "surface": "massive",
+                "gloss": "a.巨大的；大规模的",
+                "headwordId": "mass",
+                "shiftX": -14.1
               },
               {
                 "type": "text",
-                "text": " ships "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cargo",
+                "surface": "cargo",
+                "gloss": "a.货运的；货物的",
+                "headwordId": "cargo",
+                "shiftX": -3.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:vessel",
+                "surface": "vessels",
+                "gloss": "n.船只；大船",
+                "headwordId": "vessel",
+                "shiftX": -7.6
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:dock",
                 "surface": "dock",
-                "gloss": "v.停泊；靠港",
-                "headwordId": "dock"
+                "gloss": "v.靠泊；进港",
+                "headwordId": "dock",
+                "shiftX": -18.2
               },
               {
                 "type": "text",
@@ -27119,9 +27147,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:deliver",
                 "surface": "deliver",
-                "gloss": "v.运送；交付",
+                "gloss": "v.运送；递送；交付",
                 "headwordId": "deliver",
-                "shiftX": -11.3
+                "shiftX": -39.1
               },
               {
                 "type": "text",
@@ -27130,11 +27158,11 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:essence",
-                "surface": "essential",
-                "gloss": "a.必不可少的；本质的",
-                "headwordId": "essence",
-                "shiftX": -11.9
+                "itemKey": "word:vital",
+                "surface": "vital",
+                "gloss": "a.极其重要的；生死攸关的",
+                "headwordId": "vital",
+                "shiftX": -7.2
               },
               {
                 "type": "text",
@@ -27145,9 +27173,9 @@
                 "category": "regular",
                 "itemKey": "word:bulk",
                 "surface": "bulk",
-                "gloss": "a.大宗的；散装的",
+                "gloss": "a.大宗的；大批的",
                 "headwordId": "bulk",
-                "shiftX": 9.1
+                "shiftX": 38
               },
               {
                 "type": "text",
@@ -27158,9 +27186,9 @@
                 "category": "regular",
                 "itemKey": "word:commodity",
                 "surface": "commodity",
-                "gloss": "n.商品；大宗物品",
+                "gloss": "a.大宗商品的；货物的",
                 "headwordId": "commodity",
-                "shiftX": 14.1
+                "shiftX": 51.8
               },
               {
                 "type": "text",
@@ -27171,307 +27199,17 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Port authorities collaborate to maintain order, establishing a collective inspection committee to manage regional trade.",
-            "chinese": "港口当局协同合作以维护秩序，建立集体检查委员会来管理区域贸易。",
+            "english": "Giant cranes lift heavy container boxes with steady precision, ensuring that raw coal and essential supplies are safely transferred without delay.",
+            "chinese": "巨型起重机以稳健的精准度起吊沉重的集装箱，确保原煤和基础物资安全转运而毫无延误。",
             "tokens": [
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:port",
-                "surface": "Port",
-                "gloss": "n.港口；舱门",
-                "headwordId": "port"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:authority",
-                "surface": "authorities",
-                "gloss": "n.当局；官方",
-                "headwordId": "authority"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:collaborate",
-                "surface": "collaborate",
-                "gloss": "v.合作；协作",
-                "headwordId": "collaborate"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:maintain",
-                "surface": "maintain",
-                "gloss": "v.维持；赡养",
-                "headwordId": "maintain"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:order",
-                "surface": "order",
-                "gloss": "n.秩序；条理",
-                "headwordId": "order"
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:establish",
-                "surface": "establishing",
-                "gloss": "v.建立；设立",
-                "headwordId": "establish"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:collective",
-                "surface": "collective",
-                "gloss": "a.集体的；共同的",
-                "headwordId": "collective"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:inspect",
-                "surface": "inspection",
-                "gloss": "v.检查；视察",
-                "headwordId": "inspect"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:committee",
-                "surface": "committee",
-                "gloss": "n.委员会；全体委员",
-                "headwordId": "committee"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:manage",
-                "surface": "manage",
-                "gloss": "v.管理；设法",
-                "headwordId": "manage"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:region",
-                "surface": "regional",
-                "gloss": "a.区域的；地方的",
-                "headwordId": "region"
-              },
-              {
-                "type": "text",
-                "text": " trade."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "Workers wear a protective coarse cloth jacket with a buttoned collar, ready to clothe themselves safely against winter moisture.",
-            "chinese": "工人们穿着带有纽扣衣领的防护性粗布夹克，穿好衣物以安全抵御冬日湿气。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "Workers "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:wear",
-                "surface": "wear",
-                "gloss": "v.穿着；佩戴",
-                "headwordId": "wear"
-              },
-              {
-                "type": "text",
-                "text": " a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:protect",
-                "surface": "protective",
-                "gloss": "v.保护；守护",
-                "headwordId": "protect"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:coarse",
-                "surface": "coarse",
-                "gloss": "a.粗糙的；粗劣的",
-                "headwordId": "coarse",
-                "shiftX": -4.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cloth",
-                "surface": "cloth",
-                "gloss": "n.布料；织物",
-                "headwordId": "cloth",
-                "shiftX": 4.6
-              },
-              {
-                "type": "text",
-                "text": " jacket with a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:button",
-                "surface": "buttoned",
-                "gloss": "n.扣子；按钮",
-                "headwordId": "button"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:collar",
-                "surface": "collar",
-                "gloss": "n.衣领；项圈",
-                "headwordId": "collar",
-                "shiftX": -6.9
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:ready",
-                "surface": "ready",
-                "gloss": "a.准备好的；愿意的",
-                "headwordId": "ready",
-                "shiftX": 3.3
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clothe",
-                "surface": "clothe",
-                "gloss": "v.给...穿衣；穿上",
-                "headwordId": "clothe",
-                "shiftX": 3.6
-              },
-              {
-                "type": "text",
-                "text": " themselves "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:safe",
-                "surface": "safely",
-                "gloss": "ad.安全地；平安地",
-                "headwordId": "safe"
-              },
-              {
-                "type": "text",
-                "text": " against winter "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:moist",
-                "surface": "moisture",
-                "gloss": "n.湿气；水分",
-                "headwordId": "moist"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "Heavily loaded cranes lift black coal containers, ensuring that heavy ropes coil neatly so that storage shelves will not collapse.",
-            "chinese": "重型起重机吊起黑煤集装箱，确保沉重绳索盘绕整齐，以使仓储货架不会倒塌。",
-            "tokens": [
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:heavy",
-                "surface": "Heavily",
-                "gloss": "ad.沉重地；剧烈地",
-                "headwordId": "heavy",
-                "shiftX": -16.7
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:load",
-                "surface": "loaded",
-                "gloss": "a.装载的；负重的",
-                "headwordId": "load",
-                "shiftX": -4
+                "itemKey": "word:giant",
+                "surface": "Giant",
+                "gloss": "a.巨大的；庞大的",
+                "headwordId": "giant",
+                "shiftX": -21.9
               },
               {
                 "type": "text",
@@ -27484,7 +27222,7 @@
                 "surface": "cranes",
                 "gloss": "n.起重机；吊车",
                 "headwordId": "crane",
-                "shiftX": 4.5
+                "shiftX": -12.9
               },
               {
                 "type": "text",
@@ -27495,21 +27233,22 @@
                 "category": "regular",
                 "itemKey": "word:lift",
                 "surface": "lift",
-                "gloss": "v.提起；提高",
+                "gloss": "v.举起；吊起",
                 "headwordId": "lift",
-                "shiftX": 16.1
+                "shiftX": -4
               },
               {
                 "type": "text",
-                "text": " black "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:coal",
-                "surface": "coal",
-                "gloss": "n.煤；煤块",
-                "headwordId": "coal"
+                "itemKey": "word:heavy",
+                "surface": "heavy",
+                "gloss": "a.沉重的；繁重的",
+                "headwordId": "heavy",
+                "shiftX": 15.3
               },
               {
                 "type": "text",
@@ -27519,9 +27258,34 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:contain",
-                "surface": "containers",
-                "gloss": "n.集装箱；容器",
-                "headwordId": "contain"
+                "surface": "container",
+                "gloss": "a.集装箱的；容纳的",
+                "headwordId": "contain",
+                "shiftX": 23.5
+              },
+              {
+                "type": "text",
+                "text": " boxes with "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:steady",
+                "surface": "steady",
+                "gloss": "a.稳健的；持续的",
+                "headwordId": "steady"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:precise",
+                "surface": "precision",
+                "gloss": "n.精确；精准度",
+                "headwordId": "precise"
               },
               {
                 "type": "text",
@@ -27537,16 +27301,16 @@
               },
               {
                 "type": "text",
-                "text": " that heavy "
+                "text": " that "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:rope",
-                "surface": "ropes",
-                "gloss": "n.绳索；线缆",
-                "headwordId": "rope",
-                "shiftX": -10.3
+                "itemKey": "word:raw",
+                "surface": "raw",
+                "gloss": "a.原始的；未加工的",
+                "headwordId": "raw",
+                "shiftX": -12.7
               },
               {
                 "type": "text",
@@ -27555,11 +27319,105 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:coil",
-                "surface": "coil",
-                "gloss": "v.卷；盘绕",
-                "headwordId": "coil",
-                "shiftX": -2.8
+                "itemKey": "word:coal",
+                "surface": "coal",
+                "gloss": "n.煤；煤炭",
+                "headwordId": "coal",
+                "shiftX": 12.8
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:essence",
+                "surface": "essential",
+                "gloss": "a.必不可少的；本质的",
+                "headwordId": "essence"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:supply",
+                "surface": "supplies",
+                "gloss": "n.物资；补给",
+                "headwordId": "supply"
+              },
+              {
+                "type": "text",
+                "text": " are "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:safe",
+                "surface": "safely",
+                "gloss": "ad.安全地；平安地",
+                "headwordId": "safe"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transfer",
+                "surface": "transferred",
+                "gloss": "v.转移；转运",
+                "headwordId": "transfer"
+              },
+              {
+                "type": "text",
+                "text": " without "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:delay",
+                "surface": "delay",
+                "gloss": "n.延误；耽搁",
+                "headwordId": "delay"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "Port authorities collaborate in a joint committee to maintain orderly operations, relying on a digital code of conduct to manage continuous freight flows and prevent sudden warehouse collapse.",
+            "chinese": "港口管理当局在联合委员会中紧密协作以维护有序运转，依托数字化行为准则管理持续的货物流动，防止突发性的仓储瘫痪。",
+            "tokens": [
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:port",
+                "surface": "Port",
+                "gloss": "a.港口的；港湾的",
+                "headwordId": "port",
+                "shiftX": -4.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:authority",
+                "surface": "authorities",
+                "gloss": "n.官方机构；当局部门",
+                "headwordId": "authority",
+                "shiftX": 4.3
               },
               {
                 "type": "text",
@@ -27568,23 +27426,146 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:neat",
-                "surface": "neatly",
-                "gloss": "ad.整齐地；整洁地",
-                "headwordId": "neat",
-                "shiftX": 13.1
+                "itemKey": "word:collaborate",
+                "surface": "collaborate",
+                "gloss": "v.协作；合作",
+                "headwordId": "collaborate"
               },
               {
                 "type": "text",
-                "text": " so that "
+                "text": " in a "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:store²",
-                "surface": "storage",
-                "gloss": "n.储能；仓储",
-                "headwordId": "store²"
+                "itemKey": "word:joint",
+                "surface": "joint",
+                "gloss": "a.联合的；共同的",
+                "headwordId": "joint",
+                "shiftX": -3.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:committee",
+                "surface": "committee",
+                "gloss": "n.委员会；全体委员",
+                "headwordId": "committee",
+                "shiftX": 3.3
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:maintain",
+                "surface": "maintain",
+                "gloss": "v.维护；保持",
+                "headwordId": "maintain"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:order",
+                "surface": "orderly",
+                "gloss": "a.有序的；整洁的",
+                "headwordId": "order"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:operate",
+                "surface": "operations",
+                "gloss": "n.运转；操作；业务",
+                "headwordId": "operate"
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:rely",
+                "surface": "relying",
+                "gloss": "v.依靠；依赖",
+                "headwordId": "rely"
+              },
+              {
+                "type": "text",
+                "text": " on a "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:digit",
+                "surface": "digital",
+                "gloss": "a.数字的；数码的",
+                "headwordId": "digit",
+                "shiftX": -12.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:code",
+                "surface": "code",
+                "gloss": "n.准则；规范；法则",
+                "headwordId": "code",
+                "shiftX": 12.5
+              },
+              {
+                "type": "text",
+                "text": " of "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:conduct",
+                "surface": "conduct",
+                "gloss": "n.行为；举止",
+                "headwordId": "conduct"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:manage",
+                "surface": "manage",
+                "gloss": "v.管理；经营",
+                "headwordId": "manage"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:continue",
+                "surface": "continuous",
+                "gloss": "a.持续的；不间断的",
+                "headwordId": "continue"
               },
               {
                 "type": "text",
@@ -27593,21 +27574,71 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:shelf",
-                "surface": "shelves",
-                "gloss": "n.架子；搁板",
-                "headwordId": "shelf"
+                "itemKey": "word:freight",
+                "surface": "freight",
+                "gloss": "a.货运的；货物的",
+                "headwordId": "freight",
+                "shiftX": -1.9
               },
               {
                 "type": "text",
-                "text": " will not "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:flow",
+                "surface": "flows",
+                "gloss": "n.流动；流量",
+                "headwordId": "flow",
+                "shiftX": 1.9
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:prevent",
+                "surface": "prevent",
+                "gloss": "v.防止；预防",
+                "headwordId": "prevent"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:sudden",
+                "surface": "sudden",
+                "gloss": "a.突然的；意外的",
+                "headwordId": "sudden"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:warehouse",
+                "surface": "warehouse",
+                "gloss": "a.仓储的；仓库的",
+                "headwordId": "warehouse"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:collapse",
                 "surface": "collapse",
-                "gloss": "v.倒塌；崩溃",
+                "gloss": "n.崩溃；瘫痪；倒塌",
                 "headwordId": "collapse"
               },
               {
@@ -27624,20 +27655,20 @@
           {
             "sentenceNumber": 1,
             "circledNumber": "①",
-            "english": "A regional trade commission meets in an ancient hall supported by a tall stone column, following a clear digital code of conduct.",
-            "chinese": "区域贸易委员会在一座由高大石柱支撑的古老大厅举行会议，遵循清晰的数字化行为准则。",
+            "english": "Inside a nearby conference hall supported by tall stone columns, a regional trade commission holds regular meetings to coordinate border customs policies.",
+            "chinese": "在由高大石柱支撑的邻近会议大厅内，一个区域贸易委员会定期举行会议以协调边境海关政策。",
             "tokens": [
               {
                 "type": "text",
-                "text": "A regional trade "
+                "text": "Inside a "
               },
               {
                 "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:commission",
-                "surface": "commission",
-                "gloss": "n.委员会；佣金",
-                "headwordId": "commission"
+                "category": "regular",
+                "itemKey": "word:nearby",
+                "surface": "nearby",
+                "gloss": "a.附近的；邻近的",
+                "headwordId": "nearby"
               },
               {
                 "type": "text",
@@ -27646,23 +27677,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:meet",
-                "surface": "meets",
-                "gloss": "v.会见；集会",
-                "headwordId": "meet"
-              },
-              {
-                "type": "text",
-                "text": " in an "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:ancient",
-                "surface": "ancient",
-                "gloss": "a.古代的；古老的",
-                "headwordId": "ancient",
-                "shiftX": -6.6
+                "itemKey": "word:conference",
+                "surface": "conference",
+                "gloss": "a.会议的；商讨的",
+                "headwordId": "conference"
               },
               {
                 "type": "text",
@@ -27674,8 +27692,7 @@
                 "itemKey": "word:hall",
                 "surface": "hall",
                 "gloss": "n.大厅；礼堂",
-                "headwordId": "hall",
-                "shiftX": 6.6
+                "headwordId": "hall"
               },
               {
                 "type": "text",
@@ -27691,14 +27708,14 @@
               },
               {
                 "type": "text",
-                "text": " by a "
+                "text": " by "
               },
               {
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:tall",
                 "surface": "tall",
-                "gloss": "a.高耸的；高的",
+                "gloss": "a.高大的；长身的",
                 "headwordId": "tall"
               },
               {
@@ -27709,34 +27726,22 @@
                 "type": "annotation",
                 "category": "regular",
                 "itemKey": "word:column",
-                "surface": "column",
+                "surface": "columns",
                 "gloss": "n.支柱；圆柱",
                 "headwordId": "column"
               },
               {
                 "type": "text",
-                "text": ", "
+                "text": ", a "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:follow",
-                "surface": "following",
-                "gloss": "a.接着的；下列的",
-                "headwordId": "follow"
-              },
-              {
-                "type": "text",
-                "text": " a clear "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:digit",
-                "surface": "digital",
-                "gloss": "a.数字的；计数的",
-                "headwordId": "digit",
-                "shiftX": -6.6
+                "itemKey": "word:region",
+                "surface": "regional",
+                "gloss": "a.区域的；地方的",
+                "headwordId": "region",
+                "shiftX": -7
               },
               {
                 "type": "text",
@@ -27745,23 +27750,112 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:code",
-                "surface": "code",
-                "gloss": "n.准则；代码",
-                "headwordId": "code",
-                "shiftX": 6.6
+                "itemKey": "word:trade",
+                "surface": "trade",
+                "gloss": "a.贸易的；商业的",
+                "headwordId": "trade",
+                "shiftX": 3.5
               },
               {
                 "type": "text",
-                "text": " of "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:conduct",
-                "surface": "conduct",
-                "gloss": "n.行为；操守",
-                "headwordId": "conduct"
+                "itemKey": "word:commission",
+                "surface": "commission",
+                "gloss": "n.委员会；专门机构",
+                "headwordId": "commission",
+                "shiftX": 3.5
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:hold",
+                "surface": "holds",
+                "gloss": "v.举行；召开",
+                "headwordId": "hold",
+                "shiftX": -3.2
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:regular",
+                "surface": "regular",
+                "gloss": "a.定期的；常规的",
+                "headwordId": "regular",
+                "shiftX": 3.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:meeting",
+                "surface": "meetings",
+                "gloss": "n.会议；集会",
+                "headwordId": "meeting"
+              },
+              {
+                "type": "text",
+                "text": " to "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:coordinate",
+                "surface": "coordinate",
+                "gloss": "v.协调；配合",
+                "headwordId": "coordinate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:border",
+                "surface": "border",
+                "gloss": "a.边境的；边界的",
+                "headwordId": "border",
+                "shiftX": -1.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:customs",
+                "surface": "customs",
+                "gloss": "a.海关的；关税的",
+                "headwordId": "customs",
+                "shiftX": 1.9
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:policy",
+                "surface": "policies",
+                "gloss": "n.政策；方针",
+                "headwordId": "policy"
               },
               {
                 "type": "text",
@@ -27772,8 +27866,8 @@
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Delegates commit themselves to mutual benefit, agreeing to commence price cuts before the morning meeting closes with a formal comma.",
-            "chinese": "代表们致力于互利互惠，一致同意在早会以正式逗号落幕前启动价格削减。",
+            "english": "Delegates commit to building deep mutual trust, agreeing to commence duty talks and remove artificial trade barriers alongside respected colleagues.",
+            "chinese": "代表们致力于建立深厚的互信，一致同意开启关税谈判并与受人尊敬的同行们一道消除人为的贸易壁垒。",
             "tokens": [
               {
                 "type": "annotation",
@@ -27792,20 +27886,21 @@
                 "category": "high-frequency",
                 "itemKey": "word:commit",
                 "surface": "commit",
-                "gloss": "v.承诺；投入",
+                "gloss": "v.致力于；承诺",
                 "headwordId": "commit"
               },
               {
                 "type": "text",
-                "text": " themselves to "
+                "text": " to "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:mutual",
-                "surface": "mutual",
-                "gloss": "a.相互的；共同的",
-                "headwordId": "mutual"
+                "itemKey": "word:build",
+                "surface": "building",
+                "gloss": "v.建立；构建",
+                "headwordId": "build",
+                "shiftX": -17.1
               },
               {
                 "type": "text",
@@ -27814,10 +27909,37 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:benefit",
-                "surface": "benefit",
-                "gloss": "n.利益；恩惠",
-                "headwordId": "benefit"
+                "itemKey": "word:deep",
+                "surface": "deep",
+                "gloss": "a.深厚的；深刻的",
+                "headwordId": "deep",
+                "shiftX": -9.6
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:mutual",
+                "surface": "mutual",
+                "gloss": "a.相互的；彼此的",
+                "headwordId": "mutual",
+                "shiftX": 9.7
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:trust",
+                "surface": "trust",
+                "gloss": "n.信任；信赖",
+                "headwordId": "trust",
+                "shiftX": 15.8
               },
               {
                 "type": "text",
@@ -27829,7 +27951,8 @@
                 "itemKey": "word:agree",
                 "surface": "agreeing",
                 "gloss": "v.同意；赞同",
-                "headwordId": "agree"
+                "headwordId": "agree",
+                "shiftX": 1.2
               },
               {
                 "type": "text",
@@ -27841,44 +27964,8 @@
                 "itemKey": "word:commence",
                 "surface": "commence",
                 "gloss": "v.开始；着手",
-                "headwordId": "commence"
-              },
-              {
-                "type": "text",
-                "text": " price "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:cut",
-                "surface": "cuts",
-                "gloss": "n.削减；降低",
-                "headwordId": "cut"
-              },
-              {
-                "type": "text",
-                "text": " before the morning "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:meeting",
-                "surface": "meeting",
-                "gloss": "n.会议；集会",
-                "headwordId": "meeting"
-              },
-              {
-                "type": "text",
-                "text": " closes with a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:formal",
-                "surface": "formal",
-                "gloss": "a.正式的；正规的",
-                "headwordId": "formal",
-                "shiftX": -0.5
+                "headwordId": "commence",
+                "shiftX": -4.2
               },
               {
                 "type": "text",
@@ -27887,11 +27974,96 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:comma",
-                "surface": "comma",
-                "gloss": "n.逗号；停顿",
-                "headwordId": "comma",
-                "shiftX": 0.5
+                "itemKey": "word:duty",
+                "surface": "duty",
+                "gloss": "a.关税的；税收的",
+                "headwordId": "duty",
+                "shiftX": -7.3
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:talk",
+                "surface": "talks",
+                "gloss": "n.谈判；会谈",
+                "headwordId": "talk",
+                "shiftX": 11.5
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:remove",
+                "surface": "remove",
+                "gloss": "v.消除；去除",
+                "headwordId": "remove"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:artificial",
+                "surface": "artificial",
+                "gloss": "a.人为的；人工的",
+                "headwordId": "artificial"
+              },
+              {
+                "type": "text",
+                "text": " trade "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:barrier",
+                "surface": "barriers",
+                "gloss": "n.壁垒；障碍",
+                "headwordId": "barrier"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:alongside",
+                "surface": "alongside",
+                "gloss": "prep.在…旁边；沿着…",
+                "headwordId": "alongside"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:respect",
+                "surface": "respected",
+                "gloss": "a.受尊敬的；敬重的",
+                "headwordId": "respect"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:colleague",
+                "surface": "colleagues",
+                "gloss": "n.同事；同僚",
+                "headwordId": "colleague"
               },
               {
                 "type": "text",
@@ -27902,8 +28074,8 @@
           {
             "sentenceNumber": 3,
             "circledNumber": "③",
-            "english": "The chief port director issued a calm command, asking analysts to collect trade statistics and deliver an insightful comment.",
-            "chinese": "港口总监发布了冷静的命令，要求分析师收集贸易统计数据并发表富有见地的评论。",
+            "english": "The chief port director issues a calm command, demanding that analysts collect accurate statistics and deliver insightful comments.",
+            "chinese": "港口总监发布了沉着的指令，要求分析师收集准确的统计数据并发表富有见地的评论。",
             "tokens": [
               {
                 "type": "text",
@@ -27914,7 +28086,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:chief",
                 "surface": "chief",
-                "gloss": "a.主要的；首席的",
+                "gloss": "a.主要的；首要的",
                 "headwordId": "chief"
               },
               {
@@ -27926,7 +28098,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:direct",
                 "surface": "director",
-                "gloss": "n.主管；主任",
+                "gloss": "n.总监；主管",
                 "headwordId": "direct"
               },
               {
@@ -27937,8 +28109,8 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:issue",
-                "surface": "issued",
-                "gloss": "v.发布；颁布",
+                "surface": "issues",
+                "gloss": "v.发布；发行",
                 "headwordId": "issue"
               },
               {
@@ -27950,7 +28122,7 @@
                 "category": "regular",
                 "itemKey": "word:calm",
                 "surface": "calm",
-                "gloss": "n.平稳；风平浪静",
+                "gloss": "a.沉着的；镇定的",
                 "headwordId": "calm",
                 "shiftX": -0.5
               },
@@ -27963,7 +28135,7 @@
                 "category": "high-frequency",
                 "itemKey": "word:command",
                 "surface": "command",
-                "gloss": "n.命令；指挥",
+                "gloss": "n.指令；命令",
                 "headwordId": "command",
                 "shiftX": 0.5
               },
@@ -27974,14 +28146,14 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:ask",
-                "surface": "asking",
-                "gloss": "v.询问；要求",
-                "headwordId": "ask"
+                "itemKey": "word:demand",
+                "surface": "demanding",
+                "gloss": "v.要求；索要",
+                "headwordId": "demand"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " that "
               },
               {
                 "type": "annotation",
@@ -27993,19 +28165,31 @@
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": " "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:collect",
                 "surface": "collect",
-                "gloss": "v.收集；聚集",
+                "gloss": "v.收集；汇总",
                 "headwordId": "collect"
               },
               {
                 "type": "text",
-                "text": " trade "
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:accurate",
+                "surface": "accurate",
+                "gloss": "a.准确的；精确的",
+                "headwordId": "accurate"
+              },
+              {
+                "type": "text",
+                "text": " "
               },
               {
                 "type": "annotation",
@@ -28017,14 +28201,14 @@
               },
               {
                 "type": "text",
-                "text": " and deliver an "
+                "text": " and deliver "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:insight",
                 "surface": "insightful",
-                "gloss": "a.富有见地的；深刻的",
+                "gloss": "a.富有见地的；有洞察力的",
                 "headwordId": "insight"
               },
               {
@@ -28035,7 +28219,7 @@
                 "type": "annotation",
                 "category": "high-frequency",
                 "itemKey": "word:comment",
-                "surface": "comment",
+                "surface": "comments",
                 "gloss": "n.评论；意见",
                 "headwordId": "comment"
               },
@@ -28048,8 +28232,8 @@
           {
             "sentenceNumber": 4,
             "circledNumber": "④",
-            "english": "Their coherent economic report strengthens regional cohesion, showing how regional partners combine financial resources to combat market risks.",
-            "chinese": "他们条理清晰的经济报告增强了跨境凝聚力，展示了区域伙伴如何整合金融资源以抵御市场风险。",
+            "english": "Their coherent economic report stresses that combining financial resources is vital to combat severe market risks and supply chain disruptions.",
+            "chinese": "他们条理清晰的经济报告强调，整合金融资源对于抵御严峻的市场风险和供应链中断至关重要。",
             "tokens": [
               {
                 "type": "text",
@@ -28060,8 +28244,9 @@
                 "category": "regular",
                 "itemKey": "word:coherent",
                 "surface": "coherent",
-                "gloss": "a.连贯的；条理分明的",
-                "headwordId": "coherent"
+                "gloss": "a.条理清晰的；连贯的",
+                "headwordId": "coherent",
+                "shiftX": -2.4
               },
               {
                 "type": "text",
@@ -28072,8 +28257,9 @@
                 "category": "high-frequency",
                 "itemKey": "word:economy",
                 "surface": "economic",
-                "gloss": "n.经济；节约",
-                "headwordId": "economy"
+                "gloss": "a.经济的；经济上的",
+                "headwordId": "economy",
+                "shiftX": 2.4
               },
               {
                 "type": "text",
@@ -28094,9 +28280,158 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
+                "itemKey": "word:stress",
+                "surface": "stresses",
+                "gloss": "v.强调；重申",
+                "headwordId": "stress"
+              },
+              {
+                "type": "text",
+                "text": " that "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:combine",
+                "surface": "combining",
+                "gloss": "v.结合；整合",
+                "headwordId": "combine"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:finance",
+                "surface": "financial",
+                "gloss": "a.金融的；财务的",
+                "headwordId": "finance"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:resource",
+                "surface": "resources",
+                "gloss": "n.资源；财力",
+                "headwordId": "resource"
+              },
+              {
+                "type": "text",
+                "text": " is vital to "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:combat",
+                "surface": "combat",
+                "gloss": "v.抗击；抵御",
+                "headwordId": "combat"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:severe",
+                "surface": "severe",
+                "gloss": "a.严峻的；严重的",
+                "headwordId": "severe"
+              },
+              {
+                "type": "text",
+                "text": " market "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:risk",
+                "surface": "risks",
+                "gloss": "n.风险；危险",
+                "headwordId": "risk"
+              },
+              {
+                "type": "text",
+                "text": " and supply "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:chain",
+                "surface": "chain",
+                "gloss": "n.链条；连锁",
+                "headwordId": "chain"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:disrupt",
+                "surface": "disruptions",
+                "gloss": "n.中断；扰乱",
+                "headwordId": "disrupt"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraphNumber": 3,
+        "sentences": [
+          {
+            "sentenceNumber": 1,
+            "circledNumber": "①",
+            "english": "This collective cooperation strengthens regional cohesion, bringing sustained economic stability and genuine comfort to coastal communities and trade partners.",
+            "chinese": "这种集体合作增强了区域凝聚力，为沿海社区和贸易伙伴带来了持久的经济稳定与切实的安心。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "This "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:collective",
+                "surface": "collective",
+                "gloss": "a.集体的；共同的",
+                "headwordId": "collective"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:cooperate",
+                "surface": "cooperation",
+                "gloss": "n.合作；协作",
+                "headwordId": "cooperate"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
                 "itemKey": "word:strong",
                 "surface": "strengthens",
-                "gloss": "a.强壮的；强烈的",
+                "gloss": "v.加强；巩固",
                 "headwordId": "strong"
               },
               {
@@ -28118,22 +28453,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:show",
-                "surface": "showing",
-                "gloss": "v.展示；显露",
-                "headwordId": "show"
-              },
-              {
-                "type": "text",
-                "text": " how regional "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:partner",
-                "surface": "partners",
-                "gloss": "n.伙伴；搭档",
-                "headwordId": "partner"
+                "itemKey": "word:bring",
+                "surface": "bringing",
+                "gloss": "v.带来；引起",
+                "headwordId": "bring"
               },
               {
                 "type": "text",
@@ -28142,247 +28465,35 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:combine",
-                "surface": "combine",
-                "gloss": "v.联合；结合",
-                "headwordId": "combine"
+                "itemKey": "word:sustain",
+                "surface": "sustained",
+                "gloss": "a.持久的；持续的",
+                "headwordId": "sustain"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " economic "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:finance",
-                "surface": "financial",
-                "gloss": "n.财政；金融",
-                "headwordId": "finance"
+                "itemKey": "word:stable",
+                "surface": "stability",
+                "gloss": "n.稳定；稳定性",
+                "headwordId": "stable"
               },
               {
                 "type": "text",
-                "text": " "
+                "text": " and "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:resource",
-                "surface": "resources",
-                "gloss": "n.资源；财力",
-                "headwordId": "resource"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:combat",
-                "surface": "combat",
-                "gloss": "v.战斗；格斗",
-                "headwordId": "combat"
-              },
-              {
-                "type": "text",
-                "text": " market "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:risk",
-                "surface": "risks",
-                "gloss": "n.风险；危险",
-                "headwordId": "risk"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "paragraphNumber": 3,
-        "sentences": [
-          {
-            "sentenceNumber": 1,
-            "circledNumber": "①",
-            "english": "In a nearby residential colony, a community health clinic checks heart health and colon conditions, while scientists clone green shore grass to restore coastal shores, offering real comfort to local residents.",
-            "chinese": "在附近的居民聚居区里，一所社区健康诊所检查心脏健康和结肠状况，而科学家克隆绿色滨海草以恢复沿海海岸，为当地居民带来真正的宽慰。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "In a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:nearby",
-                "surface": "nearby",
-                "gloss": "a.附近的；邻近的",
-                "headwordId": "nearby"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:reside",
-                "surface": "residential",
-                "gloss": "a.居住的；住宅区的",
-                "headwordId": "reside"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:colony",
-                "surface": "colony",
-                "gloss": "n.聚居区；殖民地",
-                "headwordId": "colony"
-              },
-              {
-                "type": "text",
-                "text": ", a "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:community",
-                "surface": "community",
-                "gloss": "n.社区；社会",
-                "headwordId": "community"
-              },
-              {
-                "type": "text",
-                "text": " health "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clinic",
-                "surface": "clinic",
-                "gloss": "n.诊所；门诊部",
-                "headwordId": "clinic",
-                "shiftX": -7.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:check¹",
-                "surface": "checks",
-                "gloss": "v.检查；核实；查验",
-                "headwordId": "check¹",
-                "shiftX": 7.9
-              },
-              {
-                "type": "text",
-                "text": " heart health and "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:colon",
-                "surface": "colon",
-                "gloss": "n.结肠；冒号",
-                "headwordId": "colon"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:condition",
-                "surface": "conditions",
-                "gloss": "n.状况；状态",
-                "headwordId": "condition"
-              },
-              {
-                "type": "text",
-                "text": ", while "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:science",
-                "surface": "scientists",
-                "gloss": "n.科学家；学者",
-                "headwordId": "science"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clone",
-                "surface": "clone",
-                "gloss": "v.克隆；复制",
-                "headwordId": "clone"
-              },
-              {
-                "type": "text",
-                "text": " green "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:shore",
-                "surface": "shore",
-                "gloss": "n.国家；陆地",
-                "headwordId": "shore"
-              },
-              {
-                "type": "text",
-                "text": " grass to "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:restore",
-                "surface": "restore",
-                "gloss": "v.恢复；修复",
-                "headwordId": "restore"
-              },
-              {
-                "type": "text",
-                "text": " coastal shores, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:offer",
-                "surface": "offering",
-                "gloss": "v.提供；给予；提出",
-                "headwordId": "offer",
-                "shiftX": -14.3
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:real",
-                "surface": "real",
-                "gloss": "a.真实的；真正的",
-                "headwordId": "real",
-                "shiftX": 3.9
+                "itemKey": "word:genuine",
+                "surface": "genuine",
+                "gloss": "a.切实的；真正的",
+                "headwordId": "genuine",
+                "shiftX": -2
               },
               {
                 "type": "text",
@@ -28393,41 +28504,163 @@
                 "category": "regular",
                 "itemKey": "word:comfort",
                 "surface": "comfort",
-                "gloss": "n.舒适；安慰",
+                "gloss": "n.安心；宽慰；慰藉",
                 "headwordId": "comfort",
-                "shiftX": 10.4
+                "shiftX": 2
               },
               {
                 "type": "text",
-                "text": " to "
+                "text": " to coastal "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:local",
-                "surface": "local",
-                "gloss": "a.当地的；地方的",
-                "headwordId": "local"
+                "itemKey": "word:community",
+                "surface": "communities",
+                "gloss": "n.社区；团体",
+                "headwordId": "community"
               },
               {
                 "type": "text",
-                "text": " residents."
+                "text": " and trade "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:partner",
+                "surface": "partners",
+                "gloss": "n.伙伴；合作方",
+                "headwordId": "partner"
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           },
           {
             "sentenceNumber": 2,
             "circledNumber": "②",
-            "english": "Colleagues gather at a coastal recreation club, laughing happily at an amusing comedy staged by an energetic clown.",
-            "chinese": "同事们聚集在滨海休闲俱乐部，为一位精力充沛的小丑上演的逗趣喜剧开怀大笑。",
+            "english": "By respecting common trade guidelines and sharing freight updates, regional ports ensure transparent customs inspections and minimize schedule delays.",
+            "chinese": "通过遵守共同的贸易准则并共享货运最新动态，区域港口确保了透明的海关查验，并最大程度减少船期延误。",
+            "tokens": [
+              {
+                "type": "text",
+                "text": "By respecting "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:common",
+                "surface": "common",
+                "gloss": "a.共同的；普遍的",
+                "headwordId": "common"
+              },
+              {
+                "type": "text",
+                "text": " trade "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:guideline",
+                "surface": "guidelines",
+                "gloss": "n.准则；指导方针",
+                "headwordId": "guideline"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:share",
+                "surface": "sharing",
+                "gloss": "v.共享；分担",
+                "headwordId": "share"
+              },
+              {
+                "type": "text",
+                "text": " freight "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:update",
+                "surface": "updates",
+                "gloss": "n.最新动态；更新",
+                "headwordId": "update"
+              },
+              {
+                "type": "text",
+                "text": ", regional ports ensure "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:transparent",
+                "surface": "transparent",
+                "gloss": "a.透明的；公开的",
+                "headwordId": "transparent"
+              },
+              {
+                "type": "text",
+                "text": " customs "
+              },
+              {
+                "type": "annotation",
+                "category": "regular",
+                "itemKey": "word:inspect",
+                "surface": "inspections",
+                "gloss": "n.检查；查验",
+                "headwordId": "inspect"
+              },
+              {
+                "type": "text",
+                "text": " and "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:minimum",
+                "surface": "minimize",
+                "gloss": "v.使减到最少；最小化",
+                "headwordId": "minimum",
+                "shiftX": -4
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:schedule",
+                "surface": "schedule",
+                "gloss": "a.船期的；时刻表的",
+                "headwordId": "schedule",
+                "shiftX": 4
+              },
+              {
+                "type": "text",
+                "text": " delays."
+              }
+            ]
+          },
+          {
+            "sentenceNumber": 3,
+            "circledNumber": "③",
+            "english": "Linking separate terminals into an efficient connected network commands international confidence, establishing a durable pillar of shared growth across the entire region.",
+            "chinese": "将独立的码头联结成高效互联的网络赢得了国际信心，在整个区域内确立了共享增长的持久支柱。",
             "tokens": [
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:colleague",
-                "surface": "Colleagues",
-                "gloss": "n.同事；同僚",
-                "headwordId": "colleague"
+                "itemKey": "word:link",
+                "surface": "Linking",
+                "gloss": "v.连接；联系",
+                "headwordId": "link"
               },
               {
                 "type": "text",
@@ -28436,22 +28669,10 @@
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:gather",
-                "surface": "gather",
-                "gloss": "v.聚集；采集",
-                "headwordId": "gather"
-              },
-              {
-                "type": "text",
-                "text": " at a coastal "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:recreation",
-                "surface": "recreation",
-                "gloss": "n.休闲；娱乐",
-                "headwordId": "recreation"
+                "itemKey": "word:separate",
+                "surface": "separate",
+                "gloss": "a.独立的；分开的",
+                "headwordId": "separate"
               },
               {
                 "type": "text",
@@ -28460,10 +28681,58 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:club",
-                "surface": "club",
-                "gloss": "n.俱乐部；社团",
-                "headwordId": "club"
+                "itemKey": "word:terminal",
+                "surface": "terminals",
+                "gloss": "n.航站楼；集装箱码头",
+                "headwordId": "terminal"
+              },
+              {
+                "type": "text",
+                "text": " into an "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:efficient",
+                "surface": "efficient",
+                "gloss": "a.高效的；有能力的",
+                "headwordId": "efficient"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:connect",
+                "surface": "connected",
+                "gloss": "a.互联的；相连的",
+                "headwordId": "connect"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:network",
+                "surface": "network",
+                "gloss": "n.网络；网状系统",
+                "headwordId": "network"
+              },
+              {
+                "type": "text",
+                "text": " commands international "
+              },
+              {
+                "type": "annotation",
+                "category": "high-frequency",
+                "itemKey": "word:confidence",
+                "surface": "confidence",
+                "gloss": "n.信心；信赖",
+                "headwordId": "confidence"
               },
               {
                 "type": "text",
@@ -28471,271 +28740,11 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:laugh",
-                "surface": "laughing",
-                "gloss": "v.欢笑；大笑",
-                "headwordId": "laugh"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:happy",
-                "surface": "happily",
-                "gloss": "ad.快乐地；高兴地",
-                "headwordId": "happy"
-              },
-              {
-                "type": "text",
-                "text": " at an "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:amuse",
-                "surface": "amusing",
-                "gloss": "a.逗趣的；有趣的",
-                "headwordId": "amuse"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:comedy",
-                "surface": "comedy",
-                "gloss": "n.喜剧；滑稽",
-                "headwordId": "comedy"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:stage",
-                "surface": "staged",
-                "gloss": "v.上演；举行",
-                "headwordId": "stage"
-              },
-              {
-                "type": "text",
-                "text": " by an "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:energy",
-                "surface": "energetic",
-                "gloss": "n.能源；能量",
-                "headwordId": "energy"
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clown",
-                "surface": "clown",
-                "gloss": "n.小丑；滑稽演员",
-                "headwordId": "clown"
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 3,
-            "circledNumber": "③",
-            "english": "An athletic coach guides youngsters to comb long ropes, teaching clumsy learners how to clip safety lines clockwise around a metal hook.",
-            "chinese": "一位体育教练指导年轻人梳理长长的绳索，教笨拙的初学者如何顺时针将安全绳夹在金属挂钩上。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "An "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:athlete",
-                "surface": "athletic",
-                "gloss": "n.运动员；田径选手",
-                "headwordId": "athlete",
-                "shiftX": -13
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:coach",
-                "surface": "coach",
-                "gloss": "n.教练；长途客车",
-                "headwordId": "coach",
-                "shiftX": 1.9
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:guide",
-                "surface": "guides",
-                "gloss": "v.指导；带领",
-                "headwordId": "guide",
-                "shiftX": 11.1
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:youngster",
-                "surface": "youngsters",
-                "gloss": "n.年轻人；少年",
-                "headwordId": "youngster"
-              },
-              {
-                "type": "text",
-                "text": " to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:comb",
-                "surface": "comb",
-                "gloss": "v.梳理；清理",
-                "headwordId": "comb"
-              },
-              {
-                "type": "text",
-                "text": " long ropes, "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:teach",
-                "surface": "teaching",
-                "gloss": "v.教导；传授",
-                "headwordId": "teach",
-                "shiftX": -4.5
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clumsy",
-                "surface": "clumsy",
-                "gloss": "a.笨拙的；笨手笨脚的",
-                "headwordId": "clumsy",
-                "shiftX": -1.5
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:learn",
-                "surface": "learners",
-                "gloss": "n.学习者；学生",
-                "headwordId": "learn",
-                "shiftX": 6
-              },
-              {
-                "type": "text",
-                "text": " how to "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clip",
-                "surface": "clip",
-                "gloss": "v.夹住；修剪",
-                "headwordId": "clip"
-              },
-              {
-                "type": "text",
-                "text": " safety lines "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:clockwise",
-                "surface": "clockwise",
-                "gloss": "ad.顺时针方向地；顺时针地",
-                "headwordId": "clockwise"
-              },
-              {
-                "type": "text",
-                "text": " around a "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:metal",
-                "surface": "metal",
-                "gloss": "n.金属；合金",
-                "headwordId": "metal",
-                "shiftX": -3.6
-              },
-              {
-                "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:hook",
-                "surface": "hook",
-                "gloss": "n.钩子；挂钩",
-                "headwordId": "hook",
-                "shiftX": 3.6
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
-          },
-          {
-            "sentenceNumber": 4,
-            "circledNumber": "④",
-            "english": "As morning sun greets a cock, workers cling to a vital clue of shared hope, determined that honest friendship will defeat any difficulty.",
-            "chinese": "当清晨阳光迎着公鸡升起时，工人们紧握共同希望的关键线索，深信诚挚的情谊必能战胜任何困难。",
-            "tokens": [
-              {
-                "type": "text",
-                "text": "As morning sun "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:greet",
-                "surface": "greets",
-                "gloss": "v.迎接；问候",
-                "headwordId": "greet"
+                "itemKey": "word:establish",
+                "surface": "establishing",
+                "gloss": "v.确立；建立",
+                "headwordId": "establish"
               },
               {
                 "type": "text",
@@ -28743,37 +28752,12 @@
               },
               {
                 "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cock",
-                "surface": "cock",
-                "gloss": "n.公鸡；龙头",
-                "headwordId": "cock"
-              },
-              {
-                "type": "text",
-                "text": ", workers "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:cling",
-                "surface": "cling",
-                "gloss": "v.紧握；附着",
-                "headwordId": "cling",
-                "shiftX": -17.3
-              },
-              {
-                "type": "text",
-                "text": " to a "
-              },
-              {
-                "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:vital",
-                "surface": "vital",
-                "gloss": "a.至关重要的；生死攸关的",
-                "headwordId": "vital",
-                "shiftX": -21.7
+                "itemKey": "word:durable",
+                "surface": "durable",
+                "gloss": "a.持久的；耐用的",
+                "headwordId": "durable",
+                "shiftX": -2.9
               },
               {
                 "type": "text",
@@ -28782,90 +28766,39 @@
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:clue",
-                "surface": "clue",
-                "gloss": "n.线索；暗示",
-                "headwordId": "clue",
-                "shiftX": 16.5
+                "itemKey": "word:pillar",
+                "surface": "pillar",
+                "gloss": "n.支柱；栋梁",
+                "headwordId": "pillar",
+                "shiftX": 2.9
               },
               {
                 "type": "text",
-                "text": " of "
+                "text": " of shared "
               },
               {
                 "type": "annotation",
                 "category": "high-frequency",
-                "itemKey": "word:share",
-                "surface": "shared",
-                "gloss": "a.共同的；共享的",
-                "headwordId": "share",
-                "shiftX": 4.4
+                "itemKey": "word:grow",
+                "surface": "growth",
+                "gloss": "n.增长；发展",
+                "headwordId": "grow"
               },
               {
                 "type": "text",
-                "text": " "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:hope",
-                "surface": "hope",
-                "gloss": "v.希望；期望",
-                "headwordId": "hope",
-                "shiftX": 15.7
-              },
-              {
-                "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:determine",
-                "surface": "determined",
-                "gloss": "a.坚决的；决意的",
-                "headwordId": "determine",
-                "shiftX": 2.4
-              },
-              {
-                "type": "text",
-                "text": " that "
+                "text": " across the "
               },
               {
                 "type": "annotation",
                 "category": "regular",
-                "itemKey": "word:honest",
-                "surface": "honest",
-                "gloss": "a.诚实的；可敬的",
-                "headwordId": "honest"
+                "itemKey": "word:entire",
+                "surface": "entire",
+                "gloss": "a.整个的；完全的",
+                "headwordId": "entire"
               },
               {
                 "type": "text",
-                "text": " friendship will "
-              },
-              {
-                "type": "annotation",
-                "category": "regular",
-                "itemKey": "word:defeat",
-                "surface": "defeat",
-                "gloss": "v.击败；战胜",
-                "headwordId": "defeat"
-              },
-              {
-                "type": "text",
-                "text": " any "
-              },
-              {
-                "type": "annotation",
-                "category": "high-frequency",
-                "itemKey": "word:difficult",
-                "surface": "difficulty",
-                "gloss": "n.困难；难关",
-                "headwordId": "difficult"
-              },
-              {
-                "type": "text",
-                "text": "."
+                "text": " region."
               }
             ]
           }
@@ -28874,74 +28807,79 @@
     ],
     "expansionEntries": [
       {
-        "id": "e1",
-        "expression": "bulk commodity/raw materials",
-        "explanation": "大宗商品；指可进入期货与国际贸易的大宗原材料"
+        "id": "exp-01",
+        "expression": "port commerce / bulk commodity",
+        "explanation": "港口商贸，大宗商品；commerce 指大规模进出口商业贸易；commodity 专指在国际大宗市场上交易的基础原材料或初级产品，如煤炭、原油或粮食。"
       },
       {
-        "id": "e2",
-        "expression": "collaborate on/cooperate",
-        "explanation": "在...上通力合作；collaborate 强调深度学术或业务协作"
+        "id": "exp-02",
+        "expression": "cargo vessel / merchant fleet",
+        "explanation": "远洋货轮，商船船队；cargo 指船舶或飞机承运的成批货物；vessel 在海事语境中专指大型远洋船舶或轮船。"
       },
       {
-        "id": "e3",
-        "expression": "code of conduct/ethics",
-        "explanation": "行为守则；code 熟词僻义常指行业规范、法典或密码"
+        "id": "exp-03",
+        "expression": "dock a vessel / container terminal",
+        "explanation": "靠泊船只，集装箱码头；dock 作动词指船只停靠码头、进港泊位；作名词指码头、船坞或停泊港池。"
       },
       {
-        "id": "e4",
-        "expression": "commit oneself to/dedicate",
-        "explanation": "致力于，承诺承担；commit suicide 自杀，commit crime 犯罪"
+        "id": "exp-04",
+        "expression": "crane operation / heavy lift",
+        "explanation": "起重机作业，重型吊装；crane 原指鹤，在机械与港口工程中熟词僻义指大型起重机、龙门吊；lift 指起重吊装作业。"
       },
       {
-        "id": "e5",
-        "expression": "commence business/initiate",
-        "explanation": "开始营业，着手进行；commencement 亦常指大学毕业典礼"
+        "id": "exp-05",
+        "expression": "container box / freight storage",
+        "explanation": "集装箱，货物仓储；container 专指标准多式联运海运集装箱；storage 指港区堆场或保税仓库的货物存储。"
       },
       {
-        "id": "e6",
-        "expression": "under the command of/authority",
-        "explanation": "在...指挥之下；command 熟词僻义指精通掌握某种语言"
+        "id": "exp-06",
+        "expression": "code of conduct / administrative rule",
+        "explanation": "行为准则，行政规范；code 熟词僻义指官方制定的一整套成文准则、规范或操作守则，而非仅指计算机代码。"
       },
       {
-        "id": "e7",
-        "expression": "social cohesion/unity",
-        "explanation": "社会凝聚力；cohesion 指分子引力或团体成员间紧密的纽带"
+        "id": "exp-07",
+        "expression": "freight flow / continuous transit",
+        "explanation": "货物流动，不间断转运；freight 指水路或陆路成批运输的货物；flow 指物流供应链中高效顺畅的周转流动。"
       },
       {
-        "id": "e8",
-        "expression": "combat inflation/counter",
-        "explanation": "打击通货膨胀，对抗；combat 常见于对抗危机、疾病搭配"
+        "id": "exp-08",
+        "expression": "warehouse collapse / supply chain disruption",
+        "explanation": "仓储瘫痪，供应链中断；collapse 熟词僻义指运行机制的突然瓦解、系统崩溃或价格暴跌，而非仅指建筑物物理倒塌。"
       },
       {
-        "id": "e9",
-        "expression": "sense of comfort/solace",
-        "explanation": "舒适感，宽慰；comfort zone 指心理舒适区"
+        "id": "exp-09",
+        "expression": "trade commission / standing committee",
+        "explanation": "贸易委员会，常设委员会；commission 熟词僻义指受政府或多边协议委派行使专项监管职能的正式委员会，亦可指佣金。"
       },
       {
-        "id": "e10",
-        "expression": "stand-up comedy/humor",
-        "explanation": "单口喜剧，脱口秀；comedy 熟词僻义常喻荒谬滑稽的情景"
+        "id": "exp-10",
+        "expression": "stone column / structural pillar",
+        "explanation": "石制立柱，结构支柱；column 原指支撑大厅的宏伟石柱，在经济语境中熟词僻义常比喻为支撑经济繁荣的“核心支柱”。"
       },
       {
-        "id": "e11",
-        "expression": "clumsy hands/awkward",
-        "explanation": "笨拙的双手；clumsy 强调动作迟缓或设计粗笨"
+        "id": "exp-11",
+        "expression": "commence talks / initiate negotiations",
+        "explanation": "开启谈判，着手磋商；commence 为正式外交与商务用语，指正式开始、启动重要程序或双边多边多轮磋商。"
       },
       {
-        "id": "e12",
-        "expression": "turn clockwise/rotational direction",
-        "explanation": "顺时针转动；与 counter-clockwise（逆时针）相对"
+        "id": "exp-12",
+        "expression": "customs duty / artificial trade barrier",
+        "explanation": "关税，人为贸易壁垒；duty 熟词僻义指进口关税或海关税费，而非日常职责；barrier 指阻碍货物自由流通的政策壁垒。"
       },
       {
-        "id": "e13",
-        "expression": "cling to hope/adhere tightly",
-        "explanation": "紧握希望不放，执着；cling 过去式为 clung"
+        "id": "exp-13",
+        "expression": "coherent report / analytical insight",
+        "explanation": "条理清晰的报告，分析洞见；coherent 指逻辑严密、条理分明，形容研报论述无懈可击；insight 指透过现象看清事物本质的深刻洞察力。"
       },
       {
-        "id": "e14",
-        "expression": "have no clue/unaware",
-        "explanation": "毫无头绪，一无所知；clue 原指侦探破案的线索证据"
+        "id": "exp-14",
+        "expression": "regional cohesion / collective solidarity",
+        "explanation": "区域凝聚力，集体结合力；cohesion 原指物理分子间的内聚力，在区域经济学中熟词僻义指成员体之间牢固的凝聚力与协作互信。"
+      },
+      {
+        "id": "exp-15",
+        "expression": "bring comfort / economic relief",
+        "explanation": "带来安心，经济宽慰；comfort 熟词僻义指在市场动荡与风险化解后带给民生与企业的安全感、安定感与切实宽慰。"
       }
     ],
     "coveredHeadwordIds": [
@@ -28950,140 +28888,136 @@
       "international",
       "commerce",
       "flourish",
-      "trade",
+      "mass",
+      "cargo",
+      "vessel",
       "dock",
       "deliver",
-      "essence",
+      "vital",
       "bulk",
       "commodity",
+      "giant",
+      "crane",
+      "lift",
+      "heavy",
+      "contain",
+      "steady",
+      "precise",
+      "ensure",
+      "raw",
+      "coal",
+      "essence",
+      "supply",
+      "safe",
+      "transfer",
+      "delay",
       "port",
       "authority",
       "collaborate",
+      "joint",
+      "committee",
       "maintain",
       "order",
-      "establish",
-      "collective",
-      "inspect",
-      "committee",
+      "operate",
+      "rely",
+      "digit",
+      "code",
+      "conduct",
       "manage",
-      "region",
-      "wear",
-      "protect",
-      "coarse",
-      "cloth",
-      "button",
-      "collar",
-      "ready",
-      "clothe",
-      "safe",
-      "moist",
-      "heavy",
-      "load",
-      "crane",
-      "lift",
-      "coal",
-      "contain",
-      "ensure",
-      "rope",
-      "coil",
-      "neat",
-      "store²",
-      "shelf",
+      "continue",
+      "freight",
+      "flow",
+      "prevent",
+      "sudden",
+      "warehouse",
       "collapse",
-      "commission",
-      "meet",
-      "ancient",
+      "nearby",
+      "conference",
       "hall",
       "support",
       "tall",
       "column",
-      "follow",
-      "digit",
-      "code",
-      "conduct",
+      "region",
+      "trade",
+      "commission",
+      "hold",
+      "regular",
+      "meeting",
+      "coordinate",
+      "border",
+      "customs",
+      "policy",
       "delegate",
       "commit",
+      "build",
+      "deep",
       "mutual",
-      "benefit",
+      "trust",
       "agree",
       "commence",
-      "cut",
-      "meeting",
-      "formal",
-      "comma",
+      "duty",
+      "talk",
+      "remove",
+      "artificial",
+      "barrier",
+      "alongside",
+      "respect",
+      "colleague",
       "chief",
       "direct",
       "issue",
       "calm",
       "command",
-      "ask",
+      "demand",
       "analyze",
       "collect",
+      "accurate",
       "statistic",
       "insight",
       "comment",
       "coherent",
       "economy",
       "report",
-      "strong",
-      "cohesion",
-      "show",
-      "partner",
+      "stress",
       "combine",
       "finance",
       "resource",
       "combat",
+      "severe",
       "risk",
-      "nearby",
-      "reside",
-      "colony",
-      "community",
-      "clinic",
-      "check¹",
-      "colon",
-      "condition",
-      "science",
-      "clone",
-      "shore",
-      "restore",
-      "offer",
-      "real",
+      "chain",
+      "disrupt",
+      "collective",
+      "cooperate",
+      "strong",
+      "cohesion",
+      "bring",
+      "sustain",
+      "stable",
+      "genuine",
       "comfort",
-      "local",
-      "colleague",
-      "gather",
-      "recreation",
-      "club",
-      "laugh",
-      "happy",
-      "amuse",
-      "comedy",
-      "stage",
-      "energy",
-      "clown",
-      "athlete",
-      "coach",
-      "guide",
-      "youngster",
-      "comb",
-      "teach",
-      "clumsy",
-      "learn",
-      "clip",
-      "clockwise",
-      "metal",
-      "hook",
-      "greet",
-      "cock",
-      "cling",
-      "vital",
-      "clue",
+      "community",
+      "partner",
+      "common",
+      "guideline",
       "share",
-      "hope",
-      "determine",
-      "honest",
-      "defeat",
-      "difficult"
+      "update",
+      "transparent",
+      "inspect",
+      "minimum",
+      "schedule",
+      "link",
+      "separate",
+      "terminal",
+      "efficient",
+      "connect",
+      "network",
+      "confidence",
+      "establish",
+      "durable",
+      "pillar",
+      "grow",
+      "entire"
     ],
     "hasOutOfSyllabusWords": false
   },

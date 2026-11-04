@@ -1737,6 +1737,184 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 15 重写后满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 15');
+    expect(passage).toBeDefined();
+    expect(passage!.tier).toBe('cet4-core');
+    expect(passage!.topic).toBe('现代化港口商贸、海运物流与区域多边合作');
+    expect(passage!.titleEn).toBe(
+      'Modern Port Commerce, Maritime Logistics, and Regional Economic Cooperation'
+    );
+    expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
+    expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(compiled.hasOutOfSyllabusWords).toBe(false);
+    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+
+    for (const id of compiled.coveredHeadwordIds) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证不再强行包含旧批次与语境割裂的拼凑词
+    expect(compiled.coveredHeadwordIds).not.toContain('coarse');
+    expect(compiled.coveredHeadwordIds).not.toContain('cloth');
+    expect(compiled.coveredHeadwordIds).not.toContain('collar');
+    expect(compiled.coveredHeadwordIds).not.toContain('clothe');
+    expect(compiled.coveredHeadwordIds).not.toContain('coil');
+    expect(compiled.coveredHeadwordIds).not.toContain('comma');
+    expect(compiled.coveredHeadwordIds).not.toContain('colon');
+    expect(compiled.coveredHeadwordIds).not.toContain('clone');
+    expect(compiled.coveredHeadwordIds).not.toContain('clown');
+    expect(compiled.coveredHeadwordIds).not.toContain('comedy');
+    expect(compiled.coveredHeadwordIds).not.toContain('coach');
+    expect(compiled.coveredHeadwordIds).not.toContain('comb');
+    expect(compiled.coveredHeadwordIds).not.toContain('clumsy');
+    expect(compiled.coveredHeadwordIds).not.toContain('clip');
+    expect(compiled.coveredHeadwordIds).not.toContain('clockwise');
+    expect(compiled.coveredHeadwordIds).not.toContain('cock');
+    expect(compiled.coveredHeadwordIds).not.toContain('cling');
+
+    // 验证现代化港口商贸、海运物流与区域多边合作主题的地道选词与自然搭配
+    expect(passage!.paragraphs[0].sentences[0].english).toContain(
+      'international commerce flourishes as massive cargo vessels dock'
+    );
+    expect(passage!.paragraphs[0].sentences[1].english).toContain(
+      'cranes lift heavy container boxes with steady precision'
+    );
+    expect(passage!.paragraphs[0].sentences[2].english).toContain(
+      'digital code of conduct'
+    );
+    expect(passage!.paragraphs[1].sentences[0].english).toContain(
+      'regional trade commission holds regular meetings'
+    );
+    expect(passage!.paragraphs[1].sentences[1].english).toContain(
+      'commence duty talks and remove artificial trade barriers'
+    );
+    expect(passage!.paragraphs[1].sentences[2].english).toContain(
+      'collect accurate statistics and deliver insightful comments'
+    );
+    expect(passage!.paragraphs[1].sentences[3].english).toContain(
+      'combining financial resources is vital to combat severe market risks'
+    );
+    expect(passage!.paragraphs[2].sentences[0].english).toContain(
+      'strengthens regional cohesion, bringing sustained economic stability and genuine comfort'
+    );
+    expect(passage!.paragraphs[2].sentences[1].english).toContain(
+      'ensure transparent customs inspections and minimize schedule delays'
+    );
+    expect(passage!.paragraphs[2].sentences[2].english).toContain(
+      'establishing a durable pillar of shared growth'
+    );
+
+    expect(compiled.coveredHeadwordIds).toContain('coast');
+    expect(compiled.coveredHeadwordIds).toContain('commerce');
+    expect(compiled.coveredHeadwordIds).toContain('commodity');
+    expect(compiled.coveredHeadwordIds).toContain('collaborate');
+    expect(compiled.coveredHeadwordIds).toContain('collective');
+    expect(compiled.coveredHeadwordIds).toContain('committee');
+    expect(compiled.coveredHeadwordIds).toContain('commission');
+    expect(compiled.coveredHeadwordIds).toContain('combine');
+    expect(compiled.coveredHeadwordIds).toContain('combat');
+    expect(compiled.coveredHeadwordIds).toContain('coherent');
+    expect(compiled.coveredHeadwordIds).toContain('cohesion');
+    expect(compiled.coveredHeadwordIds).toContain('commit');
+    expect(compiled.coveredHeadwordIds).toContain('commence');
+    expect(compiled.coveredHeadwordIds).toContain('command');
+    expect(compiled.coveredHeadwordIds).toContain('collect');
+    expect(compiled.coveredHeadwordIds).toContain('comment');
+    expect(compiled.coveredHeadwordIds).toContain('column');
+    expect(compiled.coveredHeadwordIds).toContain('collapse');
+    expect(compiled.coveredHeadwordIds).toContain('crane');
+    expect(compiled.coveredHeadwordIds).toContain('coal');
+    expect(compiled.coveredHeadwordIds).toContain('bulk');
+    expect(compiled.coveredHeadwordIds).toContain('dock');
+    expect(compiled.coveredHeadwordIds).toContain('comfort');
+    expect(compiled.coveredHeadwordIds).toContain('colleague');
+    expect(compiled.coveredHeadwordIds).toContain('cargo');
+    expect(compiled.coveredHeadwordIds).toContain('vessel');
+    expect(compiled.coveredHeadwordIds).toContain('deliver');
+    expect(compiled.coveredHeadwordIds).toContain('vital');
+    expect(compiled.coveredHeadwordIds).toContain('steady');
+    expect(compiled.coveredHeadwordIds).toContain('precise');
+    expect(compiled.coveredHeadwordIds).toContain('authority');
+    expect(compiled.coveredHeadwordIds).toContain('maintain');
+    expect(compiled.coveredHeadwordIds).toContain('order');
+    expect(compiled.coveredHeadwordIds).toContain('code');
+    expect(compiled.coveredHeadwordIds).toContain('conduct');
+    expect(compiled.coveredHeadwordIds).toContain('freight');
+    expect(compiled.coveredHeadwordIds).toContain('flow');
+    expect(compiled.coveredHeadwordIds).toContain('warehouse');
+    expect(compiled.coveredHeadwordIds).toContain('customs');
+    expect(compiled.coveredHeadwordIds).toContain('policy');
+    expect(compiled.coveredHeadwordIds).toContain('delegate');
+    expect(compiled.coveredHeadwordIds).toContain('mutual');
+    expect(compiled.coveredHeadwordIds).toContain('duty');
+    expect(compiled.coveredHeadwordIds).toContain('barrier');
+    expect(compiled.coveredHeadwordIds).toContain('statistic');
+    expect(compiled.coveredHeadwordIds).toContain('economy');
+    expect(compiled.coveredHeadwordIds).toContain('finance');
+    expect(compiled.coveredHeadwordIds).toContain('resource');
+    expect(compiled.coveredHeadwordIds).toContain('risk');
+    expect(compiled.coveredHeadwordIds).toContain('disrupt');
+    expect(compiled.coveredHeadwordIds).toContain('stable');
+    expect(compiled.coveredHeadwordIds).toContain('inspect');
+    expect(compiled.coveredHeadwordIds).toContain('schedule');
+    expect(compiled.coveredHeadwordIds).toContain('terminal');
+    expect(compiled.coveredHeadwordIds).toContain('network');
+    expect(compiled.coveredHeadwordIds).toContain('confidence');
+    expect(compiled.coveredHeadwordIds).toContain('establish');
+    expect(compiled.coveredHeadwordIds).toContain('pillar');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'mass'],
+      [0, 0, 'cargo'],
+      [0, 0, 'bulk'],
+      [0, 0, 'commodity'],
+      [0, 1, 'contain'],
+      [0, 2, 'port'],
+      [0, 2, 'order'],
+      [0, 2, 'digit'],
+      [0, 2, 'freight'],
+      [0, 2, 'warehouse'],
+      [1, 0, 'conference'],
+      [1, 0, 'customs'],
+      [1, 3, 'economy'],
+      [1, 3, 'finance'],
+      [2, 0, 'collective'],
+      [2, 2, 'connect'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
 
