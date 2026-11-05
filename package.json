@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "generate:corpus": "tsx scripts/compile-corpus.ts",
+    "coverage": "tsx scripts/report-corpus-coverage.ts",
     "dev": "npm run generate:corpus && vite",
     "build": "npm run generate:corpus && tsc --noEmit && vite build",
     "preview": "vite preview",

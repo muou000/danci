@@ -12,7 +12,7 @@ Standard 5-role triage vocabulary (`needs-triage`, `needs-info`, `ready-for-agen
 
 Single-context layout (`GLOSSARY.md` + `docs/adr/` at root). See `docs/agents/domain.md`.
 
-### Annotation and typography standards
+### Passage authoring, annotation, and typography standards
 
-Sublinear gloss grammar (2–3 senses, adjective “的”, adverb “地”, contextual POS) and collision-free typography. See `docs/agents/annotation-standards.md`.
+Before writing or editing a passage, follow `docs/agents/annotation-standards.md`: choose target headwords by topic and natural context, run `npm run coverage` before drafting and after edits, and use the generated `docs/corpus/uncovered-headwords.md`. The document also defines sublinear gloss grammar (2–3 senses, adjective “的”, adverb “地”, contextual POS) and collision-free typography.
 
