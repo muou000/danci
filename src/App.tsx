@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { zipSync } from 'fflate';
 import type { CompiledPassage } from './corpus';
 import { PASSAGE_TIER_LABELS } from './corpus/labels';
 import { COMPILED_DEMO_PASSAGES } from './corpus/compiled-demos';
@@ -18,10 +19,12 @@ import {
 } from './passage-library';
 import {
   readLearningState,
-  recordPassageRead,
+  transitionLearningState,
   writeLearningState,
   type LearningState,
+  type LearningStateAction,
 } from './learning-state';
+import { usePassageCorpus } from './use-passage-corpus';
 
 export interface AppProps {
   passages?: CompiledPassage[];
@@ -43,7 +46,7 @@ function passageImageFilename(passage: CompiledPassage): string {
   return `${safeParts}.png`;
 }
 
-function downloadPng(blob: Blob, filename: string): void {
+function downloadFile(blob: Blob, filename: string): void {
   const imageUrl = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = imageUrl;
@@ -52,6 +55,23 @@ function downloadPng(blob: Blob, filename: string): void {
   link.click();
   link.remove();
   window.setTimeout(() => URL.revokeObjectURL(imageUrl), 0);
+}
+
+function blobToUint8Array(blob: Blob): Promise<Uint8Array> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (!(reader.result instanceof ArrayBuffer)) {
+        reject(new Error('Unable to read exported passage image.'));
+        return;
+      }
+      resolve(new Uint8Array(reader.result));
+    };
+    reader.onerror = () => {
+      reject(reader.error ?? new Error('Unable to read exported passage image.'));
+    };
+    reader.readAsArrayBuffer(blob);
+  });
 }
 
 function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[] {
@@ -86,11 +106,12 @@ export function App({
   passages: initialPassages = COMPILED_DEMO_PASSAGES,
   loadAllPassages,
 }: AppProps) {
-  const [passages, setPassages] = useState(initialPassages);
-  const passagesRef = useRef(initialPassages);
-  const passageLoadPromise = useRef<Promise<CompiledPassage[]> | null>(null);
-  const [isLoadingCorpus, setIsLoadingCorpus] = useState(false);
-  const [corpusLoadFailed, setCorpusLoadFailed] = useState(false);
+  const {
+    passages,
+    isLoading: isLoadingCorpus,
+    loadFailed: corpusLoadFailed,
+    ensureLoaded: ensureCorpusLoaded,
+  } = usePassageCorpus(initialPassages, loadAllPassages);
   const [activeId, setActiveId] = useState<string>(initialPassages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const [isDirectoryOpen, setIsDirectoryOpen] = useState(false);
@@ -98,6 +119,8 @@ export function App({
   const libraryTrigger = useRef<HTMLButtonElement>(null);
   const exportCardRef = useRef<HTMLElement>(null);
   const [isExporting, setIsExporting] = useState(false);
+  const [exportPassage, setExportPassage] =
+    useState<CompiledPassage | null>(null);
   const [exportMessage, setExportMessage] = useState('');
   const [masteryFeedback, setMasteryFeedback] =
     useState<MasteryFeedback | null>(null);
@@ -105,32 +128,12 @@ export function App({
   const [learningState, setLearningState] = useState<LearningState>(() => {
     const saved = readLearningState();
     return initialPassages[0]
-      ? recordPassageRead(saved, initialPassages[0].id)
+      ? transitionLearningState(saved, {
+          type: 'record-passage-read',
+          passageId: initialPassages[0].id,
+        }).state
       : saved;
   });
-
-  const ensureCorpusLoaded = () => {
-    if (!loadAllPassages) return Promise.resolve(passagesRef.current);
-    if (passageLoadPromise.current) return passageLoadPromise.current;
-
-    setIsLoadingCorpus(true);
-    setCorpusLoadFailed(false);
-    const pendingLoad = Promise.resolve()
-      .then(loadAllPassages)
-      .then((loadedPassages) => {
-        passagesRef.current = loadedPassages;
-        setPassages(loadedPassages);
-        return loadedPassages;
-      })
-      .catch((error: unknown) => {
-        passageLoadPromise.current = null;
-        setCorpusLoadFailed(true);
-        throw error;
-      })
-      .finally(() => setIsLoadingCorpus(false));
-    passageLoadPromise.current = pendingLoad;
-    return pendingLoad;
-  };
 
   useEffect(() => {
     writeLearningState(learningState);
@@ -180,30 +183,28 @@ export function App({
     writeLearningState(nextState);
   };
 
-  const toggleMasteredItem = (itemKey: string) => {
-    const mastered = new Set(learningState.masteredItemKeys);
-    if (mastered.has(itemKey)) {
-      mastered.delete(itemKey);
-    } else {
-      mastered.add(itemKey);
+  const applyLearningAction = (action: LearningStateAction) => {
+    const transition = transitionLearningState(learningState, action);
+    if (transition.state !== learningState) {
+      commitLearningState(transition.state);
     }
-    commitLearningState({
-      ...learningState,
-      masteredItemKeys: Array.from(mastered),
+    return transition;
+  };
+
+  const toggleMasteredItem = (itemKey: string) => {
+    applyLearningAction({
+      type: 'toggle-mastered-item',
+      itemKey,
     });
   };
 
   const markMasteredItems = (itemKeys: string[]) => {
-    const mastered = new Set(learningState.masteredItemKeys);
-    const newItemKeys = Array.from(new Set(itemKeys)).filter(
-      (itemKey) => !mastered.has(itemKey)
-    );
+    const { addedItemKeys: newItemKeys } = applyLearningAction({
+      type: 'mark-mastered-items',
+      itemKeys,
+    });
     if (newItemKeys.length === 0) return;
 
-    commitLearningState({
-      ...learningState,
-      masteredItemKeys: [...learningState.masteredItemKeys, ...newItemKeys],
-    });
     showMasteryFeedback(
       {
         message: `已标熟 ${newItemKeys.length} 个词条。`,
@@ -217,12 +218,9 @@ export function App({
     const itemKeysToUndo = masteryFeedback?.itemKeys;
     if (!itemKeysToUndo) return;
 
-    const itemKeys = new Set(itemKeysToUndo);
-    commitLearningState({
-      ...learningState,
-      masteredItemKeys: learningState.masteredItemKeys.filter(
-        (itemKey) => !itemKeys.has(itemKey)
-      ),
+    applyLearningAction({
+      type: 'restore-mastered-items',
+      itemKeys: itemKeysToUndo,
     });
     showMasteryFeedback({ message: '已撤销本次批量标熟。' }, 2000);
   };
@@ -232,21 +230,12 @@ export function App({
     entryId: string,
     hidden: boolean
   ) => {
-    const hiddenEntries = new Set(
-      learningState.hiddenExpansionIds[passageId] ?? []
-    );
-    if (hidden) {
-      hiddenEntries.add(entryId);
-    } else {
-      hiddenEntries.delete(entryId);
-    }
-    const hiddenExpansionIds = { ...learningState.hiddenExpansionIds };
-    if (hiddenEntries.size > 0) {
-      hiddenExpansionIds[passageId] = Array.from(hiddenEntries);
-    } else {
-      delete hiddenExpansionIds[passageId];
-    }
-    commitLearningState({ ...learningState, hiddenExpansionIds });
+    applyLearningAction({
+      type: 'set-expansion-hidden',
+      passageId,
+      entryId,
+      hidden,
+    });
   };
 
   const activePassage =
@@ -270,6 +259,20 @@ export function App({
           setExpansionHidden(activePassage.id, entryId, true),
         onRestoreExpansion: (entryId) =>
           setExpansionHidden(activePassage.id, entryId, false),
+      }
+    : null;
+  const exportPassageCardProps: PassageCardProps | null = exportPassage
+    ? {
+        passage: exportPassage,
+        masteredItemKeys,
+        onToggleMastered: toggleMasteredItem,
+        onMarkMastered: markMasteredItems,
+        hiddenExpansionIds:
+          learningState.hiddenExpansionIds[exportPassage.id] ?? [],
+        onHideExpansion: (entryId) =>
+          setExpansionHidden(exportPassage.id, entryId, true),
+        onRestoreExpansion: (entryId) =>
+          setExpansionHidden(exportPassage.id, entryId, false),
       }
     : null;
   const learningItems = useMemo(() => collectLearningItems(passages), [passages]);
@@ -304,12 +307,12 @@ export function App({
     setActiveId(passageId);
     setIsDirectoryOpen(false);
     setSearchQuery('');
-    commitLearningState(recordPassageRead(learningState, passageId));
+    applyLearningAction({ type: 'record-passage-read', passageId });
   };
 
   const markPassageRead = (passageId: string) => {
     if (learningState.readingRecords[passageId]) return;
-    commitLearningState(recordPassageRead(learningState, passageId));
+    applyLearningAction({ type: 'record-passage-read', passageId });
   };
 
   const navigateWithin = (loadedPassages: CompiledPassage[], offset: number) => {
@@ -331,13 +334,14 @@ export function App({
   };
 
   const restoreMasteredItems = (itemKeys: string[]) => {
-    const restored = new Set(itemKeys);
-    commitLearningState({
-      ...learningState,
-      masteredItemKeys: learningState.masteredItemKeys.filter(
-        (key) => !restored.has(key)
-      ),
+    applyLearningAction({
+      type: 'restore-mastered-items',
+      itemKeys,
     });
+  };
+
+  const importLearningState = (state: LearningState) => {
+    applyLearningAction({ type: 'replace-state', state });
   };
 
   const exportPassageImage = async () => {
@@ -345,6 +349,7 @@ export function App({
 
     flushSync(() => {
       setIsExporting(true);
+      setExportPassage(activePassage);
       setExportMessage('正在生成高清图片...');
     });
     try {
@@ -358,11 +363,56 @@ export function App({
       });
       if (!png) throw new Error('Unable to create passage image.');
 
-      downloadPng(png, passageImageFilename(activePassage));
+      downloadFile(png, passageImageFilename(activePassage));
       setExportMessage('高清 PNG 图片已开始下载。');
     } catch {
       setExportMessage('图片导出失败，请重试。');
     } finally {
+      setExportPassage(null);
+      setIsExporting(false);
+    }
+  };
+
+  const exportCET4PassageBatch = async () => {
+    flushSync(() => {
+      setIsExporting(true);
+      setExportMessage('正在加载并生成批量图片...');
+    });
+
+    try {
+      const allPassages = await ensureCorpusLoaded();
+      const cet4Passages = allPassages.filter(
+        (passage) => passage.tier === 'cet4-core'
+      );
+      if (cet4Passages.length === 0) {
+        throw new Error('No CET-4 passages are available to export.');
+      }
+
+      const { toBlob } = await import('html-to-image');
+      const files: Record<string, Uint8Array> = {};
+      for (const passage of cet4Passages) {
+        flushSync(() => setExportPassage(passage));
+        const exportCard = exportCardRef.current;
+        if (!exportCard) throw new Error('Passage image is not ready.');
+        const png = await toBlob(exportCard, {
+          width: PASSAGE_EXPORT_WIDTH,
+          pixelRatio: 2,
+          backgroundColor: '#ffffff',
+        });
+        if (!png) throw new Error(`Unable to export ${passage.id}.`);
+        files[passageImageFilename(passage)] = await blobToUint8Array(png);
+      }
+
+      const archive = zipSync(files, { level: 0 });
+      downloadFile(
+        new Blob([archive], { type: 'application/zip' }),
+        'cet4-core-passages.zip'
+      );
+      setExportMessage(`${cet4Passages.length} 篇高清 PNG 图片已打包下载。`);
+    } catch {
+      setExportMessage('批量图片导出失败，请重试。');
+    } finally {
+      setExportPassage(null);
       setIsExporting(false);
     }
   };
@@ -464,6 +514,15 @@ export function App({
                 >
                   {isExporting ? '正在导出图片...' : '导出图片'}
                 </button>
+                <button
+                  type="button"
+                  className="passage-export-button"
+                  aria-busy={isExporting}
+                  disabled={isExporting}
+                  onClick={exportCET4PassageBatch}
+                >
+                  {isExporting ? '正在生成批量图片...' : '批量导出20篇'}
+                </button>
                 <span
                   className="passage-export-status"
                   role={exportMessage ? 'status' : undefined}
@@ -476,7 +535,7 @@ export function App({
                 key={activePassageCardProps.passage.id}
                 {...activePassageCardProps}
               />
-              {isExporting && (
+              {isExporting && exportPassageCardProps && (
                 <div
                   className="passage-export-stage"
                   aria-hidden="true"
@@ -484,8 +543,8 @@ export function App({
                   style={{ width: PASSAGE_EXPORT_WIDTH }}
                 >
                   <PassageCard
-                    key={`export-${activePassageCardProps.passage.id}`}
-                    {...activePassageCardProps}
+                    key={`export-${exportPassageCardProps.passage.id}`}
+                    {...exportPassageCardProps}
                     exportMode
                     exportRef={exportCardRef}
                   />
@@ -523,7 +582,7 @@ export function App({
             libraryTrigger.current?.focus();
           }}
           onRestoreItems={restoreMasteredItems}
-          onImportState={commitLearningState}
+          onImportState={importLearningState}
         />
       )}
     </div>

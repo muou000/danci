@@ -12,6 +12,24 @@ export interface LearningState {
   readingRecords: Record<string, ReadingRecord>;
 }
 
+export type LearningStateAction =
+  | { type: 'toggle-mastered-item'; itemKey: string }
+  | { type: 'mark-mastered-items'; itemKeys: string[] }
+  | { type: 'restore-mastered-items'; itemKeys: string[] }
+  | {
+      type: 'set-expansion-hidden';
+      passageId: string;
+      entryId: string;
+      hidden: boolean;
+    }
+  | { type: 'record-passage-read'; passageId: string; lastReadAt?: string }
+  | { type: 'replace-state'; state: LearningState };
+
+export interface LearningStateTransition {
+  state: LearningState;
+  addedItemKeys: string[];
+}
+
 export function createEmptyLearningState(): LearningState {
   return {
     version: 1,
@@ -114,4 +132,82 @@ export function recordPassageRead(
       },
     },
   };
+}
+
+export function transitionLearningState(
+  state: LearningState,
+  action: LearningStateAction
+): LearningStateTransition {
+  switch (action.type) {
+    case 'toggle-mastered-item': {
+      const masteredItemKeys = new Set(state.masteredItemKeys);
+      if (masteredItemKeys.has(action.itemKey)) {
+        masteredItemKeys.delete(action.itemKey);
+      } else {
+        masteredItemKeys.add(action.itemKey);
+      }
+      return {
+        state: { ...state, masteredItemKeys: Array.from(masteredItemKeys) },
+        addedItemKeys: [],
+      };
+    }
+    case 'mark-mastered-items': {
+      const masteredItemKeys = new Set(state.masteredItemKeys);
+      const addedItemKeys = Array.from(new Set(action.itemKeys)).filter(
+        (itemKey) => !masteredItemKeys.has(itemKey)
+      );
+      if (addedItemKeys.length === 0) return { state, addedItemKeys };
+
+      return {
+        state: {
+          ...state,
+          masteredItemKeys: [...state.masteredItemKeys, ...addedItemKeys],
+        },
+        addedItemKeys,
+      };
+    }
+    case 'restore-mastered-items': {
+      const itemKeysToRestore = new Set(action.itemKeys);
+      const masteredItemKeys = state.masteredItemKeys.filter(
+        (itemKey) => !itemKeysToRestore.has(itemKey)
+      );
+      if (masteredItemKeys.length === state.masteredItemKeys.length) {
+        return { state, addedItemKeys: [] };
+      }
+      return {
+        state: { ...state, masteredItemKeys },
+        addedItemKeys: [],
+      };
+    }
+    case 'set-expansion-hidden': {
+      const hiddenEntries = new Set(
+        state.hiddenExpansionIds[action.passageId] ?? []
+      );
+      const alreadyHidden = hiddenEntries.has(action.entryId);
+      if (alreadyHidden === action.hidden) return { state, addedItemKeys: [] };
+
+      if (action.hidden) {
+        hiddenEntries.add(action.entryId);
+      } else {
+        hiddenEntries.delete(action.entryId);
+      }
+      const hiddenExpansionIds = { ...state.hiddenExpansionIds };
+      if (hiddenEntries.size > 0) {
+        hiddenExpansionIds[action.passageId] = Array.from(hiddenEntries);
+      } else {
+        delete hiddenExpansionIds[action.passageId];
+      }
+      return {
+        state: { ...state, hiddenExpansionIds },
+        addedItemKeys: [],
+      };
+    }
+    case 'record-passage-read':
+      return {
+        state: recordPassageRead(state, action.passageId, action.lastReadAt),
+        addedItemKeys: [],
+      };
+    case 'replace-state':
+      return { state: action.state, addedItemKeys: [] };
+  }
 }

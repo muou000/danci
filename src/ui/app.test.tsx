@@ -2,6 +2,7 @@ import { act, fireEvent, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { toBlob } from 'html-to-image';
+import { zipSync } from 'fflate';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
 import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
@@ -11,6 +12,10 @@ import type { PassageSearchResult } from '../passage-library';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
+}));
+
+vi.mock('fflate', () => ({
+  zipSync: vi.fn(() => new Uint8Array([80, 75, 3, 4])),
 }));
 
 function getAnnotationKeys(
@@ -780,6 +785,61 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(downloadedFilename).toMatch(/\.png$/);
   });
 
+  it('按当前个性化状态将完整四级核心篇批量导出为ZIP中的20张高清PNG，且不切换当前短文', async () => {
+    const user = userEvent.setup();
+    vi.mocked(toBlob).mockResolvedValue(
+      new Blob(['png'], { type: 'image/png' })
+    );
+
+    let downloadedBlob: Blob | undefined;
+    let downloadedFilename = '';
+    vi.stubGlobal('URL', {
+      createObjectURL: vi.fn((blob: Blob) => {
+        downloadedBlob = blob;
+        return 'blob:passage-archive';
+      }),
+      revokeObjectURL: vi.fn(),
+    });
+    vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(
+      function (this: HTMLAnchorElement) {
+        downloadedFilename = this.download;
+      }
+    );
+
+    const loadAllPassages = vi.fn(async () => COMPILED_CET4_BATCH_1_PASSAGES);
+    render(
+      <App
+        passages={[COMPILED_CET4_BATCH_1_PASSAGES[0]]}
+        loadAllPassages={loadAllPassages}
+      />
+    );
+
+    await user.click(screen.getByRole('button', { name: '批量导出20篇' }));
+
+    expect(
+      await screen.findByText(
+        '20 篇高清 PNG 图片已打包下载。',
+        {},
+        { timeout: 10_000 }
+      )
+    ).toBeInTheDocument();
+    expect(loadAllPassages).toHaveBeenCalledOnce();
+    expect(toBlob).toHaveBeenCalledTimes(20);
+    expect(zipSync).toHaveBeenCalledOnce();
+    const archiveFiles = vi.mocked(zipSync).mock.calls[0][0];
+    expect(Object.keys(archiveFiles)).toHaveLength(20);
+    expect(Object.keys(archiveFiles)[0]).toContain('NO. 01');
+    expect(Object.keys(archiveFiles)[19]).toContain('NO. 20');
+    expect(vi.mocked(zipSync).mock.calls[0][1]).toEqual({ level: 0 });
+    expect(downloadedBlob?.type).toBe('application/zip');
+    expect(downloadedFilename).toBe('cet4-core-passages.zip');
+    expect(
+      screen.getByRole('heading', {
+        name: /跨越重洋的学术探索与文化适应/,
+      })
+    ).toBeInTheDocument();
+  });
+
   it('导出时省略全部已隐藏拓展，并收起已无可见标注的图例与右栏', async () => {
     const user = userEvent.setup();
     vi.mocked(toBlob).mockResolvedValueOnce(
@@ -871,4 +931,3 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
   });
 });
-
