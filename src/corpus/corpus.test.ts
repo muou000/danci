@@ -2757,6 +2757,146 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 24 满足主题自然度、词量及行间标注校验规范，且大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 24');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('教育文化');
+    expect(passage!.titleEn).toBe(
+      'Digital Access Should Not Be the Library’s Only Door'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(75);
+
+    for (const id of coveredHeadwordIdsIn(compiled)) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证包含 Issue #34 初始规划核心目标词
+    expect(coveredHeadwordIdsIn(compiled)).toContain('mayor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('equal');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('discriminate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vote');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tax');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('grant');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('permit');
+
+    // 验证大幅拓展纳入的高契合未覆盖词目
+    expect(coveredHeadwordIdsIn(compiled)).toContain('county');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('undertake');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('worthwhile');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('upgrade');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('furnish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('high-tech');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('desktop');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('online');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('poor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('civilian');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pension');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('laptop');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tablet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wary');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('fear');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('worry');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('browse');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cyberspace');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('download');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('handicap');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('forum');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('reluctant');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('express');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('doubt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('oppose');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('exclude');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('insist');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('counter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('agenda');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cord');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wire');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('plug');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sum');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('persuade');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('declare');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('blueprint');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('privilege');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wealth');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('retain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('print');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('handbook');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('brochure');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('volume');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cast');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('final');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('ballot');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('parallel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('suit¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tall');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cabinet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('invite');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('borrow');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('article');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('neat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('keyboard');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('input');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('search');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('diligent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('act');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tutor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('lesson');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('teach');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('app');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hesitate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pass');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('subsequent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('result');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('triumph');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('grateful');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('obstacle');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'county'],
+      [0, 0, 'desktop'],
+      [0, 2, 'digit'],
+      [1, 1, 'staff'],
+      [1, 1, 'serve'],
+      [1, 2, 'build'],
+      [1, 3, 'wealth'],
+      [1, 3, 'print'],
+      [2, 2, 'search'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);

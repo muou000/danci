@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1312/4692 个非免注核心大纲词目（28.0%），尚有 3380 个待覆盖。
+当前覆盖 1372/4692 个非免注核心大纲词目（29.2%），尚有 3320 个待覆盖。
 
-## 四级词目（2142）
+## 四级词目（2082）
 
 - `able`
 - `abolish`
@@ -22,7 +22,7 @@
 - `ache`
 - `acid`
 - `acre`
-- `act`
+- `add`
 - `addict`
 - `adjective`
 - `administrate`
@@ -36,7 +36,6 @@
 - `afraid`
 - `afterward`
 - `afterwards`
-- `agenda`
 - `AIDS`
 - `aim`
 - `album`
@@ -78,7 +77,6 @@
 - `apart`
 - `apt.`
 - `apology`
-- `app`
 - `apparatus`
 - `apparent`
 - `appetite`
@@ -95,7 +93,6 @@
 - `arrest`
 - `arrow`
 - `art`
-- `article`
 - `ash`
 - `ashamed`
 - `ashore`
@@ -140,7 +137,6 @@
 - `balcony`
 - `ballet`
 - `balloon`
-- `ballot`
 - `bamboo`
 - `ban`
 - `band`
@@ -213,7 +209,6 @@
 - `blossom`
 - `blouse`
 - `blow`
-- `blueprint`
 - `blur`
 - `boast`
 - `bomb`
@@ -246,12 +241,10 @@
 - `briefcase`
 - `brilliant`
 - `broadcast`
-- `brochure`
 - `broke`
 - `broker`
 - `broom`
 - `brow`
-- `browse`
 - `brunch`
 - `brush`
 - `brutal`
@@ -276,7 +269,6 @@
 - `button`
 - `bystander`
 - `cabbage`
-- `cabinet`
 - `cafe`
 - `cafeteria`
 - `cage`
@@ -294,7 +286,6 @@
 - `carpet`
 - `cartoon`
 - `cashier`
-- `cast`
 - `castle`
 - `casual`
 - `cattle`
@@ -317,6 +308,7 @@
 - `china`
 - `chip`
 - `cholesterol`
+- `choose`
 - `chop`
 - `chopstick`
 - `chore`
@@ -326,7 +318,6 @@
 - `cigar`
 - `cigarette`
 - `circus`
-- `civilian`
 - `clap`
 - `classmate`
 - `claw`
@@ -373,7 +364,6 @@
 - `cookie`
 - `cop`
 - `copper`
-- `cord`
 - `corn`
 - `corps`
 - `cosmos`
@@ -382,9 +372,7 @@
 - `couch`
 - `cough`
 - `countdown`
-- `counter`
 - `countryside`
-- `county`
 - `couple`
 - `coupon`
 - `court²`
@@ -416,7 +404,6 @@
 - `curtain`
 - `custom`
 - `cute`
-- `cyberspace`
 - `dairy`
 - `dam`
 - `damn`
@@ -433,7 +420,6 @@
 - `dean`
 - `dear`
 - `decent`
-- `declare`
 - `decline`
 - `deed`
 - `deem`
@@ -459,7 +445,6 @@
 - `desert¹`
 - `desert²`
 - `deserve`
-- `desktop`
 - `despair`
 - `despatch`
 - `dessert`
@@ -474,7 +459,6 @@
 - `diary`
 - `dictate`
 - `die`
-- `diligent`
 - `dim`
 - `dime`
 - `dimension`
@@ -510,9 +494,7 @@
 - `dorm`
 - `dose`
 - `dot`
-- `doubt`
 - `dove`
-- `download`
 - `downstairs`
 - `downward`
 - `dozen`
@@ -598,7 +580,6 @@
 - `exception`
 - `excite`
 - `exclaim`
-- `exclude`
 - `excursion`
 - `excuse`
 - `exert`
@@ -611,7 +592,6 @@
 - `explode`
 - `exploit`
 - `export`
-- `express`
 - `expressway`
 - `extent`
 - `exterior`
@@ -645,7 +625,6 @@
 - `fatal`
 - `fate`
 - `fax`
-- `fear`
 - `feather`
 - `federal`
 - `federation`
@@ -664,7 +643,6 @@
 - `figure`
 - `fill`
 - `filter`
-- `final`
 - `fine¹`
 - `fine²`
 - `fingerprint`
@@ -711,7 +689,6 @@
 - `forth`
 - `forthcoming`
 - `fortune`
-- `forum`
 - `fossil`
 - `fountain`
 - `fox`
@@ -736,7 +713,6 @@
 - `funeral`
 - `fur`
 - `furnace`
-- `furnish`
 - `fuss`
 - `gadget`
 - `gallon`
@@ -783,7 +759,6 @@
 - `grand`
 - `grandchild`
 - `graph`
-- `grateful`
 - `gratitude`
 - `grave`
 - `gravitation`
@@ -814,8 +789,6 @@
 - `halfway`
 - `ham`
 - `hammer`
-- `handbook`
-- `handicap`
 - `handsome`
 - `handwriting`
 - `handy`
@@ -853,10 +826,8 @@
 - `hereby`
 - `hero`
 - `heroine`
-- `hesitate`
 - `hi`
 - `highlight`
-- `high-tech`
 - `hijack`
 - `hinder`
 - `hint`
@@ -949,12 +920,10 @@
 - `inland`
 - `inn`
 - `innocent`
-- `input`
 - `inquire`
 - `insane`
 - `insect`
 - `insert`
-- `insist`
 - `installment`
 - `instance`
 - `instinct`
@@ -980,7 +949,6 @@
 - `invariably`
 - `invent`
 - `invisible`
-- `invite`
 - `involve`
 - `inward`
 - `irony`
@@ -1012,7 +980,6 @@
 - `justify`
 - `keen`
 - `kettle`
-- `keyboard`
 - `kick`
 - `kill`
 - `kilogram`
@@ -1039,7 +1006,6 @@
 - `landlady`
 - `lane`
 - `lap`
-- `laptop`
 - `laser`
 - `lass`
 - `lately`
@@ -1068,7 +1034,6 @@
 - `lend`
 - `lens`
 - `less`
-- `lesson`
 - `lest`
 - `liable`
 - `liberal`
@@ -1235,7 +1200,6 @@
 - `nationwide`
 - `naughty`
 - `navy`
-- `neat`
 - `necklace`
 - `needle`
 - `negate`
@@ -1270,7 +1234,6 @@
 - `obey`
 - `object¹`
 - `object²`
-- `obstacle`
 - `obtain`
 - `obvious`
 - `occupation`
@@ -1292,7 +1255,6 @@
 - `opera`
 - `opinion`
 - `opportunity`
-- `oppose`
 - `opposite`
 - `optimism`
 - `oral`
@@ -1345,14 +1307,12 @@
 - `parade`
 - `paradox`
 - `paragraph`
-- `parallel`
 - `parcel`
 - `pardon`
 - `park²`
 - `parliament`
 - `particular`
 - `partly`
-- `pass`
 - `passage`
 - `passion`
 - `passport`
@@ -1376,7 +1336,6 @@
 - `penalty`
 - `penetrate`
 - `penny`
-- `pension`
 - `pepper`
 - `perceive`
 - `perfect`
@@ -1384,7 +1343,6 @@
 - `peril`
 - `period`
 - `persevere`
-- `persuade`
 - `pessimism`
 - `petrol`
 - `petroleum`
@@ -1419,7 +1377,6 @@
 - `pledge`
 - `plenty`
 - `plow`
-- `plug`
 - `plunge`
 - `plural`
 - `podcast`
@@ -1430,7 +1387,6 @@
 - `poll`
 - `pond`
 - `pool`
-- `poor`
 - `pop`
 - `popular`
 - `population`
@@ -1475,7 +1431,6 @@
 - `prior`
 - `prison`
 - `private`
-- `privilege`
 - `prize`
 - `probable`
 - `proceed`
@@ -1574,7 +1529,6 @@
 - `release`
 - `relevant`
 - `religion`
-- `reluctant`
 - `remark`
 - `remember`
 - `remind`
@@ -1582,6 +1536,7 @@
 - `rent`
 - `repay`
 - `repeat`
+- `replace`
 - `reply`
 - `represent`
 - `reproduce`
@@ -1596,10 +1551,8 @@
 - `rest²`
 - `restrain`
 - `restrict`
-- `result`
 - `resume`
 - `résumé`
-- `retain`
 - `retell`
 - `retreat`
 - `return`
@@ -1646,6 +1599,7 @@
 - `salesman`
 - `sauce`
 - `sausage`
+- `say`
 - `scan`
 - `scandal`
 - `scar`
@@ -1662,13 +1616,13 @@
 - `scream`
 - `screw`
 - `script`
-- `search`
 - `seat`
 - `second²`
 - `secondary`
 - `second-hand`
 - `secretary`
 - `sector`
+- `see`
 - `seed`
 - `segment`
 - `seize`
@@ -1741,6 +1695,7 @@
 - `slight`
 - `slim`
 - `slogan`
+- `small`
 - `smart`
 - `smartphone`
 - `smash`
@@ -1860,16 +1815,13 @@
 - `subject²`
 - `subjective`
 - `submit`
-- `subsequent`
 - `substance`
 - `substitute`
 - `subtract`
 - `suck`
 - `suggest`
-- `suit¹`
 - `suit²`
 - `suitcase`
-- `sum`
 - `summit`
 - `sunrise`
 - `sunset`
@@ -1904,20 +1856,17 @@
 - `sword`
 - `symbol`
 - `sympathy`
-- `tablet`
 - `tag`
 - `tail`
 - `tailor`
 - `takeoff`
 - `tale`
-- `tall`
 - `tame`
 - `tangible`
 - `tank`
 - `tap`
 - `tape`
 - `taste`
-- `teach`
 - `tear¹`
 - `tear²`
 - `technique`
@@ -1993,7 +1942,6 @@
 - `triangle`
 - `trifle`
 - `triple`
-- `triumph`
 - `trolley`
 - `troop`
 - `trouble`
@@ -2006,7 +1954,6 @@
 - `tune`
 - `tunnel`
 - `turkey`
-- `tutor`
 - `twin`
 - `twist`
 - `typewriter`
@@ -2020,7 +1967,6 @@
 - `underground`
 - `underline`
 - `underneath`
-- `undertake`
 - `underwear`
 - `undo`
 - `undoubtedly`
@@ -2028,7 +1974,6 @@
 - `uniform`
 - `union`
 - `unit`
-- `upgrade`
 - `upload`
 - `upright`
 - `upset`
@@ -2078,7 +2023,6 @@
 - `volcano`
 - `volleyball`
 - `volt`
-- `volume`
 - `wagon`
 - `waist`
 - `wake`
@@ -2087,13 +2031,11 @@
 - `ward`
 - `warfare`
 - `warrior`
-- `wary`
 - `wash`
 - `waterproof`
 - `watertight`
 - `wax`
 - `weak`
-- `wealth`
 - `weapon`
 - `wear`
 - `webcast`
@@ -2118,7 +2060,6 @@
 - `willpower`
 - `wing`
 - `wipe`
-- `wire`
 - `wish`
 - `wit`
 - `withdraw`
@@ -2132,7 +2073,6 @@
 - `worship`
 - `worst`
 - `worth`
-- `worthwhile`
 - `worthy`
 - `wound`
 - `wrap`
