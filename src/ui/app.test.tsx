@@ -881,7 +881,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(downloadedFilename).toMatch(/\.png$/);
   });
 
-  it('按当前个性化状态将完整短文库批量导出为ZIP中的22张高清PNG，且不切换当前短文', async () => {
+  it('按当前个性化状态将完整短文库批量导出为ZIP中的24张高清PNG，且不切换当前短文', async () => {
     const user = userEvent.setup();
     vi.mocked(toBlob).mockResolvedValue(
       new Blob(['png'], { type: 'image/png' })
@@ -918,18 +918,18 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
     expect(
       await screen.findByText(
-        '22 篇高清 PNG 图片已打包下载。',
+        '24 篇高清 PNG 图片已打包下载。',
         {},
         { timeout: 10_000 }
       )
     ).toBeInTheDocument();
-    expect(loadPassage).toHaveBeenCalledTimes(21);
-    expect(toBlob).toHaveBeenCalledTimes(22);
+    expect(loadPassage).toHaveBeenCalledTimes(23);
+    expect(toBlob).toHaveBeenCalledTimes(24);
     expect(zipSync).toHaveBeenCalledOnce();
     const archiveFiles = vi.mocked(zipSync).mock.calls[0][0];
-    expect(Object.keys(archiveFiles)).toHaveLength(22);
+    expect(Object.keys(archiveFiles)).toHaveLength(24);
     expect(Object.keys(archiveFiles)[0]).toContain('NO. 01');
-    expect(Object.keys(archiveFiles)[21]).toContain('NO. 22');
+    expect(Object.keys(archiveFiles)[23]).toContain('NO. 24');
     expect(vi.mocked(zipSync).mock.calls[0][1]).toEqual({ level: 0 });
     expect(downloadedBlob?.type).toBe('application/zip');
     expect(downloadedFilename).toBe('passages.zip');
@@ -990,7 +990,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
   });
 
-  it('短文库（共 22 篇）可通过界面目录完整浏览与切换精读', async () => {
+  it('短文库（共 24 篇）可通过界面目录完整浏览与切换精读', async () => {
     const user = userEvent.setup();
     render(<App passages={COMPILED_PASSAGES} />);
 

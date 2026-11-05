@@ -2697,8 +2697,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it('PASSAGES 统一收录全部 22 篇短文，ID 与编号连续且唯一', () => {
-    expect(PASSAGES).toHaveLength(22);
+  it('PASSAGES 统一收录全部 24 篇短文，ID 与编号连续且唯一', () => {
+    expect(PASSAGES).toHaveLength(24);
     PASSAGES.forEach((passage, idx) => {
       const expectedId = `passage-${String(idx + 1).padStart(3, '0')}`;
       const expectedLabel = `NO. ${String(idx + 1).padStart(2, '0')}`;
