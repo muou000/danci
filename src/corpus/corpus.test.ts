@@ -2660,6 +2660,103 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('CET-4 核心篇 NO. 23 满足主题自然度、词量及行间标注校验规范，且大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 23');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe('Getting Home After the Night Shift');
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(70);
+
+    for (const id of coveredHeadwordIdsIn(compiled)) {
+      const entry = catalog.byId.get(id);
+      expect(entry?.level).not.toBe('cet6');
+    }
+
+    // 验证包含 Issue #33 初始规划核心目标词
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('traffic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('railway');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('subway');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('fare');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('district');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('afford');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wage');
+
+    // 验证大幅拓展纳入的高契合未覆盖词目
+    expect(coveredHeadwordIdsIn(compiled)).toContain('outskirts');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('avenue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('carriage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('halt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('coach');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('destination');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('toll');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pinch');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wallet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('suburb');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('struggle');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shuttle');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('corridor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('solve');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('fleet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('seldom');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('weigh');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('feasible');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('integrate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('indispensable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('remedy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('livelihood');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('outcome');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'industry'],
+      [0, 1, 'main'],
+      [0, 2, 'punctual'],
+      [1, 0, 'modest'],
+      [1, 0, 'cab'],
+      [1, 0, 'sharp'],
+      [1, 1, 'cheap'],
+      [1, 2, 'transit'],
+      [2, 0, 'common'],
+      [2, 1, 'pilot'],
+      [3, 0, 'operate'],
+      [3, 0, 'feasible'],
+      [3, 1, 'indispensable'],
+      [3, 2, 'significant'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);

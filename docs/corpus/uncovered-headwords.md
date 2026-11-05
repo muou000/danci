@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1274/4692 个非免注核心大纲词目（27.2%），尚有 3418 个待覆盖。
+当前覆盖 1312/4692 个非免注核心大纲词目（28.0%），尚有 3380 个待覆盖。
 
-## 四级词目（2180）
+## 四级词目（2142）
 
 - `able`
 - `abolish`
@@ -49,7 +49,6 @@
 - `ally`
 - `aloud`
 - `alphabet`
-- `alternative`
 - `altogether`
 - `aluminum`
 - `amateur`
@@ -93,7 +92,6 @@
 - `arithmetic`
 - `army`
 - `arouse`
-- `arrange`
 - `arrest`
 - `arrow`
 - `art`
@@ -117,7 +115,6 @@
 - `attribute`
 - `author`
 - `automobile`
-- `avenue`
 - `await`
 - `awake`
 - `award`
@@ -278,7 +275,6 @@
 - `butcher`
 - `button`
 - `bystander`
-- `cab`
 - `cabbage`
 - `cabinet`
 - `cafe`
@@ -296,7 +292,6 @@
 - `candle`
 - `cane`
 - `carpet`
-- `carriage`
 - `cartoon`
 - `cashier`
 - `cast`
@@ -311,7 +306,6 @@
 - `champagne`
 - `chaos`
 - `charity`
-- `cheap`
 - `cheat`
 - `check²`
 - `cheek`
@@ -346,7 +340,6 @@
 - `clown`
 - `club`
 - `clumsy`
-- `coach`
 - `coarse`
 - `cock`
 - `code`
@@ -383,7 +376,6 @@
 - `cord`
 - `corn`
 - `corps`
-- `corridor`
 - `cosmos`
 - `costume`
 - `cottage`
@@ -433,7 +425,6 @@
 - `darling`
 - `dash`
 - `date²`
-- `dawn`
 - `daylight`
 - `dead`
 - `deadly`
@@ -472,7 +463,6 @@
 - `despair`
 - `despatch`
 - `dessert`
-- `destination`
 - `devil`
 - `dew`
 - `diabetes`
@@ -580,7 +570,6 @@
 - `encounter`
 - `endanger`
 - `enemy`
-- `enhance`
 - `enlarge`
 - `enormous`
 - `enquire`
@@ -657,7 +646,6 @@
 - `fate`
 - `fax`
 - `fear`
-- `feasible`
 - `feather`
 - `federal`
 - `federation`
@@ -693,7 +681,6 @@
 - `flat²`
 - `flavor`
 - `flee`
-- `fleet`
 - `flesh`
 - `flexible`
 - `flock`
@@ -825,7 +812,6 @@
 - `hail¹`
 - `hail²`
 - `halfway`
-- `halt`
 - `ham`
 - `hammer`
 - `handbook`
@@ -871,7 +857,6 @@
 - `hi`
 - `highlight`
 - `high-tech`
-- `highway`
 - `hijack`
 - `hinder`
 - `hint`
@@ -946,7 +931,6 @@
 - `indeed`
 - `index`
 - `indifferent`
-- `indispensable`
 - `indoor`
 - `induce`
 - `inevitable`
@@ -981,7 +965,6 @@
 - `intact`
 - `intake`
 - `intangible`
-- `integrate`
 - `intend`
 - `interest`
 - `interfere`
@@ -1111,7 +1094,6 @@
 - `literary`
 - `litter`
 - `live²`
-- `livelihood`
 - `lively`
 - `liver`
 - `loaf`
@@ -1221,7 +1203,6 @@
 - `mix`
 - `mode`
 - `moderate`
-- `modest`
 - `moist`
 - `mold`
 - `monster`
@@ -1318,7 +1299,6 @@
 - `orchestra`
 - `ore`
 - `organ`
-- `organize`
 - `orient¹`
 - `orient²`
 - `ornament`
@@ -1327,7 +1307,6 @@
 - `oughtto`
 - `ounce`
 - `outbreak`
-- `outcome`
 - `outdated`
 - `outgoing`
 - `outing`
@@ -1335,7 +1314,6 @@
 - `outlook`
 - `output`
 - `outset`
-- `outskirts`
 - `outward`
 - `oval`
 - `overcoat`
@@ -1424,9 +1402,7 @@
 - `pile`
 - `pill`
 - `pillow`
-- `pilot`
 - `pin`
-- `pinch`
 - `pine`
 - `pint`
 - `pipe`
@@ -1530,7 +1506,6 @@
 - `pulse`
 - `pump`
 - `punch`
-- `punctual`
 - `punish`
 - `purchase`
 - `purpose`
@@ -1601,7 +1576,6 @@
 - `religion`
 - `reluctant`
 - `remark`
-- `remedy`
 - `remember`
 - `remind`
 - `render`
@@ -1679,7 +1653,6 @@
 - `scare`
 - `scatter`
 - `scent`
-- `scheme`
 - `scissors`
 - `scold`
 - `scope`
@@ -1699,7 +1672,6 @@
 - `seed`
 - `segment`
 - `seize`
-- `seldom`
 - `select`
 - `sell`
 - `semester`
@@ -1735,7 +1707,6 @@
 - `shrink`
 - `shrug`
 - `shut`
-- `shuttle`
 - `shy`
 - `sideways`
 - `siege`
@@ -1743,7 +1714,6 @@
 - `sight`
 - `sightseeing`
 - `signal`
-- `significant`
 - `silent`
 - `silicon`
 - `silk`
@@ -1764,7 +1734,6 @@
 - `skyscraper`
 - `slap`
 - `slave`
-- `sleep`
 - `sleeve`
 - `slender`
 - `slice`
@@ -1788,7 +1757,6 @@
 - `sociology`
 - `soda`
 - `solemn`
-- `solve`
 - `somehow`
 - `sometime`
 - `somewhat`
@@ -1885,7 +1853,6 @@
 - `stripe`
 - `stroke¹`
 - `stroke²`
-- `struggle`
 - `stuff`
 - `stupid`
 - `style`
@@ -1897,7 +1864,6 @@
 - `substance`
 - `substitute`
 - `subtract`
-- `suburb`
 - `suck`
 - `suggest`
 - `suit¹`
@@ -2000,7 +1966,6 @@
 - `toilet`
 - `token`
 - `tolerate`
-- `toll`
 - `ton`
 - `tone`
 - `topic`
@@ -2027,7 +1992,6 @@
 - `trend`
 - `triangle`
 - `trifle`
-- `trip`
 - `triple`
 - `triumph`
 - `trolley`
@@ -2118,7 +2082,6 @@
 - `wagon`
 - `waist`
 - `wake`
-- `wallet`
 - `wander`
 - `war`
 - `ward`
@@ -2136,7 +2099,6 @@
 - `webcast`
 - `wed`
 - `weep`
-- `weigh`
 - `weird`
 - `well²`
 - `well-known`
