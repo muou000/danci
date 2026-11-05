@@ -189,6 +189,37 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(loadAllPassages).toHaveBeenCalledTimes(1);
   });
 
+  it('翻页加载期间禁用下一篇，并在语料加载完成后恢复', async () => {
+    const user = userEvent.setup();
+    const fullCorpus = COMPILED_PASSAGES;
+    let resolveLoad: (passages: CompiledPassage[]) => void = () => undefined;
+    const loadAllPassages = vi.fn(
+      () =>
+        new Promise<CompiledPassage[]>((resolve) => {
+          resolveLoad = resolve;
+        })
+    );
+    render(
+      <App
+        passages={[fullCorpus[0]]}
+        loadAllPassages={loadAllPassages}
+      />
+    );
+
+    const nextButton = screen.getByRole('button', { name: '下一篇短文' });
+    await user.click(nextButton);
+    expect(nextButton).toBeDisabled();
+
+    await act(async () => {
+      resolveLoad(fullCorpus);
+    });
+
+    expect(
+      await screen.findByRole('heading', { name: fullCorpus[1].titleZh })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '下一篇短文' })).toBeEnabled();
+  });
+
   it('首屏绘制后在空闲时静默预加载完整语料', async () => {
     vi.useFakeTimers();
     vi.stubGlobal('requestIdleCallback', undefined);

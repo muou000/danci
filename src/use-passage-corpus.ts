@@ -54,7 +54,7 @@ export function usePassageCorpus(
         throw error;
       })
       .finally(() => {
-        if (foregroundRequested.current) setIsLoading(false);
+        setIsLoading(false);
         foregroundRequested.current = false;
       });
     loadPromise.current = pendingLoad;
