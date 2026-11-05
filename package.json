@@ -4,13 +4,14 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "generate:corpus": "tsx scripts/compile-corpus.ts",
+    "dev": "npm run generate:corpus && vite",
+    "build": "npm run generate:corpus && tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "extract:syllabus": "tsx scripts/extract-syllabus.ts"
+    "typecheck": "npm run generate:corpus && tsc --noEmit",
+    "test": "npm run generate:corpus && vitest run",
+    "test:watch": "npm run generate:corpus && vitest",
+    "extract:syllabus": "tsx scripts/extract-syllabus.ts && npm run generate:corpus"
   },
   "dependencies": {
     "fflate": "^0.8.3",

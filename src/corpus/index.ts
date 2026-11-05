@@ -7,9 +7,7 @@ import { DEMO_PASSAGES } from './demo-passages';
 import { toCircledNumber } from './formatting';
 
 export { DEMO_PASSAGES };
-export { COMPILED_DEMO_PASSAGES } from './compiled-demos';
 export { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
-export { COMPILED_CET4_BATCH_1_PASSAGES } from './compiled-batch-1';
 export { PASSAGE_TIER_LABELS } from './labels';
 export { toCircledNumber } from './formatting';
 

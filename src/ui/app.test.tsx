@@ -5,10 +5,11 @@ import { toBlob } from 'html-to-image';
 import { zipSync } from 'fflate';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
-import { COMPILED_DEMO_PASSAGES } from '../corpus/compiled-demos';
+import { compilePassage, DEMO_PASSAGES } from '../corpus';
 import { COMPILED_CET4_BATCH_1_PASSAGES } from '../corpus/compiled-batch-1';
 import type { CompiledPassage } from '../corpus';
 import type { PassageSearchResult } from '../passage-library';
+import { getDefaultSyllabusCatalog } from '../syllabus';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
@@ -17,6 +18,14 @@ vi.mock('html-to-image', () => ({
 vi.mock('fflate', () => ({
   zipSync: vi.fn(() => new Uint8Array([80, 75, 3, 4])),
 }));
+
+const COMPILED_DEMO_PASSAGES = DEMO_PASSAGES.map((passage) =>
+  compilePassage(passage, getDefaultSyllabusCatalog())
+);
+
+function renderWithDemoPassages() {
+  return render(<App passages={COMPILED_DEMO_PASSAGES} />);
+}
 
 function getAnnotationKeys(
   sentences: CompiledPassage['paragraphs'][number]['sentences']
@@ -60,7 +69,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('全局查词可按中文行间释义检索并打开结果短文', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.type(
       screen.getByRole('searchbox', { name: '全局查词' }),
@@ -114,7 +123,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('短文目录展示待背进度与已读状态，并可按难度筛选后打开短文', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.click(screen.getByRole('button', { name: 'transformed' }));
     await user.click(screen.getByRole('button', { name: '短文目录' }));
@@ -191,7 +200,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
   });
 
   it('默认展示首篇四级核心篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
-    render(<App />);
+    renderWithDemoPassages();
 
     const legend = screen.getByRole('region', { name: '标注图例' });
     expect(within(legend).getByText('单词')).toBeInTheDocument();
@@ -250,7 +259,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('支持切换至六级进阶篇示例短文：按需动态显示超纲词图例与标注，切回四级核心篇时自动隐藏，且不包含译文遮挡或语音播放按钮', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
@@ -295,7 +304,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('点击行间标注后移除释义并保留虚线框状态', async () => {
     const user = userEvent.setup();
-    const view = render(<App />);
+    const view = renderWithDemoPassages();
     const transformedButton = screen.getByRole('button', { name: 'transformed' });
 
     expect(transformedButton).toHaveAttribute('aria-pressed', 'false');
@@ -310,7 +319,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(screen.queryByText('v.改变；使改观；转化')).not.toBeInTheDocument();
 
     view.unmount();
-    render(<App />);
+    renderWithDemoPassages();
 
     expect(screen.getByRole('button', { name: 'transformed' })).toHaveAttribute(
       'aria-pressed',
@@ -432,7 +441,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('逐词掌握状态改变后立即关闭批量撤销入口', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.click(screen.getByRole('button', { name: '标熟整篇短文' }));
     expect(
@@ -448,7 +457,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('批量撤销入口在十秒后过期', () => {
     vi.useFakeTimers();
-    render(<App />);
+    renderWithDemoPassages();
 
     fireEvent.click(screen.getByRole('button', { name: '标熟整篇短文' }));
     expect(
@@ -466,7 +475,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('隐藏拓展条目后连续重排编号并在重新进入短文后保持隐藏', async () => {
     const user = userEvent.setup();
-    const view = render(<App />);
+    const view = renderWithDemoPassages();
     const aside = screen.getByRole('complementary', {
       name: '熟词僻义及拓展汇总',
     });
@@ -486,7 +495,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
 
     view.unmount();
-    render(<App />);
+    renderWithDemoPassages();
 
     expect(screen.queryByText('consume/exhaust/deplete')).not.toBeInTheDocument();
     expect(
@@ -496,7 +505,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('已掌握词库支持关键词检索和批量恢复标注', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.click(screen.getByRole('button', { name: 'transformed' }));
     await user.click(screen.getByRole('button', { name: 'rapid' }));
@@ -529,7 +538,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('同一大纲词目的不同短文词形同步掌握和恢复', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
 
     await user.click(screen.getByRole('button', { name: 'individual' }));
     await user.click(screen.getByRole('button', { name: '下一篇短文' }));
@@ -595,7 +604,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('全部超纲词掌握后隐藏图例，恢复一个后重新显示', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
     await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     const legend = screen.getByRole('region', { name: '标注图例' });
@@ -616,7 +625,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
   it('导入并导出本地学习状态，全部隐藏的拓展条目仍可恢复', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderWithDemoPassages();
     await user.click(screen.getByRole('button', { name: '已掌握词库' }));
 
     const backup = {
@@ -729,7 +738,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         downloadedFilename = this.download;
       });
 
-    render(<App />);
+    renderWithDemoPassages();
     await user.click(screen.getByRole('button', { name: 'transformed' }));
     const expansionAside = screen.getByRole('complementary', {
       name: '熟词僻义及拓展汇总',
@@ -853,7 +862,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       () => undefined
     );
 
-    render(<App />);
+    renderWithDemoPassages();
     await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
     for (const surface of [

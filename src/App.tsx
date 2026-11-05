@@ -3,7 +3,7 @@ import { flushSync } from 'react-dom';
 import { zipSync } from 'fflate';
 import type { CompiledPassage } from './corpus';
 import { PASSAGE_TIER_LABELS } from './corpus/labels';
-import { COMPILED_DEMO_PASSAGES } from './corpus/compiled-demos';
+import { COMPILED_CET4_BATCH_1_FIRST_PASSAGE } from './corpus/compiled-initial';
 import {
   GlobalPassageSearch,
   PassageDirectory,
@@ -103,7 +103,7 @@ function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[
 }
 
 export function App({
-  passages: initialPassages = COMPILED_DEMO_PASSAGES,
+  passages: initialPassages = [COMPILED_CET4_BATCH_1_FIRST_PASSAGE],
   loadAllPassages,
 }: AppProps) {
   const {
