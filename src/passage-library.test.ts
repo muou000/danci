@@ -47,8 +47,6 @@ function passage(
       },
     ],
     expansionEntries: [],
-    coveredHeadwordIds: [],
-    hasOutOfSyllabusWords: false,
   };
 }
 

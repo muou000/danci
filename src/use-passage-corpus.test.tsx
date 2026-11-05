@@ -15,8 +15,6 @@ const passage = (id: string): CompiledPassage => ({
   titleEn: id,
   paragraphs: [],
   expansionEntries: [],
-  coveredHeadwordIds: [],
-  hasOutOfSyllabusWords: false,
 });
 
 function repositoryFor(

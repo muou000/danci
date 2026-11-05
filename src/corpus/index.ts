@@ -5,7 +5,7 @@ import {
 } from '../syllabus';
 import { toCircledNumber } from './formatting';
 
-export { PASSAGES, ALL_PASSAGES } from './passages';
+export { PASSAGES } from './passages';
 export { toCircledNumber } from './formatting';
 export { summarizePassage, type PassageCatalogEntry } from './catalog';
 
@@ -109,8 +109,6 @@ export interface CompiledPassage {
   titleEn: string;
   paragraphs: CompiledParagraph[];
   expansionEntries: ExpansionEntry[];
-  coveredHeadwordIds: string[];
-  hasOutOfSyllabusWords: boolean;
 }
 
 function escapeRegex(s: string): string {
@@ -282,8 +280,6 @@ export function compilePassage(
   catalog: SyllabusCatalog = getDefaultSyllabusCatalog()
 ): CompiledPassage {
   const seenKeys = new Set<string>();
-  const coveredHeadwordSet = new Set<string>();
-  let hasOutOfSyllabusWords = false;
 
   const wordByHeadwordId = new Map<string, WordAnnotationSpec>();
   const wordBySurfaceLower = new Map<string, WordAnnotationSpec>();
@@ -379,7 +375,6 @@ export function compilePassage(
               catEntry?.tier === 'high-frequency'
                 ? 'high-frequency'
                 : 'regular';
-            coveredHeadwordSet.add(matchedSpec.headwordId);
             tokens.push({
               type: 'annotation',
               category,
@@ -389,7 +384,6 @@ export function compilePassage(
               headwordId: matchedSpec.headwordId,
             });
           } else {
-            hasOutOfSyllabusWords = true;
             tokens.push({
               type: 'annotation',
               category: 'out-of-syllabus',
@@ -471,7 +465,6 @@ export function compilePassage(
                   catEntry?.tier === 'high-frequency'
                     ? 'high-frequency'
                     : 'regular';
-                coveredHeadwordSet.add(sm.wordSpec.headwordId);
                 tokens.push({
                   type: 'annotation',
                   category,
@@ -481,7 +474,6 @@ export function compilePassage(
                   headwordId: sm.wordSpec.headwordId,
                 });
               } else {
-                hasOutOfSyllabusWords = true;
                 tokens.push({
                   type: 'annotation',
                   category: 'out-of-syllabus',
@@ -526,8 +518,6 @@ export function compilePassage(
     titleEn: passage.titleEn,
     paragraphs: compiledParagraphs,
     expansionEntries: passage.expansionEntries,
-    coveredHeadwordIds: Array.from(coveredHeadwordSet),
-    hasOutOfSyllabusWords,
   };
 }
 
@@ -550,9 +540,17 @@ export function computeCorpusCoverage(
 
   for (const passage of passages) {
     const compiled = compilePassage(passage, catalog);
-    for (const id of compiled.coveredHeadwordIds) {
-      if (coreSet.has(id)) {
-        coveredCoreIds.add(id);
+    for (const paragraph of compiled.paragraphs) {
+      for (const sentence of paragraph.sentences) {
+        for (const token of sentence.tokens) {
+          if (
+            token.type === 'annotation' &&
+            token.headwordId &&
+            coreSet.has(token.headwordId)
+          ) {
+            coveredCoreIds.add(token.headwordId);
+          }
+        }
       }
     }
   }

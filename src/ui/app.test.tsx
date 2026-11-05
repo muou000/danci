@@ -5,8 +5,12 @@ import { toBlob } from 'html-to-image';
 import { zipSync } from 'fflate';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
-import { COMPILED_PASSAGES } from '../corpus/compiled-passages';
-import { summarizePassage, type CompiledPassage } from '../corpus';
+import {
+  compilePassage,
+  PASSAGES,
+  summarizePassage,
+  type CompiledPassage,
+} from '../corpus';
 import type { PassageSearchResult } from '../passage-library';
 import { buildPassageSearchIndex } from '../passage-library';
 import type { PassageContentRepository } from '../use-passage-corpus';
@@ -19,6 +23,7 @@ vi.mock('fflate', () => ({
   zipSync: vi.fn(() => new Uint8Array([80, 75, 3, 4])),
 }));
 
+const COMPILED_PASSAGES = PASSAGES.map((passage) => compilePassage(passage));
 const COMPILED_DEMO_PASSAGES = COMPILED_PASSAGES.slice(20, 22);
 
 function renderWithDemoPassages() {

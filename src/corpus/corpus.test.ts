@@ -4,12 +4,42 @@ import {
   compilePassage,
   computeCorpusCoverage,
   validatePassage,
+  type CompiledPassage,
   type ExpansionEntry,
+  type InlineAnnotationToken,
   type Passage,
 } from './index';
 import { PASSAGES } from './passages';
 
 const catalog = getDefaultSyllabusCatalog();
+
+function annotationTokensIn(passage: CompiledPassage): InlineAnnotationToken[] {
+  const tokens: InlineAnnotationToken[] = [];
+  for (const paragraph of passage.paragraphs) {
+    for (const sentence of paragraph.sentences) {
+      for (const token of sentence.tokens) {
+        if (token.type === 'annotation') tokens.push(token);
+      }
+    }
+  }
+  return tokens;
+}
+
+function coveredHeadwordIdsIn(passage: CompiledPassage): string[] {
+  return Array.from(
+    new Set(
+      annotationTokensIn(passage).flatMap((token) =>
+        token.headwordId ? [token.headwordId] : []
+      )
+    )
+  );
+}
+
+function hasOutOfSyllabusWordsIn(passage: CompiledPassage): boolean {
+  return annotationTokensIn(passage).some(
+    (token) => token.category === 'out-of-syllabus'
+  );
+}
 
 describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('同一篇短文内同一目标词或短语（含屈折变形）仅在首次出现处生成行间标注，跨不同短文首次出现时重新标注', () => {
@@ -66,6 +96,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     };
 
     const compiledA = compilePassage(passageA, catalog);
+    expect(compiledA).not.toHaveProperty('coveredHeadwordIds');
+    expect(compiledA).not.toHaveProperty('hasOutOfSyllabusWords');
     const tokensA = compiledA.paragraphs[0].sentences[0].tokens;
     const annotatedA = tokensA.filter((t) => t.type === 'annotation');
 
@@ -144,8 +176,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     ]);
 
     // lead¹ 仅包裹在黄色短语内，不得计入考纲词目覆盖率
-    expect(compiledWrapped.coveredHeadwordIds).not.toContain('lead¹');
-    expect(compiledWrapped.coveredHeadwordIds).toEqual(
+    expect(coveredHeadwordIdsIn(compiledWrapped)).not.toContain('lead¹');
+    expect(coveredHeadwordIdsIn(compiledWrapped)).toEqual(
       expect.arrayContaining(['stress', 'anxious', 'fatigue'])
     );
 
@@ -221,8 +253,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage, catalog);
-    expect(compiled.coveredHeadwordIds).toContain('according to');
-    expect(compiled.coveredHeadwordIds).toContain('baby boom');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('according to');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('baby boom');
 
     const tokens = compiled.paragraphs[0].sentences[0].tokens;
     const accordingToken = tokens.find(
@@ -363,12 +395,12 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
 
     const compiledCet4 = compilePassage(cet4Demo!, catalog);
-    expect(compiledCet4.hasOutOfSyllabusWords).toBe(false);
-    expect(compiledCet4.coveredHeadwordIds.length).toBeGreaterThanOrEqual(20);
+    expect(hasOutOfSyllabusWordsIn(compiledCet4)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiledCet4).length).toBeGreaterThanOrEqual(20);
 
     const compiledCet6 = compilePassage(cet6Demo!, catalog);
-    expect(compiledCet6.hasOutOfSyllabusWords).toBe(true);
-    const coveredCet6Stars = compiledCet6.coveredHeadwordIds.filter(
+    expect(hasOutOfSyllabusWordsIn(compiledCet6)).toBe(true);
+    const coveredCet6Stars = coveredHeadwordIdsIn(compiledCet6).filter(
       (id) => catalog.byId.get(id)?.level === 'cet6'
     );
     expect(coveredCet6Stars.length).toBeGreaterThanOrEqual(12);
@@ -402,21 +434,21 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('ache');
-    expect(compiled.coveredHeadwordIds).not.toContain('acid');
-    expect(compiled.coveredHeadwordIds).not.toContain('ace');
-    expect(compiled.coveredHeadwordIds).not.toContain('acre');
-    expect(compiled.coveredHeadwordIds).not.toContain('abolish');
-    expect(compiled.coveredHeadwordIds).not.toContain('accuse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ache');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('acid');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ace');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('acre');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('abolish');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('accuse');
 
     // 验证场景逻辑、地道选词及语法搭配改进
     expect(passage!.paragraphs[1].sentences[0].english).toContain(
@@ -484,19 +516,19 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('adjective');
-    expect(compiled.coveredHeadwordIds).not.toContain('adverb');
-    expect(compiled.coveredHeadwordIds).not.toContain('album');
-    expect(compiled.coveredHeadwordIds).not.toContain('agriculture');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('adjective');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('adverb');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('album');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('agriculture');
 
     // 验证修正地道搭配与拓展条目疏漏
     expect(passage!.paragraphs[0].sentences[1].english).toContain('great comfort');
@@ -541,20 +573,20 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('algebra');
-    expect(compiled.coveredHeadwordIds).not.toContain('ambulance');
-    expect(compiled.coveredHeadwordIds).not.toContain('angel');
-    expect(compiled.coveredHeadwordIds).not.toContain('ant');
-    expect(compiled.coveredHeadwordIds).not.toContain('ambassador');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('algebra');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ambulance');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('angel');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ant');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ambassador');
 
     // 验证常识因果逻辑修正与熟词僻义/同义替换拓展质量
     expect(passage!.paragraphs[0].sentences[1].english).toContain(
@@ -563,9 +595,9 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(passage!.paragraphs[0].sentences[1].english).toContain(
       'drained their strength'
     );
-    expect(compiled.coveredHeadwordIds).toContain('thin');
-    expect(compiled.coveredHeadwordIds).toContain('drain');
-    expect(compiled.coveredHeadwordIds).toContain('strong');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('thin');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('drain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('strong');
     expect(passage!.expansionEntries.map((e) => e.expression)).not.toContain(
       'soil layer'
     );
@@ -606,21 +638,21 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词及修饰不当词
-    expect(compiled.coveredHeadwordIds).not.toContain('arithmetic');
-    expect(compiled.coveredHeadwordIds).not.toContain('apparatus');
-    expect(compiled.coveredHeadwordIds).not.toContain('antique');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('arithmetic');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('apparatus');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('antique');
 
     // 验证地道修饰与核心词覆盖
-    expect(compiled.coveredHeadwordIds).toContain('classic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('classic');
     const p1s2Historic = compiled.paragraphs[0].sentences[1].tokens.find(
       (t) => t.type === 'annotation' && t.headwordId === 'history'
     );
@@ -657,34 +689,34 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词与不地道词汇
-    expect(compiled.coveredHeadwordIds).not.toContain('ass');
-    expect(compiled.coveredHeadwordIds).not.toContain('attic');
-    expect(compiled.coveredHeadwordIds).not.toContain('avenue');
-    expect(compiled.coveredHeadwordIds).not.toContain('automobile');
-    expect(compiled.coveredHeadwordIds).not.toContain('athlete');
-    expect(compiled.coveredHeadwordIds).not.toContain('attorney');
-    expect(compiled.coveredHeadwordIds).not.toContain('asleep');
-    expect(compiled.coveredHeadwordIds).not.toContain('ashore');
-    expect(compiled.coveredHeadwordIds).not.toContain('attack');
-    expect(compiled.coveredHeadwordIds).not.toContain('assume');
-    expect(compiled.coveredHeadwordIds).not.toContain('attain');
-    expect(compiled.coveredHeadwordIds).not.toContain('authority');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ass');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('attic');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('avenue');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('automobile');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('athlete');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('attorney');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('asleep');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ashore');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('attack');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('assume');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('attain');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('authority');
 
     // 验证核心目标词自然覆盖与语境词性匹配
-    expect(compiled.coveredHeadwordIds).toContain('orbit');
-    expect(compiled.coveredHeadwordIds).toContain('impact');
-    expect(compiled.coveredHeadwordIds).toContain('agent');
-    expect(compiled.coveredHeadwordIds).toContain('expect');
-    expect(compiled.coveredHeadwordIds).toContain('yield');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('orbit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('impact');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('agent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('expect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('yield');
     const p1s1Astro = compiled.paragraphs[0].sentences[0].tokens.find(
       (t) => t.type === 'annotation' && t.headwordId === 'astronomy'
     );
@@ -722,44 +754,44 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词与荒诞搭配
-    expect(compiled.coveredHeadwordIds).not.toContain('baby boom');
-    expect(compiled.coveredHeadwordIds).not.toContain('bacon');
-    expect(compiled.coveredHeadwordIds).not.toContain('bake');
-    expect(compiled.coveredHeadwordIds).not.toContain('bacteria');
-    expect(compiled.coveredHeadwordIds).not.toContain('badminton');
-    expect(compiled.coveredHeadwordIds).not.toContain('balloon');
-    expect(compiled.coveredHeadwordIds).not.toContain('bamboo');
-    expect(compiled.coveredHeadwordIds).not.toContain('fence');
-    expect(compiled.coveredHeadwordIds).not.toContain('bang');
-    expect(compiled.coveredHeadwordIds).not.toContain('baggage');
-    expect(compiled.coveredHeadwordIds).not.toContain('badge');
-    expect(compiled.coveredHeadwordIds).not.toContain('ballet');
-    expect(compiled.coveredHeadwordIds).not.toContain('balcony');
-    expect(compiled.coveredHeadwordIds).not.toContain('axe');
-    expect(compiled.coveredHeadwordIds).not.toContain('timber');
-    expect(compiled.coveredHeadwordIds).not.toContain('bandage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('baby boom');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bacon');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bake');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bacteria');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('badminton');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('balloon');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bamboo');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('fence');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bang');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('baggage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('badge');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ballet');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('balcony');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('axe');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('timber');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bandage');
 
     // 验证核心目标词自然覆盖与语境词性匹配
-    expect(compiled.coveredHeadwordIds).toContain('bachelor');
-    expect(compiled.coveredHeadwordIds).toContain('budget');
-    expect(compiled.coveredHeadwordIds).toContain('bait');
-    expect(compiled.coveredHeadwordIds).toContain('bankrupt');
-    expect(compiled.coveredHeadwordIds).toContain('banknote');
-    expect(compiled.coveredHeadwordIds).toContain('cushion');
-    expect(compiled.coveredHeadwordIds).toContain('withstand');
-    expect(compiled.coveredHeadwordIds).toContain('backup');
-    expect(compiled.coveredHeadwordIds).toContain('setback');
-    expect(compiled.coveredHeadwordIds).toContain('reward');
-    expect(compiled.coveredHeadwordIds).not.toContain('award');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bachelor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('budget');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bait');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bankrupt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('banknote');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cushion');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('withstand');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('backup');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('setback');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('reward');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('award');
 
     // 验证地道选词、消除语境割裂与名词强行堆叠
     expect(passage!.paragraphs[0].sentences[0].english).toContain("bachelor's degree");
@@ -806,36 +838,36 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次单一字母拼凑词与不地道搭配
-    expect(compiled.coveredHeadwordIds).not.toContain('barber');
-    expect(compiled.coveredHeadwordIds).not.toContain('beard');
-    expect(compiled.coveredHeadwordIds).not.toContain('baseball');
-    expect(compiled.coveredHeadwordIds).not.toContain('barrel');
-    expect(compiled.coveredHeadwordIds).not.toContain('beast');
-    expect(compiled.coveredHeadwordIds).not.toContain('belly');
-    expect(compiled.coveredHeadwordIds).not.toContain('bargain');
-    expect(compiled.coveredHeadwordIds).not.toContain('battalion');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('barber');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('beard');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('baseball');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('barrel');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('beast');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('belly');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bargain');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('battalion');
 
     // 验证核心目标词自然覆盖与语境词性匹配
-    expect(compiled.coveredHeadwordIds).toContain('marsh');
-    expect(compiled.coveredHeadwordIds).toContain('tide');
-    expect(compiled.coveredHeadwordIds).toContain('shelter');
-    expect(compiled.coveredHeadwordIds).toContain('migrate');
-    expect(compiled.coveredHeadwordIds).toContain('breed');
-    expect(compiled.coveredHeadwordIds).toContain('survey');
-    expect(compiled.coveredHeadwordIds).toContain('soil');
-    expect(compiled.coveredHeadwordIds).toContain('sample');
-    expect(compiled.coveredHeadwordIds).toContain('track');
-    expect(compiled.coveredHeadwordIds).toContain('thrive');
-    expect(compiled.coveredHeadwordIds).toContain('harmony');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('marsh');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tide');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shelter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('migrate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('breed');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('survey');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('soil');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sample');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('track');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('thrive');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('harmony');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s1Scenic = compiled.paragraphs[0].sentences[0].tokens.find(
@@ -884,42 +916,42 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次拼凑词及不自然词汇
-    expect(compiled.coveredHeadwordIds).not.toContain('bitch');
-    expect(compiled.coveredHeadwordIds).not.toContain('blade');
-    expect(compiled.coveredHeadwordIds).not.toContain('bleed');
-    expect(compiled.coveredHeadwordIds).not.toContain('blanket');
-    expect(compiled.coveredHeadwordIds).not.toContain('bench');
-    expect(compiled.coveredHeadwordIds).not.toContain('beverage');
-    expect(compiled.coveredHeadwordIds).not.toContain('biscuit');
-    expect(compiled.coveredHeadwordIds).not.toContain('blackboard');
-    expect(compiled.coveredHeadwordIds).not.toContain('blast');
-    expect(compiled.coveredHeadwordIds).not.toContain('bin');
-    expect(compiled.coveredHeadwordIds).not.toContain('berry');
-    expect(compiled.coveredHeadwordIds).not.toContain('Bible');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bitch');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blade');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bleed');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blanket');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bench');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('beverage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('biscuit');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blackboard');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blast');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bin');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('berry');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('Bible');
 
     // 验证核心目标词自然覆盖与语境词性匹配
-    expect(compiled.coveredHeadwordIds).toContain('biology');
-    expect(compiled.coveredHeadwordIds).toContain('biochemistry');
-    expect(compiled.coveredHeadwordIds).toContain('biotechnology');
-    expect(compiled.coveredHeadwordIds).toContain('gene');
-    expect(compiled.coveredHeadwordIds).toContain('bind');
-    expect(compiled.coveredHeadwordIds).toContain('dignity');
-    expect(compiled.coveredHeadwordIds).toContain('bias');
-    expect(compiled.coveredHeadwordIds).toContain('dilemma');
-    expect(compiled.coveredHeadwordIds).toContain('consent');
-    expect(compiled.coveredHeadwordIds).toContain('hazard');
-    expect(compiled.coveredHeadwordIds).toContain('supervise');
-    expect(compiled.coveredHeadwordIds).toContain('blend');
-    expect(compiled.coveredHeadwordIds).toContain('insight');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('biology');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('biochemistry');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('biotechnology');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('gene');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bind');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dignity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bias');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dilemma');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hazard');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('supervise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('blend');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('insight');
 
     // 验证语境词性与句法功能匹配
     const p2s2Clinical = compiled.paragraphs[1].sentences[1].tokens.find(
@@ -969,41 +1001,41 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧版拼凑词与荒诞搭配
-    expect(compiled.coveredHeadwordIds).not.toContain('bomb');
-    expect(compiled.coveredHeadwordIds).not.toContain('bowel');
-    expect(compiled.coveredHeadwordIds).not.toContain('boxing');
-    expect(compiled.coveredHeadwordIds).not.toContain('brandy');
-    expect(compiled.coveredHeadwordIds).not.toContain('blouse');
-    expect(compiled.coveredHeadwordIds).not.toContain('blond');
-    expect(compiled.coveredHeadwordIds).not.toContain('boast');
-    expect(compiled.coveredHeadwordIds).not.toContain('brag');
-    expect(compiled.coveredHeadwordIds).not.toContain('bounce');
-    expect(compiled.coveredHeadwordIds).not.toContain('bonus');
-    expect(compiled.coveredHeadwordIds).not.toContain('brake');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bomb');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bowel');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('boxing');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('brandy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blouse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('blond');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('boast');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('brag');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bounce');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bonus');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('brake');
 
     // 验证核心目标词自然覆盖与语境词性匹配
-    expect(compiled.coveredHeadwordIds).toContain('valley');
-    expect(compiled.coveredHeadwordIds).toContain('timber');
-    expect(compiled.coveredHeadwordIds).toContain('weave');
-    expect(compiled.coveredHeadwordIds).toContain('craft');
-    expect(compiled.coveredHeadwordIds).toContain('master');
-    expect(compiled.coveredHeadwordIds).toContain('dye');
-    expect(compiled.coveredHeadwordIds).toContain('brass');
-    expect(compiled.coveredHeadwordIds).toContain('bolt');
-    expect(compiled.coveredHeadwordIds).toContain('durable');
-    expect(compiled.coveredHeadwordIds).toContain('brand');
-    expect(compiled.coveredHeadwordIds).toContain('booth');
-    expect(compiled.coveredHeadwordIds).toContain('revenue');
-    expect(compiled.coveredHeadwordIds).toContain('flourish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('valley');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('timber');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('weave');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('craft');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('master');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dye');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('brass');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bolt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('durable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('brand');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('booth');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('revenue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('flourish');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s1Provincial = compiled.paragraphs[0].sentences[0].tokens.find(
@@ -1067,25 +1099,25 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('bride');
-    expect(compiled.coveredHeadwordIds).not.toContain('bridegroom');
-    expect(compiled.coveredHeadwordIds).not.toContain('broom');
-    expect(compiled.coveredHeadwordIds).not.toContain('bucket');
-    expect(compiled.coveredHeadwordIds).not.toContain('bull');
-    expect(compiled.coveredHeadwordIds).not.toContain('buffet');
-    expect(compiled.coveredHeadwordIds).not.toContain('brunch');
-    expect(compiled.coveredHeadwordIds).not.toContain('bribe');
-    expect(compiled.coveredHeadwordIds).not.toContain('brutal');
-    expect(compiled.coveredHeadwordIds).not.toContain('bulb');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bride');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bridegroom');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('broom');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bucket');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bull');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('buffet');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('brunch');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bribe');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('brutal');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bulb');
 
     // 验证创业与财务预算管理主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1104,16 +1136,16 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'transparent accounting methods'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('budget');
-    expect(compiled.coveredHeadwordIds).toContain('venture');
-    expect(compiled.coveredHeadwordIds).toContain('capital');
-    expect(compiled.coveredHeadwordIds).toContain('deficit');
-    expect(compiled.coveredHeadwordIds).toContain('bulk');
-    expect(compiled.coveredHeadwordIds).toContain('bubble');
-    expect(compiled.coveredHeadwordIds).toContain('hardware');
-    expect(compiled.coveredHeadwordIds).toContain('transparent');
-    expect(compiled.coveredHeadwordIds).toContain('sustain');
-    expect(compiled.coveredHeadwordIds).toContain('reputation');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('budget');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('venture');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('capital');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deficit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bulk');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bubble');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hardware');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('transparent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sustain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('reputation');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s1Commercial = compiled.paragraphs[0].sentences[0].tokens.find(
@@ -1162,27 +1194,27 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次单一字母拼凑词与不自然搭配
-    expect(compiled.coveredHeadwordIds).not.toContain('cabbage');
-    expect(compiled.coveredHeadwordIds).not.toContain('cabinet');
-    expect(compiled.coveredHeadwordIds).not.toContain('cab');
-    expect(compiled.coveredHeadwordIds).not.toContain('bumper');
-    expect(compiled.coveredHeadwordIds).not.toContain('bully');
-    expect(compiled.coveredHeadwordIds).not.toContain('bystander');
-    expect(compiled.coveredHeadwordIds).not.toContain('butcher');
-    expect(compiled.coveredHeadwordIds).not.toContain('calf');
-    expect(compiled.coveredHeadwordIds).not.toContain('camel');
-    expect(compiled.coveredHeadwordIds).not.toContain('cage');
-    expect(compiled.coveredHeadwordIds).not.toContain('bullet');
-    expect(compiled.coveredHeadwordIds).not.toContain('calorie');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cabbage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cabinet');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cab');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bumper');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bully');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bystander');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('butcher');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('calf');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('camel');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('bullet');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('calorie');
 
     // 验证运河生态修复与志愿行动主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1207,24 +1239,24 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'Neither harsh weather nor physical fatigue'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('canal');
-    expect(compiled.coveredHeadwordIds).toContain('restore');
-    expect(compiled.coveredHeadwordIds).toContain('channel');
-    expect(compiled.coveredHeadwordIds).toContain('mud');
-    expect(compiled.coveredHeadwordIds).toContain('steep');
-    expect(compiled.coveredHeadwordIds).toContain('task');
-    expect(compiled.coveredHeadwordIds).toContain('rubbish');
-    expect(compiled.coveredHeadwordIds).toContain('cable');
-    expect(compiled.coveredHeadwordIds).toContain('sample');
-    expect(compiled.coveredHeadwordIds).toContain('oxygen');
-    expect(compiled.coveredHeadwordIds).toContain('dissolve');
-    expect(compiled.coveredHeadwordIds).toContain('monitor');
-    expect(compiled.coveredHeadwordIds).toContain('flourish');
-    expect(compiled.coveredHeadwordIds).toContain('habitat');
-    expect(compiled.coveredHeadwordIds).toContain('butterfly');
-    expect(compiled.coveredHeadwordIds).toContain('soar');
-    expect(compiled.coveredHeadwordIds).toContain('calling');
-    expect(compiled.coveredHeadwordIds).toContain('heritage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('canal');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('restore');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('channel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('mud');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('steep');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('task');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('rubbish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sample');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('oxygen');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dissolve');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('monitor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('flourish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('habitat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('butterfly');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('soar');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('calling');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('heritage');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s2Ecological = compiled.paragraphs[0].sentences[1].tokens.find(
@@ -1272,25 +1304,25 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('carpenter');
-    expect(compiled.coveredHeadwordIds).not.toContain('ceiling');
-    expect(compiled.coveredHeadwordIds).not.toContain('castle');
-    expect(compiled.coveredHeadwordIds).not.toContain('candle');
-    expect(compiled.coveredHeadwordIds).not.toContain('cellar');
-    expect(compiled.coveredHeadwordIds).not.toContain('cartoon');
-    expect(compiled.coveredHeadwordIds).not.toContain('carriage');
-    expect(compiled.coveredHeadwordIds).not.toContain('captain');
-    expect(compiled.coveredHeadwordIds).not.toContain('cave');
-    expect(compiled.coveredHeadwordIds).not.toContain('cell');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('carpenter');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('ceiling');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('castle');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('candle');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cellar');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cartoon');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('carriage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('captain');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cave');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cell');
 
     // 验证气候适应型农业与冷链物流主题的地道选词与自然搭配（消除 cease damage、cold carriers 生造与 packing 重复）
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1321,28 +1353,28 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'agricultural career both sustainable and rewarding'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('Celsius');
-    expect(compiled.coveredHeadwordIds).toContain('caution');
-    expect(compiled.coveredHeadwordIds).toContain('carbon');
-    expect(compiled.coveredHeadwordIds).toContain('drought');
-    expect(compiled.coveredHeadwordIds).toContain('cancel');
-    expect(compiled.coveredHeadwordIds).toContain('capital');
-    expect(compiled.coveredHeadwordIds).toContain('solar');
-    expect(compiled.coveredHeadwordIds).toContain('capacity');
-    expect(compiled.coveredHeadwordIds).toContain('warehouse');
-    expect(compiled.coveredHeadwordIds).toContain('preserve');
-    expect(compiled.coveredHeadwordIds).toContain('carrot');
-    expect(compiled.coveredHeadwordIds).toContain('cardboard');
-    expect(compiled.coveredHeadwordIds).toContain('cargo');
-    expect(compiled.coveredHeadwordIds).toContain('van');
-    expect(compiled.coveredHeadwordIds).toContain('carrier');
-    expect(compiled.coveredHeadwordIds).toContain('region');
-    expect(compiled.coveredHeadwordIds).toContain('canteen');
-    expect(compiled.coveredHeadwordIds).toContain('catalog');
-    expect(compiled.coveredHeadwordIds).toContain('cater');
-    expect(compiled.coveredHeadwordIds).toContain('revenue');
-    expect(compiled.coveredHeadwordIds).toContain('career');
-    expect(compiled.coveredHeadwordIds).toContain('celebrate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('Celsius');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('caution');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('carbon');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('drought');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cancel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('capital');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('solar');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('capacity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('warehouse');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('preserve');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('carrot');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cardboard');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cargo');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('van');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('carrier');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('region');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('canteen');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('catalog');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cater');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('revenue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('career');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('celebrate');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s1Carbon = compiled.paragraphs[0].sentences[0].tokens.find(
@@ -1406,24 +1438,24 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词（消除 chalk、cereal 等拼凑）
-    expect(compiled.coveredHeadwordIds).not.toContain('chalk');
-    expect(compiled.coveredHeadwordIds).not.toContain('cereal');
-    expect(compiled.coveredHeadwordIds).not.toContain('chew');
-    expect(compiled.coveredHeadwordIds).not.toContain('chef');
-    expect(compiled.coveredHeadwordIds).not.toContain('cheap');
-    expect(compiled.coveredHeadwordIds).not.toContain('cheat');
-    expect(compiled.coveredHeadwordIds).not.toContain('cheek');
-    expect(compiled.coveredHeadwordIds).not.toContain('champagne');
-    expect(compiled.coveredHeadwordIds).not.toContain('chess');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chalk');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cereal');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chew');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chef');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cheap');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cheat');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cheek');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('champagne');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chess');
 
     // 验证工业建筑遗产更新与低碳社区活化主题的地道选词与自然搭配（消除 chaotic destruction、chalk、并列空间割裂及 cheer chapter 语病）
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1454,36 +1486,36 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'local citizens cheer the transformation and celebrate an encouraging new community chapter'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('century');
-    expect(compiled.coveredHeadwordIds).toContain('industry');
-    expect(compiled.coveredHeadwordIds).toContain('pioneer');
-    expect(compiled.coveredHeadwordIds).toContain('chimney');
-    expect(compiled.coveredHeadwordIds).toContain('cease');
-    expect(compiled.coveredHeadwordIds).toContain('collapse');
-    expect(compiled.coveredHeadwordIds).toContain('ruin');
-    expect(compiled.coveredHeadwordIds).toContain('charter');
-    expect(compiled.coveredHeadwordIds).toContain('chairperson');
-    expect(compiled.coveredHeadwordIds).toContain('charm');
-    expect(compiled.coveredHeadwordIds).toContain('character');
-    expect(compiled.coveredHeadwordIds).toContain('reinforce');
-    expect(compiled.coveredHeadwordIds).toContain('alter');
-    expect(compiled.coveredHeadwordIds).toContain('laboratory');
-    expect(compiled.coveredHeadwordIds).toContain('cement');
-    expect(compiled.coveredHeadwordIds).toContain('centigrade');
-    expect(compiled.coveredHeadwordIds).toContain('centimeter');
-    expect(compiled.coveredHeadwordIds).toContain('chart');
-    expect(compiled.coveredHeadwordIds).toContain('chemistry');
-    expect(compiled.coveredHeadwordIds).toContain('certificate');
-    expect(compiled.coveredHeadwordIds).toContain('workshop');
-    expect(compiled.coveredHeadwordIds).toContain('gallery');
-    expect(compiled.coveredHeadwordIds).toContain('channel');
-    expect(compiled.coveredHeadwordIds).toContain('cherish');
-    expect(compiled.coveredHeadwordIds).toContain('chill');
-    expect(compiled.coveredHeadwordIds).toContain('ceremony');
-    expect(compiled.coveredHeadwordIds).toContain('champion');
-    expect(compiled.coveredHeadwordIds).toContain('pride');
-    expect(compiled.coveredHeadwordIds).toContain('cheer');
-    expect(compiled.coveredHeadwordIds).toContain('chapter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('century');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('industry');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pioneer');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chimney');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cease');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collapse');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('ruin');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('charter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chairperson');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('charm');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('character');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('reinforce');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('alter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('laboratory');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cement');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('centigrade');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('centimeter');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chart');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chemistry');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('certificate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('workshop');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('gallery');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('channel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cherish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chill');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('ceremony');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('champion');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pride');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cheer');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chapter');
 
     // 验证修饰名词的形容词语境词性匹配
     const p1s1Industrial = compiled.paragraphs[0].sentences[0].tokens.find(
@@ -1563,38 +1595,38 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('cholesterol');
-    expect(compiled.coveredHeadwordIds).not.toContain('chopstick');
-    expect(compiled.coveredHeadwordIds).not.toContain('cigar');
-    expect(compiled.coveredHeadwordIds).not.toContain('cigarette');
-    expect(compiled.coveredHeadwordIds).not.toContain('choke');
-    expect(compiled.coveredHeadwordIds).not.toContain('circuit');
-    expect(compiled.coveredHeadwordIds).not.toContain('chore');
-    expect(compiled.coveredHeadwordIds).not.toContain('chin');
-    expect(compiled.coveredHeadwordIds).not.toContain('china');
-    expect(compiled.coveredHeadwordIds).not.toContain('clay');
-    expect(compiled.coveredHeadwordIds).not.toContain('circus');
-    expect(compiled.coveredHeadwordIds).not.toContain('clap');
-    expect(compiled.coveredHeadwordIds).not.toContain('claw');
-    expect(compiled.coveredHeadwordIds).not.toContain('chorus');
-    expect(compiled.coveredHeadwordIds).not.toContain('Christ');
-    expect(compiled.coveredHeadwordIds).not.toContain('climb');
-    expect(compiled.coveredHeadwordIds).not.toContain('cliff');
-    expect(compiled.coveredHeadwordIds).not.toContain('climate');
-    expect(compiled.coveredHeadwordIds).not.toContain('climax');
-    expect(compiled.coveredHeadwordIds).not.toContain('chip');
-    expect(compiled.coveredHeadwordIds).not.toContain('civilian');
-    expect(compiled.coveredHeadwordIds).not.toContain('clever');
-    expect(compiled.coveredHeadwordIds).not.toContain('absolute');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cholesterol');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chopstick');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cigar');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cigarette');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('choke');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('circuit');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chore');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chin');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('china');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clay');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('circus');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clap');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('claw');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chorus');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('Christ');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('climb');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cliff');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('climate');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('climax');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('chip');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('civilian');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clever');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('absolute');
 
     // 验证民商事合同纠纷调解与社区法律诊所便民服务主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1625,38 +1657,38 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'throughout the local community'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('clause');
-    expect(compiled.coveredHeadwordIds).toContain('clarity');
-    expect(compiled.coveredHeadwordIds).toContain('clash');
-    expect(compiled.coveredHeadwordIds).toContain('claim');
-    expect(compiled.coveredHeadwordIds).toContain('client');
-    expect(compiled.coveredHeadwordIds).toContain('clerk');
-    expect(compiled.coveredHeadwordIds).toContain('classify');
-    expect(compiled.coveredHeadwordIds).toContain('classic');
-    expect(compiled.coveredHeadwordIds).toContain('clear-cut');
-    expect(compiled.coveredHeadwordIds).toContain('circumstance');
-    expect(compiled.coveredHeadwordIds).toContain('court¹');
-    expect(compiled.coveredHeadwordIds).toContain('contract¹');
-    expect(compiled.coveredHeadwordIds).toContain('civil');
-    expect(compiled.coveredHeadwordIds).toContain('clinic');
-    expect(compiled.coveredHeadwordIds).toContain('clue');
-    expect(compiled.coveredHeadwordIds).toContain('choice');
-    expect(compiled.coveredHeadwordIds).toContain('competent');
-    expect(compiled.coveredHeadwordIds).toContain('dispute');
-    expect(compiled.coveredHeadwordIds).toContain('arise');
-    expect(compiled.coveredHeadwordIds).toContain('party');
-    expect(compiled.coveredHeadwordIds).toContain('arbitrary');
-    expect(compiled.coveredHeadwordIds).toContain('resort¹');
-    expect(compiled.coveredHeadwordIds).toContain('compromise');
-    expect(compiled.coveredHeadwordIds).toContain('bind');
-    expect(compiled.coveredHeadwordIds).toContain('settle');
-    expect(compiled.coveredHeadwordIds).toContain('damage');
-    expect(compiled.coveredHeadwordIds).toContain('certain');
-    expect(compiled.coveredHeadwordIds).toContain('trial');
-    expect(compiled.coveredHeadwordIds).toContain('public');
-    expect(compiled.coveredHeadwordIds).toContain('welfare');
-    expect(compiled.coveredHeadwordIds).toContain('harmony');
-    expect(compiled.coveredHeadwordIds).toContain('local');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clause');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clarity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clash');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('claim');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('client');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clerk');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('classify');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('classic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clear-cut');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('circumstance');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('court¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contract¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('civil');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clinic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('clue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('choice');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('competent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dispute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('arise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('party');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('arbitrary');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('resort¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compromise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bind');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('settle');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('damage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('certain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('trial');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('public');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('welfare');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('harmony');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('local');
 
     // 验证修饰名词的形容词语境词性匹配
     const p3s2Competent = compiled.paragraphs[2].sentences[1].tokens.find(
@@ -1744,37 +1776,37 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('coarse');
-    expect(compiled.coveredHeadwordIds).not.toContain('cloth');
-    expect(compiled.coveredHeadwordIds).not.toContain('collar');
-    expect(compiled.coveredHeadwordIds).not.toContain('clothe');
-    expect(compiled.coveredHeadwordIds).not.toContain('coil');
-    expect(compiled.coveredHeadwordIds).not.toContain('comma');
-    expect(compiled.coveredHeadwordIds).not.toContain('colon');
-    expect(compiled.coveredHeadwordIds).not.toContain('clone');
-    expect(compiled.coveredHeadwordIds).not.toContain('clown');
-    expect(compiled.coveredHeadwordIds).not.toContain('comedy');
-    expect(compiled.coveredHeadwordIds).not.toContain('coach');
-    expect(compiled.coveredHeadwordIds).not.toContain('comb');
-    expect(compiled.coveredHeadwordIds).not.toContain('clumsy');
-    expect(compiled.coveredHeadwordIds).not.toContain('clip');
-    expect(compiled.coveredHeadwordIds).not.toContain('clockwise');
-    expect(compiled.coveredHeadwordIds).not.toContain('cock');
-    expect(compiled.coveredHeadwordIds).not.toContain('cling');
-    expect(compiled.coveredHeadwordIds).not.toContain('code');
-    expect(compiled.coveredHeadwordIds).not.toContain('conduct');
-    expect(compiled.coveredHeadwordIds).not.toContain('column');
-    expect(compiled.coveredHeadwordIds).not.toContain('collapse');
-    expect(compiled.coveredHeadwordIds).not.toContain('comfort');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('coarse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cloth');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('collar');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clothe');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('coil');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('comma');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('colon');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clone');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clown');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('comedy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('coach');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('comb');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clumsy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clip');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('clockwise');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cock');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cling');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('code');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('conduct');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('column');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('collapse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('comfort');
 
     // 验证现代化港口商贸、海运物流与区域多边合作主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1808,64 +1840,64 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'establishing a durable pillar of shared growth'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('coast');
-    expect(compiled.coveredHeadwordIds).toContain('commerce');
-    expect(compiled.coveredHeadwordIds).toContain('commodity');
-    expect(compiled.coveredHeadwordIds).toContain('collaborate');
-    expect(compiled.coveredHeadwordIds).toContain('collective');
-    expect(compiled.coveredHeadwordIds).toContain('committee');
-    expect(compiled.coveredHeadwordIds).toContain('commission');
-    expect(compiled.coveredHeadwordIds).toContain('combine');
-    expect(compiled.coveredHeadwordIds).toContain('combat');
-    expect(compiled.coveredHeadwordIds).toContain('coherent');
-    expect(compiled.coveredHeadwordIds).toContain('cohesion');
-    expect(compiled.coveredHeadwordIds).toContain('commit');
-    expect(compiled.coveredHeadwordIds).toContain('commence');
-    expect(compiled.coveredHeadwordIds).toContain('command');
-    expect(compiled.coveredHeadwordIds).toContain('collect');
-    expect(compiled.coveredHeadwordIds).toContain('comment');
-    expect(compiled.coveredHeadwordIds).toContain('crane');
-    expect(compiled.coveredHeadwordIds).toContain('coal');
-    expect(compiled.coveredHeadwordIds).toContain('bulk');
-    expect(compiled.coveredHeadwordIds).toContain('dock');
-    expect(compiled.coveredHeadwordIds).toContain('colleague');
-    expect(compiled.coveredHeadwordIds).toContain('cargo');
-    expect(compiled.coveredHeadwordIds).toContain('vessel');
-    expect(compiled.coveredHeadwordIds).toContain('deliver');
-    expect(compiled.coveredHeadwordIds).toContain('vital');
-    expect(compiled.coveredHeadwordIds).toContain('steady');
-    expect(compiled.coveredHeadwordIds).toContain('precise');
-    expect(compiled.coveredHeadwordIds).toContain('authority');
-    expect(compiled.coveredHeadwordIds).toContain('maintain');
-    expect(compiled.coveredHeadwordIds).toContain('order');
-    expect(compiled.coveredHeadwordIds).toContain('freight');
-    expect(compiled.coveredHeadwordIds).toContain('flow');
-    expect(compiled.coveredHeadwordIds).toContain('warehouse');
-    expect(compiled.coveredHeadwordIds).toContain('system');
-    expect(compiled.coveredHeadwordIds).toContain('track');
-    expect(compiled.coveredHeadwordIds).toContain('breakdown');
-    expect(compiled.coveredHeadwordIds).toContain('effort');
-    expect(compiled.coveredHeadwordIds).toContain('secure');
-    expect(compiled.coveredHeadwordIds).toContain('customs');
-    expect(compiled.coveredHeadwordIds).toContain('policy');
-    expect(compiled.coveredHeadwordIds).toContain('delegate');
-    expect(compiled.coveredHeadwordIds).toContain('mutual');
-    expect(compiled.coveredHeadwordIds).toContain('duty');
-    expect(compiled.coveredHeadwordIds).toContain('barrier');
-    expect(compiled.coveredHeadwordIds).toContain('statistic');
-    expect(compiled.coveredHeadwordIds).toContain('economy');
-    expect(compiled.coveredHeadwordIds).toContain('finance');
-    expect(compiled.coveredHeadwordIds).toContain('resource');
-    expect(compiled.coveredHeadwordIds).toContain('risk');
-    expect(compiled.coveredHeadwordIds).toContain('disrupt');
-    expect(compiled.coveredHeadwordIds).toContain('stable');
-    expect(compiled.coveredHeadwordIds).toContain('inspect');
-    expect(compiled.coveredHeadwordIds).toContain('schedule');
-    expect(compiled.coveredHeadwordIds).toContain('terminal');
-    expect(compiled.coveredHeadwordIds).toContain('network');
-    expect(compiled.coveredHeadwordIds).toContain('confidence');
-    expect(compiled.coveredHeadwordIds).toContain('establish');
-    expect(compiled.coveredHeadwordIds).toContain('pillar');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('coast');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commerce');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commodity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collaborate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collective');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('committee');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commission');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('combine');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('combat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('coherent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cohesion');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commence');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('command');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('comment');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crane');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('coal');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bulk');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dock');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('colleague');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cargo');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vessel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deliver');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vital');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('steady');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('precise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('authority');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('maintain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('order');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('freight');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('flow');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('warehouse');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('system');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('track');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('breakdown');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('effort');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('secure');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('customs');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('policy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('delegate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('mutual');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('duty');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('barrier');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('statistic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('economy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('finance');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('resource');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('risk');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disrupt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('stable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('inspect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('schedule');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('terminal');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('network');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confidence');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('establish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('pillar');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -1927,20 +1959,20 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('commune');
-    expect(compiled.coveredHeadwordIds).not.toContain('compass');
-    expect(compiled.coveredHeadwordIds).not.toContain('concert');
-    expect(compiled.coveredHeadwordIds).not.toContain('comrade');
-    expect(compiled.coveredHeadwordIds).not.toContain('condemn');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('commune');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('compass');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('concert');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('comrade');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('condemn');
 
     // 验证现代工程团队协作、系统研发与职业操守主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -1977,36 +2009,36 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'commonplace reality that benefits the daily life of our community'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('compound²');
-    expect(compiled.coveredHeadwordIds).toContain('competent');
-    expect(compiled.coveredHeadwordIds).toContain('comprehensive');
-    expect(compiled.coveredHeadwordIds).toContain('collaborate');
-    expect(compiled.coveredHeadwordIds).toContain('hardware');
-    expect(compiled.coveredHeadwordIds).toContain('compute');
-    expect(compiled.coveredHeadwordIds).toContain('compact');
-    expect(compiled.coveredHeadwordIds).toContain('compatible');
-    expect(compiled.coveredHeadwordIds).toContain('component');
-    expect(compiled.coveredHeadwordIds).toContain('complicate');
-    expect(compiled.coveredHeadwordIds).toContain('conference');
-    expect(compiled.coveredHeadwordIds).toContain('compel');
-    expect(compiled.coveredHeadwordIds).toContain('conceal');
-    expect(compiled.coveredHeadwordIds).toContain('compromise');
-    expect(compiled.coveredHeadwordIds).toContain('comply');
-    expect(compiled.coveredHeadwordIds).toContain('concrete');
-    expect(compiled.coveredHeadwordIds).toContain('compulsory');
-    expect(compiled.coveredHeadwordIds).toContain('compensate');
-    expect(compiled.coveredHeadwordIds).toContain('concentrate');
-    expect(compiled.coveredHeadwordIds).toContain('concept');
-    expect(compiled.coveredHeadwordIds).toContain('communicate');
-    expect(compiled.coveredHeadwordIds).toContain('complain');
-    expect(compiled.coveredHeadwordIds).toContain('compete');
-    expect(compiled.coveredHeadwordIds).toContain('comprehend');
-    expect(compiled.coveredHeadwordIds).toContain('complete');
-    expect(compiled.coveredHeadwordIds).toContain('condense');
-    expect(compiled.coveredHeadwordIds).toContain('conduct');
-    expect(compiled.coveredHeadwordIds).toContain('comprise');
-    expect(compiled.coveredHeadwordIds).toContain('commonplace');
-    expect(compiled.coveredHeadwordIds).toContain('community');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compound²');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('competent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('comprehensive');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collaborate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hardware');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compact');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compatible');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('component');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('complicate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conference');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conceal');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compromise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('comply');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('concrete');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compulsory');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compensate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('concentrate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('concept');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('communicate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('complain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compete');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('comprehend');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('complete');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('condense');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conduct');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('comprise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('commonplace');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('community');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -2069,22 +2101,22 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证不再强行包含旧批次与语境割裂的拼凑词
-    expect(compiled.coveredHeadwordIds).not.toContain('congratulate');
-    expect(compiled.coveredHeadwordIds).not.toContain('contest');
-    expect(compiled.coveredHeadwordIds).not.toContain('contempt');
-    expect(compiled.coveredHeadwordIds).not.toContain('confess');
-    expect(compiled.coveredHeadwordIds).not.toContain('conquer');
-    expect(compiled.coveredHeadwordIds).not.toContain('confuse');
-    expect(compiled.coveredHeadwordIds).not.toContain('contaminate');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('congratulate');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('contest');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('contempt');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('confess');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('conquer');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('confuse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('contaminate');
 
     // 验证现代社会伦理、儒家思想与公共协商共识主题的地道选词与自然搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -2109,41 +2141,41 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'turning moral consensus into a durable pillar of collective flourishing'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('congress');
-    expect(compiled.coveredHeadwordIds).toContain('consider');
-    expect(compiled.coveredHeadwordIds).toContain('Confucian');
-    expect(compiled.coveredHeadwordIds).toContain('connect');
-    expect(compiled.coveredHeadwordIds).toContain('contemporary');
-    expect(compiled.coveredHeadwordIds).toContain('confront');
-    expect(compiled.coveredHeadwordIds).toContain('conflict');
-    expect(compiled.coveredHeadwordIds).toContain('conscientious');
-    expect(compiled.coveredHeadwordIds).toContain('consult');
-    expect(compiled.coveredHeadwordIds).toContain('consolidate');
-    expect(compiled.coveredHeadwordIds).toContain('consensus');
-    expect(compiled.coveredHeadwordIds).toContain('conscious');
-    expect(compiled.coveredHeadwordIds).toContain('consequence');
-    expect(compiled.coveredHeadwordIds).toContain('consume');
-    expect(compiled.coveredHeadwordIds).toContain('conjunction');
-    expect(compiled.coveredHeadwordIds).toContain('constitution');
-    expect(compiled.coveredHeadwordIds).toContain('construct');
-    expect(compiled.coveredHeadwordIds).toContain('consistent');
-    expect(compiled.coveredHeadwordIds).toContain('confine');
-    expect(compiled.coveredHeadwordIds).toContain('confirm');
-    expect(compiled.coveredHeadwordIds).toContain('contend');
-    expect(compiled.coveredHeadwordIds).toContain('consist');
-    expect(compiled.coveredHeadwordIds).toContain('conservative');
-    expect(compiled.coveredHeadwordIds).toContain('converse¹');
-    expect(compiled.coveredHeadwordIds).toContain('constant');
-    expect(compiled.coveredHeadwordIds).toContain('constitute');
-    expect(compiled.coveredHeadwordIds).toContain('conscience');
-    expect(compiled.coveredHeadwordIds).toContain('conform');
-    expect(compiled.coveredHeadwordIds).toContain('context');
-    expect(compiled.coveredHeadwordIds).toContain('considerable');
-    expect(compiled.coveredHeadwordIds).toContain('confidence');
-    expect(compiled.coveredHeadwordIds).toContain('controversy');
-    expect(compiled.coveredHeadwordIds).toContain('cooperate');
-    expect(compiled.coveredHeadwordIds).toContain('collaborate');
-    expect(compiled.coveredHeadwordIds).toContain('cohesion');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('congress');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consider');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('Confucian');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('connect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contemporary');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confront');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conflict');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conscientious');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consult');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consolidate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consensus');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conscious');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consequence');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consume');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conjunction');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('constitution');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('construct');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consistent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confine');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confirm');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contend');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('consist');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conservative');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('converse¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('constant');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('constitute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conscience');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('conform');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('context');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('considerable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confidence');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('controversy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cooperate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collaborate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cohesion');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -2195,27 +2227,27 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证彻底剔除旧版拼凑的割裂生硬词
-    expect(compiled.coveredHeadwordIds).not.toContain('cottage');
-    expect(compiled.coveredHeadwordIds).not.toContain('cotton');
-    expect(compiled.coveredHeadwordIds).not.toContain('copper');
-    expect(compiled.coveredHeadwordIds).not.toContain('cord');
-    expect(compiled.coveredHeadwordIds).not.toContain('cop');
-    expect(compiled.coveredHeadwordIds).not.toContain('couch');
-    expect(compiled.coveredHeadwordIds).not.toContain('cough');
-    expect(compiled.coveredHeadwordIds).not.toContain('cookie');
-    expect(compiled.coveredHeadwordIds).not.toContain('corn');
-    expect(compiled.coveredHeadwordIds).not.toContain('corps');
-    expect(compiled.coveredHeadwordIds).not.toContain('costume');
-    expect(compiled.coveredHeadwordIds).not.toContain('cosmos');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cottage');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cotton');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('copper');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cord');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cop');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('couch');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cough');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cookie');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('corn');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('corps');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('costume');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cosmos');
 
     // 验证跨国企业合规治理与商业契约诚信的地道搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -2249,38 +2281,38 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'culture of compliance and mutual trust'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('corporation');
-    expect(compiled.coveredHeadwordIds).toContain('counsel');
-    expect(compiled.coveredHeadwordIds).toContain('contract¹');
-    expect(compiled.coveredHeadwordIds).toContain('coordinate');
-    expect(compiled.coveredHeadwordIds).toContain('council');
-    expect(compiled.coveredHeadwordIds).toContain('convention');
-    expect(compiled.coveredHeadwordIds).toContain('corrupt');
-    expect(compiled.coveredHeadwordIds).toContain('bribe');
-    expect(compiled.coveredHeadwordIds).toContain('copyright');
-    expect(compiled.coveredHeadwordIds).toContain('copy');
-    expect(compiled.coveredHeadwordIds).toContain('correspond');
-    expect(compiled.coveredHeadwordIds).toContain('contradict');
-    expect(compiled.coveredHeadwordIds).toContain('cope');
-    expect(compiled.coveredHeadwordIds).toContain('controversy');
-    expect(compiled.coveredHeadwordIds).toContain('contrast');
-    expect(compiled.coveredHeadwordIds).toContain('transparent');
-    expect(compiled.coveredHeadwordIds).toContain('convey');
-    expect(compiled.coveredHeadwordIds).toContain('client');
-    expect(compiled.coveredHeadwordIds).toContain('convenient');
-    expect(compiled.coveredHeadwordIds).toContain('convert');
-    expect(compiled.coveredHeadwordIds).toContain('correct');
-    expect(compiled.coveredHeadwordIds).toContain('control');
-    expect(compiled.coveredHeadwordIds).toContain('resolve');
-    expect(compiled.coveredHeadwordIds).toContain('dispute');
-    expect(compiled.coveredHeadwordIds).toContain('compromise');
-    expect(compiled.coveredHeadwordIds).toContain('convince');
-    expect(compiled.coveredHeadwordIds).toContain('core');
-    expect(compiled.coveredHeadwordIds).toContain('cornerstone');
-    expect(compiled.coveredHeadwordIds).toContain('cooperate');
-    expect(compiled.coveredHeadwordIds).toContain('contribute');
-    expect(compiled.coveredHeadwordIds).toContain('reputation');
-    expect(compiled.coveredHeadwordIds).toContain('flourish');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('corporation');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('counsel');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contract¹');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('coordinate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('council');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convention');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('corrupt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bribe');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('copyright');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('copy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('correspond');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contradict');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cope');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('controversy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contrast');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('transparent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convey');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('client');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convenient');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convert');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('correct');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('control');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('resolve');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dispute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('compromise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convince');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('core');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cornerstone');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cooperate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('contribute');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('reputation');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('flourish');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -2332,27 +2364,27 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证彻底剔除旧版拼凑的割裂生硬词
-    expect(compiled.coveredHeadwordIds).not.toContain('cracker');
-    expect(compiled.coveredHeadwordIds).not.toContain('cream');
-    expect(compiled.coveredHeadwordIds).not.toContain('cowboy');
-    expect(compiled.coveredHeadwordIds).not.toContain('coupon');
-    expect(compiled.coveredHeadwordIds).not.toContain('crocodile');
-    expect(compiled.coveredHeadwordIds).not.toContain('crab');
-    expect(compiled.coveredHeadwordIds).not.toContain('crawl');
-    expect(compiled.coveredHeadwordIds).not.toContain('creep');
-    expect(compiled.coveredHeadwordIds).not.toContain('crane');
-    expect(compiled.coveredHeadwordIds).not.toContain('coward');
-    expect(compiled.coveredHeadwordIds).not.toContain('crazy');
-    expect(compiled.coveredHeadwordIds).not.toContain('crown');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cracker');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cream');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cowboy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('coupon');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crocodile');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crab');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crawl');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('creep');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crane');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('coward');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crazy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crown');
 
     // 验证极地海洋科考、生态危机应对与科研实证评估的地道搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -2386,56 +2418,56 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'crucial to overcome global ecological challenges and sustain marine heritage'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('crew');
-    expect(compiled.coveredHeadwordIds).toContain('cruise');
-    expect(compiled.coveredHeadwordIds).toContain('course');
-    expect(compiled.coveredHeadwordIds).toContain('craft');
-    expect(compiled.coveredHeadwordIds).toContain('creature');
-    expect(compiled.coveredHeadwordIds).toContain('crack');
-    expect(compiled.coveredHeadwordIds).toContain('crash');
-    expect(compiled.coveredHeadwordIds).toContain('courage');
-    expect(compiled.coveredHeadwordIds).toContain('crisis');
-    expect(compiled.coveredHeadwordIds).toContain('criterion');
-    expect(compiled.coveredHeadwordIds).toContain('criticize');
-    expect(compiled.coveredHeadwordIds).toContain('crucial');
-    expect(compiled.coveredHeadwordIds).toContain('counterpart');
-    expect(compiled.coveredHeadwordIds).toContain('cross');
-    expect(compiled.coveredHeadwordIds).toContain('create');
-    expect(compiled.coveredHeadwordIds).toContain('credit');
-    expect(compiled.coveredHeadwordIds).toContain('marine');
-    expect(compiled.coveredHeadwordIds).toContain('harbor');
-    expect(compiled.coveredHeadwordIds).toContain('adventure');
-    expect(compiled.coveredHeadwordIds).toContain('vital');
-    expect(compiled.coveredHeadwordIds).toContain('gear');
-    expect(compiled.coveredHeadwordIds).toContain('survey');
-    expect(compiled.coveredHeadwordIds).toContain('shallow');
-    expect(compiled.coveredHeadwordIds).toContain('delicate');
-    expect(compiled.coveredHeadwordIds).toContain('specimen');
-    expect(compiled.coveredHeadwordIds).toContain('strict');
-    expect(compiled.coveredHeadwordIds).toContain('environment');
-    expect(compiled.coveredHeadwordIds).toContain('guideline');
-    expect(compiled.coveredHeadwordIds).toContain('observe');
-    expect(compiled.coveredHeadwordIds).toContain('rare');
-    expect(compiled.coveredHeadwordIds).toContain('habitat');
-    expect(compiled.coveredHeadwordIds).toContain('regulate');
-    expect(compiled.coveredHeadwordIds).toContain('vulnerable');
-    expect(compiled.coveredHeadwordIds).toContain('species');
-    expect(compiled.coveredHeadwordIds).toContain('rapid');
-    expect(compiled.coveredHeadwordIds).toContain('climate');
-    expect(compiled.coveredHeadwordIds).toContain('disrupt');
-    expect(compiled.coveredHeadwordIds).toContain('alarm');
-    expect(compiled.coveredHeadwordIds).toContain('sensitive');
-    expect(compiled.coveredHeadwordIds).toContain('shelf');
-    expect(compiled.coveredHeadwordIds).toContain('threat');
-    expect(compiled.coveredHeadwordIds).toContain('emergency');
-    expect(compiled.coveredHeadwordIds).toContain('deck');
-    expect(compiled.coveredHeadwordIds).toContain('discipline');
-    expect(compiled.coveredHeadwordIds).toContain('protect');
-    expect(compiled.coveredHeadwordIds).toContain('hazard');
-    expect(compiled.coveredHeadwordIds).toContain('collaborate');
-    expect(compiled.coveredHeadwordIds).toContain('overcome');
-    expect(compiled.coveredHeadwordIds).toContain('sustain');
-    expect(compiled.coveredHeadwordIds).toContain('heritage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crew');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cruise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('course');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('craft');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('creature');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crack');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crash');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('courage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crisis');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('criterion');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('criticize');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('crucial');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('counterpart');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cross');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('create');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('credit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('marine');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('harbor');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('adventure');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vital');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('gear');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('survey');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shallow');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('delicate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('specimen');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('strict');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('environment');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('guideline');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('observe');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('rare');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('habitat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('regulate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vulnerable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('species');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('rapid');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('climate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disrupt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('alarm');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sensitive');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shelf');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('threat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('emergency');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deck');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('discipline');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('protect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hazard');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('collaborate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('overcome');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('sustain');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('heritage');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -2491,31 +2523,31 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     expect(result.errors).toEqual([]);
 
     const compiled = compilePassage(passage!, catalog);
-    expect(compiled.hasOutOfSyllabusWords).toBe(false);
-    expect(compiled.coveredHeadwordIds.length).toBeGreaterThanOrEqual(30);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(30);
 
-    for (const id of compiled.coveredHeadwordIds) {
+    for (const id of coveredHeadwordIdsIn(compiled)) {
       const entry = catalog.byId.get(id);
       expect(entry?.level).not.toBe('cet6');
     }
 
     // 验证彻底剔除旧版拼凑的割裂生硬词
-    expect(compiled.coveredHeadwordIds).not.toContain('cucumber');
-    expect(compiled.coveredHeadwordIds).not.toContain('cupboard');
-    expect(compiled.coveredHeadwordIds).not.toContain('cushion');
-    expect(compiled.coveredHeadwordIds).not.toContain('curve');
-    expect(compiled.coveredHeadwordIds).not.toContain('crush');
-    expect(compiled.coveredHeadwordIds).not.toContain('cute');
-    expect(compiled.coveredHeadwordIds).not.toContain('curl');
-    expect(compiled.coveredHeadwordIds).not.toContain('dam');
-    expect(compiled.coveredHeadwordIds).not.toContain('darling');
-    expect(compiled.coveredHeadwordIds).not.toContain('curse');
-    expect(compiled.coveredHeadwordIds).not.toContain('dash');
-    expect(compiled.coveredHeadwordIds).not.toContain('cry');
-    expect(compiled.coveredHeadwordIds).not.toContain('lace');
-    expect(compiled.coveredHeadwordIds).not.toContain('dairy');
-    expect(compiled.coveredHeadwordIds).not.toContain('cube');
-    expect(compiled.coveredHeadwordIds).not.toContain('damn');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cucumber');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cupboard');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cushion');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('curve');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('crush');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cute');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('curl');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('dam');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('darling');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('curse');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('dash');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cry');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('lace');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('dairy');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('cube');
+    expect(coveredHeadwordIdsIn(compiled)).not.toContain('damn');
 
     // 验证现代数字健康管理与预防医疗的地道搭配
     expect(passage!.paragraphs[0].sentences[0].english).toContain(
@@ -2552,56 +2584,56 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'durable foundation for human dignity'
     );
 
-    expect(compiled.coveredHeadwordIds).toContain('digit');
-    expect(compiled.coveredHeadwordIds).toContain('disrupt');
-    expect(compiled.coveredHeadwordIds).toContain('cycle');
-    expect(compiled.coveredHeadwordIds).toContain('fatigue');
-    expect(compiled.coveredHeadwordIds).toContain('distress');
-    expect(compiled.coveredHeadwordIds).toContain('confront');
-    expect(compiled.coveredHeadwordIds).toContain('irregular');
-    expect(compiled.coveredHeadwordIds).toContain('diet');
-    expect(compiled.coveredHeadwordIds).toContain('deficit');
-    expect(compiled.coveredHeadwordIds).toContain('curb');
-    expect(compiled.coveredHeadwordIds).toContain('daily');
-    expect(compiled.coveredHeadwordIds).toContain('vital');
-    expect(compiled.coveredHeadwordIds).toContain('dizzy');
-    expect(compiled.coveredHeadwordIds).toContain('digest');
-    expect(compiled.coveredHeadwordIds).toContain('disorder');
-    expect(compiled.coveredHeadwordIds).toContain('deteriorate');
-    expect(compiled.coveredHeadwordIds).toContain('demonstrate');
-    expect(compiled.coveredHeadwordIds).toContain('urgent');
-    expect(compiled.coveredHeadwordIds).toContain('necessity');
-    expect(compiled.coveredHeadwordIds).toContain('define');
-    expect(compiled.coveredHeadwordIds).toContain('prevent');
-    expect(compiled.coveredHeadwordIds).toContain('exhaust');
-    expect(compiled.coveredHeadwordIds).toContain('disease');
-    expect(compiled.coveredHeadwordIds).toContain('dilemma');
-    expect(compiled.coveredHeadwordIds).toContain('devise');
-    expect(compiled.coveredHeadwordIds).toContain('intelligent');
-    expect(compiled.coveredHeadwordIds).toContain('platform');
-    expect(compiled.coveredHeadwordIds).toContain('device');
-    expect(compiled.coveredHeadwordIds).toContain('database');
-    expect(compiled.coveredHeadwordIds).toContain('detect');
-    expect(compiled.coveredHeadwordIds).toContain('fluctuate');
-    expect(compiled.coveredHeadwordIds).toContain('deliver');
-    expect(compiled.coveredHeadwordIds).toContain('cue');
-    expect(compiled.coveredHeadwordIds).toContain('diagnose');
-    expect(compiled.coveredHeadwordIds).toContain('prescribe');
-    expect(compiled.coveredHeadwordIds).toContain('dynamic');
-    expect(compiled.coveredHeadwordIds).toContain('convert');
-    expect(compiled.coveredHeadwordIds).toContain('insight');
-    expect(compiled.coveredHeadwordIds).toContain('deliberate');
-    expect(compiled.coveredHeadwordIds).toContain('shift');
-    expect(compiled.coveredHeadwordIds).toContain('perspective');
-    expect(compiled.coveredHeadwordIds).toContain('devote');
-    expect(compiled.coveredHeadwordIds).toContain('discourage');
-    expect(compiled.coveredHeadwordIds).toContain('discipline');
-    expect(compiled.coveredHeadwordIds).toContain('defend');
-    expect(compiled.coveredHeadwordIds).toContain('defeat');
-    expect(compiled.coveredHeadwordIds).toContain('decay');
-    expect(compiled.coveredHeadwordIds).toContain('decrease');
-    expect(compiled.coveredHeadwordIds).toContain('durable');
-    expect(compiled.coveredHeadwordIds).toContain('dignity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('digit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disrupt');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cycle');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('fatigue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('distress');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('confront');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('irregular');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('diet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deficit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('curb');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('daily');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('vital');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dizzy');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('digest');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disorder');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deteriorate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('demonstrate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('urgent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('necessity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('define');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('prevent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('exhaust');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disease');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dilemma');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('devise');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('intelligent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('platform');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('device');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('database');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('detect');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('fluctuate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deliver');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('cue');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('diagnose');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('prescribe');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dynamic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('convert');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('insight');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('deliberate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shift');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('perspective');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('devote');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('discourage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('discipline');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('defend');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('defeat');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('decay');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('decrease');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('durable');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('dignity');
 
     // 验证修饰名词的形容词语境词性匹配
     const attributiveChecks: [number, number, string][] = [
@@ -2658,7 +2690,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       expect(result.errors).toEqual([]);
 
       const compiled = compilePassage(passage, catalog);
-      for (const id of compiled.coveredHeadwordIds) {
+      for (const id of coveredHeadwordIdsIn(compiled)) {
         const entry = catalog.byId.get(id);
         expect(entry?.level).not.toBe('cet6');
       }

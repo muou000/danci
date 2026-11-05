@@ -46,5 +46,3 @@ export const PASSAGES: Passage[] = [
   PASSAGE_021,
   PASSAGE_022,
 ];
-
-export const ALL_PASSAGES = PASSAGES;
