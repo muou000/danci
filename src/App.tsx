@@ -32,6 +32,8 @@ export interface AppProps {
 
 const PASSAGE_EXPORT_WIDTH = 1080;
 const MASTERY_UNDO_DURATION_MS = 10_000;
+const CORPUS_PREFETCH_TIMEOUT_MS = 1_500;
+const CORPUS_PREFETCH_FALLBACK_DELAY_MS = 500;
 
 interface MasteryFeedback {
   message: string;
@@ -107,10 +109,32 @@ export function App({
 }: AppProps) {
   const {
     passages,
+    isComplete: isCorpusComplete,
     isLoading: isLoadingCorpus,
     loadFailed: corpusLoadFailed,
     ensureLoaded: ensureCorpusLoaded,
   } = usePassageCorpus(initialPassages, loadAllPassages);
+
+  useEffect(() => {
+    if (!loadAllPassages) return;
+
+    const prefetch = () => {
+      void ensureCorpusLoaded({ quiet: true }).catch(() => undefined);
+    };
+    if (typeof window.requestIdleCallback === 'function') {
+      const idleHandle = window.requestIdleCallback(prefetch, {
+        timeout: CORPUS_PREFETCH_TIMEOUT_MS,
+      });
+      return () => window.cancelIdleCallback(idleHandle);
+    }
+
+    const timeoutHandle = window.setTimeout(
+      prefetch,
+      CORPUS_PREFETCH_FALLBACK_DELAY_MS
+    );
+    return () => window.clearTimeout(timeoutHandle);
+  }, [ensureCorpusLoaded, loadAllPassages]);
+
   const [activeId, setActiveId] = useState<string>(initialPassages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const [isDirectoryOpen, setIsDirectoryOpen] = useState(false);
@@ -488,8 +512,10 @@ export function App({
                 type="button"
                 aria-label="下一篇短文"
                 disabled={
+                  isLoadingCorpus ||
                   activePassageIndex < 0 ||
-                  activePassageIndex >= passages.length - 1
+                  (isCorpusComplete &&
+                    activePassageIndex >= passages.length - 1)
                 }
                 onClick={() => navigateByOffset(1)}
               >

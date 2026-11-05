@@ -189,6 +189,37 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(loadAllPassages).toHaveBeenCalledTimes(1);
   });
 
+  it('首屏绘制后在空闲时静默预加载完整语料', async () => {
+    vi.useFakeTimers();
+    vi.stubGlobal('requestIdleCallback', undefined);
+    const fullCorpus = COMPILED_PASSAGES;
+    const loadAllPassages = vi.fn(async () => fullCorpus);
+    render(
+      <App
+        passages={[fullCorpus[0]]}
+        loadAllPassages={loadAllPassages}
+      />
+    );
+
+    expect(
+      screen.getByRole('heading', { name: fullCorpus[0].titleZh })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: '下一篇短文' })
+    ).toBeEnabled();
+    expect(loadAllPassages).not.toHaveBeenCalled();
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(500);
+    });
+
+    expect(loadAllPassages).toHaveBeenCalledOnce();
+    expect(screen.queryByRole('status')).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: '下一篇短文' })
+    ).toBeEnabled();
+  });
+
   it('默认展示首篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
     renderWithDemoPassages();
 

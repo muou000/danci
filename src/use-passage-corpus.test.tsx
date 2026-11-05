@@ -16,6 +16,76 @@ const passage = (id: string): CompiledPassage => ({
 });
 
 describe('usePassageCorpus', () => {
+  it('silently prefetches and promotes the shared request when the user needs it', async () => {
+    const initialPassages = [passage('initial')];
+    const loadedPassages = [passage('complete')];
+    let resolveLoad: (passages: CompiledPassage[]) => void = () => undefined;
+    const loadAllPassages = vi.fn(
+      () =>
+        new Promise<CompiledPassage[]>((resolve) => {
+          resolveLoad = resolve;
+        })
+    );
+    const { result } = renderHook(() =>
+      usePassageCorpus(initialPassages, loadAllPassages)
+    );
+
+    let prefetch!: Promise<CompiledPassage[]>;
+    let foregroundLoad!: Promise<CompiledPassage[]>;
+    act(() => {
+      prefetch = result.current.ensureLoaded({ quiet: true });
+    });
+
+    expect(result.current.isLoading).toBe(false);
+    expect(result.current.loadFailed).toBe(false);
+    await Promise.resolve();
+    expect(loadAllPassages).toHaveBeenCalledOnce();
+
+    act(() => {
+      foregroundLoad = result.current.ensureLoaded();
+    });
+    expect(foregroundLoad).toBe(prefetch);
+    expect(result.current.isLoading).toBe(true);
+
+    await act(async () => {
+      resolveLoad(loadedPassages);
+      await expect(prefetch).resolves.toBe(loadedPassages);
+    });
+
+    expect(result.current.passages).toBe(loadedPassages);
+    expect(result.current.isLoading).toBe(false);
+  });
+
+  it('keeps background prefetch failures quiet and retries on user request', async () => {
+    const initialPassages = [passage('initial')];
+    const loadedPassages = [passage('complete')];
+    const loadAllPassages = vi
+      .fn<() => Promise<CompiledPassage[]>>()
+      .mockRejectedValueOnce(new Error('offline'))
+      .mockResolvedValueOnce(loadedPassages);
+    const { result } = renderHook(() =>
+      usePassageCorpus(initialPassages, loadAllPassages)
+    );
+
+    await act(async () => {
+      await expect(
+        result.current.ensureLoaded({ quiet: true })
+      ).rejects.toThrow('offline');
+    });
+
+    expect(result.current.isLoading).toBe(false);
+    expect(result.current.loadFailed).toBe(false);
+    expect(result.current.passages).toBe(initialPassages);
+
+    await act(async () => {
+      await result.current.ensureLoaded();
+    });
+
+    expect(loadAllPassages).toHaveBeenCalledTimes(2);
+    expect(result.current.passages).toBe(loadedPassages);
+    expect(result.current.loadFailed).toBe(false);
+  });
+
   it('shares an in-flight load and replaces the initial corpus on success', async () => {
     const initialPassages = [passage('initial')];
     const loadedPassages = [passage('complete')];
