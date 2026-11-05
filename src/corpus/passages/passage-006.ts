@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_006: Passage = {
-  "id": "cet4-b1-006",
+  "id": "passage-006",
   "indexLabel": "NO. 06",
-  "tier": "cet4-core",
   "topic": "家庭预算管理与理性消费决策",
   "titleZh": "家庭预算规划与理性消费决策",
   "titleEn": "Household Budgeting, Smart Spending, and Financial Resilience",

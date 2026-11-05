@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_007: Passage = {
-  id: "cet4-b1-007",
+  id: "passage-007",
   indexLabel: "NO. 07",
-  tier: "cet4-core",
   topic: "滨海湿地生态保护与科研监测",
   titleZh: "滨海湿地的生态恢复与候鸟栖息地守护",
   titleEn: "Coastal Wetland Restoration and Migratory Habitat Conservation",

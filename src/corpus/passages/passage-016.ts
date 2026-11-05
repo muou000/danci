@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_016: Passage = {
-  id: 'cet4-b1-016',
+  id: "passage-016",
   indexLabel: 'NO. 16',
-  tier: 'cet4-core',
   topic: '现代工程团队协作、系统研发与职业操守',
   titleZh: '现代工程团队协作、系统研发与职业操守',
   titleEn: 'Modern Engineering Collaboration, Systems Innovation, and Professional Ethics',

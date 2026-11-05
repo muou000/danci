@@ -231,20 +231,6 @@ body {
   letter-spacing: 0.04em;
 }
 
-.passage-meta__tier {
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 999px;
-  background: #d5f6ec;
-  color: #195243;
-}
-
-.passage-meta__tier--cet6-advanced {
-  background: #ede4fc;
-  color: #4d3184;
-}
-
 .passage-meta__topic {
   font-size: 0.84rem;
   font-weight: 600;
@@ -1284,44 +1270,6 @@ body {
   padding: 14px 0;
 }
 
-.passage-directory__tier-filters {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0;
-}
-
-.passage-directory__tier-filters button {
-  min-height: 38px;
-  padding: 7px 13px;
-  border: 1px solid #b5c9c0;
-  border-radius: 0;
-  background: #ffffff;
-  color: #344d42;
-  font: inherit;
-  font-size: 0.87rem;
-  cursor: pointer;
-}
-
-.passage-directory__tier-filters button:first-child {
-  border-radius: 4px 0 0 4px;
-}
-
-.passage-directory__tier-filters button:last-child {
-  border-radius: 0 4px 4px 0;
-}
-
-.passage-directory__tier-filters button + button {
-  margin-left: -1px;
-}
-
-.passage-directory__tier-filters button[aria-pressed='true'] {
-  position: relative;
-  z-index: 1;
-  border-color: #1f5c4d;
-  background: #1f5c4d;
-  color: #ffffff;
-}
-
 .passage-directory__topic-filter {
   display: flex;
   align-items: center;
@@ -1413,20 +1361,6 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 0.8rem;
   font-weight: 700;
-}
-
-.passage-directory__tier {
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: #d8eee6;
-  color: #205b48;
-  font-size: 0.74rem;
-  font-weight: 700;
-}
-
-.passage-directory__tier--cet6-advanced {
-  background: #f8e2d5;
-  color: #8d462b;
 }
 
 .passage-directory__topic {

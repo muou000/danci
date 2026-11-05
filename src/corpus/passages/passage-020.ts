@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_020: Passage = {
-  id: 'cet4-b1-020',
+  id: "passage-020",
   indexLabel: 'NO. 20',
-  tier: 'cet4-core',
   topic: '现代数字健康管理、日常预防医疗与身心平衡',
   titleZh: '现代数字健康管理、日常预防医疗与身心平衡',
   titleEn: 'Digital Health Technologies, Everyday Preventive Care, and Well-being',

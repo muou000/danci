@@ -6,7 +6,6 @@ import { usePassageCorpus } from './use-passage-corpus';
 const passage = (id: string): CompiledPassage => ({
   id,
   indexLabel: id,
-  tier: 'cet4-core',
   topic: '测试',
   titleZh: id,
   titleEn: id,

@@ -1,10 +1,7 @@
 import type {
   CompiledPassage,
   InlineAnnotationToken,
-  PassageTier,
 } from './corpus';
-
-export type PassageTierFilter = 'all' | PassageTier;
 
 export const PASSAGE_TOPIC_CATEGORIES = [
   '社会心理',
@@ -41,7 +38,6 @@ export interface PassageSearchResult {
   key: string;
   passageId: string;
   indexLabel: string;
-  tier: PassageTier;
   topic: string;
   titleZh: string;
   titleEn: string;
@@ -85,14 +81,9 @@ function* uniqueAnnotationTokensIn(
 
 export function filterPassages(
   passages: CompiledPassage[],
-  tier: PassageTierFilter,
   topic: PassageTopicFilter
 ): CompiledPassage[] {
-  return passages.filter(
-    (passage) =>
-      (tier === 'all' || passage.tier === tier) &&
-      matchesTopicFilter(passage, topic)
-  );
+  return passages.filter((passage) => matchesTopicFilter(passage, topic));
 }
 
 export function getPassageTopicCategories(
@@ -302,12 +293,11 @@ function passageSearchContext(
   passage: CompiledPassage
 ): Pick<
   PassageSearchResult,
-  'passageId' | 'indexLabel' | 'tier' | 'topic' | 'titleZh' | 'titleEn'
+  'passageId' | 'indexLabel' | 'topic' | 'titleZh' | 'titleEn'
 > {
   return {
     passageId: passage.id,
     indexLabel: passage.indexLabel,
-    tier: passage.tier,
     topic: passage.topic,
     titleZh: passage.titleZh,
     titleEn: passage.titleEn,

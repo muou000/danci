@@ -5,11 +5,9 @@ import { toBlob } from 'html-to-image';
 import { zipSync } from 'fflate';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
-import { compilePassage, DEMO_PASSAGES } from '../corpus';
-import { COMPILED_CET4_BATCH_1_PASSAGES } from '../corpus/compiled-batch-1';
+import { COMPILED_PASSAGES } from '../corpus/compiled-passages';
 import type { CompiledPassage } from '../corpus';
 import type { PassageSearchResult } from '../passage-library';
-import { getDefaultSyllabusCatalog } from '../syllabus';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
@@ -19,9 +17,7 @@ vi.mock('fflate', () => ({
   zipSync: vi.fn(() => new Uint8Array([80, 75, 3, 4])),
 }));
 
-const COMPILED_DEMO_PASSAGES = DEMO_PASSAGES.map((passage) =>
-  compilePassage(passage, getDefaultSyllabusCatalog())
-);
+const COMPILED_DEMO_PASSAGES = COMPILED_PASSAGES.slice(20, 22);
 
 function renderWithDemoPassages() {
   return render(<App passages={COMPILED_DEMO_PASSAGES} />);
@@ -96,7 +92,6 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         key: `result-${index + 1}`,
         passageId: `passage-${index + 1}`,
         indexLabel: `NO. ${String(index + 1).padStart(2, '0')}`,
-        tier: 'cet4-core',
         topic: '测试题材',
         titleZh: `测试短文 ${index + 1}`,
         titleEn: `Passage ${index + 1}`,
@@ -121,7 +116,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(screen.getByRole('button', { name: /word-13/ })).toBeInTheDocument();
   });
 
-  it('短文目录展示待背进度与已读状态，并可按难度筛选后打开短文', async () => {
+  it('短文目录展示待背进度与已读状态，并可按题材筛选后打开短文', async () => {
     const user = userEvent.setup();
     renderWithDemoPassages();
 
@@ -132,33 +127,28 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('button', {
-        name: /NO\. 01.*待背词条 77 \/ 78.*已读/,
+        name: /NO\. 21.*待背词条 77 \/ 78.*已读/,
       })
     ).toBeInTheDocument();
     await user.click(
-      screen.getByRole('button', { name: /标记已读.*NO\. 02/ })
+      screen.getByRole('button', { name: /标记已读.*NO\. 22/ })
     );
     expect(
-      screen.getByRole('button', { name: /NO\. 02.*已读 · 1 次/ })
+      screen.getByRole('button', { name: /NO\. 22.*已读 · 1 次/ })
     ).toBeInTheDocument();
 
     const topicFilter = screen.getByRole('combobox', { name: '按题材筛选' });
     await user.selectOptions(topicFilter, 'category:科技人工智能');
     expect(
-      screen.queryByRole('button', { name: /NO\. 01.*重塑校园消费/ })
+      screen.queryByRole('button', { name: /NO\. 21.*重塑校园消费/ })
     ).not.toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: /NO\. 02.*在算法洪流/ })
+      screen.getByRole('button', { name: /NO\. 22.*在算法洪流/ })
     ).toBeInTheDocument();
     await user.selectOptions(topicFilter, 'all');
 
-    await user.click(screen.getByRole('button', { name: '六级进阶篇' }));
-    expect(
-      screen.queryByRole('button', { name: /NO\. 01.*重塑校园消费/ })
-    ).not.toBeInTheDocument();
-
     await user.click(
-      screen.getByRole('button', { name: /NO\. 02.*在算法洪流/ })
+      screen.getByRole('button', { name: /NO\. 22.*在算法洪流/ })
     );
     expect(
       screen.getByRole('heading', {
@@ -167,13 +157,13 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: '短文目录' }));
     expect(
-      screen.getByRole('button', { name: /NO\. 02.*已读 · 2 次/ })
+      screen.getByRole('button', { name: /NO\. 22.*已读 · 2 次/ })
     ).toBeInTheDocument();
   });
 
   it('首次打开目录时按需加载完整语料，并复用加载结果进行翻页', async () => {
     const user = userEvent.setup();
-    const fullCorpus = COMPILED_CET4_BATCH_1_PASSAGES;
+    const fullCorpus = COMPILED_PASSAGES;
     const loadAllPassages = vi.fn(async () => fullCorpus);
     render(
       <App
@@ -199,7 +189,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(loadAllPassages).toHaveBeenCalledTimes(1);
   });
 
-  it('默认展示首篇四级核心篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
+  it('默认展示首篇短文：含三类基础图例（不含超纲词）、双语标题横幅、右上角篇目信息、分段双语正文行间标注与右侧拓展汇总', () => {
     renderWithDemoPassages();
 
     const legend = screen.getByRole('region', { name: '标注图例' });
@@ -220,8 +210,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
 
     const metaBadge = screen.getByRole('region', { name: '篇目信息' });
-    expect(within(metaBadge).getByText('NO. 01')).toBeInTheDocument();
-    expect(within(metaBadge).getByText('四级核心篇')).toBeInTheDocument();
+    expect(within(metaBadge).getByText('NO. 21')).toBeInTheDocument();
     expect(within(metaBadge).getByText('绿色校园与消费转型')).toBeInTheDocument();
     expect(screen.queryByText(/小红书/)).not.toBeInTheDocument();
 
@@ -257,7 +246,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
   });
 
-  it('支持切换至六级进阶篇示例短文：按需动态显示超纲词图例与标注，切回四级核心篇时自动隐藏，且不包含译文遮挡或语音播放按钮', async () => {
+  it('支持切换至含超纲词的短文：按需动态显示超纲词图例与标注，切回无超纲词短文时自动隐藏，且不包含译文遮挡或语音播放按钮', async () => {
     const user = userEvent.setup();
     renderWithDemoPassages();
 
@@ -275,8 +264,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
 
     const metaBadge = screen.getByRole('region', { name: '篇目信息' });
-    expect(within(metaBadge).getByText('NO. 02')).toBeInTheDocument();
-    expect(within(metaBadge).getByText('六级进阶篇')).toBeInTheDocument();
+    expect(within(metaBadge).getByText('NO. 22')).toBeInTheDocument();
     expect(within(metaBadge).getByText('算法生态与认知自主')).toBeInTheDocument();
 
     const legend = screen.getByRole('region', { name: '标注图例' });
@@ -632,12 +620,12 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       version: 1,
       masteredItemKeys: ['word:transform'],
       hiddenExpansionIds: {
-        'demo-cet4-001': Array.from({ length: 14 }, (_, index) =>
+        'passage-021': Array.from({ length: 14 }, (_, index) =>
           `cet4-exp-${index + 1}`
         ),
       },
       readingRecords: {
-        'demo-cet4-001': {
+        'passage-021': {
           lastReadAt: '2026-11-03T00:00:00.000Z',
           visits: 7,
         },
@@ -705,13 +693,13 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(JSON.parse(exportedJson)).toMatchObject({
       masteredItemKeys: ['word:transform'],
       hiddenExpansionIds: {
-        'demo-cet4-001': Array.from(
+        'passage-021': Array.from(
           { length: 13 },
           (_, index) => `cet4-exp-${index + 2}`
         ),
       },
       readingRecords: {
-        'demo-cet4-001': {
+        'passage-021': {
           lastReadAt: '2026-11-03T00:00:00.000Z',
           visits: 7,
         },
@@ -789,12 +777,12 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       expect.objectContaining({ type: 'image/png' })
     );
     expect(downloadClick).toHaveBeenCalledOnce();
-    expect(downloadedFilename).toContain('NO. 01');
+    expect(downloadedFilename).toContain('NO. 21');
     expect(downloadedFilename).toContain('重塑校园消费习惯');
     expect(downloadedFilename).toMatch(/\.png$/);
   });
 
-  it('按当前个性化状态将完整四级核心篇批量导出为ZIP中的20张高清PNG，且不切换当前短文', async () => {
+  it('按当前个性化状态将完整短文库批量导出为ZIP中的22张高清PNG，且不切换当前短文', async () => {
     const user = userEvent.setup();
     vi.mocked(toBlob).mockResolvedValue(
       new Blob(['png'], { type: 'image/png' })
@@ -815,33 +803,33 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       }
     );
 
-    const loadAllPassages = vi.fn(async () => COMPILED_CET4_BATCH_1_PASSAGES);
+    const loadAllPassages = vi.fn(async () => COMPILED_PASSAGES);
     render(
       <App
-        passages={[COMPILED_CET4_BATCH_1_PASSAGES[0]]}
+        passages={[COMPILED_PASSAGES[0]]}
         loadAllPassages={loadAllPassages}
       />
     );
 
-    await user.click(screen.getByRole('button', { name: '批量导出20篇' }));
+    await user.click(screen.getByRole('button', { name: '批量导出全部短文' }));
 
     expect(
       await screen.findByText(
-        '20 篇高清 PNG 图片已打包下载。',
+        '22 篇高清 PNG 图片已打包下载。',
         {},
         { timeout: 10_000 }
       )
     ).toBeInTheDocument();
     expect(loadAllPassages).toHaveBeenCalledOnce();
-    expect(toBlob).toHaveBeenCalledTimes(20);
+    expect(toBlob).toHaveBeenCalledTimes(22);
     expect(zipSync).toHaveBeenCalledOnce();
     const archiveFiles = vi.mocked(zipSync).mock.calls[0][0];
-    expect(Object.keys(archiveFiles)).toHaveLength(20);
+    expect(Object.keys(archiveFiles)).toHaveLength(22);
     expect(Object.keys(archiveFiles)[0]).toContain('NO. 01');
-    expect(Object.keys(archiveFiles)[19]).toContain('NO. 20');
+    expect(Object.keys(archiveFiles)[21]).toContain('NO. 22');
     expect(vi.mocked(zipSync).mock.calls[0][1]).toEqual({ level: 0 });
     expect(downloadedBlob?.type).toBe('application/zip');
-    expect(downloadedFilename).toBe('cet4-core-passages.zip');
+    expect(downloadedFilename).toBe('passages.zip');
     expect(
       screen.getByRole('heading', {
         name: /跨越重洋的学术探索与文化适应/,
@@ -899,11 +887,11 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
   });
 
-  it('四级核心篇第 1 批短文库（共 20 篇）可通过界面目录完整浏览与切换精读', async () => {
+  it('短文库（共 22 篇）可通过界面目录完整浏览与切换精读', async () => {
     const user = userEvent.setup();
-    render(<App passages={COMPILED_CET4_BATCH_1_PASSAGES} />);
+    render(<App passages={COMPILED_PASSAGES} />);
 
-    // Initial passage should be NO. 01 of batch 1
+    // Initial passage should be NO. 01
     expect(
       screen.getByRole('heading', { name: /跨越重洋的学术探索与文化适应/ })
     ).toBeInTheDocument();
@@ -917,7 +905,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       screen.getByRole('heading', { name: '短文目录' })
     ).toBeInTheDocument();
 
-    // Verify multiple batch 1 passages exist in directory
+    // Verify multiple passages exist in directory
     expect(
       screen.getByRole('button', {
         name: /^NO\. 01.*跨越重洋的学术探索与文化适应/,

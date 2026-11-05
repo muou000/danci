@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_009: Passage = {
-  "id": "cet4-b1-009",
+  "id": "passage-009",
   "indexLabel": "NO. 09",
-  "tier": "cet4-core",
   "topic": "乡村传统工艺复兴与文创品牌塑造",
   "titleZh": "乡村传统手工艺的文创品牌之路",
   "titleEn": "Revitalizing Traditional Rural Crafts Through Brand Innovation",

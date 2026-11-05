@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_002: Passage = {
-  "id": "cet4-b1-002",
+  "id": "passage-002",
   "indexLabel": "NO. 02",
-  "tier": "cet4-core",
   "topic": "民用航空客运服务与旅客健康应急保障",
   "titleZh": "民用航空客运服务与旅客健康应急保障",
   "titleEn": "Civil Aviation Passenger Services and In-Flight Health Safeguards",

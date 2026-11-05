@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_013: Passage = {
-  id: 'cet4-b1-013',
+  id: "passage-013",
   indexLabel: 'NO. 13',
-  tier: 'cet4-core',
   topic: '工业建筑遗产更新与低碳社区活化',
   titleZh: '工业建筑遗产更新与低碳社区活化',
   titleEn: 'Industrial Heritage Regeneration and Low-Carbon Community Renewal',

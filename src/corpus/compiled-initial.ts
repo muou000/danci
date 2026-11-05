@@ -1,5 +1,5 @@
-import compiledFirstPassageJson from '../generated/compiled-cet4-batch-1-first.json';
+import compiledFirstPassageJson from '../generated/compiled-first-passage.json';
 import type { CompiledPassage } from './index';
 
-export const COMPILED_CET4_BATCH_1_FIRST_PASSAGE =
+export const COMPILED_FIRST_PASSAGE =
   compiledFirstPassageJson as CompiledPassage;

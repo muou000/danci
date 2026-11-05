@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_005: Passage = {
-  "id": "cet4-b1-005",
+  "id": "passage-005",
   "indexLabel": "NO. 05",
-  "tier": "cet4-core",
   "topic": "现代航天探索与天文普及",
   "titleZh": "现代深空探索与天文学科学普及",
   "titleEn": "Deep Space Exploration and Astronomical Education",

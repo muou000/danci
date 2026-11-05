@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_008: Passage = {
-  id: "cet4-b1-008",
+  id: "passage-008",
   indexLabel: "NO. 08",
-  tier: "cet4-core",
   topic: "现代生物医学研究与生命伦理治理",
   titleZh: "现代生物医学创新与生命伦理治理",
   titleEn: "Biomedical Innovation, Gene Research, and Ethical Governance",

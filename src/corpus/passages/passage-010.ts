@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_010: Passage = {
-  id: 'cet4-b1-010',
+  id: "passage-010",
   indexLabel: 'NO. 10',
-  tier: 'cet4-core',
   topic: '青年商业创业与财务预算管理',
   titleZh: '青年商业破局与财务预算管理',
   titleEn: 'Youth Entrepreneurship and Financial Budget Management',

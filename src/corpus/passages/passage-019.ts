@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_019: Passage = {
-  id: 'cet4-b1-019',
+  id: "passage-019",
   indexLabel: 'NO. 19',
-  tier: 'cet4-core',
   topic: '海洋科学考察、极地生态危机与科研实证评估',
   titleZh: '极地海洋科考、生态危机应对与科研实证评估',
   titleEn:

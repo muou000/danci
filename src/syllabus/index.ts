@@ -6,30 +6,14 @@ import {
 
 export type SyllabusLevel = 'cet4' | 'cet6';
 export type VocabTier = 'exempt' | 'high-frequency' | 'regular';
-export type BatchId =
-  | 'cet4-batch-1'
-  | 'cet4-batch-2'
-  | 'cet4-batch-3'
-  | 'cet4-batch-4'
-  | 'cet6-batch-1'
-  | 'cet6-batch-2';
-
-export interface BatchManifest {
-  batchId: BatchId;
-  level: SyllabusLevel;
-  batchIndex: number;
-  headwordIds: string[];
-}
 
 export interface CatalogEntry extends SyllabusHeadword {
   tier: VocabTier;
-  batchId?: BatchId;
 }
 
 export interface SyllabusCatalog {
   entries: CatalogEntry[];
   byId: Map<string, CatalogEntry>;
-  batches: BatchManifest[];
 }
 
 export interface RawSyllabusRow {
@@ -394,19 +378,6 @@ export function parseSyllabusRows(rows: RawSyllabusRow[]): SyllabusHeadword[] {
 const EXEMPT_SET = new Set<string>(EXEMPT_HEADWORD_IDS);
 const HIGH_FREQ_SET = new Set<string>(HIGH_FREQUENCY_HEADWORD_IDS);
 
-function splitEvenly(ids: string[], parts: number): string[][] {
-  const buckets: string[][] = [];
-  const base = Math.floor(ids.length / parts);
-  const remainder = ids.length % parts;
-  let offset = 0;
-  for (let i = 0; i < parts; i++) {
-    const size = base + (i < remainder ? 1 : 0);
-    buckets.push(ids.slice(offset, offset + size));
-    offset += size;
-  }
-  return buckets;
-}
-
 export function buildSyllabusCatalog(
   headwords: SyllabusHeadword[]
 ): SyllabusCatalog {
@@ -420,44 +391,8 @@ export function buildSyllabusCatalog(
     return { ...h, tier };
   });
 
-  const cet4CoreIds = entries
-    .filter((e) => e.level === 'cet4' && e.tier !== 'exempt')
-    .map((e) => e.id);
-  const cet6CoreIds = entries
-    .filter((e) => e.level === 'cet6')
-    .map((e) => e.id);
-
-  const cet4Chunks = splitEvenly(cet4CoreIds, 4);
-  const cet6Chunks = splitEvenly(cet6CoreIds, 2);
-
-  const batches: BatchManifest[] = [
-    ...cet4Chunks.map((chunk, i) => ({
-      batchId: `cet4-batch-${i + 1}` as BatchId,
-      level: 'cet4' as const,
-      batchIndex: i + 1,
-      headwordIds: chunk,
-    })),
-    ...cet6Chunks.map((chunk, i) => ({
-      batchId: `cet6-batch-${i + 1}` as BatchId,
-      level: 'cet6' as const,
-      batchIndex: i + 1,
-      headwordIds: chunk,
-    })),
-  ];
-
-  const batchByHeadword = new Map<string, BatchId>();
-  for (const batch of batches) {
-    for (const id of batch.headwordIds) {
-      batchByHeadword.set(id, batch.batchId);
-    }
-  }
-  for (const entry of entries) {
-    const bid = batchByHeadword.get(entry.id);
-    if (bid) entry.batchId = bid;
-  }
-
   const byId = new Map<string, CatalogEntry>(entries.map((e) => [e.id, e]));
-  return { entries, byId, batches };
+  return { entries, byId };
 }
 
 let cachedDefaultCatalog: SyllabusCatalog | null = null;
@@ -466,7 +401,6 @@ export function getDefaultSyllabusCatalog(): SyllabusCatalog {
   if (cachedDefaultCatalog) return cachedDefaultCatalog;
   const raw = syllabusCatalogJson as {
     entries: CatalogEntry[];
-    batches: BatchManifest[];
   };
   const byId = new Map<string, CatalogEntry>(
     raw.entries.map((e) => [e.id, e])
@@ -474,7 +408,6 @@ export function getDefaultSyllabusCatalog(): SyllabusCatalog {
   cachedDefaultCatalog = {
     entries: raw.entries,
     byId,
-    batches: raw.batches,
   };
   return cachedDefaultCatalog;
 }

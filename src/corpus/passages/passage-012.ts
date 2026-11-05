@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_012: Passage = {
-  id: 'cet4-b1-012',
+  id: "passage-012",
   indexLabel: 'NO. 12',
-  tier: 'cet4-core',
   topic: '气候适应型农业与绿色冷链物流',
   titleZh: '气候适应型农业与绿色冷链物流',
   titleEn: 'Climate-Resilient Agriculture and Green Cold-Chain Logistics',

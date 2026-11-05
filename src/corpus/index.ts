@@ -3,15 +3,11 @@ import {
   resolveWordToHeadwords,
   type SyllabusCatalog,
 } from '../syllabus';
-import { DEMO_PASSAGES } from './demo-passages';
 import { toCircledNumber } from './formatting';
 
-export { DEMO_PASSAGES };
-export { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
-export { PASSAGE_TIER_LABELS } from './labels';
+export { PASSAGES, ALL_PASSAGES } from './passages';
 export { toCircledNumber } from './formatting';
 
-export type PassageTier = 'cet4-core' | 'cet6-advanced';
 export type AnnotationCategory =
   | 'regular'
   | 'high-frequency'
@@ -52,7 +48,6 @@ export interface ExpansionEntry {
 export interface Passage {
   id: string;
   indexLabel: string;
-  tier: PassageTier;
   topic: string;
   titleZh: string;
   titleEn: string;
@@ -96,7 +91,6 @@ export interface CompiledParagraph {
 export interface CompiledPassage {
   id: string;
   indexLabel: string;
-  tier: PassageTier;
   topic: string;
   titleZh: string;
   titleEn: string;
@@ -514,7 +508,6 @@ export function compilePassage(
   return {
     id: passage.id,
     indexLabel: passage.indexLabel,
-    tier: passage.tier,
     topic: passage.topic,
     titleZh: passage.titleZh,
     titleEn: passage.titleEn,

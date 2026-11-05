@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_018: Passage = {
-  id: 'cet4-b1-018',
+  id: "passage-018",
   indexLabel: 'NO. 18',
-  tier: 'cet4-core',
   topic: '跨国企业治理、商业合规与契约诚信',
   titleZh: '跨国企业治理、商业合规与契约诚信',
   titleEn: 'Corporate Governance, Contract Integrity, and Legal Compliance',

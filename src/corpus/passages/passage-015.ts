@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_015: Passage = {
-  id: 'cet4-b1-015',
+  id: "passage-015",
   indexLabel: 'NO. 15',
-  tier: 'cet4-core',
   topic: '现代化港口商贸、海运物流与区域多边合作',
   titleZh: '现代化港口商贸、海运物流与区域多边合作',
   titleEn: 'Modern Port Commerce, Maritime Logistics, and Regional Economic Cooperation',

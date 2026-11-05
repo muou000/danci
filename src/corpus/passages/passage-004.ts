@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_004: Passage = {
-    "id": "cet4-b1-004",
+    "id": "passage-004",
     "indexLabel": "NO. 04",
-    "tier": "cet4-core",
     "topic": "城市更新与宜居社区空间",
     "titleZh": "城市更新与宜居社区空间",
     "titleEn": "Urban Renewal and Livable Community Spaces",

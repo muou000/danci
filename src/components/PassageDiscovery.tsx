@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { CompiledPassage } from '../corpus';
-import { PASSAGE_TIER_LABELS } from '../corpus/labels';
 import type { LearningState } from '../learning-state';
 import {
   filterPassages,
@@ -9,7 +8,6 @@ import {
   PASSAGE_TOPIC_CATEGORIES,
   type PassageTopicFilter,
   type PassageSearchResult,
-  type PassageTierFilter,
 } from '../passage-library';
 
 interface GlobalPassageSearchProps {
@@ -120,12 +118,6 @@ interface PassageDirectoryProps {
   onMarkPassageRead: (passageId: string) => void;
 }
 
-const tierFilters: Array<{ value: PassageTierFilter; label: string }> = [
-  { value: 'all', label: '全部' },
-  { value: 'cet4-core', label: PASSAGE_TIER_LABELS['cet4-core'] },
-  { value: 'cet6-advanced', label: PASSAGE_TIER_LABELS['cet6-advanced'] },
-];
-
 function serializeTopicFilter(filter: PassageTopicFilter): string {
   if (filter.kind === 'all') return 'all';
   return `${filter.kind}:${filter.value}`;
@@ -153,7 +145,6 @@ export function PassageDirectory({
   onOpenPassage,
   onMarkPassageRead,
 }: PassageDirectoryProps) {
-  const [tierFilter, setTierFilter] = useState<PassageTierFilter>('all');
   const [topicFilter, setTopicFilter] = useState<PassageTopicFilter>({
     kind: 'all',
   });
@@ -174,8 +165,8 @@ export function PassageDirectory({
     [passages]
   );
   const filteredPassages = useMemo(
-    () => filterPassages(passages, tierFilter, topicFilter),
-    [passages, tierFilter, topicFilter]
+    () => filterPassages(passages, topicFilter),
+    [passages, topicFilter]
   );
 
   return (
@@ -191,22 +182,6 @@ export function PassageDirectory({
       </header>
 
       <div className="passage-directory__filters">
-        <div
-          className="passage-directory__tier-filters"
-          role="group"
-          aria-label="难度筛选"
-        >
-          {tierFilters.map((filter) => (
-            <button
-              key={filter.value}
-              type="button"
-              aria-pressed={tierFilter === filter.value}
-              onClick={() => setTierFilter(filter.value)}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
         <label className="passage-directory__topic-filter">
           <span>题材</span>
           <select
@@ -260,7 +235,6 @@ export function PassageDirectory({
             passage.indexLabel,
             passage.titleZh,
             passage.topic,
-            PASSAGE_TIER_LABELS[passage.tier],
             `待背词条 ${progress.remainingCount} / ${progress.totalCount}`,
             readStatus,
           ].join(' ');
@@ -276,11 +250,6 @@ export function PassageDirectory({
                 <span className="passage-directory__entry-meta">
                   <span className="passage-directory__index">
                     {passage.indexLabel}
-                  </span>
-                  <span
-                    className={`passage-directory__tier passage-directory__tier--${passage.tier}`}
-                  >
-                    {PASSAGE_TIER_LABELS[passage.tier]}
                   </span>
                   <span className="passage-directory__topic">
                     {passage.topic}

@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_014: Passage = {
-  id: 'cet4-b1-014',
+  id: "passage-014",
   indexLabel: 'NO. 14',
-  tier: 'cet4-core',
   topic: '民商事合同纠纷调解与社区法律诊所便民服务',
   titleZh: '民商事合同纠纷调解与社区法律诊所便民服务',
   titleEn: 'Civil Contract Dispute Mediation and Community Legal Clinic Services',

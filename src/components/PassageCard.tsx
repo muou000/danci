@@ -5,7 +5,6 @@ import type {
   InlineAnnotationToken,
 } from '../corpus';
 import { toCircledNumber } from '../corpus/formatting';
-import { PASSAGE_TIER_LABELS } from '../corpus/labels';
 
 export interface PassageCardProps {
   passage: CompiledPassage;
@@ -239,11 +238,6 @@ export function PassageCard({
         <section className="passage-meta" aria-label="篇目信息">
           <div className="passage-meta__top">
             <span className="passage-meta__index">{passage.indexLabel}</span>
-            <span
-              className={`passage-meta__tier passage-meta__tier--${passage.tier}`}
-            >
-              {PASSAGE_TIER_LABELS[passage.tier]}
-            </span>
           </div>
           <div className="passage-meta__topic">{passage.topic}</div>
         </section>

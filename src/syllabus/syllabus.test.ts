@@ -125,44 +125,16 @@ describe('Seam 1: syllabus — 大纲词表解析', () => {
     expect(catalog.byId.get('sustain')?.tier).toBe('high-frequency');
   });
 
-  it('生成确定性且互不重叠的批次分配清单：四级核心大纲词目均分为 4 批（每批约 850 词目），1,265 个 ★ 六级词目均分为 2 批（每批 630–635 词目）', async () => {
+  it('大纲词表目录生成确定性词目清单，涵盖全部 5,418 条大纲词目且不再划分批次', async () => {
     const headwords = await loadSyllabusFromPdf(OUTLINE_PDF_PATH);
     const catalogA = buildSyllabusCatalog(headwords);
     const catalogB = buildSyllabusCatalog(headwords);
 
-    // 确定性：两次生成的批次清单完全一致
-    expect(catalogA.batches).toEqual(catalogB.batches);
+    expect(catalogA.entries).toEqual(catalogB.entries);
+    expect(catalogA.entries).toHaveLength(5418);
 
-    const cet4Batches = catalogA.batches.filter((b) => b.level === 'cet4');
-    const cet6Batches = catalogA.batches.filter((b) => b.level === 'cet6');
-    expect(cet4Batches).toHaveLength(4);
-    expect(cet6Batches).toHaveLength(2);
-
-    // 四级每批约 850 个核心大纲词目（830–880），六级每批 630–635 个 ★ 六级词目
-    for (const b of cet4Batches) {
-      expect(b.headwordIds.length).toBeGreaterThanOrEqual(830);
-      expect(b.headwordIds.length).toBeLessThanOrEqual(880);
-    }
-    for (const b of cet6Batches) {
-      expect(b.headwordIds.length).toBeGreaterThanOrEqual(630);
-      expect(b.headwordIds.length).toBeLessThanOrEqual(635);
-    }
-
-    // 全部 6 批互不重叠，且并集精确等于全部非免注核心大纲词目（含全部 1,265 个 ★ 六级词目）
-    const allBatchIds = catalogA.batches.flatMap((b) => b.headwordIds);
-    const uniqueBatchIds = new Set(allBatchIds);
-    expect(uniqueBatchIds.size).toBe(allBatchIds.length);
-
-    const expectedCoreIds = catalogA.entries
-      .filter((e) => e.tier !== 'exempt')
-      .map((e) => e.id);
-    expect(allBatchIds.length).toBe(expectedCoreIds.length);
-    expect(cet6Batches.reduce((sum, b) => sum + b.headwordIds.length, 0)).toBe(
-      1265
-    );
-    for (const id of expectedCoreIds) {
-      expect(uniqueBatchIds.has(id)).toBe(true);
-    }
+    const nonExemptEntries = catalogA.entries.filter((e) => e.tier !== 'exempt');
+    expect(nonExemptEntries.length).toBeGreaterThan(4600);
   });
 
   it('将常规屈折变形、不规则变形、英美拼写及大纲派生词准确归并至大纲词目，且预构建大纲词表目录与 PDF 解析结果完全一致', async () => {
@@ -171,7 +143,6 @@ describe('Seam 1: syllabus — 大纲词表解析', () => {
     const staticCatalog = getDefaultSyllabusCatalog();
 
     expect(staticCatalog.entries).toEqual(pdfCatalog.entries);
-    expect(staticCatalog.batches).toEqual(pdfCatalog.batches);
 
     const resolveIds = (word: string) =>
       resolveWordToHeadwords(word, staticCatalog).map((e) => e.id);

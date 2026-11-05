@@ -1,9 +1,8 @@
 import type { Passage } from '../index';
 
 export const PASSAGE_011: Passage = {
-  id: 'cet4-b1-011',
+  id: "passage-011",
   indexLabel: 'NO. 11',
-  tier: 'cet4-core',
   topic: '城市运河生态修复与青年志愿行动',
   titleZh: '城市运河生态修复与青年志愿行动',
   titleEn: 'Urban Canal Ecological Restoration and Youth Volunteer Campaign',

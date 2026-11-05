@@ -16,7 +16,7 @@ async function main() {
 
   fs.writeFileSync(
     catalogOutPath,
-    JSON.stringify({ entries: catalog.entries, batches: catalog.batches }, null, 2) + '\n',
+    JSON.stringify({ entries: catalog.entries }, null, 2) + '\n',
     'utf8'
   );
   const cet6Count = catalog.entries.filter((e) => e.level === 'cet6').length;

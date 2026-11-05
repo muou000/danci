@@ -23,14 +23,12 @@ function annotation(itemKey: string): InlineAnnotationToken {
 
 function passage(
   id: string,
-  tier: CompiledPassage['tier'],
   topic: string,
   tokens: InlineAnnotationToken[]
 ): CompiledPassage {
   return {
     id,
     indexLabel: id,
-    tier,
     topic,
     titleZh: id,
     titleEn: id,
@@ -56,8 +54,8 @@ function passage(
 
 describe('passage library discovery', () => {
   const passages = [
-    passage('cet4-ecology', 'cet4-core', '绿色校园与消费转型', [annotation('word:habit')]),
-    passage('cet6-ai', 'cet6-advanced', '算法生态与认知自主', [annotation('word:study')]),
+    passage('cet4-ecology', '绿色校园与消费转型', [annotation('word:habit')]),
+    passage('cet6-ai', '算法生态与认知自主', [annotation('word:study')]),
   ];
 
   it('filters by shared topic family and exact passage topic together', () => {
@@ -72,28 +70,28 @@ describe('passage library discovery', () => {
       getPassageTopicCategories('算法生态与环境治理')
     ).toContain('生态环境');
     expect(
-      filterPassages(passages, 'cet6-advanced', {
+      filterPassages(passages, {
         kind: 'category',
         value: '科技人工智能',
       })
     ).toEqual([passages[1]]);
     expect(
-      filterPassages(passages, 'cet4-core', {
+      filterPassages([passages[0]], {
         kind: 'category',
         value: '科技人工智能',
       })
     ).toEqual([]);
     expect(
-      filterPassages(passages, 'cet4-core', {
+      filterPassages(passages, {
         kind: 'topic',
         value: '绿色校园与消费转型',
       })
     ).toEqual([passages[0]]);
-    expect(filterPassages(passages, 'all', { kind: 'all' })).toEqual(passages);
+    expect(filterPassages(passages, { kind: 'all' })).toEqual(passages);
   });
 
   it('counts unique inline annotation keys against the mastered set', () => {
-    const item = passage('progress', 'cet4-core', '测试', [
+    const item = passage('progress', '测试', [
       annotation('word:habit'),
       annotation('word:habit'),
       annotation('phrase:daily habit'),
@@ -110,7 +108,6 @@ describe('passage library discovery', () => {
   it('finds annotation inflections and Chinese expansion glosses across the corpus', () => {
     const searchablePassage = passage(
       'searchable',
-      'cet6-advanced',
       '科技人工智能',
       [
         {
@@ -179,7 +176,7 @@ describe('passage library discovery', () => {
   });
 
   it('matches common irregular forms to their annotated headword', () => {
-    const item = passage('irregular-forms', 'cet4-core', '测试', [
+    const item = passage('irregular-forms', '测试', [
       {
         ...annotation('word:good'),
         surface: 'good',

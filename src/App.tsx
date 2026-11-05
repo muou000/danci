@@ -2,8 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { zipSync } from 'fflate';
 import type { CompiledPassage } from './corpus';
-import { PASSAGE_TIER_LABELS } from './corpus/labels';
-import { COMPILED_CET4_BATCH_1_FIRST_PASSAGE } from './corpus/compiled-initial';
+import { COMPILED_FIRST_PASSAGE } from './corpus/compiled-initial';
 import {
   GlobalPassageSearch,
   PassageDirectory,
@@ -103,7 +102,7 @@ function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[
 }
 
 export function App({
-  passages: initialPassages = [COMPILED_CET4_BATCH_1_FIRST_PASSAGE],
+  passages: initialPassages = [COMPILED_FIRST_PASSAGE],
   loadAllPassages,
 }: AppProps) {
   const {
@@ -373,7 +372,7 @@ export function App({
     }
   };
 
-  const exportCET4PassageBatch = async () => {
+  const exportPassageBatch = async () => {
     flushSync(() => {
       setIsExporting(true);
       setExportMessage('正在加载并生成批量图片...');
@@ -381,16 +380,13 @@ export function App({
 
     try {
       const allPassages = await ensureCorpusLoaded();
-      const cet4Passages = allPassages.filter(
-        (passage) => passage.tier === 'cet4-core'
-      );
-      if (cet4Passages.length === 0) {
-        throw new Error('No CET-4 passages are available to export.');
+      if (allPassages.length === 0) {
+        throw new Error('No passages are available to export.');
       }
 
       const { toBlob } = await import('html-to-image');
       const files: Record<string, Uint8Array> = {};
-      for (const passage of cet4Passages) {
+      for (const passage of allPassages) {
         flushSync(() => setExportPassage(passage));
         const exportCard = exportCardRef.current;
         if (!exportCard) throw new Error('Passage image is not ready.');
@@ -406,9 +402,9 @@ export function App({
       const archive = zipSync(files, { level: 0 });
       downloadFile(
         new Blob([archive], { type: 'application/zip' }),
-        'cet4-core-passages.zip'
+        'passages.zip'
       );
-      setExportMessage(`${cet4Passages.length} 篇高清 PNG 图片已打包下载。`);
+      setExportMessage(`${allPassages.length} 篇高清 PNG 图片已打包下载。`);
     } catch {
       setExportMessage('批量图片导出失败，请重试。');
     } finally {
@@ -486,8 +482,7 @@ export function App({
                 上一篇
               </button>
               <span>
-                {activePassage.indexLabel} ·{' '}
-                {PASSAGE_TIER_LABELS[activePassage.tier]} · {activePassage.topic}
+                {activePassage.indexLabel} · {activePassage.topic}
               </span>
               <button
                 type="button"
@@ -519,9 +514,9 @@ export function App({
                   className="passage-export-button"
                   aria-busy={isExporting}
                   disabled={isExporting}
-                  onClick={exportCET4PassageBatch}
+                  onClick={exportPassageBatch}
                 >
-                  {isExporting ? '正在生成批量图片...' : '批量导出20篇'}
+                  {isExporting ? '正在生成批量图片...' : '批量导出全部短文'}
                 </button>
                 <span
                   className="passage-export-status"

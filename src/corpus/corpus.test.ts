@@ -3,12 +3,11 @@ import { getDefaultSyllabusCatalog } from '../syllabus';
 import {
   compilePassage,
   computeCorpusCoverage,
-  DEMO_PASSAGES,
   validatePassage,
   type ExpansionEntry,
   type Passage,
 } from './index';
-import { CET4_BATCH_1_PASSAGES } from './cet4-batch-1';
+import { PASSAGES } from './passages';
 
 const catalog = getDefaultSyllabusCatalog();
 
@@ -17,7 +16,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passageA: Passage = {
       id: 'test-p1',
       indexLabel: 'NO. 01',
-      tier: 'cet4-core',
       topic: '测试题材',
       titleZh: '测试短文一',
       titleEn: 'Test Passage One',
@@ -102,7 +100,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passageWrappedOnly: Passage = {
       id: 'test-overlap-1',
       indexLabel: 'NO. 01',
-      tier: 'cet4-core',
       topic: '测试题材',
       titleZh: '短语覆盖优先级测试',
       titleEn: 'Phrase Priority Test',
@@ -187,7 +184,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passage: Passage = {
       id: 'test-multiword-headword',
       indexLabel: 'NO. 01',
-      tier: 'cet4-core',
       topic: '测试多词大纲词目',
       titleZh: '测试大纲词目匹配',
       titleEn: 'Test Multiword Syllabus Headwords',
@@ -252,7 +248,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const baseValidPassage: Passage = {
       id: 'test-validate-ok',
       indexLabel: 'NO. 01',
-      tier: 'cet6-advanced',
       topic: '认知科学',
       titleZh: '大脑可塑性与深度学习',
       titleEn: 'Brain Plasticity and Deep Learning',
@@ -353,15 +348,13 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     );
   });
 
-  it('内置示范短文（四级核心篇与含超纲词的六级进阶篇）100% 通过自动化语料规则校验', () => {
-    expect(DEMO_PASSAGES.length).toBeGreaterThanOrEqual(2);
-
-    const cet4Demo = DEMO_PASSAGES.find((p) => p.tier === 'cet4-core');
-    const cet6Demo = DEMO_PASSAGES.find((p) => p.tier === 'cet6-advanced');
+  it('示范短文整合至正式短文列表（NO. 21 与 NO. 22）100% 通过自动化语料规则校验', () => {
+    const cet4Demo = PASSAGES.find((p) => p.id === 'passage-021');
+    const cet6Demo = PASSAGES.find((p) => p.id === 'passage-022');
     expect(cet4Demo).toBeDefined();
     expect(cet6Demo).toBeDefined();
 
-    for (const demo of DEMO_PASSAGES) {
+    for (const demo of [cet4Demo!, cet6Demo!]) {
       const result = validatePassage(demo, catalog);
       expect(result.errors).toEqual([]);
       expect(demo.paragraphs.length).toBeGreaterThanOrEqual(3);
@@ -382,9 +375,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 01 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 01');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 01');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('国际学术交流与跨文化适应');
     expect(passage!.titleEn).toBe(
       'Academic Exploration and Cultural Adaptation Abroad'
@@ -465,9 +457,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 02 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 02');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 02');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('民用航空客运服务与旅客健康应急保障');
     expect(passage!.titleEn).toBe(
       'Civil Aviation Passenger Services and In-Flight Health Safeguards'
@@ -523,9 +514,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 03 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 03');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 03');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('远古遗址考古与高海拔考察');
     expect(passage!.titleEn).toBe(
       'Ancient Ruins and Alpine Trail Exploration'
@@ -591,9 +581,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 04 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 04');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 04');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('城市更新与宜居社区空间');
     expect(passage!.titleEn).toBe('Urban Renewal and Livable Community Spaces');
     expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
@@ -643,9 +632,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 05 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 05');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 05');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代航天探索与天文普及');
     expect(passage!.titleEn).toBe('Deep Space Exploration and Astronomical Education');
     expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
@@ -707,9 +695,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 06 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 06');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 06');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('家庭预算管理与理性消费决策');
     expect(passage!.titleEn).toBe(
       'Household Budgeting, Smart Spending, and Financial Resilience'
@@ -792,9 +779,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 07 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 07');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 07');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('滨海湿地生态保护与科研监测');
     expect(passage!.titleEn).toBe(
       'Coastal Wetland Restoration and Migratory Habitat Conservation'
@@ -871,9 +857,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 08 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 08');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 08');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代生物医学研究与生命伦理治理');
     expect(passage!.titleEn).toBe(
       'Biomedical Innovation, Gene Research, and Ethical Governance'
@@ -957,9 +942,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 09 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 09');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 09');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('乡村传统工艺复兴与文创品牌塑造');
     expect(passage!.titleEn).toBe(
       'Revitalizing Traditional Rural Crafts Through Brand Innovation'
@@ -1056,9 +1040,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 10 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 10');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 10');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('青年商业创业与财务预算管理');
     expect(passage!.titleEn).toBe(
       'Youth Entrepreneurship and Financial Budget Management'
@@ -1152,9 +1135,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 11 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 11');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 11');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('城市运河生态修复与青年志愿行动');
     expect(passage!.titleEn).toBe(
       'Urban Canal Ecological Restoration and Youth Volunteer Campaign'
@@ -1263,9 +1245,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 12 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 12');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 12');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('气候适应型农业与绿色冷链物流');
     expect(passage!.titleEn).toBe(
       'Climate-Resilient Agriculture and Green Cold-Chain Logistics'
@@ -1398,9 +1379,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 13 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 13');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 13');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('工业建筑遗产更新与低碳社区活化');
     expect(passage!.titleEn).toBe(
       'Industrial Heritage Regeneration and Low-Carbon Community Renewal'
@@ -1556,9 +1536,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 14 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 14');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 14');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('民商事合同纠纷调解与社区法律诊所便民服务');
     expect(passage!.titleEn).toBe(
       'Civil Contract Dispute Mediation and Community Legal Clinic Services'
@@ -1738,9 +1717,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 15 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 15');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 15');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代化港口商贸、海运物流与区域多边合作');
     expect(passage!.titleEn).toBe(
       'Modern Port Commerce, Maritime Logistics, and Regional Economic Cooperation'
@@ -1922,9 +1900,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 16 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 16');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 16');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代工程团队协作、系统研发与职业操守');
     expect(passage!.titleEn).toBe(
       'Modern Engineering Collaboration, Systems Innovation, and Professional Ethics'
@@ -2065,9 +2042,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 17 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 17');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 17');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代社会伦理、儒家思想与公共协商共识');
     expect(passage!.titleEn).toBe(
       'Modern Social Ethics, Confucian Heritage, and Civic Consensus'
@@ -2192,9 +2168,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 18 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 18');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 18');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('跨国企业治理、商业合规与契约诚信');
     expect(passage!.titleEn).toBe(
       'Corporate Governance, Contract Integrity, and Legal Compliance'
@@ -2330,9 +2305,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 19 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 19');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 19');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('海洋科学考察、极地生态危机与科研实证评估');
     expect(passage!.titleEn).toBe(
       'Polar Marine Expeditions, Ecological Crisis Response, and Empirical Scientific Assessment'
@@ -2490,9 +2464,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   });
 
   it('CET-4 核心篇 NO. 20 重写后满足主题自然度、词量及行间标注校验规范', () => {
-    const passage = CET4_BATCH_1_PASSAGES.find((p) => p.indexLabel === 'NO. 20');
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 20');
     expect(passage).toBeDefined();
-    expect(passage!.tier).toBe('cet4-core');
     expect(passage!.topic).toBe('现代数字健康管理、日常预防医疗与身心平衡');
     expect(passage!.titleEn).toBe(
       'Digital Health Technologies, Everyday Preventive Care, and Well-being'
@@ -2655,12 +2628,12 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it('CET-4 核心短文库全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
-    expect(CET4_BATCH_1_PASSAGES).toHaveLength(20);
+  it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
+    const first20 = PASSAGES.slice(0, 20);
+    expect(first20).toHaveLength(20);
 
-    for (const [idx, passage] of CET4_BATCH_1_PASSAGES.entries()) {
-      expect(passage.tier).toBe('cet4-core');
-      expect(passage.id).toBe(`cet4-b1-${String(idx + 1).padStart(3, '0')}`);
+    for (const [idx, passage] of first20.entries()) {
+      expect(passage.id).toBe(`passage-${String(idx + 1).padStart(3, '0')}`);
       expect(passage.paragraphs.length).toBeGreaterThanOrEqual(3);
       expect(passage.paragraphs.length).toBeLessThanOrEqual(4);
       expect(passage.expansionEntries.length).toBeGreaterThanOrEqual(12);
@@ -2690,5 +2663,15 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
         expect(entry?.level).not.toBe('cet6');
       }
     }
+  });
+
+  it('PASSAGES 统一收录全部 22 篇短文，ID 与编号连续且唯一', () => {
+    expect(PASSAGES).toHaveLength(22);
+    PASSAGES.forEach((passage, idx) => {
+      const expectedId = `passage-${String(idx + 1).padStart(3, '0')}`;
+      const expectedLabel = `NO. ${String(idx + 1).padStart(2, '0')}`;
+      expect(passage.id).toBe(expectedId);
+      expect(passage.indexLabel).toBe(expectedLabel);
+    });
   });
 });
