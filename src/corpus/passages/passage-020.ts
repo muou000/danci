@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_020: Passage = {
   id: "passage-020",
   indexLabel: 'NO. 20',
-  topic: '现代数字健康管理、日常预防医疗与身心平衡',
+  topic: '健康医疗',
   titleZh: '现代数字健康管理、日常预防医疗与身心平衡',
   titleEn: 'Digital Health Technologies, Everyday Preventive Care, and Well-being',
   paragraphs: [

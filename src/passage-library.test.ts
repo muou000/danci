@@ -2,12 +2,12 @@ import { describe, expect, it } from 'vitest';
 import type {
   CompiledPassage,
   InlineAnnotationToken,
+  PassageTopicCategory,
 } from './corpus';
 import {
   buildPassageSearchIndex,
   filterPassages,
   getPassageProgress,
-  getPassageTopicCategories,
   searchPassages,
 } from './passage-library';
 
@@ -23,7 +23,7 @@ function annotation(itemKey: string): InlineAnnotationToken {
 
 function passage(
   id: string,
-  topic: string,
+  topic: PassageTopicCategory,
   tokens: InlineAnnotationToken[]
 ): CompiledPassage {
   return {
@@ -54,44 +54,28 @@ function passage(
 
 describe('passage library discovery', () => {
   const passages = [
-    passage('cet4-ecology', '绿色校园与消费转型', [annotation('word:habit')]),
-    passage('cet6-ai', '算法生态与认知自主', [annotation('word:study')]),
+    passage('cet4-ecology', '生态环境', [annotation('word:habit')]),
+    passage('cet6-ai', '科技', [annotation('word:study')]),
   ];
 
-  it('filters by shared topic family and exact passage topic together', () => {
-    expect(getPassageTopicCategories(passages[1].topic)).toContain(
-      '科技人工智能'
-    );
-    expect(getPassageTopicCategories(passages[1].topic)).not.toContain(
-      '生态环境'
-    );
-    expect(getPassageTopicCategories(passages[0].topic)).toContain('生态环境');
-    expect(
-      getPassageTopicCategories('算法生态与环境治理')
-    ).toContain('生态环境');
+  it('filters by the normalized topic category', () => {
     expect(
       filterPassages(passages, {
         kind: 'category',
-        value: '科技人工智能',
+        value: '科技',
       })
     ).toEqual([passages[1]]);
     expect(
       filterPassages([passages[0]], {
         kind: 'category',
-        value: '科技人工智能',
+        value: '科技',
       })
     ).toEqual([]);
-    expect(
-      filterPassages(passages, {
-        kind: 'topic',
-        value: '绿色校园与消费转型',
-      })
-    ).toEqual([passages[0]]);
     expect(filterPassages(passages, { kind: 'all' })).toEqual(passages);
   });
 
   it('counts unique inline annotation keys against the mastered set', () => {
-    const item = passage('progress', '测试', [
+    const item = passage('progress', '社会生活', [
       annotation('word:habit'),
       annotation('word:habit'),
       annotation('phrase:daily habit'),
@@ -108,7 +92,7 @@ describe('passage library discovery', () => {
   it('finds annotation inflections and Chinese expansion glosses across the corpus', () => {
     const searchablePassage = passage(
       'searchable',
-      '科技人工智能',
+      '科技',
       [
         {
           ...annotation('word:study'),
@@ -176,7 +160,7 @@ describe('passage library discovery', () => {
   });
 
   it('matches common irregular forms to their annotated headword', () => {
-    const item = passage('irregular-forms', '测试', [
+    const item = passage('irregular-forms', '社会生活', [
       {
         ...annotation('word:good'),
         surface: 'good',

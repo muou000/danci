@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_002: Passage = {
   "id": "passage-002",
   "indexLabel": "NO. 02",
-  "topic": "民用航空客运服务与旅客健康应急保障",
+  "topic": "社会生活",
   "titleZh": "民用航空客运服务与旅客健康应急保障",
   "titleEn": "Civil Aviation Passenger Services and In-Flight Health Safeguards",
   "paragraphs": [

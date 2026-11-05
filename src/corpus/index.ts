@@ -15,6 +15,18 @@ export type AnnotationCategory =
   | 'phrase'
   | 'out-of-syllabus';
 
+export const PASSAGE_TOPIC_CATEGORIES = [
+  '社会生活',
+  '科技',
+  '生态环境',
+  '教育文化',
+  '职场经济',
+  '健康医疗',
+  '历史文化',
+] as const;
+
+export type PassageTopicCategory = (typeof PASSAGE_TOPIC_CATEGORIES)[number];
+
 export interface PassageSentence {
   sentenceNumber: number;
   english: string;
@@ -49,7 +61,7 @@ export interface ExpansionEntry {
 export interface Passage {
   id: string;
   indexLabel: string;
-  topic: string;
+  topic: PassageTopicCategory;
   titleZh: string;
   titleEn: string;
   paragraphs: PassageParagraph[];
@@ -92,7 +104,7 @@ export interface CompiledParagraph {
 export interface CompiledPassage {
   id: string;
   indexLabel: string;
-  topic: string;
+  topic: PassageTopicCategory;
   titleZh: string;
   titleEn: string;
   paragraphs: CompiledParagraph[];

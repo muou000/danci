@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_016: Passage = {
   id: "passage-016",
   indexLabel: 'NO. 16',
-  topic: '现代工程团队协作、系统研发与职业操守',
+  topic: '科技',
   titleZh: '现代工程团队协作、系统研发与职业操守',
   titleEn: 'Modern Engineering Collaboration, Systems Innovation, and Professional Ethics',
   paragraphs: [

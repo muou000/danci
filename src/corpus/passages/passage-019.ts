@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_019: Passage = {
   id: "passage-019",
   indexLabel: 'NO. 19',
-  topic: '海洋科学考察、极地生态危机与科研实证评估',
+  topic: '生态环境',
   titleZh: '极地海洋科考、生态危机应对与科研实证评估',
   titleEn:
     'Polar Marine Expeditions, Ecological Crisis Response, and Empirical Scientific Assessment',

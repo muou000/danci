@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_014: Passage = {
   id: "passage-014",
   indexLabel: 'NO. 14',
-  topic: '民商事合同纠纷调解与社区法律诊所便民服务',
+  topic: '社会生活',
   titleZh: '民商事合同纠纷调解与社区法律诊所便民服务',
   titleEn: 'Civil Contract Dispute Mediation and Community Legal Clinic Services',
   paragraphs: [

@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_012: Passage = {
   id: "passage-012",
   indexLabel: 'NO. 12',
-  topic: '气候适应型农业与绿色冷链物流',
+  topic: '生态环境',
   titleZh: '气候适应型农业与绿色冷链物流',
   titleEn: 'Climate-Resilient Agriculture and Green Cold-Chain Logistics',
   paragraphs: [

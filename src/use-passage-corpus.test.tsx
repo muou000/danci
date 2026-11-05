@@ -10,7 +10,7 @@ import {
 const passage = (id: string): CompiledPassage => ({
   id,
   indexLabel: id,
-  topic: '测试',
+  topic: '社会生活',
   titleZh: id,
   titleEn: id,
   paragraphs: [],

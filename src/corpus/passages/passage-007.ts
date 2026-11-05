@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_007: Passage = {
   id: "passage-007",
   indexLabel: "NO. 07",
-  topic: "滨海湿地生态保护与科研监测",
+  topic: "生态环境",
   titleZh: "滨海湿地的生态恢复与候鸟栖息地守护",
   titleEn: "Coastal Wetland Restoration and Migratory Habitat Conservation",
   paragraphs: [

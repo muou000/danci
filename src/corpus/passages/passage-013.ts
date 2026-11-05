@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_013: Passage = {
   id: "passage-013",
   indexLabel: 'NO. 13',
-  topic: '工业建筑遗产更新与低碳社区活化',
+  topic: '历史文化',
   titleZh: '工业建筑遗产更新与低碳社区活化',
   titleEn: 'Industrial Heritage Regeneration and Low-Carbon Community Renewal',
   paragraphs: [

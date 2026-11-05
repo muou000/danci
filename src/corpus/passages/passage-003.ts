@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_003: Passage = {
   "id": "passage-003",
   "indexLabel": "NO. 03",
-  "topic": "远古遗址考古与高海拔考察",
+  "topic": "历史文化",
   "titleZh": "荒原古道与高海拔古遗址考察",
   "titleEn": "Ancient Ruins and Alpine Trail Exploration",
   "paragraphs": [

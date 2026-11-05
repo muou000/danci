@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_011: Passage = {
   id: "passage-011",
   indexLabel: 'NO. 11',
-  topic: '城市运河生态修复与青年志愿行动',
+  topic: '生态环境',
   titleZh: '城市运河生态修复与青年志愿行动',
   titleEn: 'Urban Canal Ecological Restoration and Youth Volunteer Campaign',
   paragraphs: [

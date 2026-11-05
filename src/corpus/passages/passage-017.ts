@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_017: Passage = {
   id: "passage-017",
   indexLabel: 'NO. 17',
-  topic: '现代社会伦理、儒家思想与公共协商共识',
+  topic: '社会生活',
   titleZh: '现代社会伦理、儒家思想与公共协商共识',
   titleEn: 'Modern Social Ethics, Confucian Heritage, and Civic Consensus',
   paragraphs: [

@@ -1,9 +1,9 @@
-import type { CompiledPassage } from './index';
+import type { CompiledPassage, PassageTopicCategory } from './index';
 
 export interface PassageCatalogEntry {
   id: string;
   indexLabel: string;
-  topic: string;
+  topic: PassageTopicCategory;
   titleZh: string;
   titleEn: string;
   annotationItemKeys: string[];

@@ -16,7 +16,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passageA: Passage = {
       id: 'test-p1',
       indexLabel: 'NO. 01',
-      topic: '测试题材',
+      topic: '社会生活',
       titleZh: '测试短文一',
       titleEn: 'Test Passage One',
       paragraphs: [
@@ -100,7 +100,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passageWrappedOnly: Passage = {
       id: 'test-overlap-1',
       indexLabel: 'NO. 01',
-      topic: '测试题材',
+      topic: '社会生活',
       titleZh: '短语覆盖优先级测试',
       titleEn: 'Phrase Priority Test',
       paragraphs: [
@@ -184,7 +184,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const passage: Passage = {
       id: 'test-multiword-headword',
       indexLabel: 'NO. 01',
-      topic: '测试多词大纲词目',
+      topic: '教育文化',
       titleZh: '测试大纲词目匹配',
       titleEn: 'Test Multiword Syllabus Headwords',
       paragraphs: [
@@ -248,7 +248,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     const baseValidPassage: Passage = {
       id: 'test-validate-ok',
       indexLabel: 'NO. 01',
-      topic: '认知科学',
+      topic: '科技',
       titleZh: '大脑可塑性与深度学习',
       titleEn: 'Brain Plasticity and Deep Learning',
       paragraphs: [
@@ -377,7 +377,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 01 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 01');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('国际学术交流与跨文化适应');
+    expect(passage!.topic).toBe('教育文化');
     expect(passage!.titleEn).toBe(
       'Academic Exploration and Cultural Adaptation Abroad'
     );
@@ -459,7 +459,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 02 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 02');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('民用航空客运服务与旅客健康应急保障');
+    expect(passage!.topic).toBe('社会生活');
     expect(passage!.titleEn).toBe(
       'Civil Aviation Passenger Services and In-Flight Health Safeguards'
     );
@@ -516,7 +516,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 03 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 03');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('远古遗址考古与高海拔考察');
+    expect(passage!.topic).toBe('历史文化');
     expect(passage!.titleEn).toBe(
       'Ancient Ruins and Alpine Trail Exploration'
     );
@@ -583,7 +583,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 04 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 04');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('城市更新与宜居社区空间');
+    expect(passage!.topic).toBe('社会生活');
     expect(passage!.titleEn).toBe('Urban Renewal and Livable Community Spaces');
     expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
     expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
@@ -634,7 +634,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 05 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 05');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代航天探索与天文普及');
+    expect(passage!.topic).toBe('科技');
     expect(passage!.titleEn).toBe('Deep Space Exploration and Astronomical Education');
     expect(passage!.paragraphs.length).toBeGreaterThanOrEqual(3);
     expect(passage!.paragraphs.length).toBeLessThanOrEqual(4);
@@ -697,7 +697,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 06 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 06');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('家庭预算管理与理性消费决策');
+    expect(passage!.topic).toBe('职场经济');
     expect(passage!.titleEn).toBe(
       'Household Budgeting, Smart Spending, and Financial Resilience'
     );
@@ -781,7 +781,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 07 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 07');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('滨海湿地生态保护与科研监测');
+    expect(passage!.topic).toBe('生态环境');
     expect(passage!.titleEn).toBe(
       'Coastal Wetland Restoration and Migratory Habitat Conservation'
     );
@@ -859,7 +859,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 08 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 08');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代生物医学研究与生命伦理治理');
+    expect(passage!.topic).toBe('健康医疗');
     expect(passage!.titleEn).toBe(
       'Biomedical Innovation, Gene Research, and Ethical Governance'
     );
@@ -944,7 +944,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 09 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 09');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('乡村传统工艺复兴与文创品牌塑造');
+    expect(passage!.topic).toBe('历史文化');
     expect(passage!.titleEn).toBe(
       'Revitalizing Traditional Rural Crafts Through Brand Innovation'
     );
@@ -1042,7 +1042,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 10 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 10');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('青年商业创业与财务预算管理');
+    expect(passage!.topic).toBe('职场经济');
     expect(passage!.titleEn).toBe(
       'Youth Entrepreneurship and Financial Budget Management'
     );
@@ -1137,7 +1137,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 11 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 11');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('城市运河生态修复与青年志愿行动');
+    expect(passage!.topic).toBe('生态环境');
     expect(passage!.titleEn).toBe(
       'Urban Canal Ecological Restoration and Youth Volunteer Campaign'
     );
@@ -1247,7 +1247,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 12 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 12');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('气候适应型农业与绿色冷链物流');
+    expect(passage!.topic).toBe('生态环境');
     expect(passage!.titleEn).toBe(
       'Climate-Resilient Agriculture and Green Cold-Chain Logistics'
     );
@@ -1381,7 +1381,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 13 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 13');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('工业建筑遗产更新与低碳社区活化');
+    expect(passage!.topic).toBe('历史文化');
     expect(passage!.titleEn).toBe(
       'Industrial Heritage Regeneration and Low-Carbon Community Renewal'
     );
@@ -1538,7 +1538,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 14 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 14');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('民商事合同纠纷调解与社区法律诊所便民服务');
+    expect(passage!.topic).toBe('社会生活');
     expect(passage!.titleEn).toBe(
       'Civil Contract Dispute Mediation and Community Legal Clinic Services'
     );
@@ -1719,7 +1719,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 15 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 15');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代化港口商贸、海运物流与区域多边合作');
+    expect(passage!.topic).toBe('职场经济');
     expect(passage!.titleEn).toBe(
       'Modern Port Commerce, Maritime Logistics, and Regional Economic Cooperation'
     );
@@ -1902,7 +1902,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 16 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 16');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代工程团队协作、系统研发与职业操守');
+    expect(passage!.topic).toBe('科技');
     expect(passage!.titleEn).toBe(
       'Modern Engineering Collaboration, Systems Innovation, and Professional Ethics'
     );
@@ -2044,7 +2044,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 17 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 17');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代社会伦理、儒家思想与公共协商共识');
+    expect(passage!.topic).toBe('社会生活');
     expect(passage!.titleEn).toBe(
       'Modern Social Ethics, Confucian Heritage, and Civic Consensus'
     );
@@ -2170,7 +2170,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 18 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 18');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('跨国企业治理、商业合规与契约诚信');
+    expect(passage!.topic).toBe('职场经济');
     expect(passage!.titleEn).toBe(
       'Corporate Governance, Contract Integrity, and Legal Compliance'
     );
@@ -2307,7 +2307,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 19 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 19');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('海洋科学考察、极地生态危机与科研实证评估');
+    expect(passage!.topic).toBe('生态环境');
     expect(passage!.titleEn).toBe(
       'Polar Marine Expeditions, Ecological Crisis Response, and Empirical Scientific Assessment'
     );
@@ -2466,7 +2466,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
   it('CET-4 核心篇 NO. 20 重写后满足主题自然度、词量及行间标注校验规范', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 20');
     expect(passage).toBeDefined();
-    expect(passage!.topic).toBe('现代数字健康管理、日常预防医疗与身心平衡');
+    expect(passage!.topic).toBe('健康医疗');
     expect(passage!.titleEn).toBe(
       'Digital Health Technologies, Everyday Preventive Care, and Well-being'
     );

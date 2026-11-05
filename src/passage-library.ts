@@ -2,30 +2,15 @@ import type {
   CompiledPassage,
   InlineAnnotationToken,
   PassageCatalogEntry,
+  PassageTopicCategory,
 } from './corpus';
 
-export const PASSAGE_TOPIC_CATEGORIES = [
-  '社会心理',
-  '科技人工智能',
-  '生态环境',
-  '教育文化',
-  '职场经济',
-] as const;
-
-export type PassageTopicCategory = (typeof PASSAGE_TOPIC_CATEGORIES)[number];
+export { PASSAGE_TOPIC_CATEGORIES } from './corpus';
+export type { PassageTopicCategory } from './corpus';
 
 export type PassageTopicFilter =
   | { kind: 'all' }
-  | { kind: 'category'; value: PassageTopicCategory }
-  | { kind: 'topic'; value: string };
-
-const topicCategoryKeywords: Record<PassageTopicCategory, string[]> = {
-  社会心理: ['社会', '心理', '认知', '行为', '习惯', '个体', '人际', '自主'],
-  科技人工智能: ['科技', '人工智能', '算法', '数字', '数据', '网络', '技术', '智能'],
-  生态环境: ['生态', '环境', '绿色', '可持续', '气候', '能源', '污染', '资源'],
-  教育文化: ['教育', '文化', '校园', '学术', '学习', '学校', '交流', '阅读'],
-  职场经济: ['职场', '经济', '消费', '工作', '就业', '企业', '商业', '市场', '金融'],
-};
+  | { kind: 'category'; value: PassageTopicCategory };
 
 export interface PassageProgress {
   masteredCount: number;
@@ -40,7 +25,7 @@ export interface PassageSearchResult {
   itemKey?: string;
   passageId: string;
   indexLabel: string;
-  topic: string;
+  topic: PassageTopicCategory;
   titleZh: string;
   titleEn: string;
   kind: PassageSearchResultKind;
@@ -81,38 +66,21 @@ function* uniqueAnnotationTokensIn(
   }
 }
 
-export function filterPassages<T extends { topic: string }>(
+export function filterPassages<T extends { topic: PassageTopicCategory }>(
   passages: T[],
   topic: PassageTopicFilter
 ): T[] {
   return passages.filter((passage) => matchesTopicFilter(passage, topic));
 }
 
-export function getPassageTopicCategories(
-  topic: string
-): PassageTopicCategory[] {
-  const hasTechnologyTerm = topicCategoryKeywords['科技人工智能'].some(
-    (keyword) => topic.includes(keyword)
-  );
-  return PASSAGE_TOPIC_CATEGORIES.filter((category) =>
-    topicCategoryKeywords[category].some(
-      (keyword) =>
-        topic.includes(keyword) &&
-        !(category === '生态环境' && keyword === '生态' && hasTechnologyTerm)
-    )
-  );
-}
-
 function matchesTopicFilter(
-  passage: { topic: string },
+  passage: { topic: PassageTopicCategory },
   topic: PassageTopicFilter
 ): boolean {
   switch (topic.kind) {
     case 'all':
       return true;
     case 'category':
-      return getPassageTopicCategories(passage.topic).includes(topic.value);
-    case 'topic':
       return passage.topic === topic.value;
   }
 }

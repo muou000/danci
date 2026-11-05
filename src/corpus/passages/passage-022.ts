@@ -3,7 +3,7 @@ import type { Passage } from "../index";
 export const PASSAGE_022: Passage = {
     id: 'passage-022',
     indexLabel: 'NO. 22',
-    topic: '算法生态与认知自主',
+    topic: '科技',
     titleZh: '在算法洪流中守护认知自主与深度阅读',
     titleEn:
       'Safeguarding Cognitive Autonomy and Deep Reading in the Algorithmic Era',

@@ -109,7 +109,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         key: `result-${index + 1}`,
         passageId: `passage-${index + 1}`,
         indexLabel: `NO. ${String(index + 1).padStart(2, '0')}`,
-        topic: '测试题材',
+        topic: '社会生活',
         titleZh: `测试短文 ${index + 1}`,
         titleEn: `Passage ${index + 1}`,
         kind: 'annotation',
@@ -155,7 +155,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
 
     const topicFilter = screen.getByRole('combobox', { name: '按题材筛选' });
-    await user.selectOptions(topicFilter, 'category:科技人工智能');
+    await user.selectOptions(topicFilter, 'category:科技');
     expect(
       screen.queryByRole('button', { name: /NO\. 21.*重塑校园消费/ })
     ).not.toBeInTheDocument();
@@ -305,7 +305,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
     const metaBadge = screen.getByRole('region', { name: '篇目信息' });
     expect(within(metaBadge).getByText('NO. 21')).toBeInTheDocument();
-    expect(within(metaBadge).getByText('绿色校园与消费转型')).toBeInTheDocument();
+    expect(within(metaBadge).getByText('生态环境')).toBeInTheDocument();
     expect(screen.queryByText(/小红书/)).not.toBeInTheDocument();
 
     expect(screen.getAllByText('（第1段）').length).toBe(2);
@@ -359,7 +359,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
 
     const metaBadge = screen.getByRole('region', { name: '篇目信息' });
     expect(within(metaBadge).getByText('NO. 22')).toBeInTheDocument();
-    expect(within(metaBadge).getByText('算法生态与认知自主')).toBeInTheDocument();
+    expect(within(metaBadge).getByText('科技')).toBeInTheDocument();
 
     const legend = screen.getByRole('region', { name: '标注图例' });
     expect(within(legend).getByText('超纲词')).toBeInTheDocument();

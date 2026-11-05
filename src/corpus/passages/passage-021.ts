@@ -3,7 +3,7 @@ import type { Passage } from "../index";
 export const PASSAGE_021: Passage = {
     id: 'passage-021',
     indexLabel: 'NO. 21',
-    topic: '绿色校园与消费转型',
+    topic: '生态环境',
     titleZh: '重塑校园消费习惯，共建可持续未来',
     titleEn: 'Reshaping Campus Consumption Habits for a Sustainable Future',
     paragraphs: [

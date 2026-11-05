@@ -4,7 +4,6 @@ import type { LearningState } from '../learning-state';
 import {
   filterPassages,
   getPassageProgress,
-  getPassageTopicCategories,
   PASSAGE_TOPIC_CATEGORIES,
   type PassageTopicFilter,
   type PassageSearchResult,
@@ -136,9 +135,6 @@ function parseTopicFilter(value: string): PassageTopicFilter {
     );
     return category ? { kind: 'category', value: category } : { kind: 'all' };
   }
-  if (value.startsWith('topic:')) {
-    return { kind: 'topic', value: value.slice('topic:'.length) };
-  }
   return { kind: 'all' };
 }
 
@@ -152,19 +148,10 @@ export function PassageDirectory({
   const [topicFilter, setTopicFilter] = useState<PassageTopicFilter>({
     kind: 'all',
   });
-  const topics = useMemo(
-    () =>
-      Array.from(new Set(passages.map((passage) => passage.topic))).sort(
-        (a, b) => a.localeCompare(b, 'zh-CN')
-      ),
-    [passages]
-  );
   const topicCategories = useMemo(
     () =>
       PASSAGE_TOPIC_CATEGORIES.filter((category) =>
-        passages.some((passage) =>
-          getPassageTopicCategories(passage.topic).includes(category)
-        )
+        passages.some((passage) => passage.topic === category)
       ),
     [passages]
   );
@@ -187,7 +174,7 @@ export function PassageDirectory({
 
       <div className="passage-directory__filters">
         <label className="passage-directory__topic-filter">
-          <span>题材</span>
+          <span>题材类型</span>
           <select
             aria-label="按题材筛选"
             value={serializeTopicFilter(topicFilter)}
@@ -197,7 +184,7 @@ export function PassageDirectory({
           >
             <option value="all">全部题材</option>
             {topicCategories.length > 0 && (
-              <optgroup label="常考题材">
+              <optgroup label="题材类型">
                 {topicCategories.map((category) => (
                   <option
                     key={category}
@@ -211,19 +198,6 @@ export function PassageDirectory({
                 ))}
               </optgroup>
             )}
-            <optgroup label="具体题材">
-              {topics.map((topic) => (
-                <option
-                  key={topic}
-                  value={serializeTopicFilter({
-                    kind: 'topic',
-                    value: topic,
-                  })}
-                >
-                  {topic}
-                </option>
-              ))}
-            </optgroup>
           </select>
         </label>
       </div>

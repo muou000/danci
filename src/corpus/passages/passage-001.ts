@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_001: Passage = {
     "id": "passage-001",
     "indexLabel": "NO. 01",
-    "topic": "国际学术交流与跨文化适应",
+    "topic": "教育文化",
     "titleZh": "跨越重洋的学术探索与文化适应",
     "titleEn": "Academic Exploration and Cultural Adaptation Abroad",
     "paragraphs": [

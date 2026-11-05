@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_004: Passage = {
     "id": "passage-004",
     "indexLabel": "NO. 04",
-    "topic": "城市更新与宜居社区空间",
+    "topic": "社会生活",
     "titleZh": "城市更新与宜居社区空间",
     "titleEn": "Urban Renewal and Livable Community Spaces",
     "paragraphs": [

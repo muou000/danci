@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_005: Passage = {
   "id": "passage-005",
   "indexLabel": "NO. 05",
-  "topic": "现代航天探索与天文普及",
+  "topic": "科技",
   "titleZh": "现代深空探索与天文学科学普及",
   "titleEn": "Deep Space Exploration and Astronomical Education",
   "paragraphs": [

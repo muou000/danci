@@ -3,7 +3,7 @@ import type { Passage } from '../index';
 export const PASSAGE_018: Passage = {
   id: "passage-018",
   indexLabel: 'NO. 18',
-  topic: '跨国企业治理、商业合规与契约诚信',
+  topic: '职场经济',
   titleZh: '跨国企业治理、商业合规与契约诚信',
   titleEn: 'Corporate Governance, Contract Integrity, and Legal Compliance',
   paragraphs: [
