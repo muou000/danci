@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import { COMPILED_FIRST_PASSAGE } from './corpus/compiled-initial';
-import { loadDefaultPassages } from './corpus/load-default-passages';
+import { defaultPassageRepository } from './corpus/load-default-passages';
 import './styles.css';
 
 const rootElement = document.getElementById('root');
@@ -14,7 +14,7 @@ const initialPassages = [COMPILED_FIRST_PASSAGE];
 
 createRoot(rootElement).render(
   <StrictMode>
-    <App passages={initialPassages} loadAllPassages={loadDefaultPassages} />
+    <App passages={initialPassages} repository={defaultPassageRepository} />
   </StrictMode>
 );
 

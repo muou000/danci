@@ -1,6 +1,7 @@
 import type {
   CompiledPassage,
   InlineAnnotationToken,
+  PassageCatalogEntry,
 } from './corpus';
 
 export const PASSAGE_TOPIC_CATEGORIES = [
@@ -36,6 +37,7 @@ export type PassageSearchResultKind = 'annotation' | 'expansion';
 
 export interface PassageSearchResult {
   key: string;
+  itemKey?: string;
   passageId: string;
   indexLabel: string;
   topic: string;
@@ -79,10 +81,10 @@ function* uniqueAnnotationTokensIn(
   }
 }
 
-export function filterPassages(
-  passages: CompiledPassage[],
+export function filterPassages<T extends { topic: string }>(
+  passages: T[],
   topic: PassageTopicFilter
-): CompiledPassage[] {
+): T[] {
   return passages.filter((passage) => matchesTopicFilter(passage, topic));
 }
 
@@ -102,7 +104,7 @@ export function getPassageTopicCategories(
 }
 
 function matchesTopicFilter(
-  passage: CompiledPassage,
+  passage: { topic: string },
   topic: PassageTopicFilter
 ): boolean {
   switch (topic.kind) {
@@ -116,13 +118,15 @@ function matchesTopicFilter(
 }
 
 export function getPassageProgress(
-  passage: CompiledPassage,
+  passage: CompiledPassage | PassageCatalogEntry,
   masteredItemKeys: ReadonlySet<string>
 ): PassageProgress {
-  const itemKeys = new Set<string>();
-  for (const token of uniqueAnnotationTokensIn(passage)) {
-    itemKeys.add(token.itemKey);
-  }
+  const itemKeys =
+    'annotationItemKeys' in passage
+      ? new Set(passage.annotationItemKeys)
+      : new Set(
+          Array.from(uniqueAnnotationTokensIn(passage), (token) => token.itemKey)
+        );
 
   let masteredCount = 0;
   for (const itemKey of itemKeys) {
@@ -313,6 +317,7 @@ export function buildPassageSearchIndex(
       const searchFields = annotationSearchFields(token);
       const result: PassageSearchResult = {
         key: `${passage.id}:annotation:${token.itemKey}`,
+        itemKey: token.itemKey,
         ...passageSearchContext(passage),
         kind: 'annotation',
         expression: token.phrase ?? token.headwordId ?? token.surface,

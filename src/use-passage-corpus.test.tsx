@@ -1,7 +1,11 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import type { CompiledPassage } from './corpus';
-import { usePassageCorpus } from './use-passage-corpus';
+import { summarizePassage } from './corpus';
+import {
+  usePassageCorpus,
+  type PassageContentRepository,
+} from './use-passage-corpus';
 
 const passage = (id: string): CompiledPassage => ({
   id,
@@ -15,139 +19,131 @@ const passage = (id: string): CompiledPassage => ({
   hasOutOfSyllabusWords: false,
 });
 
+function repositoryFor(
+  passages: CompiledPassage[],
+  loadPassage = vi.fn(async (id: string) => {
+    const loaded = passages.find((item) => item.id === id);
+    if (!loaded) throw new Error(`Unknown passage: ${id}`);
+    return loaded;
+  })
+): PassageContentRepository {
+  return {
+    catalog: passages.map(summarizePassage),
+    loadPassage,
+    loadSearchIndex: vi.fn(async () => []),
+  };
+}
+
 describe('usePassageCorpus', () => {
-  it('silently prefetches and promotes the shared request when the user needs it', async () => {
-    const initialPassages = [passage('initial')];
-    const loadedPassages = [passage('complete')];
-    let resolveLoad: (passages: CompiledPassage[]) => void = () => undefined;
-    const loadAllPassages = vi.fn(
-      () =>
-        new Promise<CompiledPassage[]>((resolve) => {
-          resolveLoad = resolve;
-        })
-    );
+  it('loads a requested passage once and loads the rest only when asked', async () => {
+    const first = passage('first');
+    const second = passage('second');
+    const third = passage('third');
+    const repository = repositoryFor([first, second, third]);
     const { result } = renderHook(() =>
-      usePassageCorpus(initialPassages, loadAllPassages)
+      usePassageCorpus([first], repository.catalog, repository)
     );
 
-    let prefetch!: Promise<CompiledPassage[]>;
-    let foregroundLoad!: Promise<CompiledPassage[]>;
-    act(() => {
-      prefetch = result.current.ensureLoaded({ quiet: true });
+    expect(result.current.passages).toEqual([first]);
+    expect(result.current.isComplete).toBe(false);
+    expect(repository.loadPassage).not.toHaveBeenCalled();
+
+    await act(async () => {
+      await result.current.ensurePassageLoaded('second');
+      await result.current.ensurePassageLoaded('second');
     });
 
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.loadFailed).toBe(false);
+    expect(repository.loadPassage).toHaveBeenCalledOnce();
+    expect(result.current.passages).toEqual([first, second]);
+    expect(result.current.isComplete).toBe(false);
+
+    await act(async () => {
+      await result.current.ensureLoaded();
+    });
+
+    expect(result.current.passages).toEqual([first, second, third]);
+    expect(result.current.isComplete).toBe(true);
+    expect(repository.loadPassage).toHaveBeenCalledTimes(2);
+  });
+
+  it('shares a quiet prefetch, promotes it for user navigation, and retries failures', async () => {
+    const first = passage('first');
+    const second = passage('second');
+    let resolveLoad: (value: CompiledPassage) => void = () => undefined;
+    const loadPassage = vi
+      .fn<(id: string) => Promise<CompiledPassage>>()
+      .mockImplementationOnce(
+        () => new Promise<CompiledPassage>((resolve) => (resolveLoad = resolve))
+      )
+      .mockRejectedValueOnce(new Error('offline'))
+      .mockResolvedValueOnce(second);
+    const repository = repositoryFor([first, second], loadPassage);
+    const { result } = renderHook(() =>
+      usePassageCorpus([first], repository.catalog, repository)
+    );
+
+    let prefetch!: Promise<CompiledPassage>;
+    let foregroundLoad!: Promise<CompiledPassage>;
+    act(() => {
+      prefetch = result.current.ensurePassageLoaded('second', { quiet: true });
+    });
     await Promise.resolve();
-    expect(loadAllPassages).toHaveBeenCalledOnce();
+    expect(loadPassage).toHaveBeenCalledOnce();
+    expect(result.current.loadingPassageIds.has('second')).toBe(false);
 
     act(() => {
-      foregroundLoad = result.current.ensureLoaded();
+      foregroundLoad = result.current.ensurePassageLoaded('second');
     });
     expect(foregroundLoad).toBe(prefetch);
-    expect(result.current.isLoading).toBe(true);
+    expect(result.current.loadingPassageIds.has('second')).toBe(true);
 
     await act(async () => {
-      resolveLoad(loadedPassages);
-      await expect(prefetch).resolves.toBe(loadedPassages);
+      resolveLoad(second);
+      await prefetch;
     });
+    expect(result.current.passages).toContain(second);
+    expect(result.current.loadingPassageIds.has('second')).toBe(false);
 
-    expect(result.current.passages).toBe(loadedPassages);
-    expect(result.current.isLoading).toBe(false);
-  });
-
-  it('keeps background prefetch failures quiet and retries on user request', async () => {
-    const initialPassages = [passage('initial')];
-    const loadedPassages = [passage('complete')];
-    const loadAllPassages = vi
-      .fn<() => Promise<CompiledPassage[]>>()
+    const third = passage('third');
+    const retryRepository = repositoryFor([first, third]);
+    const retryLoader = vi
+      .fn<(id: string) => Promise<CompiledPassage>>()
       .mockRejectedValueOnce(new Error('offline'))
-      .mockResolvedValueOnce(loadedPassages);
-    const { result } = renderHook(() =>
-      usePassageCorpus(initialPassages, loadAllPassages)
+      .mockResolvedValueOnce(third);
+    const retrySource = repositoryFor([first, third], retryLoader);
+    const retryHook = renderHook(() =>
+      usePassageCorpus([first], retrySource.catalog, retrySource)
     );
-
     await act(async () => {
       await expect(
-        result.current.ensureLoaded({ quiet: true })
+        retryHook.result.current.ensurePassageLoaded('third')
       ).rejects.toThrow('offline');
     });
-
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.loadFailed).toBe(false);
-    expect(result.current.passages).toBe(initialPassages);
-
+    expect(retryHook.result.current.failedPassageIds.has('third')).toBe(true);
     await act(async () => {
-      await result.current.ensureLoaded();
+      await retryHook.result.current.ensurePassageLoaded('third');
     });
-
-    expect(loadAllPassages).toHaveBeenCalledTimes(2);
-    expect(result.current.passages).toBe(loadedPassages);
-    expect(result.current.loadFailed).toBe(false);
+    expect(retryHook.result.current.passages).toContain(third);
+    expect(retryHook.result.current.failedPassageIds.has('third')).toBe(false);
+    expect(retryLoader).toHaveBeenCalledTimes(2);
+    expect(retryRepository.loadPassage).not.toHaveBeenCalled();
   });
 
-  it('shares an in-flight load and replaces the initial corpus on success', async () => {
-    const initialPassages = [passage('initial')];
-    const loadedPassages = [passage('complete')];
-    let resolveLoad: (passages: CompiledPassage[]) => void = () => undefined;
-    const loadAllPassages = vi.fn(
-      () =>
-        new Promise<CompiledPassage[]>((resolve) => {
-          resolveLoad = resolve;
-        })
-    );
+  it('loads the search index on demand and caches it', async () => {
+    const first = passage('first');
+    const repository = repositoryFor([first]);
     const { result } = renderHook(() =>
-      usePassageCorpus(initialPassages, loadAllPassages)
+      usePassageCorpus([first], repository.catalog, repository)
     );
 
-    let firstLoad!: Promise<CompiledPassage[]>;
-    let secondLoad!: Promise<CompiledPassage[]>;
-    act(() => {
-      firstLoad = result.current.ensureLoaded();
-      secondLoad = result.current.ensureLoaded();
-    });
-
-    expect(secondLoad).toBe(firstLoad);
-    expect(result.current.isLoading).toBe(true);
-    await Promise.resolve();
-    expect(loadAllPassages).toHaveBeenCalledOnce();
-
+    expect(repository.loadSearchIndex).not.toHaveBeenCalled();
     await act(async () => {
-      resolveLoad(loadedPassages);
-      await expect(firstLoad).resolves.toBe(loadedPassages);
+      await result.current.ensureSearchIndex();
+      await result.current.ensureSearchIndex();
     });
 
-    expect(result.current.passages).toBe(loadedPassages);
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.loadFailed).toBe(false);
-  });
-
-  it('keeps the current corpus after failure and retries on the next request', async () => {
-    const initialPassages = [passage('initial')];
-    const loadedPassages = [passage('complete')];
-    const loadAllPassages = vi
-      .fn<() => Promise<CompiledPassage[]>>()
-      .mockRejectedValueOnce(new Error('offline'))
-      .mockResolvedValueOnce(loadedPassages);
-    const { result } = renderHook(() =>
-      usePassageCorpus(initialPassages, loadAllPassages)
-    );
-    let failedLoad!: Promise<CompiledPassage[]>;
-    await act(async () => {
-      failedLoad = result.current.ensureLoaded();
-      await expect(failedLoad).rejects.toThrow('offline');
-    });
-
-    expect(result.current.passages).toBe(initialPassages);
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.loadFailed).toBe(true);
-
-    await act(async () => {
-      await result.current.ensureLoaded();
-    });
-
-    expect(loadAllPassages).toHaveBeenCalledTimes(2);
-    expect(result.current.passages).toBe(loadedPassages);
-    expect(result.current.loadFailed).toBe(false);
+    expect(repository.loadSearchIndex).toHaveBeenCalledOnce();
+    expect(result.current.searchIndex).toEqual([]);
+    expect(result.current.searchLoadFailed).toBe(false);
   });
 });

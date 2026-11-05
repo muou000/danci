@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { zipSync } from 'fflate';
-import type { CompiledPassage } from './corpus';
+import {
+  summarizePassage,
+  type CompiledPassage,
+  type PassageCatalogEntry,
+} from './corpus';
 import { COMPILED_FIRST_PASSAGE } from './corpus/compiled-initial';
 import {
   GlobalPassageSearch,
@@ -13,8 +17,8 @@ import {
 } from './components/LearningLibrary';
 import { PassageCard, type PassageCardProps } from './components/PassageCard';
 import {
-  buildPassageSearchIndex,
   searchPassages,
+  type PassageSearchIndex,
 } from './passage-library';
 import {
   readLearningState,
@@ -23,17 +27,21 @@ import {
   type LearningState,
   type LearningStateAction,
 } from './learning-state';
-import { usePassageCorpus } from './use-passage-corpus';
+import {
+  usePassageCorpus,
+  type PassageContentRepository,
+} from './use-passage-corpus';
 
 export interface AppProps {
   passages?: CompiledPassage[];
-  loadAllPassages?: () => Promise<CompiledPassage[]>;
+  repository?: PassageContentRepository;
 }
 
 const PASSAGE_EXPORT_WIDTH = 1080;
 const MASTERY_UNDO_DURATION_MS = 10_000;
 const CORPUS_PREFETCH_TIMEOUT_MS = 1_500;
 const CORPUS_PREFETCH_FALLBACK_DELAY_MS = 500;
+const DEFAULT_INITIAL_PASSAGES = [COMPILED_FIRST_PASSAGE];
 
 interface MasteryFeedback {
   message: string;
@@ -75,51 +83,58 @@ function blobToUint8Array(blob: Blob): Promise<Uint8Array> {
   });
 }
 
-function collectLearningItems(passages: CompiledPassage[]): LearningItemSummary[] {
+function collectLearningItems(
+  searchIndex: PassageSearchIndex | null
+): LearningItemSummary[] {
   const items = new Map<string, LearningItemSummary>();
-  for (const passage of passages) {
-    for (const paragraph of passage.paragraphs) {
-      for (const sentence of paragraph.sentences) {
-        for (const token of sentence.tokens) {
-          if (token.type !== 'annotation') continue;
-          const item = items.get(token.itemKey) ?? {
-            key: token.itemKey,
-            label:
-              token.headwordId ??
-              token.phrase ??
-              token.itemKey.replace(/^(?:word|phrase|oos):/, ''),
-            surfaces: [],
-            glosses: [],
-          };
-          if (!item.surfaces.includes(token.surface)) {
-            item.surfaces.push(token.surface);
-          }
-          if (!item.glosses.includes(token.gloss)) item.glosses.push(token.gloss);
-          items.set(token.itemKey, item);
-        }
-      }
+  for (const { result } of searchIndex ?? []) {
+    const itemKey = result.itemKey;
+    if (result.kind !== 'annotation' || !itemKey) continue;
+    const item = items.get(itemKey) ?? {
+      key: itemKey,
+      label: result.expression || itemKey.replace(/^(?:word|phrase|oos):/, ''),
+      surfaces: [],
+      glosses: [],
+    };
+    if (result.surface && !item.surfaces.includes(result.surface)) {
+      item.surfaces.push(result.surface);
     }
+    if (result.summary && !item.glosses.includes(result.summary)) {
+      item.glosses.push(result.summary);
+    }
+    items.set(itemKey, item);
   }
   return Array.from(items.values());
 }
 
 export function App({
-  passages: initialPassages = [COMPILED_FIRST_PASSAGE],
-  loadAllPassages,
+  passages: initialPassages = DEFAULT_INITIAL_PASSAGES,
+  repository,
 }: AppProps) {
+  const passageCatalog = useMemo<PassageCatalogEntry[]>(
+    () => repository?.catalog ?? initialPassages.map(summarizePassage),
+    [initialPassages, repository]
+  );
   const {
     passages,
-    isComplete: isCorpusComplete,
-    isLoading: isLoadingCorpus,
-    loadFailed: corpusLoadFailed,
-    ensureLoaded: ensureCorpusLoaded,
-  } = usePassageCorpus(initialPassages, loadAllPassages);
+    loadingPassageIds,
+    failedPassageIds,
+    searchIndex,
+    isSearchLoading,
+    searchLoadFailed,
+    ensurePassageLoaded,
+    ensureLoaded: ensureAllPassagesLoaded,
+    ensureSearchIndex,
+  } = usePassageCorpus(initialPassages, passageCatalog, repository);
 
   useEffect(() => {
-    if (!loadAllPassages) return;
+    const nextPassage = passageCatalog[1];
+    if (!nextPassage || !repository) return;
 
     const prefetch = () => {
-      void ensureCorpusLoaded({ quiet: true }).catch(() => undefined);
+      void ensurePassageLoaded(nextPassage.id, { quiet: true }).catch(
+        () => undefined
+      );
     };
     if (typeof window.requestIdleCallback === 'function') {
       const idleHandle = window.requestIdleCallback(prefetch, {
@@ -133,7 +148,7 @@ export function App({
       CORPUS_PREFETCH_FALLBACK_DELAY_MS
     );
     return () => window.clearTimeout(timeoutHandle);
-  }, [ensureCorpusLoaded, loadAllPassages]);
+  }, [ensurePassageLoaded, passageCatalog, repository]);
 
   const [activeId, setActiveId] = useState<string>(initialPassages[0]?.id ?? '');
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
@@ -261,11 +276,15 @@ export function App({
     });
   };
 
-  const activePassage =
-    passages.find((p) => p.id === activeId) ?? passages[0];
-  const activePassageIndex = activePassage
-    ? passages.findIndex((passage) => passage.id === activePassage.id)
-    : -1;
+  const activePassage = passages.find((passage) => passage.id === activeId);
+  const activePassageEntry = passageCatalog.find(
+    (passage) => passage.id === activeId
+  );
+  const activePassageIndex = passageCatalog.findIndex(
+    (passage) => passage.id === activeId
+  );
+  const activePassageIsLoading = loadingPassageIds.has(activeId);
+  const activePassageLoadFailed = failedPassageIds.has(activeId);
   const masteredItemKeys = useMemo(
     () => new Set(learningState.masteredItemKeys),
     [learningState.masteredItemKeys]
@@ -298,32 +317,30 @@ export function App({
           setExpansionHidden(exportPassage.id, entryId, false),
       }
     : null;
-  const learningItems = useMemo(() => collectLearningItems(passages), [passages]);
-  const passageSearchIndex = useMemo(
-    () => buildPassageSearchIndex(passages),
-    [passages]
+  const learningItems = useMemo(
+    () => collectLearningItems(searchIndex),
+    [searchIndex]
   );
   const searchResults = useMemo(
-    () => searchPassages(passageSearchIndex, searchQuery),
-    [passageSearchIndex, searchQuery]
+    () => searchIndex ? searchPassages(searchIndex, searchQuery) : [],
+    [searchIndex, searchQuery]
   );
 
   const updateSearchQuery = (query: string) => {
     setSearchQuery(query);
-    if (query.trim() && loadAllPassages) {
-      void ensureCorpusLoaded().catch(() => undefined);
+    if (query.trim()) {
+      void ensureSearchIndex().catch(() => undefined);
     }
   };
 
   const toggleDirectory = () => {
     const shouldOpen = !isDirectoryOpen;
     setIsDirectoryOpen(shouldOpen);
-    if (shouldOpen) void ensureCorpusLoaded().catch(() => undefined);
   };
 
   const openLearningLibrary = () => {
     setIsLibraryOpen(true);
-    if (loadAllPassages) void ensureCorpusLoaded().catch(() => undefined);
+    void ensureSearchIndex().catch(() => undefined);
   };
 
   const openPassage = (passageId: string) => {
@@ -331,6 +348,9 @@ export function App({
     setIsDirectoryOpen(false);
     setSearchQuery('');
     applyLearningAction({ type: 'record-passage-read', passageId });
+    if (!passages.some((passage) => passage.id === passageId)) {
+      void ensurePassageLoaded(passageId).catch(() => undefined);
+    }
   };
 
   const markPassageRead = (passageId: string) => {
@@ -338,22 +358,9 @@ export function App({
     applyLearningAction({ type: 'record-passage-read', passageId });
   };
 
-  const navigateWithin = (loadedPassages: CompiledPassage[], offset: number) => {
-    const currentIndex = loadedPassages.findIndex(
-      (passage) => passage.id === activeId
-    );
-    const target = loadedPassages[currentIndex + offset];
-    if (target) openPassage(target.id);
-  };
-
   const navigateByOffset = (offset: number) => {
-    if (!loadAllPassages) {
-      navigateWithin(passages, offset);
-      return;
-    }
-    void ensureCorpusLoaded()
-      .then((loadedPassages) => navigateWithin(loadedPassages, offset))
-      .catch(() => undefined);
+    const target = passageCatalog[activePassageIndex + offset];
+    if (target) openPassage(target.id);
   };
 
   const restoreMasteredItems = (itemKeys: string[]) => {
@@ -403,7 +410,7 @@ export function App({
     });
 
     try {
-      const allPassages = await ensureCorpusLoaded();
+      const allPassages = await ensureAllPassagesLoaded();
       if (allPassages.length === 0) {
         throw new Error('No passages are available to export.');
       }
@@ -449,7 +456,8 @@ export function App({
         <GlobalPassageSearch
           query={searchQuery}
           results={searchResults}
-          isLoading={isLoadingCorpus}
+          isLoading={isSearchLoading}
+          loadFailed={searchLoadFailed}
           onQueryChange={updateSearchQuery}
           onSelectResult={openPassage}
         />
@@ -474,54 +482,71 @@ export function App({
           </button>
         </div>
       </header>
-      {corpusLoadFailed && (
-        <p role="alert">完整语料加载失败，请重试。</p>
-      )}
-      {isLoadingCorpus && !isDirectoryOpen && !searchQuery.trim() && (
-        <p role="status">正在加载完整语料...</p>
+      {searchLoadFailed && searchQuery.trim() && (
+        <p role="alert">查词索引加载失败，请修改搜索内容后重试。</p>
       )}
 
       {isDirectoryOpen ? (
-        isLoadingCorpus ? (
-          <p role="status">正在加载完整短文目录...</p>
-        ) : (
-          <PassageDirectory
-            passages={passages}
-            state={learningState}
-            masteredItemKeys={masteredItemKeys}
-            onOpenPassage={openPassage}
-            onMarkPassageRead={markPassageRead}
-          />
-        )
+        <PassageDirectory
+          passages={passageCatalog}
+          state={learningState}
+          masteredItemKeys={masteredItemKeys}
+          onOpenPassage={openPassage}
+          onMarkPassageRead={markPassageRead}
+        />
       ) : (
         <main className="app-main">
-          {activePassage && (
+          {activePassageEntry && (
             <nav className="passage-reader-navigation" aria-label="短文导航">
               <button
                 type="button"
                 aria-label="上一篇短文"
-                disabled={activePassageIndex <= 0}
+                disabled={
+                  activePassageIsLoading ||
+                  activePassageIndex <= 0 ||
+                  loadingPassageIds.has(
+                    passageCatalog[activePassageIndex - 1]?.id ?? ''
+                  )
+                }
                 onClick={() => navigateByOffset(-1)}
               >
                 上一篇
               </button>
               <span>
-                {activePassage.indexLabel} · {activePassage.topic}
+                {activePassageEntry.indexLabel} · {activePassageEntry.topic}
               </span>
               <button
                 type="button"
                 aria-label="下一篇短文"
                 disabled={
-                  isLoadingCorpus ||
+                  activePassageIsLoading ||
                   activePassageIndex < 0 ||
-                  (isCorpusComplete &&
-                    activePassageIndex >= passages.length - 1)
+                  activePassageIndex >= passageCatalog.length - 1 ||
+                  loadingPassageIds.has(
+                    passageCatalog[activePassageIndex + 1]?.id ?? ''
+                  )
                 }
                 onClick={() => navigateByOffset(1)}
               >
                 下一篇
               </button>
             </nav>
+          )}
+          {activePassageIsLoading && (
+            <p role="status">正在加载短文...</p>
+          )}
+          {activePassageLoadFailed && (
+            <div role="alert">
+              <p>短文加载失败，请重试。</p>
+              <button
+                type="button"
+                onClick={() =>
+                  void ensurePassageLoaded(activeId).catch(() => undefined)
+                }
+              >
+                重试加载
+              </button>
+            </div>
           )}
           {activePassageCardProps && (
             <>
@@ -597,7 +622,9 @@ export function App({
         <LearningLibrary
           state={learningState}
           items={learningItems}
-          passages={passages}
+          passages={passageCatalog}
+          isLoadingItems={isSearchLoading}
+          itemsLoadFailed={searchLoadFailed}
           onClose={() => {
             setIsLibraryOpen(false);
             libraryTrigger.current?.focus();

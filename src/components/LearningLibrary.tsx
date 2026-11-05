@@ -3,7 +3,7 @@ import {
   parseLearningStateJson,
   type LearningState,
 } from '../learning-state';
-import type { CompiledPassage } from '../corpus';
+import type { PassageCatalogEntry } from '../corpus';
 
 export interface LearningItemSummary {
   key: string;
@@ -15,7 +15,9 @@ export interface LearningItemSummary {
 interface LearningLibraryProps {
   state: LearningState;
   items: LearningItemSummary[];
-  passages: CompiledPassage[];
+  passages: PassageCatalogEntry[];
+  isLoadingItems?: boolean;
+  itemsLoadFailed?: boolean;
   onClose: () => void;
   onRestoreItems: (itemKeys: string[]) => void;
   onImportState: (state: LearningState) => void;
@@ -57,6 +59,8 @@ export function LearningLibrary({
   state,
   items,
   passages,
+  isLoadingItems = false,
+  itemsLoadFailed = false,
   onClose,
   onRestoreItems,
   onImportState,
@@ -281,7 +285,11 @@ export function LearningLibrary({
           ))}
           {filteredItems.length === 0 && (
             <li className="learning-library__empty">
-              {masteredItems.length === 0
+              {isLoadingItems
+                ? '正在加载词条...'
+                : itemsLoadFailed
+                  ? '词条加载失败，请关闭后重试。'
+                  : masteredItems.length === 0
                 ? '暂无已掌握词条'
                 : '没有匹配的已掌握词条'}
             </li>

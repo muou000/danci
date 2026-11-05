@@ -6,8 +6,10 @@ import { zipSync } from 'fflate';
 import { App } from '../App';
 import { GlobalPassageSearch } from '../components/PassageDiscovery';
 import { COMPILED_PASSAGES } from '../corpus/compiled-passages';
-import type { CompiledPassage } from '../corpus';
+import { summarizePassage, type CompiledPassage } from '../corpus';
 import type { PassageSearchResult } from '../passage-library';
+import { buildPassageSearchIndex } from '../passage-library';
+import type { PassageContentRepository } from '../use-passage-corpus';
 
 vi.mock('html-to-image', () => ({
   toBlob: vi.fn(),
@@ -21,6 +23,21 @@ const COMPILED_DEMO_PASSAGES = COMPILED_PASSAGES.slice(20, 22);
 
 function renderWithDemoPassages() {
   return render(<App passages={COMPILED_DEMO_PASSAGES} />);
+}
+
+function repositoryFor(
+  fullCorpus: CompiledPassage[],
+  loadPassage = vi.fn(async (passageId: string) => {
+    const passage = fullCorpus.find((item) => item.id === passageId);
+    if (!passage) throw new Error(`Unknown passage: ${passageId}`);
+    return passage;
+  })
+): PassageContentRepository {
+  return {
+    catalog: fullCorpus.map(summarizePassage),
+    loadPassage,
+    loadSearchIndex: vi.fn(async () => buildPassageSearchIndex(fullCorpus)),
+  };
 }
 
 function getAnnotationKeys(
@@ -161,14 +178,18 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     ).toBeInTheDocument();
   });
 
-  it('首次打开目录时按需加载完整语料，并复用加载结果进行翻页', async () => {
+  it('目录只用元数据呈现，选篇和翻页分别加载目标短文', async () => {
     const user = userEvent.setup();
     const fullCorpus = COMPILED_PASSAGES;
-    const loadAllPassages = vi.fn(async () => fullCorpus);
+    const loadPassage = vi.fn(async (passageId: string) => {
+      const passage = fullCorpus.find((item) => item.id === passageId);
+      if (!passage) throw new Error(`Unknown passage: ${passageId}`);
+      return passage;
+    });
     render(
       <App
         passages={[fullCorpus[0]]}
-        loadAllPassages={loadAllPassages}
+        repository={repositoryFor(fullCorpus, loadPassage)}
       />
     );
 
@@ -179,30 +200,36 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(
       await screen.findByRole('button', { name: /^NO\. 20/ })
     ).toBeInTheDocument();
-    expect(loadAllPassages).toHaveBeenCalledTimes(1);
+    expect(loadPassage).not.toHaveBeenCalled();
 
-    await user.click(screen.getByRole('button', { name: '返回精读' }));
+    await user.click(screen.getByRole('button', { name: /^NO\. 20/ }));
+    expect(
+      await screen.findByRole('heading', { name: fullCorpus[19].titleZh })
+    ).toBeInTheDocument();
+    expect(loadPassage).toHaveBeenCalledWith(fullCorpus[19].id);
+
     await user.click(screen.getByRole('button', { name: '下一篇短文' }));
     expect(
-      await screen.findByRole('heading', { name: fullCorpus[1].titleZh })
+      await screen.findByRole('heading', { name: fullCorpus[20].titleZh })
     ).toBeInTheDocument();
-    expect(loadAllPassages).toHaveBeenCalledTimes(1);
+    expect(loadPassage).toHaveBeenCalledTimes(2);
+    expect(loadPassage).toHaveBeenNthCalledWith(2, fullCorpus[20].id);
   });
 
   it('翻页加载期间禁用下一篇，并在语料加载完成后恢复', async () => {
     const user = userEvent.setup();
     const fullCorpus = COMPILED_PASSAGES;
-    let resolveLoad: (passages: CompiledPassage[]) => void = () => undefined;
-    const loadAllPassages = vi.fn(
+    let resolveLoad: (passage: CompiledPassage) => void = () => undefined;
+    const loadPassage = vi.fn(
       () =>
-        new Promise<CompiledPassage[]>((resolve) => {
+        new Promise<CompiledPassage>((resolve) => {
           resolveLoad = resolve;
         })
     );
     render(
       <App
         passages={[fullCorpus[0]]}
-        loadAllPassages={loadAllPassages}
+        repository={repositoryFor(fullCorpus, loadPassage)}
       />
     );
 
@@ -211,7 +238,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(nextButton).toBeDisabled();
 
     await act(async () => {
-      resolveLoad(fullCorpus);
+      resolveLoad(fullCorpus[1]);
     });
 
     expect(
@@ -224,11 +251,15 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     vi.useFakeTimers();
     vi.stubGlobal('requestIdleCallback', undefined);
     const fullCorpus = COMPILED_PASSAGES;
-    const loadAllPassages = vi.fn(async () => fullCorpus);
+    const loadPassage = vi.fn(async (passageId: string) => {
+      const passage = fullCorpus.find((item) => item.id === passageId);
+      if (!passage) throw new Error(`Unknown passage: ${passageId}`);
+      return passage;
+    });
     render(
       <App
         passages={[fullCorpus[0]]}
-        loadAllPassages={loadAllPassages}
+        repository={repositoryFor(fullCorpus, loadPassage)}
       />
     );
 
@@ -238,13 +269,14 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(
       screen.getByRole('button', { name: '下一篇短文' })
     ).toBeEnabled();
-    expect(loadAllPassages).not.toHaveBeenCalled();
+    expect(loadPassage).not.toHaveBeenCalled();
 
     await act(async () => {
       await vi.advanceTimersByTimeAsync(500);
     });
 
-    expect(loadAllPassages).toHaveBeenCalledOnce();
+    expect(loadPassage).toHaveBeenCalledOnce();
+    expect(loadPassage).toHaveBeenCalledWith(fullCorpus[1].id);
     expect(screen.queryByRole('status')).not.toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: '下一篇短文' })
@@ -865,11 +897,15 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       }
     );
 
-    const loadAllPassages = vi.fn(async () => COMPILED_PASSAGES);
+    const loadPassage = vi.fn(async (passageId: string) => {
+      const passage = COMPILED_PASSAGES.find((item) => item.id === passageId);
+      if (!passage) throw new Error(`Unknown passage: ${passageId}`);
+      return passage;
+    });
     render(
       <App
         passages={[COMPILED_PASSAGES[0]]}
-        loadAllPassages={loadAllPassages}
+        repository={repositoryFor(COMPILED_PASSAGES, loadPassage)}
       />
     );
 
@@ -882,7 +918,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         { timeout: 10_000 }
       )
     ).toBeInTheDocument();
-    expect(loadAllPassages).toHaveBeenCalledOnce();
+    expect(loadPassage).toHaveBeenCalledTimes(21);
     expect(toBlob).toHaveBeenCalledTimes(22);
     expect(zipSync).toHaveBeenCalledOnce();
     const archiveFiles = vi.mocked(zipSync).mock.calls[0][0];

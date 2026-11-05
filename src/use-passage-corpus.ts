@@ -1,71 +1,165 @@
 import { useCallback, useRef, useState } from 'react';
-import type { CompiledPassage } from './corpus';
+import type { CompiledPassage, PassageCatalogEntry } from './corpus';
+import {
+  buildPassageSearchIndex,
+  type PassageSearchIndex,
+} from './passage-library';
 
-export type LoadAllPassages = () => Promise<CompiledPassage[]>;
+export interface PassageContentRepository {
+  catalog: PassageCatalogEntry[];
+  loadPassage: (passageId: string) => Promise<CompiledPassage>;
+  loadSearchIndex: () => Promise<PassageSearchIndex>;
+}
 
-export interface PassageCorpusState {
+export interface PassageContentState {
   passages: CompiledPassage[];
+  loadingPassageIds: ReadonlySet<string>;
+  failedPassageIds: ReadonlySet<string>;
+  searchIndex: PassageSearchIndex | null;
+  isSearchLoading: boolean;
+  searchLoadFailed: boolean;
   isComplete: boolean;
-  isLoading: boolean;
-  loadFailed: boolean;
-  ensureLoaded: (options?: { quiet?: boolean }) => Promise<CompiledPassage[]>;
+  ensurePassageLoaded: (
+    passageId: string,
+    options?: { quiet?: boolean }
+  ) => Promise<CompiledPassage>;
+  ensureLoaded: () => Promise<CompiledPassage[]>;
+  ensureSearchIndex: () => Promise<PassageSearchIndex>;
 }
 
 export function usePassageCorpus(
   initialPassages: CompiledPassage[],
-  loadAllPassages?: LoadAllPassages
-): PassageCorpusState {
+  catalog: PassageCatalogEntry[],
+  repository?: PassageContentRepository
+): PassageContentState {
   const [passages, setPassages] = useState(initialPassages);
   const passagesRef = useRef(initialPassages);
-  const loadPromise = useRef<Promise<CompiledPassage[]> | null>(null);
-  const foregroundRequested = useRef(false);
-  const [hasLoadedAll, setHasLoadedAll] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [loadFailed, setLoadFailed] = useState(false);
+  const passageRequests = useRef(
+    new Map<string, Promise<CompiledPassage>>()
+  );
+  const [loadingPassageIds, setLoadingPassageIds] = useState<Set<string>>(
+    new Set()
+  );
+  const [failedPassageIds, setFailedPassageIds] = useState<Set<string>>(
+    new Set()
+  );
+  const [searchIndex, setSearchIndex] = useState<PassageSearchIndex | null>(
+    null
+  );
+  const searchIndexRef = useRef<PassageSearchIndex | null>(null);
+  const searchRequest = useRef<Promise<PassageSearchIndex> | null>(null);
+  const [isSearchLoading, setIsSearchLoading] = useState(false);
+  const [searchLoadFailed, setSearchLoadFailed] = useState(false);
 
-  const ensureLoaded = useCallback((options?: { quiet?: boolean }) => {
-    const quiet = options?.quiet ?? false;
-    if (!loadAllPassages) return Promise.resolve(passagesRef.current);
-    if (loadPromise.current) {
-      if (!quiet) {
-        foregroundRequested.current = true;
-        setIsLoading(true);
-        setLoadFailed(false);
+  const ensurePassageLoaded = useCallback(
+    (passageId: string, options?: { quiet?: boolean }) => {
+      const loaded = passagesRef.current.find((passage) => passage.id === passageId);
+      if (loaded) return Promise.resolve(loaded);
+
+      const pending = passageRequests.current.get(passageId);
+      if (pending) {
+        if (!options?.quiet) {
+          setLoadingPassageIds((ids) => new Set(ids).add(passageId));
+          setFailedPassageIds((ids) => {
+            const next = new Set(ids);
+            next.delete(passageId);
+            return next;
+          });
+        }
+        return pending;
       }
-      return loadPromise.current;
-    }
+      if (!repository) {
+        return Promise.reject(new Error(`Passage ${passageId} is unavailable.`));
+      }
 
-    foregroundRequested.current = !quiet;
-    if (!quiet) {
-      setIsLoading(true);
-      setLoadFailed(false);
-    }
-    const pendingLoad = Promise.resolve()
-      .then(loadAllPassages)
-      .then((loadedPassages) => {
-        passagesRef.current = loadedPassages;
-        setPassages(loadedPassages);
-        setHasLoadedAll(true);
-        return loadedPassages;
+      if (!options?.quiet) {
+        setLoadingPassageIds((ids) => new Set(ids).add(passageId));
+      }
+      setFailedPassageIds((ids) => {
+        const next = new Set(ids);
+        next.delete(passageId);
+        return next;
+      });
+
+      const request = Promise.resolve()
+        .then(() => repository.loadPassage(passageId))
+        .then((passage) => {
+          const byId = new Map(
+            passagesRef.current.map((item) => [item.id, item])
+          );
+          byId.set(passage.id, passage);
+          const order = new Map(catalog.map((item, index) => [item.id, index]));
+          const next = Array.from(byId.values()).sort(
+            (a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0)
+          );
+          passagesRef.current = next;
+          setPassages(next);
+          return passage;
+        })
+        .catch((error: unknown) => {
+          if (!options?.quiet) {
+            setFailedPassageIds((ids) => new Set(ids).add(passageId));
+          }
+          throw error;
+        })
+        .finally(() => {
+          passageRequests.current.delete(passageId);
+          setLoadingPassageIds((ids) => {
+            if (!ids.has(passageId)) return ids;
+            const next = new Set(ids);
+            next.delete(passageId);
+            return next;
+          });
+        });
+      passageRequests.current.set(passageId, request);
+      return request;
+    },
+    [catalog, repository]
+  );
+
+  const ensureLoaded = useCallback(
+    async () =>
+      Promise.all(catalog.map((entry) => ensurePassageLoaded(entry.id))),
+    [catalog, ensurePassageLoaded]
+  );
+
+  const ensureSearchIndex = useCallback(() => {
+    if (searchIndexRef.current) return Promise.resolve(searchIndexRef.current);
+    if (searchRequest.current) return searchRequest.current;
+
+    setIsSearchLoading(true);
+    setSearchLoadFailed(false);
+    const request = Promise.resolve()
+      .then(() =>
+        repository
+          ? repository.loadSearchIndex()
+          : buildPassageSearchIndex(passagesRef.current)
+      )
+      .then((index) => {
+        searchIndexRef.current = index;
+        setSearchIndex(index);
+        return index;
       })
       .catch((error: unknown) => {
-        loadPromise.current = null;
-        if (foregroundRequested.current) setLoadFailed(true);
+        searchRequest.current = null;
+        setSearchLoadFailed(true);
         throw error;
       })
-      .finally(() => {
-        setIsLoading(false);
-        foregroundRequested.current = false;
-      });
-    loadPromise.current = pendingLoad;
-    return pendingLoad;
-  }, [loadAllPassages]);
+      .finally(() => setIsSearchLoading(false));
+    searchRequest.current = request;
+    return request;
+  }, [repository]);
 
   return {
     passages,
-    isComplete: !loadAllPassages || hasLoadedAll,
-    isLoading,
-    loadFailed,
+    loadingPassageIds,
+    failedPassageIds,
+    searchIndex,
+    isSearchLoading,
+    searchLoadFailed,
+    isComplete: passages.length >= catalog.length,
+    ensurePassageLoaded,
     ensureLoaded,
+    ensureSearchIndex,
   };
 }

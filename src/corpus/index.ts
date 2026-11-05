@@ -7,6 +7,7 @@ import { toCircledNumber } from './formatting';
 
 export { PASSAGES, ALL_PASSAGES } from './passages';
 export { toCircledNumber } from './formatting';
+export { summarizePassage, type PassageCatalogEntry } from './catalog';
 
 export type AnnotationCategory =
   | 'regular'

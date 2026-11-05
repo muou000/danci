@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { CompiledPassage } from '../corpus';
+import type { PassageCatalogEntry } from '../corpus';
 import type { LearningState } from '../learning-state';
 import {
   filterPassages,
@@ -14,6 +14,7 @@ interface GlobalPassageSearchProps {
   query: string;
   results: PassageSearchResult[];
   isLoading?: boolean;
+  loadFailed?: boolean;
   onQueryChange: (query: string) => void;
   onSelectResult: (passageId: string) => void;
 }
@@ -22,6 +23,7 @@ export function GlobalPassageSearch({
   query,
   results,
   isLoading = false,
+  loadFailed = false,
   onQueryChange,
   onSelectResult,
 }: GlobalPassageSearchProps) {
@@ -51,7 +53,9 @@ export function GlobalPassageSearch({
         >
           <p className="corpus-search__count" aria-live="polite">
             {isLoading
-              ? '正在加载完整语料...'
+              ? '正在加载查词索引...'
+              : loadFailed
+                ? '查词索引加载失败，请修改搜索内容后重试。'
               : results.length > 0
                 ? `匹配 ${results.length} 条${
                     results.length > visibleResults.length
@@ -111,7 +115,7 @@ export function GlobalPassageSearch({
 }
 
 interface PassageDirectoryProps {
-  passages: CompiledPassage[];
+  passages: PassageCatalogEntry[];
   state: LearningState;
   masteredItemKeys: ReadonlySet<string>;
   onOpenPassage: (passageId: string) => void;
