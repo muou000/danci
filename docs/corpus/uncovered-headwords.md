@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1372/4692 个非免注核心大纲词目（29.2%），尚有 3320 个待覆盖。
+当前覆盖 1436/4692 个非免注核心大纲词目（30.6%），尚有 3256 个待覆盖。
 
-## 四级词目（2082）
+## 四级词目（2031）
 
 - `able`
 - `abolish`
@@ -53,7 +53,6 @@
 - `amateur`
 - `amaze`
 - `ambassador`
-- `ambulance`
 - `amid`
 - `amidst`
 - `amongst`
@@ -81,7 +80,6 @@
 - `apparent`
 - `appetite`
 - `applaud`
-- `apply`
 - `appoint`
 - `appreciate`
 - `appropriate¹`
@@ -140,7 +138,6 @@
 - `bamboo`
 - `ban`
 - `band`
-- `bandage`
 - `bang`
 - `banner`
 - `banquet`
@@ -162,7 +159,6 @@
 - `bath`
 - `bathe`
 - `battalion`
-- `battery`
 - `battle`
 - `beam`
 - `bean`
@@ -199,9 +195,7 @@
 - `blackboard`
 - `blade`
 - `blank`
-- `blanket`
 - `blast`
-- `bleed`
 - `bless`
 - `blog`
 - `blond`
@@ -232,7 +226,6 @@
 - `branch`
 - `brand-new`
 - `brandy`
-- `brave`
 - `breast`
 - `breathe`
 - `bride`
@@ -240,7 +233,6 @@
 - `brief`
 - `briefcase`
 - `brilliant`
-- `broadcast`
 - `broke`
 - `broker`
 - `broom`
@@ -261,7 +253,6 @@
 - `bump`
 - `bumper`
 - `bunch`
-- `burn`
 - `burst`
 - `bury`
 - `businessman`
@@ -295,7 +286,6 @@
 - `chairman`
 - `chalk`
 - `champagne`
-- `chaos`
 - `charity`
 - `cheat`
 - `check²`
@@ -407,7 +397,6 @@
 - `dairy`
 - `dam`
 - `damn`
-- `damp`
 - `dance`
 - `darling`
 - `dash`
@@ -472,7 +461,6 @@
 - `disappear`
 - `disappoint`
 - `disapprove`
-- `disaster`
 - `discharge`
 - `disco`
 - `disguise`
@@ -500,13 +488,11 @@
 - `dozen`
 - `drag`
 - `dragon`
-- `drama`
 - `drastic`
 - `draw`
 - `drawer`
 - `dream`
 - `drift`
-- `drill`
 - `drip`
 - `drop`
 - `dropout`
@@ -527,7 +513,6 @@
 - `eagle`
 - `earnest`
 - `earthquake`
-- `ease`
 - `easy-going`
 - `eat`
 - `economics`
@@ -585,7 +570,6 @@
 - `exert`
 - `exile`
 - `exist`
-- `exit`
 - `expel`
 - `expertise`
 - `explicit`
@@ -699,7 +683,6 @@
 - `frank`
 - `freeway`
 - `freshman`
-- `fright`
 - `frog`
 - `frontier`
 - `frustrate`
@@ -765,7 +748,6 @@
 - `gravity`
 - `greenhouse`
 - `greet`
-- `grief`
 - `grin`
 - `grind`
 - `grip`
@@ -846,7 +828,6 @@
 - `honey`
 - `honeymoon`
 - `hook`
-- `hope`
 - `horn`
 - `horror`
 - `horsepower`
@@ -979,7 +960,6 @@
 - `just²`
 - `justify`
 - `keen`
-- `kettle`
 - `kick`
 - `kill`
 - `kilogram`
@@ -1074,7 +1054,6 @@
 - `lord`
 - `lorry`
 - `lot`
-- `loud`
 - `love`
 - `loyal`
 - `luck`
@@ -1101,7 +1080,6 @@
 - `manner`
 - `marathon`
 - `margin`
-- `mark`
 - `marry`
 - `marshal`
 - `marvel`
@@ -1123,7 +1101,6 @@
 - `mechanize`
 - `medal`
 - `Medicare`
-- `medicine`
 - `medium`
 - `melt`
 - `memorandum`
@@ -1143,7 +1120,6 @@
 - `microscope`
 - `microwave`
 - `middle-class`
-- `mild`
 - `mile`
 - `military`
 - `mill`
@@ -1210,7 +1186,6 @@
 - `nice`
 - `nickel`
 - `niece`
-- `nightmare`
 - `nod`
 - `nonsense`
 - `northeast`
@@ -1293,7 +1268,6 @@
 - `owe`
 - `ox`
 - `ozone`
-- `packet`
 - `pad`
 - `paddy`
 - `paint`
@@ -1302,7 +1276,6 @@
 - `palm`
 - `pan`
 - `panda`
-- `panic`
 - `paperback`
 - `parade`
 - `paradox`
@@ -1340,7 +1313,6 @@
 - `perceive`
 - `perfect`
 - `perform`
-- `peril`
 - `period`
 - `persevere`
 - `pessimism`
@@ -1367,7 +1339,6 @@
 - `pirate`
 - `pistol`
 - `pit`
-- `pitch`
 - `pity`
 - `plague`
 - `plain`
@@ -1395,7 +1366,6 @@
 - `position`
 - `possess`
 - `possible`
-- `post¹`
 - `post²`
 - `postcard`
 - `poster`
@@ -1421,7 +1391,6 @@
 - `pretend`
 - `pretty`
 - `preview`
-- `previous`
 - `priest`
 - `prime`
 - `primitive`
@@ -1467,7 +1436,6 @@
 - `purse`
 - `push`
 - `puzzle`
-- `quake`
 - `qualify`
 - `quantify`
 - `quantity`
@@ -1503,7 +1471,6 @@
 - `reap`
 - `rear`
 - `rebel`
-- `recall`
 - `reception`
 - `recession`
 - `recite`
@@ -1536,7 +1503,6 @@
 - `rent`
 - `repay`
 - `repeat`
-- `replace`
 - `reply`
 - `represent`
 - `reproduce`
@@ -1547,11 +1513,9 @@
 - `resign`
 - `resort²`
 - `respective`
-- `respond`
 - `rest²`
 - `restrain`
 - `restrict`
-- `resume`
 - `résumé`
 - `retell`
 - `retreat`
@@ -1649,7 +1613,6 @@
 - `shine`
 - `shit`
 - `shiver`
-- `shock`
 - `shoot`
 - `shortcoming`
 - `shortly`
@@ -1702,7 +1665,6 @@
 - `smell`
 - `smile`
 - `smog`
-- `smoke`
 - `snack`
 - `soak`
 - `soap`
@@ -1731,7 +1693,6 @@
 - `spaceship`
 - `spade`
 - `span`
-- `spare`
 - `spark`
 - `sparkle`
 - `specific`
@@ -1762,7 +1723,6 @@
 - `stack`
 - `stadium`
 - `stain`
-- `stair`
 - `staircase`
 - `stake`
 - `stale`
@@ -1795,7 +1755,6 @@
 - `stomach`
 - `stool`
 - `story²`
-- `stove`
 - `straight`
 - `straightforward`
 - `strain²`
@@ -1867,7 +1826,6 @@
 - `tap`
 - `tape`
 - `taste`
-- `tear¹`
 - `tear²`
 - `technique`
 - `tech`
@@ -1881,8 +1839,6 @@
 - `temple`
 - `tender`
 - `tense²`
-- `tent`
-- `terrible`
 - `terrific`
 - `territory`
 - `terror`
@@ -1918,7 +1874,6 @@
 - `ton`
 - `tone`
 - `topic`
-- `torch`
 - `torture`
 - `toss`
 - `total`
@@ -1936,7 +1891,6 @@
 - `tray`
 - `treasure`
 - `treaty`
-- `tremble`
 - `tremendous`
 - `trend`
 - `triangle`
@@ -1973,7 +1927,6 @@
 - `uneasy`
 - `uniform`
 - `union`
-- `unit`
 - `upload`
 - `upright`
 - `upset`
@@ -2002,7 +1955,6 @@
 - `versus`
 - `vertical`
 - `veto`
-- `victim`
 - `victory`
 - `view`
 - `viewpoint`
@@ -2032,7 +1984,6 @@
 - `warfare`
 - `warrior`
 - `wash`
-- `waterproof`
 - `watertight`
 - `wax`
 - `weak`
@@ -2059,7 +2010,6 @@
 - `wilderness`
 - `willpower`
 - `wing`
-- `wipe`
 - `wish`
 - `wit`
 - `withdraw`
@@ -2074,7 +2024,6 @@
 - `worst`
 - `worth`
 - `worthy`
-- `wound`
 - `wrap`
 - `wreck`
 - `wrinkle`
@@ -2089,7 +2038,7 @@
 - `youngster`
 - `zoology`
 
-## 六级星号词目（1238）
+## 六级星号词目（1225）
 
 - `abbreviation`
 - `abide`
@@ -2118,8 +2067,6 @@
 - `aggravate`
 - `aggregate`
 - `agitate`
-- `agony`
-- `aide`
 - `ail`
 - `airborne`
 - `akin`
@@ -2127,7 +2074,6 @@
 - `alien`
 - `align`
 - `allergic`
-- `allocate`
 - `allot`
 - `alloy`
 - `allude`
@@ -2267,7 +2213,6 @@
 - `carton`
 - `carve`
 - `casino`
-- `casualty`
 - `catastrophe`
 - `cathedral`
 - `Catholic`
@@ -2399,7 +2344,6 @@
 - `dart`
 - `dazzle`
 - `deadlock`
-- `debris`
 - `debut`
 - `decimal`
 - `decree`
@@ -2455,7 +2399,6 @@
 - `dispatch`
 - `dispense`
 - `disperse`
-- `displace`
 - `disposition`
 - `disregard`
 - `dissent`
@@ -2534,7 +2477,6 @@
 - `esteem`
 - `esthetic`
 - `etiquette`
-- `evacuate`
 - `evade`
 - `evaporate`
 - `evoke`
@@ -2656,7 +2598,6 @@
 - `hurl`
 - `hurricane`
 - `hybrid`
-- `hygiene`
 - `hypocrisy`
 - `hypothesis`
 - `hysterical`
@@ -3009,7 +2950,6 @@
 - `regime`
 - `regiment`
 - `rehabilitate`
-- `rehearse`
 - `reign`
 - `rein`
 - `rejoice`
@@ -3047,7 +2987,6 @@
 - `ruthless`
 - `sacred`
 - `saddle`
-- `safeguard`
 - `salmon`
 - `salon`
 - `salute`
@@ -3078,7 +3017,6 @@
 - `shark`
 - `shatter`
 - `shepherd`
-- `shield`
 - `shipyard`
 - `shorthand`
 - `shove`
@@ -3110,7 +3048,6 @@
 - `socket`
 - `sodium`
 - `solicit`
-- `solidarity`
 - `solitary`
 - `solo`
 - `soothe`
@@ -3129,7 +3066,6 @@
 - `spotlight`
 - `sprawl`
 - `sprinkle`
-- `squad`
 - `stab`
 - `stagger`
 - `stagnate`

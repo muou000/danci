@@ -2897,6 +2897,110 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 25 满足主题自然度、词量及行间标注校验规范，且大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 25');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Community Evacuation and Emergency Rescue in a Disaster'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(75);
+
+    // 验证包含 Issue #35 初始规划核心目标词
+    expect(coveredHeadwordIdsIn(compiled)).toContain('disaster');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('evacuate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('victim');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('respond');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('casualty');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('panic');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('wound');
+
+    // 验证大幅拓展纳入的高契合未覆盖词目
+    expect(coveredHeadwordIdsIn(compiled)).toContain('quake');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tremble');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('loud');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('broadcast');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('drill');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('stair');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('exit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('chaos');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('smoke');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('squad');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('ambulance');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('aide');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bleed');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('bandage');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('mild');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('medicine');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('agony');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('unit');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('waterproof');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('tent');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('safeguard');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shield');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('allocate');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('blanket');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hygiene');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('packet');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('battery');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('torch');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('stove');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('kettle');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('shock');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('grief');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('solidarity');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('nightmare');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('brave');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('rehearse');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('peril');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hope');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('debris');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('resume');
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'brick'],
+      [0, 2, 'concrete'],
+      [1, 0, 'rescue'],
+      [1, 3, 'clinic'],
+      [2, 0, 'waterproof'],
+      [2, 1, 'hygiene'],
+      [2, 2, 'metal'],
+      [3, 1, 'bulletin'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);
@@ -2934,8 +3038,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it('PASSAGES 统一收录全部 24 篇短文，ID 与编号连续且唯一', () => {
-    expect(PASSAGES).toHaveLength(24);
+  it('PASSAGES 统一收录全部 25 篇短文，ID 与编号连续且唯一', () => {
+    expect(PASSAGES).toHaveLength(25);
     PASSAGES.forEach((passage, idx) => {
       const expectedId = `passage-${String(idx + 1).padStart(3, '0')}`;
       const expectedLabel = `NO. ${String(idx + 1).padStart(2, '0')}`;
