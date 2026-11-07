@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1808/4692 个非免注核心大纲词目（38.5%），尚有 2884 个待覆盖。
+当前覆盖 1851/4692 个非免注核心大纲词目（39.5%），尚有 2841 个待覆盖。
 
-## 四级词目（1731）
+## 四级词目（1699）
 
 - `able`
 - `abolish`
@@ -40,7 +40,6 @@
 - `alcohol`
 - `algebra`
 - `alike`
-- `allege`
 - `allowance`
 - `ally`
 - `alphabet`
@@ -53,7 +52,6 @@
 - `amount`
 - `ample`
 - `amuse`
-- `anchor`
 - `anew`
 - `angel`
 - `angry`
@@ -201,7 +199,6 @@
 - `breast`
 - `bride`
 - `bridegroom`
-- `brief`
 - `briefcase`
 - `brilliant`
 - `broke`
@@ -233,7 +230,6 @@
 - `cabbage`
 - `cafe`
 - `cage`
-- `calendar`
 - `calf`
 - `camel`
 - `camp`
@@ -253,7 +249,6 @@
 - `chairman`
 - `chalk`
 - `champagne`
-- `charity`
 - `cheat`
 - `check²`
 - `cheek`
@@ -286,7 +281,6 @@
 - `collar`
 - `colon`
 - `colony`
-- `column`
 - `comb`
 - `comedy`
 - `comma`
@@ -295,7 +289,6 @@
 - `compose`
 - `compound¹`
 - `comrade`
-- `concert`
 - `condemn`
 - `confess`
 - `congratulate`
@@ -356,7 +349,6 @@
 - `deadly`
 - `deaf`
 - `deal²`
-- `dean`
 - `dear`
 - `decent`
 - `decline`
@@ -371,7 +363,6 @@
 - `dent`
 - `dental`
 - `dentist`
-- `deny`
 - `depend`
 - `depress`
 - `deprive`
@@ -451,7 +442,6 @@
 - `easy-going`
 - `eat`
 - `economics`
-- `editorial`
 - `eggplant`
 - `either`
 - `elbow`
@@ -536,7 +526,6 @@
 - `fertile`
 - `fetch`
 - `fever`
-- `fiction`
 - `fight`
 - `figure`
 - `filter`
@@ -819,7 +808,6 @@
 - `jetlag`
 - `jewel`
 - `joke`
-- `journalism`
 - `jungle`
 - `junior`
 - `junk`
@@ -862,7 +850,6 @@
 - `layout`
 - `lazy`
 - `lead²`
-- `leak`
 - `leap`
 - `lease`
 - `least`
@@ -888,7 +875,6 @@
 - `lip`
 - `liquid`
 - `liquor`
-- `listen`
 - `liter`
 - `literal`
 - `literary`
@@ -955,13 +941,11 @@
 - `mend`
 - `mention`
 - `mercy`
-- `mere`
 - `merit`
 - `merry`
 - `mess`
 - `meter`
 - `metro`
-- `microphone`
 - `microwave`
 - `middle-class`
 - `mile`
@@ -973,7 +957,6 @@
 - `miracle`
 - `miserable`
 - `misfortune`
-- `mislead`
 - `miss²`
 - `missile`
 - `missing`
@@ -1022,7 +1005,6 @@
 - `nonsense`
 - `northeast`
 - `northwest`
-- `notify`
 - `notion`
 - `noun`
 - `nourish`
@@ -1047,7 +1029,6 @@
 - `odds`
 - `odor`
 - `offend`
-- `officer`
 - `oftentimes`
 - `okay`
 - `old-fashioned`
@@ -1116,7 +1097,6 @@
 - `patch`
 - `patent`
 - `patient²`
-- `pause`
 - `pave`
 - `paw`
 - `payroll`
@@ -1181,7 +1161,6 @@
 - `post²`
 - `postcard`
 - `poster`
-- `postpone`
 - `pound¹`
 - `pound²`
 - `pray`
@@ -1228,7 +1207,6 @@
 - `provoke`
 - `psychology`
 - `pub`
-- `publish`
 - `pulse`
 - `punch`
 - `punish`
@@ -1243,7 +1221,6 @@
 - `quit`
 - `quiz`
 - `quota`
-- `quote`
 - `rabbit`
 - `race²`
 - `rack`
@@ -1289,7 +1266,6 @@
 - `relevant`
 - `religion`
 - `remember`
-- `remind`
 - `render`
 - `rent`
 - `repay`
@@ -1336,7 +1312,6 @@
 - `royal`
 - `rude`
 - `rug`
-- `rumor`
 - `runway`
 - `sack`
 - `sacrifice`
@@ -1361,7 +1336,6 @@
 - `sector`
 - `see`
 - `seed`
-- `segment`
 - `seize`
 - `select`
 - `sell`
@@ -1436,9 +1410,7 @@
 - `sorrow`
 - `sorry`
 - `soul`
-- `sound²`
 - `sour`
-- `source`
 - `southeast`
 - `southwest`
 - `souvenir`
@@ -1558,7 +1530,6 @@
 - `tangible`
 - `tank`
 - `tap`
-- `tape`
 - `tear²`
 - `technique`
 - `tech`
@@ -1603,7 +1574,6 @@
 - `topic`
 - `torture`
 - `toss`
-- `total`
 - `towel`
 - `tractor`
 - `trademark`
@@ -1623,12 +1593,10 @@
 - `troop`
 - `trouble`
 - `trunk`
-- `truth`
 - `try`
 - `tube`
 - `tuition`
 - `tumor`
-- `tune`
 - `tunnel`
 - `turkey`
 - `twin`
@@ -1738,7 +1706,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1153）
+## 六级星号词目（1142）
 
 - `abbreviation`
 - `abide`
@@ -2008,7 +1976,6 @@
 - `crate`
 - `crave`
 - `credential`
-- `credible`
 - `cricket`
 - `cripple`
 - `crouch`
@@ -2067,15 +2034,12 @@
 - `deviate`
 - `devour`
 - `diesel`
-- `differentiate`
 - `diffuse`
 - `dilute`
 - `diminish`
 - `dinosaur`
 - `directory`
 - `disarm`
-- `discern`
-- `disclose`
 - `discord`
 - `discourse`
 - `discreet`
@@ -2090,7 +2054,6 @@
 - `dissertation`
 - `dissident`
 - `distill`
-- `distort`
 - `divert`
 - `dividend`
 - `divine`
@@ -2405,7 +2368,6 @@
 - `menace`
 - `merchandise`
 - `mercury`
-- `merge`
 - `metabolism`
 - `metaphor`
 - `metropolitan`
@@ -2551,10 +2513,8 @@
 - `preoccupy`
 - `prerequisite`
 - `preside`
-- `prestige`
 - `pretext`
 - `prey`
-- `probe`
 - `profile`
 - `prolong`
 - `prone`
@@ -2585,9 +2545,7 @@
 - `reassure`
 - `recede`
 - `reciprocal`
-- `reckless`
 - `reconcile`
-- `rectify`
 - `recur`
 - `redundant`
 - `reel`
@@ -2695,7 +2653,6 @@
 - `sodium`
 - `solicit`
 - `solitary`
-- `soothe`
 - `sovereign`
 - `spaghetti`
 - `spear`

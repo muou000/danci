@@ -3667,13 +3667,109 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号连续且唯一', () => {
+  it('主题短文 NO. 31 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并规范标注超纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 31');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('教育文化');
+    expect(passage!.titleEn).toBe(
+      'How the Campus Radio Team Verified an Event Rumor'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #41 初始规划的全部 6 个核心目标词目
+    for (const targetId of [
+      'broadcast',
+      'rumor',
+      'journalism',
+      'interview',
+      'publish',
+      'editorial',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合新闻采编与流言核实大纲词目
+    for (const id of [
+      'anchor',
+      'microphone',
+      'leak',
+      'allege',
+      'concert',
+      'pause',
+      'probe',
+      'source',
+      'fiction',
+      'mislead',
+      'tape',
+      'officer',
+      'dean',
+      'calendar',
+      'disclose',
+      'mere',
+      'postpone',
+      'deny',
+      'total',
+      'truth',
+      'brief',
+      'notify',
+      'listen',
+      'rectify',
+      'tune',
+      'quote',
+      'soothe',
+      'differentiate',
+      'merge',
+      'segment',
+      'column',
+      'discern',
+      'credible',
+      'remind',
+      'sound²',
+      'distort',
+      'prestige',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
+  it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
-    PASSAGES.forEach((passage, idx) => {
-      const expectedId = `passage-${String(idx + 1).padStart(3, '0')}`;
-      const expectedLabel = `NO. ${String(idx + 1).padStart(2, '0')}`;
-      expect(passage.id).toBe(expectedId);
-      expect(passage.indexLabel).toBe(expectedLabel);
+    const seenIds = new Set<string>();
+    const seenLabels = new Set<string>();
+
+    PASSAGES.forEach((passage) => {
+      expect(passage.id).toMatch(/^passage-\d{3}$/);
+      expect(passage.indexLabel).toMatch(/^NO\. \d{2}$/);
+
+      const numFromId = Number(passage.id.replace('passage-', ''));
+      const numFromLabel = Number(passage.indexLabel.replace('NO. ', ''));
+      expect(numFromId).toBe(numFromLabel);
+
+      expect(seenIds.has(passage.id)).toBe(false);
+      expect(seenLabels.has(passage.indexLabel)).toBe(false);
+      seenIds.add(passage.id);
+      seenLabels.add(passage.indexLabel);
     });
   });
 });
