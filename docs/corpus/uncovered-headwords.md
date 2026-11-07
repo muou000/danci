@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1971/4692 个非免注核心大纲词目（42.0%），尚有 2721 个待覆盖。
+当前覆盖 2000/4692 个非免注核心大纲词目（42.6%），尚有 2692 个待覆盖。
 
-## 四级词目（1617）
+## 四级词目（1598）
 
 - `able`
 - `abolish`
@@ -69,11 +69,9 @@
 - `appropriate¹`
 - `approximate`
 - `aptitude`
-- `arithmetic`
 - `army`
 - `arrest`
 - `arrow`
-- `ashamed`
 - `ashore`
 - `asleep`
 - `ass`
@@ -293,7 +291,6 @@
 - `contrary`
 - `cookie`
 - `cop`
-- `copper`
 - `corn`
 - `corps`
 - `cosmos`
@@ -325,7 +322,6 @@
 - `cure`
 - `curl`
 - `currency`
-- `curriculum`
 - `curse`
 - `cute`
 - `dam`
@@ -378,7 +374,6 @@
 - `dimension`
 - `dioxide`
 - `dip`
-- `diploma`
 - `diplomat`
 - `dirt`
 - `disable`
@@ -443,13 +438,11 @@
 - `embassy`
 - `emperor`
 - `empire`
-- `encounter`
 - `endanger`
 - `enemy`
 - `enlarge`
 - `enormous`
 - `enquire`
-- `enroll`
 - `entertain`
 - `entitle`
 - `envelope`
@@ -562,7 +555,6 @@
 - `fuck`
 - `fuel`
 - `fulfill`
-- `full`
 - `fun`
 - `fundamental`
 - `funeral`
@@ -674,7 +666,6 @@
 - `hollow`
 - `holy`
 - `homeland`
-- `homework`
 - `homosexual`
 - `homo`
 - `honeymoon`
@@ -683,7 +674,6 @@
 - `horror`
 - `horsepower`
 - `hospitable`
-- `host¹`
 - `host²`
 - `hotdog`
 - `housewife`
@@ -830,7 +820,6 @@
 - `liberal`
 - `liberate`
 - `liberty`
-- `license`
 - `lick`
 - `lie¹`
 - `lie²`
@@ -843,7 +832,6 @@
 - `liquor`
 - `liter`
 - `literal`
-- `literary`
 - `litter`
 - `liver`
 - `loaf`
@@ -935,7 +923,6 @@
 - `moreover`
 - `mortgage`
 - `motel`
-- `motivate`
 - `motive`
 - `motor`
 - `motorway`
@@ -1081,7 +1068,6 @@
 - `pillow`
 - `pin`
 - `pint`
-- `pipe`
 - `pirate`
 - `pistol`
 - `pit`
@@ -1187,8 +1173,6 @@
 - `rebel`
 - `reception`
 - `reckon`
-- `recognize`
-- `recommend`
 - `refer`
 - `reflect`
 - `refresh`
@@ -1453,7 +1437,6 @@
 - `tailor`
 - `takeoff`
 - `tame`
-- `tangible`
 - `tank`
 - `tap`
 - `tear²`
@@ -1506,7 +1489,6 @@
 - `tragedy`
 - `tram`
 - `transcript`
-- `translate`
 - `transplant`
 - `treasure`
 - `treaty`
@@ -1520,7 +1502,6 @@
 - `trunk`
 - `try`
 - `tube`
-- `tuition`
 - `tumor`
 - `tunnel`
 - `turkey`
@@ -1624,7 +1605,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1104）
+## 六级星号词目（1094）
 
 - `abbreviation`
 - `abide`
@@ -1686,7 +1667,6 @@
 - `appall`
 - `appease`
 - `appraise`
-- `apprentice`
 - `appropriate²`
 - `apron`
 - `apt`
@@ -1809,7 +1789,6 @@
 - `chronic`
 - `chronicle`
 - `chunk`
-- `civic`
 - `clamp`
 - `clan`
 - `clasp`
@@ -1838,7 +1817,6 @@
 - `commemorate`
 - `commonwealth`
 - `compartment`
-- `compassion`
 - `compile`
 - `complacent`
 - `complement`
@@ -1889,7 +1867,6 @@
 - `cram`
 - `crate`
 - `crave`
-- `credential`
 - `cricket`
 - `cripple`
 - `crouch`
@@ -1914,7 +1891,6 @@
 - `deadlock`
 - `decimal`
 - `decree`
-- `dedicate`
 - `deduce`
 - `deduct`
 - `default`
@@ -1940,7 +1916,6 @@
 - `destiny`
 - `detach`
 - `detain`
-- `deter`
 - `detergent`
 - `detriment`
 - `devastate`
@@ -2148,7 +2123,6 @@
 - `idol`
 - `ignite`
 - `illicit`
-- `illiterate`
 - `illuminate`
 - `immerse`
 - `imminent`
@@ -2228,7 +2202,6 @@
 - `limelight`
 - `limp`
 - `liner`
-- `linger`
 - `linguistic`
 - `lipstick`
 - `livestock`
@@ -2390,7 +2363,6 @@
 - `plea`
 - `plead`
 - `plight`
-- `plumber`
 - `plumbing`
 - `poise`
 - `poke`
@@ -2720,7 +2692,6 @@
 - `witch`
 - `wither`
 - `withhold`
-- `wrench`
 - `wrestle`
 - `wretched`
 - `yacht`

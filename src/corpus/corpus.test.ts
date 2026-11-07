@@ -4152,6 +4152,179 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 34 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 34');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('教育文化');
+    expect(passage!.titleEn).toBe('Adult Literacy and Vocational Renewal');
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #44 规划的全部 9 个核心目标词目（首字母各不相同）
+    for (const targetId of [
+      'illiterate',
+      'enroll',
+      'tuition',
+      'curriculum',
+      'mentor',
+      'diploma',
+      'qualify',
+      'apprentice',
+      'faculty',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合成人识字与职业技术核心大纲词目
+    for (const id of [
+      'formal',
+      'youth',
+      'ashamed',
+      'complex',
+      'text',
+      'confront',
+      'rapid',
+      'change',
+      'economy',
+      'struggle',
+      'comprehend',
+      'technical',
+      'handbook',
+      'function',
+      'routine',
+      'assign',
+      'encourage',
+      'support',
+      'colleague',
+      'decide',
+      'program',
+      'host¹',
+      'local',
+      'community',
+      'civic',
+      'fund',
+      'cover',
+      'full',
+      'finance',
+      'worry',
+      'deter',
+      'resolve',
+      'return',
+      'study',
+      'design',
+      'balance',
+      'link',
+      'literary',
+      'lesson',
+      'direct',
+      'practical',
+      'vocation',
+      'skill',
+      'dedicate',
+      'treat',
+      'learn',
+      'patient¹',
+      'volunteer',
+      'offer',
+      'steady',
+      'individual',
+      'guide',
+      'alongside',
+      'base',
+      'exercise',
+      'calculate',
+      'measure',
+      'daily',
+      'arithmetic',
+      'complete',
+      'regular',
+      'homework',
+      'diligent',
+      'encounter',
+      'harsh',
+      'criticize',
+      'find',
+      'genuine',
+      'compassion',
+      'help',
+      'overcome',
+      'linger',
+      'doubt',
+      'workshop',
+      'translate',
+      'tangible',
+      'manual',
+      'competent',
+      'interpret',
+      'diagram',
+      'safe',
+      'instruct',
+      'assemble',
+      'copper',
+      'pipe',
+      'handle',
+      'wrench',
+      'correct',
+      'confidence',
+      'grow',
+      'realize',
+      'read',
+      'trade',
+      'plumber',
+      'progress',
+      'motivate',
+      'persist',
+      'demand',
+      'session',
+      'rigor',
+      'success',
+      'earn',
+      'equip',
+      'recognize',
+      'credential',
+      'milestone',
+      'prove',
+      'chance',
+      'transform',
+      'verify',
+      'strong',
+      'recommend',
+      'license',
+      'official',
+      'educate',
+      'vulnerable',
+      'profession',
+      'secure',
+      'promise',
+      'path',
+      'dignity',
+      'stable',
+      'career',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
