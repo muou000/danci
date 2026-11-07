@@ -3001,6 +3001,193 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 26 满足主题自然度、词量及行间标注校验规范，且大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 26');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('科技');
+    expect(passage!.titleEn).toBe(
+      'Testing Simulated Lunar Soil and Reporting Findings Cautiously'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    expect(coveredHeadwordIdsIn(compiled).length).toBeGreaterThanOrEqual(120);
+
+    // 验证包含 Issue #36 初始规划核心目标词
+    expect(coveredHeadwordIdsIn(compiled)).toContain('hypothesis');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('apparatus');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('lunar');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('microscope');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('result');
+    expect(coveredHeadwordIdsIn(compiled)).toContain('journal');
+
+    // 验证大幅拓展纳入的高契合未覆盖词目
+    for (const id of [
+      'geology',
+      'lab',
+      'undergraduate',
+      'faculty',
+      'mentor',
+      'propose',
+      'specific',
+      'empirical',
+      'predict',
+      'dry',
+      'friction',
+      'fine¹',
+      'powder',
+      'simulate',
+      'dust',
+      'cling',
+      'tilt',
+      'aluminum',
+      'surface',
+      'coarse',
+      'grain',
+      'scarce',
+      'crush',
+      'volcano',
+      'ash',
+      'mine²',
+      'fragment',
+      'analogue',
+      'bake',
+      'batch',
+      'furnace',
+      'expel',
+      'moist',
+      'fill',
+      'jar¹',
+      'portion',
+      'fasten',
+      'lid',
+      'custom',
+      'pump',
+      'chamber',
+      'valve',
+      'gauge',
+      'thermometer',
+      'rub',
+      'tray',
+      'exact',
+      'angle',
+      'slide',
+      'minute²',
+      'trace',
+      'optic',
+      'lens',
+      'magnify',
+      'edge',
+      'scan',
+      'rough',
+      'texture',
+      'diameter',
+      'fraction',
+      'millimeter',
+      'log',
+      'numerical',
+      'parameter',
+      'sketch',
+      'diagram',
+      'session',
+      'puzzle',
+      'discrepancy',
+      'presume',
+      'spot',
+      'faint',
+      'stain',
+      'scratch',
+      'repeat',
+      'consecutive',
+      'ascertain',
+      'duplicate',
+      'phenomenon',
+      'frank',
+      'concede',
+      'inevitable',
+      'shortcoming',
+      'gravity',
+      'slight',
+      'vapor',
+      'humid',
+      'constrain',
+      'submit',
+      'manuscript',
+      'earnest',
+      'author',
+      'revise',
+      'proofread',
+      'paragraph',
+      'omit',
+      'vague',
+      'remark',
+      'refrain',
+      'exaggerate',
+      'overstate',
+      'preliminary',
+      'proof',
+      'justify',
+      'add',
+      'explicit',
+      'appendix',
+      'margin',
+      'senior',
+      'edit',
+      'commend',
+      'humble',
+      'meticulous',
+      'endeavor',
+      'note',
+      'valid',
+      'premature',
+      'boast',
+      'thorough',
+      'limit',
+    ]) {
+      expect(coveredHeadwordIdsIn(compiled)).toContain(id);
+    }
+
+    // 验证修饰名词的形容词语境词性匹配
+    const attributiveChecks: [number, number, string][] = [
+      [0, 0, 'campus'],
+      [0, 0, 'geology'],
+      [0, 0, 'faculty'],
+      [0, 1, 'tilt'],
+      [0, 1, 'aluminum'],
+      [0, 2, 'mine²'],
+      [1, 0, 'custom'],
+      [1, 1, 'minute²'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId] of attributiveChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith('a.')).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);
@@ -3038,8 +3225,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
-  it('PASSAGES 统一收录全部 25 篇短文，ID 与编号连续且唯一', () => {
-    expect(PASSAGES).toHaveLength(25);
+  it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号连续且唯一', () => {
+    expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     PASSAGES.forEach((passage, idx) => {
       const expectedId = `passage-${String(idx + 1).padStart(3, '0')}`;
       const expectedLabel = `NO. ${String(idx + 1).padStart(2, '0')}`;

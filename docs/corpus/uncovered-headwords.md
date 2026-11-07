@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1436/4692 个非免注核心大纲词目（30.6%），尚有 3256 个待覆盖。
+当前覆盖 1562/4692 个非免注核心大纲词目（33.3%），尚有 3130 个待覆盖。
 
-## 四级词目（2031）
+## 四级词目（1936）
 
 - `able`
 - `abolish`
@@ -22,7 +22,6 @@
 - `ache`
 - `acid`
 - `acre`
-- `add`
 - `addict`
 - `adjective`
 - `administrate`
@@ -49,7 +48,6 @@
 - `aloud`
 - `alphabet`
 - `altogether`
-- `aluminum`
 - `amateur`
 - `amaze`
 - `ambassador`
@@ -62,7 +60,6 @@
 - `anchor`
 - `anew`
 - `angel`
-- `angle`
 - `angry`
 - `anniversary`
 - `announce`
@@ -76,7 +73,6 @@
 - `apart`
 - `apt.`
 - `apology`
-- `apparatus`
 - `apparent`
 - `appetite`
 - `applaud`
@@ -91,7 +87,6 @@
 - `arrest`
 - `arrow`
 - `art`
-- `ash`
 - `ashamed`
 - `ashore`
 - `aside`
@@ -108,7 +103,6 @@
 - `attic`
 - `attorney`
 - `attribute`
-- `author`
 - `automobile`
 - `await`
 - `awake`
@@ -131,7 +125,6 @@
 - `badminton`
 - `baggage`
 - `bail`
-- `bake`
 - `balcony`
 - `ballet`
 - `balloon`
@@ -155,7 +148,6 @@
 - `basis`
 - `basket`
 - `bat`
-- `batch`
 - `bath`
 - `bathe`
 - `battalion`
@@ -204,7 +196,6 @@
 - `blouse`
 - `blow`
 - `blur`
-- `boast`
 - `bomb`
 - `bonus`
 - `boom`
@@ -313,7 +304,6 @@
 - `claw`
 - `clever`
 - `climax`
-- `cling`
 - `clip`
 - `clockwise`
 - `clone`
@@ -321,7 +311,6 @@
 - `clown`
 - `club`
 - `clumsy`
-- `coarse`
 - `cock`
 - `code`
 - `coil`
@@ -380,7 +369,6 @@
 - `crocodile`
 - `crown`
 - `cruel`
-- `crush`
 - `cry`
 - `crystal`
 - `cube`
@@ -392,7 +380,6 @@
 - `curriculum`
 - `curse`
 - `curtain`
-- `custom`
 - `cute`
 - `dairy`
 - `dam`
@@ -440,10 +427,8 @@
 - `devil`
 - `dew`
 - `diabetes`
-- `diagram`
 - `dial`
 - `dialect`
-- `diameter`
 - `diamond`
 - `diary`
 - `dictate`
@@ -489,7 +474,6 @@
 - `drag`
 - `dragon`
 - `drastic`
-- `draw`
 - `drawer`
 - `dream`
 - `drift`
@@ -500,7 +484,6 @@
 - `drug`
 - `drum`
 - `drunk`
-- `dry`
 - `dual`
 - `due`
 - `dull`
@@ -508,16 +491,12 @@
 - `dump`
 - `duration`
 - `dusk`
-- `dust`
 - `dynasty`
 - `eagle`
-- `earnest`
 - `earthquake`
 - `easy-going`
 - `eat`
 - `economics`
-- `edge`
-- `edit`
 - `editorial`
 - `eggplant`
 - `either`
@@ -559,8 +538,6 @@
 - `eventually`
 - `everywhere`
 - `evil`
-- `exact`
-- `exaggerate`
 - `excel`
 - `exception`
 - `excite`
@@ -570,9 +547,7 @@
 - `exert`
 - `exile`
 - `exist`
-- `expel`
 - `expertise`
-- `explicit`
 - `explode`
 - `exploit`
 - `export`
@@ -587,9 +562,7 @@
 - `fable`
 - `fabric`
 - `factor`
-- `faculty`
 - `fade`
-- `faint`
 - `fair¹`
 - `fair²`
 - `fairy`
@@ -604,7 +577,6 @@
 - `farther`
 - `fascinate`
 - `fashion`
-- `fasten`
 - `fat`
 - `fatal`
 - `fate`
@@ -625,9 +597,7 @@
 - `fiction`
 - `fight`
 - `figure`
-- `fill`
 - `filter`
-- `fine¹`
 - `fine²`
 - `fingerprint`
 - `fireman`
@@ -676,11 +646,8 @@
 - `fossil`
 - `fountain`
 - `fox`
-- `fraction`
-- `fragment`
 - `frame`
 - `framework`
-- `frank`
 - `freeway`
 - `freshman`
 - `frog`
@@ -695,7 +662,6 @@
 - `fundamental`
 - `funeral`
 - `fur`
-- `furnace`
 - `fuss`
 - `gadget`
 - `gallon`
@@ -711,7 +677,6 @@
 - `gender`
 - `general`
 - `genius`
-- `geology`
 - `geometry`
 - `germ`
 - `gesture`
@@ -736,7 +701,6 @@
 - `gown`
 - `grab`
 - `grace`
-- `grain`
 - `gram`
 - `grammar`
 - `grand`
@@ -745,7 +709,6 @@
 - `gratitude`
 - `grave`
 - `gravitation`
-- `gravity`
 - `greenhouse`
 - `greet`
 - `grin`
@@ -839,7 +802,6 @@
 - `housework`
 - `hug`
 - `huge`
-- `humble`
 - `humor`
 - `hunger`
 - `hunt`
@@ -885,7 +847,6 @@
 - `indifferent`
 - `indoor`
 - `induce`
-- `inevitable`
 - `infant`
 - `infer`
 - `inferior`
@@ -938,7 +899,6 @@
 - `jail`
 - `jam¹`
 - `jam²`
-- `jar¹`
 - `jar²`
 - `jaw`
 - `jazz`
@@ -950,7 +910,6 @@
 - `jog`
 - `join`
 - `joke`
-- `journal`
 - `journalism`
 - `joy`
 - `jungle`
@@ -958,7 +917,6 @@
 - `junk`
 - `jury`
 - `just²`
-- `justify`
 - `keen`
 - `kick`
 - `kill`
@@ -977,7 +935,6 @@
 - `knot`
 - `knowhow`
 - `label`
-- `lab`
 - `lace`
 - `lag`
 - `lamb`
@@ -1012,7 +969,6 @@
 - `leisure`
 - `lemon`
 - `lend`
-- `lens`
 - `less`
 - `lest`
 - `liable`
@@ -1021,7 +977,6 @@
 - `liberty`
 - `license`
 - `lick`
-- `lid`
 - `lie¹`
 - `lie²`
 - `lightning`
@@ -1029,7 +984,6 @@
 - `likewise`
 - `lily`
 - `limb`
-- `limit`
 - `lip`
 - `liquid`
 - `liquor`
@@ -1045,7 +999,6 @@
 - `lobby`
 - `locate`
 - `lodge`
-- `log`
 - `logo`
 - `lonely`
 - `long²`
@@ -1059,7 +1012,6 @@
 - `luck`
 - `luggage`
 - `lump`
-- `lunar`
 - `lung`
 - `machine`
 - `mad`
@@ -1079,7 +1031,6 @@
 - `mankind`
 - `manner`
 - `marathon`
-- `margin`
 - `marry`
 - `marshal`
 - `marvel`
@@ -1117,18 +1068,14 @@
 - `meter`
 - `metro`
 - `microphone`
-- `microscope`
 - `microwave`
 - `middle-class`
 - `mile`
 - `military`
 - `mill`
-- `millimeter`
-- `mine²`
 - `mine³`
 - `minister`
 - `minus`
-- `minute²`
 - `miracle`
 - `miserable`
 - `misfortune`
@@ -1144,7 +1091,6 @@
 - `mix`
 - `mode`
 - `moderate`
-- `moist`
 - `mold`
 - `monster`
 - `monument`
@@ -1190,7 +1136,6 @@
 - `nonsense`
 - `northeast`
 - `northwest`
-- `note`
 - `notice`
 - `notify`
 - `notion`
@@ -1223,7 +1168,6 @@
 - `okay`
 - `old-fashioned`
 - `Olympic`
-- `omit`
 - `ongoing`
 - `onion`
 - `onward`
@@ -1279,7 +1223,6 @@
 - `paperback`
 - `parade`
 - `paradox`
-- `paragraph`
 - `parcel`
 - `pardon`
 - `park²`
@@ -1320,7 +1263,6 @@
 - `petroleum`
 - `petty`
 - `phase`
-- `phenomenon`
 - `phrase`
 - `physician`
 - `physics`
@@ -1361,7 +1303,6 @@
 - `pop`
 - `popular`
 - `population`
-- `portion`
 - `pose`
 - `position`
 - `possess`
@@ -1373,15 +1314,12 @@
 - `pound¹`
 - `pound²`
 - `pour`
-- `powder`
 - `pray`
 - `preach`
 - `precaution`
-- `predict`
 - `preface`
 - `prefer`
 - `pregnant`
-- `preliminary`
 - `premier`
 - `preposition`
 - `present²`
@@ -1412,11 +1350,9 @@
 - `prominent`
 - `pronoun`
 - `pronounce`
-- `proof`
 - `proper`
 - `property`
 - `proportion`
-- `propose`
 - `prose`
 - `prospect`
 - `protein`
@@ -1428,14 +1364,12 @@
 - `pub`
 - `publish`
 - `pulse`
-- `pump`
 - `punch`
 - `punish`
 - `purchase`
 - `purpose`
 - `purse`
 - `push`
-- `puzzle`
 - `qualify`
 - `quantify`
 - `quantity`
@@ -1481,7 +1415,6 @@
 - `refer`
 - `refine`
 - `reflect`
-- `refrain`
 - `refresh`
 - `refreshment`
 - `refrigerator`
@@ -1496,13 +1429,11 @@
 - `release`
 - `relevant`
 - `religion`
-- `remark`
 - `remember`
 - `remind`
 - `render`
 - `rent`
 - `repay`
-- `repeat`
 - `reply`
 - `represent`
 - `reproduce`
@@ -1523,7 +1454,6 @@
 - `reunite`
 - `reveal`
 - `reverse`
-- `revise`
 - `revolution`
 - `revolve`
 - `rhythm`
@@ -1544,13 +1474,11 @@
 - `romance`
 - `rope`
 - `rose`
-- `rough`
 - `round`
 - `rouse`
 - `row¹`
 - `row²`
 - `royal`
-- `rub`
 - `rude`
 - `rug`
 - `rumor`
@@ -1564,10 +1492,8 @@
 - `sauce`
 - `sausage`
 - `say`
-- `scan`
 - `scandal`
 - `scar`
-- `scarce`
 - `scare`
 - `scatter`
 - `scent`
@@ -1576,7 +1502,6 @@
 - `scope`
 - `score`
 - `scout`
-- `scratch`
 - `scream`
 - `screw`
 - `script`
@@ -1595,12 +1520,10 @@
 - `semester`
 - `senate`
 - `send`
-- `senior`
 - `sequence`
 - `series`
 - `serious`
 - `servant`
-- `session`
 - `setting`
 - `sew`
 - `sex`
@@ -1614,7 +1537,6 @@
 - `shit`
 - `shiver`
 - `shoot`
-- `shortcoming`
 - `shortly`
 - `shot`
 - `shout`
@@ -1644,7 +1566,6 @@
 - `situate`
 - `skate`
 - `skeleton`
-- `sketch`
 - `ski`
 - `skip`
 - `skyline`
@@ -1654,8 +1575,6 @@
 - `sleeve`
 - `slender`
 - `slice`
-- `slide`
-- `slight`
 - `slim`
 - `slogan`
 - `small`
@@ -1695,7 +1614,6 @@
 - `span`
 - `spark`
 - `sparkle`
-- `specific`
 - `specify`
 - `speech`
 - `spell`
@@ -1714,7 +1632,6 @@
 - `spontaneous`
 - `sportsman`
 - `sportswoman`
-- `spot`
 - `spouse`
 - `spray`
 - `spur`
@@ -1722,7 +1639,6 @@
 - `squeeze`
 - `stack`
 - `stadium`
-- `stain`
 - `staircase`
 - `stake`
 - `stale`
@@ -1773,7 +1689,6 @@
 - `subject¹`
 - `subject²`
 - `subjective`
-- `submit`
 - `substance`
 - `substitute`
 - `subtract`
@@ -1792,7 +1707,6 @@
 - `supreme`
 - `sure`
 - `surf`
-- `surface`
 - `surge`
 - `surgery`
 - `surname`
@@ -1850,11 +1764,9 @@
 - `theme`
 - `theory`
 - `thereby`
-- `thermometer`
 - `thesis`
 - `thief`
 - `thirst`
-- `thorough`
 - `throat`
 - `throw`
 - `thrust`
@@ -1880,7 +1792,6 @@
 - `touch`
 - `tough`
 - `towel`
-- `trace`
 - `tractor`
 - `trademark`
 - `tragedy`
@@ -1888,7 +1799,6 @@
 - `transcript`
 - `translate`
 - `transplant`
-- `tray`
 - `treasure`
 - `treaty`
 - `tremendous`
@@ -1917,7 +1827,6 @@
 - `underdeveloped`
 - `underestimate`
 - `undergo`
-- `undergraduate`
 - `underground`
 - `underline`
 - `underneath`
@@ -1941,11 +1850,8 @@
 - `utter²`
 - `vacant`
 - `vacation`
-- `vague`
 - `vain`
-- `valid`
 - `vanish`
-- `vapor`
 - `various`
 - `vary`
 - `veil`
@@ -1972,7 +1878,6 @@
 - `vivid`
 - `vocabulary`
 - `vocation`
-- `volcano`
 - `volleyball`
 - `volt`
 - `wagon`
@@ -2038,7 +1943,7 @@
 - `youngster`
 - `zoology`
 
-## 六级星号词目（1225）
+## 六级星号词目（1194）
 
 - `abbreviation`
 - `abide`
@@ -2087,7 +1992,6 @@
 - `amiable`
 - `ammunition`
 - `amplify`
-- `analogue`
 - `analogy`
 - `anecdote`
 - `anguish`
@@ -2101,7 +2005,6 @@
 - `ape`
 - `appall`
 - `appease`
-- `appendix`
 - `appraise`
 - `apprentice`
 - `appropriate²`
@@ -2122,7 +2025,6 @@
 - `artifact`
 - `artillery`
 - `ascend`
-- `ascertain`
 - `ascribe`
 - `aspire`
 - `assassinate`
@@ -2224,7 +2126,6 @@
 - `census`
 - `ceramic`
 - `certify`
-- `chamber`
 - `chancellor`
 - `chant`
 - `chapel`
@@ -2260,7 +2161,6 @@
 - `comet`
 - `comic`
 - `commemorate`
-- `commend`
 - `commonwealth`
 - `compartment`
 - `compassion`
@@ -2271,7 +2171,6 @@
 - `compliment`
 - `composite`
 - `compress`
-- `concede`
 - `conceit`
 - `conceive`
 - `concise`
@@ -2284,12 +2183,10 @@
 - `configuration`
 - `congregate`
 - `connotation`
-- `consecutive`
 - `console`
 - `conspicuous`
 - `conspire`
 - `constituent`
-- `constrain`
 - `consulate`
 - `contagious`
 - `contingent`
@@ -2393,7 +2290,6 @@
 - `discord`
 - `discourse`
 - `discreet`
-- `discrepancy`
 - `dismantle`
 - `dismay`
 - `dispatch`
@@ -2422,7 +2318,6 @@
 - `dressing`
 - `dub`
 - `dubious`
-- `duplicate`
 - `dwarf`
 - `dwell`
 - `Easter`
@@ -2447,12 +2342,10 @@
 - `embroidery`
 - `emigrate`
 - `eminent`
-- `empirical`
 - `emulate`
 - `enact`
 - `enclose`
 - `encyclopedia`
-- `endeavor`
 - `endorse`
 - `endow`
 - `enlist`
@@ -2528,7 +2421,6 @@
 - `franchise`
 - `frantic`
 - `fraud`
-- `friction`
 - `fringe`
 - `frown`
 - `fury`
@@ -2538,7 +2430,6 @@
 - `galaxy`
 - `garlic`
 - `gasp`
-- `gauge`
 - `genre`
 - `giggle`
 - `glacier`
@@ -2592,14 +2483,12 @@
 - `huddle`
 - `hum`
 - `humane`
-- `humid`
 - `humiliate`
 - `hurdle`
 - `hurl`
 - `hurricane`
 - `hybrid`
 - `hypocrisy`
-- `hypothesis`
 - `hysterical`
 - `iceberg`
 - `icon`
@@ -2713,7 +2602,6 @@
 - `lure`
 - `lyric`
 - `magistrate`
-- `magnify`
 - `magnitude`
 - `majesty`
 - `malice`
@@ -2723,7 +2611,6 @@
 - `maneuver`
 - `manifest`
 - `mansion`
-- `manuscript`
 - `mar`
 - `marble`
 - `maritime`
@@ -2737,13 +2624,11 @@
 - `medieval`
 - `melody`
 - `menace`
-- `mentor`
 - `merchandise`
 - `mercury`
 - `merge`
 - `metabolism`
 - `metaphor`
-- `meticulous`
 - `metropolitan`
 - `midst`
 - `midwife`
@@ -2787,7 +2672,6 @@
 - `notorious`
 - `notwithstanding`
 - `numb`
-- `numerical`
 - `nurture`
 - `oak`
 - `oar`
@@ -2802,7 +2686,6 @@
 - `opaque`
 - `operative`
 - `oppress`
-- `optic`
 - `optimum`
 - `ordeal`
 - `orthodox`
@@ -2813,7 +2696,6 @@
 - `overhaul`
 - `overlap`
 - `override`
-- `overstate`
 - `overt`
 - `overturn`
 - `owl`
@@ -2826,7 +2708,6 @@
 - `paradigm`
 - `paradise`
 - `paralyze`
-- `parameter`
 - `parasite`
 - `parish`
 - `parole`
@@ -2890,21 +2771,18 @@
 - `predator`
 - `predecessor`
 - `predominate`
-- `premature`
 - `premise`
 - `premium`
 - `preoccupy`
 - `prerequisite`
 - `preside`
 - `prestige`
-- `presume`
 - `pretext`
 - `prey`
 - `probe`
 - `profile`
 - `prolong`
 - `prone`
-- `proofread`
 - `prop`
 - `propaganda`
 - `propagate`
@@ -3025,7 +2903,6 @@
 - `shrewd`
 - `shrub`
 - `signify`
-- `simulate`
 - `simultaneous`
 - `sinister`
 - `skull`
@@ -3150,7 +3027,6 @@
 - `tertiary`
 - `testify`
 - `testimony`
-- `texture`
 - `thermal`
 - `thigh`
 - `thorn`
@@ -3158,7 +3034,6 @@
 - `throne`
 - `tickle`
 - `tile`
-- `tilt`
 - `timid`
 - `toil`
 - `topple`
@@ -3210,7 +3085,6 @@
 - `uranium`
 - `urine`
 - `vaccine`
-- `valve`
 - `vegetation`
 - `vein`
 - `velocity`
