@@ -3188,6 +3188,162 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 27 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 27');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('教育文化');
+    expect(passage!.titleEn).toBe(
+      'Adapting a Local Legend for the Community Arts Festival'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(130);
+
+    // 验证包含 Issue #37 初始规划的全部 7 个核心目标词目
+    for (const targetId of [
+      'theater',
+      'legend',
+      'script',
+      'costume',
+      'perform',
+      'festival',
+      'manuscript',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证大幅拓展纳入的高契合戏剧改编与社区会演大纲词目
+    for (const id of [
+      'archive',
+      'happen',
+      'fragile',
+      'handwriting',
+      'fade',
+      'ink',
+      'narrate',
+      'steer',
+      'ferry',
+      'fog',
+      'tale',
+      'live²',
+      'play',
+      'revive',
+      'outdated',
+      'prose',
+      'vivid',
+      'tedious',
+      'episode',
+      'obscure',
+      'idiom',
+      'youngster',
+      'twist',
+      'intact',
+      'heroine',
+      'humor',
+      'portray',
+      'saint',
+      'lavish',
+      'second-hand',
+      'fabric',
+      'sew',
+      'linen',
+      'carve',
+      'oar',
+      'prop',
+      'venue',
+      'timid',
+      'nerve',
+      'refine',
+      'vocal',
+      'tone',
+      'gesture',
+      'tempo',
+      'recite',
+      'speech',
+      'aloud',
+      'spotlight',
+      'dim',
+      'curtain',
+      'evoke',
+      'row¹',
+      'seat',
+      'debut',
+      'crisp',
+      'grace',
+      'motion',
+      'arouse',
+      'sympathy',
+      'wonder',
+      'silent',
+      'climax',
+      'nod',
+      'delight',
+      'lean',
+      'fascinate',
+      'witness',
+      'folklore',
+      'alive',
+      'heartfelt',
+      'applaud',
+      'greet',
+      'bow¹',
+      'passion',
+      'breathe',
+      'vigor',
+      'legacy',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证语境词性匹配（名词前作定语标为 a.，被修饰名词标为 n.，副词标为 ad.）
+    const posChecks: [number, number, string, string][] = [
+      [0, 0, 'amateur', 'a.'],
+      [0, 0, 'theater', 'a.'],
+      [0, 0, 'club', 'n.'],
+      [0, 2, 'live²', 'a.'],
+      [0, 2, 'play', 'n.'],
+      [0, 2, 'community', 'a.'],
+      [0, 2, 'art', 'a.'],
+      [0, 2, 'festival', 'n.'],
+      [2, 0, 'linen', 'a.'],
+      [2, 0, 'costume', 'n.'],
+      [2, 1, 'faculty', 'a.'],
+      [2, 1, 'mentor', 'n.'],
+      [2, 2, 'aloud', 'ad.'],
+      [3, 2, 'forward', 'ad.'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId, prefix] of posChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith(prefix)).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);
