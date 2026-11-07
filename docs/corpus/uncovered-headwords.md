@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1659/4692 个非免注核心大纲词目（35.4%），尚有 3033 个待覆盖。
+当前覆盖 1761/4692 个非免注核心大纲词目（37.5%），尚有 2931 个待覆盖。
 
-## 四级词目（1858）
+## 四级词目（1772）
 
 - `able`
 - `abolish`
@@ -36,7 +36,6 @@
 - `afterward`
 - `afterwards`
 - `AIDS`
-- `aim`
 - `album`
 - `alcohol`
 - `algebra`
@@ -59,7 +58,6 @@
 - `angel`
 - `angry`
 - `anniversary`
-- `announce`
 - `annoy`
 - `ant`
 - `anticipate`
@@ -69,7 +67,6 @@
 - `anywhere`
 - `apart`
 - `apt.`
-- `apology`
 - `apparent`
 - `appetite`
 - `appoint`
@@ -83,15 +80,12 @@
 - `arrow`
 - `ashamed`
 - `ashore`
-- `aside`
 - `asleep`
 - `ass`
 - `associate`
 - `assume`
 - `astonish`
-- `athlete`
 - `atom`
-- `attack`
 - `attain`
 - `attempt`
 - `attic`
@@ -100,7 +94,6 @@
 - `automobile`
 - `await`
 - `awake`
-- `award`
 - `awe`
 - `awesome`
 - `awful`
@@ -188,7 +181,6 @@
 - `blonde`
 - `blossom`
 - `blouse`
-- `blow`
 - `blur`
 - `bomb`
 - `bonus`
@@ -248,7 +240,6 @@
 - `cage`
 - `calendar`
 - `calf`
-- `call`
 - `calorie`
 - `camel`
 - `camp`
@@ -291,7 +282,6 @@
 - `cigar`
 - `cigarette`
 - `circus`
-- `clap`
 - `classmate`
 - `claw`
 - `clever`
@@ -300,7 +290,6 @@
 - `clone`
 - `clothe`
 - `clown`
-- `clumsy`
 - `cock`
 - `code`
 - `coil`
@@ -312,7 +301,6 @@
 - `comedy`
 - `comma`
 - `commune`
-- `companion`
 - `compass`
 - `compose`
 - `compound¹`
@@ -339,7 +327,6 @@
 - `cottage`
 - `couch`
 - `cough`
-- `countdown`
 - `countryside`
 - `couple`
 - `coupon`
@@ -442,7 +429,6 @@
 - `dismiss`
 - `disturb`
 - `ditch`
-- `dive`
 - `divorce`
 - `doll`
 - `dolphin`
@@ -460,7 +446,6 @@
 - `dragon`
 - `drastic`
 - `drawer`
-- `dream`
 - `drift`
 - `drip`
 - `drop`
@@ -474,7 +459,6 @@
 - `dumb`
 - `dump`
 - `duration`
-- `dusk`
 - `dynasty`
 - `eagle`
 - `earthquake`
@@ -525,7 +509,6 @@
 - `excite`
 - `exclaim`
 - `excursion`
-- `excuse`
 - `exert`
 - `exile`
 - `exist`
@@ -543,10 +526,8 @@
 - `eyesight`
 - `fable`
 - `factor`
-- `fair¹`
 - `fair²`
 - `fairy`
-- `faith`
 - `fake`
 - `fall²`
 - `famine`
@@ -564,7 +545,6 @@
 - `federal`
 - `federation`
 - `fee`
-- `fellow`
 - `female`
 - `fence`
 - `fertile`
@@ -582,9 +562,7 @@
 - `fireworks`
 - `firm²`
 - `fist`
-- `fit`
 - `fix`
-- `flag`
 - `flame`
 - `flash`
 - `flat²`
@@ -627,7 +605,6 @@
 - `freshman`
 - `frog`
 - `frontier`
-- `frustrate`
 - `fry`
 - `fuck`
 - `fuel`
@@ -662,7 +639,6 @@
 - `gloom`
 - `glow`
 - `glue`
-- `goal`
 - `goat`
 - `god`
 - `gold`
@@ -688,7 +664,6 @@
 - `grip`
 - `grocer`
 - `gross`
-- `guard`
 - `guess`
 - `guilt`
 - `guitar`
@@ -768,7 +743,6 @@
 - `hotdog`
 - `housewife`
 - `housework`
-- `hug`
 - `huge`
 - `hunger`
 - `hunt`
@@ -797,11 +771,8 @@
 - `implicit`
 - `imply`
 - `import`
-- `important`
 - `impossible`
-- `impress`
 - `improve`
-- `impulse`
 - `incentive`
 - `inch`
 - `incidence`
@@ -835,7 +806,6 @@
 - `instance`
 - `instinct`
 - `institute`
-- `instruct`
 - `insult`
 - `insure`
 - `intake`
@@ -870,18 +840,13 @@
 - `jet`
 - `jetlag`
 - `jewel`
-- `jog`
-- `join`
 - `joke`
 - `journalism`
-- `joy`
 - `jungle`
 - `junior`
 - `junk`
 - `jury`
 - `just²`
-- `keen`
-- `kick`
 - `kill`
 - `kilogram`
 - `kilo`
@@ -904,7 +869,6 @@
 - `lame`
 - `landlord`
 - `landlady`
-- `lane`
 - `lap`
 - `laser`
 - `lass`
@@ -920,7 +884,6 @@
 - `layout`
 - `lazy`
 - `lead²`
-- `league`
 - `leak`
 - `leap`
 - `lease`
@@ -944,7 +907,6 @@
 - `like²`
 - `likewise`
 - `lily`
-- `limb`
 - `lip`
 - `liquid`
 - `liquor`
@@ -953,7 +915,6 @@
 - `literal`
 - `literary`
 - `litter`
-- `lively`
 - `liver`
 - `loaf`
 - `lobby`
@@ -968,7 +929,6 @@
 - `lorry`
 - `lot`
 - `love`
-- `loyal`
 - `luck`
 - `luggage`
 - `lump`
@@ -1002,14 +962,12 @@
 - `math`
 - `mathematics`
 - `matter`
-- `mature`
 - `maximum`
 - `mean²`
 - `mean³`
 - `means`
 - `meantime`
 - `mechanize`
-- `medal`
 - `Medicare`
 - `medium`
 - `melt`
@@ -1043,7 +1001,6 @@
 - `missile`
 - `missing`
 - `mist`
-- `mistake`
 - `mister`
 - `mistress`
 - `misunderstand`
@@ -1066,7 +1023,6 @@
 - `mount²`
 - `mug`
 - `mule`
-- `multiple`
 - `murder`
 - `mushroom`
 - `myth`
@@ -1083,7 +1039,6 @@
 - `needle`
 - `negate`
 - `nephew`
-- `net`
 - `nevertheless`
 - `nice`
 - `nickel`
@@ -1106,7 +1061,6 @@
 - `nursery`
 - `nut`
 - `obese`
-- `obey`
 - `object¹`
 - `object²`
 - `obtain`
@@ -1122,7 +1076,6 @@
 - `oftentimes`
 - `okay`
 - `old-fashioned`
-- `Olympic`
 - `ongoing`
 - `onion`
 - `onward`
@@ -1148,14 +1101,12 @@
 - `outlet`
 - `outlook`
 - `output`
-- `outset`
 - `outward`
 - `oval`
 - `overcoat`
 - `overdue`
 - `overhead`
 - `overhear`
-- `overlook`
 - `overnight`
 - `overseas`
 - `oversee`
@@ -1201,14 +1152,12 @@
 - `pearl`
 - `peasant`
 - `peculiar`
-- `penalty`
 - `penetrate`
 - `penny`
 - `pepper`
 - `perceive`
 - `perfect`
 - `period`
-- `persevere`
 - `pessimism`
 - `petrol`
 - `petroleum`
@@ -1245,7 +1194,6 @@
 - `podcast`
 - `poem`
 - `poet`
-- `polite`
 - `politics`
 - `poll`
 - `pond`
@@ -1288,7 +1236,6 @@
 - `prior`
 - `prison`
 - `private`
-- `prize`
 - `probable`
 - `proceed`
 - `procession`
@@ -1305,7 +1252,6 @@
 - `proportion`
 - `prospect`
 - `protein`
-- `protest`
 - `proverb`
 - `provided`
 - `provoke`
@@ -1333,7 +1279,6 @@
 - `radar`
 - `radical`
 - `rag`
-- `rage`
 - `raid`
 - `rail`
 - `railroad`
@@ -1348,7 +1293,6 @@
 - `ratio`
 - `ray`
 - `react`
-- `realize`
 - `realm`
 - `reap`
 - `rear`
@@ -1358,7 +1302,6 @@
 - `reckon`
 - `recognize`
 - `recommend`
-- `recruit`
 - `refer`
 - `reflect`
 - `refresh`
@@ -1391,7 +1334,6 @@
 - `resort²`
 - `respective`
 - `rest²`
-- `restrain`
 - `restrict`
 - `résumé`
 - `retell`
@@ -1402,7 +1344,6 @@
 - `reverse`
 - `revolution`
 - `revolve`
-- `rhythm`
 - `rib`
 - `ribbon`
 - `rid`
@@ -1411,7 +1352,6 @@
 - `rifle`
 - `riot`
 - `rip`
-- `roar`
 - `roast`
 - `rob`
 - `rod`
@@ -1442,9 +1382,7 @@
 - `scatter`
 - `scent`
 - `scissors`
-- `scold`
 - `scope`
-- `score`
 - `scout`
 - `scream`
 - `screw`
@@ -1460,7 +1398,6 @@
 - `sell`
 - `semester`
 - `senate`
-- `send`
 - `sequence`
 - `series`
 - `serious`
@@ -1473,12 +1410,10 @@
 - `shed`
 - `sheer`
 - `shell`
-- `shine`
 - `shit`
 - `shiver`
 - `shoot`
 - `shortly`
-- `shot`
 - `shout`
 - `show`
 - `shower`
@@ -1487,7 +1422,6 @@
 - `shrug`
 - `shut`
 - `shy`
-- `sideways`
 - `siege`
 - `sigh`
 - `sight`
@@ -1516,17 +1450,14 @@
 - `slice`
 - `slim`
 - `slogan`
-- `smart`
 - `smartphone`
 - `smash`
 - `smell`
 - `smile`
 - `smog`
 - `snack`
-- `soak`
 - `soap`
 - `so-called`
-- `soccer`
 - `socialism`
 - `sociology`
 - `soda`
@@ -1550,7 +1481,6 @@
 - `spaceship`
 - `spade`
 - `span`
-- `spark`
 - `sparkle`
 - `specify`
 - `spell`
@@ -1561,7 +1491,6 @@
 - `spit`
 - `spite`
 - `splash`
-- `splendid`
 - `split`
 - `spokesman`
 - `spokeswoman`
@@ -1575,13 +1504,11 @@
 - `spy`
 - `squeeze`
 - `stack`
-- `stadium`
 - `staircase`
 - `stake`
 - `stale`
 - `stamp¹`
 - `stamp²`
-- `stand`
 - `standpoint`
 - `staple¹`
 - `stare`
@@ -1598,7 +1525,6 @@
 - `stem²`
 - `stick¹`
 - `stick²`
-- `stiff`
 - `still²`
 - `sting`
 - `stir`
@@ -1612,7 +1538,6 @@
 - `strain²`
 - `strange`
 - `straw`
-- `stretch`
 - `stride`
 - `string`
 - `strip`
@@ -1635,7 +1560,6 @@
 - `summit`
 - `sunrise`
 - `sunset`
-- `sunshine`
 - `super`
 - `superb`
 - `supplement`
@@ -1656,7 +1580,6 @@
 - `swallow²`
 - `sway`
 - `swear`
-- `sweat`
 - `sweep`
 - `swell`
 - `swing`
@@ -1720,7 +1643,6 @@
 - `torture`
 - `toss`
 - `total`
-- `tough`
 - `towel`
 - `tractor`
 - `trademark`
@@ -1763,7 +1685,6 @@
 - `undo`
 - `undoubtedly`
 - `uneasy`
-- `uniform`
 - `union`
 - `upload`
 - `upright`
@@ -1790,7 +1711,6 @@
 - `versus`
 - `vertical`
 - `veto`
-- `victory`
 - `view`
 - `viewpoint`
 - `vinegar`
@@ -1828,31 +1748,25 @@
 - `well²`
 - `well-known`
 - `well-off`
-- `wet`
 - `whale`
 - `wheat`
 - `whereas`
 - `whip`
 - `whisky`
 - `whisper`
-- `whistle`
-- `whole`
 - `widow`
 - `wilderness`
-- `willpower`
 - `wing`
 - `wish`
 - `wit`
 - `withdraw`
 - `wolf`
 - `wool`
-- `workout`
 - `worm`
 - `worse`
 - `worship`
 - `worst`
 - `worth`
-- `worthy`
 - `wrap`
 - `wreck`
 - `wrinkle`
@@ -1865,7 +1779,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1175）
+## 六级星号词目（1159）
 
 - `abbreviation`
 - `abide`
@@ -2013,7 +1927,6 @@
 - `brisk`
 - `bronze`
 - `brood`
-- `bruise`
 - `Buddhism`
 - `buffalo`
 - `buffer`
@@ -2129,7 +2042,6 @@
 - `counterfeit`
 - `coup`
 - `coup d'état`
-- `courtesy`
 - `cozy`
 - `crackdown`
 - `cradle`
@@ -2330,7 +2242,6 @@
 - `fort`
 - `fortify`
 - `fortnight`
-- `foul`
 - `fracture`
 - `fragrant`
 - `franchise`
@@ -2395,7 +2306,6 @@
 - `hound`
 - `hover`
 - `howl`
-- `huddle`
 - `hum`
 - `humane`
 - `humiliate`
@@ -2556,11 +2466,9 @@
 - `mobilize`
 - `mock`
 - `molecule`
-- `momentum`
 - `monarchy`
 - `monopoly`
 - `monotony`
-- `morale`
 - `mortal`
 - `mosquito`
 - `mourn`
@@ -2707,7 +2615,6 @@
 - `pyramid`
 - `quart`
 - `query`
-- `quest`
 - `quiver`
 - `radiate`
 - `radioactive`
@@ -2729,7 +2636,6 @@
 - `recur`
 - `redundant`
 - `reel`
-- `referee`
 - `referendum`
 - `refuge`
 - `refund`
@@ -2834,14 +2740,12 @@
 - `sodium`
 - `solicit`
 - `solitary`
-- `solo`
 - `soothe`
 - `sovereign`
 - `spaghetti`
 - `spear`
 - `specialty`
 - `spectacle`
-- `spectator`
 - `spectrum`
 - `spice`
 - `spider`
@@ -2864,7 +2768,6 @@
 - `stationery`
 - `statute`
 - `stereotype`
-- `stern`
 - `steward`
 - `stewardess`
 - `stifle`
@@ -2915,7 +2818,6 @@
 - `taboo`
 - `tack`
 - `tact`
-- `tactic`
 - `tan`
 - `tangle`
 - `tanker`
@@ -2936,14 +2838,12 @@
 - `thermal`
 - `thigh`
 - `thorn`
-- `thrill`
 - `throne`
 - `tickle`
 - `tile`
 - `toil`
 - `topple`
 - `tornado`
-- `tournament`
 - `tow`
 - `toxic`
 - `tract`
@@ -2979,13 +2879,11 @@
 - `ultra`
 - `unanimous`
 - `underlie`
-- `unfold`
 - `unify`
 - `unilateral`
 - `unleash`
 - `unprecedented`
 - `unveil`
-- `uphold`
 - `uprising`
 - `uranium`
 - `urine`

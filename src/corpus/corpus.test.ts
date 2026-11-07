@@ -3344,6 +3344,191 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 28 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并规范标注超纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 28');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Teamwork and Growth in a Regional Amateur League'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(130);
+
+    // 验证包含 Issue #38 初始规划的全部 9 个核心目标词目
+    for (const targetId of [
+      'athlete',
+      'tournament',
+      'coach',
+      'referee',
+      'stadium',
+      'medal',
+      'victory',
+      'league',
+      'Olympic',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证拓展纳入的高契合赛场与团队成长大纲词目
+    for (const id of [
+      'dream',
+      'keen',
+      'join',
+      'amateur',
+      'soccer',
+      'club',
+      'outset',
+      'shine',
+      'solo',
+      'impress',
+      'recruit',
+      'overlook',
+      'clumsy',
+      'shot',
+      'wet',
+      'mistake',
+      'attack',
+      'whole',
+      'frustrate',
+      'countdown',
+      'important',
+      'scold',
+      'workout',
+      'dusk',
+      'jog',
+      'fit',
+      'stretch',
+      'stiff',
+      'limb',
+      'crisp',
+      'smart',
+      'tactic',
+      'sweat',
+      'soak',
+      'uniform',
+      'instruct',
+      'huddle',
+      'guard',
+      'lane',
+      'persevere',
+      'willpower',
+      'realize',
+      'loyal',
+      'companion',
+      'multiple',
+      'rhythm',
+      'faith',
+      'unfold',
+      'lively',
+      'sunshine',
+      'spectator',
+      'stand',
+      'clap',
+      'flag',
+      'tough',
+      'slide',
+      'foul',
+      'stern',
+      'blow',
+      'whistle',
+      'award',
+      'penalty',
+      'uphold',
+      'fair¹',
+      'protest',
+      'rage',
+      'excuse',
+      'obey',
+      'call',
+      'courtesy',
+      'restrain',
+      'impulse',
+      'bruise',
+      'polite',
+      'apology',
+      'score',
+      'morale',
+      'spark',
+      'momentum',
+      'goal',
+      'aside',
+      'send',
+      'sideways',
+      'fellow',
+      'kick',
+      'dive',
+      'net',
+      'announce',
+      'thrill',
+      'joy',
+      'hug',
+      'roar',
+      'aim',
+      'quest',
+      'mature',
+      'worthy',
+      'splendid',
+      'prize',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证足球必要超纲词显式规范标注
+    const oosSurfaces: string[] = [];
+    for (const p of compiled.paragraphs) {
+      for (const s of p.sentences) {
+        for (const t of s.tokens) {
+          if (t.type === 'annotation' && t.category === 'out-of-syllabus') {
+            oosSurfaces.push(t.surface);
+          }
+        }
+      }
+    }
+    expect(oosSurfaces).toEqual(['teammates', 'keeper']);
+
+    // 验证语境词性匹配（名词前作定语标为 a.，被修饰名词标为 n.，副词标为 ad.）
+    const posChecks: [number, number, string, string][] = [
+      [0, 0, 'soccer', 'a.'],
+      [0, 1, 'solo', 'a.'],
+      [0, 2, 'repeat', 'a.'],
+      [3, 1, 'aside', 'ad.'],
+      [3, 1, 'sideways', 'ad.'],
+      [3, 1, 'fellow', 'a.'],
+      [3, 1, 'forward', 'n.'],
+      [3, 1, 'dive', 'a.'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId, prefix] of posChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith(prefix)).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);
