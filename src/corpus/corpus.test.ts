@@ -4394,6 +4394,172 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 35 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 35');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Resolving Plumbing Leaks in an Aging Tenancy'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(120);
+
+    // 验证包含 Issue #45 规划的核心目标词目
+    for (const targetId of [
+      'tenant',
+      'landlord',
+      'rent',
+      'utility',
+      'sanitation',
+      'plumbing',
+      'burst',
+      'ceiling',
+      'downstairs',
+      'mend',
+      'overflow',
+      'interim',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合公寓与管道维修核心大纲词目
+    for (const id of [
+      'lobby',
+      'shabby',
+      'estate',
+      'notice',
+      'drip',
+      'corrode',
+      'joint',
+      'cause',
+      'splash',
+      'staircase',
+      'spill',
+      'carpet',
+      'fear',
+      'rot',
+      'spread',
+      'foul',
+      'odor',
+      'fetch',
+      'bucket',
+      'mop',
+      'contain',
+      'mess',
+      'report',
+      'incident',
+      'immediate',
+      'superintendent',
+      'prevent',
+      'trouble',
+      'alert',
+      'nuisance',
+      'dispatch',
+      'technical',
+      'premise',
+      'act',
+      'negligent',
+      'shut',
+      'main',
+      'tap',
+      'halt',
+      'flood',
+      'inspect',
+      'rust',
+      'pipe',
+      'basement',
+      'adjacent',
+      'flat²',
+      'decide',
+      'property',
+      'patch',
+      'authorize',
+      'overhaul',
+      'insulate',
+      'bare',
+      'tube',
+      'replace',
+      'damage',
+      'hose',
+      'clog',
+      'sink',
+      'tight',
+      'loose',
+      'repair',
+      'suspend',
+      'maintain',
+      'basic',
+      'challenge',
+      'occupy',
+      'build',
+      'assist',
+      'reside',
+      'duration',
+      'supply',
+      'domestic',
+      'sponge',
+      'soap',
+      'broom',
+      'scrub',
+      'wet',
+      'step',
+      'cleanse',
+      'corridor',
+      'ventilate',
+      'damp',
+      'vicinity',
+      'inhibit',
+      'mold',
+      'grow',
+      'test',
+      'prove',
+      'restore',
+      'contract¹',
+      'provide',
+      'warranty',
+      'certify',
+      'safe',
+      'operate',
+      'review',
+      'expense',
+      'agree',
+      'incur',
+      'bear',
+      'liable',
+      'lease',
+      'deduct',
+      'split',
+      'cordial',
+      'reciprocal',
+      'respect',
+      'reconcile',
+      'concern',
+      'cozy',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

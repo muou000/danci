@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2076/4692 个非免注核心大纲词目（44.2%），尚有 2616 个待覆盖。
+当前覆盖 2151/4692 个非免注核心大纲词目（45.8%），尚有 2541 个待覆盖。
 
-## 四级词目（1560）
+## 四级词目（1516）
 
 - `able`
 - `abolish`
@@ -115,11 +115,9 @@
 - `barbecue`
 - `BBQ`
 - `barber`
-- `bare`
 - `bark`
 - `barrel`
 - `baseball`
-- `basement`
 - `basin`
 - `basis`
 - `basket`
@@ -129,7 +127,6 @@
 - `battalion`
 - `battle`
 - `beam`
-- `bear`
 - `beard`
 - `bearing`
 - `beast`
@@ -192,13 +189,11 @@
 - `brilliant`
 - `broke`
 - `broker`
-- `broom`
 - `brow`
 - `brunch`
 - `brush`
 - `brutal`
 - `buck`
-- `bucket`
 - `buckle`
 - `bud`
 - `buddy`
@@ -210,7 +205,6 @@
 - `bump`
 - `bumper`
 - `bunch`
-- `burst`
 - `bury`
 - `businessman`
 - `butcher`
@@ -227,13 +221,11 @@
 - `candidate`
 - `candle`
 - `cane`
-- `carpet`
 - `cartoon`
 - `cashier`
 - `castle`
 - `casual`
 - `cattle`
-- `ceiling`
 - `cellar`
 - `chairman`
 - `chalk`
@@ -389,19 +381,16 @@
 - `divorce`
 - `doll`
 - `dolphin`
-- `domestic`
 - `donkey`
 - `doom`
 - `dorm`
 - `dose`
 - `dot`
 - `dove`
-- `downstairs`
 - `drag`
 - `dragon`
 - `drawer`
 - `drift`
-- `drip`
 - `dropout`
 - `drown`
 - `drug`
@@ -411,7 +400,6 @@
 - `due`
 - `dumb`
 - `dump`
-- `duration`
 - `dynasty`
 - `eagle`
 - `earthquake`
@@ -443,7 +431,6 @@
 - `erase`
 - `escape`
 - `especially`
-- `estate`
 - `eternal`
 - `ethnic`
 - `euro`
@@ -492,7 +479,6 @@
 - `female`
 - `fence`
 - `fertile`
-- `fetch`
 - `fever`
 - `fight`
 - `figure`
@@ -505,7 +491,6 @@
 - `fist`
 - `flame`
 - `flash`
-- `flat²`
 - `flee`
 - `flesh`
 - `flexible`
@@ -676,7 +661,6 @@
 - `image`
 - `imagine`
 - `imitate`
-- `immediate`
 - `immigrate`
 - `immune`
 - `impatient`
@@ -689,7 +673,6 @@
 - `impossible`
 - `inch`
 - `incidence`
-- `incident`
 - `incredible`
 - `indeed`
 - `indifferent`
@@ -772,7 +755,6 @@
 - `lag`
 - `lamb`
 - `lame`
-- `landlord`
 - `landlady`
 - `lap`
 - `laser`
@@ -788,7 +770,6 @@
 - `layout`
 - `lazy`
 - `leap`
-- `lease`
 - `least`
 - `leather`
 - `legislate`
@@ -797,7 +778,6 @@
 - `lend`
 - `less`
 - `lest`
-- `liable`
 - `liberal`
 - `liberty`
 - `lick`
@@ -814,14 +794,12 @@
 - `litter`
 - `liver`
 - `loaf`
-- `lobby`
 - `locate`
 - `lodge`
 - `logo`
 - `lonely`
 - `long²`
 - `loophole`
-- `loose`
 - `lord`
 - `lorry`
 - `lot`
@@ -865,12 +843,10 @@
 - `memorandum`
 - `memo`
 - `memorial`
-- `mend`
 - `mention`
 - `mercy`
 - `merit`
 - `merry`
-- `mess`
 - `meter`
 - `metro`
 - `microwave`
@@ -892,11 +868,9 @@
 - `misunderstand`
 - `mode`
 - `moderate`
-- `mold`
 - `monster`
 - `monument`
 - `mood`
-- `mop`
 - `moreover`
 - `mortgage`
 - `motel`
@@ -937,7 +911,6 @@
 - `nowhere`
 - `nuclear`
 - `nude`
-- `nuisance`
 - `numerous`
 - `nursery`
 - `obese`
@@ -945,11 +918,9 @@
 - `object²`
 - `obtain`
 - `obvious`
-- `occupy`
 - `occur`
 - `odd`
 - `odds`
-- `odor`
 - `offend`
 - `oftentimes`
 - `okay`
@@ -1009,7 +980,6 @@
 - `paste`
 - `pastime`
 - `pat`
-- `patch`
 - `patent`
 - `patient²`
 - `paw`
@@ -1102,7 +1072,6 @@
 - `pronoun`
 - `pronounce`
 - `proper`
-- `property`
 - `proportion`
 - `prospect`
 - `proverb`
@@ -1162,7 +1131,6 @@
 - `religion`
 - `remember`
 - `render`
-- `rent`
 - `repay`
 - `reply`
 - `reproduce`
@@ -1251,7 +1219,6 @@
 - `shower`
 - `shrimp`
 - `shrug`
-- `shut`
 - `shy`
 - `siege`
 - `sigh`
@@ -1264,7 +1231,6 @@
 - `sin`
 - `sing`
 - `singular`
-- `sink`
 - `situation`
 - `situate`
 - `skate`
@@ -1282,7 +1248,6 @@
 - `smartphone`
 - `smash`
 - `smog`
-- `soap`
 - `so-called`
 - `socialism`
 - `sociology`
@@ -1309,12 +1274,9 @@
 - `specify`
 - `spell`
 - `sphere`
-- `spill`
 - `spin`
 - `spit`
 - `spite`
-- `splash`
-- `split`
 - `spokeswoman`
 - `sponsor`
 - `spontaneous`
@@ -1326,7 +1288,6 @@
 - `spy`
 - `squeeze`
 - `stack`
-- `staircase`
 - `stake`
 - `stale`
 - `stamp²`
@@ -1387,7 +1348,6 @@
 - `surprise`
 - `surrender`
 - `suspect`
-- `suspend`
 - `suspicion`
 - `swallow¹`
 - `swallow²`
@@ -1404,7 +1364,6 @@
 - `takeoff`
 - `tame`
 - `tank`
-- `tap`
 - `tear²`
 - `technique`
 - `tech`
@@ -1462,10 +1421,8 @@
 - `triple`
 - `trolley`
 - `troop`
-- `trouble`
 - `trunk`
 - `try`
-- `tube`
 - `tumor`
 - `tunnel`
 - `turkey`
@@ -1490,7 +1447,6 @@
 - `up-to-date`
 - `usage`
 - `usual`
-- `utility`
 - `utmost`
 - `utter¹`
 - `utter²`
@@ -1567,7 +1523,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1056）
+## 六级星号词目（1025）
 
 - `abbreviation`
 - `abide`
@@ -1580,7 +1536,6 @@
 - `activate`
 - `acupuncture`
 - `adhere`
-- `adjacent`
 - `adolescent`
 - `adore`
 - `advent`
@@ -1746,14 +1701,12 @@
 - `clamp`
 - `clan`
 - `clasp`
-- `cleanse`
 - `clearance`
 - `clearing`
 - `clench`
 - `clergy`
 - `cliché`
 - `cloak`
-- `clog`
 - `closet`
 - `cluster`
 - `clutch`
@@ -1803,19 +1756,16 @@
 - `convict`
 - `convoy`
 - `coral`
-- `cordial`
 - `cork`
 - `corporal`
 - `corpse`
 - `correlate`
-- `corrode`
 - `cosmetic`
 - `cosmopolitan`
 - `counteract`
 - `counterfeit`
 - `coup`
 - `coup d'état`
-- `cozy`
 - `crackdown`
 - `cradle`
 - `cram`
@@ -1844,7 +1794,6 @@
 - `decimal`
 - `decree`
 - `deduce`
-- `deduct`
 - `default`
 - `defer`
 - `degenerate`
@@ -1882,7 +1831,6 @@
 - `discourse`
 - `discreet`
 - `dismay`
-- `dispatch`
 - `dispense`
 - `disperse`
 - `disposition`
@@ -2047,7 +1995,6 @@
 - `hoist`
 - `homogeneous`
 - `hop`
-- `hose`
 - `hostage`
 - `hound`
 - `hover`
@@ -2078,7 +2025,6 @@
 - `inborn`
 - `incorporate`
 - `incumbent`
-- `incur`
 - `indebted`
 - `indefinite`
 - `indict`
@@ -2089,16 +2035,13 @@
 - `inflict`
 - `infringe`
 - `ingenious`
-- `inhibit`
 - `inject`
 - `inmate`
 - `innumerable`
-- `insulate`
 - `integral`
 - `intellect`
 - `intelligible`
 - `intercourse`
-- `interim`
 - `intermittent`
 - `interrogate`
 - `intrigue`
@@ -2215,7 +2158,6 @@
 - `mute`
 - `mutter`
 - `navigate`
-- `negligent`
 - `negligible`
 - `nickname`
 - `nil`
@@ -2245,8 +2187,6 @@
 - `outfit`
 - `outlaw`
 - `outrage`
-- `overflow`
-- `overhaul`
 - `overlap`
 - `override`
 - `overt`
@@ -2302,7 +2242,6 @@
 - `plea`
 - `plead`
 - `plight`
-- `plumbing`
 - `poise`
 - `poke`
 - `ponder`
@@ -2317,7 +2256,6 @@
 - `predator`
 - `predecessor`
 - `predominate`
-- `premise`
 - `premium`
 - `preoccupy`
 - `prerequisite`
@@ -2348,8 +2286,6 @@
 - `ratify`
 - `rattle`
 - `recede`
-- `reciprocal`
-- `reconcile`
 - `recur`
 - `reel`
 - `referendum`
@@ -2386,9 +2322,7 @@
 - `rim`
 - `ritual`
 - `robust`
-- `rot`
 - `rotate`
-- `rust`
 - `ruthless`
 - `sacred`
 - `saddle`
@@ -2399,7 +2333,6 @@
 - `salvation`
 - `sanction`
 - `sanctuary`
-- `sanitation`
 - `sarcasm`
 - `satire`
 - `saturate`
@@ -2409,7 +2342,6 @@
 - `scramble`
 - `scrap`
 - `scrape`
-- `scrub`
 - `sculpture`
 - `secular`
 - `seduce`
@@ -2417,7 +2349,6 @@
 - `sentiment`
 - `sergeant`
 - `serial`
-- `shabby`
 - `shaft`
 - `shark`
 - `shatter`
@@ -2458,7 +2389,6 @@
 - `spectrum`
 - `spider`
 - `spine`
-- `sponge`
 - `sprawl`
 - `sprinkle`
 - `stab`
@@ -2502,7 +2432,6 @@
 - `suite`
 - `sulfur`
 - `summon`
-- `superintendent`
 - `superstition`
 - `suppress`
 - `surpass`
@@ -2527,7 +2456,6 @@
 - `tease`
 - `temperament`
 - `temporal`
-- `tenant`
 - `tentative`
 - `tenure`
 - `terrace`
@@ -2584,14 +2512,12 @@
 - `velocity`
 - `velvet`
 - `vent`
-- `ventilate`
 - `verge`
 - `versatile`
 - `verse`
 - `vest`
 - `vibrate`
 - `vice`
-- `vicinity`
 - `vicious`
 - `virgin`
 - `vogue`
@@ -2602,7 +2528,6 @@
 - `waive`
 - `wardrobe`
 - `warrant`
-- `warranty`
 - `watt`
 - `wedge`
 - `wharf`
