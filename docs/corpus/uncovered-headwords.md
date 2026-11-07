@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1851/4692 个非免注核心大纲词目（39.5%），尚有 2841 个待覆盖。
+当前覆盖 1906/4692 个非免注核心大纲词目（40.6%），尚有 2786 个待覆盖。
 
-## 四级词目（1699）
+## 四级词目（1662）
 
 - `able`
 - `abolish`
@@ -83,7 +83,6 @@
 - `assume`
 - `astonish`
 - `atom`
-- `attain`
 - `attempt`
 - `attic`
 - `attorney`
@@ -285,14 +284,11 @@
 - `comedy`
 - `comma`
 - `commune`
-- `compass`
 - `compose`
 - `compound¹`
 - `comrade`
 - `condemn`
 - `confess`
-- `congratulate`
-- `conquer`
 - `considerate`
 - `contact`
 - `contempt`
@@ -448,7 +444,6 @@
 - `elect`
 - `element`
 - `elementary`
-- `elevate`
 - `elite`
 - `else`
 - `elsewhere`
@@ -485,7 +480,6 @@
 - `excite`
 - `exclaim`
 - `excursion`
-- `exert`
 - `exile`
 - `exist`
 - `expertise`
@@ -576,7 +570,6 @@
 - `freeway`
 - `freshman`
 - `frog`
-- `frontier`
 - `fry`
 - `fuck`
 - `fuel`
@@ -593,11 +586,9 @@
 - `gang`
 - `gaol`
 - `garage`
-- `garment`
 - `gas`
 - `gasoline`
 - `gay`
-- `gaze`
 - `gender`
 - `general`
 - `genius`
@@ -605,8 +596,6 @@
 - `germ`
 - `ghost`
 - `given`
-- `glad`
-- `glance`
 - `glimpse`
 - `gloom`
 - `glow`
@@ -676,7 +665,6 @@
 - `hectare`
 - `hedge`
 - `heel`
-- `height`
 - `heir`
 - `helicopter`
 - `hell`
@@ -722,7 +710,6 @@
 - `hyphen`
 - `ideal`
 - `identify`
-- `identity`
 - `ignorant`
 - `illegal`
 - `illusion`
@@ -745,7 +732,6 @@
 - `inch`
 - `incidence`
 - `incident`
-- `incline`
 - `incredible`
 - `indeed`
 - `index`
@@ -849,7 +835,6 @@
 - `layoff`
 - `layout`
 - `lazy`
-- `lead²`
 - `leap`
 - `lease`
 - `least`
@@ -894,7 +879,6 @@
 - `lot`
 - `love`
 - `luck`
-- `luggage`
 - `lump`
 - `lung`
 - `machine`
@@ -922,7 +906,6 @@
 - `massage`
 - `masterpiece`
 - `mat`
-- `mate`
 - `math`
 - `mathematics`
 - `matter`
@@ -960,7 +943,6 @@
 - `miss²`
 - `missile`
 - `missing`
-- `mist`
 - `mister`
 - `mistress`
 - `misunderstand`
@@ -1044,7 +1026,6 @@
 - `orchestra`
 - `ore`
 - `organ`
-- `orient¹`
 - `orient²`
 - `ornament`
 - `orphan`
@@ -1083,13 +1064,11 @@
 - `paperback`
 - `parade`
 - `paradox`
-- `parcel`
 - `pardon`
 - `park²`
 - `parliament`
 - `particular`
 - `partly`
-- `passport`
 - `password`
 - `paste`
 - `pastime`
@@ -1129,7 +1108,6 @@
 - `pill`
 - `pillow`
 - `pin`
-- `pine`
 - `pint`
 - `pipe`
 - `pirate`
@@ -1137,7 +1115,6 @@
 - `pit`
 - `pity`
 - `plague`
-- `plain`
 - `playground`
 - `pledge`
 - `plenty`
@@ -1188,7 +1165,6 @@
 - `prison`
 - `private`
 - `probable`
-- `proceed`
 - `procession`
 - `proclaim`
 - `proficient`
@@ -1210,7 +1186,6 @@
 - `pulse`
 - `punch`
 - `punish`
-- `purpose`
 - `purse`
 - `push`
 - `qualify`
@@ -1231,7 +1206,6 @@
 - `rail`
 - `railroad`
 - `rainbow`
-- `raincoat`
 - `rally`
 - `range`
 - `rank`
@@ -1377,7 +1351,6 @@
 - `sing`
 - `singular`
 - `sink`
-- `sip`
 - `situation`
 - `situate`
 - `skate`
@@ -1424,7 +1397,6 @@
 - `sphere`
 - `spill`
 - `spin`
-- `spirit`
 - `spit`
 - `spite`
 - `splash`
@@ -1444,7 +1416,6 @@
 - `staircase`
 - `stake`
 - `stale`
-- `stamp¹`
 - `stamp²`
 - `standpoint`
 - `staple¹`
@@ -1473,7 +1444,6 @@
 - `strain²`
 - `strange`
 - `straw`
-- `stride`
 - `string`
 - `strip`
 - `stripe`
@@ -1492,7 +1462,6 @@
 - `suggest`
 - `suit²`
 - `suitcase`
-- `summit`
 - `sunrise`
 - `sunset`
 - `super`
@@ -1515,7 +1484,6 @@
 - `swallow²`
 - `sway`
 - `swear`
-- `sweep`
 - `swell`
 - `swing`
 - `swipe`
@@ -1633,7 +1601,6 @@
 - `vanish`
 - `various`
 - `vary`
-- `veil`
 - `vendor`
 - `verb`
 - `version`
@@ -1641,14 +1608,12 @@
 - `vertical`
 - `veto`
 - `view`
-- `viewpoint`
 - `vinegar`
 - `violate`
 - `violin`
 - `virtual`
 - `virtue`
 - `virus`
-- `visa`
 - `visible`
 - `visual`
 - `vocabulary`
@@ -1682,13 +1647,11 @@
 - `whisky`
 - `whisper`
 - `widow`
-- `wilderness`
 - `wing`
 - `wish`
 - `wit`
 - `withdraw`
 - `wolf`
-- `wool`
 - `worm`
 - `worse`
 - `worship`
@@ -1706,7 +1669,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1142）
+## 六级星号词目（1124）
 
 - `abbreviation`
 - `abide`
@@ -1786,7 +1749,6 @@
 - `articulate`
 - `artifact`
 - `artillery`
-- `ascend`
 - `ascribe`
 - `aspire`
 - `assassinate`
@@ -2127,7 +2089,6 @@
 - `excerpt`
 - `exempt`
 - `exotic`
-- `expedition`
 - `expire`
 - `exponent`
 - `exposition`
@@ -2179,7 +2140,6 @@
 - `gasp`
 - `genre`
 - `giggle`
-- `glacier`
 - `glamor`
 - `gland`
 - `glare`
@@ -2187,7 +2147,6 @@
 - `glide`
 - `glitter`
 - `glossary`
-- `gorge`
 - `gospel`
 - `graze`
 - `greed`
@@ -2213,7 +2172,6 @@
 - `heroin`
 - `hibernate`
 - `hierarchy`
-- `hike`
 - `hinge`
 - `hitherto`
 - `hive`
@@ -2360,7 +2318,6 @@
 - `masculine`
 - `massacre`
 - `maternal`
-- `meadow`
 - `mediate`
 - `medication`
 - `medieval`
@@ -2373,7 +2330,6 @@
 - `metropolitan`
 - `midst`
 - `midwife`
-- `milestone`
 - `militant`
 - `militia`
 - `mindset`
@@ -2485,7 +2441,6 @@
 - `physiological`
 - `pilgrim`
 - `plaintiff`
-- `plateau`
 - `plaza`
 - `plea`
 - `plead`
@@ -2540,7 +2495,6 @@
 - `rape`
 - `rash`
 - `ratify`
-- `ration`
 - `rattle`
 - `reassure`
 - `recede`
@@ -2580,7 +2534,6 @@
 - `revenge`
 - `revolt`
 - `rhetoric`
-- `ridge`
 - `rig`
 - `rigid`
 - `rim`
@@ -2698,7 +2651,6 @@
 - `stumble`
 - `stump`
 - `stun`
-- `sturdy`
 - `submarine`
 - `submerge`
 - `subordinate`
@@ -2742,11 +2694,9 @@
 - `tenure`
 - `terminate`
 - `terrace`
-- `terrain`
 - `tertiary`
 - `testify`
 - `testimony`
-- `thermal`
 - `thigh`
 - `thorn`
 - `throne`
@@ -2764,16 +2714,13 @@
 - `transistor`
 - `transition`
 - `trauma`
-- `tread`
 - `treasury`
-- `trek`
 - `trench`
 - `tribe`
 - `tribune`
 - `tribute`
 - `trickle`
 - `trillion`
-- `trim`
 - `trivial`
 - `trophy`
 - `tropic`
@@ -2799,7 +2746,6 @@
 - `uranium`
 - `urine`
 - `vaccine`
-- `vegetation`
 - `vein`
 - `velocity`
 - `velvet`
@@ -2827,7 +2773,6 @@
 - `warrant`
 - `warranty`
 - `watt`
-- `weary`
 - `wedge`
 - `wharf`
 - `whereabouts`

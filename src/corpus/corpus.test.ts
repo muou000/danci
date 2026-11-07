@@ -3667,6 +3667,148 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 30 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 30');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('教育文化');
+    expect(passage!.titleEn).toBe(
+      'Pre-trip Preparation and Summiting Experience of a Cross-border Mountain Expedition'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(120);
+
+    // 验证包含 Issue #40 规划的全部目标词目
+    for (const targetId of [
+      'destination',
+      'hike',
+      'summit',
+      'expedition',
+      'passport',
+      'terrain',
+      'luggage',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合跨境徒步与登山考察大纲词目
+    for (const id of [
+      'frontier',
+      'visa',
+      'orient¹',
+      'lead¹',
+      'mentor',
+      'recruit',
+      'verify',
+      'stamp¹',
+      'identity',
+      'document',
+      'trim',
+      'compass',
+      'ration',
+      'compact',
+      'parcel',
+      'garment',
+      'sturdy',
+      'boot',
+      'wool',
+      'thermal',
+      'raincoat',
+      'lead²',
+      'trace',
+      'route',
+      'fragrant',
+      'pine',
+      'meadow',
+      'chill',
+      'mist',
+      'veil',
+      'gorge',
+      'tread',
+      'caution',
+      'challenge',
+      'trek',
+      'vegetation',
+      'stride',
+      'ascend',
+      'plateau',
+      'glacier',
+      'incline',
+      'exert',
+      'weary',
+      'pause',
+      'breath',
+      'cheer',
+      'mate',
+      'sip',
+      'proceed',
+      'unite',
+      'conquer',
+      'ridge',
+      'attain',
+      'milestone',
+      'viewpoint',
+      'sweep',
+      'glance',
+      'wilderness',
+      'gaze',
+      'plain',
+      'glad',
+      'triumph',
+      'companion',
+      'congratulate',
+      'elevate',
+      'spirit',
+      'height',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证语境词性匹配（名词前作定语标为 a.，形容词以“的”结尾）
+    const posChecks: [number, number, string, string][] = [
+      [0, 0, 'research', 'a.'],
+      [0, 1, 'visa', 'a.'],
+      [0, 1, 'identity', 'a.'],
+      [1, 0, 'wool', 'a.'],
+      [1, 0, 'thermal', 'a.'],
+      [1, 1, 'pine', 'a.'],
+      [1, 1, 'detail', 'a.'],
+      [2, 1, 'steady', 'a.'],
+      [2, 2, 'weary', 'a.'],
+      [3, 1, 'sweep', 'a.'],
+      [3, 2, 'glad', 'a.'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId, prefix] of posChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith(prefix)).toBe(true);
+      }
+    }
+  });
+
   it('主题短文 NO. 31 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并规范标注超纲词', () => {
     const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 31');
     expect(passage).toBeDefined();
