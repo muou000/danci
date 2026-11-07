@@ -3977,6 +3977,181 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 33 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并规范标注超纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 33');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('职场经济');
+    expect(passage!.titleEn).toBe(
+      'Understanding Market Cycles and Personal Investment'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(90);
+
+    // 验证包含 Issue #43 规划的核心目标词目及替换词目（首字母各不相同）
+    for (const targetId of [
+      'economics',
+      'boom',
+      'recession',
+      'interest',
+      'stock',
+      'dividend',
+      'profit',
+      'wealth',
+      'gamble',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合职场经济与市场周期大纲词目
+    for (const id of [
+      'clerk',
+      'curious',
+      'finance',
+      'attend',
+      'community',
+      'seminar',
+      'cycle',
+      'instruct',
+      'lecture',
+      'introduce',
+      'principle',
+      'explain',
+      'nation',
+      'economy',
+      'experience',
+      'perpetual',
+      'amateur',
+      'participate',
+      'mistake',
+      'treat',
+      'equity',
+      'quick',
+      'hope',
+      'sudden',
+      'rich',
+      'headline',
+      'announce',
+      'business',
+      'speak',
+      'illustrate',
+      'period',
+      'rapid',
+      'expand',
+      'inevitable',
+      'correct',
+      'consume',
+      'confidence',
+      'climb',
+      'corporation',
+      'revenue',
+      'prompt',
+      'surge',
+      'blind',
+      'optimism',
+      'conceal',
+      'underlie',
+      'hazard',
+      'haste',
+      'buy',
+      'active',
+      'enter',
+      'asset',
+      'value',
+      'plunge',
+      'care',
+      'individual',
+      'distress',
+      'gain',
+      'shrink',
+      'clarity',
+      'essence',
+      'mechanic',
+      'mentor',
+      'help',
+      'audience',
+      'distinguish',
+      'differ',
+      'source',
+      'return',
+      'firm²',
+      'generate',
+      'annual',
+      'commerce',
+      'operate',
+      'distribute',
+      'earn',
+      'contrast',
+      'deposit',
+      'yield',
+      'fix',
+      'provide',
+      'modest',
+      'stable',
+      'drama',
+      'grasp',
+      'distinct',
+      'prevent',
+      'household',
+      'confuse',
+      'fluctuate',
+      'guarantee',
+      'conclude',
+      'emphasis',
+      'establish',
+      'genuine',
+      'term',
+      'offer',
+      'easy',
+      'magic',
+      'formula',
+      'believe',
+      'trend',
+      'prosper',
+      'danger',
+      'illusion',
+      'sense',
+      'maintain',
+      'sober',
+      'perspective',
+      'diverse',
+      'save',
+      'resist',
+      'tempt',
+      'reckless',
+      'speculate',
+      'respect',
+      'caution',
+      'decide',
+      'ordinary',
+      'citizen',
+      'safeguard',
+      'well-being',
+      'discipline',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1944/4692 个非免注核心大纲词目（41.4%），尚有 2748 个待覆盖。
+当前覆盖 1971/4692 个非免注核心大纲词目（42.0%），尚有 2721 个待覆盖。
 
-## 四级词目（1637）
+## 四级词目（1617）
 
 - `able`
 - `abolish`
@@ -122,7 +122,6 @@
 - `bare`
 - `bark`
 - `barrel`
-- `base`
 - `baseball`
 - `basement`
 - `basin`
@@ -145,7 +144,6 @@
 - `beg`
 - `behalf`
 - `belief`
-- `believe`
 - `belly`
 - `beloved`
 - `belt`
@@ -174,7 +172,6 @@
 - `blouse`
 - `blur`
 - `bomb`
-- `boom`
 - `bore¹`
 - `bore²`
 - `born`
@@ -433,7 +430,6 @@
 - `earthquake`
 - `easy-going`
 - `eat`
-- `economics`
 - `eggplant`
 - `either`
 - `elbow`
@@ -523,9 +519,7 @@
 - `fireman`
 - `fireplace`
 - `fireworks`
-- `firm²`
 - `fist`
-- `fix`
 - `flame`
 - `flash`
 - `flat²`
@@ -552,7 +546,6 @@
 - `forgive`
 - `format`
 - `former`
-- `formula`
 - `formulate`
 - `forth`
 - `forthcoming`
@@ -577,7 +570,6 @@
 - `fuss`
 - `gadget`
 - `gallon`
-- `gamble`
 - `gang`
 - `gaol`
 - `garage`
@@ -706,8 +698,6 @@
 - `identify`
 - `ignorant`
 - `illegal`
-- `illusion`
-- `illustrate`
 - `image`
 - `imagine`
 - `imitate`
@@ -757,7 +747,6 @@
 - `intake`
 - `intangible`
 - `intend`
-- `interest`
 - `interfere`
 - `interior`
 - `intermediate`
@@ -874,7 +863,6 @@
 - `lump`
 - `lung`
 - `mad`
-- `magic`
 - `magnet`
 - `magnificent`
 - `maid`
@@ -1102,7 +1090,6 @@
 - `playground`
 - `plenty`
 - `plow`
-- `plunge`
 - `plural`
 - `podcast`
 - `poem`
@@ -1150,7 +1137,6 @@
 - `procession`
 - `proclaim`
 - `proficient`
-- `profit`
 - `prohibit`
 - `project²`
 - `prominent`
@@ -1200,7 +1186,6 @@
 - `rear`
 - `rebel`
 - `reception`
-- `recession`
 - `reckon`
 - `recognize`
 - `recommend`
@@ -1237,7 +1222,6 @@
 - `résumé`
 - `retell`
 - `retreat`
-- `return`
 - `reunite`
 - `reveal`
 - `reverse`
@@ -1313,7 +1297,6 @@
 - `show`
 - `shower`
 - `shrimp`
-- `shrink`
 - `shrug`
 - `shut`
 - `shy`
@@ -1411,7 +1394,6 @@
 - `stick²`
 - `still²`
 - `sting`
-- `stock`
 - `stocking`
 - `stomach`
 - `stool`
@@ -1448,7 +1430,6 @@
 - `supreme`
 - `sure`
 - `surf`
-- `surge`
 - `surgery`
 - `surname`
 - `surplus`
@@ -1530,7 +1511,6 @@
 - `treasure`
 - `treaty`
 - `tremendous`
-- `trend`
 - `triangle`
 - `trifle`
 - `triple`
@@ -1644,7 +1624,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1111）
+## 六级星号词目（1104）
 
 - `abbreviation`
 - `abide`
@@ -1988,7 +1968,6 @@
 - `dissident`
 - `distill`
 - `divert`
-- `dividend`
 - `divine`
 - `doctrine`
 - `dodge`
@@ -2044,7 +2023,6 @@
 - `epoch`
 - `equate`
 - `equator`
-- `equity`
 - `eradicate`
 - `erect`
 - `errand`
@@ -2398,7 +2376,6 @@
 - `perfume`
 - `perish`
 - `permeate`
-- `perpetual`
 - `perplex`
 - `persecute`
 - `pest`
@@ -2444,7 +2421,6 @@
 - `propagate`
 - `propel`
 - `prosecute`
-- `prosper`
 - `protocol`
 - `prototype`
 - `proximate`
@@ -2566,7 +2542,6 @@
 - `sniff`
 - `snob`
 - `sob`
-- `sober`
 - `socket`
 - `sodium`
 - `solicit`
@@ -2652,7 +2627,6 @@
 - `tease`
 - `temperament`
 - `temporal`
-- `tempt`
 - `tenant`
 - `tentative`
 - `tenure`
@@ -2698,7 +2672,6 @@
 - `turtle`
 - `ultra`
 - `unanimous`
-- `underlie`
 - `unify`
 - `unilateral`
 - `unleash`
