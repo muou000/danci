@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1906/4692 个非免注核心大纲词目（40.6%），尚有 2786 个待覆盖。
+当前覆盖 1944/4692 个非免注核心大纲词目（41.4%），尚有 2748 个待覆盖。
 
-## 四级词目（1662）
+## 四级词目（1637）
 
 - `able`
 - `abolish`
@@ -14,7 +14,6 @@
 - `abuse`
 - `accept`
 - `accompany`
-- `accord`
 - `accordance`
 - `accordingly`
 - `accuse`
@@ -40,7 +39,6 @@
 - `alcohol`
 - `algebra`
 - `alike`
-- `allowance`
 - `ally`
 - `alphabet`
 - `altogether`
@@ -176,7 +174,6 @@
 - `blouse`
 - `blur`
 - `bomb`
-- `bonus`
 - `boom`
 - `bore¹`
 - `bore²`
@@ -346,7 +343,6 @@
 - `deaf`
 - `deal²`
 - `dear`
-- `decent`
 - `decline`
 - `deed`
 - `deem`
@@ -482,7 +478,6 @@
 - `excursion`
 - `exile`
 - `exist`
-- `expertise`
 - `explode`
 - `exploit`
 - `export`
@@ -680,7 +675,6 @@
 - `hinder`
 - `hint`
 - `hip`
-- `hire`
 - `hit`
 - `hobby`
 - `hole`
@@ -758,7 +752,6 @@
 - `installment`
 - `instance`
 - `instinct`
-- `institute`
 - `insult`
 - `insure`
 - `intake`
@@ -832,7 +825,6 @@
 - `lawn`
 - `lawyer`
 - `lay`
-- `layoff`
 - `layout`
 - `lazy`
 - `leap`
@@ -881,7 +873,6 @@
 - `luck`
 - `lump`
 - `lung`
-- `machine`
 - `mad`
 - `magic`
 - `magnet`
@@ -980,7 +971,6 @@
 - `needle`
 - `negate`
 - `nephew`
-- `nevertheless`
 - `nice`
 - `nickel`
 - `niece`
@@ -1004,7 +994,6 @@
 - `object²`
 - `obtain`
 - `obvious`
-- `occupation`
 - `occupy`
 - `occur`
 - `odd`
@@ -1019,9 +1008,7 @@
 - `onward`
 - `opera`
 - `opinion`
-- `opportunity`
 - `opposite`
-- `optimism`
 - `oral`
 - `orchestra`
 - `ore`
@@ -1037,7 +1024,6 @@
 - `outing`
 - `outlet`
 - `outlook`
-- `output`
 - `outward`
 - `oval`
 - `overcoat`
@@ -1078,7 +1064,6 @@
 - `patient²`
 - `pave`
 - `paw`
-- `payroll`
 - `pea`
 - `peach`
 - `peanut`
@@ -1090,7 +1075,6 @@
 - `pepper`
 - `perceive`
 - `perfect`
-- `period`
 - `pessimism`
 - `petrol`
 - `petroleum`
@@ -1116,7 +1100,6 @@
 - `pity`
 - `plague`
 - `playground`
-- `pledge`
 - `plenty`
 - `plow`
 - `plunge`
@@ -1144,7 +1127,6 @@
 - `preach`
 - `precaution`
 - `preface`
-- `prefer`
 - `pregnant`
 - `premier`
 - `preposition`
@@ -1188,7 +1170,6 @@
 - `punish`
 - `purse`
 - `push`
-- `qualify`
 - `quantify`
 - `quantity`
 - `quarrel`
@@ -1244,13 +1225,11 @@
 - `rent`
 - `repay`
 - `reply`
-- `represent`
 - `reproduce`
 - `republic`
 - `request`
 - `resemble`
 - `resent`
-- `resign`
 - `resort²`
 - `respective`
 - `rest²`
@@ -1275,7 +1254,6 @@
 - `roast`
 - `rob`
 - `rod`
-- `role`
 - `roll`
 - `romance`
 - `rope`
@@ -1401,7 +1379,6 @@
 - `spite`
 - `splash`
 - `split`
-- `spokesman`
 - `spokeswoman`
 - `sponsor`
 - `spontaneous`
@@ -1582,7 +1559,6 @@
 - `undo`
 - `undoubtedly`
 - `uneasy`
-- `union`
 - `upload`
 - `upright`
 - `upset`
@@ -1617,7 +1593,6 @@
 - `visible`
 - `visual`
 - `vocabulary`
-- `vocation`
 - `volleyball`
 - `volt`
 - `wagon`
@@ -1669,14 +1644,13 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1124）
+## 六级星号词目（1111）
 
 - `abbreviation`
 - `abide`
 - `abnormal`
 - `abort`
 - `abreast`
-- `abrupt`
 - `absurd`
 - `accessory`
 - `acclaim`
@@ -1847,7 +1821,6 @@
 - `censor`
 - `census`
 - `ceramic`
-- `certify`
 - `chancellor`
 - `chant`
 - `chapel`
@@ -1913,7 +1886,6 @@
 - `contagious`
 - `contingent`
 - `contrive`
-- `convene`
 - `converge`
 - `converse²`
 - `convict`
@@ -1977,7 +1949,6 @@
 - `depict`
 - `deplete`
 - `deplore`
-- `deploy`
 - `deport`
 - `depot`
 - `depreciate`
@@ -2028,7 +1999,6 @@
 - `dough`
 - `downgrade`
 - `doze`
-- `dread`
 - `dressing`
 - `dub`
 - `dubious`
@@ -2236,7 +2206,6 @@
 - `interim`
 - `intermittent`
 - `interrogate`
-- `intervene`
 - `intimidate`
 - `intrigue`
 - `intrinsic`
@@ -2378,7 +2347,6 @@
 - `olive`
 - `onset`
 - `opaque`
-- `operative`
 - `oppress`
 - `optimum`
 - `ordeal`
@@ -2449,7 +2417,6 @@
 - `plumbing`
 - `poise`
 - `poke`
-- `polytechnic`
 - `ponder`
 - `porcelain`
 - `porch`
@@ -2496,12 +2463,10 @@
 - `rash`
 - `ratify`
 - `rattle`
-- `reassure`
 - `recede`
 - `reciprocal`
 - `reconcile`
 - `recur`
-- `redundant`
 - `reel`
 - `referendum`
 - `refuge`
@@ -2645,7 +2610,6 @@
 - `strangle`
 - `stray`
 - `streak`
-- `streamline`
 - `stroll`
 - `stubborn`
 - `stumble`
@@ -2692,7 +2656,6 @@
 - `tenant`
 - `tentative`
 - `tenure`
-- `terminate`
 - `terrace`
 - `tertiary`
 - `testify`
@@ -2712,7 +2675,6 @@
 - `tranquil`
 - `transcend`
 - `transistor`
-- `transition`
 - `trauma`
 - `treasury`
 - `trench`

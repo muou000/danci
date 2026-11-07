@@ -3895,6 +3895,88 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 32 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并规范标注超纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 32');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('职场经济');
+    expect(passage!.titleEn).toBe(
+      'Worker Security and Retraining During Factory Automation'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #42 规划的核心目标词目及替换词目（首字母各不相同）与 pension
+    for (const targetId of [
+      'union',
+      'pledge',
+      'occupation',
+      'layoff',
+      'hire',
+      'resign',
+      'pension',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合职场经济与自动化转型大纲词目
+    for (const id of [
+      'deploy',
+      'spokesman',
+      'convene',
+      'shift',
+      'streamline',
+      'redundant',
+      'nevertheless',
+      'workshop',
+      'intervene',
+      'terminate',
+      'accord',
+      'safeguard',
+      'reassure',
+      'operative',
+      'payroll',
+      'allowance',
+      'transition',
+      'qualify',
+      'certify',
+      'polytechnic',
+      'institute',
+      'supervise',
+      'expertise',
+      'decent',
+      'prefer',
+      'vocation',
+      'bonus',
+      'opportunity',
+      'output',
+      'optimism',
+      'progress',
+      'dignity',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
