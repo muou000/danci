@@ -3837,7 +3837,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
 
     const compiled = compilePassage(passage!, catalog);
     const coveredIds = coveredHeadwordIdsIn(compiled);
-    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(125);
 
     // 验证包含 Issue #41 初始规划的全部 6 个核心目标词目
     for (const targetId of [
@@ -3890,6 +3890,24 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'sound²',
       'distort',
       'prestige',
+      'dubious',
+      'anonymous',
+      'escalate',
+      'amplify',
+      'fabricate',
+      'inquire',
+      'protocol',
+      'transcript',
+      'assert',
+      'audit',
+      'outlet',
+      'testify',
+      'subjective',
+      'manipulate',
+      'rhetoric',
+      'topic',
+      'medium',
+      'verdict',
     ]) {
       expect(coveredIds).toContain(id);
     }
@@ -3923,7 +3941,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
 
     const compiled = compilePassage(passage!, catalog);
     const coveredIds = coveredHeadwordIdsIn(compiled);
-    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(125);
 
     // 验证包含 Issue #42 规划的核心目标词目及替换词目（首字母各不相同）与 pension
     for (const targetId of [
@@ -3972,6 +3990,19 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'optimism',
       'progress',
       'dignity',
+      'drastic',
+      'quota',
+      'deadlock',
+      'adverse',
+      'buffer',
+      'pact',
+      'stipulate',
+      'aptitude',
+      'cylinder',
+      'viable',
+      'surplus',
+      'diminish',
+      'rigid',
     ]) {
       expect(coveredIds).toContain(id);
     }
@@ -4005,7 +4036,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
 
     const compiled = compilePassage(passage!, catalog);
     const coveredIds = coveredHeadwordIdsIn(compiled);
-    expect(coveredIds.length).toBeGreaterThanOrEqual(90);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(135);
 
     // 验证包含 Issue #43 规划的核心目标词目及替换词目（首字母各不相同）
     for (const targetId of [
@@ -4147,6 +4178,29 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'safeguard',
       'well-being',
       'discipline',
+      'portfolio',
+      'volatile',
+      'compound¹',
+      'principal',
+      'slump',
+      'appreciate',
+      'depreciate',
+      'inflate',
+      'downward',
+      'upward',
+      'liquid',
+      'naive',
+      'pyramid',
+      'foresee',
+      'lucrative',
+      'stagnate',
+      'hedge',
+      'index',
+      'spiral',
+      'dip',
+      'reap',
+      'ratio',
+      'rally',
     ]) {
       expect(coveredIds).toContain(id);
     }
@@ -4178,7 +4232,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
 
     const compiled = compilePassage(passage!, catalog);
     const coveredIds = coveredHeadwordIdsIn(compiled);
-    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(125);
 
     // 验证包含 Issue #44 规划的全部 9 个核心目标词目（首字母各不相同）
     for (const targetId of [
@@ -4200,9 +4254,11 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'formal',
       'youth',
       'ashamed',
+      'intimidate',
       'complex',
       'text',
       'confront',
+      'stumble',
       'rapid',
       'change',
       'economy',
@@ -4211,6 +4267,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'technical',
       'handbook',
       'function',
+      'shame',
       'routine',
       'assign',
       'encourage',
@@ -4221,25 +4278,25 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'host¹',
       'local',
       'community',
+      'eligible',
       'civic',
       'fund',
       'cover',
       'full',
+      'fee',
       'finance',
       'worry',
       'deter',
       'resolve',
-      'return',
       'study',
       'design',
-      'balance',
       'link',
       'literary',
       'lesson',
-      'direct',
       'practical',
       'vocation',
       'skill',
+      'incentive',
       'dedicate',
       'treat',
       'learn',
@@ -4249,11 +4306,12 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'steady',
       'individual',
       'guide',
+      'classmate',
       'alongside',
       'base',
       'exercise',
+      'essay',
       'calculate',
-      'measure',
       'daily',
       'arithmetic',
       'complete',
@@ -4263,8 +4321,8 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'encounter',
       'harsh',
       'criticize',
+      'humiliate',
       'find',
-      'genuine',
       'compassion',
       'help',
       'overcome',
@@ -4279,16 +4337,25 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'diagram',
       'safe',
       'instruct',
+      'measure',
+      'dimension',
       'assemble',
       'copper',
       'pipe',
       'handle',
+      'hammer',
+      'screw',
+      'nut',
       'wrench',
       'correct',
       'confidence',
       'grow',
       'realize',
       'read',
+      'align',
+      'valve',
+      'dismantle',
+      'aspire',
       'trade',
       'plumber',
       'progress',
@@ -4296,30 +4363,32 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'persist',
       'demand',
       'session',
+      'undergo',
       'rigor',
+      'specialty',
       'success',
       'earn',
       'equip',
-      'recognize',
       'credential',
       'milestone',
       'prove',
       'chance',
+      'illuminate',
       'transform',
       'verify',
-      'strong',
-      'recommend',
       'license',
-      'official',
-      'educate',
+      'fluent',
+      'liberate',
       'vulnerable',
-      'profession',
+      'fulfill',
+      'ambition',
       'secure',
       'promise',
       'path',
       'dignity',
       'stable',
       'career',
+      'pave',
     ]) {
       expect(coveredIds).toContain(id);
     }

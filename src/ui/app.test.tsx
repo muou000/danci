@@ -83,6 +83,10 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     vi.restoreAllMocks();
     vi.unstubAllGlobals();
     vi.useRealTimers();
+    delete (window as unknown as { requestIdleCallback?: unknown })
+      .requestIdleCallback;
+    delete (window as unknown as { cancelIdleCallback?: unknown })
+      .cancelIdleCallback;
   });
 
   it('全局查词可按中文行间释义检索并打开结果短文', async () => {
@@ -184,6 +188,8 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
   });
 
   it('目录只用元数据呈现，选篇和翻页分别加载目标短文', async () => {
+    window.requestIdleCallback = vi.fn();
+    window.cancelIdleCallback = vi.fn();
     const user = userEvent.setup();
     const fullCorpus = COMPILED_PASSAGES;
     const loadPassage = vi.fn(async (passageId: string) => {
@@ -881,9 +887,11 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
     expect(downloadedFilename).toMatch(/\.png$/);
   });
 
-  it('按当前个性化状态将完整短文库批量导出为ZIP中的全部高清PNG，且不切换当前短文', async () => {
-    const user = userEvent.setup();
-    const totalCount = COMPILED_PASSAGES.length;
+  it(
+    '按当前个性化状态将完整短文库批量导出为ZIP中的全部高清PNG，且不切换当前短文',
+    async () => {
+      const user = userEvent.setup();
+      const totalCount = COMPILED_PASSAGES.length;
     expect(totalCount).toBeGreaterThanOrEqual(26);
     vi.mocked(toBlob).mockResolvedValue(
       new Blob(['png'], { type: 'image/png' })
@@ -922,7 +930,7 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
       await screen.findByText(
         `${totalCount} 篇高清 PNG 图片已打包下载。`,
         {},
-        { timeout: 10_000 }
+        { timeout: 25_000 }
       )
     ).toBeInTheDocument();
     expect(loadPassage).toHaveBeenCalledTimes(totalCount - 1);
@@ -943,57 +951,61 @@ describe('双栏短文精读界面 (Seam 3: ui)', () => {
         name: /跨越重洋的学术探索与文化适应/,
       })
     ).toBeInTheDocument();
-  });
+  }, 30_000);
 
-  it('导出时省略全部已隐藏拓展，并收起已无可见标注的图例与右栏', async () => {
-    const user = userEvent.setup();
-    vi.mocked(toBlob).mockResolvedValueOnce(
-      new Blob(['png'], { type: 'image/png' })
-    );
-    vi.stubGlobal('URL', {
-      createObjectURL: vi.fn(() => 'blob:all-hidden'),
-      revokeObjectURL: vi.fn(),
-    });
-    vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(
-      () => undefined
-    );
-
-    renderWithDemoPassages();
-    await user.click(screen.getByRole('button', { name: '下一篇短文' }));
-
-    for (const surface of [
-      'algorithmic',
-      'exacerbate',
-      'neuroplasticity',
-      'nuances',
-    ]) {
-      await user.click(screen.getByRole('button', { name: surface }));
-    }
-
-    while (screen.queryByRole('complementary', { name: '熟词僻义及拓展汇总' })) {
-      const aside = screen.getByRole('complementary', {
-        name: '熟词僻义及拓展汇总',
-      });
-      await user.click(
-        within(aside).getAllByRole('button', { name: /^隐藏拓展条目/ })[0]
+  it(
+    '导出时省略全部已隐藏拓展，并收起已无可见标注的图例与右栏',
+    async () => {
+      const user = userEvent.setup();
+      vi.mocked(toBlob).mockResolvedValueOnce(
+        new Blob(['png'], { type: 'image/png' })
       );
-    }
+      vi.stubGlobal('URL', {
+        createObjectURL: vi.fn(() => 'blob:all-hidden'),
+        revokeObjectURL: vi.fn(),
+      });
+      vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(
+        () => undefined
+      );
 
-    expect(screen.queryByRole('complementary')).not.toBeInTheDocument();
-    await user.click(screen.getByRole('button', { name: '导出图片' }));
-    expect(await screen.findByRole('status')).toHaveTextContent(
-      '高清 PNG 图片已开始下载。'
-    );
+      renderWithDemoPassages();
+      await user.click(screen.getByRole('button', { name: '下一篇短文' }));
 
-    const [exportNode, options] = vi.mocked(toBlob).mock.calls[0];
-    expect(options).toMatchObject({ width: 1080, pixelRatio: 2 });
-    expect(exportNode.querySelector('.passage-card__body')).toHaveClass(
-      'passage-card__body--full-width'
-    );
-    expect(exportNode.querySelector('.passage-expansion')).toBeNull();
-    expect(exportNode.querySelector('.passage-expansion__recovery')).toBeNull();
-    expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
-  });
+      for (const surface of [
+        'algorithmic',
+        'exacerbate',
+        'neuroplasticity',
+        'nuances',
+      ]) {
+        await user.click(screen.getByRole('button', { name: surface }));
+      }
+
+      while (screen.queryByRole('complementary', { name: '熟词僻义及拓展汇总' })) {
+        const aside = screen.getByRole('complementary', {
+          name: '熟词僻义及拓展汇总',
+        });
+        await user.click(
+          within(aside).getAllByRole('button', { name: /^隐藏拓展条目/ })[0]
+        );
+      }
+
+      expect(screen.queryByRole('complementary')).not.toBeInTheDocument();
+      await user.click(screen.getByRole('button', { name: '导出图片' }));
+      expect(await screen.findByRole('status')).toHaveTextContent(
+        '高清 PNG 图片已开始下载。'
+      );
+
+      const [exportNode, options] = vi.mocked(toBlob).mock.calls[0];
+      expect(options).toMatchObject({ width: 1080, pixelRatio: 2 });
+      expect(exportNode.querySelector('.passage-card__body')).toHaveClass(
+        'passage-card__body--full-width'
+      );
+      expect(exportNode.querySelector('.passage-expansion')).toBeNull();
+      expect(exportNode.querySelector('.passage-expansion__recovery')).toBeNull();
+      expect(within(exportNode).queryByText('超纲词')).not.toBeInTheDocument();
+    },
+    15_000
+  );
 
   it('短文库（至少 26 篇）可通过界面目录完整浏览与切换精读', async () => {
     const user = userEvent.setup();

@@ -136,11 +136,14 @@ export function App({
         () => undefined
       );
     };
-    if (typeof window.requestIdleCallback === 'function') {
+    if (
+      typeof window.requestIdleCallback === 'function' &&
+      typeof window.cancelIdleCallback === 'function'
+    ) {
       const idleHandle = window.requestIdleCallback(prefetch, {
         timeout: CORPUS_PREFETCH_TIMEOUT_MS,
       });
-      return () => window.cancelIdleCallback(idleHandle);
+      return () => window.cancelIdleCallback?.(idleHandle);
     }
 
     const timeoutHandle = window.setTimeout(

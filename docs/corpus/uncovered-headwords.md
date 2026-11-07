@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2000/4692 个非免注核心大纲词目（42.6%），尚有 2692 个待覆盖。
+当前覆盖 2076/4692 个非免注核心大纲词目（44.2%），尚有 2616 个待覆盖。
 
-## 四级词目（1598）
+## 四级词目（1560）
 
 - `able`
 - `abolish`
@@ -65,10 +65,8 @@
 - `apt.`
 - `apparent`
 - `appoint`
-- `appreciate`
 - `appropriate¹`
 - `approximate`
-- `aptitude`
 - `army`
 - `arrest`
 - `arrow`
@@ -258,7 +256,6 @@
 - `cigar`
 - `cigarette`
 - `circus`
-- `classmate`
 - `claw`
 - `clever`
 - `clip`
@@ -277,7 +274,6 @@
 - `comma`
 - `commune`
 - `compose`
-- `compound¹`
 - `comrade`
 - `condemn`
 - `confess`
@@ -371,9 +367,7 @@
 - `dictate`
 - `die`
 - `dime`
-- `dimension`
 - `dioxide`
-- `dip`
 - `diplomat`
 - `dirt`
 - `disable`
@@ -403,10 +397,8 @@
 - `dot`
 - `dove`
 - `downstairs`
-- `downward`
 - `drag`
 - `dragon`
-- `drastic`
 - `drawer`
 - `drift`
 - `drip`
@@ -451,7 +443,6 @@
 - `erase`
 - `escape`
 - `especially`
-- `essay`
 - `estate`
 - `eternal`
 - `ethnic`
@@ -498,7 +489,6 @@
 - `feather`
 - `federal`
 - `federation`
-- `fee`
 - `female`
 - `fence`
 - `fertile`
@@ -520,7 +510,6 @@
 - `flesh`
 - `flexible`
 - `flock`
-- `fluent`
 - `fluid`
 - `fly²`
 - `fold`
@@ -531,7 +520,6 @@
 - `forehead`
 - `foreign`
 - `foremost`
-- `foresee`
 - `foresight`
 - `forever`
 - `forge`
@@ -554,7 +542,6 @@
 - `fry`
 - `fuck`
 - `fuel`
-- `fulfill`
 - `fun`
 - `fundamental`
 - `funeral`
@@ -620,7 +607,6 @@
 - `hail²`
 - `halfway`
 - `ham`
-- `hammer`
 - `handsome`
 - `handy`
 - `hang`
@@ -642,7 +628,6 @@
 - `hear`
 - `heaven`
 - `hectare`
-- `hedge`
 - `heel`
 - `heir`
 - `helicopter`
@@ -702,13 +687,11 @@
 - `imply`
 - `import`
 - `impossible`
-- `incentive`
 - `inch`
 - `incidence`
 - `incident`
 - `incredible`
 - `indeed`
-- `index`
 - `indifferent`
 - `indoor`
 - `induce`
@@ -716,7 +699,6 @@
 - `infer`
 - `inferior`
 - `infinite`
-- `inflate`
 - `influence`
 - `influenza`
 - `flu`
@@ -725,7 +707,6 @@
 - `inland`
 - `inn`
 - `innocent`
-- `inquire`
 - `insane`
 - `insect`
 - `insert`
@@ -818,7 +799,6 @@
 - `lest`
 - `liable`
 - `liberal`
-- `liberate`
 - `liberty`
 - `lick`
 - `lie¹`
@@ -828,7 +808,6 @@
 - `likewise`
 - `lily`
 - `lip`
-- `liquid`
 - `liquor`
 - `liter`
 - `literal`
@@ -862,7 +841,6 @@
 - `male`
 - `mall`
 - `mammal`
-- `manipulate`
 - `mankind`
 - `manner`
 - `marathon`
@@ -883,7 +861,6 @@
 - `meantime`
 - `mechanize`
 - `Medicare`
-- `medium`
 - `melt`
 - `memorandum`
 - `memo`
@@ -963,7 +940,6 @@
 - `nuisance`
 - `numerous`
 - `nursery`
-- `nut`
 - `obese`
 - `object¹`
 - `object²`
@@ -997,7 +973,6 @@
 - `outbreak`
 - `outgoing`
 - `outing`
-- `outlet`
 - `outlook`
 - `outward`
 - `oval`
@@ -1037,7 +1012,6 @@
 - `patch`
 - `patent`
 - `patient²`
-- `pave`
 - `paw`
 - `pea`
 - `peach`
@@ -1115,7 +1089,6 @@
 - `primitive`
 - `prince`
 - `princess`
-- `principal`
 - `prior`
 - `prison`
 - `private`
@@ -1148,7 +1121,6 @@
 - `queue`
 - `quit`
 - `quiz`
-- `quota`
 - `rabbit`
 - `race²`
 - `rack`
@@ -1159,20 +1131,19 @@
 - `rail`
 - `railroad`
 - `rainbow`
-- `rally`
 - `range`
 - `rank`
 - `rat`
 - `rate`
-- `ratio`
 - `ray`
 - `react`
 - `realm`
-- `reap`
 - `rear`
 - `rebel`
 - `reception`
 - `reckon`
+- `recognize`
+- `recommend`
 - `refer`
 - `reflect`
 - `refresh`
@@ -1249,7 +1220,6 @@
 - `scope`
 - `scout`
 - `scream`
-- `screw`
 - `second²`
 - `secondary`
 - `secretary`
@@ -1268,7 +1238,6 @@
 - `setting`
 - `sex`
 - `shadow`
-- `shame`
 - `shave`
 - `shed`
 - `sheer`
@@ -1397,7 +1366,6 @@
 - `style`
 - `subject¹`
 - `subject²`
-- `subjective`
 - `substance`
 - `substitute`
 - `subtract`
@@ -1416,7 +1384,6 @@
 - `surf`
 - `surgery`
 - `surname`
-- `surplus`
 - `surprise`
 - `surrender`
 - `suspect`
@@ -1427,7 +1394,6 @@
 - `sway`
 - `swear`
 - `swell`
-- `swing`
 - `swipe`
 - `switch`
 - `sword`
@@ -1480,7 +1446,6 @@
 - `token`
 - `tolerate`
 - `ton`
-- `topic`
 - `torture`
 - `toss`
 - `towel`
@@ -1488,7 +1453,6 @@
 - `trademark`
 - `tragedy`
 - `tram`
-- `transcript`
 - `transplant`
 - `treasure`
 - `treaty`
@@ -1512,7 +1476,6 @@
 - `ugly`
 - `underdeveloped`
 - `underestimate`
-- `undergo`
 - `underground`
 - `underline`
 - `underneath`
@@ -1525,7 +1488,6 @@
 - `upset`
 - `upstairs`
 - `up-to-date`
-- `upward`
 - `usage`
 - `usual`
 - `utility`
@@ -1605,7 +1567,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1094）
+## 六级星号词目（1056）
 
 - `abbreviation`
 - `abide`
@@ -1623,7 +1585,6 @@
 - `adore`
 - `advent`
 - `adversary`
-- `adverse`
 - `aesthetic`
 - `affiliate`
 - `affirm`
@@ -1638,7 +1599,6 @@
 - `akin`
 - `ale`
 - `alien`
-- `align`
 - `allergic`
 - `allot`
 - `alloy`
@@ -1652,13 +1612,11 @@
 - `amend`
 - `amiable`
 - `ammunition`
-- `amplify`
 - `analogy`
 - `anecdote`
 - `anguish`
 - `animate`
 - `annex`
-- `anonymous`
 - `antagonism`
 - `antenna`
 - `antibiotic`
@@ -1684,10 +1642,8 @@
 - `artifact`
 - `artillery`
 - `ascribe`
-- `aspire`
 - `assassinate`
 - `assault`
-- `assert`
 - `assimilate`
 - `assorted`
 - `assortment`
@@ -1696,7 +1652,6 @@
 - `atlas`
 - `atrocity`
 - `auction`
-- `audit`
 - `augment`
 - `autobiography`
 - `auxiliary`
@@ -1752,7 +1707,6 @@
 - `brood`
 - `Buddhism`
 - `buffalo`
-- `buffer`
 - `bureaucrat`
 - `burglar`
 - `bust`
@@ -1884,11 +1838,9 @@
 - `curfew`
 - `curtail`
 - `custody`
-- `cylinder`
 - `cynical`
 - `dart`
 - `dazzle`
-- `deadlock`
 - `decimal`
 - `decree`
 - `deduce`
@@ -1907,7 +1859,6 @@
 - `deplore`
 - `deport`
 - `depot`
-- `depreciate`
 - `derail`
 - `deregulate`
 - `designate`
@@ -1924,14 +1875,12 @@
 - `diesel`
 - `diffuse`
 - `dilute`
-- `diminish`
 - `dinosaur`
 - `directory`
 - `disarm`
 - `discord`
 - `discourse`
 - `discreet`
-- `dismantle`
 - `dismay`
 - `dispatch`
 - `dispense`
@@ -1955,7 +1904,6 @@
 - `doze`
 - `dressing`
 - `dub`
-- `dubious`
 - `dwarf`
 - `dwell`
 - `Easter`
@@ -1970,7 +1918,6 @@
 - `elastic`
 - `electoral`
 - `elicit`
-- `eligible`
 - `eloquent`
 - `emancipate`
 - `embargo`
@@ -2002,7 +1949,6 @@
 - `erect`
 - `errand`
 - `erupt`
-- `escalate`
 - `escort`
 - `esteem`
 - `esthetic`
@@ -2019,7 +1965,6 @@
 - `extinct`
 - `extract`
 - `extravagant`
-- `fabricate`
 - `fabulous`
 - `facet`
 - `faction`
@@ -2109,7 +2054,6 @@
 - `howl`
 - `hum`
 - `humane`
-- `humiliate`
 - `hurdle`
 - `hurl`
 - `hurricane`
@@ -2123,7 +2067,6 @@
 - `idol`
 - `ignite`
 - `illicit`
-- `illuminate`
 - `immerse`
 - `imminent`
 - `impair`
@@ -2158,7 +2101,6 @@
 - `interim`
 - `intermittent`
 - `interrogate`
-- `intimidate`
 - `intrigue`
 - `intrinsic`
 - `intuition`
@@ -2217,7 +2159,6 @@
 - `lottery`
 - `lounge`
 - `lubricate`
-- `lucrative`
 - `luminous`
 - `lure`
 - `lyric`
@@ -2273,7 +2214,6 @@
 - `murmur`
 - `mute`
 - `mutter`
-- `naive`
 - `navigate`
 - `negligent`
 - `negligible`
@@ -2313,7 +2253,6 @@
 - `overturn`
 - `owl`
 - `oxide`
-- `pact`
 - `pamphlet`
 - `panorama`
 - `pant`
@@ -2370,7 +2309,6 @@
 - `porcelain`
 - `porch`
 - `porridge`
-- `portfolio`
 - `potent`
 - `pottery`
 - `poultry`
@@ -2393,12 +2331,10 @@
 - `propagate`
 - `propel`
 - `prosecute`
-- `protocol`
 - `prototype`
 - `proximate`
 - `psychiatry`
 - `pudding`
-- `pyramid`
 - `quart`
 - `query`
 - `quiver`
@@ -2446,9 +2382,7 @@
 - `retrospect`
 - `revenge`
 - `revolt`
-- `rhetoric`
 - `rig`
-- `rigid`
 - `rim`
 - `ritual`
 - `robust`
@@ -2505,7 +2439,6 @@
 - `slaughter`
 - `slot`
 - `slum`
-- `slump`
 - `smuggle`
 - `snail`
 - `snap`
@@ -2521,18 +2454,15 @@
 - `sovereign`
 - `spaghetti`
 - `spear`
-- `specialty`
 - `spectacle`
 - `spectrum`
 - `spider`
 - `spine`
-- `spiral`
 - `sponge`
 - `sprawl`
 - `sprinkle`
 - `stab`
 - `stagger`
-- `stagnate`
 - `stalk`
 - `stall`
 - `stammer`
@@ -2548,7 +2478,6 @@
 - `stewardess`
 - `stifle`
 - `stigma`
-- `stipulate`
 - `stitch`
 - `stoop`
 - `stout`
@@ -2559,7 +2488,6 @@
 - `streak`
 - `stroll`
 - `stubborn`
-- `stumble`
 - `stump`
 - `stun`
 - `submarine`
@@ -2604,7 +2532,6 @@
 - `tenure`
 - `terrace`
 - `tertiary`
-- `testify`
 - `testimony`
 - `thigh`
 - `thorn`
@@ -2658,12 +2585,10 @@
 - `velvet`
 - `vent`
 - `ventilate`
-- `verdict`
 - `verge`
 - `versatile`
 - `verse`
 - `vest`
-- `viable`
 - `vibrate`
 - `vice`
 - `vicinity`
@@ -2671,7 +2596,6 @@
 - `virgin`
 - `vogue`
 - `void`
-- `volatile`
 - `voucher`
 - `vow`
 - `vulgar`
