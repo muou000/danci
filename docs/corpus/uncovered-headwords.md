@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 1761/4692 个非免注核心大纲词目（37.5%），尚有 2931 个待覆盖。
+当前覆盖 1808/4692 个非免注核心大纲词目（38.5%），尚有 2884 个待覆盖。
 
-## 四级词目（1772）
+## 四级词目（1731）
 
 - `able`
 - `abolish`
@@ -68,7 +68,6 @@
 - `apart`
 - `apt.`
 - `apparent`
-- `appetite`
 - `appoint`
 - `appreciate`
 - `appropriate¹`
@@ -140,7 +139,6 @@
 - `battalion`
 - `battle`
 - `beam`
-- `bean`
 - `bear`
 - `beard`
 - `bearing`
@@ -156,7 +154,6 @@
 - `belly`
 - `beloved`
 - `belt`
-- `berry`
 - `besides`
 - `best`
 - `best-seller`
@@ -170,7 +167,6 @@
 - `birthday`
 - `biscuit`
 - `bitch`
-- `bite`
 - `blackboard`
 - `blade`
 - `blank`
@@ -236,11 +232,9 @@
 - `bystander`
 - `cabbage`
 - `cafe`
-- `cafeteria`
 - `cage`
 - `calendar`
 - `calf`
-- `calorie`
 - `camel`
 - `camp`
 - `can²`
@@ -256,7 +250,6 @@
 - `cattle`
 - `ceiling`
 - `cellar`
-- `cereal`
 - `chairman`
 - `chalk`
 - `champagne`
@@ -264,15 +257,12 @@
 - `cheat`
 - `check²`
 - `cheek`
-- `chef`
 - `chess`
 - `chest`
-- `chew`
 - `chin`
 - `china`
 - `chip`
 - `cholesterol`
-- `choose`
 - `chop`
 - `chopstick`
 - `chore`
@@ -355,7 +345,6 @@
 - `curriculum`
 - `curse`
 - `cute`
-- `dairy`
 - `dam`
 - `damn`
 - `dance`
@@ -379,7 +368,6 @@
 - `definite`
 - `defy`
 - `delete`
-- `delicious`
 - `dent`
 - `dental`
 - `dentist`
@@ -441,14 +429,12 @@
 - `dove`
 - `downstairs`
 - `downward`
-- `dozen`
 - `drag`
 - `dragon`
 - `drastic`
 - `drawer`
 - `drift`
 - `drip`
-- `drop`
 - `dropout`
 - `drown`
 - `drug`
@@ -550,7 +536,6 @@
 - `fertile`
 - `fetch`
 - `fever`
-- `fiber`
 - `fiction`
 - `fight`
 - `figure`
@@ -566,12 +551,10 @@
 - `flame`
 - `flash`
 - `flat²`
-- `flavor`
 - `flee`
 - `flesh`
 - `flexible`
 - `flock`
-- `flour`
 - `fluent`
 - `fluid`
 - `fly²`
@@ -731,7 +714,6 @@
 - `homework`
 - `homosexual`
 - `homo`
-- `honey`
 - `honeymoon`
 - `hook`
 - `horn`
@@ -744,9 +726,7 @@
 - `housewife`
 - `housework`
 - `huge`
-- `hunger`
 - `hunt`
-- `hurry`
 - `hurt`
 - `hut`
 - `hydrogen`
@@ -772,7 +752,6 @@
 - `imply`
 - `import`
 - `impossible`
-- `improve`
 - `incentive`
 - `inch`
 - `incidence`
@@ -792,7 +771,6 @@
 - `influence`
 - `influenza`
 - `flu`
-- `ingredient`
 - `inhabit`
 - `inherit`
 - `inland`
@@ -976,7 +954,6 @@
 - `memorial`
 - `mend`
 - `mention`
-- `menu`
 - `mercy`
 - `mere`
 - `merit`
@@ -1004,7 +981,6 @@
 - `mister`
 - `mistress`
 - `misunderstand`
-- `mix`
 - `mode`
 - `moderate`
 - `mold`
@@ -1046,7 +1022,6 @@
 - `nonsense`
 - `northeast`
 - `northwest`
-- `notice`
 - `notify`
 - `notion`
 - `noun`
@@ -1123,7 +1098,6 @@
 - `palace`
 - `pale`
 - `palm`
-- `pan`
 - `panda`
 - `paperback`
 - `parade`
@@ -1185,7 +1159,6 @@
 - `plague`
 - `plain`
 - `playground`
-- `please`
 - `pledge`
 - `plenty`
 - `plow`
@@ -1211,7 +1184,6 @@
 - `postpone`
 - `pound¹`
 - `pound²`
-- `pour`
 - `pray`
 - `preach`
 - `precaution`
@@ -1251,7 +1223,6 @@
 - `property`
 - `proportion`
 - `prospect`
-- `protein`
 - `proverb`
 - `provided`
 - `provoke`
@@ -1284,7 +1255,6 @@
 - `railroad`
 - `rainbow`
 - `raincoat`
-- `raise`
 - `rally`
 - `range`
 - `rank`
@@ -1380,7 +1350,6 @@
 - `scar`
 - `scare`
 - `scatter`
-- `scent`
 - `scissors`
 - `scope`
 - `scout`
@@ -1440,7 +1409,6 @@
 - `skate`
 - `skeleton`
 - `ski`
-- `skip`
 - `skyline`
 - `skyscraper`
 - `slap`
@@ -1452,10 +1420,7 @@
 - `slogan`
 - `smartphone`
 - `smash`
-- `smell`
-- `smile`
 - `smog`
-- `snack`
 - `soap`
 - `so-called`
 - `socialism`
@@ -1519,7 +1484,6 @@
 - `status`
 - `steak`
 - `steal`
-- `steam`
 - `steel`
 - `stem¹`
 - `stem²`
@@ -1527,7 +1491,6 @@
 - `stick²`
 - `still²`
 - `sting`
-- `stir`
 - `stock`
 - `stocking`
 - `stomach`
@@ -1596,7 +1559,6 @@
 - `tank`
 - `tap`
 - `tape`
-- `taste`
 - `tear²`
 - `technique`
 - `tech`
@@ -1607,7 +1569,6 @@
 - `teller`
 - `temper`
 - `temple`
-- `tender`
 - `tense²`
 - `terrific`
 - `territory`
@@ -1722,7 +1683,6 @@
 - `visa`
 - `visible`
 - `visual`
-- `vitamin`
 - `vocabulary`
 - `vocation`
 - `volleyball`
@@ -1749,7 +1709,6 @@
 - `well-known`
 - `well-off`
 - `whale`
-- `wheat`
 - `whereas`
 - `whip`
 - `whisky`
@@ -1779,7 +1738,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1159）
+## 六级星号词目（1153）
 
 - `abbreviation`
 - `abide`
@@ -2243,7 +2202,6 @@
 - `fortify`
 - `fortnight`
 - `fracture`
-- `fragrant`
 - `franchise`
 - `frantic`
 - `fraud`
@@ -2269,7 +2227,6 @@
 - `gorge`
 - `gospel`
 - `graze`
-- `grease`
 - `greed`
 - `grid`
 - `grill`
@@ -2611,7 +2568,6 @@
 - `proximate`
 - `psychiatry`
 - `pudding`
-- `pumpkin`
 - `pyramid`
 - `quart`
 - `query`
@@ -2628,7 +2584,6 @@
 - `rattle`
 - `reassure`
 - `recede`
-- `recipe`
 - `reciprocal`
 - `reckless`
 - `reconcile`
@@ -2747,7 +2702,6 @@
 - `specialty`
 - `spectacle`
 - `spectrum`
-- `spice`
 - `spider`
 - `spine`
 - `spiral`
@@ -2923,7 +2877,6 @@
 - `whereby`
 - `whirl`
 - `wholesale`
-- `wholesome`
 - `wicked`
 - `wield`
 - `wink`

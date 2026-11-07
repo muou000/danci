@@ -3529,6 +3529,107 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 29 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并大幅增加未覆盖大纲词', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 29');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Trial Preparation and Nutritional Refinement of a Campus Breakfast Menu'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(120);
+
+    // 验证包含 Issue #39 规划的全部目标词目
+    for (const targetId of [
+      'recipe',
+      'ingredient',
+      'wheat',
+      'dairy',
+      'fiber',
+      'vitamin',
+      'appetite',
+      'calorie',
+      'portion',
+      'spice',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合校园餐饮与营养改良大纲词目
+    for (const id of [
+      'cafeteria',
+      'cereal',
+      'flour',
+      'flavor',
+      'protein',
+      'wholesome',
+      'delicious',
+      'pour',
+      'pan',
+      'chew',
+      'honey',
+      'berry',
+      'snack',
+      'chef',
+      'taste',
+      'hunger',
+      'bean',
+      'steam',
+      'stir',
+      'menu',
+      'smell',
+      'scent',
+      'improve',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证语境词性匹配（形容词以“的”结尾，副词以“地”结尾）
+    const posChecks: [number, number, string, string][] = [
+      [0, 0, 'crowd', 'a.'],
+      [0, 0, 'hurry', 'a.'],
+      [0, 2, 'determine', 'a.'],
+      [1, 0, 'dairy', 'a.'],
+      [1, 0, 'steam', 'a.'],
+      [1, 2, 'grease', 'a.'],
+      [2, 0, 'heat', 'a.'],
+      [2, 1, 'nature', 'a.'],
+      [2, 3, 'slight', 'ad.'],
+      [3, 0, 'modify', 'a.'],
+      [3, 2, 'hunger', 'a.'],
+    ];
+
+    for (const [pIdx, sIdx, headwordId, prefix] of posChecks) {
+      const token = compiled.paragraphs[pIdx].sentences[sIdx].tokens.find(
+        (t) => t.type === 'annotation' && t.headwordId === headwordId
+      );
+      expect(token).toBeDefined();
+      if (token && token.type === 'annotation') {
+        expect(token.gloss.startsWith(prefix)).toBe(true);
+      }
+    }
+  });
+
   it('短文库前 20 篇全量通过语料体例校验且词目无六级超纲（按 ADR 0004 解除批次固定绑定）', () => {
     const first20 = PASSAGES.slice(0, 20);
     expect(first20).toHaveLength(20);
