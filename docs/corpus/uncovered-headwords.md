@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2285/4692 个非免注核心大纲词目（48.7%），尚有 2407 个待覆盖。
+当前覆盖 2288/4692 个非免注核心大纲词目（48.8%），尚有 2404 个待覆盖。
 
-## 四级词目（1431）
+## 四级词目（1428）
 
 - `able`
 - `abolish`
@@ -174,7 +174,6 @@
 - `bride`
 - `bridegroom`
 - `brilliant`
-- `broke`
 - `broker`
 - `brow`
 - `brunch`
@@ -672,7 +671,6 @@
 - `invariably`
 - `invent`
 - `invisible`
-- `involve`
 - `inward`
 - `irony`
 - `irrational`
@@ -1202,7 +1200,6 @@
 - `span`
 - `sparkle`
 - `specify`
-- `spell`
 - `sphere`
 - `spin`
 - `spit`

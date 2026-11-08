@@ -55,7 +55,7 @@ export const PASSAGE_036: Passage = {
           english:
             'When he articulated strange phrases, his peculiar pronunciation perplexed the volunteer, who struggled to copy the vocabulary into her notebook.',
           chinese:
-            '当他吐露生疏的短语时，其独特的发音令志愿者深感困惑，她费力地将这些方言词汇抄录在笔记本上。',
+            '当他念出生疏的短语时，其独特的发音令志愿者深感困惑，她费力地将这些方言词汇抄录在笔记本上。',
         },
         {
           sentenceNumber: 3,
@@ -126,9 +126,9 @@ export const PASSAGE_036: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'She regarded the oral chronicle not as a dusty relic, but as an indispensable repertoire of cultural heritage.',
+            "She regarded the oral chronicle not as a dusty relic, but as an indispensable part of the village's cultural heritage and repertoire.",
           chinese:
-            '她不仅不把这段口述记事视作布满灰尘的陈旧遗存，反而将其看作文化遗产中不可或缺的宝库。',
+            '她不仅不把这段口述记事视作布满灰尘的陈旧遗存，反而将其看作该村落文化遗产与曲目宝库中不可或缺的一部分。',
         },
         {
           sentenceNumber: 4,
@@ -271,8 +271,8 @@ export const PASSAGE_036: Passage = {
     { headwordId: 'dust', surface: 'dusty', gloss: 'a.蒙灰的；陈旧的' },
     { headwordId: 'relic', gloss: 'n.遗存；遗风；遗物' },
     { headwordId: 'indispensable', gloss: 'a.不可或缺的；必需的' },
-    { headwordId: 'repertoire', gloss: 'n.宝库；技能集；常备篇目' },
     { headwordId: 'heritage', gloss: 'n.遗产；传承' },
+    { headwordId: 'repertoire', gloss: 'n.宝库；技能集；常备篇目' },
     { headwordId: 'heartfelt', gloss: 'a.由衷的；真诚的' },
     { headwordId: 'gratitude', gloss: 'n.感激；感谢' },
     { headwordId: 'offer', surface: 'offered', gloss: 'v.奉献；提供' },

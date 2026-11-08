@@ -98,9 +98,9 @@ export const PASSAGE_031: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'The team also reminded peers that sound ethics in journalism demand patience and rigorous verification rather than rushing to distort reality for attention.',
+            'The team also reminded peers that sound ethics in journalism demand patience and rigorous verification rather than a rush to distort reality for attention.',
           chinese:
-            '团队还提醒同伴们，健全的新闻伦理需要耐心与严谨核验，而非为了博取关注而急于曲解事实真相。',
+            '团队还提醒同伴们，健全的新闻伦理需要耐心与严谨核验，而非为了博取关注而仓促曲解事实真相。',
         },
         {
           sentenceNumber: 3,
@@ -290,7 +290,7 @@ export const PASSAGE_031: Passage = {
     { headwordId: 'journalism', gloss: 'n.新闻业；新闻学' },
     { headwordId: 'demand', gloss: 'v.要求；需要；苛求' },
     { headwordId: 'patient¹', surface: 'patience', gloss: 'n.耐心；耐性；恒心' },
-    { headwordId: 'rush', surface: 'rushing', gloss: 'v.匆忙；仓促行动；急于' },
+    { headwordId: 'rush', surface: 'rush', gloss: 'n.仓促；急切；匆忙' },
     { headwordId: 'distort', gloss: 'v.曲解；扭曲；歪曲' },
     {
       headwordId: 'real',

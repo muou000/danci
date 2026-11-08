@@ -27,7 +27,7 @@ export const PASSAGE_006: Passage = {
         },
         {
           "sentenceNumber": 4,
-          "english": "By forming consistent saving habits and depositing money into a secure account, one builds vital financial defense.",
+          "english": "By forming consistent saving habits and depositing money into a secure account, one builds a vital financial defense.",
           "chinese": "通过养成持之以恒的储蓄习惯并将钱存入安全账户，个人能够建立起至关重要的财务防线。"
         }
       ]
@@ -42,7 +42,7 @@ export const PASSAGE_006: Passage = {
         },
         {
           "sentenceNumber": 2,
-          "english": "Consumers should exercise cautious judgment, seek genuine bargains, and compare actual value, rather than chasing superficial commercial rewards.",
+          "english": "Consumers should exercise cautious judgment, seek genuine bargains, and compare actual value, rather than chase superficial commercial rewards.",
           "chinese": "消费者应当保持谨慎的判断，寻找真正划算的商品并对比实际价值，而不是盲目追逐表面的商业奖励。"
         },
         {
@@ -399,7 +399,6 @@ export const PASSAGE_006: Passage = {
     },
     {
       "headwordId": "chase",
-      "surface": "chasing",
       "gloss": "v.追逐；追求"
     },
     {

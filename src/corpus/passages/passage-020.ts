@@ -20,16 +20,16 @@ export const PASSAGE_020: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'Many busy professionals confront irregular diet and excessive screen hours, creating persistent health deficits that curb daily vitality.',
+            'Many busy professionals confront an irregular diet and excessive screen hours, creating persistent health deficits that curb daily vitality.',
           chinese:
             '许多忙碌的职场人士面临不规律的饮食和过长的屏幕时间，造成削弱日常活力的持续健康亏空。',
         },
         {
           sentenceNumber: 3,
           english:
-            'Medical experts warn that when individuals ignore warning signs such as feeling dizzy, digestive disorders, or severe stress, bodily functions begin to deteriorate.',
+            'Medical experts warn that when individuals ignore warning signs such as dizzy spells, digestive disorders, or severe stress, bodily functions begin to deteriorate.',
           chinese:
-            '医学专家警告，当个人忽视诸如头晕、消化失调或严重压力等预警信号时，身体机能便开始恶化。',
+            '医学专家警告，当个人忽视诸如头晕阵发、消化失调或严重压力等预警信号时，身体机能便开始恶化。',
         },
         {
           sentenceNumber: 4,
@@ -147,8 +147,8 @@ export const PASSAGE_020: Passage = {
     { headwordId: 'individual', surface: 'individuals', gloss: 'n.个人；个体' },
     { headwordId: 'ignore', surface: 'ignore', gloss: 'v.忽视；不理睬' },
     { headwordId: 'sign', surface: 'signs', gloss: 'n.信号；迹象' },
-    { headwordId: 'feel', surface: 'feeling', gloss: 'v.感觉；觉得' },
     { headwordId: 'dizzy', surface: 'dizzy', gloss: 'a.头晕目眩的；眩晕的' },
+    { headwordId: 'spell', surface: 'spells', gloss: 'n.一段时间；一阵；发作' },
     { headwordId: 'digest', surface: 'digestive', gloss: 'a.消化的；助消化的' },
     { headwordId: 'disorder', surface: 'disorders', gloss: 'n.失调；疾病' },
     { headwordId: 'severe', surface: 'severe', gloss: 'a.严重的；严厉的' },

@@ -17,8 +17,8 @@ export const PASSAGE_003: Passage = {
         },
         {
           "sentenceNumber": 2,
-          "english": "The survey team faced extreme climate conditions, where thin air sharply reduced available oxygen, while harsh wind and midnight frost drained their strength.",
-          "chinese": "勘测队面临着极端的气候条件，那里稀薄的空气急剧减少了可用的氧气，而凛冽的寒风与午夜的霜冻消耗着他们的体力。"
+          "english": "The survey team faced extreme climate conditions, where thin air sharply reduced available oxygen, while harsh cold and midnight frost drained their strength.",
+          "chinese": "勘测队面临着极端的气候条件，那里稀薄的空气急剧减少了可用的氧气，而严酷的寒冷与午夜的霜冻消耗着他们的体力。"
         },
         {
           "sentenceNumber": 3,
@@ -27,8 +27,8 @@ export const PASSAGE_003: Passage = {
         },
         {
           "sentenceNumber": 4,
-          "english": "Before stepping onto narrow rocky paths, they prepared a light metal ladder to cross deep cracks between towering cliffs.",
-          "chinese": "在踏上狭窄的岩石小径之前，他们准备了一架轻便的金属梯子，以跨越耸立悬崖之间的深裂隙。"
+          "english": "Before stepping onto narrow rocky paths that wind between towering cliffs, they prepared a light metal ladder to cross deep cracks.",
+          "chinese": "在踏上蜿蜒在耸立悬崖之间的狭窄岩石小径之前，他们准备了一架轻便的金属梯子，以跨越深裂隙。"
         }
       ]
     },
@@ -163,11 +163,6 @@ export const PASSAGE_003: Passage = {
       "gloss": "a.严酷的；恶劣的"
     },
     {
-      "headwordId": "wind²",
-      "surface": "wind",
-      "gloss": "n.风；气流"
-    },
-    {
       "headwordId": "frost",
       "gloss": "n.霜冻；严寒"
     },
@@ -247,6 +242,11 @@ export const PASSAGE_003: Passage = {
       "headwordId": "path",
       "surface": "paths",
       "gloss": "n.小径；道路"
+    },
+    {
+      "headwordId": "wind²",
+      "surface": "wind",
+      "gloss": "v.蜿蜒；缠绕；迂回"
     },
     {
       "headwordId": "prepare",

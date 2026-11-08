@@ -27,7 +27,7 @@ export const PASSAGE_023: Passage = {
           english:
             'Carriages on the railway halt until morning, leaving passengers to wait near the highway without a punctual coach to their destination.',
           chinese:
-            '铁道上的车厢停运至清晨，乘客只能在公路旁等候，没有准时的大客车将他们送往目的地。',
+            '铁道上的列车停运至清晨，乘客只能在公路旁等候，没有准时的大客车将他们送往目的地。',
         },
       ],
     },

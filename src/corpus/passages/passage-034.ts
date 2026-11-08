@@ -15,7 +15,7 @@ export const PASSAGE_034: Passage = {
           english:
             'Missing formal schooling in youth, an adult felt ashamed and intimidated whenever complex text confronted him and made him stumble.',
           chinese:
-            '早年在青年时期错失正规学业，一名成年人每当面对复杂的文字让他磕绊时，便深感羞愧与畏怯。',
+            '由于早年错失正规教育，一名成年人每当面对令他难以通读的复杂文本时，便深感羞愧与胆怯。',
         },
         {
           sentenceNumber: 2,
@@ -36,7 +36,7 @@ export const PASSAGE_034: Passage = {
           english:
             'Because civic funds covered full tuition without fees, financial worries did not deter his resolve to study.',
           chinese:
-            '由于市政资金支付了全部学费且无需缴费，经济上的顾虑并未阻碍他求学的坚定决心。',
+            '由于市政资金承担了全部学费并免收各项杂费，经济上的顾虑并未动摇他求学的坚定决心。',
         },
       ],
     },
@@ -119,7 +119,7 @@ export const PASSAGE_034: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'Equipping him with credentials, this milestone proved second chances can illuminate minds and transform life.',
+            'This milestone equipped him with credentials, proving that second chances can illuminate minds and transform lives.',
           chinese:
             '这一赋予他资质证书的里程碑证明，第二次机会能够照亮心灵并彻底改变人生。',
         },
@@ -223,7 +223,7 @@ export const PASSAGE_034: Passage = {
     { headwordId: 'guide', surface: 'guidance', gloss: 'n.指导；指引' },
     { headwordId: 'alongside', gloss: 'prep.在…旁边；与…一起' },
     { headwordId: 'classmate', surface: 'classmates', gloss: 'n.同班同学；同学' },
-    { headwordId: 'base', surface: 'basic', gloss: 'a.基础的；基本的' },
+    { headwordId: 'basic', gloss: 'a.基础的；基本的' },
     { headwordId: 'exercise', surface: 'exercises', gloss: 'n.练习；演习' },
     { headwordId: 'draft', surface: 'drafted', gloss: 'v.起草；拟写' },
     { headwordId: 'essay', gloss: 'n.短文；小品文；散文' },
@@ -306,10 +306,10 @@ export const PASSAGE_034: Passage = {
     { headwordId: 'success', surface: 'successfully', gloss: 'ad.成功地；圆满地' },
     { headwordId: 'earn', surface: 'earned', gloss: 'v.获得；赚得' },
     { headwordId: 'diploma', gloss: 'n.文凭；毕业证书' },
-    { headwordId: 'equip', surface: 'Equipping', gloss: 'v.赋予；装备' },
-    { headwordId: 'credential', surface: 'credentials', gloss: 'n.凭证；证书' },
     { headwordId: 'milestone', gloss: 'n.里程碑；重要关口' },
-    { headwordId: 'prove', surface: 'proved', gloss: 'v.证明；证实' },
+    { headwordId: 'equip', surface: 'equipped', gloss: 'v.赋予；装备' },
+    { headwordId: 'credential', surface: 'credentials', gloss: 'n.凭证；证书' },
+    { headwordId: 'prove', surface: 'proving', gloss: 'v.证明；证实' },
     { headwordId: 'chance', surface: 'chances', gloss: 'n.机会；机遇' },
     { headwordId: 'illuminate', gloss: 'v.照亮；启迪' },
     { headwordId: 'transform', gloss: 'v.改变；转化' },

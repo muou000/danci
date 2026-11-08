@@ -15,7 +15,7 @@ export const PASSAGE_018: Passage = {
           english:
             'Across continents, global corporations establish governing councils to coordinate commercial activities and observe international conventions.',
           chinese:
-            '在大洲之间，跨国企业建立治理委员会以协调商业活动并遵循国际公约。',
+            '遍及各大洲，全球跨国企业建立治理委员会以协调商业活动并遵循国际公约。',
         },
         {
           sentenceNumber: 2,
@@ -46,7 +46,7 @@ export const PASSAGE_018: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'When sudden market fluctuations threaten quarterly revenue, responsible executives take prompt measures to cope with commercial controversies rather than adopting secretive approaches.',
+            'When sudden market fluctuations threaten quarterly revenue, responsible executives take prompt measures to cope with commercial controversies rather than adopt secretive approaches.',
           chinese:
             '当突发市场波动威胁季度收益时，负责任的高管采取果断措施妥善应对商业争议，而非采取隐秘手段。',
         },
@@ -86,7 +86,7 @@ export const PASSAGE_018: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'When committed employees actively contribute to a culture of compliance and mutual trust, the entire enterprise secures lasting commercial reputation and flourishes in a competitive global economy.',
+            'When committed employees actively contribute to a culture of compliance and mutual trust, the entire enterprise secures a lasting commercial reputation and flourishes in a competitive global economy.',
           chinese:
             '当尽责员工积极为合规文化与相互信任做出贡献时，整个企业就能赢得持久的商业声誉，并在充满竞争的全球经济中繁荣发展。',
         },
@@ -167,7 +167,7 @@ export const PASSAGE_018: Passage = {
     { headwordId: 'measure', surface: 'measures', gloss: 'n.措施；手段' },
     { headwordId: 'cope', surface: 'cope', gloss: 'v.应对；处理' },
     { headwordId: 'controversy', surface: 'controversies', gloss: 'n.争议；纠纷' },
-    { headwordId: 'adopt', surface: 'adopting', gloss: 'v.采取；采纳' },
+    { headwordId: 'adopt', surface: 'adopt', gloss: 'v.采取；采纳' },
     { headwordId: 'secret', surface: 'secretive', gloss: 'a.隐秘的；保密的' },
     { headwordId: 'approach', surface: 'approaches', gloss: 'n.方式；途径' },
 

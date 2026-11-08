@@ -34,9 +34,9 @@ export const PASSAGE_037: Passage = {
         {
           sentenceNumber: 4,
           english:
-            'Facing grave charges, the uneasy cashier was summoned to court, paying bail rather than waiting in jail.',
+            'Facing grave charges, the uneasy cashier was summoned to court and paid bail rather than waiting in jail.',
           chinese:
-            '面临严重指控，这位心神不安的出纳员被传唤到庭，他缴纳了保释金，而非在看守所中等待。',
+            '面临严重指控，这位心神不安的出纳员被传唤到庭，并缴纳了保释金，而非在看守所中等待。',
         },
       ],
     },
@@ -79,9 +79,9 @@ export const PASSAGE_037: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Taking an oath before the bar, a bystander agreed to swear truthfully during intense interrogation.',
+            'Coming before the bar, a bystander agreed to swear an oath truthfully during intense interrogation.',
           chinese:
-            '在法庭栏杆前进行宣誓，一位旁观者同意在严谨的质询中如实发誓。',
+            '来到法庭席前，一位旁观见证者同意庄严宣誓，在严谨的质询中如实作证。',
         },
         {
           sentenceNumber: 2,
@@ -119,23 +119,23 @@ export const PASSAGE_037: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'Refusing to convict on vague suspicion, they dismissed the suit and accepted his plea of innocence.',
+            'Refusing to convict on vague suspicion, the court dismissed the suit and accepted his plea of innocence.',
           chinese:
-            '拒绝依据含糊的怀疑定罪，他们驳回了起诉，并接受了他坚称自己清白的抗辩。',
+            '由于拒绝依据含糊的嫌疑定罪，法庭驳回了起诉，并支持了他坚称清白的抗辩。',
         },
         {
           sentenceNumber: 3,
           english:
             'Although the decree brought relief and eased sorrow, this outcome did not prove flawless management.',
           chinese:
-            '尽管这项裁定带来了宽慰并减轻了悲伤，但这一结果并未证明管理工作完美无瑕。',
+            '尽管这项司法裁定带来了宽慰并减轻了悲伤，但这一结果并未证明管理工作完美无瑕。',
         },
         {
           sentenceNumber: 4,
           english:
-            'Instead, the lawsuit proved that just proceedings and fair clearance must discharge citizens when evidence cannot warrant imprisonment.',
+            'Instead, the lawsuit proved that just proceedings must give fair clearance and discharge citizens when evidence cannot warrant imprisonment.',
           chinese:
-            '相反，这场诉讼证明，只要证据无法证明监禁具有正当性，公正的程序与正当的证明就必须还公民以自由。',
+            '相反，这场诉讼证明，当证据无法支持监禁时，公正的诉讼程序就必须给予公正的清白证明并还公民以自由。',
         },
       ],
     },
@@ -164,7 +164,6 @@ export const PASSAGE_037: Passage = {
     { headwordId: 'rumor', surface: 'Rumors', gloss: 'n.流言；谣言' },
     { headwordId: 'claim', surface: 'claimed', gloss: 'v.声称；主张' },
     { headwordId: 'forge', surface: 'forged', gloss: 'v.伪造；假造' },
-    { headwordId: 'bank²', surface: 'bank', gloss: 'a.银行的；库的' },
     { headwordId: 'check²', surface: 'check', gloss: 'n.支票；账单' },
     { headwordId: 'donate', surface: 'donations', gloss: 'n.捐款；捐赠物' },
     { headwordId: 'grave', gloss: 'a.严重的；庄重的' },
@@ -173,7 +172,7 @@ export const PASSAGE_037: Passage = {
     { headwordId: 'cashier', gloss: 'n.出纳员；出纳' },
     { headwordId: 'summon', surface: 'summoned', gloss: 'v.传唤；传讯' },
     { headwordId: 'court¹', surface: 'court', gloss: 'n.法庭；法院' },
-    { headwordId: 'pay', surface: 'paying', gloss: 'v.支付；缴纳' },
+    { headwordId: 'pay', surface: 'paid', gloss: 'v.支付；缴纳' },
     { headwordId: 'bail', gloss: 'n.保释金；保释' },
     { headwordId: 'wait', surface: 'waiting', gloss: 'v.等待；候审' },
     { headwordId: 'jail', gloss: 'n.看守所；监狱' },
@@ -216,11 +215,11 @@ export const PASSAGE_037: Passage = {
     { headwordId: 'reside', surface: 'residents', gloss: 'n.居民；住户' },
 
     // Paragraph 3
-    { headwordId: 'oath', gloss: 'n.誓言；誓约' },
     { headwordId: 'bar', gloss: 'n.法庭栏杆；律师界' },
     { headwordId: 'bystander', gloss: 'n.旁观者；见证人' },
     { headwordId: 'agree', surface: 'agreed', gloss: 'v.同意；赞成' },
     { headwordId: 'swear', gloss: 'v.发誓；宣誓' },
+    { headwordId: 'oath', gloss: 'n.誓言；誓约' },
     { headwordId: 'truth', surface: 'truthfully', gloss: 'ad.如实地；真实地' },
     { headwordId: 'intense', gloss: 'a.严苛的；强烈的' },
     { headwordId: 'interrogate', surface: 'interrogation', gloss: 'n.审讯；质问' },

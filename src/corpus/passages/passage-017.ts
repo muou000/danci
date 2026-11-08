@@ -22,7 +22,7 @@ export const PASSAGE_017: Passage = {
           english:
             'When modern communities confront complex moral controversies and social conflicts, conscientious leaders consult historical wisdom to consolidate public consensus.',
           chinese:
-            '当现代社区面临复杂的道德争议与社会冲突时，有良知的领导者咨询历史智慧以凝聚公众共识。',
+            '当现代社区面临复杂的道德争议与社会冲突时，有良知的领导者借鉴历史智慧以凝聚公众共识。',
         },
         {
           sentenceNumber: 3,

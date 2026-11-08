@@ -52,9 +52,9 @@ export const PASSAGE_024: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'Addressing the crowd, the mayor reviews the agenda: paying for cords, wires, and plugs requires a modest sum from a local tax and a regional grant, along with a building permit.',
+            'Addressing the crowd, the mayor reviews the agenda: paying for cords, wires, and plugs requires a modest sum from a local tax and a regional grant, and the work requires a building permit.',
           chinese:
-            '市长向人群讲话并审议了议程：添置电线、导线和插头需要一笔来自地方税款和地区拨款的适度资金，以及一份施工许可证。',
+            '市长向在场群众说明了规划方案：购置电源线、导线和插头需要一笔来自地方税款与地区拨款的适度资金，而且施工改造还需要一份施工许可证。',
         },
         {
           sentenceNumber: 4,

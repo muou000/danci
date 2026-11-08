@@ -22,7 +22,7 @@ export const PASSAGE_033: Passage = {
           english:
             'The instructor opened the lecture by introducing basic principles of economics, explaining that national economies experience natural cycles rather than perpetual upward growth.',
           chinese:
-            '讲师以讲座介绍经济学基本原理开场，解释称国民经济体都会经历自然的周期波动，而非永无止境的单向持续增长。',
+            '讲师首先介绍了经济学基本原理，以此拉开讲座序幕，他解释称国民经济体都会经历自然的周期波动，而非永无止境的单向持续增长。',
         },
         {
           sentenceNumber: 3,
@@ -105,9 +105,9 @@ export const PASSAGE_033: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'In conclusion, the speaker emphasized that establishing genuine long-term wealth offers no easy magic formula or pyramid scheme.',
+            'In conclusion, the speaker emphasized that establishing genuine long-term wealth involves no easy magic formula or pyramid scheme.',
           chinese:
-            '最后，演讲者强调，建立真正的长期财富绝无轻松的神奇公式或金字塔骗局。',
+            '最后，演讲者强调，建立真正的长期财富绝不涉及任何轻松的神奇公式或金字塔骗局。',
         },
         {
           sentenceNumber: 2,
@@ -236,7 +236,7 @@ export const PASSAGE_033: Passage = {
     { headwordId: 'prompt', surface: 'prompting', gloss: 'v.促使；推动' },
     { headwordId: 'stock', gloss: 'a.股票的；现存的' },
     { headwordId: 'surge', gloss: 'v.急剧上升；激增' },
-    { headwordId: 'inflate', gloss: 'v.使膨胀；鼓吹；充气' },
+    { headwordId: 'inflate', surface: 'inflate', gloss: 'v.使膨胀；鼓吹；充气' },
     { headwordId: 'optimism', gloss: 'n.乐观；乐观情绪' },
     { headwordId: 'blind', gloss: 'a.盲目的；视而不见的' },
     { headwordId: 'conceal', surface: 'conceals', gloss: 'v.掩盖；隐藏' },
@@ -373,7 +373,7 @@ export const PASSAGE_033: Passage = {
     },
     { headwordId: 'genuine', gloss: 'a.真正的；名副其实的' },
     { headwordId: 'term', surface: 'long-term', gloss: 'a.长期的；长远的' },
-    { headwordId: 'offer', surface: 'offers', gloss: 'v.提供；给予' },
+    { headwordId: 'involve', surface: 'involves', gloss: 'v.包含；涉及；需要' },
     { headwordId: 'easy', gloss: 'a.容易的；轻松的' },
     { headwordId: 'magic', gloss: 'a.神奇的；有魔力的' },
     { headwordId: 'formula', gloss: 'n.公式；方案' },
@@ -388,8 +388,7 @@ export const PASSAGE_033: Passage = {
     { headwordId: 'trend', surface: 'trends', gloss: 'n.趋势；行情；走向' },
     {
       headwordId: 'guarantee',
-      surface: 'guarantees',
-      gloss: 'v.保证；确保',
+      gloss: 'v.保证；担保；保修',
     },
     { headwordId: 'prosper', surface: 'prosperity', gloss: 'n.繁荣；富裕' },
     { headwordId: 'risk', gloss: 'n.风险；危险' },

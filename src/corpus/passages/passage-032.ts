@@ -79,7 +79,7 @@ export const PASSAGE_032: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'With a certified polytechnic institute, instructors coached senior mechanics to program sensors, inspect cylinder valves, and supervise robotic machinery.',
+            'In partnership with a certified polytechnic institute, instructors coached senior mechanics to program sensors, inspect cylinder valves, and supervise robotic machinery.',
           chinese:
             '通过与一所经资质认证的理工学院合作，指导教师辅导资深机械工学习为传感器编程、检查气缸阀门并监督机器人机械运转。',
         },
@@ -98,7 +98,7 @@ export const PASSAGE_032: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Several experienced operatives preferred to resign voluntarily to pursue a fresh vocation or start another occupation, ensuring that labor surplus did not diminish morale.',
+            'Several experienced operatives preferred to resign voluntarily to pursue a fresh vocation or start another occupation, ensuring that a labor surplus did not diminish morale.',
           chinese:
             '几位经验丰富的技工更愿意主动辞职去追求全新的职业或开辟另一种行当，确保劳动力富余不会挫伤整体士气。',
         },
@@ -112,7 +112,7 @@ export const PASSAGE_032: Passage = {
         {
           sentenceNumber: 3,
           english:
-            'As factory output climbed without human casualty, genuine optimism replaced initial dread, proving that industrial progress can respect human dignity.',
+            'As factory output climbed without human casualties, genuine optimism replaced initial dread, proving that industrial progress can respect human dignity.',
           chinese:
             '随着工厂产量在未造成人员牺牲的情况下稳步上升，真正的乐观情绪取代了最初的恐惧，证明了工业进步完全可以尊重人的尊严。',
         },
@@ -283,6 +283,11 @@ export const PASSAGE_032: Passage = {
     { headwordId: 'modern', gloss: 'a.现代的；近代的' },
     { headwordId: 'industry', surface: 'industrial', gloss: 'a.工业的；产业的' },
     { headwordId: 'role', surface: 'roles', gloss: 'n.角色；职务；岗位' },
+    {
+      headwordId: 'partner',
+      surface: 'partnership',
+      gloss: 'n.合作关系；合作；合伙',
+    },
     { headwordId: 'certify', surface: 'certified', gloss: 'a.经认证的；合格的' },
     {
       headwordId: 'polytechnic',
@@ -385,7 +390,7 @@ export const PASSAGE_032: Passage = {
     },
     { headwordId: 'output', gloss: 'n.产量；输出' },
     { headwordId: 'climb', surface: 'climbed', gloss: 'v.上升；攀升' },
-    { headwordId: 'casualty', gloss: 'n.伤亡；牺牲者' },
+    { headwordId: 'casualty', surface: 'casualties', gloss: 'n.伤亡；牺牲者' },
     { headwordId: 'genuine', gloss: 'a.真正的；真实的' },
     { headwordId: 'optimism', gloss: 'n.乐观；乐观主义' },
     { headwordId: 'replace', surface: 'replaced', gloss: 'v.取代；代替' },

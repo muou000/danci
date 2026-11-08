@@ -53,7 +53,7 @@ export const PASSAGE_001: Passage = {
           {
             "sentenceNumber": 4,
             "english": "When professors acknowledge student contributions, they guide young researchers through difficult challenges and achieve meaningful breakthroughs.",
-            "chinese": "当教授认可学生的贡献并指导年轻学者应对艰难挑战时，他们能够取得有意义的重大突破。"
+            "chinese": "当教授认可学生的贡献时，他们会指引青年学者攻克重重难关，并取得有意义的重大突破。"
           }
         ]
       },
@@ -77,8 +77,8 @@ export const PASSAGE_001: Passage = {
           },
           {
             "sentenceNumber": 4,
-            "english": "Ultimately, these exchange programs strengthen ties between universities, promote mutual trust, and inspire academic innovation.",
-            "chinese": "最终，这些交流项目加强了大学之间的纽带，促进了相互信任，并激励学术创新。"
+            "english": "Ultimately, these exchange programs strengthen ties between universities, promote a broad base of mutual trust, and inspire academic innovation.",
+            "chinese": "最终，这些交流项目加强了大学之间的纽带，促进了相互信任的深厚基础，并激励学术创新。"
           }
         ]
       }
@@ -542,6 +542,10 @@ export const PASSAGE_001: Passage = {
       {
         "headwordId": "promote",
         "gloss": "v.促进；提升"
+      },
+      {
+        "headwordId": "base",
+        "gloss": "n.基础；根据；基地"
       },
       {
         "headwordId": "mutual",

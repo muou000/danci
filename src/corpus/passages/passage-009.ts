@@ -77,7 +77,7 @@ export const PASSAGE_009: Passage = {
         },
         {
           "sentenceNumber": 4,
-          "english": "This flourishing enterprise demonstrates that honoring tradition can stimulate rural economy and secure a bright future for the entire valley.",
+          "english": "This flourishing enterprise demonstrates that honoring tradition can stimulate the rural economy and secure a bright future for the entire valley.",
           "chinese": "这个欣欣向荣的企业证明，传承传统能够激发乡村经济活力，并为整个山谷带来光明的未来。"
         }
       ]

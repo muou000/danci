@@ -177,7 +177,6 @@ export const PASSAGE_030: Passage = {
     { headwordId: 'beneath', gloss: 'prep.在…下方；在…下面' },
     { headwordId: 'waterproof', gloss: 'a.防水的；不透水的' },
     { headwordId: 'raincoat', gloss: 'n.雨衣；防水外套' },
-    { headwordId: 'lead²', surface: 'leader', gloss: 'n.领队；领导者' },
     { headwordId: 'examine', surface: 'examined', gloss: 'v.检查；细查；审视' },
     { headwordId: 'steep', gloss: 'a.陡峭的；险峻的' },
     { headwordId: 'terrain', gloss: 'n.地形；地势' },

@@ -175,6 +175,7 @@ export const PASSAGE_011: Passage = {
     { headwordId: 'strong', surface: 'strong', gloss: 'a.强壮的；坚固的' },
     { headwordId: 'cable', surface: 'cables', gloss: 'n.缆绳；钢索；电缆' },
     { headwordId: 'assemble', surface: 'assembled', gloss: 'v.聚集；集合；装配' },
+    { headwordId: 'bank²', gloss: 'n.岸；堤岸；水畔' },
     { headwordId: 'demand', surface: 'demanding', gloss: 'a.要求高的；费力的' },
     { headwordId: 'task', surface: 'task', gloss: 'n.任务；工作；差事' },
 

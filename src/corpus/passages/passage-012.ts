@@ -48,7 +48,7 @@ export const PASSAGE_012: Passage = {
           english:
             'Handled with extreme care, sealed boxes are loaded onto electric carts, secured with tight straps, and transferred swiftly into chilled cargo vans.',
           chinese:
-            '经过极其细致的照料，密封的箱子被装上电动推车，用紧固带固定，并迅速转运至冷藏货运厢式车内。',
+            '经过格外小心轻放的搬运，密封的箱子被装上电动推车，用紧固带固定，并迅速转运至冷藏货运厢式车内。',
         },
         {
           sentenceNumber: 3,
@@ -72,7 +72,7 @@ export const PASSAGE_012: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Through an updated digital produce catalog, the cooperative directly caters fresh organic food to university canteens and municipal supermarket networks.',
+            'Through an updated digital produce catalog, the cooperative directly caters to university canteens and municipal supermarket networks with fresh organic food.',
           chinese:
             '借助更新的数字化农产品目录，合作社直接向大学食堂和市政超市网络供应新鲜有机食品。',
         },
@@ -211,10 +211,10 @@ export const PASSAGE_012: Passage = {
     { headwordId: 'catalog', surface: 'catalog', gloss: 'n.目录；手册' },
     { headwordId: 'direct', surface: 'directly', gloss: 'ad.直接地；直率地' },
     { headwordId: 'cater', surface: 'caters', gloss: 'v.供应伙食；迎合' },
-    { headwordId: 'organic', surface: 'organic', gloss: 'a.有机的；器官的' },
     { headwordId: 'canteen', surface: 'canteens', gloss: 'n.食堂；小卖部' },
     { headwordId: 'municipal', surface: 'municipal', gloss: 'a.市政的；地方自治的' },
     { headwordId: 'network', surface: 'networks', gloss: 'n.网络；网状系统' },
+    { headwordId: 'organic', surface: 'organic', gloss: 'a.有机的；器官的' },
 
     // Paragraph 3, Sentence 2
     { headwordId: 'supply', surface: 'Supplying', gloss: 'v.供应；提供；补充' },

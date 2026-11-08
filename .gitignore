@@ -9,3 +9,6 @@ src/generated/
 *.xlsx
 大学英语*.pdf
 
+# Agent artifacts
+.agents/teamwork/
+

@@ -46,16 +46,16 @@ export const PASSAGE_035: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Alerted to the nuisance, the landlord dispatched a technician to the premises rather than acting negligent.',
+            'Alerted to the nuisance, the landlord dispatched a technician to the premises rather than acting negligently.',
           chinese:
             '接到有关这桩麻烦事的通报后，房东迅速派遣一名技术工赶往现场房屋，而没有怠忽职守。',
         },
         {
           sentenceNumber: 2,
           english:
-            'The technician shut the main tap to halt the flood, inspecting rusty pipes in the basement and adjacent flats.',
+            'The technician shut the main tap to halt the flood, inspecting rusty lead pipes in the basement and adjacent flats.',
           chinese:
-            '技术工关掉主水龙头以制止水流泛滥，并仔细检查了地下室和邻近公寓套房里的生锈管道。',
+            '技术工关掉主水龙头以制止水流泛滥，并仔细检查了地下室和邻近公寓套房里的生锈铅管。',
         },
         {
           sentenceNumber: 3,
@@ -67,9 +67,9 @@ export const PASSAGE_035: Passage = {
         {
           sentenceNumber: 4,
           english:
-            'Workers replaced a damaged hose, cleared a clog in the sink, and tightened loose joints.',
+            'Workers fixed a pipe break, replaced a damaged hose, cleared a clog in the sink, and tightened loose joints.',
           chinese:
-            '工人们更换了破损的软管，清除了水槽中的堵塞物，并拧紧了松动的接头。',
+            '工人们修复了管道破裂处，更换了破损的软管，清除了水槽中的堵塞物，并拧紧了松动的接头。',
         },
       ],
     },
@@ -79,16 +79,16 @@ export const PASSAGE_035: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Because repairs suspended running water, maintaining basic sanitation challenged families who occupy the building.',
+            'Because repairs suspended running water, maintaining basic sanitation challenged families who occupied the building.',
           chinese:
             '由于抢修暂停了自来水供应，维持基本卫生条件使居住在该楼里的各个家庭面临挑战。',
         },
         {
           sentenceNumber: 2,
           english:
-            'To assist residents during the interim duration, the landlord supplied bottled water and buckets for domestic needs.',
+            'To assist residents during the interim and for the duration of repairs, the landlord supplied bottled water and buckets for domestic needs.',
           chinese:
-            '为了在过渡期内帮助居民，房东提供了瓶装水以及用于日常家务需求的水桶。',
+            '为了在过渡期间以及维修期间协助居民，房东提供了瓶装水以及用于日常家务需求的水桶。',
         },
         {
           sentenceNumber: 3,
@@ -189,7 +189,7 @@ export const PASSAGE_035: Passage = {
     { headwordId: 'technical', surface: 'technician', gloss: 'n.技术员；技师' },
     { headwordId: 'premise', surface: 'premises', gloss: 'n.房屋；物业处所' },
     { headwordId: 'act', surface: 'acting', gloss: 'v.表现；行事；行动' },
-    { headwordId: 'negligent', gloss: 'a.疏忽的；玩忽职守的' },
+    { headwordId: 'negligent', surface: 'negligently', gloss: 'ad.疏忽地；怠慢地；不注意地' },
     { headwordId: 'shut', gloss: 'v.关闭；关上' },
     { headwordId: 'main', gloss: 'a.主要的；最重要的' },
     { headwordId: 'tap', gloss: 'n.水龙头；旋塞' },
@@ -197,6 +197,7 @@ export const PASSAGE_035: Passage = {
     { headwordId: 'flood', gloss: 'n.水灾；洪水' },
     { headwordId: 'inspect', surface: 'inspecting', gloss: 'v.检查；查看' },
     { headwordId: 'rust', surface: 'rusty', gloss: 'a.生锈的；腐蚀的' },
+    { headwordId: 'lead²', surface: 'lead', gloss: 'a.铅制的；铅质的' },
     { headwordId: 'pipe', surface: 'pipes', gloss: 'n.管子；管道' },
     { headwordId: 'basement', gloss: 'n.地下室；地窖' },
     { headwordId: 'adjacent', gloss: 'a.邻近的；毗连的' },
@@ -210,6 +211,8 @@ export const PASSAGE_035: Passage = {
     { headwordId: 'insulate', gloss: 'v.使绝热；使隔音' },
     { headwordId: 'bare', gloss: 'a.裸露的；光秃的' },
     { headwordId: 'tube', surface: 'tubes', gloss: 'n.管道；管子' },
+    { headwordId: 'fix', surface: 'fixed', gloss: 'v.修理；安装；固定' },
+    { headwordId: 'break', gloss: 'n.破裂；裂口；休息' },
     { headwordId: 'replace', surface: 'replaced', gloss: 'v.更换；替换' },
     { headwordId: 'damage', surface: 'damaged', gloss: 'a.受损的；毁坏的' },
     { headwordId: 'hose', gloss: 'n.软管；水龙带' },
@@ -225,11 +228,11 @@ export const PASSAGE_035: Passage = {
     { headwordId: 'basic', gloss: 'a.基本的；基础的' },
     { headwordId: 'sanitation', gloss: 'n.环境卫生；卫生设施' },
     { headwordId: 'challenge', surface: 'challenged', gloss: 'v.考验；向…挑战' },
-    { headwordId: 'occupy', gloss: 'v.居住；占有' },
+    { headwordId: 'occupy', surface: 'occupied', gloss: 'v.居住；占有' },
     { headwordId: 'build', surface: 'building', gloss: 'n.建筑物；大楼' },
     { headwordId: 'assist', gloss: 'v.协助；援助' },
     { headwordId: 'reside', surface: 'residents', gloss: 'n.居民；定居者' },
-    { headwordId: 'interim', gloss: 'a.过渡期的；暂时的' },
+    { headwordId: 'interim', gloss: 'n.过渡期；间歇' },
     { headwordId: 'duration', gloss: 'n.持续期间；期间' },
     { headwordId: 'supply', surface: 'supplied', gloss: 'v.供给；提供' },
     { headwordId: 'domestic', gloss: 'a.家庭的；家务的' },

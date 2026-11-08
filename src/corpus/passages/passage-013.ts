@@ -20,9 +20,9 @@ export const PASSAGE_013: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'When manufacturing ceased and decades of neglect brought severe structural decay, facing the threat of structural collapse and permanent ruin, the municipal council stepped in to protect the historic site.',
+            'When manufacturing ceased and decades of neglect brought severe structural decay and the threat of structural collapse and permanent ruin, the municipal council stepped in to protect the historic site.',
           chinese:
-            '当制造业停产、数十年的荒废带来严重的结构破败时，面对结构坍塌与永久损毁的威胁，市政委员会介入保护了这处历史遗存。',
+            '当制造业停产、数十年的荒废带来严重的结构破败以及结构坍塌与永久损毁的威胁时，市政委员会介入保护了这处历史遗存。',
         },
         {
           sentenceNumber: 3,
@@ -79,14 +79,14 @@ export const PASSAGE_013: Passage = {
         {
           sentenceNumber: 2,
           english:
-            'Offering local citizens a rare chance to explore craft traditions, renovated halls seal out the winter chill and avoid excessive heating waste.',
+            'While renovated halls seal out the winter chill and avoid excessive heating waste, they offer local citizens a rare chance to explore craft traditions.',
           chinese:
-            '翻新后的大厅为当地市民提供了探索传统手工艺的难得机会，隔绝冬日严寒并避免了过度的供暖浪费。',
+            '在翻新后的大厅隔绝冬日严寒并避免过度供暖浪费的同时，它们也为当地市民提供了探索传统手工艺的难得机会。',
         },
         {
           sentenceNumber: 3,
           english:
-            'At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride as local citizens cheer the transformation and celebrate an encouraging new community chapter.',
+            'At the annual regional architecture ceremony, the project was honored as a sustainable urban renewal champion, inspiring deep public pride as local citizens cheered the transformation and celebrated an encouraging new community chapter.',
           chinese:
             '在年度区域建筑典礼上，该项目被表彰为可持续城市更新的典范倡导者，激发了深厚的公众自豪感，当地市民为这一蜕变欢呼喝彩，共同庆祝充满鼓舞的社区新篇章。',
         },
@@ -220,7 +220,13 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'old', surface: 'old', gloss: 'a.老旧的；陈旧的；古老的' },
 
     // Paragraph 3, Sentence 2
-    { headwordId: 'offer', surface: 'Offering', gloss: 'v.提供；给予；提出' },
+    { headwordId: 'hall', surface: 'halls', gloss: 'n.大厅；礼堂；会堂' },
+    { headwordId: 'seal', surface: 'seal', gloss: 'v.封闭；密封；封住' },
+    { headwordId: 'chill', surface: 'chill', gloss: 'n.寒意；寒冷；凛冽' },
+    { headwordId: 'avoid', surface: 'avoid', gloss: 'v.避免；避开；防止' },
+    { headwordId: 'excess', surface: 'excessive', gloss: 'a.过度的；过多的；极度的' },
+    { headwordId: 'waste', surface: 'waste', gloss: 'n.浪费；损耗；废料' },
+    { headwordId: 'offer', surface: 'offer', gloss: 'v.提供；给予；提出' },
     { headwordId: 'local', surface: 'local', gloss: 'a.当地的；地方的；本处的' },
     { headwordId: 'citizen', surface: 'citizens', gloss: 'n.市民；公民；居民' },
     { headwordId: 'rare', surface: 'rare', gloss: 'a.珍贵的；罕见的；稀有的' },
@@ -228,12 +234,6 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'explore', surface: 'explore', gloss: 'v.探索；探求；考察' },
     { headwordId: 'craft', surface: 'craft', gloss: 'a.手工艺的；工艺的' },
     { headwordId: 'tradition', surface: 'traditions', gloss: 'n.传统；惯例；规矩' },
-    { headwordId: 'hall', surface: 'halls', gloss: 'n.大厅；礼堂；会堂' },
-    { headwordId: 'seal', surface: 'seal', gloss: 'v.封闭；密封；封住' },
-    { headwordId: 'chill', surface: 'chill', gloss: 'n.寒意；寒冷；凛冽' },
-    { headwordId: 'avoid', surface: 'avoid', gloss: 'v.避免；避开；防止' },
-    { headwordId: 'excess', surface: 'excessive', gloss: 'a.过度的；过多的；极度的' },
-    { headwordId: 'waste', surface: 'waste', gloss: 'n.浪费；损耗；废料' },
 
     // Paragraph 3, Sentence 3
     { headwordId: 'annual', surface: 'annual', gloss: 'a.年度的；每年的；一年一次的' },
@@ -246,9 +246,9 @@ export const PASSAGE_013: Passage = {
     { headwordId: 'inspire', surface: 'inspiring', gloss: 'v.激发；鼓舞；启示' },
     { headwordId: 'deep', surface: 'deep', gloss: 'a.深厚的；深刻的；深切的' },
     { headwordId: 'pride', surface: 'pride', gloss: 'n.自豪；骄傲；自尊心' },
-    { headwordId: 'cheer', surface: 'cheer', gloss: 'v.欢呼；喝彩；激励' },
+    { headwordId: 'cheer', surface: 'cheered', gloss: 'v.欢呼；喝彩；激励' },
     { headwordId: 'transform', surface: 'transformation', gloss: 'n.转变；改观；蜕变' },
-    { headwordId: 'celebrate', surface: 'celebrate', gloss: 'v.庆祝；赞美；颂扬' },
+    { headwordId: 'celebrate', surface: 'celebrated', gloss: 'v.庆祝；赞美；颂扬' },
     { headwordId: 'encourage', surface: 'encouraging', gloss: 'a.令人鼓舞的；振奋人心的' },
     { headwordId: 'new', surface: 'new', gloss: 'a.崭新的；全新的；新近的' },
     { headwordId: 'community', surface: 'community', gloss: 'n.社区；社会；界' },

@@ -65,7 +65,7 @@ export const PASSAGE_029: Passage = {
         {
           sentenceNumber: 1,
           english:
-            'Early next dawn, the cooks poured the mixture onto a heated pan and added fragrant spice alongside a drop of honey.',
+            'At dawn the next day, the cooks poured the mixture onto a heated pan and added fragrant spice alongside a drop of honey.',
           chinese:
             '次日清晨破晓时分，厨师们将调好的面糊倒入热锅，并在滴入少许蜂蜜的同时撒入芳香的调味香料。',
         },

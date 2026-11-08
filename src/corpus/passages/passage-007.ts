@@ -28,7 +28,7 @@ export const PASSAGE_007: Passage = {
         {
           sentenceNumber: 4,
           english: "Without sufficient protection, rising floods and harsh winds threaten the survival of rare marine creatures and their delicate nesting habitats.",
-          chinese: "如果缺乏足够的保护，不断上涨的洪水与凛冽的风暴会威胁到稀有海洋生物及其脆弱筑巢栖息地的生存。"
+          chinese: "如果缺乏足够的保护，不断上涨的潮水与凛冽的狂风会威胁到珍稀海洋生物及其脆弱筑巢栖息地的生存。"
         }
       ]
     },
@@ -37,7 +37,7 @@ export const PASSAGE_007: Passage = {
       sentences: [
         {
           sentenceNumber: 1,
-          english: "To address these environmental challenges, a scientific team of marine biologists launched an extensive research project.",
+          english: "To address these environmental challenges, a scientific team of marine biologists has launched an extensive research project.",
           chinese: "为了应对这些环境挑战，一支由海洋生物学者组成的科学团队启动了一项广泛的科研项目。"
         },
         {

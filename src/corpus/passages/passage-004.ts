@@ -557,11 +557,6 @@ export const PASSAGE_004: Passage = {
         "gloss": "a.人造的；人工的"
       },
       {
-        "headwordId": "light²",
-        "surface": "lighting",
-        "gloss": "n.照明；灯光；采光"
-      },
-      {
         "headwordId": "air-conditioning",
         "gloss": "n.空调系统；空气调节"
       },

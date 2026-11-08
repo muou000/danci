@@ -1347,7 +1347,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'Transport teams from the regional carrier monitor temperature data'
     );
     expect(passage!.paragraphs[2].sentences[0].english).toContain(
-      'caters fresh organic food to university canteens'
+      'caters to university canteens'
     );
     expect(passage!.paragraphs[2].sentences[2].english).toContain(
       'agricultural career both sustainable and rewarding'
@@ -1462,7 +1462,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'durable brick architecture and a towering chimney'
     );
     expect(passage!.paragraphs[0].sentences[1].english).toContain(
-      'facing the threat of structural collapse and permanent ruin'
+      'the threat of structural collapse and permanent ruin'
     );
     expect(passage!.paragraphs[0].sentences[2].english).toContain(
       'drafted a historic restoration charter'
@@ -1483,7 +1483,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'seal out the winter chill'
     );
     expect(passage!.paragraphs[2].sentences[2].english).toContain(
-      'local citizens cheer the transformation and celebrate an encouraging new community chapter'
+      'local citizens cheered the transformation and celebrated an encouraging new community chapter'
     );
 
     expect(coveredHeadwordIdsIn(compiled)).toContain('century');
@@ -2557,7 +2557,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'creating persistent health deficits that curb daily vitality'
     );
     expect(passage!.paragraphs[0].sentences[2].english).toContain(
-      'feeling dizzy, digestive disorders, or severe stress'
+      'dizzy spells, digestive disorders, or severe stress'
     );
     expect(passage!.paragraphs[0].sentences[3].english).toContain(
       'demonstrate the urgent necessity of defining preventive health habits'
@@ -3733,7 +3733,6 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'wool',
       'thermal',
       'raincoat',
-      'lead²',
       'trace',
       'route',
       'fragrant',
@@ -4151,7 +4150,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'establish',
       'genuine',
       'term',
-      'offer',
+      'involve',
       'easy',
       'magic',
       'formula',
@@ -4308,7 +4307,7 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
       'guide',
       'classmate',
       'alongside',
-      'base',
+      'basic',
       'exercise',
       'essay',
       'calculate',

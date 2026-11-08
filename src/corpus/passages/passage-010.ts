@@ -249,7 +249,6 @@ export const PASSAGE_010: Passage = {
     { headwordId: 'deficit', gloss: 'n.赤字；亏损；逆差' },
     { headwordId: 'monitor', surface: 'monitors', gloss: 'v.监控；监测；监督' },
     { headwordId: 'daily', gloss: 'a.每日的；日常的；按日的' },
-    { headwordId: 'bank²', surface: 'bank', gloss: 'a.银行的；库的' },
     {
       headwordId: 'balance',
       surface: 'balances',
@@ -264,7 +263,7 @@ export const PASSAGE_010: Passage = {
     { headwordId: 'bubble', surface: 'bubbles', gloss: 'n.泡沫；气泡；虚幻繁荣' },
     { headwordId: 'rival', surface: 'rivals', gloss: 'n.竞争对手；敌手' },
     {
-      headwordId: 'break',
+      headwordId: 'broke',
       surface: 'broke',
       gloss: 'a.身无分文的；破产的',
     },
