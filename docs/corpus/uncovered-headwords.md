@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2419/4692 个非免注核心大纲词目（51.6%），尚有 2273 个待覆盖。
+当前覆盖 2471/4692 个非免注核心大纲词目（52.7%），尚有 2221 个待覆盖。
 
-## 四级词目（1360）
+## 四级词目（1332）
 
 - `abolish`
 - `absent`
@@ -57,11 +57,9 @@
 - `apt.`
 - `appoint`
 - `appropriate¹`
-- `approximate`
 - `army`
 - `arrest`
 - `arrow`
-- `ashore`
 - `asleep`
 - `ass`
 - `associate`
@@ -112,7 +110,6 @@
 - `battle`
 - `beam`
 - `beard`
-- `bearing`
 - `beat`
 - `beauty`
 - `bee`
@@ -193,7 +190,6 @@
 - `cage`
 - `calf`
 - `camel`
-- `camp`
 - `can²`
 - `cancer`
 - `candidate`
@@ -282,7 +278,6 @@
 - `darling`
 - `dash`
 - `date²`
-- `daylight`
 - `dead`
 - `deadly`
 - `deaf`
@@ -314,7 +309,6 @@
 - `diabetes`
 - `dial`
 - `diamond`
-- `diary`
 - `dictate`
 - `die`
 - `dime`
@@ -343,7 +337,6 @@
 - `dove`
 - `drag`
 - `dragon`
-- `drift`
 - `dropout`
 - `drown`
 - `drum`
@@ -491,7 +484,6 @@
 - `germ`
 - `ghost`
 - `given`
-- `glimpse`
 - `gloom`
 - `glow`
 - `glue`
@@ -517,7 +509,6 @@
 - `gross`
 - `guess`
 - `guitar`
-- `gulf`
 - `gum`
 - `gun`
 - `gut`
@@ -539,7 +530,6 @@
 - `haul`
 - `haunt`
 - `hay`
-- `haze`
 - `headache`
 - `headmaster`
 - `headquarters`
@@ -626,7 +616,6 @@
 - `intangible`
 - `interfere`
 - `interior`
-- `intermediate`
 - `interrupt`
 - `intimate`
 - `intrude`
@@ -665,7 +654,6 @@
 - `kneel`
 - `knit`
 - `knock`
-- `knot`
 - `knowhow`
 - `lace`
 - `lag`
@@ -726,7 +714,6 @@
 - `maid`
 - `maiden`
 - `mail`
-- `mainland`
 - `mainstream`
 - `makeup`
 - `male`
@@ -849,9 +836,7 @@
 - `outgoing`
 - `outing`
 - `outlook`
-- `outward`
 - `oval`
-- `overcoat`
 - `overdue`
 - `overhear`
 - `overnight`
@@ -888,7 +873,6 @@
 - `peach`
 - `peanut`
 - `pearl`
-- `penetrate`
 - `penny`
 - `pepper`
 - `perfect`
@@ -958,11 +942,9 @@
 - `procession`
 - `prohibit`
 - `project²`
-- `prominent`
 - `pronoun`
 - `proper`
 - `proportion`
-- `prospect`
 - `provided`
 - `provoke`
 - `psychology`
@@ -1005,7 +987,6 @@
 - `refreshment`
 - `refrigerator`
 - `fridge`
-- `register`
 - `regret`
 - `relate`
 - `relax`
@@ -1062,7 +1043,6 @@
 - `scare`
 - `scatter`
 - `scissors`
-- `scout`
 - `scream`
 - `second²`
 - `secondary`
@@ -1111,7 +1091,6 @@
 - `skate`
 - `skeleton`
 - `ski`
-- `skyline`
 - `skyscraper`
 - `slap`
 - `slave`
@@ -1183,7 +1162,6 @@
 - `strain²`
 - `straw`
 - `string`
-- `strip`
 - `stripe`
 - `stroke¹`
 - `stroke²`
@@ -1217,7 +1195,6 @@
 - `swipe`
 - `switch`
 - `sword`
-- `symbol`
 - `tag`
 - `tail`
 - `tailor`
@@ -1236,7 +1213,6 @@
 - `temple`
 - `tense²`
 - `terrific`
-- `territory`
 - `terror`
 - `textile`
 - `thank`
@@ -1321,8 +1297,6 @@
 - `virtual`
 - `virtue`
 - `virus`
-- `visible`
-- `visual`
 - `volleyball`
 - `volt`
 - `wagon`
@@ -1331,10 +1305,8 @@
 - `war`
 - `warfare`
 - `warrior`
-- `watertight`
 - `wax`
 - `weapon`
-- `wear`
 - `webcast`
 - `wed`
 - `weep`
@@ -1367,7 +1339,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（913）
+## 六级星号词目（889）
 
 - `abbreviation`
 - `abnormal`
@@ -1440,7 +1412,6 @@
 - `assortment`
 - `astray`
 - `asylum`
-- `atlas`
 - `atrocity`
 - `auction`
 - `autobiography`
@@ -1451,7 +1422,6 @@
 - `bald`
 - `barge`
 - `barn`
-- `barometer`
 - `barracks`
 - `barren`
 - `bass`
@@ -1468,7 +1438,6 @@
 - `bewilder`
 - `bibliography`
 - `bilateral`
-- `binoculars`
 - `bishop`
 - `blackmail`
 - `blaze`
@@ -1486,7 +1455,6 @@
 - `breach`
 - `brigade`
 - `brink`
-- `brisk`
 - `bronze`
 - `brood`
 - `Buddhism`
@@ -1500,7 +1468,6 @@
 - `cannon`
 - `canoe`
 - `canvas`
-- `cape`
 - `caption`
 - `captive`
 - `caravan`
@@ -1540,7 +1507,6 @@
 - `cockpit`
 - `cocktail`
 - `coconut`
-- `coincide`
 - `collide`
 - `colonel`
 - `comet`
@@ -1674,7 +1640,6 @@
 - `eloquent`
 - `emancipate`
 - `embargo`
-- `embark`
 - `embed`
 - `embody`
 - `embroidery`
@@ -1744,7 +1709,6 @@
 - `fortnight`
 - `franchise`
 - `frantic`
-- `fringe`
 - `frown`
 - `fury`
 - `fuse`
@@ -1763,7 +1727,6 @@
 - `glossary`
 - `gospel`
 - `greed`
-- `grid`
 - `grill`
 - `grim`
 - `groan`
@@ -1772,7 +1735,6 @@
 - `handicraft`
 - `harass`
 - `havoc`
-- `heave`
 - `hectic`
 - `helmet`
 - `hemisphere`
@@ -1859,9 +1821,7 @@
 - `knight`
 - `knob`
 - `lad`
-- `landmark`
 - `lash`
-- `latitude`
 - `layman`
 - `leaflet`
 - `legitimate`
@@ -1880,7 +1840,6 @@
 - `lofty`
 - `logistics`
 - `longevity`
-- `longitude`
 - `loom`
 - `loop`
 - `loot`
@@ -1897,7 +1856,6 @@
 - `malignant`
 - `malpractice`
 - `mandate`
-- `maneuver`
 - `manifest`
 - `mansion`
 - `mar`
@@ -1937,7 +1895,6 @@
 - `multilateral`
 - `multitude`
 - `mute`
-- `navigate`
 - `negligible`
 - `nickname`
 - `nil`
@@ -1945,7 +1902,6 @@
 - `nominal`
 - `nominate`
 - `nonetheless`
-- `noteworthy`
 - `notorious`
 - `notwithstanding`
 - `nurture`
@@ -1998,7 +1954,6 @@
 - `pending`
 - `pendulum`
 - `penguin`
-- `peninsula`
 - `perfume`
 - `permeate`
 - `persecute`
@@ -2030,7 +1985,6 @@
 - `prone`
 - `propaganda`
 - `propagate`
-- `propel`
 - `prototype`
 - `proximate`
 - `psychiatry`
@@ -2155,7 +2109,6 @@
 - `stitch`
 - `stoop`
 - `stout`
-- `strait`
 - `strand`
 - `strangle`
 - `stray`
@@ -2207,9 +2160,7 @@
 - `toil`
 - `topple`
 - `tornado`
-- `tow`
 - `toxic`
-- `tract`
 - `trait`
 - `transcend`
 - `transistor`
@@ -2226,7 +2177,6 @@
 - `tub`
 - `tuck`
 - `tug`
-- `turbulent`
 - `turmoil`
 - `turnout`
 - `turnover`
@@ -2243,7 +2193,6 @@
 - `urine`
 - `vaccine`
 - `vein`
-- `velocity`
 - `velvet`
 - `vent`
 - `verge`
@@ -2262,7 +2211,6 @@
 - `wardrobe`
 - `watt`
 - `wedge`
-- `wharf`
 - `whereabouts`
 - `whereby`
 - `whirl`

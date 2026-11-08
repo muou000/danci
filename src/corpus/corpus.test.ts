@@ -5112,6 +5112,205 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 40 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-040');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('生态环境');
+    expect(passage!.titleEn).toBe(
+      'Coastal Geographic Expedition, Orientation, and Gulf Survey'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #50 规划的核心目标词目
+    for (const targetId of [
+      'peninsula',
+      'strait',
+      'gulf',
+      'mainland',
+      'atlas',
+      'compass',
+      'navigate',
+      'latitude',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合沿海考察、航向辨认与海湾测绘核心大纲词目
+    for (const id of [
+      'embark',
+      'harbor',
+      'wharf',
+      'prepare',
+      'coast',
+      'geography',
+      'expedition',
+      'consult',
+      'detail',
+      'examine',
+      'coordinate',
+      'grid',
+      'calculate',
+      'approximate',
+      'longitude',
+      'alongside',
+      'bearing',
+      'wear',
+      'protect',
+      'overcoat',
+      'monitor',
+      'compact',
+      'barometer',
+      'secure',
+      'watertight',
+      'diary',
+      'register',
+      'noteworthy',
+      'landmark',
+      'brisk',
+      'daylight',
+      'crew',
+      'scout',
+      'irregular',
+      'prominent',
+      'extend',
+      'outward',
+      'continent',
+      'fringe',
+      'sunlight',
+      'penetrate',
+      'haze',
+      'tower',
+      'cape',
+      'distance',
+      'strip',
+      'visible',
+      'observe',
+      'binoculars',
+      'brief',
+      'glimpse',
+      'horizon',
+      'skyline',
+      'verify',
+      'chart',
+      'symbol',
+      'actual',
+      'terrain',
+      'vessel',
+      'approach',
+      'turbulent',
+      'narrow',
+      'channel',
+      'swift',
+      'tide',
+      'demand',
+      'caution',
+      'counteract',
+      'peril',
+      'drift',
+      'pilot',
+      'care',
+      'maneuver',
+      'cruise',
+      'velocity',
+      'knot',
+      'heavy',
+      'swell',
+      'heave',
+      'beneath',
+      'deck',
+      'discipline',
+      'steer',
+      'propel',
+      'craft',
+      'safe',
+      'intermediate',
+      'tow',
+      'glide',
+      'tranquil',
+      'border',
+      'broad',
+      'tract',
+      'shelter',
+      'shore',
+      'find',
+      'visual',
+      'measure',
+      'depth',
+      'coincide',
+      'ashore',
+      'camp',
+      'look',
+      'surround',
+      'territory',
+      'document',
+      'route',
+      'confidence',
+      'practical',
+      'survey',
+      'inspire',
+      'prospect',
+      'study',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Mainland = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'mainland'
+    );
+    expect(p1s1Mainland).toBeDefined();
+    if (p1s1Mainland && p1s1Mainland.type === 'annotation') {
+      expect(p1s1Mainland.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Grid = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'grid'
+    );
+    expect(p1s2Grid).toBeDefined();
+    if (p1s2Grid && p1s2Grid.type === 'annotation') {
+      expect(p1s2Grid.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Compass = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'compass'
+    );
+    expect(p1s2Compass).toBeDefined();
+    if (p1s2Compass && p1s2Compass.type === 'annotation') {
+      expect(p1s2Compass.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Horizon = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'horizon'
+    );
+    expect(p2s3Horizon).toBeDefined();
+    if (p2s3Horizon && p2s3Horizon.type === 'annotation') {
+      expect(p2s3Horizon.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
