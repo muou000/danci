@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2151/4692 个非免注核心大纲词目（45.8%），尚有 2541 个待覆盖。
+当前覆盖 2213/4692 个非免注核心大纲词目（47.2%），尚有 2479 个待覆盖。
 
-## 四级词目（1516）
+## 四级词目（1479）
 
 - `able`
 - `abolish`
@@ -22,11 +22,9 @@
 - `acid`
 - `acre`
 - `addict`
-- `adjective`
 - `administrate`
 - `admit`
 - `advantage`
-- `adverb`
 - `aerial`
 - `affect`
 - `affection`
@@ -87,7 +85,6 @@
 - `awe`
 - `awesome`
 - `awful`
-- `awkward`
 - `ax`
 - `axe`
 - `axis`
@@ -145,7 +142,6 @@
 - `best-seller`
 - `bet`
 - `better`
-- `beverage`
 - `Bible`
 - `big`
 - `bin`
@@ -265,7 +261,6 @@
 - `comedy`
 - `comma`
 - `commune`
-- `compose`
 - `comrade`
 - `condemn`
 - `confess`
@@ -282,10 +277,8 @@
 - `corn`
 - `corps`
 - `cosmos`
-- `cottage`
 - `couch`
 - `cough`
-- `countryside`
 - `couple`
 - `coupon`
 - `court²`
@@ -353,7 +346,6 @@
 - `dew`
 - `diabetes`
 - `dial`
-- `dialect`
 - `diamond`
 - `diary`
 - `dictate`
@@ -373,7 +365,6 @@
 - `disgust`
 - `disintegrate`
 - `disk`
-- `disc`
 - `dislike`
 - `dismiss`
 - `disturb`
@@ -532,7 +523,6 @@
 - `funeral`
 - `fur`
 - `fuss`
-- `gadget`
 - `gallon`
 - `gang`
 - `gaol`
@@ -563,15 +553,12 @@
 - `gown`
 - `grab`
 - `gram`
-- `grammar`
 - `grand`
 - `grandchild`
 - `graph`
-- `gratitude`
 - `grave`
 - `gravitation`
 - `greenhouse`
-- `grin`
 - `grind`
 - `grip`
 - `grocer`
@@ -605,7 +592,6 @@
 - `hay`
 - `haze`
 - `headache`
-- `heading`
 - `headmaster`
 - `headquarters`
 - `heal`
@@ -643,7 +629,6 @@
 - `horn`
 - `horror`
 - `horsepower`
-- `hospitable`
 - `host²`
 - `hotdog`
 - `housewife`
@@ -700,7 +685,6 @@
 - `insure`
 - `intake`
 - `intangible`
-- `intend`
 - `interfere`
 - `interior`
 - `intermediate`
@@ -790,7 +774,6 @@
 - `lip`
 - `liquor`
 - `liter`
-- `literal`
 - `litter`
 - `liver`
 - `loaf`
@@ -865,7 +848,6 @@
 - `missing`
 - `mister`
 - `mistress`
-- `misunderstand`
 - `mode`
 - `moderate`
 - `monster`
@@ -904,7 +886,6 @@
 - `northeast`
 - `northwest`
 - `notion`
-- `noun`
 - `nourish`
 - `novel¹`
 - `nowadays`
@@ -931,7 +912,6 @@
 - `opera`
 - `opinion`
 - `opposite`
-- `oral`
 - `orchestra`
 - `ore`
 - `organ`
@@ -961,7 +941,6 @@
 - `owe`
 - `ox`
 - `ozone`
-- `pad`
 - `paddy`
 - `paint`
 - `palace`
@@ -987,19 +966,15 @@
 - `peach`
 - `peanut`
 - `pearl`
-- `peasant`
-- `peculiar`
 - `penetrate`
 - `penny`
 - `pepper`
-- `perceive`
 - `perfect`
 - `pessimism`
 - `petrol`
 - `petroleum`
 - `petty`
 - `phase`
-- `phrase`
 - `physician`
 - `physics`
 - `piano`
@@ -1043,7 +1018,6 @@
 - `pray`
 - `preach`
 - `precaution`
-- `preface`
 - `pregnant`
 - `premier`
 - `preposition`
@@ -1065,16 +1039,13 @@
 - `probable`
 - `procession`
 - `proclaim`
-- `proficient`
 - `prohibit`
 - `project²`
 - `prominent`
 - `pronoun`
-- `pronounce`
 - `proper`
 - `proportion`
 - `prospect`
-- `proverb`
 - `provided`
 - `provoke`
 - `psychology`
@@ -1114,7 +1085,6 @@
 - `recognize`
 - `recommend`
 - `refer`
-- `reflect`
 - `refresh`
 - `refreshment`
 - `refrigerator`
@@ -1130,7 +1100,6 @@
 - `relevant`
 - `religion`
 - `remember`
-- `render`
 - `repay`
 - `reply`
 - `reproduce`
@@ -1153,7 +1122,6 @@
 - `rib`
 - `ribbon`
 - `rid`
-- `riddle`
 - `ridicule`
 - `rifle`
 - `riot`
@@ -1179,7 +1147,6 @@
 - `salesman`
 - `sauce`
 - `sausage`
-- `say`
 - `scandal`
 - `scar`
 - `scare`
@@ -1315,7 +1282,6 @@
 - `straight`
 - `straightforward`
 - `strain²`
-- `strange`
 - `straw`
 - `string`
 - `strip`
@@ -1457,7 +1423,6 @@
 - `various`
 - `vary`
 - `vendor`
-- `verb`
 - `version`
 - `versus`
 - `vertical`
@@ -1471,7 +1436,6 @@
 - `virus`
 - `visible`
 - `visual`
-- `vocabulary`
 - `volleyball`
 - `volt`
 - `wagon`
@@ -1499,7 +1463,6 @@
 - `whereas`
 - `whip`
 - `whisky`
-- `whisper`
 - `widow`
 - `wing`
 - `wish`
@@ -1523,7 +1486,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（1025）
+## 六级星号词目（1000）
 
 - `abbreviation`
 - `abide`
@@ -1533,7 +1496,6 @@
 - `absurd`
 - `accessory`
 - `acclaim`
-- `activate`
 - `acupuncture`
 - `adhere`
 - `adolescent`
@@ -1563,12 +1525,10 @@
 - `aloft`
 - `alternate`
 - `amass`
-- `ambiguous`
 - `amend`
 - `amiable`
 - `ammunition`
 - `analogy`
-- `anecdote`
 - `anguish`
 - `animate`
 - `annex`
@@ -1593,7 +1553,6 @@
 - `array`
 - `arrogant`
 - `artery`
-- `articulate`
 - `artifact`
 - `artillery`
 - `ascribe`
@@ -1613,7 +1572,6 @@
 - `avail`
 - `avenge`
 - `avert`
-- `baffle`
 - `bald`
 - `barge`
 - `barn`
@@ -1636,7 +1594,6 @@
 - `bilateral`
 - `binoculars`
 - `bishop`
-- `bizarre`
 - `blackmail`
 - `blaze`
 - `bleach`
@@ -1654,7 +1611,6 @@
 - `boycott`
 - `brace`
 - `breach`
-- `brew`
 - `brigade`
 - `brink`
 - `brisk`
@@ -1696,7 +1652,6 @@
 - `choir`
 - `chord`
 - `chronic`
-- `chronicle`
 - `chunk`
 - `clamp`
 - `clan`
@@ -1724,7 +1679,6 @@
 - `commemorate`
 - `commonwealth`
 - `compartment`
-- `compile`
 - `complacent`
 - `complement`
 - `complexion`
@@ -1801,7 +1755,6 @@
 - `delicacy`
 - `delude`
 - `demographic`
-- `denote`
 - `denounce`
 - `depict`
 - `deplete`
@@ -1828,7 +1781,6 @@
 - `directory`
 - `disarm`
 - `discord`
-- `discourse`
 - `discreet`
 - `dismay`
 - `dispense`
@@ -1861,7 +1813,6 @@
 - `edible`
 - `ego`
 - `eject`
-- `elaborate`
 - `elapse`
 - `elastic`
 - `electoral`
@@ -1984,7 +1935,6 @@
 - `hemisphere`
 - `henceforth`
 - `herald`
-- `herb`
 - `heroin`
 - `hibernate`
 - `hierarchy`
@@ -2130,7 +2080,6 @@
 - `merchandise`
 - `mercury`
 - `metabolism`
-- `metaphor`
 - `metropolitan`
 - `midst`
 - `midwife`
@@ -2138,7 +2087,6 @@
 - `militia`
 - `mindset`
 - `mingle`
-- `miniature`
 - `mint`
 - `missionary`
 - `moan`
@@ -2154,9 +2102,7 @@
 - `mow`
 - `multilateral`
 - `multitude`
-- `murmur`
 - `mute`
-- `mutter`
 - `navigate`
 - `negligible`
 - `nickname`
@@ -2228,7 +2174,6 @@
 - `perfume`
 - `perish`
 - `permeate`
-- `perplex`
 - `persecute`
 - `pest`
 - `pesticide`
@@ -2244,9 +2189,7 @@
 - `plight`
 - `poise`
 - `poke`
-- `ponder`
 - `porcelain`
-- `porch`
 - `porridge`
 - `potent`
 - `pottery`
@@ -2297,15 +2240,12 @@
 - `rehabilitate`
 - `reign`
 - `rein`
-- `rejoice`
-- `relic`
 - `relish`
 - `reminiscent`
 - `remnant`
 - `renaissance`
 - `renown`
 - `repel`
-- `repertoire`
 - `repress`
 - `reproach`
 - `repute`
@@ -2360,7 +2300,6 @@
 - `shred`
 - `shrewd`
 - `shrub`
-- `signify`
 - `simultaneous`
 - `sinister`
 - `skull`
@@ -2481,7 +2420,6 @@
 - `trench`
 - `tribe`
 - `tribune`
-- `tribute`
 - `trickle`
 - `trillion`
 - `trivial`
