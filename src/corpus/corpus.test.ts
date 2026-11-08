@@ -5311,6 +5311,221 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 41 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-041');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('历史文化');
+    expect(passage!.titleEn).toBe(
+      'Fossils and Artifacts in the Natural History Museum'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #51 规划的核心目标词目
+    for (const targetId of [
+      'fossil',
+      'dinosaur',
+      'skeleton',
+      'artifact',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合博物馆参访、古生物骨骼与早期人类手工艺核心大纲词目
+    for (const id of [
+      'enter',
+      'exhibit',
+      'wing',
+      'flock',
+      'enormous',
+      'marvel',
+      'ancient',
+      'spectacle',
+      'frame',
+      'reveal',
+      'stout',
+      'rib',
+      'arch',
+      'spine',
+      'hollow',
+      'skull',
+      'fierce',
+      'jaw',
+      'sharp',
+      'claw',
+      'heavy',
+      'tail',
+      'show',
+      'extinct',
+      'monster',
+      'live¹',
+      'disappear',
+      'guide',
+      'explain',
+      'nature',
+      'distance',
+      'geology',
+      'epoch',
+      'organic',
+      'tissue',
+      'decay',
+      'remnant',
+      'bury',
+      'deep',
+      'underground',
+      'pit',
+      'beneath',
+      'crust',
+      'dissolve',
+      'mine²',
+      'slow',
+      'embed',
+      'press²',
+      'chemistry',
+      'element',
+      'preserve',
+      'outline',
+      'spontaneous',
+      'physical',
+      'process',
+      'conscious',
+      'design',
+      'forward',
+      'inspect',
+      'showcase',
+      'display',
+      'authentic',
+      'pattern',
+      'clay',
+      'pottery',
+      'primitive',
+      'axe',
+      'hunt',
+      'blade',
+      'ivory',
+      'spear',
+      'arrow',
+      'care',
+      'fashion',
+      'tribe',
+      'clan',
+      'scrape',
+      'grind',
+      'raw',
+      'material',
+      'cunning',
+      'handicraft',
+      'produce',
+      'practical',
+      'weapon',
+      'prove',
+      'mankind',
+      'apply',
+      'intellect',
+      'contrast',
+      'illustrate',
+      'fundamental',
+      'differ',
+      'invent',
+      'trait',
+      'force',
+      'manifest',
+      'purpose',
+      'observe',
+      'learn',
+      'identify',
+      'recognize',
+      'imply',
+      'biology',
+      'whereas',
+      'craft',
+      'relic',
+      'hint',
+      'culture',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证修饰名词的形容词语境词性匹配
+    const p1s1Exhibit = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'exhibit'
+    );
+    expect(p1s1Exhibit).toBeDefined();
+    if (p1s1Exhibit && p1s1Exhibit.type === 'annotation') {
+      expect(p1s1Exhibit.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s1Dinosaur = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'dinosaur'
+    );
+    expect(p1s1Dinosaur).toBeDefined();
+    if (p1s1Dinosaur && p1s1Dinosaur.type === 'annotation') {
+      expect(p1s1Dinosaur.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Arch = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'arch'
+    );
+    expect(p1s2Arch).toBeDefined();
+    if (p1s2Arch && p1s2Arch.type === 'annotation') {
+      expect(p1s2Arch.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Geology = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'geology'
+    );
+    expect(p2s1Geology).toBeDefined();
+    if (p2s1Geology && p2s1Geology.type === 'annotation') {
+      expect(p2s1Geology.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Hunt = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'hunt'
+    );
+    expect(p3s2Hunt).toBeDefined();
+    if (p3s2Hunt && p3s2Hunt.type === 'annotation') {
+      expect(p3s2Hunt.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Ivory = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'ivory'
+    );
+    expect(p3s2Ivory).toBeDefined();
+    if (p3s2Ivory && p3s2Ivory.type === 'annotation') {
+      expect(p3s2Ivory.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Arrow = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'arrow'
+    );
+    expect(p3s2Arrow).toBeDefined();
+    if (p3s2Arrow && p3s2Arrow.type === 'annotation') {
+      expect(p3s2Arrow.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

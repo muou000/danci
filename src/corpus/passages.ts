@@ -38,6 +38,7 @@ import { PASSAGE_037 } from './passages/passage-037';
 import { PASSAGE_038 } from './passages/passage-038';
 import { PASSAGE_039 } from './passages/passage-039';
 import { PASSAGE_040 } from './passages/passage-040';
+import { PASSAGE_041 } from './passages/passage-041';
 import type { Passage } from './index';
 
 export const PASSAGES: Passage[] = [
@@ -81,4 +82,5 @@ export const PASSAGES: Passage[] = [
   PASSAGE_038,
   PASSAGE_039,
   PASSAGE_040,
+  PASSAGE_041,
 ];

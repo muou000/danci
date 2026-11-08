@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2471/4692 个非免注核心大纲词目（52.7%），尚有 2221 个待覆盖。
+当前覆盖 2532/4692 个非免注核心大纲词目（54.0%），尚有 2160 个待覆盖。
 
-## 四级词目（1332）
+## 四级词目（1295）
 
 - `abolish`
 - `absent`
@@ -59,7 +59,6 @@
 - `appropriate¹`
 - `army`
 - `arrest`
-- `arrow`
 - `asleep`
 - `ass`
 - `associate`
@@ -75,7 +74,6 @@
 - `awesome`
 - `awful`
 - `ax`
-- `axe`
 - `axis`
 - `baby boom`
 - `backward`
@@ -133,7 +131,6 @@
 - `biscuit`
 - `bitch`
 - `blackboard`
-- `blade`
 - `blank`
 - `blast`
 - `bless`
@@ -181,7 +178,6 @@
 - `bump`
 - `bumper`
 - `bunch`
-- `bury`
 - `businessman`
 - `butcher`
 - `button`
@@ -217,7 +213,6 @@
 - `cigar`
 - `cigarette`
 - `circus`
-- `claw`
 - `clever`
 - `clip`
 - `clockwise`
@@ -317,7 +312,6 @@
 - `dirt`
 - `disable`
 - `disagree`
-- `disappear`
 - `disappoint`
 - `disapprove`
 - `disco`
@@ -353,7 +347,6 @@
 - `either`
 - `elbow`
 - `elect`
-- `element`
 - `elementary`
 - `elite`
 - `else`
@@ -365,7 +358,6 @@
 - `endanger`
 - `enemy`
 - `enlarge`
-- `enormous`
 - `enquire`
 - `entertain`
 - `entitle`
@@ -412,7 +404,6 @@
 - `fantasy`
 - `farewell`
 - `farther`
-- `fashion`
 - `fat`
 - `fatal`
 - `fate`
@@ -435,7 +426,6 @@
 - `flash`
 - `flee`
 - `flexible`
-- `flock`
 - `fly²`
 - `fond`
 - `fool`
@@ -454,10 +444,8 @@
 - `forth`
 - `forthcoming`
 - `fortune`
-- `fossil`
 - `fountain`
 - `fox`
-- `frame`
 - `framework`
 - `freeway`
 - `freshman`
@@ -466,7 +454,6 @@
 - `fuck`
 - `fuel`
 - `fun`
-- `fundamental`
 - `funeral`
 - `fur`
 - `fuss`
@@ -504,7 +491,6 @@
 - `graph`
 - `gravitation`
 - `greenhouse`
-- `grind`
 - `grocer`
 - `gross`
 - `guess`
@@ -548,13 +534,11 @@
 - `hero`
 - `hi`
 - `hijack`
-- `hint`
 - `hip`
 - `hit`
 - `hobby`
 - `hole`
 - `holiday`
-- `hollow`
 - `holy`
 - `homeland`
 - `homosexual`
@@ -568,13 +552,11 @@
 - `hotdog`
 - `housewife`
 - `housework`
-- `hunt`
 - `hurt`
 - `hut`
 - `hydrogen`
 - `hyphen`
 - `ideal`
-- `identify`
 - `ignorant`
 - `image`
 - `imagine`
@@ -586,7 +568,6 @@
 - `implement¹`
 - `implement²`
 - `implicit`
-- `imply`
 - `import`
 - `impossible`
 - `inch`
@@ -623,7 +604,6 @@
 - `invalid²`
 - `invaluable`
 - `invariably`
-- `invent`
 - `invisible`
 - `inward`
 - `irony`
@@ -631,7 +611,6 @@
 - `jam¹`
 - `jam²`
 - `jar²`
-- `jaw`
 - `jazz`
 - `jealous`
 - `jeep`
@@ -718,12 +697,10 @@
 - `makeup`
 - `male`
 - `mall`
-- `mankind`
 - `manner`
 - `marathon`
 - `marry`
 - `marshal`
-- `marvel`
 - `Marxism`
 - `massage`
 - `masterpiece`
@@ -763,7 +740,6 @@
 - `mister`
 - `mistress`
 - `mode`
-- `monster`
 - `monument`
 - `mood`
 - `moreover`
@@ -893,7 +869,6 @@
 - `pint`
 - `pirate`
 - `pistol`
-- `pit`
 - `pity`
 - `plague`
 - `playground`
@@ -932,7 +907,6 @@
 - `preview`
 - `priest`
 - `prime`
-- `primitive`
 - `prince`
 - `princess`
 - `prior`
@@ -980,7 +954,6 @@
 - `rebel`
 - `reception`
 - `reckon`
-- `recognize`
 - `recommend`
 - `refer`
 - `refresh`
@@ -1009,11 +982,9 @@
 - `retell`
 - `retreat`
 - `reunite`
-- `reveal`
 - `reverse`
 - `revolution`
 - `revolve`
-- `rib`
 - `ribbon`
 - `rid`
 - `ridicule`
@@ -1089,7 +1060,6 @@
 - `situation`
 - `situate`
 - `skate`
-- `skeleton`
 - `ski`
 - `skyscraper`
 - `slap`
@@ -1128,7 +1098,6 @@
 - `spite`
 - `spokeswoman`
 - `sponsor`
-- `spontaneous`
 - `sportsman`
 - `sportswoman`
 - `spouse`
@@ -1196,7 +1165,6 @@
 - `switch`
 - `sword`
 - `tag`
-- `tail`
 - `tailor`
 - `takeoff`
 - `tame`
@@ -1232,7 +1200,6 @@
 - `tin`
 - `tip`
 - `tire¹`
-- `tissue`
 - `title`
 - `toast`
 - `tobacco`
@@ -1267,7 +1234,6 @@
 - `ugly`
 - `underdeveloped`
 - `underestimate`
-- `underground`
 - `underline`
 - `underneath`
 - `underwear`
@@ -1306,7 +1272,6 @@
 - `warfare`
 - `warrior`
 - `wax`
-- `weapon`
 - `webcast`
 - `wed`
 - `weep`
@@ -1315,11 +1280,9 @@
 - `well-known`
 - `well-off`
 - `whale`
-- `whereas`
 - `whip`
 - `whisky`
 - `widow`
-- `wing`
 - `wish`
 - `wit`
 - `wolf`
@@ -1339,7 +1302,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（889）
+## 六级星号词目（865）
 
 - `abbreviation`
 - `abnormal`
@@ -1395,14 +1358,12 @@
 - `apron`
 - `arbitrate`
 - `arc`
-- `arch`
 - `ardent`
 - `arena`
 - `aristocrat`
 - `armor`
 - `array`
 - `arrogant`
-- `artifact`
 - `artillery`
 - `ascribe`
 - `assassinate`
@@ -1492,7 +1453,6 @@
 - `chronic`
 - `chunk`
 - `clamp`
-- `clan`
 - `clasp`
 - `clearing`
 - `clench`
@@ -1562,12 +1522,10 @@
 - `crude`
 - `crumble`
 - `crunch`
-- `crust`
 - `cub`
 - `cuisine`
 - `culminate`
 - `cult`
-- `cunning`
 - `curfew`
 - `custody`
 - `cynical`
@@ -1601,7 +1559,6 @@
 - `diesel`
 - `diffuse`
 - `dilute`
-- `dinosaur`
 - `directory`
 - `disarm`
 - `discord`
@@ -1640,7 +1597,6 @@
 - `eloquent`
 - `emancipate`
 - `embargo`
-- `embed`
 - `embody`
 - `embroidery`
 - `emigrate`
@@ -1660,7 +1616,6 @@
 - `envoy`
 - `epic`
 - `epidemic`
-- `epoch`
 - `equate`
 - `equator`
 - `eradicate`
@@ -1677,7 +1632,6 @@
 - `exponent`
 - `exposition`
 - `exquisite`
-- `extinct`
 - `extract`
 - `extravagant`
 - `fabulous`
@@ -1732,7 +1686,6 @@
 - `groan`
 - `groove`
 - `grope`
-- `handicraft`
 - `harass`
 - `havoc`
 - `hectic`
@@ -1790,7 +1743,6 @@
 - `inmate`
 - `innumerable`
 - `integral`
-- `intellect`
 - `intelligible`
 - `intercourse`
 - `intermittent`
@@ -1803,7 +1755,6 @@
 - `irrespective`
 - `irritate`
 - `isle`
-- `ivory`
 - `jack`
 - `jargon`
 - `jelly`
@@ -1856,7 +1807,6 @@
 - `malignant`
 - `malpractice`
 - `mandate`
-- `manifest`
 - `mansion`
 - `mar`
 - `marble`
@@ -1970,7 +1920,6 @@
 - `poke`
 - `porcelain`
 - `porridge`
-- `pottery`
 - `poultry`
 - `precede`
 - `predecessor`
@@ -2011,7 +1960,6 @@
 - `rein`
 - `relish`
 - `reminiscent`
-- `remnant`
 - `renaissance`
 - `renown`
 - `repel`
@@ -2044,7 +1992,6 @@
 - `scorn`
 - `scramble`
 - `scrap`
-- `scrape`
 - `sculpture`
 - `secular`
 - `seduce`
@@ -2059,12 +2006,10 @@
 - `shipyard`
 - `shorthand`
 - `shove`
-- `showcase`
 - `shred`
 - `shrewd`
 - `simultaneous`
 - `sinister`
-- `skull`
 - `slack`
 - `slam`
 - `slash`
@@ -2083,11 +2028,8 @@
 - `solitary`
 - `sovereign`
 - `spaghetti`
-- `spear`
-- `spectacle`
 - `spectrum`
 - `spider`
-- `spine`
 - `sprawl`
 - `sprinkle`
 - `stab`
@@ -2108,7 +2050,6 @@
 - `stigma`
 - `stitch`
 - `stoop`
-- `stout`
 - `strand`
 - `strangle`
 - `stray`
@@ -2161,12 +2102,10 @@
 - `topple`
 - `tornado`
 - `toxic`
-- `trait`
 - `transcend`
 - `transistor`
 - `trauma`
 - `trench`
-- `tribe`
 - `tribune`
 - `trickle`
 - `trillion`
