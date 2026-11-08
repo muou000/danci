@@ -4835,6 +4835,115 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 38 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-038');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('生态环境');
+    expect(passage!.titleEn).toBe(
+      'Reservoir Storage and Ecological Balance in a River Valley'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #48 规划的核心目标词目
+    for (const targetId of [
+      'dam',
+      'reservoir',
+      'ecosystem',
+      'predator',
+      'prey',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合水坝蓄水、野生生态与环境平衡核心大纲词目
+    for (const id of [
+      'basin',
+      'submerge',
+      'immerse',
+      'fertile',
+      'artery',
+      'inland',
+      'harness',
+      'augment',
+      'obstruct',
+      'depth',
+      'rim',
+      'steep',
+      'bluff',
+      'beast',
+      'mammal',
+      'eagle',
+      'hawk',
+      'perch',
+      'branch',
+      'glide',
+      'overhead',
+      'patrol',
+      'snatch',
+      'herd',
+      'hardy',
+      'deer',
+      'wander',
+      'slope',
+      'graze',
+      'shrub',
+      'haven',
+      'reproduce',
+      'offspring',
+      'vital',
+      'lest',
+      'disperse',
+      'perish',
+      'census',
+      'vary',
+      'salmon',
+      'discreet',
+      'scope',
+      'attribute',
+      'population',
+      'decline',
+      'tentative',
+      'deduce',
+      'cumulative',
+      'correlate',
+      'concurrent',
+      'irrigate',
+      'withdraw',
+      'deplete',
+      'disturb',
+      'counteract',
+      'curtail',
+      'sanctuary',
+      'rehabilitate',
+      'coexist',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

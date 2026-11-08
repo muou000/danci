@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2288/4692 个非免注核心大纲词目（48.8%），尚有 2404 个待覆盖。
+当前覆盖 2351/4692 个非免注核心大纲词目（50.1%），尚有 2341 个待覆盖。
 
-## 四级词目（1428）
+## 四级词目（1402）
 
 - `able`
 - `abolish`
@@ -72,7 +72,6 @@
 - `atom`
 - `attempt`
 - `attic`
-- `attribute`
 - `automobile`
 - `await`
 - `awake`
@@ -107,7 +106,6 @@
 - `bark`
 - `barrel`
 - `baseball`
-- `basin`
 - `basis`
 - `basket`
 - `bat`
@@ -118,7 +116,6 @@
 - `beam`
 - `beard`
 - `bearing`
-- `beast`
 - `beat`
 - `beauty`
 - `bee`
@@ -167,7 +164,6 @@
 - `bracket`
 - `brag`
 - `brake`
-- `branch`
 - `brand-new`
 - `brandy`
 - `breast`
@@ -289,7 +285,6 @@
 - `curl`
 - `curse`
 - `cute`
-- `dam`
 - `damn`
 - `dance`
 - `darling`
@@ -301,10 +296,8 @@
 - `deaf`
 - `deal²`
 - `dear`
-- `decline`
 - `deed`
 - `deem`
-- `deer`
 - `defect²`
 - `deficient`
 - `definite`
@@ -316,7 +309,6 @@
 - `depend`
 - `depress`
 - `deprive`
-- `depth`
 - `derive`
 - `descend`
 - `desert¹`
@@ -348,7 +340,6 @@
 - `disintegrate`
 - `disk`
 - `dislike`
-- `disturb`
 - `ditch`
 - `divorce`
 - `doll`
@@ -372,7 +363,6 @@
 - `dumb`
 - `dump`
 - `dynasty`
-- `eagle`
 - `earthquake`
 - `easy-going`
 - `eat`
@@ -449,7 +439,6 @@
 - `federation`
 - `female`
 - `fence`
-- `fertile`
 - `fever`
 - `fight`
 - `filter`
@@ -560,7 +549,6 @@
 - `hang`
 - `happy`
 - `hardly`
-- `harness`
 - `hatch`
 - `hate`
 - `haul`
@@ -582,11 +570,9 @@
 - `hello`
 - `hen`
 - `hence`
-- `herd`
 - `hereby`
 - `hero`
 - `hi`
-- `highlight`
 - `hijack`
 - `hinder`
 - `hint`
@@ -609,7 +595,6 @@
 - `hotdog`
 - `housewife`
 - `housework`
-- `huge`
 - `hunt`
 - `hurt`
 - `hut`
@@ -647,7 +632,6 @@
 - `flu`
 - `inhabit`
 - `inherit`
-- `inland`
 - `inn`
 - `insane`
 - `insect`
@@ -674,7 +658,6 @@
 - `inward`
 - `irony`
 - `irrational`
-- `irrigate`
 - `jam¹`
 - `jam²`
 - `jar²`
@@ -730,7 +713,6 @@
 - `lemon`
 - `lend`
 - `less`
-- `lest`
 - `liberal`
 - `liberty`
 - `lick`
@@ -770,7 +752,6 @@
 - `makeup`
 - `male`
 - `mall`
-- `mammal`
 - `mankind`
 - `manner`
 - `marathon`
@@ -895,7 +876,6 @@
 - `oval`
 - `overcoat`
 - `overdue`
-- `overhead`
 - `overhear`
 - `overnight`
 - `overseas`
@@ -970,7 +950,6 @@
 - `pool`
 - `pop`
 - `popular`
-- `population`
 - `pose`
 - `position`
 - `possess`
@@ -1066,7 +1045,6 @@
 - `remember`
 - `repay`
 - `reply`
-- `reproduce`
 - `republic`
 - `request`
 - `resemble`
@@ -1115,7 +1093,6 @@
 - `scare`
 - `scatter`
 - `scissors`
-- `scope`
 - `scout`
 - `scream`
 - `second²`
@@ -1370,7 +1347,6 @@
 - `vacation`
 - `vain`
 - `various`
-- `vary`
 - `vendor`
 - `version`
 - `versus`
@@ -1390,7 +1366,6 @@
 - `wagon`
 - `waist`
 - `wake`
-- `wander`
 - `war`
 - `ward`
 - `warfare`
@@ -1416,7 +1391,6 @@
 - `wing`
 - `wish`
 - `wit`
-- `withdraw`
 - `wolf`
 - `worm`
 - `worse`
@@ -1435,7 +1409,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（976）
+## 六级星号词目（939）
 
 - `abbreviation`
 - `abide`
@@ -1500,7 +1474,6 @@
 - `armor`
 - `array`
 - `arrogant`
-- `artery`
 - `artifact`
 - `artillery`
 - `ascribe`
@@ -1514,7 +1487,6 @@
 - `atlas`
 - `atrocity`
 - `auction`
-- `augment`
 - `autobiography`
 - `auxiliary`
 - `avail`
@@ -1548,7 +1520,6 @@
 - `bleak`
 - `blink`
 - `bloc`
-- `bluff`
 - `blunt`
 - `blush`
 - `bolster`
@@ -1591,7 +1562,6 @@
 - `celebrity`
 - `cemetery`
 - `censor`
-- `census`
 - `ceramic`
 - `chancellor`
 - `chant`
@@ -1616,7 +1586,6 @@
 - `cockpit`
 - `cocktail`
 - `coconut`
-- `coexist`
 - `coincide`
 - `collide`
 - `colonel`
@@ -1634,7 +1603,6 @@
 - `conceit`
 - `conceive`
 - `concise`
-- `concurrent`
 - `condolence`
 - `conducive`
 - `confederation`
@@ -1658,10 +1626,8 @@
 - `cork`
 - `corporal`
 - `corpse`
-- `correlate`
 - `cosmetic`
 - `cosmopolitan`
-- `counteract`
 - `counterfeit`
 - `coup`
 - `coup d'état`
@@ -1682,16 +1648,13 @@
 - `cuisine`
 - `culminate`
 - `cult`
-- `cumulative`
 - `cunning`
 - `curfew`
-- `curtail`
 - `custody`
 - `cynical`
 - `dart`
 - `dazzle`
 - `decimal`
-- `deduce`
 - `defer`
 - `degenerate`
 - `degrade`
@@ -1700,7 +1663,6 @@
 - `demographic`
 - `denounce`
 - `depict`
-- `deplete`
 - `deplore`
 - `deport`
 - `depot`
@@ -1724,10 +1686,8 @@
 - `directory`
 - `disarm`
 - `discord`
-- `discreet`
 - `dismay`
 - `dispense`
-- `disperse`
 - `disposition`
 - `disregard`
 - `dissent`
@@ -1752,7 +1712,6 @@
 - `Easter`
 - `eccentric`
 - `eclipse`
-- `ecosystem`
 - `edible`
 - `ego`
 - `eject`
@@ -1852,11 +1811,9 @@
 - `gland`
 - `glare`
 - `gleam`
-- `glide`
 - `glitter`
 - `glossary`
 - `gospel`
-- `graze`
 - `greed`
 - `grid`
 - `grill`
@@ -1866,10 +1823,7 @@
 - `grope`
 - `handicraft`
 - `harass`
-- `hardy`
-- `haven`
 - `havoc`
-- `hawk`
 - `heave`
 - `hectic`
 - `helmet`
@@ -1905,7 +1859,6 @@
 - `idol`
 - `ignite`
 - `illicit`
-- `immerse`
 - `imminent`
 - `impair`
 - `impart`
@@ -2056,8 +2009,6 @@
 - `obscene`
 - `observatory`
 - `obsess`
-- `obstruct`
-- `offspring`
 - `olive`
 - `onset`
 - `opaque`
@@ -2093,7 +2044,6 @@
 - `pasture`
 - `pathetic`
 - `patriot`
-- `patrol`
 - `patron`
 - `peck`
 - `pedal`
@@ -2105,9 +2055,7 @@
 - `pendulum`
 - `penguin`
 - `peninsula`
-- `perch`
 - `perfume`
-- `perish`
 - `permeate`
 - `persecute`
 - `pest`
@@ -2129,7 +2077,6 @@
 - `poultry`
 - `practitioner`
 - `precede`
-- `predator`
 - `predecessor`
 - `predominate`
 - `premium`
@@ -2137,7 +2084,6 @@
 - `prerequisite`
 - `preside`
 - `pretext`
-- `prey`
 - `profile`
 - `prolong`
 - `prone`
@@ -2167,7 +2113,6 @@
 - `refuge`
 - `regime`
 - `regiment`
-- `rehabilitate`
 - `reign`
 - `rein`
 - `relish`
@@ -2179,7 +2124,6 @@
 - `repress`
 - `reproach`
 - `repute`
-- `reservoir`
 - `reshuffle`
 - `restless`
 - `retaliate`
@@ -2189,20 +2133,17 @@
 - `revenge`
 - `revolt`
 - `rig`
-- `rim`
 - `ritual`
 - `robust`
 - `rotate`
 - `ruthless`
 - `sacred`
 - `saddle`
-- `salmon`
 - `salon`
 - `salute`
 - `salvage`
 - `salvation`
 - `sanction`
-- `sanctuary`
 - `sarcasm`
 - `satire`
 - `saturate`
@@ -2229,7 +2170,6 @@
 - `showcase`
 - `shred`
 - `shrewd`
-- `shrub`
 - `simultaneous`
 - `sinister`
 - `skull`
@@ -2242,7 +2182,6 @@
 - `smuggle`
 - `snail`
 - `snap`
-- `snatch`
 - `sneak`
 - `sniff`
 - `snob`
@@ -2290,7 +2229,6 @@
 - `stump`
 - `stun`
 - `submarine`
-- `submerge`
 - `subordinate`
 - `subscribe`
 - `subsidy`
@@ -2324,7 +2262,6 @@
 - `tease`
 - `temperament`
 - `temporal`
-- `tentative`
 - `tenure`
 - `terrace`
 - `tertiary`
