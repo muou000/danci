@@ -4944,6 +4944,174 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 39 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-039');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('健康医疗');
+    expect(passage!.titleEn).toBe(
+      'Recovery, Daily Care, and Autonomy After a Fracture'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #49 规划的核心目标词目
+    for (const targetId of [
+      'senior',
+      'fracture',
+      'rehabilitate',
+      'medicine',
+      'dose',
+      'pharmacy',
+      'heal',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合骨折康复、配药照护与生活自理核心大纲词目
+    for (const id of [
+      'loose',
+      'indoor',
+      'rug',
+      'slide',
+      'smooth',
+      'tile',
+      'reside',
+      'awkward',
+      'tumble',
+      'feel',
+      'sharp',
+      'snap',
+      'wrist',
+      'clinic',
+      'ward',
+      'attention',
+      'physician',
+      'practitioner',
+      'examine',
+      'sore',
+      'flesh',
+      'severe',
+      'swell',
+      'refuse',
+      'view',
+      'advance',
+      'feeble',
+      'weak',
+      'staff',
+      'show',
+      'genuine',
+      'esteem',
+      'assure',
+      'moderate',
+      'care',
+      'cure',
+      'ache',
+      'converse¹',
+      'confer',
+      'suit¹',
+      'medication',
+      'ease',
+      'distress',
+      'numb',
+      'rely',
+      'potent',
+      'drug',
+      'impair',
+      'balance',
+      'hinder',
+      'agree',
+      'modest',
+      'relieve',
+      'capsule',
+      'dispense',
+      'label',
+      'promise',
+      'abide',
+      'precaution',
+      'regarding',
+      'fluid',
+      'intake',
+      'gentle',
+      'exercise',
+      'regime',
+      'steady',
+      'recover',
+      'phase',
+      'avoid',
+      'stagger',
+      'limp',
+      'install',
+      'firm¹',
+      'rail',
+      'corridor',
+      'handy',
+      'cane',
+      'couch',
+      'stool',
+      'brace',
+      'learn',
+      'rotate',
+      'muscle',
+      'grip',
+      'fold',
+      'towel',
+      'brief',
+      'span',
+      'complete',
+      'faint',
+      'scar',
+      'robust',
+      'stroll',
+      'tranquil',
+      'balcony',
+      'wash',
+      'dish',
+      'fetch',
+      'mug',
+      'cupboard',
+      'call',
+      'kin',
+      'relative',
+      'handle',
+      'routine',
+      'chore',
+      'errand',
+      'tempo',
+      'prove',
+      'old',
+      'remain',
+      'apt',
+      'able',
+      'maintain',
+      'full',
+      'autonomous',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
