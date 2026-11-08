@@ -4714,6 +4714,128 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 37 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-037');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Evidence and Fair Trial in a Community Fund Dispute'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(120);
+
+    // 验证包含 Issue #47 规划的核心目标词目
+    for (const targetId of [
+      'jury',
+      'fraud',
+      'innocent',
+      'attorney',
+      'prosecute',
+      'crime',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合司法审判与财务凭证核心大纲词目
+    for (const id of [
+      'scandal',
+      'accuse',
+      'theft',
+      'currency',
+      'treasury',
+      'plaintiff',
+      'indict',
+      'suspect',
+      'forge',
+      'check²',
+      'grave',
+      'uneasy',
+      'cashier',
+      'summon',
+      'bail',
+      'jail',
+      'briefcase',
+      'refute',
+      'allege',
+      'malice',
+      'cheat',
+      'steal',
+      'lawyer',
+      'stack',
+      'voucher',
+      'drawer',
+      'blunder',
+      'routine',
+      'oversight',
+      'apparent',
+      'deficit',
+      'upright',
+      'deputy',
+      'affirm',
+      'amount',
+      'refund',
+      'oath',
+      'bar',
+      'bystander',
+      'swear',
+      'truth',
+      'interrogate',
+      'testimony',
+      'clarity',
+      'illegal',
+      'motive',
+      'default',
+      'warrant',
+      'guilt',
+      'standpoint',
+      'misfortune',
+      'arise',
+      'disorder',
+      'corrupt',
+      'scheme',
+      'deliberate',
+      'solemn',
+      'proclaim',
+      'verdict',
+      'convict',
+      'vague',
+      'suspicion',
+      'dismiss',
+      'suit²',
+      'plea',
+      'decree',
+      'sorrow',
+      'lawsuit',
+      'just²',
+      'fair¹',
+      'clearance',
+      'discharge',
+      'imprison',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
