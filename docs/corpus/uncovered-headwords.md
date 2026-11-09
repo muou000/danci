@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2887/4692 个非免注核心大纲词目（61.5%），尚有 1805 个待覆盖。
+当前覆盖 2941/4692 个非免注核心大纲词目（62.7%），尚有 1751 个待覆盖。
 
-## 四级词目（1110）
+## 四级词目（1079）
 
 - `abolish`
 - `absent`
@@ -126,7 +126,6 @@
 - `boxing`
 - `brag`
 - `brake`
-- `brand-new`
 - `brandy`
 - `breast`
 - `bride`
@@ -150,7 +149,6 @@
 - `bunch`
 - `businessman`
 - `butcher`
-- `button`
 - `cafe`
 - `cage`
 - `calf`
@@ -161,7 +159,6 @@
 - `candle`
 - `cartoon`
 - `castle`
-- `casual`
 - `cattle`
 - `chairman`
 - `chalk`
@@ -185,10 +182,8 @@
 - `clip`
 - `clockwise`
 - `clone`
-- `clothe`
 - `clown`
 - `cock`
-- `collar`
 - `colon`
 - `comb`
 - `comedy`
@@ -196,12 +191,9 @@
 - `commune`
 - `comrade`
 - `condemn`
-- `confess`
-- `considerate`
 - `contact`
 - `contempt`
 - `content¹`
-- `content²`
 - `contract²`
 - `contrary`
 - `cookie`
@@ -246,7 +238,6 @@
 - `definite`
 - `defy`
 - `delete`
-- `dent`
 - `dental`
 - `dentist`
 - `depend`
@@ -292,13 +283,11 @@
 - `dual`
 - `due`
 - `dumb`
-- `dump`
 - `dynasty`
 - `easy-going`
 - `eat`
 - `eggplant`
 - `either`
-- `elbow`
 - `elect`
 - `elementary`
 - `elite`
@@ -335,7 +324,6 @@
 - `export`
 - `expressway`
 - `extent`
-- `exterior`
 - `external`
 - `extinguish`
 - `extraordinary`
@@ -518,7 +506,6 @@
 - `invade`
 - `invalid²`
 - `invariably`
-- `invisible`
 - `irony`
 - `irrational`
 - `jam¹`
@@ -683,7 +670,6 @@
 - `offend`
 - `oftentimes`
 - `okay`
-- `old-fashioned`
 - `onion`
 - `onward`
 - `opera`
@@ -819,7 +805,6 @@
 - `react`
 - `rear`
 - `reception`
-- `reckon`
 - `refer`
 - `refresh`
 - `refreshment`
@@ -869,7 +854,6 @@
 - `sauce`
 - `sausage`
 - `scare`
-- `scissors`
 - `scream`
 - `second²`
 - `secretary`
@@ -902,7 +886,6 @@
 - `sight`
 - `sightseeing`
 - `silicon`
-- `silk`
 - `similar`
 - `sin`
 - `sing`
@@ -913,7 +896,6 @@
 - `skyscraper`
 - `slap`
 - `slave`
-- `sleeve`
 - `slice`
 - `slim`
 - `slogan`
@@ -969,18 +951,13 @@
 - `stocking`
 - `stomach`
 - `story²`
-- `straight`
-- `straightforward`
 - `strain²`
 - `straw`
-- `string`
 - `stripe`
 - `stroke¹`
 - `stroke²`
-- `stuff`
 - `stupid`
 - `style`
-- `substitute`
 - `subtract`
 - `suck`
 - `suitcase`
@@ -1001,10 +978,8 @@
 - `swipe`
 - `sword`
 - `tag`
-- `tailor`
 - `takeoff`
 - `tame`
-- `tear²`
 - `tech`
 - `teen`
 - `telecommunications`
@@ -1015,7 +990,6 @@
 - `tense²`
 - `terrific`
 - `terror`
-- `textile`
 - `thank`
 - `Thanksgiving`
 - `theme`
@@ -1024,7 +998,6 @@
 - `thief`
 - `thirst`
 - `throat`
-- `throw`
 - `thrust`
 - `thumb`
 - `thunder`
@@ -1060,7 +1033,6 @@
 - `ugly`
 - `underdeveloped`
 - `underestimate`
-- `underneath`
 - `underwear`
 - `upload`
 - `upset`
@@ -1082,11 +1054,9 @@
 - `vinegar`
 - `violate`
 - `violin`
-- `virtual`
 - `virus`
 - `volleyball`
 - `wagon`
-- `waist`
 - `wake`
 - `war`
 - `warfare`
@@ -1108,7 +1078,6 @@
 - `worship`
 - `worst`
 - `wreck`
-- `wrinkle`
 - `wrong`
 - `x-ray`
 - `yard`
@@ -1117,7 +1086,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（695）
+## 六级星号词目（672）
 
 - `abbreviation`
 - `abnormal`
@@ -1159,7 +1128,6 @@
 - `appall`
 - `appease`
 - `appropriate²`
-- `apron`
 - `ardent`
 - `arena`
 - `aristocrat`
@@ -1219,7 +1187,6 @@
 - `calcium`
 - `cannon`
 - `canoe`
-- `canvas`
 - `caption`
 - `captive`
 - `caravan`
@@ -1268,7 +1235,6 @@
 - `complexion`
 - `compliment`
 - `composite`
-- `compress`
 - `conceit`
 - `conceive`
 - `concise`
@@ -1388,9 +1354,6 @@
 - `expire`
 - `exponent`
 - `exposition`
-- `exquisite`
-- `extract`
-- `extravagant`
 - `fabulous`
 - `facet`
 - `fascist`
@@ -1509,14 +1472,12 @@
 - `lieutenant`
 - `lime`
 - `limelight`
-- `liner`
 - `linguistic`
 - `lipstick`
 - `livestock`
 - `locomotive`
 - `lofty`
 - `logistics`
-- `longevity`
 - `loom`
 - `loop`
 - `loot`
@@ -1530,7 +1491,6 @@
 - `malignant`
 - `malpractice`
 - `mansion`
-- `mar`
 - `marble`
 - `maritime`
 - `martyr`
@@ -1540,13 +1500,11 @@
 - `medieval`
 - `melody`
 - `menace`
-- `merchandise`
 - `mercury`
 - `metabolism`
 - `midwife`
 - `militant`
 - `militia`
-- `mindset`
 - `mingle`
 - `mint`
 - `missionary`
@@ -1601,7 +1559,6 @@
 - `pasture`
 - `pathetic`
 - `patriot`
-- `patron`
 - `peck`
 - `pedal`
 - `peddle`
@@ -1630,7 +1587,6 @@
 - `premium`
 - `preoccupy`
 - `prerequisite`
-- `prolong`
 - `prone`
 - `propaganda`
 - `proximate`
@@ -1644,7 +1600,6 @@
 - `random`
 - `rap`
 - `rape`
-- `rash`
 - `rattle`
 - `recede`
 - `reel`
@@ -1676,7 +1631,6 @@
 - `scenario`
 - `scorn`
 - `scramble`
-- `scrap`
 - `sculpture`
 - `secular`
 - `seduce`
@@ -1720,9 +1674,7 @@
 - `steward`
 - `stewardess`
 - `stigma`
-- `stitch`
 - `stoop`
-- `strand`
 - `strangle`
 - `stray`
 - `streak`
@@ -1747,11 +1699,8 @@
 - `syndicate`
 - `syndrome`
 - `synonym`
-- `synthesis`
 - `taboo`
-- `tack`
 - `tan`
-- `tangle`
 - `tanker`
 - `tease`
 - `temperament`
@@ -1774,7 +1723,6 @@
 - `tropic`
 - `trumpet`
 - `tub`
-- `tuck`
 - `tug`
 - `turnout`
 - `turnover`
@@ -1794,11 +1742,9 @@
 - `vice`
 - `vicious`
 - `virgin`
-- `vogue`
 - `void`
 - `vulgar`
 - `waive`
-- `wardrobe`
 - `whereabouts`
 - `whereby`
 - `whirl`

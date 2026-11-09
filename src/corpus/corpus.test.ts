@@ -6877,6 +6877,190 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 48《老裁缝修补旧毛料外衣》（passage-048），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-048');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe('A Veteran Tailor Mends an Old Wool Coat');
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(80);
+
+    // 验证包含 Issue #58 规划的核心目标词目
+    for (const targetId of [
+      'tailor',
+      'garment',
+      'wool',
+      'sew',
+      'fashion',
+      'alternative',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合服装修补、织物结构、长效品质与消费反思核心大纲词目
+    for (const id of [
+      'old-fashioned',
+      'patron',
+      'dump',
+      'scrap',
+      'tear²',
+      'sleeve',
+      'waist',
+      'reckon',
+      'casual',
+      'vogue',
+      'canvas',
+      'apron',
+      'clothe',
+      'textile',
+      'merchandise',
+      'stuff',
+      'dent',
+      'wrinkle',
+      'mar',
+      'exterior',
+      'liner',
+      'underneath',
+      'extravagant',
+      'straightforward',
+      'prolong',
+      'longevity',
+      'scissors',
+      'trim',
+      'tangle',
+      'strand',
+      'extract',
+      'stitch',
+      'silk',
+      'split',
+      'tack',
+      'tuck',
+      'elbow',
+      'button',
+      'wax',
+      'string',
+      'compress',
+      'straight',
+      'collar',
+      'invisible',
+      'exquisite',
+      'content²',
+      'confess',
+      'throw',
+      'rash',
+      'wardrobe',
+      'brand-new',
+      'substitute',
+      'considerate',
+      'mindset',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义体例规范：形容词以“的”结尾，副词以“地”结尾
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性与同形异义词目精准对齐
+    const p1s1Wool = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'wool'
+    );
+    expect(p1s1Wool).toBeDefined();
+    if (p1s1Wool && p1s1Wool.type === 'annotation') {
+      expect(p1s1Wool.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Tear = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'tear²'
+    );
+    expect(p1s2Tear).toBeDefined();
+    if (p1s2Tear && p1s2Tear.type === 'annotation') {
+      expect(p1s2Tear.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s3Canvas = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'canvas'
+    );
+    expect(p1s3Canvas).toBeDefined();
+    if (p1s3Canvas && p1s3Canvas.type === 'annotation') {
+      expect(p1s3Canvas.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Underneath = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'underneath'
+    );
+    expect(p2s2Underneath).toBeDefined();
+    if (p2s2Underneath && p2s2Underneath.type === 'annotation') {
+      expect(p2s2Underneath.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p3s2Fine = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'fine¹'
+    );
+    expect(p3s2Fine).toBeDefined();
+    if (p3s2Fine && p3s2Fine.type === 'annotation') {
+      expect(p3s2Fine.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Silk = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'silk'
+    );
+    expect(p3s2Silk).toBeDefined();
+    if (p3s2Silk && p3s2Silk.type === 'annotation') {
+      expect(p3s2Silk.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Collar = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'collar'
+    );
+    expect(p3s3Collar).toBeDefined();
+    if (p3s3Collar && p3s3Collar.type === 'annotation') {
+      expect(p3s3Collar.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s1Content = compiled.paragraphs[3].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'content²'
+    );
+    expect(p4s1Content).toBeDefined();
+    if (p4s1Content && p4s1Content.type === 'annotation') {
+      expect(p4s1Content.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
