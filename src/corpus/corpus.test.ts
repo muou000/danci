@@ -6267,6 +6267,204 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 45《社区菜园的水位提醒装置》（passage-045），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-045');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Water Level Indicator for the Community Garden'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(80);
+
+    // 验证包含 Issue #55 规划的核心目标词目
+    for (const targetId of ['patent']) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合社区菜园、机械零件、电路指示与开放分享核心大纲词目
+    for (const id of [
+      'acre',
+      'spade',
+      'backyard',
+      'lawn',
+      'nurture',
+      'cabbage',
+      'garlic',
+      'slender',
+      'stalk',
+      'dew',
+      'evaporate',
+      'wither',
+      'barrel',
+      'teenager',
+      'junior',
+      'crude',
+      'prototype',
+      'rack',
+      'elastic',
+      'hang',
+      'hook',
+      'alloy',
+      'shaft',
+      'lever',
+      'hinge',
+      'axis',
+      'pin',
+      'sway',
+      'groove',
+      'slot',
+      'peg',
+      'magnet',
+      'coil',
+      'transistor',
+      'socket',
+      'bulb',
+      'horn',
+      'signal',
+      'tick',
+      'heavy',
+      'saturate',
+      'affix',
+      'foil',
+      'lubricate',
+      'revolve',
+      'undo',
+      'apt',
+      'afterward',
+      'suggest',
+      'patent',
+      'monopoly',
+      'nonetheless',
+      'namely',
+      'matter',
+      'knowhow',
+      'pamphlet',
+      'leaflet',
+      'propagate',
+      'imitate',
+      'anew',
+      'thereby',
+      'invaluable',
+      'merit',
+      'altogether',
+      'alike',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义规范：形容词以“的”结尾，副词以“地”结尾，名词前置修饰标为形容词
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性（定语位置标注为形容词）
+    const p1s1Community = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'community'
+    );
+    expect(p1s1Community).toBeDefined();
+    if (p1s1Community && p1s1Community.type === 'annotation') {
+      expect(p1s1Community.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Alloy = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'alloy'
+    );
+    expect(p2s2Alloy).toBeDefined();
+    if (p2s2Alloy && p2s2Alloy.type === 'annotation') {
+      expect(p2s2Alloy.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s4Transistor = compiled.paragraphs[1].sentences[3].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'transistor'
+    );
+    expect(p2s4Transistor).toBeDefined();
+    if (p2s4Transistor && p2s4Transistor.type === 'annotation') {
+      expect(p2s4Transistor.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Revolving = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'revolve'
+    );
+    expect(p3s2Revolving).toBeDefined();
+    if (p3s2Revolving && p3s2Revolving.type === 'annotation') {
+      expect(p3s2Revolving.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Warn = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'warn'
+    );
+    expect(p3s3Warn).toBeDefined();
+    if (p3s3Warn && p3s3Warn.type === 'annotation') {
+      expect(p3s3Warn.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s1Afterward = compiled.paragraphs[3].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'afterward'
+    );
+    expect(p4s1Afterward).toBeDefined();
+    if (p4s1Afterward && p4s1Afterward.type === 'annotation') {
+      expect(p4s1Afterward.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p4s2Nonetheless = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'nonetheless'
+    );
+    expect(p4s2Nonetheless).toBeDefined();
+    if (p4s2Nonetheless && p4s2Nonetheless.type === 'annotation') {
+      expect(p4s2Nonetheless.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p4s2Namely = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'namely'
+    );
+    expect(p4s2Namely).toBeDefined();
+    if (p4s2Namely && p4s2Namely.type === 'annotation') {
+      expect(p4s2Namely.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p4s4Alike = compiled.paragraphs[3].sentences[3].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'alike'
+    );
+    expect(p4s4Alike).toBeDefined();
+    if (p4s4Alike && p4s4Alike.type === 'annotation') {
+      expect(p4s4Alike.gloss.startsWith('ad.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
