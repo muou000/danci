@@ -5740,6 +5740,273 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 43《震后山地隧道的安全检查》（passage-043），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-043');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('科技');
+    expect(passage!.titleEn).toBe(
+      'Post-Earthquake Safety Inspection of a Mountain Tunnel'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #53 规划的核心目标词目
+    for (const targetId of ['tunnel', 'steel', 'earthquake', 'blueprint']) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合震后隧道排查与钢构评估核心大纲词目
+    for (const id of [
+      'grim',
+      'aftermath',
+      'violent',
+      'danger',
+      'magnitude',
+      'transport',
+      'official',
+      'motorway',
+      'public',
+      'safe',
+      'appoint',
+      'inspect',
+      'crew',
+      'wear',
+      'protect',
+      'helmet',
+      'sturdy',
+      'boot',
+      'descend',
+      'warn',
+      'barrier',
+      'passage',
+      'steady',
+      'glow',
+      'emergency',
+      'sharp',
+      'ray',
+      'electricity',
+      'flash',
+      'pierce',
+      'gloom',
+      'scatter',
+      'dirt',
+      'cover',
+      'vibrate',
+      'shake',
+      'enter',
+      'carry',
+      'old',
+      'version',
+      'origin',
+      'engineer',
+      'evaluate',
+      'internal',
+      'layout',
+      'arch',
+      'profile',
+      'observe',
+      'shift',
+      'halfway',
+      'corridor',
+      'special',
+      'check¹',
+      'mass',
+      'beam',
+      'curve',
+      'arc',
+      'reinforce',
+      'rod',
+      'remain',
+      'stable',
+      'heavy',
+      'bracket',
+      'bolt',
+      'clamp',
+      'grip',
+      'ceiling',
+      'framework',
+      'metal',
+      'wedge',
+      'slip',
+      'inch',
+      'prove',
+      'intense',
+      'press²',
+      'deviate',
+      'slight',
+      'calculate',
+      'distinguish',
+      'conspicuous',
+      'cosmetic',
+      'crack',
+      'decorate',
+      'layer',
+      'deep',
+      'structure',
+      'defect¹',
+      'surface',
+      'concrete',
+      'crumble',
+      'detach',
+      'fragment',
+      'threat',
+      'shatter',
+      'technical',
+      'measure',
+      'cavity',
+      'depth',
+      'drain',
+      'ditch',
+      'mud',
+      'trickle',
+      'assume',
+      'immediate',
+      'analyze',
+      'infer',
+      'local',
+      'displace',
+      'factor',
+      'explain',
+      'disintegrate',
+      'emerge',
+      'brief',
+      'civic',
+      'lead¹',
+      'act',
+      'strict',
+      'accordance',
+      'code',
+      'recommend',
+      'temporary',
+      'vehicle',
+      'ban',
+      'advise',
+      'amend',
+      'damage',
+      'implement¹',
+      'task',
+      'accordingly',
+      'underline',
+      'preliminary',
+      'absolute',
+      'guarantee',
+      'admit',
+      'secondary',
+      'shock',
+      'endanger',
+      'traffic',
+      'demand',
+      'round',
+      'test',
+      'series',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证词性依语境准确判定（定语修饰作形容词，副词带“地”等）
+    const p1s1Motorway = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'motorway'
+    );
+    expect(p1s1Motorway).toBeDefined();
+    if (p1s1Motorway && p1s1Motorway.type === 'annotation') {
+      expect(p1s1Motorway.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Protective = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'protect'
+    );
+    expect(p1s2Protective).toBeDefined();
+    if (p1s2Protective && p1s2Protective.type === 'annotation') {
+      expect(p1s2Protective.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Halfway = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'halfway'
+    );
+    expect(p2s2Halfway).toBeDefined();
+    if (p2s2Halfway && p2s2Halfway.type === 'annotation') {
+      expect(p2s2Halfway.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p2s2Steel = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'steel'
+    );
+    expect(p2s2Steel).toBeDefined();
+    if (p2s2Steel && p2s2Steel.type === 'annotation') {
+      expect(p2s2Steel.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Ceiling = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'ceiling'
+    );
+    expect(p2s3Ceiling).toBeDefined();
+    if (p2s3Ceiling && p2s3Ceiling.type === 'annotation') {
+      expect(p2s3Ceiling.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Slightly = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'slight'
+    );
+    expect(p2s3Slightly).toBeDefined();
+    if (p2s3Slightly && p2s3Slightly.type === 'annotation') {
+      expect(p2s3Slightly.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p3s1Conspicuous = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'conspicuous'
+    );
+    expect(p3s1Conspicuous).toBeDefined();
+    if (p3s1Conspicuous && p3s1Conspicuous.type === 'annotation') {
+      expect(p3s1Conspicuous.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s1Cosmetic = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'cosmetic'
+    );
+    expect(p3s1Cosmetic).toBeDefined();
+    if (p3s1Cosmetic && p3s1Cosmetic.type === 'annotation') {
+      expect(p3s1Cosmetic.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Drainage = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'drain'
+    );
+    expect(p3s2Drainage).toBeDefined();
+    if (p3s2Drainage && p3s2Drainage.type === 'annotation') {
+      expect(p3s2Drainage.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s2Accordingly = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'accordingly'
+    );
+    expect(p4s2Accordingly).toBeDefined();
+    if (p4s2Accordingly && p4s2Accordingly.type === 'annotation') {
+      expect(p4s2Accordingly.gloss.startsWith('ad.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
