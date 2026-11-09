@@ -2,13 +2,12 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2756/4692 个非免注核心大纲词目（58.7%），尚有 1936 个待覆盖。
+当前覆盖 2820/4692 个非免注核心大纲词目（60.1%），尚有 1872 个待覆盖。
 
-## 四级词目（1156）
+## 四级词目（1127）
 
 - `abolish`
 - `absent`
-- `abstract`
 - `abuse`
 - `accompany`
 - `ace`
@@ -24,7 +23,6 @@
 - `album`
 - `alcohol`
 - `algebra`
-- `ally`
 - `alphabet`
 - `amaze`
 - `ambassador`
@@ -44,14 +42,12 @@
 - `apart`
 - `apt.`
 - `appropriate¹`
-- `army`
 - `arrest`
 - `asleep`
 - `ass`
 - `associate`
 - `astonish`
 - `atom`
-- `attempt`
 - `automobile`
 - `await`
 - `awake`
@@ -85,7 +81,6 @@
 - `bat`
 - `bath`
 - `bathe`
-- `battalion`
 - `battle`
 - `beard`
 - `beat`
@@ -93,7 +88,6 @@
 - `bee`
 - `beforehand`
 - `beg`
-- `behalf`
 - `belief`
 - `belly`
 - `beloved`
@@ -198,7 +192,6 @@
 - `cock`
 - `collar`
 - `colon`
-- `colony`
 - `comb`
 - `comedy`
 - `comma`
@@ -211,7 +204,6 @@
 - `contempt`
 - `content¹`
 - `content²`
-- `contest`
 - `contract²`
 - `contrary`
 - `cookie`
@@ -222,7 +214,6 @@
 - `cough`
 - `couple`
 - `coupon`
-- `court²`
 - `courtyard`
 - `coward`
 - `cowboy`
@@ -233,7 +224,6 @@
 - `cream`
 - `creep`
 - `crocodile`
-- `crown`
 - `cruel`
 - `cry`
 - `crystal`
@@ -278,7 +268,6 @@
 - `die`
 - `dime`
 - `dioxide`
-- `diplomat`
 - `disable`
 - `disagree`
 - `disappoint`
@@ -320,7 +309,6 @@
 - `embarrass`
 - `embassy`
 - `emperor`
-- `empire`
 - `enemy`
 - `enlarge`
 - `enquire`
@@ -392,7 +380,6 @@
 - `footprint`
 - `forbid`
 - `forehead`
-- `foreign`
 - `foremost`
 - `foresight`
 - `forever`
@@ -488,7 +475,6 @@
 - `hobby`
 - `holiday`
 - `holy`
-- `homeland`
 - `homosexual`
 - `homo`
 - `honeymoon`
@@ -508,7 +494,6 @@
 - `imagine`
 - `immigrate`
 - `immune`
-- `imperial`
 - `implement²`
 - `implicit`
 - `import`
@@ -651,7 +636,6 @@
 - `microwave`
 - `middle-class`
 - `mile`
-- `military`
 - `mill`
 - `mine³`
 - `minister`
@@ -674,7 +658,6 @@
 - `mule`
 - `murder`
 - `mushroom`
-- `myth`
 - `naked`
 - `nap`
 - `napkin`
@@ -689,7 +672,6 @@
 - `nonsense`
 - `northeast`
 - `northwest`
-- `notion`
 - `nourish`
 - `novel¹`
 - `nowadays`
@@ -731,7 +713,6 @@
 - `oval`
 - `overdue`
 - `overhear`
-- `overseas`
 - `overtake`
 - `overthrow`
 - `overwhelm`
@@ -744,7 +725,6 @@
 - `panda`
 - `paperback`
 - `parade`
-- `paradox`
 - `pardon`
 - `park²`
 - `parliament`
@@ -791,7 +771,6 @@
 - `pond`
 - `pool`
 - `pop`
-- `popular`
 - `pose`
 - `position`
 - `possible`
@@ -851,9 +830,7 @@
 - `rat`
 - `rate`
 - `react`
-- `realm`
 - `rear`
-- `rebel`
 - `reception`
 - `reckon`
 - `refer`
@@ -895,7 +872,6 @@
 - `rose`
 - `rouse`
 - `row²`
-- `royal`
 - `rude`
 - `runway`
 - `sack`
@@ -1020,8 +996,6 @@
 - `stuff`
 - `stupid`
 - `style`
-- `subject¹`
-- `subject²`
 - `substance`
 - `substitute`
 - `subtract`
@@ -1039,7 +1013,6 @@
 - `surgery`
 - `surname`
 - `surprise`
-- `surrender`
 - `swallow¹`
 - `swallow²`
 - `swipe`
@@ -1088,13 +1061,11 @@
 - `tragedy`
 - `tram`
 - `transplant`
-- `treaty`
 - `tremendous`
 - `triangle`
 - `trifle`
 - `triple`
 - `trolley`
-- `troop`
 - `trunk`
 - `try`
 - `tumor`
@@ -1163,7 +1134,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（780）
+## 六级星号词目（745）
 
 - `abbreviation`
 - `abnormal`
@@ -1200,7 +1171,6 @@
 - `analogy`
 - `anguish`
 - `animate`
-- `annex`
 - `antagonism`
 - `antenna`
 - `antibiotic`
@@ -1270,7 +1240,6 @@
 - `brood`
 - `Buddhism`
 - `buffalo`
-- `bureaucrat`
 - `burglar`
 - `bust`
 - `butt`
@@ -1382,7 +1351,6 @@
 - `delude`
 - `demographic`
 - `denounce`
-- `depict`
 - `deplore`
 - `deport`
 - `depot`
@@ -1407,15 +1375,12 @@
 - `disregard`
 - `dissent`
 - `dissertation`
-- `dissident`
 - `distill`
 - `divert`
 - `divine`
-- `doctrine`
 - `dodge`
 - `dogma`
 - `dole`
-- `domain`
 - `dome`
 - `dough`
 - `downgrade`
@@ -1439,7 +1404,6 @@
 - `emigrate`
 - `eminent`
 - `emulate`
-- `enact`
 - `enclose`
 - `encyclopedia`
 - `endorse`
@@ -1490,7 +1454,6 @@
 - `foretell`
 - `forfeit`
 - `formidable`
-- `fort`
 - `fortnight`
 - `franchise`
 - `frantic`
@@ -1521,7 +1484,6 @@
 - `herald`
 - `heroin`
 - `hibernate`
-- `hierarchy`
 - `hitherto`
 - `hive`
 - `hockey`
@@ -1542,7 +1504,6 @@
 - `hysterical`
 - `iceberg`
 - `icon`
-- `ideology`
 - `idiot`
 - `idol`
 - `ignite`
@@ -1556,7 +1517,6 @@
 - `incumbent`
 - `indebted`
 - `indefinite`
-- `indigenous`
 - `indignant`
 - `indulge`
 - `inertia`
@@ -1586,7 +1546,6 @@
 - `jolly`
 - `judicial`
 - `judiciary`
-- `jurisdiction`
 - `juvenile`
 - `kidnap`
 - `kidney`
@@ -1595,7 +1554,6 @@
 - `lad`
 - `lash`
 - `layman`
-- `legitimate`
 - `lenient`
 - `lesbian`
 - `levy`
@@ -1619,11 +1577,9 @@
 - `luminous`
 - `lure`
 - `lyric`
-- `magistrate`
 - `majesty`
 - `malignant`
 - `malpractice`
-- `mandate`
 - `mansion`
 - `mar`
 - `marble`
@@ -1638,7 +1594,6 @@
 - `merchandise`
 - `mercury`
 - `metabolism`
-- `metropolitan`
 - `midwife`
 - `militant`
 - `militia`
@@ -1650,7 +1605,6 @@
 - `mobilize`
 - `mock`
 - `molecule`
-- `monarchy`
 - `monotony`
 - `mortal`
 - `mosquito`
@@ -1662,7 +1616,6 @@
 - `nickname`
 - `nil`
 - `nitrogen`
-- `nominal`
 - `nominate`
 - `notorious`
 - `notwithstanding`
@@ -1733,7 +1686,6 @@
 - `preoccupy`
 - `prerequisite`
 - `preside`
-- `pretext`
 - `prolong`
 - `prone`
 - `propaganda`
@@ -1769,9 +1721,7 @@
 - `retaliate`
 - `retarded`
 - `retort`
-- `retrospect`
 - `revenge`
-- `revolt`
 - `rig`
 - `ritual`
 - `ruthless`
@@ -1800,7 +1750,6 @@
 - `shorthand`
 - `shove`
 - `shred`
-- `shrewd`
 - `simultaneous`
 - `sinister`
 - `slack`
@@ -1816,7 +1765,6 @@
 - `sodium`
 - `solicit`
 - `solitary`
-- `sovereign`
 - `spaghetti`
 - `spectrum`
 - `spider`
@@ -1824,13 +1772,11 @@
 - `sprinkle`
 - `stab`
 - `stammer`
-- `stance`
 - `standby`
 - `staple²`
 - `stark`
 - `static`
 - `stationery`
-- `statute`
 - `stereotype`
 - `steward`
 - `stewardess`
@@ -1845,7 +1791,6 @@
 - `stump`
 - `stun`
 - `submarine`
-- `subordinate`
 - `subscribe`
 - `subsistence`
 - `sue`
@@ -1854,7 +1799,6 @@
 - `suite`
 - `sulfur`
 - `superstition`
-- `suppress`
 - `surpass`
 - `surveillance`
 - `susceptible`
@@ -1873,7 +1817,6 @@
 - `tan`
 - `tangle`
 - `tanker`
-- `tariff`
 - `tease`
 - `temperament`
 - `temporal`
@@ -1882,13 +1825,11 @@
 - `tertiary`
 - `thigh`
 - `thorn`
-- `throne`
 - `tickle`
 - `toil`
 - `topple`
 - `tornado`
 - `toxic`
-- `transcend`
 - `trauma`
 - `trench`
 - `tribune`
@@ -1905,11 +1846,8 @@
 - `turnover`
 - `turtle`
 - `ultra`
-- `unify`
 - `unilateral`
 - `unleash`
-- `unprecedented`
-- `unveil`
 - `uprising`
 - `uranium`
 - `urine`
@@ -1933,7 +1871,6 @@
 - `whirl`
 - `wholesale`
 - `wicked`
-- `wield`
 - `wink`
 - `witch`
 - `withhold`
@@ -1941,7 +1878,6 @@
 - `wretched`
 - `yacht`
 - `yawn`
-- `zeal`
 - `zigzag`
 - `zip`
 - `zoom`

@@ -6465,6 +6465,199 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 46《帝国地图与边疆行政边界》（passage-046），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-046');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('历史文化');
+    expect(passage!.titleEn).toBe(
+      'Imperial Maps and Frontier Administrative Boundaries'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(80);
+
+    // 验证包含 Issue #56 规划的核心目标词目
+    for (const targetId of [
+      'colony',
+      'empire',
+      'imperial',
+      'territory',
+      'frontier',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合帝国统治、官僚管辖、边疆反抗与历史反思核心大纲词目
+    for (const id of [
+      'monarchy',
+      'sovereign',
+      'crown',
+      'unify',
+      'realm',
+      'military',
+      'troop',
+      'fort',
+      'court²',
+      'army',
+      'battalion',
+      'unprecedented',
+      'zeal',
+      'metropolitan',
+      'bureaucrat',
+      'magistrate',
+      'wield',
+      'jurisdiction',
+      'statute',
+      'treaty',
+      'shrewd',
+      'diplomat',
+      'ally',
+      'tariff',
+      'foreign',
+      'annex',
+      'subordinate',
+      'overseas',
+      'legitimate',
+      'behalf',
+      'throne',
+      'hierarchy',
+      'stance',
+      'indigenous',
+      'homeland',
+      'nominal',
+      'subject¹',
+      'mandate',
+      'suppress',
+      'dissident',
+      'rebel',
+      'revolt',
+      'surrender',
+      'domain',
+      'transcend',
+      'popular',
+      'myth',
+      'retrospect',
+      'pretext',
+      'paradox',
+      'abstract',
+      'notion',
+      'subject²',
+      'doctrine',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义规范：形容词以“的”结尾，副词以“地”结尾，名词前置修饰标为形容词
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性与同形异义词目
+    const p1s1Territorial = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'territory'
+    );
+    expect(p1s1Territorial).toBeDefined();
+    if (p1s1Territorial && p1s1Territorial.type === 'annotation') {
+      expect(p1s1Territorial.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Military = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'military'
+    );
+    expect(p1s2Military).toBeDefined();
+    if (p1s2Military && p1s2Military.type === 'annotation') {
+      expect(p1s2Military.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s3Court = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'court²'
+    );
+    expect(p1s3Court).toBeDefined();
+    if (p1s3Court && p1s3Court.type === 'annotation') {
+      expect(p1s3Court.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p1s3Army = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'army'
+    );
+    expect(p1s3Army).toBeDefined();
+    if (p1s3Army && p1s3Army.type === 'annotation') {
+      expect(p1s3Army.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Metropolitan = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'metropolitan'
+    );
+    expect(p2s1Metropolitan).toBeDefined();
+    if (p2s1Metropolitan && p2s1Metropolitan.type === 'annotation') {
+      expect(p2s1Metropolitan.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Annexed = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'annex'
+    );
+    expect(p2s3Annexed).toBeDefined();
+    if (p2s3Annexed && p2s3Annexed.type === 'annotation') {
+      expect(p2s3Annexed.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Purely = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'pure'
+    );
+    expect(p3s2Purely).toBeDefined();
+    if (p3s2Purely && p3s2Purely.type === 'annotation') {
+      expect(p3s2Purely.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p3s2Subjects = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'subject¹'
+    );
+    expect(p3s2Subjects).toBeDefined();
+    if (p3s2Subjects && p3s2Subjects.type === 'annotation') {
+      expect(p3s2Subjects.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p4s3Subject = compiled.paragraphs[3].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'subject²'
+    );
+    expect(p4s3Subject).toBeDefined();
+    if (p4s3Subject && p4s3Subject.type === 'annotation') {
+      expect(p4s3Subject.gloss.startsWith('v.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
