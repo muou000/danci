@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2532/4692 个非免注核心大纲词目（54.0%），尚有 2160 个待覆盖。
+当前覆盖 2580/4692 个非免注核心大纲词目（55.0%），尚有 2112 个待覆盖。
 
-## 四级词目（1295）
+## 四级词目（1266）
 
 - `abolish`
 - `absent`
@@ -18,7 +18,6 @@
 - `acid`
 - `acre`
 - `addict`
-- `administrate`
 - `admit`
 - `advantage`
 - `aerial`
@@ -66,7 +65,6 @@
 - `astonish`
 - `atom`
 - `attempt`
-- `attic`
 - `automobile`
 - `await`
 - `awake`
@@ -194,7 +192,6 @@
 - `castle`
 - `casual`
 - `cattle`
-- `cellar`
 - `chairman`
 - `chalk`
 - `champagne`
@@ -302,7 +299,6 @@
 - `devil`
 - `dew`
 - `diabetes`
-- `dial`
 - `diamond`
 - `dictate`
 - `die`
@@ -370,7 +366,6 @@
 - `eternal`
 - `ethnic`
 - `euro`
-- `eve`
 - `eventually`
 - `everywhere`
 - `evil`
@@ -425,7 +420,6 @@
 - `flame`
 - `flash`
 - `flee`
-- `flexible`
 - `fly²`
 - `fond`
 - `fool`
@@ -440,7 +434,6 @@
 - `forgive`
 - `format`
 - `former`
-- `formulate`
 - `forth`
 - `forthcoming`
 - `fortune`
@@ -452,7 +445,6 @@
 - `frog`
 - `fry`
 - `fuck`
-- `fuel`
 - `fun`
 - `funeral`
 - `fur`
@@ -471,7 +463,6 @@
 - `germ`
 - `ghost`
 - `given`
-- `gloom`
 - `glow`
 - `glue`
 - `goat`
@@ -537,7 +528,6 @@
 - `hip`
 - `hit`
 - `hobby`
-- `hole`
 - `holiday`
 - `holy`
 - `homeland`
@@ -583,7 +573,6 @@
 - `influence`
 - `influenza`
 - `flu`
-- `inhabit`
 - `inherit`
 - `inn`
 - `insane`
@@ -596,8 +585,6 @@
 - `insure`
 - `intangible`
 - `interfere`
-- `interior`
-- `interrupt`
 - `intimate`
 - `intrude`
 - `invade`
@@ -605,7 +592,6 @@
 - `invaluable`
 - `invariably`
 - `invisible`
-- `inward`
 - `irony`
 - `irrational`
 - `jam¹`
@@ -635,7 +621,6 @@
 - `knock`
 - `knowhow`
 - `lace`
-- `lag`
 - `lamb`
 - `lame`
 - `landlady`
@@ -708,7 +693,6 @@
 - `math`
 - `mathematics`
 - `matter`
-- `maximum`
 - `mean²`
 - `mean³`
 - `means`
@@ -723,7 +707,6 @@
 - `mercy`
 - `merit`
 - `merry`
-- `meter`
 - `metro`
 - `microwave`
 - `middle-class`
@@ -763,7 +746,6 @@
 - `naughty`
 - `navy`
 - `necklace`
-- `needle`
 - `negate`
 - `nephew`
 - `nice`
@@ -793,7 +775,6 @@
 - `oftentimes`
 - `okay`
 - `old-fashioned`
-- `ongoing`
 - `onion`
 - `onward`
 - `opera`
@@ -815,7 +796,6 @@
 - `oval`
 - `overdue`
 - `overhear`
-- `overnight`
 - `overseas`
 - `oversee`
 - `overtake`
@@ -923,12 +903,10 @@
 - `provoke`
 - `psychology`
 - `pub`
-- `pulse`
 - `punch`
 - `punish`
 - `purse`
 - `push`
-- `quantify`
 - `quantity`
 - `quarrel`
 - `queue`
@@ -963,7 +941,6 @@
 - `regret`
 - `relate`
 - `relax`
-- `relay`
 - `release`
 - `relevant`
 - `religion`
@@ -977,7 +954,6 @@
 - `resort²`
 - `respective`
 - `rest²`
-- `restrict`
 - `résumé`
 - `retell`
 - `retreat`
@@ -1034,7 +1010,6 @@
 - `sex`
 - `shadow`
 - `shave`
-- `shed`
 - `sheer`
 - `shell`
 - `shit`
@@ -1162,13 +1137,11 @@
 - `swallow²`
 - `sway`
 - `swipe`
-- `switch`
 - `sword`
 - `tag`
 - `tailor`
 - `takeoff`
 - `tame`
-- `tank`
 - `tear²`
 - `technique`
 - `tech`
@@ -1264,7 +1237,6 @@
 - `virtue`
 - `virus`
 - `volleyball`
-- `volt`
 - `wagon`
 - `waist`
 - `wake`
@@ -1291,7 +1263,6 @@
 - `worship`
 - `worst`
 - `worth`
-- `wrap`
 - `wreck`
 - `wrinkle`
 - `wrong`
@@ -1302,7 +1273,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（865）
+## 六级星号词目（846）
 
 - `abbreviation`
 - `abnormal`
@@ -1376,7 +1347,6 @@
 - `atrocity`
 - `auction`
 - `autobiography`
-- `auxiliary`
 - `avail`
 - `avenge`
 - `avert`
@@ -1403,7 +1373,6 @@
 - `blackmail`
 - `blaze`
 - `bleach`
-- `bleak`
 - `blink`
 - `bloc`
 - `blunt`
@@ -1556,7 +1525,6 @@
 - `devastate`
 - `deviate`
 - `devour`
-- `diesel`
 - `diffuse`
 - `dilute`
 - `directory`
@@ -1583,7 +1551,6 @@
 - `dressing`
 - `dub`
 - `dwarf`
-- `dwell`
 - `Easter`
 - `eccentric`
 - `eclipse`
@@ -1641,7 +1608,6 @@
 - `feast`
 - `feat`
 - `feminine`
-- `finite`
 - `fiscal`
 - `flank`
 - `flap`
@@ -1652,20 +1618,17 @@
 - `flirt`
 - `flush`
 - `flutter`
-- `foam`
 - `foe`
 - `foil`
 - `foretell`
 - `forfeit`
 - `formidable`
 - `fort`
-- `fortify`
 - `fortnight`
 - `franchise`
 - `frantic`
 - `frown`
 - `fury`
-- `fuse`
 - `fusion`
 - `futile`
 - `galaxy`
@@ -1745,7 +1708,6 @@
 - `integral`
 - `intelligible`
 - `intercourse`
-- `intermittent`
 - `intrigue`
 - `intrinsic`
 - `intuition`
@@ -1764,7 +1726,6 @@
 - `jolly`
 - `judicial`
 - `judiciary`
-- `junction`
 - `jurisdiction`
 - `juvenile`
 - `kidnap`
@@ -1863,10 +1824,8 @@
 - `onset`
 - `opaque`
 - `oppress`
-- `optimum`
 - `ordeal`
 - `orthodox`
-- `outfit`
 - `outlaw`
 - `outrage`
 - `overlap`
@@ -1887,7 +1846,6 @@
 - `parole`
 - `parrot`
 - `partisan`
-- `partition`
 - `passerby`
 - `pasta`
 - `pastry`
@@ -1941,7 +1899,6 @@
 - `quart`
 - `query`
 - `quiver`
-- `radiate`
 - `radioactive`
 - `ranch`
 - `random`
@@ -1951,7 +1908,6 @@
 - `ratify`
 - `rattle`
 - `recede`
-- `recur`
 - `reel`
 - `referendum`
 - `refuge`
@@ -2034,7 +1990,6 @@
 - `sprinkle`
 - `stab`
 - `stalk`
-- `stall`
 - `stammer`
 - `stance`
 - `standby`
@@ -2060,7 +2015,6 @@
 - `submarine`
 - `subordinate`
 - `subscribe`
-- `subsidy`
 - `subsistence`
 - `sue`
 - `suffice`
@@ -2133,7 +2087,6 @@
 - `vaccine`
 - `vein`
 - `velvet`
-- `vent`
 - `verge`
 - `versatile`
 - `verse`
@@ -2148,7 +2101,6 @@
 - `vulgar`
 - `waive`
 - `wardrobe`
-- `watt`
 - `wedge`
 - `whereabouts`
 - `whereby`

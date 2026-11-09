@@ -5526,6 +5526,220 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 42 满足主题自然度、词量及行间标注校验规范，覆盖全部规划目标词并实现零超纲词纯大纲覆盖', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-042');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('生态环境');
+    expect(passage!.titleEn).toBe(
+      'Power Grids and Energy Storage in a Remote Community'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #52 规划的核心目标词目
+    for (const targetId of [
+      'grid',
+      'battery',
+      'fuel',
+      'utility',
+      'meter',
+      'insulate',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合偏远微网与储能改造核心大纲词目
+    for (const id of [
+      'remote',
+      'valley',
+      'reside',
+      'inhabit',
+      'bleak',
+      'dwell',
+      'severe',
+      'power',
+      'eve',
+      'gloom',
+      'arrive',
+      'household',
+      'switch',
+      'appliance',
+      'cause',
+      'sudden',
+      'drop',
+      'interrupt',
+      'local',
+      'diesel',
+      'engine',
+      'consume',
+      'shed',
+      'resolve',
+      'recur',
+      'challenge',
+      'engineer',
+      'administrate',
+      'municipal',
+      'formulate',
+      'ongoing',
+      'reform',
+      'modern',
+      'subsidy',
+      'trial',
+      'crew',
+      'install',
+      'auxiliary',
+      'store²',
+      'outfit',
+      'transmit',
+      'junction',
+      'add',
+      'sensitive',
+      'relay',
+      'protect',
+      'fuse',
+      'buffer',
+      'intermittent',
+      'surge',
+      'steady',
+      'pulse',
+      'current',
+      'eliminate',
+      'supply',
+      'lag',
+      'meanwhile',
+      'practical',
+      'act',
+      'fortify',
+      'expose',
+      'manage',
+      'finite',
+      'resource',
+      'seal',
+      'hole',
+      'gap',
+      'attic',
+      'damp',
+      'cellar',
+      'foam',
+      'wrap',
+      'heat',
+      'pipe',
+      'radiate',
+      'fit',
+      'flexible',
+      'partition',
+      'vent',
+      'restrict',
+      'inward',
+      'chill',
+      'retain',
+      'interior',
+      'comfort',
+      'overnight',
+      'digit',
+      'test',
+      'dial',
+      'help',
+      'technical',
+      'quantify',
+      'collective',
+      'benefit',
+      'needle',
+      'fluctuate',
+      'observe',
+      'stable',
+      'volt',
+      'level',
+      'reduce',
+      'maximum',
+      'watt',
+      'peak',
+      'measure',
+      'tank',
+      'stall',
+      'prove',
+      'effect',
+      'curb',
+      'waste',
+      'achieve',
+      'optimum',
+      'efficient',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 语境词性匹配专项校验：作定语的名词标注为 a. 形容词；副词以“地”结尾
+    const p1s1Power = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'power'
+    );
+    expect(p1s1Power).toBeDefined();
+    if (p1s1Power && p1s1Power.type === 'annotation') {
+      expect(p1s1Power.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Diesel = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'diesel'
+    );
+    expect(p1s2Diesel).toBeDefined();
+    if (p1s2Diesel && p1s2Diesel.type === 'annotation') {
+      expect(p1s2Diesel.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Battery = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'battery'
+    );
+    expect(p2s2Battery).toBeDefined();
+    if (p2s2Battery && p2s2Battery.type === 'annotation') {
+      expect(p2s2Battery.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Storage = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'store²'
+    );
+    expect(p2s2Storage).toBeDefined();
+    if (p2s2Storage && p2s2Storage.type === 'annotation') {
+      expect(p2s2Storage.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s2Volt = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'volt'
+    );
+    expect(p4s2Volt).toBeDefined();
+    if (p4s2Volt && p4s2Volt.type === 'annotation') {
+      expect(p4s2Volt.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s2Watt = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'watt'
+    );
+    expect(p4s2Watt).toBeDefined();
+    if (p4s2Watt && p4s2Watt.type === 'annotation') {
+      expect(p4s2Watt.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
