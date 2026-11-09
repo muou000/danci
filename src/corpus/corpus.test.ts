@@ -6007,6 +6007,266 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 44《家庭遗产与代际传承》（passage-044），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-044');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'Family Heritage and Generational Continuity'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(100);
+
+    // 验证包含 Issue #54 规划的核心目标词目
+    for (const targetId of ['widow', 'inherit', 'spouse', 'grandchild']) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合家庭遗产、工坊工具与代际传承核心大纲词目
+    for (const id of [
+      'midst',
+      'grief',
+      'elder',
+      'widow',
+      'continue',
+      'mourn',
+      'spouse',
+      'inherit',
+      'rural',
+      'barn',
+      'workshop',
+      'oak',
+      'bench',
+      'carve',
+      'timber',
+      'weep',
+      'soft',
+      'recall',
+      'fond',
+      'memory',
+      'stifle',
+      'sorrow',
+      'sob',
+      'adolescent',
+      'grandchild',
+      'approach',
+      'console',
+      'tender',
+      'affection',
+      'listen',
+      'release',
+      'weary',
+      'sigh',
+      'nephew',
+      'impatient',
+      'niece',
+      'arrive',
+      'deliberate',
+      'complex',
+      'estate',
+      'survey',
+      'scatter',
+      'heap',
+      'iron',
+      'nail',
+      'thick',
+      'pile',
+      'dry',
+      'glue',
+      'wax',
+      'paint',
+      'urge',
+      'sell',
+      'property',
+      'auction',
+      'bitter',
+      'quarrel',
+      'threat',
+      'erupt',
+      'anxious',
+      'heir',
+      'clash',
+      'dispose',
+      'deem',
+      'trouble',
+      'possess',
+      'hold',
+      'token',
+      'yearn',
+      'preserve',
+      'antique',
+      'tool',
+      'deep',
+      'reminiscent',
+      'carpenter',
+      'fine¹',
+      'masterpiece',
+      'deliver',
+      'eloquent',
+      'plea',
+      'youth',
+      'praise',
+      'ingenious',
+      'manual',
+      'technique',
+      'remark',
+      'precise',
+      'aesthetic',
+      'worth',
+      'relish',
+      'raw',
+      'board',
+      'argue',
+      'create',
+      'heritage',
+      'sacred',
+      'treasure',
+      'temporary',
+      'commodity',
+      'heartfelt',
+      'sentiment',
+      'step',
+      'forward',
+      'mediate',
+      'dispute',
+      'undoubtedly',
+      'calm',
+      'relative',
+      'reach',
+      'unanimous',
+      'accord',
+      'convert',
+      'history',
+      'live¹',
+      'memorial',
+      'studio',
+      'kin',
+      'reunite',
+      'celebrate',
+      'tradition',
+      'craft',
+      'vow',
+      'oversee',
+      'restore',
+      'entrust',
+      'community',
+      'apprentice',
+      'impart',
+      'skill',
+      'acknowledge',
+      'owe',
+      'mutual',
+      'harmony',
+      'endure',
+      'virtue',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义规范：形容词以“的”结尾，副词以“地”结尾，名词前置修饰标为形容词
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性（定语位置标注为形容词）
+    const p1s1Barn = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'barn'
+    );
+    expect(p1s1Barn).toBeDefined();
+    if (p1s1Barn && p1s1Barn.type === 'annotation') {
+      expect(p1s1Barn.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Oak = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'oak'
+    );
+    expect(p1s2Oak).toBeDefined();
+    if (p1s2Oak && p1s2Oak.type === 'annotation') {
+      expect(p1s2Oak.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s2Softly = compiled.paragraphs[0].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'soft'
+    );
+    expect(p1s2Softly).toBeDefined();
+    if (p1s2Softly && p1s2Softly.type === 'annotation') {
+      expect(p1s2Softly.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p2s2Iron = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'iron'
+    );
+    expect(p2s2Iron).toBeDefined();
+    if (p2s2Iron && p2s2Iron.type === 'annotation') {
+      expect(p2s2Iron.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s1Antique = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'antique'
+    );
+    expect(p3s1Antique).toBeDefined();
+    if (p3s1Antique && p3s1Antique.type === 'annotation') {
+      expect(p3s1Antique.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Manual = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'manual'
+    );
+    expect(p3s2Manual).toBeDefined();
+    if (p3s2Manual && p3s2Manual.type === 'annotation') {
+      expect(p3s2Manual.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s1Undoubtedly = compiled.paragraphs[3].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'undoubtedly'
+    );
+    expect(p4s1Undoubtedly).toBeDefined();
+    if (p4s1Undoubtedly && p4s1Undoubtedly.type === 'annotation') {
+      expect(p4s1Undoubtedly.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p4s3Community = compiled.paragraphs[3].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'community'
+    );
+    expect(p4s3Community).toBeDefined();
+    if (p4s3Community && p4s3Community.type === 'annotation') {
+      expect(p4s3Community.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

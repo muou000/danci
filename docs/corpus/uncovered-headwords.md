@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2636/4692 个非免注核心大纲词目（56.2%），尚有 2056 个待覆盖。
+当前覆盖 2693/4692 个非免注核心大纲词目（57.4%），尚有 1999 个待覆盖。
 
-## 四级词目（1228）
+## 四级词目（1193）
 
 - `abolish`
 - `absent`
@@ -18,7 +18,6 @@
 - `advantage`
 - `aerial`
 - `affect`
-- `affection`
 - `affluent`
 - `afraid`
 - `afterward`
@@ -44,7 +43,6 @@
 - `annoy`
 - `ant`
 - `anticipate`
-- `antique`
 - `anyhow`
 - `anyway`
 - `anywhere`
@@ -266,7 +264,6 @@
 - `deal²`
 - `dear`
 - `deed`
-- `deem`
 - `defect²`
 - `deficient`
 - `definite`
@@ -403,7 +400,6 @@
 - `flame`
 - `flee`
 - `fly²`
-- `fond`
 - `fool`
 - `footprint`
 - `forbid`
@@ -444,7 +440,6 @@
 - `germ`
 - `ghost`
 - `given`
-- `glue`
 - `goat`
 - `god`
 - `gold`
@@ -458,7 +453,6 @@
 - `grab`
 - `gram`
 - `grand`
-- `grandchild`
 - `graph`
 - `gravitation`
 - `greenhouse`
@@ -489,12 +483,10 @@
 - `headache`
 - `headmaster`
 - `headquarters`
-- `heap`
 - `hear`
 - `heaven`
 - `hectare`
 - `heel`
-- `heir`
 - `helicopter`
 - `hell`
 - `hello`
@@ -532,7 +524,6 @@
 - `imitate`
 - `immigrate`
 - `immune`
-- `impatient`
 - `imperial`
 - `implement²`
 - `implicit`
@@ -549,7 +540,6 @@
 - `influence`
 - `influenza`
 - `flu`
-- `inherit`
 - `inn`
 - `insane`
 - `insect`
@@ -663,7 +653,6 @@
 - `marshal`
 - `Marxism`
 - `massage`
-- `masterpiece`
 - `mat`
 - `math`
 - `mathematics`
@@ -677,7 +666,6 @@
 - `melt`
 - `memorandum`
 - `memo`
-- `memorial`
 - `mention`
 - `mercy`
 - `merit`
@@ -710,7 +698,6 @@
 - `murder`
 - `mushroom`
 - `myth`
-- `nail`
 - `naked`
 - `namely`
 - `nap`
@@ -721,10 +708,8 @@
 - `navy`
 - `necklace`
 - `negate`
-- `nephew`
 - `nice`
 - `nickel`
-- `niece`
 - `nonsense`
 - `northeast`
 - `northwest`
@@ -771,15 +756,12 @@
 - `overdue`
 - `overhear`
 - `overseas`
-- `oversee`
 - `overtake`
 - `overthrow`
 - `overwhelm`
-- `owe`
 - `ox`
 - `ozone`
 - `paddy`
-- `paint`
 - `palace`
 - `pale`
 - `palm`
@@ -815,7 +797,6 @@
 - `pick`
 - `picnic`
 - `pigeon`
-- `pile`
 - `pill`
 - `pillow`
 - `pin`
@@ -839,7 +820,6 @@
 - `popular`
 - `pose`
 - `position`
-- `possess`
 - `possible`
 - `post²`
 - `postcard`
@@ -881,7 +861,6 @@
 - `purse`
 - `push`
 - `quantity`
-- `quarrel`
 - `queue`
 - `quit`
 - `quiz`
@@ -912,7 +891,6 @@
 - `regret`
 - `relate`
 - `relax`
-- `release`
 - `relevant`
 - `religion`
 - `remember`
@@ -928,7 +906,6 @@
 - `résumé`
 - `retell`
 - `retreat`
-- `reunite`
 - `reverse`
 - `revolution`
 - `revolve`
@@ -966,7 +943,6 @@
 - `seed`
 - `seize`
 - `select`
-- `sell`
 - `semester`
 - `senate`
 - `sequence`
@@ -988,7 +964,6 @@
 - `shrug`
 - `shy`
 - `siege`
-- `sigh`
 - `sight`
 - `sightseeing`
 - `signal`
@@ -1041,7 +1016,6 @@
 - `sponsor`
 - `sportsman`
 - `sportswoman`
-- `spouse`
 - `spray`
 - `spur`
 - `spy`
@@ -1108,7 +1082,6 @@
 - `takeoff`
 - `tame`
 - `tear²`
-- `technique`
 - `tech`
 - `teen`
 - `teenager`
@@ -1142,7 +1115,6 @@
 - `toast`
 - `tobacco`
 - `toilet`
-- `token`
 - `tolerate`
 - `ton`
 - `torture`
@@ -1152,7 +1124,6 @@
 - `tragedy`
 - `tram`
 - `transplant`
-- `treasure`
 - `treaty`
 - `tremendous`
 - `triangle`
@@ -1174,7 +1145,6 @@
 - `underneath`
 - `underwear`
 - `undo`
-- `undoubtedly`
 - `upload`
 - `upset`
 - `upstairs`
@@ -1196,7 +1166,6 @@
 - `violate`
 - `violin`
 - `virtual`
-- `virtue`
 - `virus`
 - `volleyball`
 - `wagon`
@@ -1205,10 +1174,8 @@
 - `war`
 - `warfare`
 - `warrior`
-- `wax`
 - `webcast`
 - `wed`
-- `weep`
 - `weird`
 - `well²`
 - `well-known`
@@ -1216,7 +1183,6 @@
 - `whale`
 - `whip`
 - `whisky`
-- `widow`
 - `wish`
 - `wit`
 - `wolf`
@@ -1224,7 +1190,6 @@
 - `worse`
 - `worship`
 - `worst`
-- `worth`
 - `wreck`
 - `wrinkle`
 - `wrong`
@@ -1235,7 +1200,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（828）
+## 六级星号词目（806）
 
 - `abbreviation`
 - `abnormal`
@@ -1246,11 +1211,9 @@
 - `acclaim`
 - `acupuncture`
 - `adhere`
-- `adolescent`
 - `adore`
 - `advent`
 - `adversary`
-- `aesthetic`
 - `affiliate`
 - `affix`
 - `afloat`
@@ -1304,14 +1267,12 @@
 - `astray`
 - `asylum`
 - `atrocity`
-- `auction`
 - `autobiography`
 - `avail`
 - `avenge`
 - `avert`
 - `bald`
 - `barge`
-- `barn`
 - `barracks`
 - `barren`
 - `bass`
@@ -1416,7 +1377,6 @@
 - `configuration`
 - `congregate`
 - `connotation`
-- `console`
 - `conspire`
 - `constituent`
 - `consulate`
@@ -1513,7 +1473,6 @@
 - `elastic`
 - `electoral`
 - `elicit`
-- `eloquent`
 - `emancipate`
 - `embargo`
 - `embody`
@@ -1529,7 +1488,6 @@
 - `enlist`
 - `ensue`
 - `entity`
-- `entrust`
 - `envelop`
 - `envisage`
 - `envoy`
@@ -1636,7 +1594,6 @@
 - `ignite`
 - `illicit`
 - `imminent`
-- `impart`
 - `impetus`
 - `impromptu`
 - `inaugurate`
@@ -1651,7 +1608,6 @@
 - `inertia`
 - `inflict`
 - `infringe`
-- `ingenious`
 - `inject`
 - `inmate`
 - `innumerable`
@@ -1725,7 +1681,6 @@
 - `masculine`
 - `massacre`
 - `maternal`
-- `mediate`
 - `medieval`
 - `melody`
 - `menace`
@@ -1733,7 +1688,6 @@
 - `mercury`
 - `metabolism`
 - `metropolitan`
-- `midst`
 - `midwife`
 - `militant`
 - `militia`
@@ -1750,7 +1704,6 @@
 - `monotony`
 - `mortal`
 - `mosquito`
-- `mourn`
 - `mow`
 - `multilateral`
 - `multitude`
@@ -1765,7 +1718,6 @@
 - `notorious`
 - `notwithstanding`
 - `nurture`
-- `oak`
 - `obscene`
 - `observatory`
 - `obsess`
@@ -1862,8 +1814,6 @@
 - `regiment`
 - `reign`
 - `rein`
-- `relish`
-- `reminiscent`
 - `renaissance`
 - `renown`
 - `repel`
@@ -1881,7 +1831,6 @@
 - `rig`
 - `ritual`
 - `ruthless`
-- `sacred`
 - `saddle`
 - `salon`
 - `salute`
@@ -1900,7 +1849,6 @@
 - `secular`
 - `seduce`
 - `segregate`
-- `sentiment`
 - `sergeant`
 - `serial`
 - `shaft`
@@ -1924,7 +1872,6 @@
 - `sneak`
 - `sniff`
 - `snob`
-- `sob`
 - `socket`
 - `sodium`
 - `solicit`
@@ -1948,7 +1895,6 @@
 - `stereotype`
 - `steward`
 - `stewardess`
-- `stifle`
 - `stigma`
 - `stitch`
 - `stoop`
@@ -2021,7 +1967,6 @@
 - `turnover`
 - `turtle`
 - `ultra`
-- `unanimous`
 - `unify`
 - `unilateral`
 - `unleash`
@@ -2042,7 +1987,6 @@
 - `virgin`
 - `vogue`
 - `void`
-- `vow`
 - `vulgar`
 - `waive`
 - `wardrobe`
@@ -2060,7 +2004,6 @@
 - `wretched`
 - `yacht`
 - `yawn`
-- `yearn`
 - `zeal`
 - `zigzag`
 - `zip`
