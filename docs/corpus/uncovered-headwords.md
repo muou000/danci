@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2941/4692 个非免注核心大纲词目（62.7%），尚有 1751 个待覆盖。
+当前覆盖 3010/4692 个非免注核心大纲词目（64.2%），尚有 1682 个待覆盖。
 
-## 四级词目（1079）
+## 四级词目（1046）
 
 - `abolish`
 - `absent`
@@ -24,15 +24,12 @@
 - `algebra`
 - `alphabet`
 - `amaze`
-- `amid`
 - `amidst`
 - `amongst`
-- `ample`
 - `amuse`
 - `angel`
 - `anniversary`
 - `annoy`
-- `ant`
 - `anticipate`
 - `anyhow`
 - `anyway`
@@ -56,7 +53,6 @@
 - `baby boom`
 - `backward`
 - `bacon`
-- `bacteria`
 - `bad`
 - `badge`
 - `badly`
@@ -72,7 +68,6 @@
 - `barbecue`
 - `BBQ`
 - `barber`
-- `bark`
 - `baseball`
 - `basis`
 - `basket`
@@ -83,7 +78,6 @@
 - `beard`
 - `beat`
 - `beauty`
-- `bee`
 - `beforehand`
 - `beg`
 - `belief`
@@ -94,7 +88,6 @@
 - `best`
 - `best-seller`
 - `bet`
-- `better`
 - `Bible`
 - `big`
 - `bin`
@@ -109,7 +102,6 @@
 - `blog`
 - `blond`
 - `blonde`
-- `blossom`
 - `blouse`
 - `blur`
 - `bomb`
@@ -135,10 +127,8 @@
 - `brow`
 - `brunch`
 - `brush`
-- `brutal`
 - `buck`
 - `buckle`
-- `bud`
 - `buddy`
 - `buffet`
 - `bull`
@@ -146,7 +136,6 @@
 - `bully`
 - `bump`
 - `bumper`
-- `bunch`
 - `businessman`
 - `butcher`
 - `cafe`
@@ -209,10 +198,8 @@
 - `cowboy`
 - `crab`
 - `cracker`
-- `crawl`
 - `crazy`
 - `cream`
-- `creep`
 - `crocodile`
 - `cruel`
 - `cry`
@@ -228,7 +215,6 @@
 - `dash`
 - `date²`
 - `dead`
-- `deadly`
 - `deaf`
 - `deal²`
 - `dear`
@@ -242,12 +228,9 @@
 - `dentist`
 - `depend`
 - `depress`
-- `deprive`
-- `derive`
 - `desert¹`
 - `desert²`
 - `deserve`
-- `despair`
 - `despatch`
 - `dessert`
 - `devil`
@@ -312,7 +295,6 @@
 - `eventually`
 - `everywhere`
 - `evil`
-- `excel`
 - `exception`
 - `excite`
 - `exclaim`
@@ -348,7 +330,6 @@
 - `federal`
 - `federation`
 - `female`
-- `fence`
 - `fever`
 - `fight`
 - `filter`
@@ -412,7 +393,6 @@
 - `grand`
 - `graph`
 - `gravitation`
-- `greenhouse`
 - `grocer`
 - `gross`
 - `guess`
@@ -434,7 +414,6 @@
 - `hatch`
 - `hate`
 - `haunt`
-- `hay`
 - `headache`
 - `headmaster`
 - `headquarters`
@@ -492,7 +471,6 @@
 - `flu`
 - `inn`
 - `insane`
-- `insect`
 - `insert`
 - `installment`
 - `instance`
@@ -503,7 +481,6 @@
 - `interfere`
 - `intimate`
 - `intrude`
-- `invade`
 - `invalid²`
 - `invariably`
 - `irony`
@@ -520,7 +497,6 @@
 - `joke`
 - `jungle`
 - `junk`
-- `kill`
 - `kilogram`
 - `kilo`
 - `kilometer`
@@ -714,7 +690,6 @@
 - `patient²`
 - `paw`
 - `pea`
-- `peach`
 - `peanut`
 - `pearl`
 - `penny`
@@ -749,7 +724,6 @@
 - `pool`
 - `pop`
 - `pose`
-- `position`
 - `possible`
 - `post²`
 - `postcard`
@@ -859,7 +833,6 @@
 - `secretary`
 - `sector`
 - `see`
-- `seed`
 - `seize`
 - `select`
 - `semester`
@@ -917,7 +890,6 @@
 - `southeast`
 - `southwest`
 - `souvenir`
-- `sow`
 - `spaceship`
 - `sparkle`
 - `specify`
@@ -928,7 +900,6 @@
 - `sponsor`
 - `sportsman`
 - `sportswoman`
-- `spray`
 - `spur`
 - `spy`
 - `squeeze`
@@ -942,12 +913,10 @@
 - `statue`
 - `status`
 - `steak`
-- `stem¹`
 - `stem²`
 - `stick¹`
 - `stick²`
 - `still²`
-- `sting`
 - `stocking`
 - `stomach`
 - `story²`
@@ -1059,7 +1028,6 @@
 - `wagon`
 - `wake`
 - `war`
-- `warfare`
 - `warrior`
 - `webcast`
 - `wed`
@@ -1073,7 +1041,6 @@
 - `wish`
 - `wit`
 - `wolf`
-- `worm`
 - `worse`
 - `worship`
 - `worst`
@@ -1086,7 +1053,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（672）
+## 六级星号词目（636）
 
 - `abbreviation`
 - `abnormal`
@@ -1149,16 +1116,11 @@
 - `avenge`
 - `bald`
 - `barracks`
-- `barren`
 - `bass`
 - `batter`
 - `bead`
 - `beak`
-- `beckon`
-- `beetle`
 - `benevolent`
-- `benign`
-- `beset`
 - `besiege`
 - `beware`
 - `bewilder`
@@ -1171,7 +1133,6 @@
 - `bloc`
 - `blunt`
 - `blush`
-- `botany`
 - `bouquet`
 - `bout`
 - `brigade`
@@ -1183,7 +1144,6 @@
 - `burglar`
 - `bust`
 - `butt`
-- `buzz`
 - `calcium`
 - `cannon`
 - `canoe`
@@ -1210,13 +1170,11 @@
 - `chronic`
 - `chunk`
 - `clasp`
-- `clearing`
 - `clench`
 - `clergy`
 - `cliché`
 - `cloak`
 - `closet`
-- `cluster`
 - `clutch`
 - `coalition`
 - `cocaine`
@@ -1247,8 +1205,6 @@
 - `constituent`
 - `consulate`
 - `contagious`
-- `contrive`
-- `converge`
 - `converse²`
 - `convoy`
 - `coral`
@@ -1264,7 +1220,6 @@
 - `crate`
 - `crave`
 - `cricket`
-- `crouch`
 - `crow`
 - `crunch`
 - `cub`
@@ -1279,7 +1234,6 @@
 - `decimal`
 - `defer`
 - `degenerate`
-- `degrade`
 - `delicacy`
 - `delude`
 - `demographic`
@@ -1290,14 +1244,11 @@
 - `derail`
 - `deregulate`
 - `designate`
-- `desolate`
 - `despise`
 - `destiny`
 - `detain`
 - `detergent`
-- `devour`
 - `diffuse`
-- `dilute`
 - `directory`
 - `dismay`
 - `disposition`
@@ -1320,7 +1271,6 @@
 - `Easter`
 - `eccentric`
 - `eclipse`
-- `edible`
 - `ego`
 - `eject`
 - `elapse`
@@ -1335,7 +1285,6 @@
 - `encyclopedia`
 - `endow`
 - `enlist`
-- `ensue`
 - `entity`
 - `envelop`
 - `envisage`
@@ -1343,7 +1292,6 @@
 - `epidemic`
 - `equate`
 - `equator`
-- `eradicate`
 - `erect`
 - `escort`
 - `esthetic`
@@ -1369,7 +1317,6 @@
 - `flip`
 - `flirt`
 - `flush`
-- `flutter`
 - `foe`
 - `foretell`
 - `formidable`
@@ -1403,16 +1350,13 @@
 - `heroin`
 - `hibernate`
 - `hitherto`
-- `hive`
 - `hockey`
 - `hoist`
 - `homogeneous`
 - `hop`
 - `hostage`
 - `hound`
-- `hover`
 - `howl`
-- `hum`
 - `hurdle`
 - `hurl`
 - `hurricane`
@@ -1514,7 +1458,6 @@
 - `molecule`
 - `monotony`
 - `mortal`
-- `mosquito`
 - `mow`
 - `multilateral`
 - `multitude`
@@ -1548,7 +1491,6 @@
 - `parachute`
 - `paradigm`
 - `paradise`
-- `parasite`
 - `parish`
 - `parole`
 - `parrot`
@@ -1570,8 +1512,6 @@
 - `perfume`
 - `permeate`
 - `persecute`
-- `pest`
-- `pesticide`
 - `petition`
 - `petrochemical`
 - `physiological`
@@ -1610,7 +1550,6 @@
 - `rein`
 - `renaissance`
 - `renown`
-- `repel`
 - `repress`
 - `reproach`
 - `repute`
@@ -1651,7 +1590,6 @@
 - `slaughter`
 - `slum`
 - `smuggle`
-- `snail`
 - `sneak`
 - `sniff`
 - `snob`
@@ -1660,9 +1598,6 @@
 - `solitary`
 - `spaghetti`
 - `spectrum`
-- `spider`
-- `sprawl`
-- `sprinkle`
 - `stab`
 - `stammer`
 - `standby`
@@ -1676,10 +1611,7 @@
 - `stigma`
 - `stoop`
 - `strangle`
-- `stray`
 - `streak`
-- `stubborn`
-- `stump`
 - `stun`
 - `submarine`
 - `subscribe`
@@ -1713,7 +1645,6 @@
 - `tickle`
 - `topple`
 - `tornado`
-- `toxic`
 - `trauma`
 - `trench`
 - `tribune`

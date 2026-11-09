@@ -7061,6 +7061,177 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 49《果园生态防虫与蜜蜂授粉》（passage-049），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-049');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('生态环境');
+    expect(passage!.titleEn).toBe(
+      'An Orchardist Fosters Bees and Natural Insect Balance'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(80);
+
+    // 验证包含 Issue #59 规划的核心目标词目
+    for (const targetId of [
+      'bee',
+      'pesticide',
+      'blossom',
+      'insect',
+      'parasite',
+      'spray',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合生态农业、授粉昆虫、生物多样性与自然共生核心大纲词目
+    for (const id of [
+      'beset',
+      'pest',
+      'bud',
+      'despair',
+      'peach',
+      'toxic',
+      'eradicate',
+      'beetle',
+      'snail',
+      'deadly',
+      'kill',
+      'benign',
+      'degrade',
+      'clearing',
+      'desolate',
+      'deprive',
+      'barren',
+      'better',
+      'botany',
+      'contrive',
+      'brutal',
+      'fence',
+      'stump',
+      'sow',
+      'seed',
+      'beckon',
+      'dilute',
+      'sprinkle',
+      'stem¹',
+      'bark',
+      'repel',
+      'bacteria',
+      'position',
+      'hive',
+      'hay',
+      'hum',
+      'buzz',
+      'hover',
+      'amid',
+      'sting',
+      'ant',
+      'creep',
+      'spider',
+      'crawl',
+      'sprawl',
+      'crouch',
+      'devour',
+      'invade',
+      'mosquito',
+      'worm',
+      'ample',
+      'cluster',
+      'bunch',
+      'edible',
+      'flutter',
+      'greenhouse',
+      'stray',
+      'converge',
+      'stubborn',
+      'derive',
+      'excel',
+      'warfare',
+      'ensue',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义体例规范：形容词以“的”结尾，副词以“地”结尾
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性与同形异义词目精准对齐
+    const p1s1Peach = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'peach'
+    );
+    expect(p1s1Peach).toBeDefined();
+    if (p1s1Peach && p1s1Peach.type === 'annotation') {
+      expect(p1s1Peach.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s3Stem = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'stem¹'
+    );
+    expect(p2s3Stem).toBeDefined();
+    if (p2s3Stem && p2s3Stem.type === 'annotation') {
+      expect(p2s3Stem.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p3s1Bee = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'bee'
+    );
+    expect(p3s1Bee).toBeDefined();
+    if (p3s1Bee && p3s1Bee.type === 'annotation') {
+      expect(p3s1Bee.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Creep = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'creep'
+    );
+    expect(p3s3Creep).toBeDefined();
+    if (p3s3Creep && p3s3Creep.type === 'annotation') {
+      expect(p3s3Creep.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s3Patient = compiled.paragraphs[3].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'patient¹'
+    );
+    expect(p4s3Patient).toBeDefined();
+    if (p4s3Patient && p4s3Patient.type === 'annotation') {
+      expect(p4s3Patient.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
