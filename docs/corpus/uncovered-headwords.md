@@ -2,14 +2,13 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 2820/4692 个非免注核心大纲词目（60.1%），尚有 1872 个待覆盖。
+当前覆盖 2887/4692 个非免注核心大纲词目（61.5%），尚有 1805 个待覆盖。
 
-## 四级词目（1127）
+## 四级词目（1110）
 
 - `abolish`
 - `absent`
 - `abuse`
-- `accompany`
 - `ace`
 - `acid`
 - `addict`
@@ -25,7 +24,6 @@
 - `algebra`
 - `alphabet`
 - `amaze`
-- `ambassador`
 - `amid`
 - `amidst`
 - `amongst`
@@ -307,7 +305,6 @@
 - `else`
 - `elsewhere`
 - `embarrass`
-- `embassy`
 - `emperor`
 - `enemy`
 - `enlarge`
@@ -367,7 +364,6 @@
 - `fever`
 - `fight`
 - `filter`
-- `fine²`
 - `fingerprint`
 - `fireman`
 - `fireplace`
@@ -381,14 +377,12 @@
 - `forbid`
 - `forehead`
 - `foremost`
-- `foresight`
 - `forever`
 - `forget`
 - `forgive`
 - `format`
 - `former`
 - `forth`
-- `forthcoming`
 - `fortune`
 - `fountain`
 - `fox`
@@ -451,7 +445,6 @@
 - `hardly`
 - `hatch`
 - `hate`
-- `haul`
 - `haunt`
 - `hay`
 - `headache`
@@ -627,7 +620,6 @@
 - `mechanize`
 - `Medicare`
 - `melt`
-- `memorandum`
 - `memo`
 - `mention`
 - `mercy`
@@ -727,7 +719,6 @@
 - `parade`
 - `pardon`
 - `park²`
-- `parliament`
 - `particular`
 - `partly`
 - `password`
@@ -782,12 +773,10 @@
 - `pray`
 - `preach`
 - `pregnant`
-- `premier`
 - `preposition`
 - `present²`
 - `present³`
 - `president`
-- `press¹`
 - `pretend`
 - `pretty`
 - `preview`
@@ -800,7 +789,6 @@
 - `private`
 - `probable`
 - `procession`
-- `prohibit`
 - `project²`
 - `pronoun`
 - `proper`
@@ -810,7 +798,6 @@
 - `psychology`
 - `pub`
 - `punch`
-- `punish`
 - `purse`
 - `push`
 - `quantity`
@@ -920,7 +907,6 @@
 - `sin`
 - `sing`
 - `singular`
-- `situation`
 - `situate`
 - `skate`
 - `ski`
@@ -957,7 +943,6 @@
 - `spin`
 - `spit`
 - `spite`
-- `spokeswoman`
 - `sponsor`
 - `sportsman`
 - `sportswoman`
@@ -972,7 +957,6 @@
 - `stare`
 - `startle`
 - `starve`
-- `statesman`
 - `statue`
 - `status`
 - `steak`
@@ -996,7 +980,6 @@
 - `stuff`
 - `stupid`
 - `style`
-- `substance`
 - `substitute`
 - `subtract`
 - `suck`
@@ -1134,7 +1117,7 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（745）
+## 六级星号词目（695）
 
 - `abbreviation`
 - `abnormal`
@@ -1144,10 +1127,8 @@
 - `accessory`
 - `acclaim`
 - `acupuncture`
-- `adhere`
 - `adore`
 - `advent`
-- `adversary`
 - `affiliate`
 - `afloat`
 - `aggravate`
@@ -1159,7 +1140,6 @@
 - `ale`
 - `alien`
 - `allergic`
-- `allot`
 - `allude`
 - `allure`
 - `almighty`
@@ -1178,10 +1158,8 @@
 - `ape`
 - `appall`
 - `appease`
-- `appraise`
 - `appropriate²`
 - `apron`
-- `arbitrate`
 - `ardent`
 - `arena`
 - `aristocrat`
@@ -1201,9 +1179,7 @@
 - `autobiography`
 - `avail`
 - `avenge`
-- `avert`
 - `bald`
-- `barge`
 - `barracks`
 - `barren`
 - `bass`
@@ -1219,7 +1195,6 @@
 - `beware`
 - `bewilder`
 - `bibliography`
-- `bilateral`
 - `bishop`
 - `blackmail`
 - `blaze`
@@ -1228,12 +1203,9 @@
 - `bloc`
 - `blunt`
 - `blush`
-- `bolster`
 - `botany`
 - `bouquet`
 - `bout`
-- `boycott`
-- `breach`
 - `brigade`
 - `brink`
 - `bronze`
@@ -1301,17 +1273,14 @@
 - `conceive`
 - `concise`
 - `condolence`
-- `conducive`
 - `confederation`
 - `confide`
 - `configuration`
-- `congregate`
 - `connotation`
 - `conspire`
 - `constituent`
 - `consulate`
 - `contagious`
-- `contingent`
 - `contrive`
 - `converge`
 - `converse²`
@@ -1324,13 +1293,11 @@
 - `counterfeit`
 - `coup`
 - `coup d'état`
-- `crackdown`
 - `cradle`
 - `cram`
 - `crate`
 - `crave`
 - `cricket`
-- `cripple`
 - `crouch`
 - `crow`
 - `crunch`
@@ -1362,14 +1329,10 @@
 - `destiny`
 - `detain`
 - `detergent`
-- `detriment`
-- `devastate`
 - `devour`
 - `diffuse`
 - `dilute`
 - `directory`
-- `disarm`
-- `discord`
 - `dismay`
 - `disposition`
 - `disregard`
@@ -1398,22 +1361,18 @@
 - `electoral`
 - `elicit`
 - `emancipate`
-- `embargo`
 - `embody`
 - `embroidery`
 - `emigrate`
-- `eminent`
 - `emulate`
 - `enclose`
 - `encyclopedia`
-- `endorse`
 - `endow`
 - `enlist`
 - `ensue`
 - `entity`
 - `envelop`
 - `envisage`
-- `envoy`
 - `epic`
 - `epidemic`
 - `equate`
@@ -1422,7 +1381,6 @@
 - `erect`
 - `escort`
 - `esthetic`
-- `etiquette`
 - `evade`
 - `excerpt`
 - `exempt`
@@ -1435,7 +1393,6 @@
 - `extravagant`
 - `fabulous`
 - `facet`
-- `faction`
 - `fascist`
 - `feast`
 - `feat`
@@ -1452,7 +1409,6 @@
 - `flutter`
 - `foe`
 - `foretell`
-- `forfeit`
 - `formidable`
 - `fortnight`
 - `franchise`
@@ -1460,7 +1416,6 @@
 - `frown`
 - `fury`
 - `fusion`
-- `futile`
 - `galaxy`
 - `gasp`
 - `genre`
@@ -1495,7 +1450,6 @@
 - `hover`
 - `howl`
 - `hum`
-- `humane`
 - `hurdle`
 - `hurl`
 - `hurricane`
@@ -1507,8 +1461,6 @@
 - `idiot`
 - `idol`
 - `ignite`
-- `illicit`
-- `imminent`
 - `impetus`
 - `impromptu`
 - `inaugurate`
@@ -1520,7 +1472,6 @@
 - `indignant`
 - `indulge`
 - `inertia`
-- `inflict`
 - `infringe`
 - `inject`
 - `inmate`
@@ -1540,7 +1491,6 @@
 - `jack`
 - `jargon`
 - `jelly`
-- `jeopardize`
 - `jerk`
 - `jockey`
 - `jolly`
@@ -1556,7 +1506,6 @@
 - `layman`
 - `lenient`
 - `lesbian`
-- `levy`
 - `lieutenant`
 - `lime`
 - `limelight`
@@ -1641,7 +1590,6 @@
 - `parachute`
 - `paradigm`
 - `paradise`
-- `paralyze`
 - `parasite`
 - `parish`
 - `parole`
@@ -1672,9 +1620,6 @@
 - `physiological`
 - `pilgrim`
 - `plaza`
-- `plead`
-- `plight`
-- `poise`
 - `poke`
 - `porcelain`
 - `porridge`
@@ -1685,7 +1630,6 @@
 - `premium`
 - `preoccupy`
 - `prerequisite`
-- `preside`
 - `prolong`
 - `prone`
 - `propaganda`
@@ -1701,7 +1645,6 @@
 - `rap`
 - `rape`
 - `rash`
-- `ratify`
 - `rattle`
 - `recede`
 - `reel`
@@ -1718,7 +1661,6 @@
 - `repute`
 - `reshuffle`
 - `restless`
-- `retaliate`
 - `retarded`
 - `retort`
 - `revenge`
@@ -1726,11 +1668,8 @@
 - `ritual`
 - `ruthless`
 - `saddle`
-- `salon`
 - `salute`
-- `salvage`
 - `salvation`
-- `sanction`
 - `sarcasm`
 - `satire`
 - `savage`
@@ -1792,7 +1731,6 @@
 - `stun`
 - `submarine`
 - `subscribe`
-- `subsistence`
 - `sue`
 - `suffice`
 - `suicide`
@@ -1800,7 +1738,6 @@
 - `sulfur`
 - `superstition`
 - `surpass`
-- `surveillance`
 - `susceptible`
 - `swamp`
 - `swap`
@@ -1813,7 +1750,6 @@
 - `synthesis`
 - `taboo`
 - `tack`
-- `tact`
 - `tan`
 - `tangle`
 - `tanker`
@@ -1826,7 +1762,6 @@
 - `thigh`
 - `thorn`
 - `tickle`
-- `toil`
 - `topple`
 - `tornado`
 - `toxic`
@@ -1841,12 +1776,10 @@
 - `tub`
 - `tuck`
 - `tug`
-- `turmoil`
 - `turnout`
 - `turnover`
 - `turtle`
 - `ultra`
-- `unilateral`
 - `unleash`
 - `uprising`
 - `uranium`

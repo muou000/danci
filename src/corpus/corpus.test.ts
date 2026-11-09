@@ -6658,6 +6658,225 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('收录主题短文 NO. 47《使馆协商与跨境河流条约》（passage-047），覆盖核心大纲词目并符合各项编纂指标', () => {
+    const passage = PASSAGES.find((p) => p.id === 'passage-047');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('生态环境');
+    expect(passage!.titleEn).toBe(
+      'Embassy Negotiations and the Cross-Border River Treaty'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(80);
+
+    // 验证包含 Issue #57 规划的核心目标词目
+    for (const targetId of [
+      'embassy',
+      'ambassador',
+      'treaty',
+      'sanction',
+      'overseas',
+    ]) {
+      expect(coveredIds).toContain(targetId);
+    }
+
+    // 验证纳入的高契合外交谈判、河流治理、条约履约与民生保障核心大纲词目
+    for (const id of [
+      'disarm',
+      'avert',
+      'turmoil',
+      'discord',
+      'haul',
+      'unilateral',
+      'retaliate',
+      'eminent',
+      'preside',
+      'bilateral',
+      'accompany',
+      'envoy',
+      'contingent',
+      'congregate',
+      'premier',
+      'salon',
+      'etiquette',
+      'faction',
+      'levy',
+      'embargo',
+      'adversary',
+      'statesman',
+      'appraise',
+      'situation',
+      'crackdown',
+      'paralyze',
+      'devastate',
+      'cripple',
+      'subsistence',
+      'boycott',
+      'inflict',
+      'detriment',
+      'toil',
+      'barge',
+      'plead',
+      'jeopardize',
+      'punish',
+      'futile',
+      'arbitrate',
+      'forthcoming',
+      'allot',
+      'prohibit',
+      'illicit',
+      'surveillance',
+      'adhere',
+      'breach',
+      'forfeit',
+      'substance',
+      'fine²',
+      'tact',
+      'poise',
+      'humane',
+      'foresight',
+      'memorandum',
+      'press¹',
+      'spokeswoman',
+      'parliament',
+      'endorse',
+      'ratify',
+      'conducive',
+      'bolster',
+      'salvage',
+      'imminent',
+      'plight',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义体例规范：形容词以“的”结尾，副词以“地”结尾
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性与同形异义词目精准对齐
+    const p1s1Border = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'border'
+    );
+    expect(p1s1Border).toBeDefined();
+    if (p1s1Border && p1s1Border.type === 'annotation') {
+      expect(p1s1Border.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s1Tension = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'tense¹'
+    );
+    expect(p1s1Tension).toBeDefined();
+    if (p1s1Tension && p1s1Tension.type === 'annotation') {
+      expect(p1s1Tension.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p1s3Premier = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'premier'
+    );
+    expect(p1s3Premier).toBeDefined();
+    if (p1s3Premier && p1s3Premier.type === 'annotation') {
+      expect(p1s3Premier.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s2Carefully = compiled.paragraphs[1].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'care'
+    );
+    expect(p2s2Carefully).toBeDefined();
+    if (p2s2Carefully && p2s2Carefully.type === 'annotation') {
+      expect(p2s2Carefully.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p2s3Cargo = compiled.paragraphs[1].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'cargo'
+    );
+    expect(p2s3Cargo).toBeDefined();
+    if (p2s3Cargo && p2s3Cargo.type === 'annotation') {
+      expect(p2s3Cargo.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s1Punishing = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'punish'
+    );
+    expect(p3s1Punishing).toBeDefined();
+    if (p3s1Punishing && p3s1Punishing.type === 'annotation') {
+      expect(p3s1Punishing.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s2Breeding = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'breed'
+    );
+    expect(p3s2Breeding).toBeDefined();
+    if (p3s2Breeding && p3s2Breeding.type === 'annotation') {
+      expect(p3s2Breeding.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Inspection = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'inspect'
+    );
+    expect(p3s3Inspection).toBeDefined();
+    if (p3s3Inspection && p3s3Inspection.type === 'annotation') {
+      expect(p3s3Inspection.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p3s3Fine = compiled.paragraphs[2].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'fine²'
+    );
+    expect(p3s3Fine).toBeDefined();
+    if (p3s3Fine && p3s3Fine.type === 'annotation') {
+      expect(p3s3Fine.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p4s1Finally = compiled.paragraphs[3].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'final'
+    );
+    expect(p4s1Finally).toBeDefined();
+    if (p4s1Finally && p4s1Finally.type === 'annotation') {
+      expect(p4s1Finally.gloss.startsWith('ad.')).toBe(true);
+    }
+
+    const p4s2Press = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'press¹'
+    );
+    expect(p4s2Press).toBeDefined();
+    if (p4s2Press && p4s2Press.type === 'annotation') {
+      expect(p4s2Press.gloss.startsWith('a.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();
