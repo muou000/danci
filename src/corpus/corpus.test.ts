@@ -7232,6 +7232,192 @@ describe('Seam 2: corpus — 短文行间标注编译与语料校验', () => {
     }
   });
 
+  it('主题短文 NO. 50 满足主题自然度、词量及行间标注校验规范', () => {
+    const passage = PASSAGES.find((p) => p.indexLabel === 'NO. 50');
+    expect(passage).toBeDefined();
+    expect(passage!.topic).toBe('社会生活');
+    expect(passage!.titleEn).toBe(
+      'A Traveling Circus Brings Awe and Acrobatics to the Town Fair'
+    );
+    expect(passage!.paragraphs.length).toBe(4);
+    expect(passage!.expansionEntries.length).toBeGreaterThanOrEqual(12);
+    expect(passage!.expansionEntries.length).toBeLessThanOrEqual(18);
+
+    const wordCount = passage!.paragraphs.reduce(
+      (sum, p) =>
+        sum +
+        p.sentences.reduce(
+          (sSum, s) => sSum + s.english.trim().split(/\s+/).length,
+          0
+        ),
+      0
+    );
+    expect(wordCount).toBeGreaterThanOrEqual(190);
+    expect(wordCount).toBeLessThanOrEqual(280);
+
+    const result = validatePassage(passage!, catalog);
+    expect(result.errors).toEqual([]);
+
+    const compiled = compilePassage(passage!, catalog);
+    expect(hasOutOfSyllabusWordsIn(compiled)).toBe(false);
+
+    const coveredIds = coveredHeadwordIdsIn(compiled);
+    expect(coveredIds.length).toBeGreaterThanOrEqual(50);
+
+    // 重点验证 Issue #60 规划目标词目
+    for (const id of [
+      'circus',
+      'balloon',
+      'parade',
+      'amuse',
+      'fair²',
+      'trumpet',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 重点验证主要新覆盖词目
+    for (const id of [
+      'caravan',
+      'wagon',
+      'beloved',
+      'grand',
+      'dash',
+      'banner',
+      'merry',
+      'band',
+      'bang',
+      'drum',
+      'chorus',
+      'chant',
+      'melody',
+      'pat',
+      'tame',
+      'camel',
+      'rabbit',
+      'cage',
+      'aerial',
+      'feat',
+      'leap',
+      'rope',
+      'clever',
+      'ballet',
+      'astonish',
+      'scream',
+      'shout',
+      'comic',
+      'clown',
+      'makeup',
+      'rag',
+      'cloak',
+      'bounce',
+      'comedy',
+      'bamboo',
+      'giggle',
+      'laugh',
+      'badge',
+      'ribbon',
+      'thrust',
+      'fireworks',
+      'blast',
+      'glitter',
+      'flame',
+      'shadow',
+      'brilliant',
+      'thunder',
+      'bow²',
+      'toast',
+      'awe',
+      'awesome',
+      'fairy',
+      'miracle',
+      'beauty',
+    ]) {
+      expect(coveredIds).toContain(id);
+    }
+
+    // 验证行间词义体例规范：形容词以“的”结尾，副词以“地”结尾
+    passage!.wordAnnotations.forEach((wa) => {
+      if (wa.gloss.startsWith('a.')) {
+        const senses = wa.gloss.replace(/^a\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('的')).toBe(true);
+        });
+      }
+      if (wa.gloss.startsWith('ad.')) {
+        const senses = wa.gloss.replace(/^ad\.\s*/, '').split('；');
+        senses.forEach((s) => {
+          expect(s.trim().endsWith('地')).toBe(true);
+        });
+      }
+    });
+
+    // 重点验证特定语境词性与同形异义词目精准对齐
+    const p1s1Fair = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'fair²'
+    );
+    expect(p1s1Fair).toBeDefined();
+    if (p1s1Fair && p1s1Fair.type === 'annotation') {
+      expect(p1s1Fair.gloss.startsWith('n.')).toBe(true);
+    }
+
+    const p1s1Circus = compiled.paragraphs[0].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'circus'
+    );
+    expect(p1s1Circus).toBeDefined();
+    if (p1s1Circus && p1s1Circus.type === 'annotation') {
+      expect(p1s1Circus.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p1s3Brass = compiled.paragraphs[0].sentences[2].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'brass'
+    );
+    expect(p1s3Brass).toBeDefined();
+    if (p1s3Brass && p1s3Brass.type === 'annotation') {
+      expect(p1s3Brass.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p2s1Rest = compiled.paragraphs[1].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'rest¹'
+    );
+    expect(p2s1Rest).toBeDefined();
+    if (p2s1Rest && p2s1Rest.type === 'annotation') {
+      expect(p2s1Rest.gloss.startsWith('v.')).toBe(true);
+    }
+
+    const p3s1Stage = compiled.paragraphs[2].sentences[0].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'stage'
+    );
+    expect(p3s1Stage).toBeDefined();
+    if (p3s1Stage && p3s1Stage.type === 'annotation') {
+      expect(p3s1Stage.gloss.startsWith('v.')).toBe(true);
+    }
+
+    const p3s2Bamboo = compiled.paragraphs[2].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'bamboo'
+    );
+    expect(p3s2Bamboo).toBeDefined();
+    if (p3s2Bamboo && p3s2Bamboo.type === 'annotation') {
+      expect(p3s2Bamboo.gloss.startsWith('a.')).toBe(true);
+    }
+
+    const p4s2Bow = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'bow²'
+    );
+    expect(p4s2Bow).toBeDefined();
+    if (p4s2Bow && p4s2Bow.type === 'annotation') {
+      expect(p4s2Bow.gloss.startsWith('v.')).toBe(true);
+    }
+
+    const p4s2Host = compiled.paragraphs[3].sentences[1].tokens.find(
+      (t) => t.type === 'annotation' && t.headwordId === 'host¹'
+    );
+    expect(p4s2Host).toBeDefined();
+    if (p4s2Host && p4s2Host.type === 'annotation') {
+      expect(p4s2Host.gloss.startsWith('n.')).toBe(true);
+    }
+  });
+
   it('PASSAGES 统一收录全部短文（至少 26 篇），ID 与编号格式规范且唯一', () => {
     expect(PASSAGES.length).toBeGreaterThanOrEqual(26);
     const seenIds = new Set<string>();

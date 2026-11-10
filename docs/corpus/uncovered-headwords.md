@@ -2,9 +2,9 @@
 
 > 由 `npm run coverage` 生成。请勿手工编辑；覆盖状态依据短文正文的行间词目标注计算。
 
-当前覆盖 3010/4692 个非免注核心大纲词目（64.2%），尚有 1682 个待覆盖。
+当前覆盖 3083/4692 个非免注核心大纲词目（65.7%），尚有 1609 个待覆盖。
 
-## 四级词目（1046）
+## 四级词目（988）
 
 - `abolish`
 - `absent`
@@ -13,7 +13,6 @@
 - `acid`
 - `addict`
 - `advantage`
-- `aerial`
 - `affect`
 - `affluent`
 - `afraid`
@@ -26,7 +25,6 @@
 - `amaze`
 - `amidst`
 - `amongst`
-- `amuse`
 - `angel`
 - `anniversary`
 - `annoy`
@@ -41,29 +39,19 @@
 - `asleep`
 - `ass`
 - `associate`
-- `astonish`
 - `atom`
 - `automobile`
 - `await`
 - `awake`
-- `awe`
-- `awesome`
 - `awful`
 - `ax`
 - `baby boom`
 - `backward`
 - `bacon`
 - `bad`
-- `badge`
 - `badly`
 - `badminton`
 - `baggage`
-- `ballet`
-- `balloon`
-- `bamboo`
-- `band`
-- `bang`
-- `banner`
 - `banquet`
 - `barbecue`
 - `BBQ`
@@ -77,12 +65,10 @@
 - `battle`
 - `beard`
 - `beat`
-- `beauty`
 - `beforehand`
 - `beg`
 - `belief`
 - `belly`
-- `beloved`
 - `belt`
 - `besides`
 - `best`
@@ -97,7 +83,6 @@
 - `bitch`
 - `blackboard`
 - `blank`
-- `blast`
 - `bless`
 - `blog`
 - `blond`
@@ -109,10 +94,8 @@
 - `bore²`
 - `born`
 - `bother`
-- `bounce`
 - `bound²`
 - `bound³`
-- `bow²`
 - `bowel`
 - `box²`
 - `boxing`
@@ -122,7 +105,6 @@
 - `breast`
 - `bride`
 - `bridegroom`
-- `brilliant`
 - `broker`
 - `brow`
 - `brunch`
@@ -139,9 +121,7 @@
 - `businessman`
 - `butcher`
 - `cafe`
-- `cage`
 - `calf`
-- `camel`
 - `can²`
 - `cancer`
 - `candidate`
@@ -161,21 +141,16 @@
 - `cholesterol`
 - `chop`
 - `chopstick`
-- `chorus`
 - `Christ`
 - `church`
 - `cigar`
 - `cigarette`
-- `circus`
-- `clever`
 - `clip`
 - `clockwise`
 - `clone`
-- `clown`
 - `cock`
 - `colon`
 - `comb`
-- `comedy`
 - `comma`
 - `commune`
 - `comrade`
@@ -210,9 +185,7 @@
 - `curse`
 - `cute`
 - `damn`
-- `dance`
 - `darling`
-- `dash`
 - `date²`
 - `dead`
 - `deaf`
@@ -261,7 +234,6 @@
 - `dragon`
 - `dropout`
 - `drown`
-- `drum`
 - `drunk`
 - `dual`
 - `due`
@@ -281,7 +253,6 @@
 - `enemy`
 - `enlarge`
 - `enquire`
-- `entertain`
 - `entitle`
 - `envelope`
 - `envy`
@@ -296,7 +267,6 @@
 - `everywhere`
 - `evil`
 - `exception`
-- `excite`
 - `exclaim`
 - `excursion`
 - `exile`
@@ -312,8 +282,6 @@
 - `eyebrow`
 - `eyesight`
 - `fable`
-- `fair²`
-- `fairy`
 - `fake`
 - `fall²`
 - `famine`
@@ -336,9 +304,7 @@
 - `fingerprint`
 - `fireman`
 - `fireplace`
-- `fireworks`
 - `fist`
-- `flame`
 - `flee`
 - `fly²`
 - `fool`
@@ -360,7 +326,6 @@
 - `frog`
 - `fry`
 - `fuck`
-- `fun`
 - `funeral`
 - `fur`
 - `fuss`
@@ -380,7 +345,6 @@
 - `given`
 - `goat`
 - `god`
-- `gold`
 - `golf`
 - `goodbye`
 - `goodness`
@@ -390,7 +354,6 @@
 - `gown`
 - `grab`
 - `gram`
-- `grand`
 - `graph`
 - `gravitation`
 - `grocer`
@@ -517,12 +480,10 @@
 - `lass`
 - `lately`
 - `latter`
-- `laugh`
 - `laundry`
 - `lavatory`
 - `lay`
 - `lazy`
-- `leap`
 - `least`
 - `leather`
 - `legislate`
@@ -564,7 +525,6 @@
 - `maiden`
 - `mail`
 - `mainstream`
-- `makeup`
 - `male`
 - `mall`
 - `manner`
@@ -586,7 +546,6 @@
 - `memo`
 - `mention`
 - `mercy`
-- `merry`
 - `metro`
 - `microwave`
 - `middle-class`
@@ -595,7 +554,6 @@
 - `mine³`
 - `minister`
 - `minus`
-- `miracle`
 - `miserable`
 - `miss²`
 - `missile`
@@ -678,7 +636,6 @@
 - `palm`
 - `panda`
 - `paperback`
-- `parade`
 - `pardon`
 - `park²`
 - `particular`
@@ -686,7 +643,6 @@
 - `password`
 - `paste`
 - `pastime`
-- `pat`
 - `patient²`
 - `paw`
 - `pea`
@@ -764,11 +720,9 @@
 - `queue`
 - `quit`
 - `quiz`
-- `rabbit`
 - `race²`
 - `radar`
 - `radical`
-- `rag`
 - `raid`
 - `railroad`
 - `rainbow`
@@ -804,7 +758,6 @@
 - `retreat`
 - `reverse`
 - `revolution`
-- `ribbon`
 - `rid`
 - `ridicule`
 - `rifle`
@@ -814,7 +767,6 @@
 - `rob`
 - `roll`
 - `romance`
-- `rope`
 - `rose`
 - `rouse`
 - `row²`
@@ -828,7 +780,6 @@
 - `sauce`
 - `sausage`
 - `scare`
-- `scream`
 - `second²`
 - `secretary`
 - `sector`
@@ -842,7 +793,6 @@
 - `servant`
 - `setting`
 - `sex`
-- `shadow`
 - `shave`
 - `sheer`
 - `shell`
@@ -850,11 +800,9 @@
 - `shiver`
 - `shoot`
 - `shortly`
-- `shout`
 - `shower`
 - `shrimp`
 - `shrug`
-- `shy`
 - `siege`
 - `sight`
 - `sightseeing`
@@ -948,7 +896,6 @@
 - `sword`
 - `tag`
 - `takeoff`
-- `tame`
 - `tech`
 - `teen`
 - `telecommunications`
@@ -967,20 +914,16 @@
 - `thief`
 - `thirst`
 - `throat`
-- `thrust`
 - `thumb`
-- `thunder`
 - `tin`
 - `tip`
 - `tire¹`
 - `title`
-- `toast`
 - `tobacco`
 - `toilet`
 - `tolerate`
 - `ton`
 - `torture`
-- `toss`
 - `tractor`
 - `trademark`
 - `tragedy`
@@ -1025,7 +968,6 @@
 - `violin`
 - `virus`
 - `volleyball`
-- `wagon`
 - `wake`
 - `war`
 - `warrior`
@@ -1053,13 +995,12 @@
 - `yoghurt`
 - `zoology`
 
-## 六级星号词目（636）
+## 六级星号词目（621）
 
 - `abbreviation`
 - `abnormal`
 - `abort`
 - `abreast`
-- `absurd`
 - `accessory`
 - `acclaim`
 - `acupuncture`
@@ -1096,7 +1037,6 @@
 - `appease`
 - `appropriate²`
 - `ardent`
-- `arena`
 - `aristocrat`
 - `armor`
 - `array`
@@ -1149,7 +1089,6 @@
 - `canoe`
 - `caption`
 - `captive`
-- `caravan`
 - `carbohydrate`
 - `cardinal`
 - `carton`
@@ -1163,7 +1102,6 @@
 - `censor`
 - `ceramic`
 - `chancellor`
-- `chant`
 - `chapel`
 - `choir`
 - `chord`
@@ -1173,7 +1111,6 @@
 - `clench`
 - `clergy`
 - `cliché`
-- `cloak`
 - `closet`
 - `clutch`
 - `coalition`
@@ -1184,7 +1121,6 @@
 - `collide`
 - `colonel`
 - `comet`
-- `comic`
 - `commemorate`
 - `commonwealth`
 - `compartment`
@@ -1230,7 +1166,6 @@
 - `custody`
 - `cynical`
 - `dart`
-- `dazzle`
 - `decimal`
 - `defer`
 - `degenerate`
@@ -1269,7 +1204,6 @@
 - `dub`
 - `dwarf`
 - `Easter`
-- `eccentric`
 - `eclipse`
 - `ego`
 - `eject`
@@ -1306,7 +1240,6 @@
 - `facet`
 - `fascist`
 - `feast`
-- `feat`
 - `feminine`
 - `fiscal`
 - `flank`
@@ -1314,7 +1247,6 @@
 - `flare`
 - `flatter`
 - `fling`
-- `flip`
 - `flirt`
 - `flush`
 - `foe`
@@ -1329,12 +1261,10 @@
 - `galaxy`
 - `gasp`
 - `genre`
-- `giggle`
 - `glamor`
 - `gland`
 - `glare`
 - `gleam`
-- `glitter`
 - `glossary`
 - `gospel`
 - `greed`
@@ -1351,7 +1281,6 @@
 - `hibernate`
 - `hitherto`
 - `hockey`
-- `hoist`
 - `homogeneous`
 - `hop`
 - `hostage`
@@ -1442,7 +1371,6 @@
 - `massacre`
 - `maternal`
 - `medieval`
-- `melody`
 - `menace`
 - `mercury`
 - `metabolism`
@@ -1652,7 +1580,6 @@
 - `trivial`
 - `trophy`
 - `tropic`
-- `trumpet`
 - `tub`
 - `tug`
 - `turnout`
